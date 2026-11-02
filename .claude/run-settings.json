@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(py -m pipeline run)",
+      "Bash(py -m pipeline run:*)",
+      "Bash(py -m pipeline dashboard)",
+      "Bash(py -m pipeline status)",
+      "Bash(py -m pipeline reset)",
+      "Bash(python3 -m pipeline run)",
+      "Bash(python3 -m pipeline run:*)",
+      "Bash(python3 -m pipeline dashboard)",
+      "Bash(python3 -m pipeline status)",
+      "Bash(python3 -m pipeline reset)",
+      "PowerShell(py -m pipeline run)",
+      "PowerShell(py -m pipeline run:*)",
+      "PowerShell(py -m pipeline dashboard)",
+      "PowerShell(py -m pipeline status)",
+      "PowerShell(py -m pipeline reset)"
+    ],
+    "deny": [
+      "Edit",
+      "Write",
+      "MultiEdit",
+      "NotebookEdit",
+      "Agent",
+      "Task",
+      "WebFetch",
+      "WebSearch"
+    ]
+  }
+}

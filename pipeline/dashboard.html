@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Recurring work review</title>
+<style>
+:root {
+  color-scheme: light;
+  --page: #f9f9f7;
+  --surface: #fcfcfb;
+  --ink: #0b0b0b;
+  --ink-2: #52514e;
+  --muted: #898781;
+  --grid: #e1e0d9;
+  --border: rgba(11, 11, 11, 0.10);
+  --accent: #2a78d6;
+  --accent-wash: rgba(42, 120, 214, 0.08);
+  --mark: #fde8a6;
+  --good: #006300;
+  --warning: #8a5a00;
+}
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme="light"])) {
+    color-scheme: dark;
+    --page: #0d0d0d;
+    --surface: #1a1a19;
+    --ink: #f0efec;
+    --ink-2: #c3c2b7;
+    --muted: #898781;
+    --grid: #2c2c2a;
+    --border: rgba(255, 255, 255, 0.10);
+    --accent: #3987e5;
+    --accent-wash: rgba(57, 135, 229, 0.12);
+    --mark: #5c4a12;
+    --good: #0ca30c;
+    --warning: #fab219;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --page: #0d0d0d;
+  --surface: #1a1a19;
+  --ink: #f0efec;
+  --ink-2: #c3c2b7;
+  --muted: #898781;
+  --grid: #2c2c2a;
+  --border: rgba(255, 255, 255, 0.10);
+  --accent: #3987e5;
+  --accent-wash: rgba(57, 135, 229, 0.12);
+  --mark: #5c4a12;
+  --good: #0ca30c;
+  --warning: #fab219;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body { background: var(--page); color: var(--ink); font: 15px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; -webkit-font-smoothing: antialiased; }
+a { color: inherit; }
+.wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+@media (max-width: 640px) { .wrap { padding: 0 16px; } }
+.muted { color: var(--muted); }
+.small { font-size: 13px; }
+
+header { border-bottom: 1px solid var(--border); background: var(--surface); }
+header .wrap { display: flex; align-items: center; gap: 16px; min-height: 52px; flex-wrap: wrap; }
+.brand { font-weight: 600; }
+.status { margin-left: auto; font-size: 13.5px; color: var(--ink-2); display: flex; align-items: center; gap: 8px; }
+.dot { width: 9px; height: 9px; border-radius: 50%; background: var(--muted); flex: none; }
+.dot.running { background: var(--accent); animation: pulse 1.6s ease-in-out infinite; }
+.dot.done { background: var(--good); }
+.dot.paused, .dot.stopped { background: var(--warning); }
+@keyframes pulse { 50% { opacity: 0.3; } }
+@media (prefers-reduced-motion: reduce) { .dot.running { animation: none; } }
+
+.hero { padding: 36px 0 20px; }
+.eyebrow { color: var(--muted); font-size: 13px; margin: 0 0 10px; }
+.figures { display: flex; gap: 48px; flex-wrap: wrap; align-items: flex-end; }
+.figure b { display: block; font-size: 52px; line-height: 1; font-weight: 600; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; }
+.figure.minor b { font-size: 28px; letter-spacing: -0.02em; }
+.figure span { color: var(--ink-2); font-size: 14px; }
+.basis { color: var(--ink-2); font-size: 13.5px; max-width: 760px; margin: 18px 0 0; }
+
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 8px 20px; margin: 0 0 32px; }
+.section-head { margin: 0 0 10px; }
+.section-head h2 { font-size: 18px; font-weight: 600; margin: 0 0 4px; letter-spacing: -0.01em; }
+.section-head p { color: var(--ink-2); font-size: 14px; margin: 0; max-width: 760px; }
+.item { padding: 14px 0; border-bottom: 1px solid var(--grid); }
+.item:last-child { border-bottom: 0; }
+.item .name { font-weight: 500; }
+.item .change { margin-bottom: 4px; }
+@media (max-width: 640px) { .card { padding: 4px 12px; } }
+table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+th { text-align: left; font-weight: 500; color: var(--muted); font-size: 12.5px; padding: 12px 8px 8px; border-bottom: 1px solid var(--grid); white-space: nowrap; }
+td { padding: 14px 8px; border-bottom: 1px solid var(--grid); vertical-align: top; }
+th.r, td.r { text-align: right; }
+.rank { color: var(--muted); width: 24px; }
+.name { font-weight: 500; }
+.change { color: var(--ink-2); font-size: 13.5px; margin-top: 2px; max-width: 480px; }
+.open { font: inherit; font-weight: 600; color: var(--ink); background: none; border: 1px solid var(--border); border-radius: 8px; padding: 4px 10px; cursor: pointer; white-space: nowrap; min-width: 84px; text-align: right; }
+.open:hover, .open[aria-expanded="true"] { border-color: var(--accent); background: var(--accent-wash); }
+.open::after { content: " ▾"; color: var(--muted); font-weight: 400; }
+.open[aria-expanded="true"]::after { content: " ▴"; }
+@media (max-width: 700px) { .hide-narrow { display: none; } }
+.line td { padding: 8px; color: var(--muted); font-size: 12.5px; background: var(--page); }
+.more { display: block; width: 100%; font: inherit; color: var(--ink-2); background: none; border: 0; padding: 14px 8px; cursor: pointer; text-align: left; }
+.more:hover { color: var(--ink); }
+
+tr.detail > td { background: var(--page); padding: 18px 20px 22px; }
+.plan { margin: 0 0 18px; max-width: 760px; }
+.plan h3 { font-size: 13px; font-weight: 600; margin: 0 0 4px; }
+.plan p { margin: 0 0 12px; font-size: 15px; }
+.plan .today { color: var(--ink-2); font-size: 14px; }
+.formula { font-size: 15px; margin: 0 0 16px; padding-top: 16px; border-top: 1px solid var(--grid); }
+.formula b { font-variant-numeric: tabular-nums; }
+.factor { padding: 14px 0; border-top: 1px solid var(--grid); max-width: 760px; }
+.factor-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; margin-bottom: 4px; }
+.factor-head h3 { font-size: 13px; font-weight: 600; margin: 0; }
+.factor-head b { font-size: 15px; font-variant-numeric: tabular-nums; }
+.factor-head .src { color: var(--muted); font-size: 12.5px; }
+.factor > p { margin: 0 0 8px; color: var(--ink-2); font-size: 14px; }
+.quote { display: block; width: 100%; text-align: left; font: inherit; color: inherit; background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 8px; padding: 10px 12px; margin: 8px 0 0; cursor: pointer; }
+.quote:hover { border-color: var(--accent); }
+.quote .q { display: block; }
+.quote .note { display: block; color: var(--ink-2); font-size: 13.5px; margin-top: 4px; }
+.quote .meta { display: block; color: var(--muted); font-size: 12.5px; margin-top: 4px; }
+details.messages { padding-top: 14px; border-top: 1px solid var(--grid); font-size: 13.5px; max-width: 760px; }
+summary { cursor: pointer; font-weight: 600; font-size: 13px; }
+details.messages > p { color: var(--ink-2); margin: 6px 0 0; }
+.kind { margin-top: 12px; }
+.kind h4 { font-size: 13px; font-weight: 500; margin: 0 0 2px; }
+.kind h4 span { color: var(--muted); font-weight: 400; }
+.msgs { list-style: none; margin: 0; padding: 0; max-height: 300px; overflow-y: auto; }
+.msgs button { display: grid; grid-template-columns: 92px minmax(0, 1fr); gap: 2px 10px; width: 100%; text-align: left; font: inherit; font-size: 13px; color: inherit; background: none; border: 0; border-bottom: 1px solid var(--grid); padding: 7px 4px; cursor: pointer; }
+.msgs button:hover { background: var(--accent-wash); }
+.msgs .d { color: var(--muted); grid-row: span 2; }
+.msgs .s, .msgs .t { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.msgs .t { color: var(--ink-2); font-style: italic; }
+.draft-link { margin-top: 14px; }
+
+.steps { list-style: none; margin: 0; padding: 8px 0; }
+.steps li { display: flex; gap: 12px; padding: 7px 0; color: var(--muted); }
+.steps li.done { color: var(--ink-2); }
+.steps li.now { color: var(--ink); font-weight: 500; }
+.steps .m { width: 18px; text-align: center; }
+.steps li.done .m { color: var(--good); }
+.steps li.now .m { color: var(--accent); }
+.meter { height: 6px; background: var(--grid); border-radius: 3px; overflow: hidden; width: 160px; margin-top: 8px; }
+.meter div { height: 100%; background: var(--accent); }
+.empty { padding: 40px 0; }
+.empty h1 { font-size: 26px; margin: 0 0 6px; letter-spacing: -0.02em; }
+.empty p { color: var(--ink-2); margin: 0 0 16px; }
+
+.scrim { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.28); z-index: 20; }
+.drawer { position: fixed; top: 0; right: 0; bottom: 0; width: min(760px, 100%); background: var(--surface); z-index: 21; display: flex; flex-direction: column; box-shadow: -8px 0 32px rgba(0, 0, 0, 0.12); }
+.drawer-head { padding: 16px 24px; border-bottom: 1px solid var(--border); display: flex; gap: 16px; align-items: flex-start; }
+.drawer-head .sub { color: var(--muted); font-size: 12.5px; word-break: break-all; }
+.close { margin-left: auto; background: none; border: 1px solid var(--border); border-radius: 8px; color: var(--ink); padding: 6px 12px; cursor: pointer; font: inherit; }
+.drawer-body { overflow-y: auto; padding: 16px 24px 32px; }
+.verified { font-size: 13px; margin: 0 0 12px; }
+.status-good { color: var(--good); }
+.status-warn { color: var(--warning); }
+pre.msg { white-space: pre-wrap; word-wrap: break-word; font: 13px/1.55 ui-monospace, "Cascadia Mono", Consolas, monospace; margin: 0; }
+mark { background: var(--mark); color: inherit; border-radius: 2px; }
+</style>
+</head>
+<body>
+<header><div class="wrap"><div class="brand">Recurring work review</div><div class="status" id="status"></div></div></header>
+<main id="app" class="wrap"><p class="empty muted">Loading…</p></main>
+<div id="overlay"></div>
+<script>
+"use strict";
+
+// Every value from the run, emails included, is inserted as text, never as HTML.
+function h(tag, attrs, ...kids) {
+  const el = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs || {})) {
+    if (v == null || v === false) continue;
+    if (k === "class") el.className = v;
+    else if (k.startsWith("on")) el.addEventListener(k.slice(2), v);
+    else el.setAttribute(k, v === true ? "" : v);
+  }
+  for (const kid of kids.flat(Infinity)) {
+    if (kid == null || kid === false) continue;
+    el.append(kid instanceof Node ? kid : String(kid));
+  }
+  return el;
+}
+
+const money = x => "$" + Math.round(x).toLocaleString("en-US");
+const num = x => (+(+x).toFixed(2)).toLocaleString("en-US", {maximumFractionDigits: 2});
+const hrs = x => x.toLocaleString("en-US", {minimumFractionDigits: 1, maximumFractionDigits: 1});
+const plural = (n, one, many) => `${num(n)} ${n === 1 ? one : (many || one + "s")}`;
+const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+const monthLabel = ym => `${MONTHS[+ym.slice(5, 7) - 1]} ${ym.slice(0, 4)}`;
+const dateLabel = iso => iso ? `${+iso.slice(8, 10)} ${MONTHS[+iso.slice(5, 7) - 1]} ${iso.slice(0, 4)}` : "no date";
+function since(iso) {
+  const s = Math.max(0, Math.round((Date.now() - new Date(iso)) / 1000));
+  return s < 60 ? `${s} s` : s < 3600 ? `${Math.floor(s / 60)} min` : `${Math.floor(s / 3600)} h ${Math.floor(s % 3600 / 60)} min`;
+}
+
+let R = null;               // the report: what the run has produced
+let P = null;               // the run's progress
+const open = new Set();     // opportunities whose evidence is shown
+let showAll = false;
+let showAllStalls = false;
+// A link to the page with #opp-NN opens that opportunity's evidence.
+if (/^#opp-\d+$/.test(location.hash)) open.add(location.hash.slice(1));
+
+// ---- the run's progress ----
+const STEPS = {
+  prepare: "Reading and batching the mail", scouts: "Reading every batch for recurring work",
+  validate: "Checking every quote against its message", merge: "Grouping the same work together",
+  group: "Building each process", estimate: "Estimating the time each change saves",
+  score: "Ranking by dollars a month", drafters: "Drafting the top opportunities", finalize: "Writing the report",
+};
+
+function runState() {
+  const current = P.steps.find(s => !s.done), st = P.run ? P.run.status : "";
+  if (P.active) return {kind: "running", current, text: "Running"};
+  if (!current) return {kind: "done", current, text: "Run finished"};
+  if (!P.run && !P.steps.some(s => s.done)) return {kind: "none", current, text: "No run yet"};
+  if (st.startsWith("CONTINUE")) return {kind: "paused", current, text: "Paused: running it again continues"};
+  if (st.startsWith("FAILED")) return {kind: "stopped", current, text: "Stopped: " + st.slice(7)};
+  return {kind: "stopped", current, text: "Stopped: running it again continues"};
+}
+
+function stepText(step) {
+  const [n, total] = step.count || [0, 0];
+  return STEPS[step.step] + (total ? ` (${n} of ${total})` : "");
+}
+
+function renderStatus() {
+  const s = runState();
+  const what = s.kind === "running" && s.current ? stepText(s.current) + (P.run ? ` · ${since(P.run.started)}` : "") : s.text;
+  document.getElementById("status").replaceChildren(h("span", {class: "dot " + s.kind}), h("span", null, what));
+}
+
+function viewProgress() {
+  const s = runState();
+  return h("section", {class: "empty"},
+    h("h1", null, s.kind === "none" ? "No run yet" : s.kind === "running" ? "The run is in progress" : "The run has not ranked anything yet"),
+    h("p", null, s.kind === "none" ? "Start one with /run-pipeline. This page follows it as it goes."
+      : s.kind === "running" ? "The ranked opportunities appear here as soon as they are ready." : s.text + "."),
+    h("ol", {class: "steps"}, P.steps.map(step => {
+      const now = step === s.current && s.kind !== "none";
+      const [n, total] = step.count || [0, 0];
+      return h("li", {class: step.done ? "done" : now ? "now" : ""},
+        h("span", {class: "m"}, step.done ? "✓" : now ? "●" : "○"),
+        h("div", null, stepText(step),
+          now && total ? h("div", {class: "meter"}, h("div", {style: `width:${n / total * 100}%`})) : null));
+    })));
+}
+
+// ---- the opportunities ----
+function viewResults() {
+  const t = R.totals;
+  const ranked = R.opportunities.filter(o => o.rank != null && o.dollars_per_month > 0);
+  const shown = showAll ? ranked : ranked.slice(0, t.drafted || 10);
+  const rest = ranked.slice(shown.length);
+  const months = Object.values(R.mailboxes).flatMap(b => b.months).sort();
+
+  const rows = [];
+  for (const o of shown) {
+    const id = "d-" + o.id, isOpen = open.has(o.id);
+    rows.push(h("tr", null,
+      h("td", {class: "rank"}, o.rank),
+      h("td", null, h("div", {class: "name"}, o.name), h("div", {class: "change"}, o.change)),
+      h("td", {class: "r"}, h("button", {class: "open", "aria-expanded": String(isOpen), "aria-controls": id,
+        title: "The change in full, how this figure is made, and the messages it comes from",
+        onclick: () => { isOpen ? open.delete(o.id) : open.add(o.id); render(); }}, money(o.dollars_per_month))),
+      h("td", {class: "r hide-narrow"}, hrs(o.hours_per_month)),
+      h("td", {class: "r hide-narrow"}, money(o.running_total))));
+    if (isOpen) rows.push(h("tr", {class: "detail", id}, h("td", {colspan: 5}, evidence(o))));
+    if (o.rank === t.drafted && ranked.length > t.drafted) {
+      rows.push(h("tr", {class: "line"}, h("td", {colspan: 5},
+        `The ${t.drafted} above, ${money(t.drafted_dollars_per_month)} a month, are drafted.`)));
+    }
+  }
+
+  return [
+    h("section", {class: "hero"},
+      h("p", {class: "eyebrow"}, `Enron email archive · ${plural(Object.keys(R.mailboxes).length, "mailbox", "mailboxes")}` +
+        (months.length ? ` · ${monthLabel(months[0])} – ${monthLabel(months[months.length - 1])}` : "")),
+      h("div", {class: "figures"},
+        h("div", {class: "figure"}, h("b", null, money(t.dollars_per_month)), h("span", null, "a month of staff time that could be saved")),
+        h("div", {class: "figure minor"}, h("b", null, hrs(t.hours_per_month)), h("span", null, "hours saved a month")),
+        h("div", {class: "figure minor"}, h("b", null, money(t.drafted_dollars_per_month)), h("span", null, `from the top ${t.drafted}`))),
+      h("p", {class: "basis"}, `Each figure is minutes saved each time × times a month × $${t.hourly_rate} an hour. `,
+        "The minutes are a model's estimate from quoted evidence; how often comes from a count of the archive or a message that states it. ",
+        "Every quote has been checked word for word against its message. Click a figure for the change in full and the evidence behind it.")),
+    h("section", {class: "card"}, h("table", null,
+      h("thead", null, h("tr", null, h("th", null, "#"), h("th", null, "Opportunity and the change"),
+        h("th", {class: "r"}, "Saved a month"), h("th", {class: "r hide-narrow"}, "Hours saved a month"), h("th", {class: "r hide-narrow"}, "Saved so far"))),
+      h("tbody", null, rows)),
+      rest.length ? h("button", {class: "more", onclick: () => { showAll = true; render(); }},
+        `Show the other ${rest.length}, together ${money(rest.reduce((a, o) => a + o.dollars_per_month, 0))} a month`) : null),
+    stallsView(ranked),
+    onceView(),
+  ];
+}
+
+// Where work waits or goes wrong, process by process in the order of the ranking.
+function stallsView(ranked) {
+  const order = [...ranked, ...R.opportunities.filter(o => o.rank == null)];
+  const items = order.flatMap(o => { const p = R.processes.find(x => x.id === o.process);
+    return (p && p.evidence.stalls || []).map(s => ({o, s})); });
+  if (!items.length) return null;
+  const shown = showAllStalls ? items : items.slice(0, 8);
+  return h("section", null,
+    h("div", {class: "section-head"}, h("h2", null, "Where work stalls"),
+      h("p", null, "Places where the work waits, is chased, goes back and forth or is held back, in the order of the opportunities above.")),
+    h("div", {class: "card"}, shown.map(({o, s}) => h("div", {class: "item"},
+      h("div", {class: "name"}, o.name), quote(s))),
+      items.length > shown.length ? h("button", {class: "more", onclick: () => { showAllStalls = true; render(); }},
+        `Show the other ${items.length - shown.length}`) : null));
+}
+
+// Work the archive shows once: what it says may matter, but it cannot be ranked.
+function onceView() {
+  const once = R.opportunities.filter(o => o.rank == null && (o.unused || "").startsWith("it happened once"));
+  if (!once.length) return null;
+  return h("section", null,
+    h("div", {class: "section-head"}, h("h2", null, "Seen once, not ranked"),
+      h("p", null, "Each of these appears once in the archive: one message, or one message and its replies. " +
+        "One message can say that work recurs but cannot show it, so these are not counted in the figures above. " +
+        "They are worth a question to the people involved.")),
+    h("div", {class: "card"}, once.map(o => { const p = R.processes.find(x => x.id === o.process);
+      return h("div", {class: "item"}, h("div", {class: "name"}, o.name),
+        o.change ? h("div", {class: "change"}, o.change) : null,
+        p ? [...p.evidence.occurrences.slice(0, 1), ...(p.evidence.stalls || [])].map(quote) : null); })));
+}
+
+function evidence(o) {
+  const r = o.rate, c = r.counted, p = R.processes.find(x => x.id === o.process);
+  const where = c.span
+    ? `the ${plural(c.months, "month")} from ${monthLabel(c.span[0])} to ${monthLabel(c.span[1])}, while the work went on, of the mail held for ${c.mailboxes.join(", ")}`
+    : `the ${plural(c.months, "month")} of mail the archive holds for ${c.mailboxes.join(", ")}${o.ongoing === false ? ", since it is an episode that will not continue" : ""}`;
+  const times = plural(c.times, "time") + (c.messages > c.times ? ` (${c.messages} messages; a reply is counted with what it answers)` : "");
+  const often = r.source === "stated"
+    ? [h("p", null, `A message says how often the work is done, and the quote below is that evidence. `,
+         `The archive itself shows it ${times} in ${where}; it holds only part of these people's mail, so a count from it falls short.`),
+       quote(r.stated.quote)]
+    : [h("p", null, `Counted from the archive: ${times} in ${where}. `,
+         `The archive holds only part of these people's mail, so the real rate is likely higher. The messages are listed below.`)];
+  const stalls = p && p.evidence.stalls || [];
+  // A quote cited for the minutes that is the same words as the rate's is shown once, under how often.
+  const rateWords = r.source === "stated" ? r.stated.quote.message + "\u0000" + r.stated.quote.quote : null;
+  const basis = o.basis.filter(b => b.message + "\u0000" + b.quote !== rateWords);
+  return [
+    h("div", {class: "plan"},
+      p ? [h("h3", null, "How the work is done today"), h("p", {class: "today"}, p.summary)] : null,
+      h("h3", null, "The change"), h("p", null, o.explanation || o.change)),
+    h("p", {class: "formula"}, h("b", null, `${num(o.minutes)} min`), " saved each time × ", h("b", null, num(r.per_month)),
+      " times a month = ", h("b", null, `${hrs(o.hours_per_month)} hours`), ` × $${R.totals.hourly_rate} = `, h("b", null, money(o.dollars_per_month)), " a month"),
+    h("section", {class: "factor"},
+      h("div", {class: "factor-head"}, h("h3", null, "How often it happens"), h("b", null, `${num(r.per_month)} times a month`),
+        h("span", {class: "src"}, r.source === "stated" ? "stated in the mail" : "counted from the archive")),
+      often),
+    h("section", {class: "factor"},
+      h("div", {class: "factor-head"}, h("h3", null, "Time the change saves each time"), h("b", null, `${num(o.minutes)} minutes`),
+        h("span", {class: "src"}, "an estimate, not stated in the mail")),
+      h("p", null, o.reasoning),
+      basis.length < o.basis.length && !basis.length ? h("p", null, "It rests on the same quote as how often, above.") : null,
+      basis.map(quote)),
+    stalls.length ? h("section", {class: "factor"},
+      h("div", {class: "factor-head"}, h("h3", null, "Where it stalls")), stalls.map(quote)) : null,
+    p ? occurrences(p) : null,
+    R.drafts.includes(o.id) ? h("div", {class: "draft-link"}, h("button", {class: "quote", onclick: () => openDraft(o)}, "Read the drafted artifact")) : null,
+  ];
+}
+
+// The messages that show the work, grouped by what each was recorded as showing.
+function occurrences(p) {
+  const all = p.evidence.occurrences, kinds = new Map();
+  for (const cite of all) {
+    if (!kinds.has(cite.pattern)) kinds.set(cite.pattern, []);
+    kinds.get(cite.pattern).push(cite);
+  }
+  const byDate = (a, b) => ((R.messages[a.message] || {}).date || "9").localeCompare((R.messages[b.message] || {}).date || "9");
+  return h("details", {class: "messages"},
+    h("summary", null, all.length === 1 ? "The message that shows this work" : `The ${all.length} messages that show this work`),
+    h("p", null, "Each message is listed under what the reader of its batch recorded it as showing. The quote is the words that show it; open a message to read it whole."),
+    [...kinds].sort((a, b) => b[1].length - a[1].length).map(([pid, cites]) => h("div", {class: "kind"},
+      h("h4", null, R.patterns[pid] || pid, h("span", null, ` · ${plural(cites.length, "message")}`)),
+      h("ul", {class: "msgs"}, cites.sort(byDate).map(cite => { const m = R.messages[cite.message] || {};
+        return h("li", null, h("button", {onclick: () => openMessage(cite.message, [cite.quote])},
+          h("span", {class: "d"}, dateLabel(m.date)),
+          h("span", {class: "s"}, `${m.subject || "(no subject)"} · ${m.from || ""}`),
+          h("span", {class: "t"}, `“${cite.quote}”`))); })))));
+}
+
+function quote(cite) {
+  const m = R.messages[cite.message] || {};
+  return h("button", {class: "quote", onclick: () => openMessage(cite.message, [cite.quote])},
+    h("span", {class: "q"}, `“${cite.quote}”`),
+    cite.note ? h("span", {class: "note"}, cite.note) : null,
+    h("span", {class: "meta"}, `${m.from || ""} · ${dateLabel(m.date)} · ${m.subject || "(no subject)"}`));
+}
+
+// ---- a message, opened from a quote ----
+function drawer(title, sub) {
+  const overlay = document.getElementById("overlay");
+  const body = h("div", {class: "drawer-body"}, h("p", {class: "muted"}, "Loading…"));
+  const close = () => overlay.replaceChildren();
+  overlay.replaceChildren(h("div", {class: "scrim", onclick: close}),
+    h("div", {class: "drawer", role: "dialog", "aria-label": title},
+      h("div", {class: "drawer-head"}, h("div", null, h("div", {class: "name"}, title), h("div", {class: "sub"}, sub)),
+        h("button", {class: "close", onclick: close}, "Close")), body));
+  return body;
+}
+document.addEventListener("keydown", e => { if (e.key === "Escape") document.getElementById("overlay").replaceChildren(); });
+
+async function openMessage(id, quotes) {
+  const m0 = R.messages[id] || {};
+  const body = drawer(m0.subject || "(no subject)", id);
+  const q = new URLSearchParams({id}); quotes.forEach(x => q.append("q", x));
+  const res = await fetch("/api/message?" + q);
+  if (!res.ok) return body.replaceChildren(h("p", null, "This message is not in the run."));
+  const m = await res.json();
+  const found = m.spans.filter(Boolean).length;
+  body.replaceChildren(
+    h("p", {class: "verified " + (found ? "status-good" : "status-warn")},
+      found ? "✓ The quoted words are in this message, marked below." : "The quoted words are not in this message."),
+    h("p", {class: "small muted"}, `${m.date ? m.date.replace("T", " ") + " UTC" : "No usable date"} · file ${m.file}`),
+    h("pre", {class: "msg"}, highlighted(m.text, m.spans)));
+  const first = body.querySelector("mark");
+  if (first) first.scrollIntoView({block: "center"});
+}
+
+async function openDraft(o) {
+  const body = drawer(o.name, "Drafted artifact");
+  const res = await fetch("/api/draft?id=" + encodeURIComponent(o.id));
+  body.replaceChildren(h("pre", {class: "msg"}, res.ok ? await res.text() : "The draft is not available."));
+}
+
+function highlighted(text, spans) {
+  const out = [];
+  let at = 0;
+  for (const [a, b] of spans.filter(Boolean).sort((x, y) => x[0] - y[0])) {
+    if (b <= at) continue;
+    out.push(text.slice(at, Math.max(a, at)), h("mark", null, text.slice(Math.max(a, at), b)));
+    at = b;
+  }
+  out.push(text.slice(at));
+  return out;
+}
+
+// ---- keeping up with the run ----
+function render() {
+  const y = window.scrollY;
+  document.getElementById("app").replaceChildren(...[].concat(R.scored ? viewResults() : viewProgress()));
+  window.scrollTo(0, y);
+  renderStatus();
+}
+
+async function loadReport() {
+  R = await (await fetch("/api/report")).json();
+}
+
+// Ask what the run is doing every few seconds; fetch the results again only when the run has written new ones.
+let version = null;
+async function poll() {
+  try {
+    P = await (await fetch("/api/progress")).json();
+    if (P.version !== version) {
+      version = P.version;
+      await loadReport();
+      render();
+    } else if (!R.scored) {
+      render();
+    } else {
+      renderStatus();
+    }
+  } catch (err) {
+    // The server is busy or restarting: keep the page and ask again.
+  }
+  setTimeout(poll, P && P.active ? 2000 : 5000);
+}
+
+poll();
+</script>
+</body>
+</html>

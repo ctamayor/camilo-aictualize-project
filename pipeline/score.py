@@ -1,0 +1,148 @@
+"""Turn the estimates into ranked opportunities, in hours and dollars a month.
+
+All of the arithmetic is here, none of it in a model. For each process:
+
+- How often it happens. Counted: the times it happened (a message with the
+  replies that quote it is one time) divided by the months of mail the archive
+  holds for its mailboxes, since it holds only those months of those people's
+  mail. For ongoing work, only the months from its first time to its last: work
+  that runs for four months of a mailbox's twenty did not stop for the other
+  sixteen without a reason the count cannot see. For an episode (a migration, a
+  cleanup), every month, since it will not continue. Stated: the rate the
+  estimator read from a quote, used only if that quote is one of the process's
+  own. The larger of the two is used, because the count can only fall short:
+  most of the mail is not in the archive.
+- A process that happened once in the archive is listed but not ranked. One
+  message, or one thread, can say that work recurs but cannot show it, and a
+  stated rate would otherwise turn a single remark into a large figure.
+- The minutes the change saves each time, from the estimator. An estimate whose
+  basis names none of the process's quotes is not used, so the process is listed
+  but not ranked.
+- Hours a month = minutes x rate / 60, and dollars a month = hours x $85.
+
+Opportunities are ranked by dollars a month. The top ``DRAFT_TOP`` get a
+drafted artifact. Every figure is stored rounded as it is shown, and the
+running total adds up the stored figures, so the dashboard's numbers agree.
+"""
+
+import re
+from collections import defaultdict
+from pathlib import Path
+
+from .estimate import numbered_quotes
+from .state import log, read_json, read_messages, write_json
+
+HOURLY_RATE = 85
+DRAFT_TOP = 10
+
+
+def mailbox_months(messages: dict) -> dict:
+    """For each mailbox: its messages, the months in which it has mail, and its first and last month."""
+    months, counts = defaultdict(set), defaultdict(int)
+    for m in messages.values():
+        counts[m["mailbox"]] += 1
+        if m["date"]:
+            months[m["mailbox"]].add(m["date"][:7])
+    return {box: {"messages": counts[box], "months": sorted(months[box])} for box in sorted(counts)}
+
+
+def counted_rate(process: dict, messages: dict, boxes: dict, ongoing: bool) -> dict:
+    mailboxes = sorted({messages[o["message"]]["mailbox"] for o in process["evidence"]["occurrences"]})
+    held = set().union(*(boxes[b]["months"] for b in mailboxes)) if mailboxes else set()
+    span = [process["first"][:7], process["last"][:7]] if ongoing and process.get("first") else None
+    months = len([m for m in held if span[0] <= m <= span[1]] if span else held)
+    per_month = process["times"] / months if months else 0
+    return {"times": process["times"], "messages": process["occurrences"], "months": months,
+            "mailboxes": mailboxes, "span": span, "per_month": round(per_month, 2)}
+
+
+def quote_id(ref: str, process: dict) -> str:
+    """Restore a quote id an estimator wrote with its pattern in front ("chunk-005.p20.q32"),
+    as it is laid out under its pattern in the prompt. Quote ids are unique within a
+    process, so this is unambiguous."""
+    m = re.fullmatch(r"(.+)\.(q\d+)", ref)
+    return m[2] if m and m[1] in process["patterns"] else ref
+
+
+def score_process(process: dict, estimate: dict | None, messages: dict, boxes: dict) -> dict:
+    quotes = numbered_quotes(process)
+    opportunity = {"process": process["id"], "name": process["name"], "summary": process["summary"],
+                   "rank": None, "problems": []}
+    if estimate is None:
+        return opportunity | {"unused": "no estimate was made for this process"}
+
+    named = [quote_id(ref, process) for ref in estimate["basis"]]
+    basis = [qid for qid in named if qid in quotes]
+    if len(basis) < len(named):
+        opportunity["problems"].append(f"basis names quotes the process does not have: "
+                                       f"{', '.join(q for q in named if q not in quotes)}")
+    stated = estimate["stated_rate"] | {"quote": quote_id(estimate["stated_rate"]["quote"], process)}
+    stated_quote = quotes.get(stated["quote"]) if stated["per_month"] > 0 else None
+    if stated["per_month"] > 0 and stated_quote is None:
+        opportunity["problems"].append(f"stated rate of {stated['per_month']:g} a month cites "
+                                       f"{stated['quote'] or 'no quote'}, which the process does not have")
+
+    opportunity |= {"change": estimate["change"], "explanation": estimate["explanation"],
+                    "ongoing": estimate["ongoing"], "not_served": estimate["not_served"],
+                    "reasoning": estimate["reasoning"], "minutes": estimate["minutes"],
+                    "basis": [quotes[qid] | {"id": qid} for qid in basis]}
+    if not basis:
+        return opportunity | {"unused": "the estimate names none of the process's quotes"}
+    if process["times"] == 1:
+        return opportunity | {"unused": "it happened once in the archive, so the mail does not show it recurring"}
+
+    counted = counted_rate(process, messages, boxes, estimate["ongoing"])
+    if stated_quote and stated["per_month"] > counted["per_month"]:
+        rate = {"per_month": round(stated["per_month"], 2), "source": "stated"}
+    else:
+        rate = {"per_month": counted["per_month"], "source": "counted"}
+    rate |= {"counted": counted,
+             "stated": {"per_month": stated["per_month"], "quote": stated_quote | {"id": stated["quote"]}}
+             if stated_quote else None}
+    hours = round(estimate["minutes"] * rate["per_month"] / 60, 2)
+    return opportunity | {"rate": rate, "hours_per_month": hours,
+                          "dollars_per_month": round(hours * HOURLY_RATE, 2)}
+
+
+def score(corpus_dir: Path, out_dir: Path) -> str:
+    processes = read_json(out_dir / "processes.json")["processes"]
+    messages = read_messages(out_dir)
+    boxes = mailbox_months(messages)
+
+    estimates, ignored = {}, 0
+    known = {p["id"] for p in processes}
+    for e in (e for path in sorted((out_dir / "estimates").glob("*.json")) for e in read_json(path)["estimates"]):
+        if e["process"] in known and e["process"] not in estimates:
+            estimates[e["process"]] = e
+        else:
+            ignored += 1
+
+    scored = [score_process(p, estimates.get(p["id"]), messages, boxes) for p in processes]
+    ranked = sorted((o for o in scored if "unused" not in o), key=lambda o: (-o["dollars_per_month"], o["process"]))
+    running = 0
+    for rank, o in enumerate(ranked, 1):
+        running = round(running + o["dollars_per_month"], 2)
+        o |= {"rank": rank, "running_total": running, "draft": rank <= DRAFT_TOP and o["dollars_per_month"] > 0}
+    unused = [o for o in scored if "unused" in o]
+    opportunities = [{"id": f"opp-{i:02d}"} | o for i, o in enumerate(ranked + unused, 1)]
+
+    totals = {
+        "hourly_rate": HOURLY_RATE,
+        "ranked": len(ranked),
+        "unused": len(unused),
+        "happened_once": sum(o["unused"].startswith("it happened once") for o in unused),
+        "hours_per_month": round(sum(o["hours_per_month"] for o in ranked), 2),
+        "dollars_per_month": running,
+        "drafted": sum(bool(o["draft"]) for o in ranked),
+        "drafted_dollars_per_month": round(sum(o["dollars_per_month"] for o in ranked if o["draft"]), 2),
+        "stated_rates_used": sum(o["rate"]["source"] == "stated" for o in ranked),
+        "estimates_ignored": ignored,
+    }
+    write_json(out_dir / "opportunities.json", {"totals": totals, "mailboxes": boxes, "opportunities": opportunities})
+
+    summary = (f"{len(ranked)} opportunities ranked, ${totals['dollars_per_month']:,.0f}/month "
+               f"({totals['hours_per_month']:,.1f} hours) at ${HOURLY_RATE}/hour; top {totals['drafted']} "
+               f"to draft (${totals['drafted_dollars_per_month']:,.0f}/month); {len(unused)} not ranked, "
+               f"{ignored} estimates ignored")
+    log(out_dir, f"score: {summary}")
+    return summary

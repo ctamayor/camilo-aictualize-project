@@ -136,6 +136,8 @@ tr.detail > td { background: var(--page); padding: 18px 20px 22px; }
 details.messages { padding-top: 14px; border-top: 1px solid var(--grid); font-size: 13.5px; max-width: 760px; }
 summary { cursor: pointer; font-weight: 600; font-size: 13px; }
 details.messages > p { color: var(--ink-2); margin: 6px 0 0; }
+details.once > summary { font-size: 15px; }
+details.once > p { color: var(--ink-2); font-size: 14px; margin: 6px 0 10px; max-width: 760px; }
 .kind { margin-top: 12px; }
 .kind h4 { font-size: 13px; font-weight: 500; margin: 0 0 2px; }
 .kind h4 span { color: var(--muted); font-weight: 400; }
@@ -265,7 +267,7 @@ function viewProgress() {
 // ---- the opportunities ----
 function viewResults() {
   const t = R.totals;
-  const ranked = R.opportunities.filter(o => o.rank != null && o.dollars_per_month > 0);
+  const ranked = R.opportunities.filter(o => o.rank != null);
   const shown = showAll ? ranked : ranked.slice(0, t.drafted || 10);
   const rest = ranked.slice(shown.length);
   const months = Object.values(R.mailboxes).flatMap(b => b.months).sort();
@@ -279,7 +281,7 @@ function viewResults() {
       h("td", {class: "r"}, h("button", {class: "open", "aria-expanded": String(isOpen), "aria-controls": id,
         title: "The change in full, how this figure is made, and the messages it comes from",
         onclick: () => { isOpen ? open.delete(o.id) : open.add(o.id); render(); }}, money(o.dollars_per_month))),
-      h("td", {class: "r hide-narrow"}, hrs(o.hours_per_month)),
+      h("td", {class: "r hide-narrow"}, num(o.hours_per_month)),
       h("td", {class: "r hide-narrow"}, money(o.running_total))));
     if (isOpen) rows.push(h("tr", {class: "detail", id}, h("td", {colspan: 5}, evidence(o))));
     if (o.rank === t.drafted && ranked.length > t.drafted) {
@@ -316,15 +318,15 @@ function viewResults() {
 function onceView() {
   const once = R.opportunities.filter(o => o.rank == null && (o.unused || "").startsWith("it happened once"));
   if (!once.length) return null;
-  return h("section", null,
-    h("div", {class: "section-head"}, h("h2", null, "Seen once, not ranked"),
-      h("p", null, "Each of these appears once in the archive (one message, or one message and its replies), " +
-        "and nothing in it says the work recurs, so it is not counted in the figures above. " +
-        "What it shows may still matter, and is worth a question to the people involved.")),
+  return h("section", null, h("details", {class: "once"},
+    h("summary", null, `${plural(once.length, "thing")} seen once, not ranked`),
+    h("p", null, "Each of these appears once in the archive (one message, or one message and its replies), " +
+      "and nothing in it says the work recurs, so it is not counted in the figures above. " +
+      "What it shows may still matter, and is worth a question to the people involved."),
     h("div", {class: "card"}, once.map(o => { const p = R.processes.find(x => x.id === o.process);
       return h("div", {class: "item"}, h("div", {class: "name"}, o.name),
         o.change ? h("div", {class: "change"}, o.change) : null,
-        p ? [...p.evidence.occurrences.slice(0, 1), ...(p.evidence.stalls || [])].map(quote) : null); })));
+        p ? [...p.evidence.occurrences.slice(0, 1), ...(p.evidence.stalls || [])].map(quote) : null); }))));
 }
 
 function evidence(o) {
@@ -337,8 +339,11 @@ function evidence(o) {
     ? [h("p", null, `A message says how often the work is done, and the quote below is that evidence. `,
          c.times === 1 ? `The archive itself shows it once; it holds only part of these people's mail.`
            : `The archive itself shows it ${times} in ${where}; it holds only part of these people's mail, so a count from it falls short.`),
-       quote(r.stated.quote)]
-    : [h("p", null, `Counted from the archive: ${times} in ${where}. `,
+       quote(r.stated.quote, r.stated.words)]
+    : [h("p", null, c.span
+         ? `Counted from the archive: ${times}, so ${plural(c.times - 1, "gap")} between them, in ${where}. ` +
+           `Work that goes on is counted by the gaps between its times: ${num(c.times - 1)} ÷ ${num(c.months)} = ${num(c.per_month)} a month. `
+         : `Counted from the archive: ${times} in ${where}: ${num(c.times)} ÷ ${num(c.months)} = ${num(c.per_month)} a month. `,
          `The archive holds only part of these people's mail, so the real rate is likely higher. The messages are listed below.`)];
   const key = c => c.message + "\u0000" + c.quote;
   // A quote cited for the minutes that is the same words as the rate's is shown once, under how often.
@@ -351,7 +356,7 @@ function evidence(o) {
       p ? [h("h3", null, "How the work is done today"), h("p", {class: "today"}, p.summary)] : null,
       h("h3", null, "The change"), h("p", null, o.explanation || o.change)),
     h("p", {class: "formula"}, h("b", null, `${num(o.minutes)} min`), " saved each time × ", h("b", null, num(r.per_month)),
-      " times a month = ", h("b", null, `${hrs(o.hours_per_month)} hours`), ` × $${R.totals.hourly_rate} = `, h("b", null, money(o.dollars_per_month)), " a month"),
+      " times a month = ", h("b", null, `${num(o.hours_per_month)} hours`), ` × $${R.totals.hourly_rate} = `, h("b", null, money(o.dollars_per_month)), " a month"),
     h("section", {class: "factor"},
       h("div", {class: "factor-head"}, h("h3", null, "How often it happens"), h("b", null, `${num(r.per_month)} times a month`),
         h("span", {class: "src"}, r.source === "stated" ? "stated in the mail" : "counted from the archive")),
@@ -389,10 +394,14 @@ function occurrences(p) {
           h("span", {class: "t"}, `“${cite.quote}”`))); })))));
 }
 
-function quote(cite) {
+function quote(cite, words) {
   const m = R.messages[cite.message] || {};
+  // Called from .map too, where the second argument is an index, not words.
+  const at = typeof words === "string" && words ? cite.quote.indexOf(words) : -1;
+  const text = at < 0 ? cite.quote
+    : [cite.quote.slice(0, at), h("mark", null, words), cite.quote.slice(at + words.length)];
   return h("button", {class: "quote", onclick: () => openMessage(cite.message, [cite.quote])},
-    h("span", {class: "q"}, `“${cite.quote}”`),
+    h("span", {class: "q"}, "“", text, "”"),
     cite.note ? h("span", {class: "note"}, cite.note) : null,
     h("span", {class: "meta"}, `${m.from || ""} · ${dateLabel(m.date)} · ${m.subject || "(no subject)"}`));
 }

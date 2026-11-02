@@ -21,14 +21,18 @@ request they make or answer, an exchange they have, a kind of message that is se
 or a way information moves between people. The pattern is the same from one time
 to the next although the surrounding details may change. Name a pattern by what
 recurs. A pattern is one thing: things that only share a subject, a department or
-the people involved are separate patterns, because each pattern is later judged by
-what one change would save of it.
+the people involved are separate patterns, and so are things that only share the
+way they are sent, unless the sending is itself the work, because each pattern is
+later judged by what one change would save of it.
 
 Patterns exist at every scale, from a single action to a chain across several
-people. Record a pattern at every scale at which it recurs as a whole. A chain's
-occurrences are whole runs of the chain; a message that shows one different act
-is an occurrence of that act's pattern, because a pattern that collects
-different acts cannot be saved by one change.
+people. Record a pattern at every scale at which it recurs as a whole. Each message
+that does part of a pattern's work is an occurrence of it, a reply or forward as
+much as the message that began it, because a pattern's evidence is every message
+in which its work was done; a reply that only acknowledges does none of that work.
+A message in the same exchange that does only other work is an occurrence of that
+work's pattern and not of this one, because a pattern that collects different work
+cannot be saved by one change.
 
 Record a pattern when some of the time people spend on it could be saved by
 automating, simplifying or removing part of it. Any saving counts, however small,

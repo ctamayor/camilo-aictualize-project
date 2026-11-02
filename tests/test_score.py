@@ -27,9 +27,9 @@ def twice(pid: str) -> dict:
     return process(pid, [cite("a", 0, "x"), cite("a", 1, "y")])
 
 
-def estimate(pid: str, minutes: float, basis=("q1",), stated=0, stated_quote="", ongoing=False) -> dict:
+def estimate(pid: str, minutes: float, basis=("q1",), stated=0, stated_quote="", words="", ongoing=False) -> dict:
     return {"process": pid, "change": f"change {pid}", "explanation": f"explanation {pid}", "not_served": [],
-            "ongoing": ongoing, "basis": list(basis), "stated_rate": {"per_month": stated, "quote": stated_quote},
+            "ongoing": ongoing, "basis": list(basis), "stated_rate": {"per_month": stated, "quote": stated_quote, "words": words},
             "reasoning": "because", "minutes": minutes}
 
 
@@ -83,7 +83,7 @@ class ScoreTest(unittest.TestCase):
         stated = process("proc-001", [cite("a", 0, "it eats half my week, every week"), cite("a", 1, "y")], times=1)
         silent = process("proc-002", [cite("a", 2, "please approve this one"), cite("a", 3, "z")], times=1)
         doc, opps = self.run_score([stated, silent, twice("proc-003")],
-                                   [estimate("proc-001", 300, stated=4.3, stated_quote="q1", ongoing=True),
+                                   [estimate("proc-001", 300, stated=4.3, stated_quote="q1", words="every week", ongoing=True),
                                     estimate("proc-002", 30, ongoing=True), estimate("proc-003", 5)])
         self.assertEqual(opps["proc-001"]["rate"]["source"], "stated")
         self.assertEqual(opps["proc-001"]["hours_per_month"], 21.5)
@@ -102,15 +102,40 @@ class ScoreTest(unittest.TestCase):
 
     def test_a_stated_rate_is_used_when_higher_and_its_quote_is_the_processs_own(self):
         p = process("proc-001", [cite("a", 0, "we do it every day"), cite("a", 1, "y")])
-        _, opps = self.run_score([p], [estimate("proc-001", 10, stated=20, stated_quote="q1")])
+        _, opps = self.run_score([p], [estimate("proc-001", 10, stated=20, stated_quote="q1", words="Every Day")])
         o = opps["proc-001"]
         self.assertEqual((o["rate"]["source"], o["rate"]["per_month"]), ("stated", 20))
         self.assertEqual(o["rate"]["stated"]["quote"]["quote"], "we do it every day")
+        # The words are stored as the quote has them, so they can be marked in it.
+        self.assertEqual(o["rate"]["stated"]["words"], "every day")
         self.assertEqual((o["hours_per_month"], o["dollars_per_month"]), (3.33, 283.05))
+
+    def test_a_stated_rate_whose_words_are_in_another_quote_cites_that_quote(self):
+        p = process("proc-001", [cite("a", 0, "start at seven"), cite("a", 1, "we check out each night")])
+        _, opps = self.run_score([p], [estimate("proc-001", 10, stated=21, stated_quote="q1", words="each night")])
+        o = opps["proc-001"]
+        self.assertEqual((o["rate"]["source"], o["rate"]["stated"]["quote"]["id"]), ("stated", "q2"))
+        self.assertEqual(o["problems"], [])
+
+    def test_a_stated_rate_whose_words_are_in_no_quote_is_not_used(self):
+        p = process("proc-001", [cite("a", 0, "start at seven"), cite("a", 1, "y")])
+        once = process("proc-002", [cite("a", 2, "the report for today")], times=1)
+        _, opps = self.run_score([p, once], [estimate("proc-001", 10, stated=21, stated_quote="q1", words="every night"),
+                                             estimate("proc-002", 10, stated=21, stated_quote="q1", words="daily")])
+        o = opps["proc-001"]
+        self.assertEqual((o["rate"]["source"], o["rate"]["stated"]), ("counted", None))
+        self.assertIn("every night", o["problems"][0])
+        self.assertIn("happened once", opps["proc-002"]["unused"])
+
+    def test_a_stated_rate_given_without_its_words_is_not_used(self):
+        e = estimate("proc-001", 10, stated=21, stated_quote="q1")
+        del e["stated_rate"]["words"]
+        _, opps = self.run_score([twice("proc-001")], [e])
+        self.assertEqual(opps["proc-001"]["rate"]["source"], "counted")
 
     def test_a_stated_rate_lower_than_the_count_is_shown_but_not_used(self):
         p = process("proc-001", [cite("a", n, "x") for n in range(4)])
-        _, opps = self.run_score([p], [estimate("proc-001", 60, stated=0.5, stated_quote="q2")])
+        _, opps = self.run_score([p], [estimate("proc-001", 60, stated=0.5, stated_quote="q2", words="x")])
         o = opps["proc-001"]
         self.assertEqual((o["rate"]["source"], o["rate"]["per_month"]), ("counted", 1.0))
         self.assertEqual(o["rate"]["stated"]["per_month"], 0.5)
@@ -123,7 +148,7 @@ class ScoreTest(unittest.TestCase):
 
     def test_a_quote_id_written_with_its_pattern_in_front_is_restored(self):
         _, opps = self.run_score([twice("proc-001")], [estimate("proc-001", 60, basis=["chunk-001.p01.q2", "chunk-009.p01.q1"],
-                                                                stated=30, stated_quote="chunk-001.p01.q1")])
+                                                                stated=30, stated_quote="chunk-001.p01.q1", words="x")])
         o = opps["proc-001"]
         self.assertEqual(([b["id"] for b in o["basis"]], o["rate"]["stated"]["quote"]["id"]), (["q2"], "q1"))
         self.assertIn("chunk-009.p01.q1", o["problems"][0])
@@ -154,6 +179,13 @@ class ScoreTest(unittest.TestCase):
         doc, opps = self.run_score(processes, [estimate("proc-001", 5), estimate("proc-002", 0)])
         self.assertEqual((opps["proc-001"]["draft"], opps["proc-002"]["rank"]), (True, None))
         self.assertEqual((doc["totals"]["drafted"], doc["totals"]["ranked"]), (1, 1))
+
+    def test_an_opportunity_that_saves_under_a_dollar_a_month_is_not_ranked(self):
+        # Twice in four months at one minute is 0.01 hours, 85 cents; a tenth of a minute rounds to nothing.
+        once_a_while = process("proc-001", [cite("a", 0, "x"), cite("b", 1, "y")])
+        _, opps = self.run_score([twice("proc-002"), once_a_while], [estimate("proc-002", 1), estimate("proc-001", 0.1)])
+        self.assertEqual(opps["proc-002"]["dollars_per_month"], 0.85)
+        self.assertEqual(opps["proc-001"]["unused"], "it saves less than a dollar a month")
 
 
 if __name__ == "__main__":

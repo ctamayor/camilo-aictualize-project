@@ -45,7 +45,7 @@ ESTIMATE = _obj({
         "explanation": {"type": "string"},
         "not_served": {"type": "array", "items": {"type": "string"}},
         "ongoing": {"type": "boolean"},
-        "stated_rate": _obj({"per_month": {"type": "number"}, "quote": {"type": "string"}}),
+        "stated_rate": _obj({"per_month": {"type": "number"}, "quote": {"type": "string"}, "words": {"type": "string"}}),
         "basis": {"type": "array", "items": {"type": "string"}},
         "reasoning": {"type": "string"},
         "minutes": {"type": "number"},

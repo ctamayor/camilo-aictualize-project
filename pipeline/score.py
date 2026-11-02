@@ -12,15 +12,15 @@ All of the arithmetic is here, none of it in a model. For each process:
   count cannot see. Its n times mark n - 1 gaps, so a burst of three times in
   one month counts as two a month, not three, and the count still falls short
   rather than over. Stated: the rate the estimator read from a quote, used only
-  if that quote is one of the process's own. The larger of the two is used,
-  because most of the mail is not in the archive.
+  if the words it gives for the rate are in one of the process's own quotes.
+  The larger of the two is used, because most of the mail is not in the archive.
 - A process that happened once in the archive is ranked only on a rate one of
   its own quotes states: one message can say that the work recurs, and then it
   is a flow like any other, but a count of one shows nothing recurring.
   Without a stated rate it is listed but not ranked.
 - The minutes the change saves each time, from the estimator. An estimate whose
   basis names none of the process's quotes is not used, so the process is listed
-  but not ranked; nor is one that saves no time.
+  but not ranked; nor is one that saves no time, or less than a dollar a month.
 - Hours a month = minutes x rate / 60, and dollars a month = hours x $85.
 
 Opportunities are ranked by dollars a month. The top ``DRAFT_TOP`` get a
@@ -34,6 +34,7 @@ from pathlib import Path
 
 from .estimate import numbered_quotes
 from .state import log, read_json, read_messages, write_json
+from .validate import find_quote
 
 HOURLY_RATE = 85
 DRAFT_TOP = 10
@@ -67,6 +68,31 @@ def quote_id(ref: str, process: dict) -> str:
     return m[2] if m and m[1] in process["patterns"] else ref
 
 
+def stated_rate(estimate: dict, process: dict, quotes: dict, problems: list) -> tuple[dict, dict | None]:
+    """The rate the estimator read from a quote, and that quote, or None.
+
+    The rate is used only if the words the estimator gave for it are in one of the
+    process's quotes: the one it cited, or else the first that holds them, since a
+    rate is shown with its quote as the evidence. The stored words are that quote's
+    own span, so they can be marked in it."""
+    given = estimate["stated_rate"]
+    words = given.get("words", "")
+    stated = {"per_month": given["per_month"], "quote": quote_id(given["quote"], process), "words": ""}
+    if stated["per_month"] <= 0:
+        return stated, None
+    if stated["quote"] not in quotes:
+        problems.append(f"stated rate of {stated['per_month']:g} a month cites "
+                        f"{stated['quote'] or 'no quote'}, which the process does not have")
+    order = [stated["quote"]] * (stated["quote"] in quotes) + list(quotes)
+    found = next(((q, span) for q in order if (span := find_quote(words, quotes[q]["quote"]))), None)
+    if found is None:
+        problems.append(f"stated rate of {stated['per_month']:g} a month is not used: " +
+                        (f"the words given for it, “{words}”, are in none of the process's quotes" if words
+                         else "no words saying how often were given for it"))
+        return stated, None
+    return stated | {"quote": found[0], "words": found[1]}, quotes[found[0]]
+
+
 def score_process(process: dict, estimate: dict | None, messages: dict, boxes: dict) -> dict:
     quotes = numbered_quotes(process)
     opportunity = {"process": process["id"], "name": process["name"], "summary": process["summary"],
@@ -84,11 +110,7 @@ def score_process(process: dict, estimate: dict | None, messages: dict, boxes: d
     if any(q not in quotes for q in named):
         opportunity["problems"].append(f"basis names quotes the process does not have: "
                                        f"{', '.join(q for q in named if q not in quotes)}")
-    stated = estimate["stated_rate"] | {"quote": quote_id(estimate["stated_rate"]["quote"], process)}
-    stated_quote = quotes.get(stated["quote"]) if stated["per_month"] > 0 else None
-    if stated["per_month"] > 0 and stated_quote is None:
-        opportunity["problems"].append(f"stated rate of {stated['per_month']:g} a month cites "
-                                       f"{stated['quote'] or 'no quote'}, which the process does not have")
+    stated, stated_quote = stated_rate(estimate, process, quotes, opportunity["problems"])
 
     opportunity |= {"change": estimate["change"], "explanation": estimate["explanation"],
                     "ongoing": estimate["ongoing"], "not_served": estimate["not_served"],
@@ -107,11 +129,13 @@ def score_process(process: dict, estimate: dict | None, messages: dict, boxes: d
     else:
         rate = {"per_month": counted["per_month"], "source": "counted"}
     rate |= {"counted": counted,
-             "stated": {"per_month": stated["per_month"], "quote": stated_quote | {"id": stated["quote"]}}
-             if stated_quote else None}
+             "stated": {"per_month": stated["per_month"], "words": stated["words"],
+                        "quote": stated_quote | {"id": stated["quote"]}} if stated_quote else None}
     hours = round(estimate["minutes"] * rate["per_month"] / 60, 2)
-    return opportunity | {"rate": rate, "hours_per_month": hours,
-                          "dollars_per_month": round(hours * HOURLY_RATE, 2)}
+    dollars = round(hours * HOURLY_RATE, 2)
+    if round(dollars) == 0:
+        return opportunity | {"unused": "it saves less than a dollar a month"}
+    return opportunity | {"rate": rate, "hours_per_month": hours, "dollars_per_month": dollars}
 
 
 def score(corpus_dir: Path, out_dir: Path) -> str:

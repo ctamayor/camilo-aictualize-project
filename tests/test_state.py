@@ -171,6 +171,32 @@ class RunTest(CorpusCase):
         with mock.patch.object(runner.agents, "run_one", broken):
             status = runner.run(self.corpus, self.out, self.fake_steps(), echo=lambda _: None)
         self.assertTrue(status.startswith("FAILED no usable reply for chunk-001"))
+        self.assertIn("trying again: chunk-001", (self.out / "run.log").read_text(encoding="utf-8"))
+
+    def test_a_worker_that_fails_once_is_tried_again(self):
+        tries = []
+
+        def flaky(task):
+            tries.append(task.name)
+            if tries.count(task.name) == 1 and task.name == "chunk-002":
+                return {"name": task.name, "ok": False, "seconds": 0, "error": "no reply", "usage": {}}
+            return fake_agent(task)
+        with mock.patch.object(runner.agents, "run_one", flaky):
+            status = runner.run(self.corpus, self.out, self.fake_steps(), echo=lambda _: None)
+        self.assertEqual(status, "DONE")
+        self.assertEqual(tries.count("chunk-002"), 2)
+
+    def test_the_second_try_can_fall_in_the_next_invocation_but_not_a_third(self):
+        def broken(task):
+            return {"name": task.name, "ok": False, "seconds": 0, "error": "no reply", "usage": {}}
+
+        def once():
+            return runner.run(self.corpus, self.out, self.fake_steps(), parallel=2, max_minutes=0, echo=lambda _: None)
+        with mock.patch.object(runner.agents, "run_one", broken):
+            self.assertTrue(once().startswith("CONTINUE"))
+            self.assertTrue(once().startswith("FAILED no usable reply for chunk-001, chunk-002"))
+            # A run started after one that stopped tries again from scratch.
+            self.assertTrue(once().startswith("CONTINUE"))
 
     def test_stops_between_waves_when_the_time_budget_is_spent_and_resumes(self):
         def once():

@@ -2027,3 +2027,76 @@ Problems:
 - Non-work still ranked (chain mail, newsletters, a $0 Dell order); $1 rows;
   formula line shows hours to 1 decimal so the product doesn't check; the
   gaps rule isn't explained on the page.
+
+## 2026-11-02 — Review of the round-3 proposals
+
+Wrote the proposed fixes as exact old/new text (scratchpad/proposals-round3.md)
+and had a read-only reviewer judge them against trial8 (scripts in
+scratchpad/review4/).
+
+Corrections: most of the "$1,179 from notes" is proc-136, whose rate is real
+(its q1 says "each night"); the estimator cited the wrong quote. The 202
+uncited siblings include 74 empty subjects; of the real 128, 96 are replies
+that fold into a counted time, so S1 adds evidence, not dollars.
+
+Verdicts: keep the rate-words check (C1/E4) as the main fix; keep the
+dashboard formula, gaps, highlight and collapsed once-seen list, and drop $0
+rows. Reword E1 (net saving, so centralizing changes are not zeroed), E2, E3
+(no multiplying by every recipient), E5, S1, S2, S3. Drop C2 (undoes 35 folds,
+about 20 of them right, and breaks the edited-forward cases), M1 (would bring
+back topic groups), the dollars-from-unrounded-hours change (stored figures
+already check) and the one-message tag/two totals. Missing: hung scouts
+needed a manual resume (no retry inside one run); chunk-013 cited 71 of 271
+and nothing flagged it; #1's 400 minutes still rest on a guess.
+
+## 2026-11-02 — Second review of the revised proposals
+
+Revised set in scratchpad/proposals-round3b.md; two read-only reviewers, one on
+prompts and one on code (scripts in scratchpad/review5/).
+
+Prompts: S3 dropped (E4 plus the code check does its job). S1, S2, E4, E5
+reworded: acknowledgements do no work; sending counts as a pattern when it is
+the work; the rate's `words` empty when none; codes explained only as far as
+the quotes show. The minutes paragraph split in two and must say that mail
+doing the work today is work, even if the change makes it unnecessary.
+Expected effects: #1 stays near $2,267 (a judged third, an aside in one
+message), surveys rise to about $1,100 because recipients' time now counts.
+
+Code: the rate check searches the cited quote, then the process's other
+quotes in order ("exactly one other" fails on duplicate quotes). The $0 rule
+is kept but the dashboard was not off by one (it already filters); the
+table's Hours column needs 2 decimals too. The retry as drafted could loop
+forever through CONTINUE; it needs a FAILED for a task that failed before.
+The worker timeout is not hard on Windows (622-723 s against 540: the stdin
+write has no timeout), so it needs a kill timer, and the reviewer suggests 4
+minutes. C2 drop confirmed; a narrower date rule exists but nets +$16.
+chunk-013 is partly a real miss but has no trigger free of a threshold.
+
+## 2026-11-02 — Round-3 fixes applied
+
+- Rate check (score.py): a stated rate is used only if the estimator's `words`
+  are in one of the process's quotes: the cited one, else the first that holds
+  them. The stored words are the quote's own span and are marked in it on the
+  dashboard. On a copy of trial8 with the words an estimator would copy for
+  #1-#3, those three keep their rates (#2 now cites "each night"); the other
+  seven old stated rates, which have no words, fall back to counts.
+- Rows under a dollar a month are not ranked (proc-103); the dashboard filter
+  for them is gone.
+- Retry (run.py): a failed worker is tried once more, in this invocation or,
+  if the time runs out, the next (the failures are kept in run.json across
+  CONTINUE); a second failure stops the run. A run started after a FAILED one
+  tries afresh.
+- Timeout (agents.py): stays 9 minutes, now hard. The overrun was not the
+  stdin write, as the reviewer guessed: subprocess.run kills only the process
+  it started, then waits for pipes that its children still hold (reproduced: a
+  1 s timeout took 15 s with a sleeping grandchild). The whole process tree is
+  now killed (taskkill /T on Windows, the process group elsewhere).
+- Dashboard: hours to two decimals in the table and formula; the counted rate
+  shows its division (31 gaps ÷ 8 months = 3.88); "seen once" folded behind
+  one line.
+- Prompts: scout S1 (every message doing a pattern's work, not
+  acknowledgements) and S2 (the way mail is sent, unless sending is the work);
+  estimator minutes in two paragraphs (everyone who acts on the message; net
+  saving; changes under way; mail that is not work), `words` in stated_rate,
+  codes in `change` explained as far as the quotes show. S3 and M1 dropped.
+- 93 tests pass.

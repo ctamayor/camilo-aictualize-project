@@ -9,7 +9,9 @@ path or decides what runs next.
 import json
 import os
 import shutil
+import signal
 import subprocess
+import threading
 import time
 from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass
@@ -20,7 +22,8 @@ from . import ROOT
 CLAUDE = os.environ.get("PIPELINE_CLAUDE") or shutil.which("claude") or "claude"
 # The run session's shell call is cut off at 10 minutes and the first wave always
 # runs, right after prepare's few seconds, so a worker gets as long as fits in that.
-# Scouts on 200K-token chunks are expected to need 3 to 6 minutes.
+# Workers have replied in half a minute to four minutes; one that hangs is retried
+# once (run.py).
 WORKER_TIMEOUT_S = 9 * 60
 
 
@@ -55,6 +58,36 @@ def _parse_reply(stdout: str) -> dict:
                                                           "models": sorted(envelope.get("modelUsage", {}))}}
 
 
+def call(argv: list[str], prompt: str) -> subprocess.CompletedProcess:
+    """Run ``argv`` with ``prompt`` on stdin, killing it and every process it started
+    after WORKER_TIMEOUT_S.
+
+    ``subprocess.run``'s timeout kills only the process it started, then waits for
+    its output pipes to close, and processes that one started keep them open: hung
+    workers outlived the timeout by minutes. Killing the whole tree closes them."""
+    proc = subprocess.Popen(argv, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+                            text=True, encoding="utf-8", errors="replace", cwd=ROOT,
+                            start_new_session=os.name != "nt")
+    killed = threading.Event()
+
+    def kill() -> None:
+        killed.set()
+        if os.name == "nt":
+            subprocess.run(["taskkill", "/F", "/T", "/PID", str(proc.pid)], capture_output=True)
+        else:
+            os.killpg(proc.pid, signal.SIGKILL)
+
+    timer = threading.Timer(WORKER_TIMEOUT_S, kill)
+    timer.start()
+    try:
+        stdout, stderr = proc.communicate(prompt)
+    finally:
+        timer.cancel()
+    if killed.is_set():
+        raise subprocess.TimeoutExpired(argv, WORKER_TIMEOUT_S)
+    return subprocess.CompletedProcess(argv, proc.returncode, stdout, stderr)
+
+
 def run_one(task: Task) -> dict:
     """Run one worker; write its reply to ``task.output`` on success."""
     start = time.monotonic()
@@ -64,9 +97,7 @@ def run_one(task: Task) -> dict:
                 "error": error, "usage": usage or {}}
 
     try:
-        proc = subprocess.run(command(task.agent, task.schema), input=task.prompt, capture_output=True,
-                              text=True, encoding="utf-8", errors="replace", cwd=ROOT,
-                              timeout=WORKER_TIMEOUT_S)
+        proc = call(command(task.agent, task.schema), task.prompt)
     except subprocess.TimeoutExpired:
         return done(f"no reply after {WORKER_TIMEOUT_S // 60} minutes")
     except OSError as e:

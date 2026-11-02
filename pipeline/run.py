@@ -1,6 +1,6 @@
 """Drive a run to completion: deterministic steps in-process, agents as workers.
 
-``run`` loops over ``next_action`` until the run is DONE, a worker FAILS, or the
+``run`` loops over ``next_action`` until the run is DONE, a worker FAILS twice, or the
 time budget for this invocation is spent (CONTINUE: call it again and it picks
 up where it left off). The budget exists because the launching session's shell
 call has a hard time limit; a wave of workers is never started that might cross it.
@@ -76,8 +76,13 @@ def run(corpus_dir: Path, out_dir: Path, steps: dict, parallel: int = MAX_PARALL
 def _run(corpus_dir: Path, out_dir: Path, steps: dict, parallel: int, max_minutes: float, echo) -> str:
     started = time.monotonic()
     longest_wave = 0.0
+    # A worker that fails is tried once more, in this invocation or, if the time
+    # runs out first, in the next; a second failure stops the run. A run started
+    # after one that stopped tries everything afresh.
+    previous = read_json(out_dir / "run.json") or {}
+    failed_before = set(previous.get("failed", [])) if previous.get("status", "").startswith("CONTINUE") else set()
     record = {"pid": os.getpid(), "started": now(), "ended": None, "status": "running",
-              "step": None, "working_on": [], "remaining": 0, "since": None}
+              "step": None, "working_on": [], "remaining": 0, "since": None, "failed": sorted(failed_before)}
 
     def note(**fields) -> None:
         record.update(fields)
@@ -122,5 +127,10 @@ def _run(corpus_dir: Path, out_dir: Path, steps: dict, parallel: int, max_minute
             for r in results:
                 echo("  " + agents.describe(r))
             failed = [r["name"] for r in results if not r["ok"]]
+            if again := [name for name in failed if name in failed_before]:
+                return status(f"FAILED no usable reply for {', '.join(again)}")
             if failed:
-                return status(f"FAILED no usable reply for {', '.join(failed)}")
+                failed_before.update(failed)
+                note(failed=sorted(failed_before))
+                log(out_dir, f"trying again: {', '.join(failed)}")
+                echo(f"  trying again: {', '.join(failed)}")

@@ -1,6 +1,8 @@
 import json
 import subprocess
+import sys
 import tempfile
+import time
 import unittest
 from pathlib import Path
 from unittest import mock
@@ -27,12 +29,12 @@ class RunOneTest(unittest.TestCase):
 
     def test_runs_the_agent_headless_without_tools_and_writes_the_reply(self):
         reply = {"patterns": [], "untrusted": []}
-        with mock.patch.object(agents.subprocess, "run", return_value=completed(envelope(structured_output=reply))) as run:
+        with mock.patch.object(agents, "call", return_value=completed(envelope(structured_output=reply))) as run:
             result = agents.run_one(self.task)
         argv = run.call_args.args[0]
         self.assertEqual(argv[1:7], ["-p", "--agent", "scout", "--tools", "", "--output-format"])
         self.assertEqual(json.loads(argv[argv.index("--json-schema") + 1]), schemas.SCOUT)
-        self.assertEqual(run.call_args.kwargs["input"], "the batch text")
+        self.assertEqual(run.call_args.args[1], "the batch text")
         self.assertTrue(result["ok"])
         self.assertEqual(json.loads(self.out.read_text(encoding="utf-8")), reply)
         self.assertEqual(result["usage"]["output_tokens"], 2)
@@ -40,13 +42,13 @@ class RunOneTest(unittest.TestCase):
     def test_the_log_line_names_the_model_the_agent_ran_on(self):
         reply = completed(envelope(structured_output={"patterns": [], "untrusted": []}, num_turns=2,
                                    modelUsage={"claude-opus-5-5": {"outputTokens": 2}}))
-        with mock.patch.object(agents.subprocess, "run", return_value=reply):
+        with mock.patch.object(agents, "call", return_value=reply):
             result = agents.run_one(self.task)
         self.assertTrue(agents.describe(result).endswith(", 10 in / 2 out, 2 turns, claude-opus-5-5)"))
 
     def test_falls_back_to_json_in_the_result_text(self):
         reply = {"patterns": [], "untrusted": []}
-        with mock.patch.object(agents.subprocess, "run", return_value=completed(envelope(result=json.dumps(reply)))):
+        with mock.patch.object(agents, "call", return_value=completed(envelope(result=json.dumps(reply)))):
             result = agents.run_one(self.task)
         self.assertTrue(result["ok"])
         self.assertEqual(json.loads(self.out.read_text(encoding="utf-8")), reply)
@@ -59,17 +61,30 @@ class RunOneTest(unittest.TestCase):
             "not an object": completed(envelope(result="[1, 2]")),
         }
         for label, proc in cases.items():
-            with self.subTest(label), mock.patch.object(agents.subprocess, "run", return_value=proc):
+            with self.subTest(label), mock.patch.object(agents, "call", return_value=proc):
                 result = agents.run_one(self.task)
             self.assertFalse(result["ok"], label)
             self.assertTrue(result["error"], label)
             self.assertFalse(self.out.exists(), label)
 
     def test_timeout_is_a_failure(self):
-        with mock.patch.object(agents.subprocess, "run", side_effect=subprocess.TimeoutExpired("claude", 1)):
+        with mock.patch.object(agents, "call", side_effect=subprocess.TimeoutExpired("claude", 1)):
             result = agents.run_one(self.task)
         self.assertFalse(result["ok"])
         self.assertIn("no reply", result["error"])
+
+    def test_a_hung_worker_and_the_processes_it_started_are_killed_on_time(self):
+        # The grandchild holds the output pipes open, as hung workers did.
+        grandchild = "import subprocess, sys, time; subprocess.Popen([sys.executable, '-c', 'import time; time.sleep(30)']); time.sleep(60)"
+        start = time.monotonic()
+        with mock.patch.object(agents, "WORKER_TIMEOUT_S", 1), self.assertRaises(subprocess.TimeoutExpired):
+            agents.call([sys.executable, "-c", grandchild], "the batch text")
+        self.assertLess(time.monotonic() - start, 15)
+
+    def test_call_returns_what_the_process_wrote(self):
+        argv = [sys.executable, "-c", "import sys; print(sys.stdin.read().upper())"]
+        proc = agents.call(argv, "reply")
+        self.assertEqual((proc.returncode, proc.stdout.strip()), (0, "REPLY"))
 
 
 class RunWaveTest(unittest.TestCase):
@@ -77,7 +92,7 @@ class RunWaveTest(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             tasks = [agents.Task(f"chunk-{i}", "scout", "x", Path(tmp) / f"{i}.json", schemas.SCOUT) for i in range(5)]
             reply = completed(envelope(structured_output={"patterns": [], "untrusted": []}))
-            with mock.patch.object(agents.subprocess, "run", return_value=reply):
+            with mock.patch.object(agents, "call", return_value=reply):
                 results = agents.run_wave(tasks, parallel=2)
             self.assertEqual([r["name"] for r in results], [t.name for t in tasks])
             self.assertTrue(all(t.output.exists() for t in tasks))

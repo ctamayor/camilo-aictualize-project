@@ -76,25 +76,36 @@ class GroupTest(unittest.TestCase):
 class TimesTest(unittest.TestCase):
     """A message and the replies that quote it are one time; a new message with the same subject is another."""
 
-    def test_replies_that_quote_a_message_are_the_same_time(self):
+    def test_replies_forwards_and_copies_are_the_same_time_and_new_mail_is_a_new_one(self):
         tmp = tempfile.TemporaryDirectory()
         self.addCleanup(tmp.cleanup)
         out = Path(tmp.name)
-        mail = [(1, "Meter 5", "Please fix meter 5."), (2, "RE: Meter 5", "Done.\n> Please fix meter 5."),
-                (3, "Meter 5", "Please fix meter 5."), (4, "RE: Meter 5", "Fixed.\n\nPlease fix\nmeter 5."),
-                (5, "Lunch", "Please fix meter 5. Pizza?")]
+        header = "\n-----Original Message-----\nFrom: Kim\nSent: Thursday, March 01, 2001 9:00 AM\n"
+        mail = [
+            ("03-01T09", "kim", "Meter 5", "Please fix meter 5."),
+            ("03-01T11", "raj", "RE: Meter 5", "Done." + header + "Please fix meter 5."),  # quotes 1
+            ("03-05T09", "kim", "Meter 5", "Please fix meter 5."),                          # asked again
+            ("03-05T10", "raj", "RE: Meter 5", "Fixed."),                                   # bare Notes reply to 3
+            ("03-05T12", "kim", "Lunch", "Please fix meter 5. Pizza?"),                    # another subject
+            ("03-06T08", "kim", "Nomination", "- NOMINATION 1.doc"),                       # daily mail
+            ("03-07T08", "kim", "Nomination", "- NOMINATION 1.doc\nRevised volumes"),     # next day's
+            ("03-08T09", "kim", "RE: Report", "Agree.\n> The report is late."),            # two replies to one
+            ("03-08T13", "raj", "RE: Report", "Disagree.\n> The report is late."),         # message not cited
+            ("03-09T09", "ops", "Notice", "All hands at noon."),                           # one broadcast
+            ("03-09T12", "hr", "Notice", "All hands at noon."),                            # and its copy
+        ]
         with open(out / "messages.jsonl", "w", encoding="utf-8") as fh:
-            for n, subject, body in mail:
-                fh.write(json.dumps({"id": f"box/{n}.", "date": f"2001-03-0{n}T09:00:00", "from": "kim@enron.com",
+            for n, (date, sender, subject, body) in enumerate(mail, 1):
+                fh.write(json.dumps({"id": f"box/{n}.", "date": f"2001-{date}:00:00", "from": f"{sender}@enron.com",
                                      "to": "", "cc": "", "subject": subject, "body": body}) + "\n")
         stall = cite(2, "Done.", "Fixed only after a chase.")
         put(out / "validated.json", {"patterns": [
-            pattern("chunk-001.p01", [cite(n) for n in range(1, 6)]) | {"stalls": [stall]}]})
+            pattern("chunk-001.p01", [cite(n) for n in range(1, len(mail) + 1)]) | {"stalls": [stall]}]})
         put(merge_paths(out)[1], {"processes": []})
         group(None, out)
         p = read_json(out / "processes.json")["processes"][0]
-        self.assertEqual([o["time"] for o in p["evidence"]["occurrences"]], [1, 1, 2, 2, 3])
-        self.assertEqual((p["occurrences"], p["times"]), (5, 3))
+        self.assertEqual([o["time"] for o in p["evidence"]["occurrences"]], [1, 1, 2, 2, 3, 4, 5, 6, 6, 7, 7])
+        self.assertEqual((p["occurrences"], p["times"], p["months"]), (11, 7, {"2001-03": 7}))
         self.assertEqual(p["evidence"]["stalls"][0]["note"], "Fixed only after a chase.")
 
 

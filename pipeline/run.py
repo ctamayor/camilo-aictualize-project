@@ -30,10 +30,11 @@ def scout_task(out_dir: Path, chunk: dict) -> agents.Task:
 
 def merge_task(action: dict) -> agents.Task:
     patterns = read_json(action["input"])["patterns"]
-    blocks = "\n".join(f"{p['id']} | {p['name']} | {p['summary']}\n" + "".join(f'- "{q}"\n' for q in p["occurrences"])
+    blocks = "\n".join(f"{p['id']} | {p['name']} | {p['summary']}\n"
+                       + "".join(f'- {o["month"]} {o["from"]}: "{o["quote"]}"\n' for o in p["occurrences"])
                        for p in patterns)
-    prompt = (f"{len(patterns)} patterns, each as a line id | name | summary followed by the quote "
-              f"showing each of its occurrences. Group them into processes.\n\n{blocks}")
+    prompt = (f"{len(patterns)} patterns, each as a line id | name | summary followed by each of its "
+              f"occurrences: the month, the sender and the quote showing it. Group them into processes.\n\n{blocks}")
     return agents.Task("merge", "merger", prompt, action["output"], schemas.MERGE)
 
 

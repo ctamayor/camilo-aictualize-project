@@ -17,7 +17,7 @@ PROCESS = {
     "patterns": ["chunk-001.p01", "chunk-002.p03"],
     "senders": {"kim@enron.com": 3, "raj@enron.com": 1}, "recipients": {"team@enron.com": 4},
     "median_recipients": 2.5, "occurrences": 3, "times": 2,
-    "first": "2001-03-01T09:00:00", "last": "2001-04-02T09:00:00",
+    "first": "2001-03-01T09:00:00", "last": "2001-04-02T09:00:00", "months": {"2001-03": 1, "2001-04": 1},
     "evidence": {
         "occurrences": [cite(1, "chunk-001.p01", "Here is the report."),
                         cite(4, "chunk-002.p03", "Where is the report?"),
@@ -40,13 +40,14 @@ class EstimatePromptTest(unittest.TestCase):
         self.assertTrue(prompt.startswith("1 processes follow. Estimate every one.\n\n## proc-001: Daily report\n"
                                           "Kim sends the report every day.\nHappened 2 times in the archive "
                                           "(3 messages, a reply counted with what it answers), "
-                                          "between 2001-03-01 and 2001-04-02.\nMost often from"))
+                                          "between 2001-03-01 and 2001-04-02. Times begun each month: "
+                                          "2001-03: 1, 2001-04: 1.\nMost often from"))
         self.assertIn("Most often from kim@enron.com (3), raj@enron.com (1); most often to team@enron.com (4); "
                       "a median of 2.5 addresses per message.", prompt)
         self.assertIn('\nPattern chunk-001.p01 | Daily report | Kim sends the report.\nq1: "Here is the report."\n'
-                      'q2: "Report attached."\nq3: "I build it by hand" Note: Built by hand each day.\n', prompt)
+                      'q2: "Report attached."\nq3: "I build it by hand" Reader\'s note: Built by hand each day.\n', prompt)
         self.assertIn('\nPattern chunk-002.p03 | Report chase | Raj asks for it.\nq4: "Where is the report?"\n'
-                      'q5: Stall: "Still waiting on it" Note: Raj has to chase.', prompt)
+                      'q5: Stall: "Still waiting on it" Reader\'s note: Raj has to chase.', prompt)
         self.assertNotIn("box/1.", prompt)
         self.assertNotIn("for scale only", prompt)
 

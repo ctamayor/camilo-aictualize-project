@@ -12,7 +12,9 @@ patterns, the addresses its messages most often come from and go to, and the
 quotes the readers recorded: one for each occurrence, showing it happening, others
 with a reader's note on how the pattern happens, the time it takes, or how that
 time could be saved, and stalls, where the work waits or goes wrong between
-people. Each occurrence is one message.
+people. Each occurrence is one message. A reader's note is that reader's reading
+of its quote, not words from the mail. You also get how many times the process
+began in each month of the archive.
 
 You estimate the processes given in full. The rest of the processes found are
 listed after them with their names and counts and are estimated by others; they
@@ -38,9 +40,12 @@ stalls, say whether the change removes the stall.
 Estimate the **minutes** the change would save each time the process happens, on
 average over its occurrences and added up over everyone who spends time on it that
 time. The estimate is multiplied by how often the process happens to give the
-hours saved each month, so it is the saving for one time. List in `basis` the ids
-of the quotes that show what that time is spent on and how much of it the change
-removes; a quote that only says how often the process happens is the evidence for
+hours saved each month, so it is the saving for one time as the archive counts
+times: one message with the replies and forwards that answer it, not a monthly
+cycle or a round of several messages. Mail the organization's work does not
+need saves the organization nothing when it is handled faster, so its minutes
+are 0. List in `basis` the ids of the quotes that show what that time is spent
+on and how much of it the change removes; a quote that only says how often the process happens is the evidence for
 the rate, not for the minutes. Explain the estimate in `reasoning` for a reader who
 will check it against those quotes: what is done each time the process happens,
 about how long it takes, and which part of it the change removes. An estimate that
@@ -50,18 +55,26 @@ How often a process happens is counted from its messages: a message and the
 replies and forwards that quote it are one time. Say in `ongoing` whether the work
 is part of how the organization runs and continues, or an episode that runs for a
 while and ends, such as a migration, a cleanup or one dispute. Ongoing work is
-counted over the months from its first time to its last, and an episode over all
-the months of mail, since it will not continue. The archive holds only some of a
-few people's mail, so most times a process happens are missing from it and the
-count falls short. A quote whose own words say
-how often the work is done gives the real rate, so look for one among each
-process's quotes and give the rate it states as times per month in `stated_rate`,
-with the id of that quote. The rate is shown with that quote as its evidence, so
-read it from the quote's words, not from a note or from the dates of the messages.
-Work done daily or nightly is done on working days, about 21 a month, unless the
-quote says it is done every day of the week. Give 0 and leave the id empty only
-when no quote says how often the work is done.
-Either way, your minutes are for one time the process happens.
+counted by the gaps between its times over the months from its first time to its
+last, and an episode by its times over all the months of mail, since it will not
+continue. Judge this from what the work is and from the times begun each month:
+times bunched in one month around one subject are usually an episode, however
+routine each step looks, and work that recurs month after month is ongoing even
+if each time is irregular.
+
+The archive holds only some of a few people's mail, so most times a process
+happens are missing from it and the count falls short. A quote whose own words
+say how often the work is done gives the real rate, so look for one among each
+process's quotes and give the rate it states as times per month in
+`stated_rate`, with the id of that quote. The rate is shown with that quote as
+its evidence, so read it from the quote's words, not from a note or from the
+dates of the messages. A date, or the title of one report or edition, says when
+that one was sent, not how often it is sent. Work done daily or nightly is done
+on working days, about 21 a month, unless the quote says it is done every day of
+the week. Give 0 and leave the id empty only when no quote says how often the
+work is done. A process seen once in the archive is ranked only on a rate one of
+its quotes states, so for such a process read whether its message says the work
+recurs. Either way, your minutes are for one time the process happens.
 
 The processes are ranked against each other by these estimates, so estimate every
 process in the same way. Give one estimate for every process, using its id exactly

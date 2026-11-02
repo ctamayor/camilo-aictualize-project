@@ -7,23 +7,36 @@ sent, and who sent and received them.
 
 A message and the replies and forwards that quote it are one time the work
 happened, not several: a request answered in three replies was done once. A
-later occurrence is the same time as an earlier one when it has the same subject
-(less RE:/FW:) and contains the earlier message's text, quoting it, with more
-of its own. Recurring mail with one subject, such as a daily nomination, is a new
-message each day, not a quote of yesterday's, so each day stays a time. A pattern the merge did not list stays a process of its own,
-an id it invented is ignored, and a pattern it listed twice stays in the first
-process it was listed in. Each of those problems is logged.
+later occurrence with the same subject (less RE:/FW:) is the same time as the
+latest earlier one it matches:
+
+- any earlier one, if it is a reply or forward (RE:/FW:). A reply belongs to
+  the thread its subject names, whether or not it quotes it: Notes replies often
+  quote nothing, and forwards are often edited.
+- one whose own text it quotes. A message's own text is what comes before the
+  first header of a message it quotes ("Original Message", "Forwarded by", a
+  From:/Sent: or To: block, or ">" lines).
+- one it is a copy of: the same own text, sent within the window in which
+  ingest treats same-content messages as copies.
+
+Recurring mail with one subject, such as a daily nomination, is no reply, quotes
+nothing and is sent a day apart, so each day stays a time. A pattern the merge did not list
+stays a process of its own, an id it invented is ignored, and a pattern it
+listed twice stays in the first process it was listed in. Each of those problems
+is logged.
 
 The stats are the second measure of the reading: of the patterns that rested on
 one message in their batch, how many turned out to recur, that is, ended up in a
 process with more than one message.
 """
 
+import re
 from collections import Counter
+from datetime import datetime
 from pathlib import Path
 from statistics import median
 
-from .ingest import normalize_subject
+from .ingest import DUPLICATE_WINDOW_HOURS, normalize_subject
 from .state import log, merge_paths, read_json, read_messages, write_json
 from .validate import normalize
 
@@ -36,16 +49,43 @@ def _ranked(counter: Counter) -> dict:
     return dict(sorted(counter.items(), key=lambda kv: (-kv[1], kv[0])))
 
 
+QUOTE_START = re.compile(r"-{2,}\s*Original Message\s*-{2,}|-{3,}\s*Forwarded by|^[ \t]*From:.*\n[ \t]*Sent:"
+                         r"|^[ \t]*To:[ \t]|^[ \t]*>|wrote:[ \t]*$", re.MULTILINE | re.IGNORECASE)
+REPLY = re.compile(r"\s*(re|fw|fwd)\s*:", re.IGNORECASE)
+
+
+def split_quoted(body: str) -> tuple[str, str]:
+    """A message's own text and the text it quotes, both normalized and lowercased."""
+    m = QUOTE_START.search(body)
+    own, quoted = (body[:m.start()], body[m.start():]) if m else (body, "")
+    return normalize(own).lower(), normalize(quoted).lower()
+
+
+def _hours_apart(a: str | None, b: str | None) -> float:
+    if a is None or b is None:
+        return float("inf")
+    return abs(datetime.fromisoformat(a) - datetime.fromisoformat(b)).total_seconds() / 3600
+
+
 def count_times(messages: list[dict]) -> list[int]:
     """For each message, the number of the time it belongs to (1, 2, ...), in date order."""
     order = sorted(range(len(messages)), key=lambda i: (messages[i]["date"] or "9", messages[i]["id"]))
-    texts = {i: normalize(messages[i].get("body", "")).lower() for i in order}
+    parts = {i: split_quoted(messages[i].get("body", "")) for i in order}
+    subjects = {i: normalize_subject(messages[i].get("subject", "")) for i in order}
+
+    def same_time(i: int, j: int) -> bool:
+        (own_i, quoted_i), (own_j, _) = parts[i], parts[j]
+        if REPLY.match(messages[i].get("subject", "")):
+            return True
+        if own_j and own_j in quoted_i:
+            return True
+        return bool(own_j) and own_i == own_j and \
+            _hours_apart(messages[i]["date"], messages[j]["date"]) <= DUPLICATE_WINDOW_HOURS
+
     time_of = {}
     for k, i in enumerate(order):
-        subject = normalize_subject(messages[i].get("subject", ""))
-        quoted = [j for j in order[:k] if subject and normalize_subject(messages[j].get("subject", "")) == subject
-                  and texts[j] and texts[j] in texts[i] and len(texts[j]) < len(texts[i])]
-        time_of[i] = time_of[quoted[-1]] if quoted else len(set(time_of.values())) + 1
+        earlier = [j for j in order[:k] if subjects[i] and subjects[j] == subjects[i] and same_time(i, j)]
+        time_of[i] = time_of[earlier[-1]] if earlier else len(set(time_of.values())) + 1
     return [time_of[i] for i in range(len(messages))]
 
 
@@ -69,6 +109,10 @@ def build_process(name: str, summary: str, ids: list[str], patterns: dict, heade
     for o, time in zip(occurrences, count_times(messages)):
         o["time"] = time
     dates = sorted(m["date"] for m in messages if m["date"])
+    began = {}  # each time's first dated message
+    for o, m in zip(occurrences, messages):
+        if m["date"] and m["date"] < began.get(o["time"], "9"):
+            began[o["time"]] = m["date"]
     senders, recipients, reach = Counter(), Counter(), []
     for m in messages:
         addressed = set(_addresses(m["to"]) + _addresses(m["cc"]))
@@ -84,7 +128,7 @@ def build_process(name: str, summary: str, ids: list[str], patterns: dict, heade
         "times": len({o["time"] for o in occurrences}),
         "first": dates[0] if dates else None,
         "last": dates[-1] if dates else None,
-        "months": dict(sorted(Counter(d[:7] for d in dates).items())),
+        "months": dict(sorted(Counter(d[:7] for d in began.values()).items())),  # times begun each month
         "senders": _ranked(senders),
         "recipients": _ranked(recipients),
         "median_recipients": median(reach) if reach else 0,

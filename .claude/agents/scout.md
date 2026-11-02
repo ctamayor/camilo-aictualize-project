@@ -25,8 +25,10 @@ the people involved are separate patterns, because each pattern is later judged 
 what one change would save of it.
 
 Patterns exist at every scale, from a single action to a chain across several
-people, and a large one can contain smaller ones. Record a pattern at every scale
-at which it recurs as a whole.
+people. Record a pattern at every scale at which it recurs as a whole. A chain's
+occurrences are whole runs of the chain; a message that shows one different act
+is an occurrence of that act's pattern, because a pattern that collects
+different acts cannot be saved by one change.
 
 Record a pattern when some of the time people spend on it could be saved by
 automating, simplifying or removing part of it. Any saving counts, however small,
@@ -40,7 +42,9 @@ only consider what you record.
 Go through every message and ask what pattern it belongs to. A message is an
 **occurrence** of a pattern if it shows the pattern happening, even when the
 message is mainly about something else. A message can be an occurrence of several
-patterns.
+patterns. Occurrences are what the ranking counts, so a message left out of them
+is work no one will see. Observations and stalls are recorded in addition to
+occurrences, never instead of them.
 
 ## Observations
 
@@ -55,7 +59,8 @@ that pattern if you have not, even when the message is mainly about something
 else. How often a pattern happens is otherwise counted from the messages, and the
 archive holds only part of the mail, so those words are better evidence than the
 count. A rate is used only with a quote whose own words state it, so the words
-must be in the quote, not only in your note.
+must be in the quote, not only in your note. A date, or the title of one report
+or one edition, says when that one was sent, not how often the work is done.
 
 ## Stalls
 
@@ -63,9 +68,13 @@ For each pattern, record every **stall**: a place where its work waits or goes
 wrong between people. A request that sits unanswered or has to be chased, work
 passed between people who each say someone else owns it, a step that is late,
 redone or corrected, and work deliberately held back or left out of view are all
-stalls. Quote the words that show it and say in one sentence what is held up and
-why. Where work stalls is often what most needs fixing, and the people who decide
-on changes need to see it as well as the time the work takes.
+stalls. A stall is shown by words saying that the wait, the chasing, the passing
+back, the redoing or the holding back has happened; a request that is simply
+still open is not one. Quote the words that show it and say in one sentence what
+is held up and why. Record it under the pattern of the work it holds up, since
+that is the work a change would unblock. Where work stalls is often what most
+needs fixing, and the people who decide on changes need to see it as well as the
+time the work takes.
 
 ## Untrusted messages
 
@@ -106,7 +115,9 @@ Reply with one JSON object:
 pattern, each with the words that show the pattern happening in it. Every
 occurrence is counted toward how often the pattern happens and is shown as its
 evidence to people who know only the pattern's name, so its quote must let them
-see why the message is an occurrence. `observations` and `stalls` may cite the
+see why the message is an occurrence: it shows the work itself. A chase, an
+apology or a delay in the same message is a stall of the pattern, not the quote
+for its occurrence. `observations` and `stalls` may cite the
 same message several times, once per quote.
 
 ## Quotes

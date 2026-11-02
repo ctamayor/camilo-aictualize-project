@@ -54,8 +54,9 @@ def locate(quote: str, text: str) -> list[int] | None:
                 chars.append(" ")
                 where.append(i)
             continue
-        chars.append(ch.translate(QUOTE_CHARS))
-        where.append(i)
+        if c := ch.translate(QUOTE_CHARS):
+            chars.append(c)
+            where.append(i)
     if chars and chars[-1] == " ":
         chars.pop()
         where.pop()

@@ -3,21 +3,24 @@
 All of the arithmetic is here, none of it in a model. For each process:
 
 - How often it happens. Counted: the times it happened (a message with the
-  replies that quote it is one time) divided by the months of mail the archive
-  holds for its mailboxes, since it holds only those months of those people's
-  mail. For ongoing work, only the months from its first time to its last: work
-  that runs for four months of a mailbox's twenty did not stop for the other
-  sixteen without a reason the count cannot see. For an episode (a migration, a
-  cleanup), every month, since it will not continue. Stated: the rate the
-  estimator read from a quote, used only if that quote is one of the process's
-  own. The larger of the two is used, because the count can only fall short:
-  most of the mail is not in the archive.
-- A process that happened once in the archive is listed but not ranked. One
-  message, or one thread, can say that work recurs but cannot show it, and a
-  stated rate would otherwise turn a single remark into a large figure.
+  replies that quote it is one time) over the months of mail the archive holds
+  for its mailboxes, since it holds only those months of those people's mail.
+  For an episode (a migration, a cleanup), the times over every month, since it
+  will not continue. For ongoing work, the gaps between its times over the
+  months from its first time to its last: work that runs for four months of a
+  mailbox's twenty did not stop for the other sixteen without a reason the
+  count cannot see. Its n times mark n - 1 gaps, so a burst of three times in
+  one month counts as two a month, not three, and the count still falls short
+  rather than over. Stated: the rate the estimator read from a quote, used only
+  if that quote is one of the process's own. The larger of the two is used,
+  because most of the mail is not in the archive.
+- A process that happened once in the archive is ranked only on a rate one of
+  its own quotes states: one message can say that the work recurs, and then it
+  is a flow like any other, but a count of one shows nothing recurring.
+  Without a stated rate it is listed but not ranked.
 - The minutes the change saves each time, from the estimator. An estimate whose
   basis names none of the process's quotes is not used, so the process is listed
-  but not ranked.
+  but not ranked; nor is one that saves no time.
 - Hours a month = minutes x rate / 60, and dollars a month = hours x $85.
 
 Opportunities are ranked by dollars a month. The top ``DRAFT_TOP`` get a
@@ -51,7 +54,7 @@ def counted_rate(process: dict, messages: dict, boxes: dict, ongoing: bool) -> d
     held = set().union(*(boxes[b]["months"] for b in mailboxes)) if mailboxes else set()
     span = [process["first"][:7], process["last"][:7]] if ongoing and process.get("first") else None
     months = len([m for m in held if span[0] <= m <= span[1]] if span else held)
-    per_month = process["times"] / months if months else 0
+    per_month = (process["times"] - (1 if span else 0)) / months if months else 0
     return {"times": process["times"], "messages": process["occurrences"], "months": months,
             "mailboxes": mailboxes, "span": span, "per_month": round(per_month, 2)}
 
@@ -72,8 +75,13 @@ def score_process(process: dict, estimate: dict | None, messages: dict, boxes: d
         return opportunity | {"unused": "no estimate was made for this process"}
 
     named = [quote_id(ref, process) for ref in estimate["basis"]]
-    basis = [qid for qid in named if qid in quotes]
-    if len(basis) < len(named):
+    # A quote recorded twice (as an occurrence and an observation) is shown once.
+    basis, seen = [], set()
+    for qid in (q for q in named if q in quotes):
+        if (key := (quotes[qid]["message"], quotes[qid]["quote"])) not in seen:
+            seen.add(key)
+            basis.append(qid)
+    if any(q not in quotes for q in named):
         opportunity["problems"].append(f"basis names quotes the process does not have: "
                                        f"{', '.join(q for q in named if q not in quotes)}")
     stated = estimate["stated_rate"] | {"quote": quote_id(estimate["stated_rate"]["quote"], process)}
@@ -88,8 +96,10 @@ def score_process(process: dict, estimate: dict | None, messages: dict, boxes: d
                     "basis": [quotes[qid] | {"id": qid} for qid in basis]}
     if not basis:
         return opportunity | {"unused": "the estimate names none of the process's quotes"}
-    if process["times"] == 1:
-        return opportunity | {"unused": "it happened once in the archive, so the mail does not show it recurring"}
+    if process["times"] == 1 and not stated_quote:
+        return opportunity | {"unused": "it happened once in the archive, and nothing in it says the work recurs"}
+    if estimate["minutes"] <= 0:
+        return opportunity | {"unused": "the change saves no time"}
 
     counted = counted_rate(process, messages, boxes, estimate["ongoing"])
     if stated_quote and stated["per_month"] > counted["per_month"]:
@@ -131,6 +141,7 @@ def score(corpus_dir: Path, out_dir: Path) -> str:
         "ranked": len(ranked),
         "unused": len(unused),
         "happened_once": sum(o["unused"].startswith("it happened once") for o in unused),
+        "ranked_on_one_time": sum(o["rate"]["counted"]["times"] == 1 for o in ranked),
         "hours_per_month": round(sum(o["hours_per_month"] for o in ranked), 2),
         "dollars_per_month": running,
         "drafted": sum(bool(o["draft"]) for o in ranked),

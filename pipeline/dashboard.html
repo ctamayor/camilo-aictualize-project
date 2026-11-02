@@ -101,6 +101,16 @@ th.r, td.r { text-align: right; }
 .open::after { content: " ▾"; color: var(--muted); font-weight: 400; }
 .open[aria-expanded="true"]::after { content: " ▴"; }
 @media (max-width: 700px) { .hide-narrow { display: none; } }
+@media (max-width: 640px) {
+  .figures { gap: 16px 32px; }
+  .figure b { font-size: 40px; }
+  td, th { padding-left: 4px; padding-right: 4px; }
+  .open { min-width: 0; padding: 4px 8px; }
+  th { white-space: normal; }
+}
+.name, .change, .quote .q { overflow-wrap: anywhere; }
+.figure a { text-decoration: none; }
+.figure a:hover b { color: var(--accent); }
 .line td { padding: 8px; color: var(--muted); font-size: 12.5px; background: var(--page); }
 .more { display: block; width: 100%; font: inherit; color: var(--ink-2); background: none; border: 0; padding: 14px 8px; cursor: pointer; text-align: left; }
 .more:hover { color: var(--ink); }
@@ -202,7 +212,6 @@ let R = null;               // the report: what the run has produced
 let P = null;               // the run's progress
 const open = new Set();     // opportunities whose evidence is shown
 let showAll = false;
-let showAllStalls = false;
 // A link to the page with #opp-NN opens that opportunity's evidence.
 if (/^#opp-\d+$/.test(location.hash)) open.add(location.hash.slice(1));
 
@@ -220,6 +229,8 @@ function runState() {
   if (!current) return {kind: "done", current, text: "Run finished"};
   if (!P.run && !P.steps.some(s => s.done)) return {kind: "none", current, text: "No run yet"};
   if (st.startsWith("CONTINUE")) return {kind: "paused", current, text: "Paused: running it again continues"};
+  const unbuilt = st.match(/^FAILED step '(\w+)' is not built yet/);
+  if (unbuilt) return {kind: "stopped", current, text: `Incomplete: ${(STEPS[unbuilt[1]] || unbuilt[1]).toLowerCase()} is not built yet`};
   if (st.startsWith("FAILED")) return {kind: "stopped", current, text: "Stopped: " + st.slice(7)};
   return {kind: "stopped", current, text: "Stopped: running it again continues"};
 }
@@ -273,7 +284,8 @@ function viewResults() {
     if (isOpen) rows.push(h("tr", {class: "detail", id}, h("td", {colspan: 5}, evidence(o))));
     if (o.rank === t.drafted && ranked.length > t.drafted) {
       rows.push(h("tr", {class: "line"}, h("td", {colspan: 5},
-        `The ${t.drafted} above, ${money(t.drafted_dollars_per_month)} a month, are drafted.`)));
+        `The ${t.drafted} above, ${money(t.drafted_dollars_per_month)} a month, ` +
+        (R.drafts.length ? "are drafted." : "are the ones to be drafted; drafting is not built yet."))));
     }
   }
 
@@ -282,37 +294,22 @@ function viewResults() {
       h("p", {class: "eyebrow"}, `Enron email archive · ${plural(Object.keys(R.mailboxes).length, "mailbox", "mailboxes")}` +
         (months.length ? ` · ${monthLabel(months[0])} – ${monthLabel(months[months.length - 1])}` : "")),
       h("div", {class: "figures"},
-        h("div", {class: "figure"}, h("b", null, money(t.dollars_per_month)), h("span", null, "a month of staff time that could be saved")),
-        h("div", {class: "figure minor"}, h("b", null, hrs(t.hours_per_month)), h("span", null, "hours saved a month")),
-        h("div", {class: "figure minor"}, h("b", null, money(t.drafted_dollars_per_month)), h("span", null, `from the top ${t.drafted}`))),
+        h("div", {class: "figure"}, h("a", {href: "#ranked", title: "The opportunities this adds up"}, h("b", null, money(t.dollars_per_month))),
+          h("span", null, "a month of staff time that could be saved")),
+        h("div", {class: "figure minor"}, h("a", {href: "#ranked"}, h("b", null, hrs(t.hours_per_month))), h("span", null, "hours saved a month")),
+        h("div", {class: "figure minor"}, h("a", {href: "#ranked"}, h("b", null, money(t.drafted_dollars_per_month))),
+          h("span", null, `from the top ${t.drafted}`))),
       h("p", {class: "basis"}, `Each figure is minutes saved each time × times a month × $${t.hourly_rate} an hour. `,
         "The minutes are a model's estimate from quoted evidence; how often comes from a count of the archive or a message that states it. ",
         "Every quote has been checked word for word against its message. Click a figure for the change in full and the evidence behind it.")),
-    h("section", {class: "card"}, h("table", null,
+    h("section", {class: "card", id: "ranked"}, h("table", null,
       h("thead", null, h("tr", null, h("th", null, "#"), h("th", null, "Opportunity and the change"),
-        h("th", {class: "r"}, "Saved a month"), h("th", {class: "r hide-narrow"}, "Hours saved a month"), h("th", {class: "r hide-narrow"}, "Saved so far"))),
+        h("th", {class: "r"}, "Saved a month"), h("th", {class: "r hide-narrow"}, "Hours saved a month"), h("th", {class: "r hide-narrow"}, "Running total"))),
       h("tbody", null, rows)),
       rest.length ? h("button", {class: "more", onclick: () => { showAll = true; render(); }},
         `Show the other ${rest.length}, together ${money(rest.reduce((a, o) => a + o.dollars_per_month, 0))} a month`) : null),
-    stallsView(ranked),
     onceView(),
   ];
-}
-
-// Where work waits or goes wrong, process by process in the order of the ranking.
-function stallsView(ranked) {
-  const order = [...ranked, ...R.opportunities.filter(o => o.rank == null)];
-  const items = order.flatMap(o => { const p = R.processes.find(x => x.id === o.process);
-    return (p && p.evidence.stalls || []).map(s => ({o, s})); });
-  if (!items.length) return null;
-  const shown = showAllStalls ? items : items.slice(0, 8);
-  return h("section", null,
-    h("div", {class: "section-head"}, h("h2", null, "Where work stalls"),
-      h("p", null, "Places where the work waits, is chased, goes back and forth or is held back, in the order of the opportunities above.")),
-    h("div", {class: "card"}, shown.map(({o, s}) => h("div", {class: "item"},
-      h("div", {class: "name"}, o.name), quote(s))),
-      items.length > shown.length ? h("button", {class: "more", onclick: () => { showAllStalls = true; render(); }},
-        `Show the other ${items.length - shown.length}`) : null));
 }
 
 // Work the archive shows once: what it says may matter, but it cannot be ranked.
@@ -321,9 +318,9 @@ function onceView() {
   if (!once.length) return null;
   return h("section", null,
     h("div", {class: "section-head"}, h("h2", null, "Seen once, not ranked"),
-      h("p", null, "Each of these appears once in the archive: one message, or one message and its replies. " +
-        "One message can say that work recurs but cannot show it, so these are not counted in the figures above. " +
-        "They are worth a question to the people involved.")),
+      h("p", null, "Each of these appears once in the archive (one message, or one message and its replies), " +
+        "and nothing in it says the work recurs, so it is not counted in the figures above. " +
+        "What it shows may still matter, and is worth a question to the people involved.")),
     h("div", {class: "card"}, once.map(o => { const p = R.processes.find(x => x.id === o.process);
       return h("div", {class: "item"}, h("div", {class: "name"}, o.name),
         o.change ? h("div", {class: "change"}, o.change) : null,
@@ -338,14 +335,17 @@ function evidence(o) {
   const times = plural(c.times, "time") + (c.messages > c.times ? ` (${c.messages} messages; a reply is counted with what it answers)` : "");
   const often = r.source === "stated"
     ? [h("p", null, `A message says how often the work is done, and the quote below is that evidence. `,
-         `The archive itself shows it ${times} in ${where}; it holds only part of these people's mail, so a count from it falls short.`),
+         c.times === 1 ? `The archive itself shows it once; it holds only part of these people's mail.`
+           : `The archive itself shows it ${times} in ${where}; it holds only part of these people's mail, so a count from it falls short.`),
        quote(r.stated.quote)]
     : [h("p", null, `Counted from the archive: ${times} in ${where}. `,
          `The archive holds only part of these people's mail, so the real rate is likely higher. The messages are listed below.`)];
-  const stalls = p && p.evidence.stalls || [];
+  const key = c => c.message + "\u0000" + c.quote;
   // A quote cited for the minutes that is the same words as the rate's is shown once, under how often.
-  const rateWords = r.source === "stated" ? r.stated.quote.message + "\u0000" + r.stated.quote.quote : null;
-  const basis = o.basis.filter(b => b.message + "\u0000" + b.quote !== rateWords);
+  const rateWords = r.source === "stated" ? key(r.stated.quote) : null;
+  const basis = o.basis.filter(b => key(b) !== rateWords);
+  const shownAbove = new Set([rateWords, ...basis.map(key)]);
+  const stalls = (p && p.evidence.stalls || []).filter(s => !shownAbove.has(key(s)));
   return [
     h("div", {class: "plan"},
       p ? [h("h3", null, "How the work is done today"), h("p", {class: "today"}, p.summary)] : null,
@@ -422,6 +422,9 @@ async function openMessage(id, quotes) {
     h("p", {class: "verified " + (found ? "status-good" : "status-warn")},
       found ? "✓ The quoted words are in this message, marked below." : "The quoted words are not in this message."),
     h("p", {class: "small muted"}, `${m.date ? m.date.replace("T", " ") + " UTC" : "No usable date"} · file ${m.file}`),
+    m.spans.some((s, i) => s && !m.raw_spans[i]) ? h("p", {class: "small muted"},
+      "The file stores this message quoted-printable encoded, which breaks lines with “=” and writes some characters as codes; " +
+      "it is shown here decoded, so a search of the raw file may not find the quoted words as written.") : null,
     h("pre", {class: "msg"}, highlighted(m.text, m.spans)));
   const first = body.querySelector("mark");
   if (first) first.scrollIntoView({block: "center"});

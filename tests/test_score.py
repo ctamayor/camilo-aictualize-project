@@ -65,23 +65,40 @@ class ScoreTest(unittest.TestCase):
         self.assertEqual((o["hours_per_month"], o["dollars_per_month"]), (0.3, 25.5))
         self.assertEqual((o["change"], o["explanation"]), ("change proc-001", "explanation proc-001"))
 
-    def test_ongoing_work_is_counted_over_the_months_from_its_first_time_to_its_last(self):
+    def test_ongoing_work_counts_the_gaps_between_its_times_over_the_months_it_spans(self):
         # Four messages that are three times, from January to February: two of mailbox a's four months.
         p = process("proc-001", [cite("a", n, "x") for n in range(4)], times=3, last="2001-02-20T09:00:00")
         _, opps = self.run_score([p], [estimate("proc-001", 30, ongoing=True)])
         counted = opps["proc-001"]["rate"]["counted"]
         self.assertEqual((counted["times"], counted["messages"], counted["span"], counted["months"], counted["per_month"]),
-                         (3, 4, ["2001-01", "2001-02"], 2, 1.5))
+                         (3, 4, ["2001-01", "2001-02"], 2, 1.0))
 
-    def test_work_that_happened_once_is_listed_but_not_ranked_whatever_rate_is_stated(self):
-        # Two messages, but a reply and what it answers: one time.
-        p = process("proc-001", [cite("a", 0, "it eats half my week, every week"), cite("a", 1, "y")], times=1)
-        doc, opps = self.run_score([p, twice("proc-002")],
-                                   [estimate("proc-001", 300, stated=4.3, stated_quote="q1"), estimate("proc-002", 5)])
-        self.assertEqual(opps["proc-001"]["rank"], None)
-        self.assertIn("happened once", opps["proc-001"]["unused"])
-        self.assertEqual(opps["proc-001"]["change"], "change proc-001")
-        self.assertEqual((doc["totals"]["ranked"], doc["totals"]["happened_once"]), (1, 1))
+    def test_a_burst_in_one_month_is_not_a_monthly_rate_of_its_size(self):
+        p = process("proc-001", [cite("a", n, "x") for n in range(3)], last="2001-01-20T09:00:00")
+        _, opps = self.run_score([p], [estimate("proc-001", 30, ongoing=True)])
+        self.assertEqual(opps["proc-001"]["rate"]["counted"]["per_month"], 2.0)
+
+    def test_work_that_happened_once_is_ranked_only_on_a_rate_its_own_quote_states(self):
+        # Two messages, but a reply and what it answers: one time each.
+        stated = process("proc-001", [cite("a", 0, "it eats half my week, every week"), cite("a", 1, "y")], times=1)
+        silent = process("proc-002", [cite("a", 2, "please approve this one"), cite("a", 3, "z")], times=1)
+        doc, opps = self.run_score([stated, silent, twice("proc-003")],
+                                   [estimate("proc-001", 300, stated=4.3, stated_quote="q1", ongoing=True),
+                                    estimate("proc-002", 30, ongoing=True), estimate("proc-003", 5)])
+        self.assertEqual(opps["proc-001"]["rate"]["source"], "stated")
+        self.assertEqual(opps["proc-001"]["hours_per_month"], 21.5)
+        self.assertEqual(opps["proc-002"]["rank"], None)
+        self.assertIn("happened once", opps["proc-002"]["unused"])
+        self.assertEqual(opps["proc-002"]["change"], "change proc-002")
+        totals = doc["totals"]
+        self.assertEqual((totals["ranked"], totals["happened_once"], totals["ranked_on_one_time"]), (2, 1, 1))
+
+    def test_a_quote_named_twice_in_the_basis_is_shown_once(self):
+        p = process("proc-001", [cite("a", 0, "x"), cite("a", 1, "y")])
+        p["evidence"]["observations"] = [cite("a", 0, "x", "Takes a while.")]
+        _, opps = self.run_score([p], [estimate("proc-001", 5, basis=("q1", "q3", "q2"))])
+        self.assertEqual([b["id"] for b in opps["proc-001"]["basis"]], ["q1", "q2"])
+        self.assertEqual(opps["proc-001"]["problems"], [])
 
     def test_a_stated_rate_is_used_when_higher_and_its_quote_is_the_processs_own(self):
         p = process("proc-001", [cite("a", 0, "we do it every day"), cite("a", 1, "y")])
@@ -126,16 +143,17 @@ class ScoreTest(unittest.TestCase):
         ranked = doc["opportunities"]
         self.assertEqual([o["process"] for o in ranked[:3]], ["proc-002", "proc-004", "proc-003"])
         self.assertEqual([o["id"] for o in ranked[:2]], ["opp-01", "opp-02"])
-        self.assertEqual(ranked[-1]["running_total"], doc["totals"]["dollars_per_month"])
+        self.assertEqual(ranked[-2]["running_total"], doc["totals"]["dollars_per_month"])
         self.assertEqual(ranked[1]["running_total"], round(ranked[0]["dollars_per_month"] + ranked[1]["dollars_per_month"], 2))
-        self.assertEqual([o["draft"] for o in ranked], [True] * 10 + [False] * 2)
+        self.assertEqual([o["draft"] for o in ranked if o["rank"]], [True] * 10 + [False])
+        self.assertEqual(ranked[-1]["unused"], "the change saves no time")
         self.assertEqual(doc["mailboxes"]["a"], {"messages": 5, "months": MONTHS["a"]})
 
-    def test_an_opportunity_that_saves_nothing_gets_no_draft(self):
+    def test_an_opportunity_that_saves_nothing_is_not_ranked_or_drafted(self):
         processes = [twice("proc-001"), twice("proc-002")]
         doc, opps = self.run_score(processes, [estimate("proc-001", 5), estimate("proc-002", 0)])
-        self.assertEqual((opps["proc-001"]["draft"], opps["proc-002"]["draft"]), (True, False))
-        self.assertEqual(doc["totals"]["drafted"], 1)
+        self.assertEqual((opps["proc-001"]["draft"], opps["proc-002"]["rank"]), (True, None))
+        self.assertEqual((doc["totals"]["drafted"], doc["totals"]["ranked"]), (1, 1))
 
 
 if __name__ == "__main__":

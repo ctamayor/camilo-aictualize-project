@@ -3,9 +3,10 @@
 A citation survives only if its message is in the scout's own batch, no scout
 marked that message untrusted, and the quote appears in the message as parsed
 from its raw file (headers and decoded body, as the scout was shown them).
-Quotes are compared after collapsing whitespace, straightening quote characters
-and removing the ">" markers at the start of quoted reply lines (the scout may
-write line breaks as spaces and skip the markers), and ignoring case. A kept
+Quotes are compared after collapsing whitespace, straightening quote characters,
+dropping control characters and removing the ">" markers at the start of quoted
+reply lines (the scout may write line breaks as spaces and skip the markers, and
+cannot write a stray control byte), and ignoring case. A kept
 citation's quote is replaced by the message's own text, so what is shown is
 verbatim. A pattern left with no occurrence is dropped. Every rejected citation
 is kept with its reason so failures can be investigated.
@@ -23,7 +24,9 @@ from pathlib import Path
 from .ingest import parse_message, read_raw
 from .state import log, merge_paths, read_json, scout_output, write_json
 
-QUOTE_CHARS = str.maketrans({"‘": "'", "’": "'", "“": '"', "”": '"'})
+# Quote characters straightened, and control characters that are not whitespace dropped.
+QUOTE_CHARS = str.maketrans({"‘": "'", "’": "'", "“": '"', "”": '"'}
+                            | dict.fromkeys(map(chr, [*range(0x00, 0x09), *range(0x0e, 0x1c), 0x7f])))
 REPLY_MARKERS = re.compile(r"^[ \t]*(?:>[ \t]*)+", re.MULTILINE)
 
 
@@ -60,11 +63,16 @@ def check(citation: dict, batch: set[str], untrusted: set[str], text_of) -> tupl
     return (None, span) if span else ("quote not in message", None)
 
 
-def message_text(corpus_dir: Path):
-    """Return a cached lookup of a message's normalized text, parsed from its raw file."""
+def parsed(corpus_dir: Path):
+    """Return a cached lookup of a message as parsed from its raw file."""
+    return lru_cache(maxsize=None)(lambda message_id: parse_message(message_id, read_raw(corpus_dir, message_id)))
+
+
+def message_text(parse):
+    """Return a cached lookup of a message's normalized text."""
     @lru_cache(maxsize=None)
     def text_of(message_id: str) -> str:
-        m = parse_message(message_id, read_raw(corpus_dir, message_id))
+        m = parse(message_id)
         return normalize(f"From: {m['from']}\nTo: {m['to']}\nCc: {m['cc']}\nSubject: {m['subject']}\n\n{m['body']}")
     return text_of
 
@@ -74,7 +82,8 @@ def validate(corpus_dir: Path, out_dir: Path) -> str:
     replies = {c["id"]: read_json(scout_output(out_dir, c)) for c in chunks}
     untrusted_ids = {canonical(u["message"], set(c["message_ids"]))
                      for c in chunks for u in replies[c["id"]]["untrusted"]}
-    text_of = message_text(corpus_dir)
+    parse = parsed(corpus_dir)
+    text_of = message_text(parse)
 
     patterns, untrusted, rejected = [], [], []
     per_chunk = {}
@@ -139,9 +148,12 @@ def validate(corpus_dir: Path, out_dir: Path) -> str:
                                             "patterns": patterns, "untrusted": untrusted,
                                             "rejected": rejected})
     names_path, _ = merge_paths(out_dir)
+    # The merger judges which patterns are the same work, so it sees when and by whom each was done.
+    shown = lambda o: {"month": (parse(o["message"])["date"] or "undated")[:7], "from": parse(o["message"])["from"],
+                       "quote": o["quote"]}
     # Written last: it is what marks this step as finished.
     write_json(names_path, {"patterns": [{"id": p["id"], "name": p["name"], "summary": p["summary"],
-                                          "occurrences": [o["quote"] for o in p["occurrences"]]} for p in patterns]})
+                                          "occurrences": [shown(o) for o in p["occurrences"]]} for p in patterns]})
 
     summary = (f"{total.get('patterns_kept', 0)} of {total.get('patterns_recorded', 0)} patterns kept "
                f"({total.get('single_occurrence', 0)} on one message), "

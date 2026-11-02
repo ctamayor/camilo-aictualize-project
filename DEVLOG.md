@@ -1940,3 +1940,90 @@ Problems, by effect on the ranking:
   quoted-printable files, so Ctrl-F on the raw .eml misses them; non-work
   ranked (chain mail, newsletters, $0 Dell confirmations); hero figures not
   clickable; phone width overflows.
+
+## 2026-11-02 — Committed; fixes from the round-2 review
+
+Committed everything and pushed to origin/main (af27996), as asked.
+
+User decision: work seen once counts as a flow when its email says the work
+recurs; otherwise it need not be ranked.
+
+- **Seen once** (score.py): a process that happened once is ranked on a rate
+  one of its own quotes states, and listed but not ranked otherwise. On
+  trial7's estimates this ranks the requisitions (482) and the nightly
+  checkouts.
+- **Bursts** (score.py): ongoing work counts the gaps between its times
+  (times − 1) over the months it spans, so three times in one month is two a
+  month, not three; the count again falls short rather than over.
+- **Times** (group.py): a reply or forward (RE:/FW:) is the same time as the
+  latest earlier occurrence with its subject, quoted or not (Notes replies
+  quote nothing; forwards are edited). A message without the prefix joins one
+  whose own text (before the first quote header) it quotes, or one it copies
+  within ingest's duplicate window. Fixes the Calpine bug: a short body was
+  "contained" in every later nomination. Each process's `months` now counts
+  times begun per month. On trial7: 1,544 to 1,502 times; nominations 65 to
+  76; Transwestern 4 to 2; Colstrip 2 to 1 (unranked).
+- **Score**: a change that saves no time is not ranked; a basis quote named
+  twice is shown once.
+- **Estimator**: sees times begun per month and judges `ongoing` from them;
+  notes are labelled "Reader's note"; minutes are per counted time, not per
+  cycle; mail the work does not need gets 0 minutes; a date or report title
+  is not a rate; a process seen once is ranked only on a stated rate.
+- **Merge**: each occurrence is shown with its month and sender (validate
+  writes them to names.json), and the merger is told batches are consecutive
+  stretches of the same mail, so later batches continue earlier work.
+- **Scout**: occurrences come first, stalls and observations are added to
+  them, not instead; a chain's occurrences are whole runs, and a message
+  showing a different act belongs to that act's pattern; an occurrence quote
+  shows the work, not a chase or apology; a stall needs words saying the wait
+  happened, and goes under the work it holds up; a date or title is not a rate.
+- **Validate**: control characters are dropped when matching (serve's locate
+  likewise), fixing the one false rejection.
+- **Dashboard**: says "Incomplete: drafting … is not built yet" instead of
+  the raw failure; "are the ones to be drafted" until drafts exist; "Running
+  total" for "Saved so far"; headline figures link to the table; page-level
+  stall list dropped (each opportunity keeps its own, without repeating its
+  basis quotes); the drawer notes quoted-printable files; phone-width CSS.
+
+Tests: 85 pass. Rerun approved: trial8.
+
+## 2026-11-02 — trial8 run
+
+First attempt: 3 of the first 8 scouts (chunk-002, -006, -008) gave no reply
+in 9 minutes while the rest took 76–107 s; resumed the same run, which
+reused the finished chunks. Then: 247 patterns, 13 of 2,090 citations
+rejected, 1,657 of 3,196 messages cited (trial7 1,731; chunk-013 only 71 of
+271). 146 processes, 1,445 times in 1,593 messages, 20 once. 130 ranked,
+$5,636/month (66.3 h), top 10 $4,103. #1 requisitions (482) $2,267 on a
+stated 4/month × 400 min and #2 nightly checkouts $892: 56% of the total on
+two single messages. 5 ranked items rest on one time.
+
+Third review round launched (4 reviewers: scout, merge/times, estimate/score,
+dashboard).
+
+## 2026-11-02 — trial8 review (round 3)
+
+Four read-only reviewers (scripts in scratchpad/review3/). Fine: arithmetic
+exact; all 30 sampled quotes verbatim; planted messages all handled; bursts
+mostly labelled episodes (short-span ongoing $998 to $309); daily mail and
+Calpine counted right; last round's grouping examples mostly fixed; top-20
+wrong-pattern share 15% to 3%.
+
+Problems:
+- Five one-time items are 57.5% ($3,242). #1 requisitions: 400 min rests on
+  an unquoted "cut about a third", and the change moves work to other
+  approvers rather than removing it. #2 checkouts: rate quote is a time
+  window, minutes from a deadline, and the change is what the memo itself
+  announces as already rolling out.
+- Stated rates still taken from scout notes (dates, titles, a time window):
+  $1,179. Two rounds of prompt rules have not stopped it.
+- Recall: business messages cited 1,663 to 1,554; about a third from the new
+  chain rule, read as "cite one message per chain" (fully cited 3+ threads 58
+  to 36). Output length per scout varies about 3x between runs.
+- Patterns named by channel (broadcasts) mix procedures with operating news
+  (proc-005); deal setup split within one batch (proc-001/066/067).
+- count_times: a quoting RE: joins the latest same subject even when it
+  quotes something else, up to 496 days apart (13 folds over 7 days).
+- Non-work still ranked (chain mail, newsletters, a $0 Dell order); $1 rows;
+  formula line shows hours to 1 decimal so the product doesn't check; the
+  gaps rule isn't explained on the page.

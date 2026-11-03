@@ -102,7 +102,9 @@ def report(out_dir: Path) -> dict:
         "opportunities": opportunities,
         "processes": processes,
         "patterns": {pid: names[pid] for p in processes for pid in p["patterns"] if pid in names},
-        "drafts": sorted(o["id"] for o in opportunities if draft_paths(out_dir, o)[1].exists()),
+        # Each drafter's reply, as it wrote it: the page renders its Markdown.
+        "drafts": {o["id"]: read_json(draft_paths(out_dir, o)[0]) for o in opportunities
+                   if o.get("draft") and draft_paths(out_dir, o)[0].exists()},
         "messages": {i: {k: messages[i][k] for k in ("date", "from", "subject")} for i in sorted(cited) if i in messages},
     }
 
@@ -116,7 +118,7 @@ def live(out_dir: Path) -> dict:
             stamps.append(str((out_dir / name).stat().st_mtime_ns))
         except FileNotFoundError:
             stamps.append("-")
-    stamps.append(str(len(list((out_dir / "drafts").glob("*.md")))))
+    stamps.append(str(len(list((out_dir / "drafts").glob("*.json")))))
     return {
         "active": run_active(out_dir),
         "run": read_json(out_dir / "run.json"),
@@ -178,11 +180,6 @@ def make_handler(out_dir: Path, corpus_dir: Path):
             if url.path == "/api/message":
                 found = message(corpus_dir, out_dir, query.get("id", [""])[0], query.get("q", []))
                 return self.send_json(found) if found else self.send(404, b"no such message", "text/plain")
-            if url.path == "/api/draft":
-                opp = {"id": query.get("id", [""])[0]}
-                path = draft_paths(out_dir, opp)[1] if opp["id"].startswith("opp-") and opp["id"][4:].isdigit() else None
-                if path and path.exists():
-                    return self.send(200, path.read_bytes(), "text/markdown; charset=utf-8")
             self.send(404, b"not found", "text/plain")
 
         def log_message(self, *args) -> None:

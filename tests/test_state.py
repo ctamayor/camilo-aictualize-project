@@ -157,7 +157,7 @@ class RunTest(CorpusCase):
         self.assertIn("drafters: running 1 of 1", lines)
         self.assertTrue((self.out / "drafts" / "opp-01.md").read_text(encoding="utf-8").startswith("# Automate it"))
         self.assertFalse((self.out / "drafts" / "opp-02.md").exists())
-        self.assertEqual(read_json(self.out / "report.json")["drafts"], ["opp-01"])
+        self.assertEqual(list(read_json(self.out / "report.json")["drafts"]), ["opp-01"])
         self.assertIn("DONE", (self.out / "run.log").read_text(encoding="utf-8"))
 
     def test_a_finished_run_run_again_repeats_nothing(self):

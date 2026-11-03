@@ -163,18 +163,27 @@ class ScoreTest(unittest.TestCase):
         self.assertIn("no estimate", opps["proc-002"]["unused"])
         self.assertEqual((doc["totals"]["ranked"], doc["totals"]["unused"], doc["totals"]["estimates_ignored"]), (0, 2, 1))
 
-    def test_ranked_by_dollars_with_a_running_total_and_the_top_ten_drafted(self):
+    def test_ranked_by_dollars_with_the_top_ten_drafted(self):
         processes = [twice(f"proc-{i:03d}") for i in range(1, 13)]
         estimates = [estimate(p["id"], minutes) for p, minutes in zip(processes, [5, 60, 10, 20, 0, 1, 2, 3, 4, 6, 7, 8])]
         doc, _ = self.run_score(processes, estimates)
         ranked = doc["opportunities"]
         self.assertEqual([o["process"] for o in ranked[:3]], ["proc-002", "proc-004", "proc-003"])
         self.assertEqual([o["id"] for o in ranked[:2]], ["opp-01", "opp-02"])
-        self.assertEqual(ranked[-2]["running_total"], doc["totals"]["dollars_per_month"])
-        self.assertEqual(ranked[1]["running_total"], round(ranked[0]["dollars_per_month"] + ranked[1]["dollars_per_month"], 2))
+        self.assertEqual(doc["totals"]["dollars_per_month"], round(sum(o["dollars_per_month"] for o in ranked[:-1]), 2))
         self.assertEqual([o["draft"] for o in ranked if o["rank"]], [True] * 10 + [False])
         self.assertEqual(ranked[-1]["unused"], "the change saves no time")
         self.assertEqual(doc["mailboxes"]["a"], {"messages": 5, "months": MONTHS["a"]})
+
+    def test_the_cost_so_far_runs_from_its_first_month_in_the_mail_to_the_last_its_mailboxes_hold(self):
+        # First in January 2001 in mailboxes a and b, whose mail ends in May 2001: five months.
+        p = process("proc-001", [cite("a", 0, "x"), cite("b", 1, "y")])
+        doc, opps = self.run_score([p, twice("proc-002")], [estimate("proc-001", 60), estimate("proc-002", 30)])
+        o = opps["proc-001"]
+        self.assertEqual(o["so_far"], {"from": "2001-01", "to": "2001-05", "months": 5,
+                                       "dollars": round(o["dollars_per_month"] * 5, 2)})
+        self.assertEqual(opps["proc-002"]["so_far"]["to"], "2001-04")
+        self.assertEqual(doc["totals"]["dollars_so_far"], round(o["so_far"]["dollars"] + opps["proc-002"]["so_far"]["dollars"], 2))
 
     def test_an_opportunity_that_saves_nothing_is_not_ranked_or_drafted(self):
         processes = [twice("proc-001"), twice("proc-002")]

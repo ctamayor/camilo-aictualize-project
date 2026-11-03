@@ -36,7 +36,7 @@ class DraftTest(unittest.TestCase):
         self.assertEqual(page, "# Send the schedule automatically\n\n*Email, drafted for opportunity 1: Daily schedule, "
                                "$85 a month.*\n\n**For:** the scheduling team\n\n---\n\nPlease.\n")
         report = read_json(self.out / "report.json")
-        self.assertEqual((report["drafts"], report["totals"]["ranked"]), (["opp-01"], 1))
+        self.assertEqual((list(report["drafts"]), report["totals"]["ranked"]), (["opp-01"], 1))
 
 
 if __name__ == "__main__":

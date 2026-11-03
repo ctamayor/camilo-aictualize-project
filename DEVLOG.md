@@ -2602,3 +2602,63 @@ Fixes:
 
   validate.py keeps the quote matching and group.py keeps `build_process`,
   which explore's save uses.
+
+## 2026-11-02 — The drafted artifact on the dashboard
+
+- When an opportunity is opened, its draft now appears as a card of its own.
+  - Below "Today / The change", the opened row splits in two: how the figure
+    is made on the left, and the draft on the right, beside it. It scrolls
+    with the page (keeping it in view felt erratic). On a narrow screen it
+    comes first, above the figure. (Placed first between the plan and the
+    evidence, it cut the figure off from its factors.)
+  - It shows the kind of artifact, its title, who it is for, and a preview
+    of the body.
+  - Two buttons: read the full draft in the side drawer, or copy its text.
+- The list is plainer: the "How it's figured" column is gone, since the opened
+  row shows the formula. Drafted rows are not tagged: an opened row shows
+  its draft.
+- The line under the headline that explained the formula is gone too; each
+  opened row shows its own.
+- The dashboard renders markdown itself, with no library, so it stays local.
+  - It builds elements from the text and never inserts it as HTML.
+  - It handles headings, lists, quotes, tables, code, bold, italic and
+    links (http and https only).
+  - A check over all ten drafts left no stray markdown.
+- Drafts now come with the report (`report.json` and `/api/report`).
+  `/api/draft` is gone.
+
+## 2026-11-02 — Cost so far instead of a running total
+
+- The "Running total" column summed the monthly figure of a row and every row
+  above it. It now shows each opportunity's cost so far, which is closer to
+  what the README's "running dollar total" asks for.
+  - Cost so far = dollars a month × the calendar months from the month the
+    work first shows in the mail to the last month its mailboxes hold.
+  - It is worked out in score.py with the rest of the arithmetic, and
+    tested.
+  - The headline adds the total ($88,005 for the real run).
+  - An opened row explains its figure, with both months.
+- It falls short rather than over: the mail shows when the work was first
+  written about, not when it began. It assumes the rate held the whole time.
+- The real run's output was scored again without a model. Every other
+  figure came out the same.
+
+## 2026-11-02 — Sorting the list
+
+- Clicking "Saved a month" or "Cost so far" sorts the list by that column,
+  largest first.
+  - The # column numbers the rows in the current order.
+- The line after the tenth row ("The 10 above … are drafted") is gone, and
+  the button under the list that showed the rest now just says "See more".
+- The two dollar columns now look alike: plain figures, with no bordered
+  button or arrow. The sorted column is darker and bold.
+- An opened row is tinted, since its amount no longer shows ▴.
+- An opened row without a draft says why, in a dashed box where the draft
+  would be: "Email not drafted. Drafts are written for the 10 opportunities that
+  save the most each month." Drafts stay with the monthly order, since a draft
+  starts a change and the change's worth is what it saves from now on. Cost
+  so far is spent, and it leans on when the work first shows in the mail.
+  The box names the kind of artifact when every draft is the same kind
+  (here, all ten are emails), and says just "Not drafted" otherwise.
+- A link to one of the rows below the first ten (`#opp-11`) now shows the
+  rest of the list, so the link lands on the row.

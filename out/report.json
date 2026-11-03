@@ -8,6 +8,7 @@
     "ranked_on_one_time": 4,
     "hours_per_month": 77.86,
     "dollars_per_month": 6618.1,
+    "dollars_so_far": 88004.75,
     "drafted": 10,
     "drafted_dollars_per_month": 5727.3,
     "stated_rates_used": 11,
@@ -167,7 +168,12 @@
       },
       "hours_per_month": 19.93,
       "dollars_per_month": 1694.05,
-      "running_total": 1694.05,
+      "so_far": {
+        "from": "2001-02",
+        "to": "2002-02",
+        "months": 13,
+        "dollars": 22022.65
+      },
       "draft": true
     },
     {
@@ -245,7 +251,12 @@
       },
       "hours_per_month": 12.68,
       "dollars_per_month": 1077.8,
-      "running_total": 2771.85,
+      "so_far": {
+        "from": "2001-11",
+        "to": "2002-02",
+        "months": 4,
+        "dollars": 4311.2
+      },
       "draft": true
     },
     {
@@ -337,7 +348,12 @@
       },
       "hours_per_month": 10.84,
       "dollars_per_month": 921.4,
-      "running_total": 3693.25,
+      "so_far": {
+        "from": "2000-10",
+        "to": "2002-02",
+        "months": 17,
+        "dollars": 15663.8
+      },
       "draft": true
     },
     {
@@ -422,7 +438,12 @@
       },
       "hours_per_month": 4.56,
       "dollars_per_month": 387.6,
-      "running_total": 4080.85,
+      "so_far": {
+        "from": "2001-07",
+        "to": "2002-02",
+        "months": 8,
+        "dollars": 3100.8
+      },
       "draft": true
     },
     {
@@ -500,7 +521,12 @@
       },
       "hours_per_month": 4.33,
       "dollars_per_month": 368.05,
-      "running_total": 4448.9,
+      "so_far": {
+        "from": "2000-10",
+        "to": "2002-02",
+        "months": 17,
+        "dollars": 6256.85
+      },
       "draft": true
     },
     {
@@ -573,7 +599,12 @@
       },
       "hours_per_month": 3.51,
       "dollars_per_month": 298.35,
-      "running_total": 4747.25,
+      "so_far": {
+        "from": "2000-10",
+        "to": "2002-02",
+        "months": 17,
+        "dollars": 5071.95
+      },
       "draft": true
     },
     {
@@ -665,7 +696,12 @@
       },
       "hours_per_month": 3.0,
       "dollars_per_month": 255.0,
-      "running_total": 5002.25,
+      "so_far": {
+        "from": "2000-10",
+        "to": "2002-02",
+        "months": 17,
+        "dollars": 4335.0
+      },
       "draft": true
     },
     {
@@ -764,7 +800,12 @@
       },
       "hours_per_month": 3.0,
       "dollars_per_month": 255.0,
-      "running_total": 5257.25,
+      "so_far": {
+        "from": "2000-01",
+        "to": "2001-12",
+        "months": 24,
+        "dollars": 6120.0
+      },
       "draft": true
     },
     {
@@ -849,7 +890,12 @@
       },
       "hours_per_month": 3.0,
       "dollars_per_month": 255.0,
-      "running_total": 5512.25,
+      "so_far": {
+        "from": "2000-09",
+        "to": "2002-02",
+        "months": 18,
+        "dollars": 4590.0
+      },
       "draft": true
     },
     {
@@ -934,7 +980,12 @@
       },
       "hours_per_month": 2.53,
       "dollars_per_month": 215.05,
-      "running_total": 5727.3,
+      "so_far": {
+        "from": "2000-12",
+        "to": "2002-02",
+        "months": 15,
+        "dollars": 3225.75
+      },
       "draft": true
     },
     {
@@ -1021,7 +1072,12 @@
       },
       "hours_per_month": 2.33,
       "dollars_per_month": 198.05,
-      "running_total": 5925.35,
+      "so_far": {
+        "from": "2000-05",
+        "to": "2001-12",
+        "months": 20,
+        "dollars": 3961.0
+      },
       "draft": false
     },
     {
@@ -1099,7 +1155,12 @@
       },
       "hours_per_month": 2.17,
       "dollars_per_month": 184.45,
-      "running_total": 6109.8,
+      "so_far": {
+        "from": "2000-06",
+        "to": "2001-12",
+        "months": 19,
+        "dollars": 3504.55
+      },
       "draft": false
     },
     {
@@ -1163,7 +1224,12 @@
       },
       "hours_per_month": 1.17,
       "dollars_per_month": 99.45,
-      "running_total": 6209.25,
+      "so_far": {
+        "from": "2001-08",
+        "to": "2002-02",
+        "months": 7,
+        "dollars": 696.15
+      },
       "draft": false
     },
     {
@@ -1229,7 +1295,12 @@
       },
       "hours_per_month": 1.04,
       "dollars_per_month": 88.4,
-      "running_total": 6297.65,
+      "so_far": {
+        "from": "2001-10",
+        "to": "2002-03",
+        "months": 6,
+        "dollars": 530.4
+      },
       "draft": false
     },
     {
@@ -1302,7 +1373,12 @@
       },
       "hours_per_month": 0.68,
       "dollars_per_month": 57.8,
-      "running_total": 6355.45,
+      "so_far": {
+        "from": "2000-02",
+        "to": "2001-12",
+        "months": 23,
+        "dollars": 1329.4
+      },
       "draft": false
     },
     {
@@ -1375,7 +1451,12 @@
       },
       "hours_per_month": 0.47,
       "dollars_per_month": 39.95,
-      "running_total": 6395.4,
+      "so_far": {
+        "from": "2002-01",
+        "to": "2002-02",
+        "months": 2,
+        "dollars": 79.9
+      },
       "draft": false
     },
     {
@@ -1455,7 +1536,12 @@
       },
       "hours_per_month": 0.44,
       "dollars_per_month": 37.4,
-      "running_total": 6432.8,
+      "so_far": {
+        "from": "1999-12",
+        "to": "2001-12",
+        "months": 25,
+        "dollars": 935.0
+      },
       "draft": false
     },
     {
@@ -1533,7 +1619,12 @@
       },
       "hours_per_month": 0.42,
       "dollars_per_month": 35.7,
-      "running_total": 6468.5,
+      "so_far": {
+        "from": "2000-10",
+        "to": "2002-02",
+        "months": 17,
+        "dollars": 606.9
+      },
       "draft": false
     },
     {
@@ -1606,7 +1697,12 @@
       },
       "hours_per_month": 0.33,
       "dollars_per_month": 28.05,
-      "running_total": 6496.55,
+      "so_far": {
+        "from": "2001-02",
+        "to": "2002-02",
+        "months": 13,
+        "dollars": 364.65
+      },
       "draft": false
     },
     {
@@ -1665,7 +1761,12 @@
       },
       "hours_per_month": 0.29,
       "dollars_per_month": 24.65,
-      "running_total": 6521.2,
+      "so_far": {
+        "from": "2001-02",
+        "to": "2002-02",
+        "months": 13,
+        "dollars": 320.45
+      },
       "draft": false
     },
     {
@@ -1738,7 +1839,12 @@
       },
       "hours_per_month": 0.27,
       "dollars_per_month": 22.95,
-      "running_total": 6544.15,
+      "so_far": {
+        "from": "2001-07",
+        "to": "2002-02",
+        "months": 8,
+        "dollars": 183.6
+      },
       "draft": false
     },
     {
@@ -1818,7 +1924,12 @@
       },
       "hours_per_month": 0.25,
       "dollars_per_month": 21.25,
-      "running_total": 6565.4,
+      "so_far": {
+        "from": "2001-12",
+        "to": "2002-03",
+        "months": 4,
+        "dollars": 85.0
+      },
       "draft": false
     },
     {
@@ -1884,7 +1995,12 @@
       },
       "hours_per_month": 0.18,
       "dollars_per_month": 15.3,
-      "running_total": 6580.7,
+      "so_far": {
+        "from": "2001-06",
+        "to": "2002-02",
+        "months": 9,
+        "dollars": 137.7
+      },
       "draft": false
     },
     {
@@ -1936,7 +2052,12 @@
       },
       "hours_per_month": 0.17,
       "dollars_per_month": 14.45,
-      "running_total": 6595.15,
+      "so_far": {
+        "from": "2000-03",
+        "to": "2001-12",
+        "months": 22,
+        "dollars": 317.9
+      },
       "draft": false
     },
     {
@@ -1995,7 +2116,12 @@
       },
       "hours_per_month": 0.13,
       "dollars_per_month": 11.05,
-      "running_total": 6606.2,
+      "so_far": {
+        "from": "2002-03",
+        "to": "2002-03",
+        "months": 1,
+        "dollars": 11.05
+      },
       "draft": false
     },
     {
@@ -2061,7 +2187,12 @@
       },
       "hours_per_month": 0.1,
       "dollars_per_month": 8.5,
-      "running_total": 6614.7,
+      "so_far": {
+        "from": "2000-06",
+        "to": "2002-02",
+        "months": 21,
+        "dollars": 178.5
+      },
       "draft": false
     },
     {
@@ -2134,7 +2265,12 @@
       },
       "hours_per_month": 0.04,
       "dollars_per_month": 3.4,
-      "running_total": 6618.1,
+      "so_far": {
+        "from": "2000-08",
+        "to": "2002-02",
+        "months": 19,
+        "dollars": 64.6
+      },
       "draft": false
     }
   ],
@@ -5658,18 +5794,68 @@
     "saved-26": "Transwestern marketers' Friday bullets round",
     "saved-27": "Nightly El Paso Electric model-vs-CARP tie-out"
   },
-  "drafts": [
-    "opp-01",
-    "opp-02",
-    "opp-03",
-    "opp-04",
-    "opp-05",
-    "opp-06",
-    "opp-07",
-    "opp-08",
-    "opp-09",
-    "opp-10"
-  ],
+  "drafts": {
+    "opp-01": {
+      "kind": "email",
+      "audience": "From the Confirmations lead, to the owner of the on-line EnTelligence project / risk-system reporting, cc the head of Risk Management (to whom the desk heads report)",
+      "title": "Request: read-only back-dated MTM report by counterparty for auditor requests",
+      "body": "Subject: Request: read-only back-dated MTM report by counterparty (would save Risk about 20 hours a month)\n\nHi,\n\n**What I'm asking:** Please give Confirmations a read-only report that values all of a counterparty's deals across every desk as of a past date. It could be the on-line EnTelligence we planned or a standard report from the risk system, whichever is faster. Please reply by [date] with:\n1. who will own it, and\n2. a target date.\n\n**Why:** Counterparties' auditors ask us for third-party MTM valuations several times a week. We have no system that values deals, so every request goes to all 5 or 6 Risk desk heads. Each desk then has an analyst pull a mini-book, export it to Excel, black out Delta/Vol and send it back. We estimate this costs about 92 minutes per request, or about 20 hours ($1,694) a month. Most of that time is spent by Risk staff. With this report, desk heads and analysts would no longer be involved.\n\n**What the report needs to do:**\n- Inputs: the counterparty short name and an as-of date (for example, Dec 29, 2000).\n- Uses the curves as of that past date, which means back-dated curves have to be stored.\n- Covers all desks and regions in one run, with no request to each desk.\n- Output: MTM value and open position for each deal, plus a total. This should export to Excel so we can send it to the auditor.\n- Delta/Vol are left out of the report entirely, so no one has to black them out.\n- Read-only access for Confirmations staff.\n\nThanks,\n[Confirmations lead]\n\n---\n\n**Background, for anyone who needs it**\n\n*How it works today*\n1. An auditor's request reaches Confirmations.\n2. Confirmations emails all Risk desk heads (6 on one recent request, 5 on others). For example: \"Can you provide MTM values as of Dec 29, 2000, for the short name of CROSS TIMBERS.\"\n3. Each desk head passes the request to an analyst. The analyst pulls a mini-book for that counterparty as of the date, exports it to Excel, blacks out Delta/Vol and replies with the total MTM for that desk's region.\n4. Confirmations combines the replies from all the desks and sends the result to the auditor.\n\nUntil the report exists, we will keep sending requests to the desks this way.\n\n*How it would work*\nConfirmations enters the short name and as-of date, runs the report and sends the export to the auditor. There is no request to the desks and no blacking out.\n\n*How we got the savings figure*\n92 minutes per request × 13 requests a month = 19.93 hours = $1,694.05 a month. The 13 a month comes from the stated rate of about 3 requests a week. Our email shows fewer: 4 requests over Feb–Mar 2001, about 1.5 a month. At that lower rate the saving would be smaller, so it's worth confirming the volume with the desks.\n\n*Suggested acceptance test*\nRun the new report for requests the desks have already answered and compare the results with what they sent:\n- CoEnergy Trading Company as of Dec 31, 2000\n- Cross Timbers as of Dec 29, 2000\n- The two counterparties requested on Mar 21, 2001 (Dec 29, 2000)\n\nIf the totals match the desk replies for each region, the report is ready to replace the manual process."
+    },
+    "opp-02": {
+      "kind": "email",
+      "audience": "Enpower team in Houston (Path Confirmation tool owners), copied to the Portland Real Time shift lead",
+      "title": "Request: pre-fill the contact and save in the background on the Enpower Path Confirmation screen",
+      "body": "To: Enpower team, Houston\nCc: Portland Real Time shift lead\nFrom: Portland Real Time desk manager\nSubject: Request: pre-fill the contact and save in the background on the Path Confirmation screen\n\nHello,\n\nWe'd like two changes to the contact screen in the Enpower Path Confirmation tool:\n\n1. Pre-fill the counterparty's usual scheduling contact. The trader would change it only when someone else answered the call.\n2. Queue the save to Enpower in the background so the screen hands control back right away.\n\nWhy: Every confirmation saves straight to Enpower, and each save takes about a minute. The Real Time shift checks out with at least 27 marketers and utilities every night, and all of it has to fit between HE 19 and HE 21. Cuts are also entered as path confirms, which adds more saves. The save waits come to about 25 minutes a night, or about 12.7 trader hours a month (about $1,078 a month).\n\nCould you tell us by [date] whether this is doable and what you need from us? For example, we can send a list of the usual scheduling contact for each counterparty if Enpower doesn't already store it.\n\nThanks,\n[Portland Real Time desk manager]\n\n---\n\nBackground, for whoever picks this up\n\nHow it works today (from the shift instructions sent to the Portland shift list):\n- \"You must check out with all major marketers and utilities each night.\" The checkouts \"should be started in HE 19 and finished by HE 21.\"\n- Traders sort by counterparty, make the call, and once all of that counterparty's schedules are confirmed, they highlight them and click the telephone icon.\n- \"A screen will come up requesting contact information from the appropriate counterparty. Because this information saves directly to Enpower, save time runs about a minute.\"\n- The named counterparties are only a minimum list: AEP, AES-New Energy, Aquila, Avista, Calpine, Constellation, Coral, Duke, Dynegy, El Paso Merchant, Exelon, Meico, Mirant, Morgan, NCPA, Reliant, PPLMontana, PowerX, Sempra, SMUD, TransAlta, Williams, Pinnacle West, SRP, PNM, PSCO and Pacificorp. That's about one save per counterparty, so at least 27 saves a night.\n- \"In the Enpower Path Confirmation, we need to make cuts as Path Confirms. Enter comments in the confirmed section.\" Each cut adds another save.\n\nHow it would work after the change:\n- The trader highlights a counterparty's paths, clicks the telephone icon, accepts the pre-filled contact (or edits it), and moves straight on to the next call.\n- The phone calls stay the same. Only the typing and the wait for the save go away.\n\nThings to confirm while you design it:\n- Where the \"usual scheduling contact\" comes from: an existing Enpower counterparty record, the last contact entered for that counterparty, or a list we provide.\n- How a trader learns that a background save failed, so a confirmation isn't lost without anyone noticing.\n- Comments entered in the confirmed section for cuts must still be saved along with the confirmation.\n\nHow we estimated the savings: about 25 minutes of save waits a night × 30.42 nights a month = 12.68 hours a month, or $1,077.80 a month."
+    },
+    "opp-03": {
+      "kind": "email",
+      "audience": "Risk management (owner of the daily non-officialized books list) and IT for the risk system; cc the gas desk-group leads, the regional controllers and Credit",
+      "title": "Request: one registry of post IDs, plus a nightly exception email for any not officialized by cut-off",
+      "body": "To: Risk management (owner of the daily non-officialized books list); IT, risk system\nCc: Gas desk-group leads; Regional controllers; Credit\n\nSubject: Request: one registry of post IDs, plus a nightly email listing any not officialized by cut-off\n\nWHAT WE'RE ASKING\n1. Risk and IT: please set up one registry of the post IDs each book admin must officialize every night. We'll send the lists the desk already keeps by hand as the starting data.\n2. IT: at a set time before cut-off each night, have the risk system compare the registry with the books marked official. It should email each book admin any of their post IDs that are still not officialized, including post IDs with no position.\n3. Risk and the regional controllers: please agree that this report replaces the controllers' end-of-night sheet and Risk's own daily list of missed books.\n\nWHY\nToday about five people a night run an Excel macro by hand, one per desk group. Each copy of the file is maintained separately. A book that is missed means V@R and Credit use the previous day's position. The check we used before the macro also missed books with no position. A central check would end the hand-run macros and catch every missed book, flat ones included. It would save about 10.8 staff hours a month (about $920).\n\nPLEASE REPLY BY [date] WITH:\n- Risk: who owns the registry and approves additions and removals of post IDs\n- IT: whether the risk system can send this email, and the time it would run (we suggest [time], before cut-off)\n- Regional controllers and Risk: whether this report can replace your current sheet and list\n\nUntil the report is live, nothing changes. The last person to finish each night still runs the macro.\n\n---\n\nBACKGROUND (for anyone who needs the detail)\n\nHow it works today\n- Every post ID has to be officialized each night so the V@R and credit systems pick it up. Credit uses all officialized books. For any book that isn't officialized, it uses the previous day's position.\n- In October 2000 a missed book put the desk on Risk's daily list of non-officialized books. That list goes to the head of risk operations and is reviewed each week by the chief risk officer.\n- Since then, one person in each desk group runs an Excel macro by hand. They enter the date and the Portfolio and Book codes, and the macro lists the books that are officialized. The file went to five desk-group leads. Staff have changed their copies and passed them round. For example, one version requires a comment in every post ID so that only those are pulled in.\n- The regional controllers also get a sheet at the end of the night confirming that all books are officialized. Risk keeps its own daily list of missed books.\n- No system holds the full list of books each admin must officialize. When another group asks, the desk writes the list out by hand. This happened in July and twice in November 2000.\n- The check used before the macro compared positions only. A post ID with no net position that wasn't officialized went unnoticed. Credit needs those flat books officialized too.\n\nWhat changes\n- One registry of post IDs per book admin, kept by Risk and IT. It starts from the lists the desk has already written out.\n- One automatic nightly comparison of the registry against the books marked official, run before cut-off. Any misses, flat books included, are emailed to their owner.\n- The same report serves as the controllers' end-of-night sheet and as Risk's daily tracking list.\n- Desks stop running the macro and stop keeping their own copies of it. Book admins only act when they receive an exception email.\n- When another group asks which books are officialized, the answer comes from the registry, not from a list written by hand.\n\nWhat it saves\n- The macro is run by hand each working day: about 30 minutes × 21.67 days a month = 10.84 hours, or about $921.40 a month.\n- The savings also include not having to update the file copies, the end-of-night sheet and the lists written on request. These are not counted in the figure above.\n\nProposed steps\n1. The desk sends Risk and IT its current lists of the post IDs each book admin officializes every night.\n2. Risk names an owner for the registry and sets how post IDs are added and removed.\n3. IT builds the nightly comparison and email and runs it alongside the macro for [number] nights to confirm the two agree.\n4. Once the results match, desks stop running the macro, the controllers' sheet and Risk's list are replaced by the report, and requests for book lists are answered from the registry."
+    },
+    "opp-04": {
+      "kind": "email",
+      "audience": "Real Time Trading Support (from the Portland Real Time desk lead; cc the shift traders who market El Paso Electric)",
+      "title": "Request: macro to tie out the El Paso model against CARP each night and fill in the EPE reconciliation sheet",
+      "body": "To: Real Time Trading Support\nCc: Real Time shift traders (EPE)\nSubject: Request: nightly El Paso model vs. CARP tie-out macro\n\nThe ask: please add a comparison tab or macro to the El Paso model. Each night it should read the day's CARP report, compare it with the model, highlight any differences, and write the day's El Paso totals plus a \"no variance\" or \"variance\" entry into the monthly EPE reconciliation workbook.\n\nWhy: right now the shift trader checks the two by eye and types an entry every night, including nights with nothing to report. Entries get skipped on busy nights, so Houston has no proof the CARP was run, and any differences we miss only show up at the monthly checkout with El Paso and Settlements. Sorting out June 2001 at checkout took five days. Once the macro is in place, the trader only has to explain the items it flags. We estimate this saves about 4.5 hours of trader time a month, and it should also shorten month-end.\n\nCould you reply with a rough date for a first version we can try on one night's data?\n\n---\n\nWHAT THE MACRO NEEDS TO DO\n\n1. Read the day's CARP report and the matching day in the El Paso model.\n2. Compare them. The test is the one we already use: the CARP report must EXACTLY match the El Paso model. Highlight every line where they differ.\n3. Write a row for the day into the monthly EPE reconciliation workbook with:\n   - the date\n   - the day's El Paso totals\n   - \"No variance\" or \"Variance\"\n   - an empty explanation cell, which the trader fills in only when the row says \"Variance\"\n4. On a night with no variance, write the row anyway. Houston takes an empty sheet to mean nobody ran the CARP, so every night needs an entry.\n\nMonthly workbook: please set it up as a template with the file path already filled in, so whoever opens a new month doesn't have to re-point the macro. The El Paso models are kept in a folder for each month (for example M:/Electric/EPE/EPE 2002/Models/February02/), so the path will need to change month by month.\n\nBefore you build it, please let us know whether the CARP report can be read straight into the spreadsheet or has to be pasted in. Also tell us whether the current totals columns in the reconciliation workbook can stay as they are.\n\n---\n\nTHE NIGHTLY STEPS FOR THE SHIFT TRADER (once the macro is live)\n\n1. When the trading day is done, open the El Paso model and run the tie-out.\n2. If it reports no variance, you're finished. The entry is already in the monthly workbook.\n3. If it flags a variance, check the flagged lines, fix anything in the model that needs fixing (check the spreadsheet formulas), and run it again.\n4. For any variance that is still there, type an explanation in that day's row of the reconciliation workbook.\n\nReconciling the CARP is still a basic requirement of the position. The macro just makes it quicker and makes sure the entry gets written.\n\n---\n\nBACKGROUND (for anyone who needs it)\n\n- How it works today: after the trading day, the EPE shift trader compares the El Paso model and the CARP report by eye. They then log the El Paso totals in a separate monthly EPE reconciliation workbook and explain every variance. The sheet has to be filled in even when nothing differs.\n- What we've seen: a review of the first 8 days of July 2001 found no variances at all, but each of those nights still needed an entry typed by hand. On at least one busy night the reconciliation sheet was not done.\n- Cost of missed differences: the June 2001 checkout with El Paso and Settlements took about five days to sort out. After the July reconciliation was kept up, the checkout took about five minutes.\n- Estimated saving: about 9 minutes a night × 30.42 nights a month = 4.56 hours, or about $387.60 a month. This doesn't count time saved at the month-end checkout."
+    },
+    "opp-05": {
+      "kind": "email",
+      "audience": "IT (or whoever owns the WeaponX database and its daily import), from the person who sent book admins the weekly compaction procedure",
+      "title": "Request: compact every WeaponX file automatically each night",
+      "body": "Subject: Request: nightly automatic compaction of every WeaponX file\n\nHi,\n\n**What I need:** a job that compacts every WeaponX Access file each night. You can set it up either way:\n1. A scheduled overnight task for each file that runs Access with the /compact switch, e.g. `msaccess.exe \"<path to WeaponX file>\" /compact`, or\n2. A compact step added to the end of the daily WeaponX import.\n\n**Why:** At the moment, book admins in six managers' groups compact their own files by hand at least once a week, and one admin does it every day. This takes about 4.3 hours of admin time a month (about $368). It also means a file keeps growing whenever someone forgets. Once the job runs every night, admins can stop doing this by hand and every file stays small. You only have to set it up once.\n\n**What I need back from you:**\n- Which option you'll use and roughly when it can go live.\n- Anything you need from us. I'll collect the location of each group's WeaponX file from its book admin and send you the list.\n\nOnce you confirm the job is running, I'll tell the book admins they can stop the weekly manual compact.\n\nThanks,\n[Name / role]\n\n---\n\n**Background, for whoever sets this up**\n\n*Why the files grow:* WeaponX imports and deletes a lot of data every day, and Access doesn't free that space until the file is compacted. Compacting makes a big difference. The Texas file went from 520 MB to 30 MB, and a West file went from 400 MB to 12 MB.\n\n*What admins do by hand now (what the job replaces):*\n1. Open the WeaponX file while holding down Shift, so the main form doesn't open by itself.\n2. Choose Tools / Database Utilities / Compact Database from the menus.\n3. Wait for it to finish. On files of several hundred MB this can take a while.\n4. Open the file again and use it as normal.\n\n*Points to check when setting it up:*\n- Access usually needs exclusive use of a file to compact it, so run the job when nobody has the file open and after the daily import has finished.\n- Make sure the job compacts the file without the main form opening and stopping it. The manual steps avoid this by holding Shift.\n- Set up one job, or one import step, for each WeaponX file in all six managers' groups. Please check that every file on the list is covered.\n- For the first few nights, compare each file's size with its previous size to confirm the compact is working before the admins stop doing it by hand.\n\n*Until the job is live:* book admins should keep compacting by hand at least once a week, as they do now."
+    },
+    "opp-06": {
+      "kind": "email",
+      "audience": "To: EnronOnline booking-rules owner and the risk systems/reporting owner. Cc: Calgary settlements lead, Houston risk controllers and book administrators.",
+      "title": "Request: book Canadian-settled EnronOnline deals straight to FT-US/CAND-ERMS, plus a nightly exceptions report",
+      "body": "Hello,\n\nI'm asking for two changes so we can stop the monthly search of every Houston book for ECC deals before NYMEX invoicing:\n\n1. **EnronOnline booking rule (booking-rules owner):** We already have a rule that books TransCanada Energy and Dynegy Canada deals to settle with ECC. Please extend it so these deals go straight into FT-US/CAND-ERMS:\n   - every deal where ECC is the settling Enron entity, and\n   - every deal with a counterparty on a list of Canadian-settled parties that we will keep up to date. The list starts with Duke Energy Marketing LP and Aquila Canada Corp.\n2. **Nightly exceptions report (reporting owner):** Please build a standard report that runs every night. It should list any of these deals sitting in a book other than FT-US/CAND-ERMS, grouped by book owner, and go to each book owner and to Calgary settlements.\n\n**Why:** EnronOnline deals land in Houston books automatically, so the same mistake comes back every month. Invoicing for both ECC and ENA waits until every controller has searched and moved (\"flipped\") their deals. Deals the search misses are left off the Canadian invoice. In March, at least 10 deals were missing from the April 2001 NYMEX invoice.\n\n**What I need back:** a yes or no on each item, who will own it, and a rough date. Please also tell us who should keep the counterparty list up to date.\n\nThanks,\n[Houston risk controller]\n\n---\n\n**Background, for anyone who needs it**\n\n**How it works today**\n- Around each NYMEX close, Calgary settlements emails 5 to 8 Houston risk controllers. The email asks them to search all their books for deals that settle between ECC and an outside counterparty and flip them to FT-US/CAND-ERMS, usually by end of day.\n- The request is then forwarded to 5 to 7 book administrators, and each one checks their own books.\n- Some deals with Canadian parties are entered as ENA deals, and the search misses them completely. One email said these should have been \"TAGG as ECC deals.\"\n- One controller built a private calc to find these deals, and others have asked to copy it. Item 2 would turn that calc into a report everyone gets.\n\n**What changes**\n- Most Canadian-settled deals would be booked correctly from the start (item 1).\n- Each night, book owners would get a short list of any deals that still land in the wrong book, and they move those as they appear (item 2).\n- The monthly all-books request, the forwarding chain and the end-of-day rush at NYMEX close would all go away. ECC and ENA invoicing would no longer wait on the search.\n\n**What it saves**\n- This request went out 8 times between October 2000 and March 2001, which works out to about 1.17 times a month.\n- Each round takes about 180 minutes, so the total is about 3.51 hours a month, or roughly $298.35 a month.\n- That figure doesn't count delayed invoicing or deals missing from the Canadian invoice.\n\n**Open points to settle**\n- Who owns the Canadian-settled counterparty list, and how parties get added to it.\n- Whether the nightly report should also flag ENA-entered deals with counterparties on the list. These are the ones today's search misses."
+    },
+    "opp-07": {
+      "kind": "email",
+      "audience": "From one gas Risk desk head to the other gas Risk desk heads, the gas book admins and ERMS reports support, cc the Arthur Andersen gas testing lead",
+      "title": "Proposal: put month-end P&L top pages and curve shift reports in a read-only audit folder so Arthur Andersen can pull them themselves",
+      "body": "To: Gas Risk desk heads; gas book admins; ERMS reports support\nCc: Arthur Andersen gas testing lead\nSubject: Starting at the next month-end close: audit folder for P&L top pages and curve shift reports\n\nStarting at the next month-end close, I'd like every gas book's P&L top pages and curve shift reports saved to a read-only folder that Arthur Andersen can pull from directly. Today their monthly gas testing request goes through each of us and then several book admins, and the reports go back to them on paper. This takes about 3 hours a month, holds up their testing whenever one of us is away, and leads to \"2nd request\" emails.\n\nWhat I need from each of you, by reply:\n1. ERMS reports support: Can ERMS run a job at month-end close that saves the reports listed below as PDFs into one subfolder per month? If a scheduled job isn't possible, can you give us a macro that one book admin runs once? ERMS can already display most reports in Adobe Acrobat.\n2. Book admins: Reply with the gas books you are responsible for. I'll use your replies to build a one-page index of each book and the admin who owns it.\n3. Desk heads: Confirm that your books are on the list and tell me if any are missing.\n4. Arthur Andersen (cc): Would this folder meet your monthly testing needs? Also tell us whether you still have Enron network access. If you don't, we'll send you a copy of the folder each month.\n\nWhat goes in the folder each month, for every gas book:\n- The P&L top page for the last day of the month\n- The daily P&L top pages for the month\n- The Gas Daily curve shift reports for the month\n- A one-page index listing each book and its book admin\n\n---\nBackground, for anyone who wants it\n\nHow it works today: Each month the auditors email us a list of books. For each book they want the P&L top page for the last day of the month. If most of a book's P&L comes from curve shift, they also want the top pages and curve shift reports for the five largest days, so a single book can mean six top pages plus curve shift reports, and one request covered seven books. Each desk head forwards the request to between two and seven book admins. The admins pull the reports from ERMS and print or copy them. The desk head collects the copies and then calls the auditors, who come to pick them up.\n\nWhere it stalls:\n- If the desk head handling a request is travelling, the auditors' testing waits. Only that desk head routes the request.\n- The auditors couldn't close their third-quarter file until the missing West Firm, FT Northwest and Mgmt. West reports came in, and they had to send follow-up requests to get them.\n- The auditors have had to ask us who is responsible for each desk. The index will answer that.\n\nWhat changes:\n- The auditors pick their books and the five largest days from the folder themselves.\n- Desk heads and book admins stop forwarding, pulling, printing and copying reports for this request, and nobody has to chase missing books.\n- The folder is read-only, so the auditors see exactly what was saved at close.\n\nWhat stays the same: Calls with the auditors to discuss what drove the P&L continue as now. Requests for deal tickets and confirmations also stay as they are.\n\nExpected saving: About 3 hours a month (roughly $255 a month) of desk head and book admin time, based on the monthly requests from October 2000 through February 2001. It should also end the delays and repeat requests described above.\n\nProposed next step: Once ERMS support confirms how the reports can be saved, we'll run the folder at the next month-end close alongside the usual request. If the auditors confirm it has everything they need, we'll stop handling the email requests from the following month on.\n\nThanks,\n[Gas Risk desk head]"
+    },
+    "opp-08": {
+      "kind": "email",
+      "audience": "From the Consolidations lead in Financial Operations, to the OPM survey team lead, cc the Financial Operations manager who approves the allocation basis",
+      "title": "Proposal: take monthly RC allocation %s from the OPM survey and stop the separate spreadsheet round",
+      "body": "Subject: Taking RC allocation %s from the OPM survey: can we agree a cut-off and run one month side by side?\n\nHi [OPM survey team lead],\n\nHere's what I'm asking for. Every month, Consolidations stops sending its own allocation % spreadsheet. Instead, we work out each cost center's (RC's) split across the commercial teams from your monthly activity/hours survey. Your survey already asks managers which commercial teams their RC supports and what percentage goes to each, so right now Energy Operations managers answer the same question twice.\n\nTo start, I need three things from you:\n1. Last month's survey results for each RC: hours by activity, the commercial teams supported, and the percentage given to each team. We'll work out the allocation %s from these and compare them with the spreadsheet we collected for the same month.\n2. A single monthly cut-off that suits both your survey and our close, which we'll use from now on.\n3. The data-quality concerns you've raised about the survey figures, so we can decide together whether they're good enough to base Finance's charges on.\n\n[Financial Operations manager]: once we've done the side-by-side month, I'll need your sign-off to use the OPM figures as the basis for the allocation charges.\n\nWhat changes for RC owners: each month they would get their percentages for information only. They reply only if something is wrong, for example a new RC or a team that has been split out. The OPM survey itself carries on exactly as it is now.\n\nThanks,\n[Consolidations lead]\n\n---\n\nBackground, for anyone who needs it\n\nHow the allocation round works today\n- Consolidations emails last month's allocation % spreadsheet to about 16 Energy Operations directors and asks for updates within a few days (\"Please review the attached January Allocation %'s and update accordingly for February\").\n- Directors send it on to their managers. One director asked six managers: \"provide an accurate allocation of your RC for 1/00. What has your group spent their time on in 1/00???\" The director then merges the answers and sends them back: \"Attached is the allocation for 1/00 for Texas Operations.\"\n- Assistants sometimes forward it again to more leads (\"Please read below and comply as directed below.\" went to seven more people in November 2000).\n\nWhy it duplicates the OPM survey\n- The survey \"drives your costs from your activities to the commercial teams,\" which is the same purpose as the allocation %s.\n- It already asks managers to confirm \"that the percentage allocated to each commercial team has not changed from last month,\" and it keeps each cost center's commercial teams and FTEs from one month to the next.\n- On 29 Feb 2000 both requests went out on the same day, and both were due Friday 3 March.\n\nWhat stops\n- The separate spreadsheet request, the directors passing it down and combining the answers, and the assistants forwarding it. Managers answer one monthly question about where their group's time went instead of two.\n\nWhat has to be settled first\n- Deadlines: the two requests are due on different dates today. For example, the October 2000 allocations were due on the 2nd. We need one cut-off.\n- Data quality: Finance has to accept the OPM figures as the basis for its charges. That's why I'm proposing one month side by side before we stop the spreadsheet.\n\nExpected saving\n- About 3 hours a month (roughly $255 a month) of directors', managers' and assistants' time on the spreadsheet round. None of the time spent on the OPM survey is counted as saved, since the survey carries on."
+    },
+    "opp-09": {
+      "kind": "email",
+      "audience": "Risk system team lead (cc: gas risk lead who sets the roll-off percentages, and the gas desk leads)",
+      "title": "Request: one scheduled batch for the month-end basis roll-off calcs (100% for TDS and 50% for V@R)",
+      "body": "To: Risk system team lead\nCc: Gas risk lead; gas desk leads\n\nSubject: Request: one scheduled batch for the month-end basis roll-off calcs (100% for TDS and 50% for V@R)\n\nThe ask: Please add a roll-off batch job that runs both month-end basis calcs for each gas book in one pass:\n1. A 100% prompt-basis calc under a TDS post ID, loaded to TDS automatically.\n2. A 50%/50% roll-off calc under the official V@R post ID.\nThe gas risk lead would enter the roll-off and roll-in percentages once a month as parameters.\n\nWhy: On every roll-off night, every gas book administrator now calcs and officializes their book twice. They do it by switching official status by hand, in a fixed order. The batch would end that repeat work. It would also remove the risk of V@R being fed from the wrong post ID.\n\nCould you reply with whether this is feasible and roughly when, so we can run it before the next roll-off? I can walk through the current steps whenever suits you.\n\n---\n\nBackground, for whoever builds or reviews this\n\nWhat book administrators do today, on every roll-off night until indexes are set:\n1. Calc the 100% basis calc.\n2. Officialize it.\n3. Load positions into TDS.\n4. Unofficialize.\n5. Calc the 50% basis calc.\n6. Officialize it.\n\nThe 100% calc feeds the TDS download and reports. The 50% calc is the V@R benchmark. For V@R we roll 50% of basis off on one night and 50% the next. We keep running two calcs until indexes are set, so this happens on at least two nights a month and often more. The steps are complex enough that the desk leads have planned classroom training on the roll-off, the curve shift tied to it, where that shows up on the P&L, and which days we roll in index at which percentages.\n\nWhat changes for book administrators once the batch exists:\n- They review the two results the batch produced for their book.\n- They run reports off the 100% calc.\n- They no longer recalc, officialize, unofficialize or re-officialize by hand.\n\nWhat the job needs, in short:\n- Inputs: the list of gas books, plus the roll-off and roll-in percentages for the month, entered by the gas risk lead.\n- For each book: a 100% prompt-basis calc saved under a TDS post ID and loaded to TDS, then a roll-off calc at the set percentages saved under the official V@R post ID.\n- Schedule: every roll-off night until indexes are set.\n\nEstimated saving: about 3 hours a month of book administrator time, roughly $255 a month. That is a low estimate. It counts one occurrence a month, while the double calc actually repeats on every roll-off night across all the gas books.\n\nThanks,\n[Gas risk lead]"
+    },
+    "opp-10": {
+      "kind": "email",
+      "audience": "From the head of Risk Analysis and Reporting to the IT team that supports ERMS, RisktRAC and TAGG, with a copy to the risk leads of the commodity desks",
+      "title": "Request: nightly report of ERMS curves missing from RisktRAC (to replace our weekly hand check)",
+      "body": "Subject: Request: nightly report of ERMS curves missing from RisktRAC\n\nTo: IT support for ERMS / RisktRAC / TAGG\nCc: Risk leads, commodity desks\n\nThe ask: Please set up a nightly job that compares the curves in ERMS with the curves in RisktRAC and the TAGG mapping. It should email any ERMS curve that has no match to Risk Analysis and Reporting and to the risk lead of the desk that owns the curve.\n\nWhy: If a curve isn't set up in RisktRAC, its positions are left out of VaR, so VaR is wrong until someone notices. Right now we only notice through a weekly check done by hand, so a gap can last up to a week. A nightly report would show it the next morning.\n\nPlease reply with:\n1. Whether this can be done, and who in IT will own it\n2. A rough date for a first test run\n3. Anything you need from us, such as how to tell which desk owns a curve\n\nDesk risk leads: you don't need to do anything yet. Once the report is running, you'll get an email only when one of your desk's curves is missing from RisktRAC or TAGG. When that happens, please send the curve set-up request form for it.\n\n---\n\nBackground, for whoever needs it\n\nHow it works today\n- When a trader needs a new price curve, the desk's risk management team builds it in ERMS.\n- They fill in a curve set-up request form so Risk Analysis and Reporting can set the curve up again in RisktRAC, the system that calculates VaR.\n- Separately, they email IT to add the curve to TAGG.\n- In the past few months, not everyone has followed this procedure, and forms haven't always been sent. That's why Risk Analysis and Reporting started checking by hand every week that every new ERMS curve is also in RisktRAC. The first check found many ERMS curves that weren't in RisktRAC, and each one has to be worked out with the desk.\n\nWhat the nightly job should do\n- Compare all ERMS curves with the curves in RisktRAC, and with the TAGG mapping.\n- List every ERMS curve that has no match in RisktRAC, TAGG or both, and say which system is missing it.\n- Send the list each morning to Risk Analysis and Reporting and to the risk lead of the desk that owns each curve.\n- If nothing is missing, the email can be skipped or can simply say \"no exceptions\", whichever is easier.\n\nWhat changes for us\n- Risk Analysis and Reporting stops doing the weekly comparison by hand. We'll work from the short exception list instead.\n- Missing curves will show up the next morning rather than up to a week later, so VaR isn't left wrong in the meantime.\n- The weekly check takes about 35 minutes each time, which is roughly 2.5 hours a month. This doesn't count the time spent on forms or TAGG requests.\n\nA possible later step (not part of this request)\nWhen a new curve is created in ERMS, it could automatically create the RisktRAC set-up request, filled in from the ERMS curve definition, so nobody has to fill in the form by hand. We'd like to talk about this once the nightly report is running."
+    }
+  },
   "messages": {
     "farmer-d/logistics/1018.": {
       "date": "2000-04-05T16:04:00",

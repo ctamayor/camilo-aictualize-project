@@ -24,9 +24,14 @@ All of the arithmetic is here, none of it in a model. For each process:
   but not ranked; nor is one that saves no time.
 - Hours a month = minutes x rate / 60, and dollars a month = hours x $85.
 
+What it has cost so far is dollars a month x the calendar months from the
+month it first shows in the mail to the last month its mailboxes hold. The
+mail shows when the work was first written about, not when it began, so this
+falls short rather than over.
+
 Opportunities are ranked by dollars a month. The top ``DRAFT_TOP`` get a
 drafted artifact. Every figure is stored rounded as it is shown, and the
-running total adds up the stored figures, so the dashboard's numbers agree.
+totals add up the stored figures, so the dashboard's numbers agree.
 """
 
 import re
@@ -62,6 +67,19 @@ def counted_rate(process: dict, messages: dict, boxes: dict, ongoing: bool) -> d
     per_month = (process["times"] - (1 if span else 0)) / months if months else 0
     return {"times": process["times"], "messages": process["occurrences"], "months": months,
             "mailboxes": mailboxes, "span": span, "per_month": round(per_month, 2)}
+
+
+def months_between(first: str, last: str) -> int:
+    """The calendar months from one "YYYY-MM" to another, both counted."""
+    return (int(last[:4]) - int(first[:4])) * 12 + int(last[5:7]) - int(first[5:7]) + 1
+
+
+def so_far(process: dict, counted: dict, boxes: dict, dollars: float) -> dict | None:
+    if not process.get("first") or not counted["mailboxes"]:
+        return None
+    start, end = process["first"][:7], max(boxes[b]["months"][-1] for b in counted["mailboxes"])
+    months = months_between(start, end)
+    return {"from": start, "to": end, "months": months, "dollars": round(dollars * months, 2)}
 
 
 def quote_id(ref: str, process: dict) -> str:
@@ -138,8 +156,9 @@ def score_process(process: dict, estimate: dict | None, messages: dict, boxes: d
     rate |= {"counted": counted,
              "stated": stated | {"quote": stated_quote | {"id": stated["quote"]}} if stated_quote else None}
     hours = round(estimate["minutes"] * rate["per_month"] / 60, 2)
-    return opportunity | {"rate": rate, "hours_per_month": hours,
-                          "dollars_per_month": round(hours * HOURLY_RATE, 2)}
+    dollars = round(hours * HOURLY_RATE, 2)
+    return opportunity | {"rate": rate, "hours_per_month": hours, "dollars_per_month": dollars,
+                          "so_far": so_far(process, counted, boxes, dollars)}
 
 
 def score(corpus_dir: Path, out_dir: Path) -> str:
@@ -157,10 +176,8 @@ def score(corpus_dir: Path, out_dir: Path) -> str:
 
     scored = [score_process(p, estimates.get(p["id"]), messages, boxes) for p in processes]
     ranked = sorted((o for o in scored if "unused" not in o), key=lambda o: (-o["dollars_per_month"], o["process"]))
-    running = 0
     for rank, o in enumerate(ranked, 1):
-        running = round(running + o["dollars_per_month"], 2)
-        o |= {"rank": rank, "running_total": running, "draft": rank <= DRAFT_TOP and o["dollars_per_month"] > 0}
+        o |= {"rank": rank, "draft": rank <= DRAFT_TOP and o["dollars_per_month"] > 0}
     unused = [o for o in scored if "unused" in o]
     opportunities = [{"id": f"opp-{i:02d}"} | o for i, o in enumerate(ranked + unused, 1)]
 
@@ -171,7 +188,8 @@ def score(corpus_dir: Path, out_dir: Path) -> str:
         "happened_once": sum(o["unused"].startswith("it happened once") for o in unused),
         "ranked_on_one_time": sum(o["rate"]["counted"]["times"] == 1 for o in ranked),
         "hours_per_month": round(sum(o["hours_per_month"] for o in ranked), 2),
-        "dollars_per_month": running,
+        "dollars_per_month": round(sum(o["dollars_per_month"] for o in ranked), 2),
+        "dollars_so_far": round(sum(o["so_far"]["dollars"] for o in ranked if o["so_far"]), 2),
         "drafted": sum(bool(o["draft"]) for o in ranked),
         "drafted_dollars_per_month": round(sum(o["dollars_per_month"] for o in ranked if o["draft"]), 2),
         "stated_rates_used": sum(o["rate"]["source"] == "stated" for o in ranked),

@@ -33,6 +33,9 @@ class LocateTest(unittest.TestCase):
         self.assertIsNone(serve.locate("", BODY))
 
 
+DRAFT = {"kind": "Email", "audience": "the schedulers", "title": "Nominate on Monday", "body": "Please **nominate**."}
+
+
 class ServerTest(unittest.TestCase):
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()
@@ -49,8 +52,8 @@ class ServerTest(unittest.TestCase):
             {"id": "proc-001", "name": "Weekly nominations", "patterns": ["chunk-001.p01"],
              "evidence": {"occurrences": [occurrence], "observations": []}}]})
         put(self.out / "opportunities.json", {"totals": {"dollars_per_month": 10}, "mailboxes": {},
-                                              "opportunities": [{"id": "opp-01", "process": "proc-001"}]})
-        put(self.out / "drafts" / "opp-01.md", "# Draft")
+                                              "opportunities": [{"id": "opp-01", "process": "proc-001", "draft": True}]})
+        put(self.out / "drafts" / "opp-01.json", DRAFT)
 
         self.server = ThreadingHTTPServer((serve.HOST, 0), serve.make_handler(self.out, self.corpus))
         threading.Thread(target=self.server.serve_forever, daemon=True).start()
@@ -81,7 +84,7 @@ class ServerTest(unittest.TestCase):
         self.assertIn("<!doctype html>", self.get("/"))
         r = self.get("/api/report")
         self.assertTrue(r["scored"])
-        self.assertEqual(r["drafts"], ["opp-01"])
+        self.assertEqual(r["drafts"], {"opp-01": DRAFT})
         self.assertEqual(list(r["messages"]), [self.cited])
         self.assertEqual(r["messages"][self.cited]["subject"], "Nominations")
         self.assertEqual(r["patterns"], {"chunk-001.p01": "Monday nominations"})
@@ -99,8 +102,6 @@ class ServerTest(unittest.TestCase):
     def test_only_messages_of_the_run_are_served(self):
         self.assertEqual(self.status("/api/message", id="box/inbox/9."), 404)
         self.assertEqual(self.status("/api/message", id="../out/opportunities.json"), 404)
-        self.assertEqual(self.status("/api/draft", id="../opportunities"), 404)
-        self.assertEqual(self.get("/api/draft", id="opp-01"), "# Draft")
 
     def test_progress_says_how_far_the_run_has_got_and_changes_version_with_the_results(self):
         self.assertEqual([s["step"] for s in self.get("/api/progress")["steps"] if s["done"]], ["prepare"])
@@ -111,7 +112,7 @@ class ServerTest(unittest.TestCase):
         self.assertFalse(live["active"])
         self.assertEqual([s["step"] for s in live["steps"] if s["done"]], ["prepare", "readers", "explore", "drafters"])
         before = live["version"]
-        put(self.out / "drafts" / "opp-02.md", "# Another")
+        put(self.out / "drafts" / "opp-02.json", DRAFT)
         self.assertNotEqual(self.get("/api/progress")["version"], before)
 
     def test_a_report_before_scoring_says_so(self):

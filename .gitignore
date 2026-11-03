@@ -1,3 +1,5 @@
 __pycache__/
 out/workspaces/
 out/*.lock
+previous-runs/
+DEVLOG.md

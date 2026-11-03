@@ -1,47 +1,52 @@
-# Request: book Canadian-settled EnronOnline deals straight to FT-US/CAND-ERMS, plus a nightly exceptions report
+# Proposal: post the monthly analyst charge automatically from the Org Database and notify only the charged managers
 
-*Email, drafted for opportunity 6: Monthly hunt for Enron Canada (ECC) deals in Houston books before NYMEX invoicing, $298 a month.*
+*Email, drafted for opportunity 6: Monthly analyst (A and A Reclass) charges to RCs, $298 a month.*
 
-**For:** To: EnronOnline booking-rules owner and the risk systems/reporting owner. Cc: Calgary settlements lead, Houston risk controllers and book administrators.
-
----
-
-Hello,
-
-I'm asking for two changes so we can stop the monthly search of every Houston book for ECC deals before NYMEX invoicing:
-
-1. **EnronOnline booking rule (booking-rules owner):** We already have a rule that books TransCanada Energy and Dynegy Canada deals to settle with ECC. Please extend it so these deals go straight into FT-US/CAND-ERMS:
-   - every deal where ECC is the settling Enron entity, and
-   - every deal with a counterparty on a list of Canadian-settled parties that we will keep up to date. The list starts with Duke Energy Marketing LP and Aquila Canada Corp.
-2. **Nightly exceptions report (reporting owner):** Please build a standard report that runs every night. It should list any of these deals sitting in a book other than FT-US/CAND-ERMS, grouped by book owner, and go to each book owner and to Calgary settlements.
-
-**Why:** EnronOnline deals land in Houston books automatically, so the same mistake comes back every month. Invoicing for both ECC and ENA waits until every controller has searched and moved ("flipped") their deals. Deals the search misses are left off the Canadian invoice. In March, at least 10 deals were missing from the April 2001 NYMEX invoice.
-
-**What I need back:** a yes or no on each item, who will own it, and a rough date. Please also tell us who should keep the counterparty list up to date.
-
-Thanks,
-[Houston risk controller]
+**For:** Manager of Financial Operations (from the Financial Operations coordinator who sends the monthly A and A Reclass notices)
 
 ---
 
-**Background, for anyone who needs it**
+Subject: Change to the monthly A and A Reclass analyst charge – your approval needed
 
-**How it works today**
-- Around each NYMEX close, Calgary settlements emails 5 to 8 Houston risk controllers. The email asks them to search all their books for deals that settle between ECC and an outside counterparty and flip them to FT-US/CAND-ERMS, usually by end of day.
-- The request is then forwarded to 5 to 7 book administrators, and each one checks their own books.
-- Some deals with Canadian parties are entered as ENA deals, and the search misses them completely. One email said these should have been "TAGG as ECC deals."
-- One controller built a private calc to find these deals, and others have asked to copy it. Item 2 would turn that calc into a report everyone gets.
+**What I'm asking:** Can we stop keying the monthly analyst charge by hand? Instead, I'd set it up as a recurring allocation (or scheduled upload) that takes the analyst count for each RC from the Org Database. Before it posts each month, it would send each manager whose RC is being charged the names of the analysts and the amount. Please reply with yes or no, and tell me who should build the allocation.
 
-**What changes**
-- Most Canadian-settled deals would be booked correctly from the start (item 1).
-- Each night, book owners would get a short list of any deals that still land in the wrong book, and they move those as they appear (item 2).
-- The monthly all-books request, the forwarding chain and the end-of-day rush at NYMEX close would all go away. ECC and ENA invoicing would no longer wait on the search.
+**Why:** We spend about 3.5 hours a month on this, which is roughly $297.50 a month. Right now we only catch errors after the entry has posted, so we end up doing correcting entries against a deadline. Sending the names before posting would catch those errors first.
 
-**What it saves**
-- This request went out 8 times between October 2000 and March 2001, which works out to about 1.17 times a month.
-- Each round takes about 180 minutes, so the total is about 3.51 hours a month, or roughly $298.35 a month.
-- That figure doesn't count delayed invoicing or deals missing from the Canadian invoice.
+**What would change**
+1. Financial Operations sets up the analyst charge ($6,400 per analyst per RC) as a recurring allocation that reads the analyst assignments for each RC from the Org Database. We already use this source today.
+2. A few days before it posts, each manager whose RC is being charged gets a short email listing the analysts' names and the amount. A draft is below.
+3. If a manager sees a name that has left, they reply. We fix the Org Database before the allocation posts, so we don't need a correcting entry.
+4. Managers who have no analysts get nothing and don't have to do anything. We stop asking all of the roughly 63 Energy Operations managers to look through their RC report every month.
+5. Financial Operations reviews the allocation before it posts. We no longer build the headcount file or key the journal entry.
 
-**Open points to settle**
-- Who owns the Canadian-settled counterparty list, and how parties get added to it.
-- Whether the nightly report should also flag ENA-entered deals with counterparties on the list. These are the ones today's search misses.
+---
+
+**Background (for anyone who needs it)**
+
+How it works today:
+- Corporate invoices Enron North America for all analyst program costs. Each month Financial Operations pulls a headcount file from the Org Database and makes a manual journal entry that charges $6,400 per analyst to each RC.
+- We ask every manager on the distribution list to find the "A and A Reclass" lines on their RC report each month and check the count. In February's notice we wrote: "Please continue to check your RC report each month going forward."
+- If the Org Database is out of date, for example because an analyst has left, the RC is charged wrongly. The manager then calls or emails us, and we process correcting journal entries before a deadline. In March's notice we wrote: "I have received a few calls and E-mails stating that some reclasses need to be made because you no longer have an analyst in your group." That round of corrections had to be done by Friday, March 3rd.
+
+Why this should work:
+- The charge already comes straight from the Org Database ("The information used by Financial Operations to charge your RC was obtained from the Org Database"). That means the hand-built file and the manual entry add work without adding any judgment, and an automatic allocation can do the same job.
+- Sending names before posting moves the error check to before the charge is made. That is where it saves rework.
+
+Savings estimate: about 210 minutes once a month, or 3.5 hours (≈ $297.50) a month. This covers building the file, keying the entry, and processing corrections.
+
+---
+
+**Draft pre-posting notice to charged managers**
+
+Subject: Analyst charge to RC [RC number] for [month] – please check by [date]
+
+Your RC will be charged for the analysts listed below this month, based on the Org Database:
+
+- [Analyst name]
+- [Analyst name]
+
+Total charge: [count] × $6,400 = $[amount]
+
+If anyone on this list is no longer in your group, or an analyst is missing, please reply to this email by [date] so we can update the Org Database before the charge posts. If the list is correct, you don't need to do anything.
+
+Financial Operations

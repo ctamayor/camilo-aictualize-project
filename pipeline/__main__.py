@@ -16,6 +16,9 @@ from .state import (CORPUS_WIDE_OUTPUTS, RUN_OUTPUTS, corpus_digest, format_acti
 
 
 def prepare(corpus_dir: Path, out_dir: Path) -> str:
+    # Taken before the messages are read, so mail that arrives while this step
+    # runs leaves the record out of date and the next check prepares again.
+    digest = corpus_digest(corpus_dir)
     messages, report = ingest(corpus_dir)
     previous = read_json(out_dir / "chunks.json")
     previous = previous["chunks"] if isinstance(previous, dict) else []
@@ -49,7 +52,7 @@ def prepare(corpus_dir: Path, out_dir: Path) -> str:
     write_json(out_dir / "ingest_report.json", report)
     # Written last: it is what marks this step as finished.
     write_json(out_dir / "chunks.json", {
-        "corpus_sha256": corpus_digest(corpus_dir),
+        "corpus_sha256": digest,
         "chunks": [{k: v for k, v in c.items() if k != "text"} | {"file": f"chunks/{c['id']}.txt"}
                    for c in chunks],
     })

@@ -1,8 +1,8 @@
 {
   "leads": [
     {
-      "work": "Credit Report forwarding: the credit group (Veronica Espinoza, Russell Diamond, Jason Williams, Darren Vanek) sends a 'Credit Report' to about 35 people every day. It lists TAGG deals to rebook to the correct legal entity or to hold as 'Pending' for a credit officer. The West desk lead (Darron Giron) forwards each one by hand to a team member (Carole Frank, Pat Ryder or Ryan O'Rourke), who then fixes the deals. When he is away a week of these reports builds up and he forwards them all on his return.",
-      "why": "There is one forward almost every business day from late February to May 2001, with the same mailing list each time. The reports show the same kinds of fixes again and again, such as Louis Dreyfus Holdings rebooked to Louis Dreyfus Corp, AEP Ltd rebooked to AEP Inc, and ENA rebooked to ECC 'under the ISDA'. This suggests the counterparty or entity mapping could be checked automatically when a deal is booked, and the reports could go straight to the right person.",
+      "work": "Darron Giron re-forwards the daily Credit Report (the list of TAGG deals to rebook or pending with credit) by hand to one of his staff (Carole Frank, Ryan O'Rourke or Patrick Ryder), almost every business day. While he was on vacation the reports backed up and he forwarded them in a batch afterwards.",
+      "why": "Credit (Veronica Espinoza, Russell Diamond, Jason Williams, Darren Vanek) sends the report to a list of about 35 people. Each desk lead then forwards it to whoever handles it on his desk. This batch has about 50 of these forwards and they add nothing. The distribution list could include those staff directly, or the rebook actions could go to them automatically.",
       "files": [
         "giron-d/sent/189.",
         "giron-d/sent/182.",
@@ -57,26 +57,41 @@
       ]
     },
     {
-      "work": "Moving Canadian-counterparty deals by hand: deals with Aquila Canada, Engage Energy Canada and TransCanada keep getting booked in Houston books between ENA and the counterparty. They have to be moved ('flipped') to the FT-US/CAND-ERMS (P&) book so that ECC settles them. Stacey Vallejo in Calgary finds them one at a time and asks the desk leads to search every book. Other one-off rebooks (W&T Offshore, RMT to ENA) are requested the same way.",
-      "why": "There are many requests over two months. They say things like 'keep an eye out for deals with this company and flip them right away', 'I have a feeling that there are lots of deals like this in TAGG', and 'the EOL group is still working on a solution'. A bad booking forced February liquidations to be re-run and left deals missing from the April NYMEX invoice. The root cause is EOL/TAGG entity mapping, and the clean-up is manual.",
+      "work": "Deals in TAGG are rebooked by hand to the correct legal entity or counterparty, as credit directs: parent and affiliate name fixes, ENA to ECC under the ISDA, and RiskMantra to ENA.",
+      "why": "Each day's credit report lists many rebooks with the same pattern, for example 'Rebook to Aquila Risk Management', 'Rebook to BP Amoco Corporation' and 'Rebook ENA trades to ECC'. Credit staff also send one-off rebook requests, and Giron forwards them on. The same counterparties come up again and again, which suggests the counterparty or entity at deal capture (EOL or TAGG) could be checked against rules or mapped automatically.",
+      "files": [
+        "giron-d/sent/154.",
+        "giron-d/sent/153.",
+        "giron-d/sent/151.",
+        "giron-d/sent/149.",
+        "giron-d/sent/75.",
+        "giron-d/sent/61.",
+        "giron-d/sent/14.",
+        "giron-d/sent/127.",
+        "giron-d/sent/124.",
+        "giron-d/sent/117.",
+        "giron-d/sent/116.",
+        "giron-d/sent/173.",
+        "giron-d/sent/9."
+      ]
+    },
+    {
+      "work": "Canadian deals, especially Aquila Canada Corp. and Engage Energy Canada, have to be found and 'flipped' by hand from Houston books to the FT-US/CAND-ERMS (P&) book. If this is missed, liquidations have to be re-run and invoices are missed.",
+      "why": "Stacey Vallejo sent these requests again and again over a month to all the desk leads. She writes that 'the EOL group is still working on a solution'. She asks the leads to search all their books for these deals, and one deal that was not flipped forced the February liquidations to be re-run. A booking rule tied to the counterparty would remove this work.",
       "files": [
         "giron-d/sent/192.",
         "giron-d/sent/168.",
         "giron-d/sent/164.",
-        "giron-d/sent/127.",
         "giron-d/sent/126.",
-        "giron-d/sent/124.",
         "giron-d/sent/114.",
         "giron-d/sent/110.",
         "giron-d/sent/108.",
-        "giron-d/sent/117.",
-        "giron-d/sent/116.",
-        "giron-d/sent/173."
+        "giron-d/sent/127."
       ]
     },
     {
-      "work": "Meters with flow but no deal: when gas flows at a meter with no nomination, or its deal ticket has expired, schedulers and settlements email the trader (Daren Farmer) one meter at a time. They ask him to extend or create a deal ticket so that volumes can be allocated in Unify/MOPS and invoices drafted. Monthly transport-usage tickets also have to be re-created by hand each month.",
-      "why": "Many separate emails show the same pattern, for example 'Meter 1351 has flow everyday for Feb', 'Can this deal be extended', 'Unable to draft volume in Unify due to the expired deal ticket', and 'This will help clear up some allocation exceptions'. A rule that flags or rolls over evergreen or recurring flows automatically could remove most of this.",
+      "work": "Meters have recorded gas flow but no nomination, or the deal ticket has expired. Logistics and settlements staff email the trader (Daren Farmer) one meter at a time to extend the deal, create a new ticket or set a volume, so that allocation can run or a sale can be drafted in Unify.",
+      "why": "This batch has a dozen or more of these requests, phrased the same way each time, for example 'meter has flow and no nom' or 'deal expired, should it be extended?'. They create allocation exceptions and hold up invoicing. A rule to roll evergreen or gathering-point deals forward, or an exception report, could replace the emails.",
       "files": [
         "farmer-d/logistics/2101.",
         "farmer-d/logistics/2102.",
@@ -98,10 +113,9 @@
       ]
     },
     {
-      "work": "Price disputes between invoices and Sitara: settlements analysts (Katherine Herrera, Rebecca Griffin, Cynthia Hakemack, Genaro Mendoza, Scott Dozier, Charlene Richmond) find that a counterparty's invoice price differs from the price in Sitara. They email the trader or desk lead to confirm and change the price, often going through several people while an invoice deadline approaches. Some deals need a manual price update every month; deal 27253 is updated each month to whatever the customer invoices.",
-      "why": "The pattern recurs across both mailboxes and many counterparties (TXU, Conoco, BP, Crosstex, Southern Union, Guadalupe, Cook, EnerVest). Typical lines are 'Customer invoiced ENA a price of...', 'Can you please update the deal in Sitara', and 'I need to send out my invoice this afternoon'. Index-based or formula prices (for example 'GDP DA -WACOG +.02') are being keyed in by hand as fixed rates.",
+      "work": "When a counterparty's invoice or payment shows a price that differs from the Sitara deal price, settlements emails the trader or risk to confirm the price and change the deal, one deal at a time.",
+      "why": "The pattern repeats across TXU, Conoco, BP, Crosstex, Southern Union, Guadalupe and CP&L. In one case, monthly price updates on deal 27253 are requested every month. The requests go back and forth among several people, and one invoice was delayed because the trader was out. Index-based or WACOG pricing could be set up in the system, or the reconciliation could be automated.",
       "files": [
-        "farmer-d/logistics/2103.",
         "farmer-d/logistics/181.",
         "farmer-d/logistics/179.",
         "farmer-d/logistics/178.",
@@ -114,18 +128,18 @@
         "farmer-d/logistics/151.",
         "farmer-d/logistics/2124.",
         "farmer-d/logistics/209.",
+        "farmer-d/logistics/2103.",
         "giron-d/sent/141.",
         "giron-d/sent/83.",
         "giron-d/sent/81.",
         "giron-d/sent/12.",
         "giron-d/sent/57.",
-        "giron-d/sent/82.",
-        "giron-d/sent/9."
+        "giron-d/sent/82."
       ]
     },
     {
-      "work": "Monthly forward curve validation: Jennifer Nguyen reviews 10 curves each month and asks the desk leads to explain the large shifts. The leads in turn ask traders and reply, often with 'the market traded higher', which leads to more follow-up questions.",
-      "why": "The same request arrives for January, February and March, each with a list of curves and reminders. The answers barely change, and Darron notes that 'this curve will probably show up every month'. A standard commentary or automatic market-data attribution could replace this round trip.",
+      "work": "Each month, curve validation questions arrive from Jennifer Nguyen. Desk leads have to explain why forward curves moved (SOCAL, PGE Topock, CIG WIC and others), often by asking the traders.",
+      "why": "This is a monthly cycle seen for January, February and March. The answers repeat ('market traded higher'), and there is back-and-forth when the answers are judged too thin. The same curve, Topock, is said to 'show up every month'. The commentary could be templated, or the validation thresholds reconsidered.",
       "files": [
         "giron-d/sent/170.",
         "giron-d/sent/133.",
@@ -136,51 +150,65 @@
       ]
     },
     {
-      "work": "Liquidation and flash support each month: Jim Little asks the desk leads for supporting detail behind the monthly liquidation values for each region. The detail is saved by hand to an ERMS/FRED Liquidations folder, and earlier months are chased again when they are missing.",
-      "why": "The requests say 'I WILL ALSO NEED SUPPORT FOR THE DECEMBER AND JANUARY VALUES', followed by more requests for December Denver support and for March index deals. A bad booking also forced February liquidations to be re-run. The support is gathered the same way every month.",
+      "work": "Jim Little asks the desk leads by hand for liquidation flash support by region and month. The supporting files are saved to the ERMS/FRED Liquidations folder.",
+      "why": "These requests recur for each month (November, December, January) and include volume files. He has to remind leads to save support for all months. This could be a standard report saved on a schedule.",
       "files": [
         "giron-d/sent/187.",
         "giron-d/sent/163.",
-        "giron-d/sent/105.",
-        "giron-d/sent/168."
+        "giron-d/sent/105."
       ]
     },
     {
-      "work": "Audit and data requests handled by email: Arthur Andersen asks for monthly gas-testing items (deal ticket, confirmation, forwards detail) and sends a quarterly testing checklist for the earnings release. Ad hoc requests also come in for MTM values by counterparty and for TAGG annuity values. Desk leads forward each request on to their staff.",
-      "why": "The requests are monthly or quarterly, the checklist matrix covers every request so far, and requests get lost or delayed ('I was on vacation... didn't see it'). The forwarding chain runs from the desk lead to an analyst. Other requests in the same vein: 'Two more counterparties need MTM values', and 'For audit purposes, can you give us a brief description' of TAGG annuities.",
+      "work": "Requests from Arthur Andersen auditors for deal tickets, confirmations and forwards detail ('monthly gas testing', quarterly checklist) are forwarded down the chain and followed up late.",
+      "why": "The testing is described as 'monthly'. The quarterly checklist goes only to desk leads, who have to forward it on, and one request was missed for two weeks during a vacation. A shared request tracker or a standard extract could help.",
       "files": [
         "giron-d/sent/120.",
         "giron-d/sent/118.",
         "giron-d/sent/91.",
         "giron-d/sent/90.",
         "giron-d/sent/89.",
-        "giron-d/sent/137.",
-        "giron-d/sent/136.",
         "giron-d/sent/6."
       ]
     },
     {
-      "work": "OA (operational accounting) and flash-to-actual variances: people investigate variances between flash/CPR figures and actual Unify/GL figures, for example on the PGEV park-and-lend imbalance and physical storage inventory. Gas Accounting has started a project to collect storage book codes and inventory schedules from every desk, and Risk has collected suggestions for improving OA.",
-      "why": "Requests include 'it is causing an OA variance for us', 'Improvement in this process will help minimize flash-to-actual variances', and 'Has any progress been made on this?'. Darron admits 'I will see a variance that is rather small and just take it without looking into the underlying cause'. The variances come back every month.",
+      "work": "OA (operational accounting) and flash-to-actual variances are investigated by hand, for example a PGEV park-and-lend imbalance that was never flashed in CPR, and a Gas Accounting project to collect the physical storage inventory schedules.",
+      "why": "Rita Wynne says the imbalance is booked 'every month' and causes an OA variance. Giron admits that he takes small variances 'without looking into the underlying cause'. Gossett collected suggested improvements for OA, and Jim Pond chased storage information to reduce flash-to-actual variances. The variances recur and are worked by hand.",
       "files": [
-        "farmer-d/logistics/2116.",
         "farmer-d/logistics/163.",
         "farmer-d/logistics/161.",
         "farmer-d/logistics/157.",
         "giron-d/sent/58.",
-        "giron-d/sent/34."
+        "giron-d/sent/34.",
+        "farmer-d/logistics/2116."
       ]
     },
     {
-      "work": "Monthly manual accounting for the GLO/EGM gas-for-crude swap: every month someone has to zero out the HPL sale price to GLO, update the demand-charge tickets between HPL and ENA, and book the ENA sale to EGM at the value of the crude, all before flash.",
-      "why": "Bryce Baxter writes that 'This will require the following steps be taken monthly' and 'This needs to be done monthly prior to flash'. A follow-up in April shows the bookings were still causing confusion. It is a clear candidate for an automated rule.",
+      "work": "For the GLO/EGM gas/crude swap, a set of manual deal ticket steps has to be done every month before flash: zero out the price, enter demand charges between HPL and ENA, and enter the ENA sale to EGM.",
+      "why": "Bryce Baxter lays out four tickets that 'will require the following steps be taken monthly'. Settlement later asks for clarification of these entries. This is a fixed monthly calculation that could be automated.",
       "files": [
         "farmer-d/logistics/175."
       ]
     },
     {
-      "work": "Weekend on-call schedulers handle pipeline events (over- and under-deliveries, cuts, confirmation changes) and then write up manual 'On Call Notes' for the team. There is also a separate weekly systems-availability on-call email.",
-      "why": "The notes follow the same format every weekend and record phone and pager handling plus manual confirmation changes in POPS. They are recurring operational overhead.",
+      "work": "Pipeline imbalance and volume reconciliation are done by hand: Big Cowboy/GEPL overproduction, under-nomination at King Ranch, the Oasis transport imbalance, and an ad hoc list of gas owed compiled from the RTU variance and imbalance reports.",
+      "why": "Mary Poorman writes that the issue is 'ongoing every month' at 6–10 thousand per day for six months. She asks for meter statements to be faxed and builds spreadsheets by hand. She compiled the list of points owed gas 'urgently' from several reports.",
+      "files": [
+        "farmer-d/logistics/191.",
+        "farmer-d/logistics/160.",
+        "farmer-d/logistics/159.",
+        "farmer-d/logistics/170.",
+        "farmer-d/logistics/166.",
+        "farmer-d/logistics/2126.",
+        "farmer-d/logistics/2127.",
+        "farmer-d/logistics/2128.",
+        "farmer-d/logistics/190.",
+        "farmer-d/logistics/189.",
+        "farmer-d/logistics/183."
+      ]
+    },
+    {
+      "work": "Weekend and after-hours on-call notes are written up and emailed to the whole logistics team. The on-call schedule and the weekend systems availability notice are also distributed by email.",
+      "why": "These are recurring weekly emails. The notes record confirm changes and calls with gas control that might be better kept in a shared log.",
       "files": [
         "farmer-d/logistics/2110.",
         "farmer-d/logistics/210.",
@@ -190,8 +218,8 @@
       ]
     },
     {
-      "work": "Contract administration letters and reports: Cheryl Dudley produces a twice-monthly Assignment, Termination and Expiration Report by hand, and once forgot one ('accidentally failed to do the report for March'). Termination and shut-in notification letters need several people to work out the contract terms, such as whether a contract has evergreen language and what the letter should say.",
-      "why": "The report is periodic and distributed by hand. Contract terms are stored inconsistently: the Global Contracts system said there was no evergreen clause, but the signed confirmation had one. This leads to email back-and-forth before each letter.",
+      "work": "Cheryl Dudley prepares the monthly HPL Assignment, Termination and Expiration report by hand and maintains its distribution list by hand. There is also confusion over contract termination and evergreen terms, and over drafting shut-in letters.",
+      "why": "The report is done monthly and was once skipped by accident. The termination letter request produced a three-way exchange because the contract system recorded no evergreen while the confirmation had evergreen language, so the contract data was not reliable.",
       "files": [
         "farmer-d/logistics/2114.",
         "farmer-d/logistics/211.",
@@ -203,37 +231,34 @@
       ]
     },
     {
-      "work": "Imbalance and balancing work: schedulers compile lists of points where gas is owed from the RTU variance and imbalance reports, track Oasis transport imbalances, and chase meter statements to find volumes missing from nominations (the Big Cowboy/GEPL overflow 'every month for at least the past six months'). King Ranch is consistently under-nominated.",
-      "why": "'We have an ongoing issue every month', 'we have consistently been under nominated', and an 'Urgent' request to compile a list by hand from spreadsheets. All of this points to recurring manual reconciliation.",
+      "work": "Coordination of the HPL sale to AEP: a transition-issues memo revised repeatedly, deal download files, transport contract assignment, and procedures being drafted for requests (counterparties, books, security, curve mapping).",
+      "why": "Bob Hall sends repeated drafts and asks everyone for changes. The procedures named would become an ongoing formal protocol of manual requests for AEP. This is a time cost now and may create recurring work later.",
       "files": [
-        "farmer-d/logistics/2126.",
-        "farmer-d/logistics/2127.",
-        "farmer-d/logistics/2128.",
-        "farmer-d/logistics/170.",
-        "farmer-d/logistics/160.",
-        "farmer-d/logistics/159.",
-        "farmer-d/logistics/166.",
-        "farmer-d/logistics/191.",
-        "farmer-d/logistics/190.",
-        "farmer-d/logistics/189.",
-        "farmer-d/logistics/183."
-      ]
-    },
-    {
-      "work": "HPL sale to AEP: transition memos keep being redistributed, deal downloads are prepared for AEP, transport contracts are sorted between ENA and HPL, and new formal procedures are being drafted (counterparty maintenance, new books, employee security, curve mapping).",
-      "why": "The issues memo is updated and resent over and over, and new recurring request processes are being defined. This is worth checking for duplicated effort.",
-      "files": [
-        "farmer-d/logistics/2104.",
         "farmer-d/logistics/212.",
         "farmer-d/logistics/206.",
         "farmer-d/logistics/187.",
+        "farmer-d/logistics/2104.",
         "farmer-d/logistics/156.",
         "farmer-d/logistics/155."
       ]
     },
     {
-      "work": "System access, user setup and book administration done by email: requests to add users to RiskTrac or GD_NEW uploads and the Canadian script, to add a Book Admin on the website, to move books under a trading group, to supply trader website access lists, and to count monitors. Darron asks that new hires have their applications and passwords ready when they start. Renaming the Denver books would mean changing every deal by hand.",
-      "why": "There are many small one-off access requests. Darron's feedback says new-hire setup is a recurring pain, and the book rename 'will require a great deal of time and effort to change every deal'.",
+      "work": "Ad hoc data requests to desk leads are collected by email: penalty charges by counterparty, MTM values by region for given dates, trader website access lists, analyst/associate needs, and brown bag training topics.",
+      "why": "Each request goes to all desk leads, who forward it to their staff and consolidate the replies, often with reminders sent. The penalty data was pulled from many settlement analysts 'before you leave today'.",
+      "files": [
+        "giron-d/sent/179.",
+        "giron-d/sent/178.",
+        "giron-d/sent/176.",
+        "giron-d/sent/137.",
+        "giron-d/sent/136.",
+        "giron-d/sent/63.",
+        "giron-d/sent/65.",
+        "giron-d/sent/60."
+      ]
+    },
+    {
+      "work": "System access, user list and book setup are administered by email: RiskTrac upload users, Logic On/Off script users, Book Admin web access, trading group assignments for books, renaming the Denver books, new-hire applications and passwords, and listing ODBC DSNs and machines.",
+      "why": "There are several separate requests to different admins. Giron says it would help if new people had 'all of their applications and passwords ready to go' when they start. Renaming the Denver books would require changing 'every deal' by hand.",
       "files": [
         "giron-d/sent/157.",
         "giron-d/sent/156.",
@@ -241,16 +266,16 @@
         "giron-d/sent/18.",
         "giron-d/sent/17.",
         "giron-d/sent/15.",
-        "giron-d/sent/63.",
-        "giron-d/sent/92.",
-        "giron-d/sent/131.",
         "giron-d/sent/102.",
-        "giron-d/sent/130."
+        "giron-d/sent/92.",
+        "giron-d/sent/130.",
+        "giron-d/sent/131.",
+        "giron-d/sent/74."
       ]
     },
     {
-      "work": "Origination grants and credit reserves are recorded by hand: credit sends reserve memos, traders or originators ask for origination to be granted, and mistakes have to be corrected (a $100K double grant).",
-      "why": "Requests and corrections are routed by email to the desk lead ('Sherry Dawson said you would probably be the one to grant this origination'). One grant was made twice by mistake.",
+      "work": "Origination grants and credit reserves are handled by email between originators, credit and risk, and errors have to be corrected.",
+      "why": "A $100K amount was granted twice by mistake and had to be reversed. Originators chase whoever is responsible for granting origination. Each reserve is taken by email memo.",
       "files": [
         "giron-d/sent/147.",
         "giron-d/sent/84.",
@@ -259,64 +284,62 @@
       ]
     },
     {
-      "work": "Penalty charges collected by survey: settlements emails about 25 analysts asking which counterparties invoiced or netted penalties for a production month, with a same-day deadline. A desk summary is then prepared for the head trader.",
-      "why": "Each penalty amount, counterparty and deal is collected by hand across the whole group under a deadline ('I need this information before you leave today'). This could be a standing report.",
-      "files": [
-        "giron-d/sent/179.",
-        "giron-d/sent/178.",
-        "giron-d/sent/176."
-      ]
-    },
-    {
-      "work": "Daily approval by reply email: the prelim Enovate DPR (daily position report) is sent each day 'For your approval' and approved with an 'OK' reply.",
-      "why": "It is a recurring daily approval sent by email, and could be approved in the system or by exception only.",
+      "work": "Giron approves the preliminary Enovate DPR (daily position report) each day by email reply.",
+      "why": "There are 'For your approval' emails for consecutive days with replies of 'OK'. This is a routine daily sign-off that could be built into a workflow.",
       "files": [
         "giron-d/sent/161.",
         "giron-d/sent/155."
       ]
     },
     {
-      "work": "Nomination and deal-number exchange with customers and pipelines: Equistar's monthly nominations arrive late, and the scheduler needs deal numbers from the trader to confirm them. First-of-month noms (Swift, Duke Three Rivers), flexible Katy gas lists and maintenance outages are passed along by email. Oasis is moving to online nominations.",
-      "why": "The same information is copied by hand at each first-of-month cycle. Oasis's online nom/confirm system is an automation opportunity mentioned in the mail itself.",
+      "work": "Logistics schedulers ask traders by email for deal numbers or ticket changes to confirm nominations: Equistar noms, Duke meter breakdowns, Kinder Morgan net-out notes for settlements, Exxon bid spreadsheets, and the Oasis online nomination signup.",
+      "why": "These exchanges recur at the start of each month (first-of-month noms). Faxes and email are used where online nomination systems exist.",
       "files": [
         "farmer-d/logistics/152.",
-        "farmer-d/logistics/144.",
         "farmer-d/logistics/153.",
-        "farmer-d/logistics/158.",
-        "farmer-d/logistics/201.",
-        "farmer-d/logistics/200.",
         "farmer-d/logistics/150.",
         "farmer-d/logistics/149.",
-        "farmer-d/logistics/202.",
         "farmer-d/logistics/2130.",
+        "farmer-d/logistics/2112.",
+        "farmer-d/logistics/202.",
+        "farmer-d/logistics/201.",
+        "farmer-d/logistics/200.",
+        "farmer-d/logistics/158.",
+        "farmer-d/logistics/144.",
+        "farmer-d/logistics/146.",
         "farmer-d/logistics/2108."
       ]
     },
     {
-      "work": "Matching SFAS 133 hedges by hand: offsetting third-party trades have to be identified and documented for internal Transwestern/RMTC hedges, about 97 trades found by hand at year end, with the work now repeating for new trades.",
-      "why": "The email says 'More Deals', and the effectiveness testing cannot be done without the third-party positions. A $27MM earnings impact is at stake.",
-      "files": [
-        "giron-d/sent/71."
-      ]
-    },
-    {
-      "work": "Recurring HR and admin collection by email: lists of potential reviewers for mid-year reviews, PBA nominations, analyst and associate needs assessments, and topic lists for training sessions are each gathered by emailing every lead.",
-      "why": "These are periodic people-process requests gathered by hand with deadlines and reminders ('I've received only one response so far').",
+      "work": "HR and training administration is done by email: performance review reviewer nominations, PBA nominations, and course registration approvals that return errors.",
+      "why": "These are recurring review-cycle tasks. The course approval link failed. Each is a small amount of time that comes back every period.",
       "files": [
         "williams-w3/sent_items/518.",
         "giron-d/sent/5.",
-        "giron-d/sent/65.",
-        "giron-d/sent/60."
+        "giron-d/sent/135."
       ]
     },
     {
-      "work": "Failing internal tools: the Global Standards exception-reporting Access database and the training-approval website both give errors, and the PMA files and the physical template revision are handed around by hand.",
-      "why": "Darron writes 'I get an error when I launch the program in Access' and 'I get an error when I try to approve this'. The exception database goes unused by the gas group.",
+      "work": "A large share of the employee mailbox is non-business email: chain jokes, personal forwards and lunch planning.",
+      "why": "Dozens of personal forwards were sent to many internal and external recipients. This is a minor time and mail-load cost and a possible policy issue.",
       "files": [
-        "giron-d/sent/74.",
-        "giron-d/sent/135.",
-        "giron-d/sent/185.",
-        "giron-d/sent/193."
+        "giron-d/sent/194.",
+        "giron-d/sent/181.",
+        "giron-d/sent/180.",
+        "giron-d/sent/177.",
+        "giron-d/sent/148.",
+        "giron-d/sent/145.",
+        "giron-d/sent/99.",
+        "giron-d/sent/95.",
+        "giron-d/sent/69.",
+        "giron-d/sent/68.",
+        "giron-d/sent/45.",
+        "giron-d/sent/37.",
+        "giron-d/sent/38.",
+        "giron-d/sent/36.",
+        "giron-d/sent/35.",
+        "giron-d/sent/30.",
+        "giron-d/sent/29."
       ]
     }
   ]

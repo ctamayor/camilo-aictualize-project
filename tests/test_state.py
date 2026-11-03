@@ -7,6 +7,7 @@ from unittest import mock
 from pipeline import run as runner
 from pipeline.__main__ import STEPS, prepare, reset, status
 from pipeline.agents import Task
+from pipeline.ingest import ingest
 from pipeline.state import (draft_paths, explore_done, format_action, leads_output, next_action, progress,
                             read_json, run_active, run_lock)
 
@@ -111,6 +112,18 @@ class NextActionTest(CorpusCase):
         prepare(self.corpus, self.out)
         self.assertFalse(leads_output(self.out, {"id": "chunk-002"}).exists())
         self.assertEqual([c["id"] for c in self.next()["chunks"]], ["chunk-004"])
+
+    def test_mail_that_arrives_while_prepare_runs_is_prepared_next(self):
+        def ingest_then_new_mail(corpus_dir):
+            result = ingest(corpus_dir)
+            write_message(self.corpus, "3.eml", "New thread", "hello")
+            return result
+        with mock.patch("pipeline.__main__.ingest", ingest_then_new_mail):
+            prepare(self.corpus, self.out)
+        self.assertEqual(self.next(), {"action": "RUN", "step": "prepare"})
+        prepare(self.corpus, self.out)
+        self.assertIn("box/inbox/3.", self.chunks()[-1]["message_ids"])
+        self.assertEqual(self.next()["action"], "READERS")
 
 
 OPPORTUNITIES = [{"id": "opp-01", "draft": True, "rank": 1, "name": "Daily schedule", "dollars_per_month": 10},

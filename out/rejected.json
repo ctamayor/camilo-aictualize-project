@@ -1,583 +1,576 @@
 [
   {
-    "name": "Calpine daily gas nomination by emailed Word document",
-    "change": "Have Calpine send its daily nomination through a structured feed or web form that loads into scheduling, and confirm only when volumes change.",
-    "reason": "The mail only shows Calpine emailing a .doc to the scheduler with Enron staff copied. The re-keying, the daily phone call and the 'no change' confirmation that make up most of the 10 minutes are not shown; the confirmation rests on one undated message that does not match the rest of the archive.",
-    "research": "Find mail from the HPL schedulers (Lloyd, Lannou, Farmer) showing what they do with the Calpine .doc, such as typing it into a nomination system, replying to confirm, or fixing errors. Also check whether Calpine would agree to a new format and how many nominations a month actually arrive.",
-    "time": "2026-11-02T19:45:13-05:00"
-  },
-  {
-    "name": "Calpine daily gas nomination intake",
-    "change": "Replace Calpine's emailed Word-document nomination, phone call and confirm reply with a structured feed that loads into scheduling and acknowledges itself automatically.",
-    "reason": "The savings rest on steps the mail does not show: phone calls appear in only 5 of 22 Calpine nominations and Calpine says it calls only for changes, no HPL scheduler confirmation reply exists (the one cited is an undated internal note by Darron Giron, who is not the scheduler), and weekend nominations come in one Friday email, so 30 per month at 14 minutes each is overstated.",
-    "research": "Find HPL scheduler replies or confirmations to Calpine (from Lloyd, Lannou or Kemp) and any mail showing how long keying the .doc takes or how many other shippers send Word nominations; without that, the only supported saving is a few minutes of re-keying per weekday from a single counterparty.",
-    "time": "2026-11-02T19:45:14-05:00"
+    "name": "Monthly OPM Hours and Activity Driver surveys",
+    "change": "Pre-fill the Hours survey with last month's hours (no reply means confirm) and replace driver surveys with existing standard reports.",
+    "reason": "The mail shows both parts of the change were already in place: the Hours survey already carried a 'Last Month' column, managers with unchanged hours could already just send an email, and every driver survey since April already invited groups to send a standard report instead, so the claimed 20 minutes saved per manager is not supported.",
+    "research": "Look for mail showing what still takes managers' time after these options existed and after the September 2000 move to Access (for example, how many groups actually switched to sending reports, or complaints about the Access survey), and build the proposal on that remaining gap.",
+    "time": "2026-11-02T23:58:20-05:00"
   },
   {
     "name": "Monthly OPM hours and activity driver surveys",
-    "change": "Pre-fill managers' monthly OPM hours and activity driver surveys from ATEs/SAP and system reports so managers only correct exceptions.",
-    "reason": "The organization had already built most of this: from late 2000 the Access hours survey carries forward commercial teams and FTEs and shows prior-month hours, and the driver survey already let groups send a standard report instead. The proposal mistakes a one-off January 2001 SAP glitch for the normal monthly process, and hours by activity cannot be taken from ATEs/SAP.",
-    "research": "Find what managers still do by hand each month in the Access tool after the January 2001 SAP changeover (for example, splitting hours by activity and team, as in 84.eml), how long it takes, and whether any driver surveys were still sent after August 2000; then size only that remaining work.",
-    "time": "2026-11-02T19:45:25-05:00"
+    "change": "Pre-fill the OPM hours survey from last month, make the commercial-team split required, and take driver counts from standard reports instead of the spreadsheet.",
+    "reason": "Two of the three changes already exist in the mail (FTE and commercial-team rollover, a prior-month hours report, and the standing offer to accept standard reports instead of the driver survey), and the 1,630 minutes a month rests on a padded headcount (the 50 on 2080.eml include cc'd directors and the OPM staff), a skipped-month frequency, and guessed per-person and chase figures.",
+    "research": "Find mail showing how many managers actually fill in the hours survey each month, how long it takes them, how many RCs took up the report option and why the others did not, and how often the OPM team has to chase missing commercial-team splits; a proposal limited to the required-split check, or to pre-filling the hours themselves, might hold up on that evidence.",
+    "time": "2026-11-02T23:58:36-05:00"
   },
   {
-    "name": "Monthly OPM hours and activity driver surveys",
-    "change": "Pull activity driver counts from Sitara/Unify reports and make the hours survey exception-only, carrying last month's hours forward",
-    "reason": "The proposal costs the spreadsheet-and-email process from mid-2000, which the OPM team had already replaced: from September 2000 the hours survey is an Access database that rolls prior-month data forward and shows prior-month hours, driver automation was already under way, and no activity driver survey appears after August 2000, so most of the claimed 778 minutes a month is no longer spent.",
-    "research": "Find mail from after September 2000 showing managers still hand-filling activity driver counts, or still re-entering unchanged hours in the Access survey, and size only that remaining work against the database process as it then ran.",
-    "time": "2026-11-02T19:45:27-05:00"
+    "name": "Monthly OPM hours and activity-driver surveys",
+    "change": "Pre-fill each manager's hours survey from ATEs headcount and last month's split, and replace driver surveys with standard system reports, so managers only confirm changes.",
+    "reason": "The mail shows most of the change was already in place (the Access hours survey rolled over FTEs and commercial teams and printed prior-month hours by activity, unchanged months needed only an email, and every driver survey already offered a standard report instead), so the minutes saved are not supported; two critics have already rejected the same work for this reason.",
+    "research": "Find mail showing what still costs managers time in the Access survey after rollover existed, how many RCs actually switched to sending reports and why others did not, and how often OPM chases missing surveys; a proposal aimed only at that remaining gap (for example an automatic missing-survey list from ATEs) might hold up.",
+    "time": "2026-11-02T23:59:06-05:00"
   },
   {
     "name": "Monthly OPM activity-driver and hours surveys",
-    "change": "Pull driver counts from system reports and pre-fill hours from the prior month so managers only confirm.",
-    "reason": "Both parts of the change are already in place: the hours survey already lets managers reply by email when hours have not changed, and since February every activity survey has offered to drop the survey for groups that send a standard report. The 3 Aug 2000 mail also suspends the hours survey and announces a shorter survey from September, so the savings counted (120 min for hours, 390 min for drivers) are not real.",
-    "research": "Look in mail after September 2000 for the redesigned survey. Check whether managers still type in driver counts that a system already holds and that the OPM team could pull itself rather than waiting for managers to send reports, and look for any mail saying how long filling in the survey takes.",
-    "time": "2026-11-02T19:45:36-05:00"
+    "change": "Pull activity-driver counts from system reports and pre-fill the hours survey with last month's figures so managers only confirm changes",
+    "reason": "The mail shows the OPM team had already built most of this: from September 2000 the hours survey ran in an Access tool that carries over commercial teams and headcount and shows last month's hours, and the activity-driver survey does not appear after August 2000, so the claimed 1,064 minutes a month are mostly not there to save.",
+    "research": "Look for activity-driver survey requests after August 2000 and for time spent on the Access hours survey after it carried data over (from March 2001 on); only the gap between showing last month's hours in a report and pre-filling them could still be saved, and that needs its own evidence.",
+    "time": "2026-11-02T23:59:10-05:00"
   },
   {
-    "name": "Monthly GLO/EGM gas-for-crude swap bookings",
-    "change": "Book the HPL-to-GLO sale at zero price for the whole term and set the HPL/ENA demand tickets as index formulas, so each month needs only one crude value entry.",
-    "reason": "The swap covered only January to May 2001 and its bookings were done as a one-time cleanup months later, not as monthly work, so there is no ongoing work for the change to save.",
+    "name": "Monthly OPM hours and activity driver surveys",
+    "change": "Pre-fill the OPM hours survey with last month's hours and Org Database/ATEs positions, take driver quantities from standard reports, and treat non-responders as carry-forward.",
+    "reason": "Most of the change already exists in the mail (since the September 2000 Access survey, FTEs and commercial teams roll over and a prior-month hours report is built in; unchanged-hours managers could already just email; every driver survey already offered to accept a standard report), so the 'today' describes a retired spreadsheet process and the 915 minutes a month saved is unsupported; this is also the third proposal for the same work, already rejected twice in decisions.md.",
+    "research": "Find mail from after the Access rollout showing what still costs managers time, such as how long the survey takes, how many RCs actually switched to sending reports and why others did not, or how often OPM must chase missing surveys, and limit the proposal to that remaining gap.",
+    "time": "2026-11-02T23:59:16-05:00"
+  },
+  {
+    "name": "Strangers Gas write-off approval memos",
+    "change": "Write off Strangers Gas items under a size threshold automatically and have Daren Farmer sign one monthly batch report instead of a paper memo per meter.",
+    "reason": "The memos are a one-time cleanup of old 1999-2000 flows sent in a burst from Dec 2000 to Jan 2001, not steady monthly work. Only about 5 of the roughly 20 memos are small enough for the threshold, so the claim that most are small and the rate of 8 small items a month are both wrong.",
+    "research": "Look for Strangers Gas write-off memos about current-month flow after January 2001, or in other mailboxes, that show small items keep coming at a steady rate.",
+    "time": "2026-11-02T23:59:17-05:00"
+  },
+  {
+    "name": "Monthly OPM hours and activity-driver surveys",
+    "change": "Pre-fill the hours survey from last month and ATEs headcount, take driver counts from existing reports, and automate reminders.",
+    "reason": "The proposal describes the June 2000 process as today's, but the mail shows it was replaced: from October 2000 the hours survey ran in an Access tool that rolls over commercial teams and FTE headcount and reports last month's hours (1415, 1436, 2015, 2080), every driver survey already offered a standard report instead (856 to 1244), and no driver survey appears after the July 2000 one (1319), so the 1,655 minutes a month are mostly not there to save; four critics have already rejected this same work for this reason.",
+    "research": "Find mail from 2001 on showing what still costs managers time in the Access hours survey once rollover worked (complaints, help calls, late returns), how many groups actually switched to sending reports, and any driver-survey requests after August 2000; only a proposal aimed at that remaining gap, such as pre-filling the hours themselves or an automatic list of missing surveys from ATEs, could hold up.",
+    "time": "2026-11-02T23:59:27-05:00"
+  },
+  {
+    "name": "Calpine daily gas nomination handling",
+    "change": "Replace Calpine's emailed Word nomination, phone call and confirmation email with a structured nomination that rolls forward and needs a reply only when it changes.",
+    "reason": "The mail shows only that Calpine emails a Word nomination on weekdays; the phone call on every day, the HPL confirmation loop, the re-keying and the daily-including-weekends rate are not supported, and the estimate counts Calpine's own time, so the 13 minutes a day is not realistic.",
+    "research": "Look in the schedulers' mailboxes (Robert Lloyd, Aimee Lannou, Juliann Kemp) for what HPL does with the Calpine nomination: replies or confirmations sent to Calpine, keying errors or corrections, or revised nominations that caused rework. Evidence like that could support a smaller weekday-only saving for the Enron scheduler.",
+    "time": "2026-11-02T23:59:30-05:00"
+  },
+  {
+    "name": "Calpine daily gas nomination to HPL scheduler",
+    "change": "Replace Calpine's daily phone call plus Word-document nomination with a standing nomination in HPL's system that rolls forward and is changed only by exception through electronic entry.",
+    "reason": "Most of the minutes claimed come from steps the mail does not show happening daily: a phone call (mentioned in 4 of about 23 nominations), a scheduler confirmation reply (one undated internal Giron-to-Poorman note, not a reply to Calpine), and frequent no-change days that would make a standing nomination worthwhile (no evidence; monthly totals and REVISED resends show the volumes change).",
+    "research": "Find scheduler replies to Ricky Archer's nominations, and nomination contents or comparisons that show how often Calpine's daily volumes actually repeat; also whether HPL had an electronic nomination entry Calpine could use.",
+    "time": "2026-11-02T23:59:38-05:00"
+  },
+  {
+    "name": "Gas flowed at a meter after the deal expired, or with no deal",
+    "change": "Roll expired deals forward automatically, write off small volumes under a standing approval, and send the remaining items to the trader as one electronic batch list.",
+    "reason": "The 20 items a month mostly come from Clem Cernosek's memos, a one-time burst of 1999-2000 flows sent from December 2000 to January 2001, and that same work has already been rejected; also, the memos are not small (2002.eml has 11,980 MMBtu, 1985.eml 2,164), rolling a deal forward 'at the same terms' goes against the trader's word that such deals must be renegotiated (1458.eml), and 804.eml does not show a six-month stall on an expired deal.",
+    "research": "Look for ongoing expired-deal or no-deal requests after January 2001 (Lannou, Young, Olsen, McCoy, Poorman and others) to show a steady monthly rate, and for traders extending deals unchanged, to show how many could safely roll forward; a proposal limited to batching the existing feedback-monitor list for one approval might hold up on that evidence.",
+    "time": "2026-11-02T23:59:48-05:00"
+  },
+  {
+    "name": "Calpine daily gas nomination to HPL scheduler",
+    "change": "Replace Calpine's daily phone call plus emailed Word nomination with one structured electronic nomination and a standing 'same as prior day' rule, so HPL acts only on changes.",
+    "reason": "The 10 minutes a day saved rest on steps the mail does not show: a daily phone call (mentioned in only 4 of about 23 nominations, and 169.eml says 'will call if there are any changes'), no-change days (nothing shows volumes repeating, and REVISED resends, monthly totals of 79-85 and force-majeure claims show they change), and HPL re-keying the Word document (never shown); the 30-a-month rate also ignores that weekend nominations come in one Friday message (1330.eml), and two critics have already rejected this same work for these reasons.",
+    "research": "Look in the schedulers' own mailboxes (Robert Lloyd, Juliann Kemp) for what HPL does with each Calpine nomination, such as replies to Ricky Archer, keying errors or corrections, or rework caused by revisions, and for nomination contents showing how often volumes repeat; that could support a smaller weekday-only saving for the scheduler's keying step.",
+    "time": "2026-11-02T23:59:55-05:00"
+  },
+  {
+    "name": "Monthly flip of ECC third-party deals to the FT-US/CAND-ERMS book",
+    "change": "Book any deal where ECC is the Enron party with a third counterparty to FT-US/CAND-ERMS automatically in EOL and TAGG, plus a nightly exception report.",
+    "reason": "The proposed rule keys on ECC being the Enron party, but the mail shows the deals that stall invoicing are booked as ENA with counterparties that hold ECC master swaps (Aquila Canada, Duke), and that EOL already auto-books by counterparty for TransCanada Energy and Dynegy Canada (giron-d/sent/292, 192, 108), so the change as written misses the main cause and ignores the fix that already exists, while the proposal cites four messages from Oct-Dec 2000 out of about twenty that run to March 2001.",
+    "research": "Rebuild the proposal on the full thread (giron-d/sent 108, 114, 164, 168, 192, 195, 246, 250, 270, 292, 406, 419, 459, 460, 535, 539 and the four cited): make the change extend the existing EOL counterparty programs to a maintained list of ECC master-swap counterparties, with TAGG flagging ENA deals with those names; check whether the Duke program was ever set up; and count the requests per month and the people on each to set the frequency and minutes.",
+    "time": "2026-11-03T00:00:12-05:00"
+  },
+  {
+    "name": "Back-dated MTM valuations for counterparties' auditors",
+    "change": "Give Confirmations a read-only report of MTM value by counterparty and past date, across all regions and without Delta/Vol, so it can answer auditors without asking the risk desks.",
+    "reason": "The same work is already saved as 'Answering counterparty auditors' MTM valuation requests' (decisions.md item 2), which cites the same messages 137, 214, 240 and 241 and makes essentially the same change.",
     "research": null,
-    "time": "2026-11-02T19:45:45-05:00"
+    "time": "2026-11-03T00:00:26-05:00"
   },
   {
-    "name": "Self-service counterparty MTM valuations for audit requests",
-    "change": "Finish EnTelligence (or an equivalent read-only report) with back-dated curves so Confirmations values counterparty portfolios without routing requests through the Risk desks.",
-    "reason": "The same work and the same change are already saved as 'Back-dated MTM valuations for counterparty audit requests', which cites the same messages (giron-d/sent/136, 137, 214, 240, 241).",
+    "name": "Calpine daily gas nomination to HPL scheduler",
+    "change": "Replace Calpine's phone call plus emailed Word nomination with a structured feed into HPL scheduling that rolls forward and is sent only when volumes change.",
+    "reason": "The 16 minutes a day rest on steps the mail does not show: a phone call every day (only 5 of about 23 nominations mention one), HPL retyping the Word file (no message shows it), and frequent no-change days (none shown; REVISED resends and monthly nominations show volumes change), and the 30-a-month rate ignores that weekend days come in one Friday email (1330.eml); three critics have already rejected this same work for these reasons.",
+    "research": "Find mail from the schedulers (Robert Lloyd, Susan Hadix, Aimee Lannou, Juliann Kemp) showing what HPL does with each Calpine nomination, such as retyping it into the system, keying errors, corrections or rework after revisions, and nomination contents showing how often volumes repeat; that could support a smaller saving counted once per working day.",
+    "time": "2026-11-03T00:00:34-05:00"
+  },
+  {
+    "name": "Hourly generator checkout calls to BPA (Grays Harbor and Frontier)",
+    "change": "Meter the two generators automatically so their hourly output goes to BPA without a trader phoning it in.",
+    "reason": "The same work and the same change are already saved as 'Hourly generator check-out calls to BPA' ($3,102.50 a month), citing the same messages 357.eml and 506.eml.",
     "research": null,
-    "time": "2026-11-02T19:45:49-05:00"
+    "time": "2026-11-03T00:00:44-05:00"
   },
   {
-    "name": "Backdated MTM valuations for counterparty audit requests",
-    "change": "Give Confirmations a read-only counterparty MTM report with back-dated curves so they answer auditor requests themselves instead of emailing every desk.",
-    "reason": "This work is already saved as 'Back-dated MTM valuations for counterparty audit requests', which cites the same five messages (giron-d/sent/136, 137, 214, 240, 241) and proposes the same report.",
+    "name": "Counterparty MTM valuations for auditors",
+    "change": "Give Confirmations a read-only valuation view with back-dated curves so it can produce counterparties' audit MTM valuations itself, without going to the risk desks.",
+    "reason": "The same work is already saved as 'Answering counterparty auditors' MTM valuation requests' (decisions.md item 2), which cites the same messages 214, 240 and 241 and makes essentially the same change.",
     "research": null,
-    "time": "2026-11-02T19:45:55-05:00"
+    "time": "2026-11-03T00:00:46-05:00"
   },
   {
-    "name": "HPL Strangers Gas write-off approvals",
-    "change": "Replace one printed, signed memo per meter with a monthly exception list, electronic approval and automatic write-off of small volumes",
-    "reason": "The 24 memos of 12/11/00-1/9/01 were a one-time cleanup of 1999-era volumes, not a monthly rate: only two such memos appear in the months before (Aug and Nov 2000) and none in the dense mail from Feb to Oct 2001, so the claimed 20 (or 10) items a month is unsupported.",
-    "research": "Find Strangers Gas write-off memos or approvals dated after January 2001, or in other mailboxes (Clem Cernosek, Bob Cotten, Aimee Lannou), that would show the work kept recurring at a steady rate.",
-    "time": "2026-11-02T19:46:24-05:00"
+    "name": "Strangers Gas write-off approval memos",
+    "change": "Write off tiny Strangers Gas volumes under a standing approval and send the rest to Daren Farmer as one weekly electronic list instead of a paper memo per meter.",
+    "reason": "The memos are a one-time cleanup of 1999-2000 flows sent mostly in a burst from 11 Dec 2000 to 12 Jan 2001 and none appear after that, though the mailbox runs to late 2001; so the work is an episode that has ended, not 10 items a month, and the same work has already been rejected in decisions.md for this reason.",
+    "research": "Look for Strangers Gas write-off memos about current-month flow after January 2001, in this or other mailboxes (Cernosek, Lannou, Boas), that show small items keep coming at a steady rate.",
+    "time": "2026-11-03T00:00:53-05:00"
   },
   {
-    "name": "Credit Report wrong-entity TAGG rebooks and desk forwarding",
-    "change": "Add a credit-kept trade-as mapping in TAGG for recurring wrong entities, and split the daily Credit Report by desk so desk leads stop forwarding it.",
-    "reason": "The 15 minutes a day of saved rebooks assumes Carole Frank rebooks every rebook line in a company-wide report sent to every desk, and that half of those lines are mapped repeats. The mail shows neither: about a quarter to a third of lines are repeats, and the Louis Dreyfus target entity changes from report to report.",
-    "research": "Find mail showing which Credit Report lines belong to the West desk or Carole Frank (for example Carole's replies, or desk-specific rebook requests like giron-d/sent/124.eml), count only those, and count how many are recurring entity pairs with one fixed target.",
-    "time": "2026-11-02T19:46:25-05:00"
-  },
-  {
-    "name": "Monthly transport usage ticket refresh in Sitara",
-    "change": "Make Sitara transport usage tickets evergreen per pipe path, look up rates from the matrix/Unify rate tables, and carry volumes forward instead of a monthly hand refresh.",
-    "reason": "The proposed design conflicts with the mail: Sitara usage tickets can only be set up for about 3 months at a time (1796.eml), Unify rates are entered for settlement after the month rather than before it (867.eml), and carrying last month's volumes forward would put wrong volumes in place, so the scheduler savings are not real and the 5 hours saved for Heidi is a guess based on a two-day span.",
-    "research": "Find mail showing how many hours the monthly refresh actually takes, whether Sitara can hold term tickets or pull rates from a shared table before the flow month, and refreshes in months other than June and July 2000, so that a smaller change (such as a rate check against the matrix) can be costed.",
-    "time": "2026-11-02T19:46:38-05:00"
-  },
-  {
-    "name": "Audit MTM valuation requests by counterparty",
-    "change": "Give Confirmations a back-dated MTM report by counterparty that they run themselves, so audit requests stop going to every risk desk.",
-    "reason": "The same work and the same change are already saved as 'Back-dated MTM valuations for counterparty audit requests', which cites the same messages (giron-d/sent/137, 214, 240, 241, plus 136).",
+    "name": "Counterparty MTM valuations for auditors",
+    "change": "Give Confirmations a counterparty valuation report with stored year-end and month-end curves, so they can answer audit requests without going to the desks.",
+    "reason": "The same work and essentially the same change are already saved as 'Answering counterparty auditors' MTM valuation requests' (decisions.md item 2, $1,381.25 a month), which cites the same messages 137, 214, 240 and 241.",
     "research": null,
-    "time": "2026-11-02T19:46:44-05:00"
+    "time": "2026-11-03T00:01:00-05:00"
   },
   {
-    "name": "Weekly manual compact of WeaponX databases",
-    "change": "Compact each desk's WeaponX file automatically every night instead of having each book admin do it by hand every week.",
-    "reason": "The same work and change is already saved in decisions.md as item 2, 'Weekly manual compaction of WeaponX Access databases', which cites the same messages (giron-d/sent/585.eml and 596.eml).",
+    "name": "Daily hand-forwarding of Credit's Credit Report",
+    "change": "Put the book administrators who rebook the deals (Carole Frank and others) on Credit's Credit Report list, so Darron Giron no longer forwards it every day.",
+    "reason": "This work and change are already saved as 'Daily hand-forwarding of the Credit Report' (decisions.md item 3, $49.30 a month), which cites the same 71 Giron forwards to Carole Frank in giron-d/sent.",
     "research": null,
-    "time": "2026-11-02T19:46:58-05:00"
+    "time": "2026-11-03T00:01:03-05:00"
   },
   {
-    "name": "Credit Report wrong-entity TAGG rebooks and desk forwarding",
-    "change": "Block known wrong-entity counterparties at TAGG deal entry with a credit-kept 'use instead' mapping, and route each Credit Report row to the owning book administrator.",
-    "reason": "The 65 minutes a day rests on a 'fixed mapping' that the mail contradicts (the Aquila/Utilicorp rebook runs in opposite directions, the Louis Dreyfus target changes, and AEP Energy Services, Inc. is rebooked to itself), on a repeat rate of half when the cited reports show about a third, and on six desk heads forwarding every day when only Giron's forwards, often sent days late in batches, appear in the mail.",
-    "research": "Count rebook lines across all 71 reports in giron-d/sent and keep only counterparty pairs that always have the same target. Find mail from book administrators or Confirmations, such as Julie Brewer's chase in 124.eml, that shows who actually rebooks and how long it takes. Check whether desk heads other than Giron forward the report at all, given that the book administrators are already on its distribution list.",
-    "time": "2026-11-02T19:46:58-05:00"
-  },
-  {
-    "name": "Weekly manual compaction of WeaponX databases",
-    "change": "Have WeaponX compact itself automatically (scheduled overnight compact or Compact on Close) so book admins stop doing it by hand.",
-    "reason": "The same work, citing the same two messages (giron-d/sent/585.eml and 596.eml), is already saved as item 2 in decisions.md, 'Weekly manual compaction of WeaponX Access databases'.",
+    "name": "Flipping ECC master-swap deals out of Houston books",
+    "change": "Have EOL/TAGG book deals with ECC's master-swap counterparties straight to the FT-US/CAND-ERMS book, with a daily exception report, instead of manual search-and-flip requests.",
+    "reason": "The same work and the same change are already saved in decisions.md as item 3, 'Monthly search of Houston books for Enron Canada (ECC) deals', which cites the same Giron messages.",
     "research": null,
-    "time": "2026-11-02T19:47:00-05:00"
+    "time": "2026-11-03T00:01:08-05:00"
   },
   {
-    "name": "Monthly search and flip of ECC master-swap deals into FT-US/CAND-ERMS",
-    "change": "Auto-book ECC master-swap counterparty deals into FT-US/CAND-ERMS at entry (EOL rule plus TAGG default) and send a nightly exception list to book owners.",
-    "reason": "The same work and change are already saved as item 3 in decisions.md, 'Monthly hunt for Enron Canada (ECC) deals in Houston books before NYMEX invoicing', which cites the same messages (giron-d/sent/108, 114, 270, 292, 360).",
+    "name": "Daily hand-forwarding of the Credit Report",
+    "change": "Put the West desk's rebook handler (Carole Frank) or a desk mailbox directly on Credit's daily Credit Report list, so Darron Giron no longer forwards it every business day.",
+    "reason": "This work and change are already saved as 'Daily hand-forwarding of the Credit Report' (decisions.md item 4, $49.30 a month), which cites the same 71 Giron forwards in giron-d/sent.",
     "research": null,
-    "time": "2026-11-02T19:47:07-05:00"
+    "time": "2026-11-03T00:01:09-05:00"
   },
   {
-    "name": "Rebooking deals to the right legal entity from the daily Credit Report",
-    "change": "Add a credit-maintained alias table in TAGG that books known wrong entities to the approved one, and route each day's remaining exceptions by book instead of a desk lead forwarding the whole report",
-    "reason": "The mail contradicts the fixed wrong-to-right pairs the alias table depends on (the same entity is sent to different targets, and Aquila/Utilicorp are rebooked in both directions), and the 9 minutes a day of West-desk rebooks, which make up half the savings, are not supported by anything in the mail.",
-    "research": "Find mail that shows which Credit Report lines belong to the West desk's books and how long a rebook takes, and check across all the reports whether each wrong entity always goes to the same target (only about 10 of the ~70 forwarded reports have the list in the message body).",
-    "time": "2026-11-02T19:47:16-05:00"
-  },
-  {
-    "name": "Recurring alias-to-entity rebooks from the daily Credit Report",
-    "change": "Credit and Global Counterparty keep an alias table that TAGG/EOL deal entry uses to default or block the legal entity, so repeat rebooks are never created.",
-    "reason": "No mail shows who does the rebooks, how long each one takes, or that about 3 repeat lines a day belong to any one desk. The mappings are not fixed either: Aquila is rebooked to Utilicorp United on 1/30/01 (263.eml) but Utilicorp United is rebooked to Aquila Risk Management on 3/19/01 (149.eml), and AEP Energy Services, Inc. is 'rebooked' to itself (149.eml). So 15 minutes a day is a guess.",
-    "research": "Count rebook lines across all 71 reports in giron-d/sent and keep only counterparty pairs whose target never changes. Then find mail from book admins or Confirmations (for example Julie Brewer's 'Rebooks' request in 124.eml) showing who rebooks, how long a rebook takes and which lines are the West desk's.",
-    "time": "2026-11-02T19:47:21-05:00"
-  },
-  {
-    "name": "Routing daily Credit Report rebooks to book admins and checking legal entity at deal entry",
-    "change": "Credit splits the daily Credit Report by TAGG book and sends each book's lines only to that book's admin, and TAGG/EOL warns or defaults to the legal entity that holds the master agreement when a deal is entered.",
-    "reason": "The forwarding part is already saved as item 7 in decisions.md and cites the same 71 Giron forwards. The rest repeats claims that earlier critics rejected: no mail shows the other five desk heads forwarding or any admin scanning the list, and the entity mappings the entry check needs change from report to report.",
-    "research": "Find mail from desk heads other than Giron, or from book admins or Confirmations, showing them forwarding the report, picking out their own lines, or rebooking, and how long that takes. Then count, across all 71 reports, the counterparty pairs whose target entity never changes, and size only that.",
-    "time": "2026-11-02T19:47:36-05:00"
-  },
-  {
-    "name": "Self-service counterparty MTM report for audit confirmation requests",
-    "change": "Give Confirmations a back-dated counterparty MTM / open-position report (EnTelligence with back-dated curves) so audit requests no longer go to every Risk desk head and analyst.",
-    "reason": "The same work and the same change are already saved as 'Back-dated MTM valuations for counterparty audit requests' (decisions.md item 1), which cites the same five messages (giron-d/sent/136, 137, 214, 240, 241).",
+    "name": "Counterparty MTM valuations for auditors",
+    "change": "Give Confirmations a back-dated counterparty MTM report so the desks no longer run and redact a mini-book for each auditor request.",
+    "reason": "This work and essentially the same change are already saved as 'Answering counterparty auditors' MTM valuation requests' (decisions.md item 2, $1,381.25 a month), which cites the same messages 137, 214, 240 and 241.",
     "research": null,
-    "time": "2026-11-02T19:47:36-05:00"
+    "time": "2026-11-03T00:01:36-05:00"
   },
   {
-    "name": "Monthly gas curve validation questions to the desk",
-    "change": "Put market-data attribution in the monthly curve validation pack so curves the market explains are marked 'market-explained' and the desk is not asked about them.",
-    "reason": "The validator already has the market data and says outright that 'the market traded higher' is not an answer she accepts ('as evidenced by the data. However, we are looking for specific reasons', 47.eml), so tagging curves 'market-explained' would not remove the questions; and the 85 minutes a month counts three desk leads and a second round of questions that the mail does not show.",
-    "research": "Find mail from Jennifer Nguyen's validation group or its memo readers saying that a move matching market data needs no desk explanation, and count who actually answers each month (only Giron's replies appear) and how long a reply takes.",
-    "time": "2026-11-02T19:47:52-05:00"
-  },
-  {
-    "name": "Monthly hunt-and-flip of ECC master-swap deals across Houston books",
-    "change": "Route deals with ECC master-swap counterparties straight to FT-US/CAND-ERMS in TAGG/EnronOnline, with a nightly exception report, replacing the monthly all-books sweep.",
-    "reason": "The same work and change are already saved as item 3 in decisions.md, 'Monthly hunt for Enron Canada (ECC) deals in Houston books before NYMEX invoicing', citing the same messages (giron-d/sent/114, 195, 292, 360, 539, 550).",
+    "name": "Monthly sweep of Houston books for Enron Canada (ECC) deals before NYMEX close",
+    "change": "Book ECC counterparty deals into the FT-US/CAND-ERMS book automatically, and run a report that lists any that slip through, instead of a monthly manual sweep and email chain.",
+    "reason": "The same work and the same change are already saved as decisions.md item 3, 'Monthly search of Houston books for Enron Canada (ECC) deals' ($364.65 a month), which cites six of the same eight Giron messages (114, 195, 360, 407, 535, 550).",
     "research": null,
-    "time": "2026-11-02T19:47:52-05:00"
+    "time": "2026-11-03T00:01:40-05:00"
   },
   {
-    "name": "Extending expired deals at flowing HPL meters",
-    "change": "A monthly bid-week list of deals ending at meters that still flow, so the Texas desk extends or rolls them in one batch instead of answering per-meter requests after allocation.",
-    "reason": "The estimate is about three to four times too high: the mail shows roughly 2 distinct extension requests a month, not 5, and the 25 strangers-gas write-off memos are a one-time cleanup of 1999-2000 volumes (21 of them sent between Dec 11 2000 and Jan 9 2001), not a steady 4 a month that the report would prevent.",
-    "research": "Count distinct expired-deal threads per month across farmer-d/logistics after merging forwards (e.g. 782/784/792, 896/897/899, 1479/1482, 58/59/63, 194/195/2149/2150), drop the one-day daily-swing rolls a monthly list cannot catch (814, 1977), and drop the memo backlog unless mail shows new memos for current-month flow after January 2001.",
-    "time": "2026-11-02T19:47:57-05:00"
-  },
-  {
-    "name": "Monthly forward-curve validation questions",
-    "change": "Send curve validation questions straight to the owning trader, with threshold commentary entered at month-end, instead of relaying through Gossett and three desk leads.",
-    "reason": "The relay the proposal removes had already gone away by March 2001, when Nguyen sent her questions straight to Giron with no Gossett forward, and there is no sign that Love or Keiser did any work; what is left is about 10-15 minutes a month of one lead passing a trader's answer along, not 65 minutes.",
-    "research": "Look for curve validation threads in the Love, Keiser, Gossett or Nguyen mailboxes, or for months after March 2001, that show the multi-person relay and repeat rounds still happening; without them only the vague-answer problem is left, and the evidence for that is one second round in one month.",
-    "time": "2026-11-02T19:48:00-05:00"
-  },
-  {
-    "name": "Self-service back-dated MTM valuations for counterparty audit requests",
-    "change": "Finish the planned EnTelligence view (or an equivalent report) with back-dated curves so Confirmations values counterparty portfolios for a past date without polling every Risk desk.",
-    "reason": "The same work and the same change are already saved as 'Back-dated MTM valuations for counterparty audit requests' (decisions.md item 1), which cites the same five messages (giron-d/sent/136, 137, 214, 240, 241).",
+    "name": "Monthly flip of ECC master-swap deals out of Houston books before NYMEX invoicing",
+    "change": "Extend the EOL auto-booking program to a maintained list of ECC master-swap counterparties and run a nightly TAGG exception query for misbooked ENA deals, replacing the monthly all-books sweep.",
+    "reason": "The same work and essentially the same change are already saved in decisions.md as item 3, 'Monthly search of Houston books for Enron Canada (ECC) deals' ($364.65 a month), which cites the same Giron messages (108, 114, 195, 292, 360, 407) and already books every ECC counterparty to FT-US/CAND-ERMS automatically with a daily list of deals that slip through.",
     "research": null,
-    "time": "2026-11-02T19:48:03-05:00"
+    "time": "2026-11-03T00:01:45-05:00"
   },
   {
-    "name": "Searching all books and flipping ECC third-party deals to FT-US/CAND-ERMS before NYMEX invoicing",
-    "change": "Auto-book ECC-mastered counterparty deals to FT-US/CAND-ERMS and replace the all-books request waves with a nightly exception report.",
-    "reason": "The same work and change are already saved as item 3 in decisions.md, 'Monthly hunt for Enron Canada (ECC) deals in Houston books before NYMEX invoicing', which cites the same messages (giron-d/sent/108, 195, 270, 292, 360, 539, 550).",
+    "name": "Weekly California Capacity Report",
+    "change": "Generate the Friday California Capacity Report automatically from TW and El Paso flow postings and Gas Daily/EOL prices, so Michelle Lokay only checks it before sending.",
+    "reason": "Another critic saved the same work with essentially the same change while this one was being checked ('Weekly California Capacity Report', decisions.md Saved item 5, $88.40 a month), and it cites the same lokay-m report messages.",
     "research": null,
-    "time": "2026-11-02T19:48:04-05:00"
+    "time": "2026-11-03T00:01:47-05:00"
   },
   {
-    "name": "Monthly P&L top pages for Arthur Andersen gas testing",
-    "change": "Save each gas book's month-end and daily P&L top pages and curve shift reports automatically to a read-only audit folder, with a list of book owners, so AA can pull the pages itself.",
-    "reason": "The same work and the same change are already saved as item 4 in decisions.md, \"Monthly P&L top pages for Arthur Andersen's gas testing\" ($255.00 a month), which cites giron-d/sent/516, 515, 201, 299, 317 and 420.",
+    "name": "Weekly Transwestern California Capacity Report",
+    "change": "Generate the weekly California Capacity Report automatically from flow and price data, so Michelle Lokay only reviews it before it goes out.",
+    "reason": "The same work is already saved as 'Weekly California Capacity Report' (item 5 in decisions.md), which cites the same lokay-m messages. The proposal also says the report is 'retyped from scratch', but sent_items/47.eml shows it is made by forwarding last week's email and typing over it.",
     "research": null,
-    "time": "2026-11-02T19:48:11-05:00"
+    "time": "2026-11-03T00:01:48-05:00"
   },
   {
-    "name": "Weekly manual compaction of WeaponX Access databases",
-    "change": "IT runs an unattended overnight compact of every WeaponX file, with a rolling backup and a daily size check, so book admins stop compacting by hand.",
-    "reason": "The same work and change, citing the same two messages (giron-d/sent/585.eml and 596.eml), is already saved as item 2 in decisions.md, 'Weekly manual compaction of WeaponX Access databases'.",
+    "name": "Monthly sweep to flip ECC master-swap deals into FT-US/CAND-ERMS",
+    "change": "Book deals with ECC master-swap counterparties to FT-US/CAND-ERMS automatically at capture, and replace the all-desk monthly sweep with one exception query.",
+    "reason": "The same work and essentially the same change are already saved as 'Monthly search of Houston books for Enron Canada (ECC) deals' (decisions.md Saved item 3, $364.65 a month), which cites the same Giron messages 108, 195, 292 and 360.",
     "research": null,
-    "time": "2026-11-02T19:48:11-05:00"
+    "time": "2026-11-03T00:02:03-05:00"
   },
   {
-    "name": "Book ECC-counterparty deals into FT-US/CAND-ERMS automatically, with an exception report",
-    "change": "Extend the EOL/TAGG auto-booking rule to every ECC-master counterparty and run a nightly exception query instead of manual all-books searches.",
-    "reason": "The same work and change are already saved as item 3 in decisions.md, 'Monthly hunt for Enron Canada (ECC) deals in Houston books before NYMEX invoicing', which cites most of the same messages; the proposal's estimate was also overstated (single-deal requests counted as all-books searches, and 18 admins per request assumed without support).",
+    "name": "Flipping Canadian (ECC) deals out of Houston books before NYMEX invoicing",
+    "change": "Extend the existing EnronOnline/TAGG rule that books deals straight to ECC to every counterparty ECC has a master agreement with, and replace the monthly book-by-book search with one exception query.",
+    "reason": "The same work and essentially the same change are already saved as 'Monthly search of Houston books for Enron Canada (ECC) deals' (decisions.md Saved item 3, $364.65 a month), which cites the same Giron messages 108, 195, 292 and 550.",
     "research": null,
-    "time": "2026-11-02T19:48:17-05:00"
+    "time": "2026-11-03T00:02:55-05:00"
   },
   {
-    "name": "Daily Credit Report wrong-entity rebooks and hand-forwarding to book admins",
-    "change": "Add standing counterparty-entity rules to TAGG at deal entry and split the Credit Report by desk so it goes straight to each book admin",
-    "reason": "The 40-minute daily saving rests on claims the mail does not support: only Giron is shown forwarding the report (not six desks), repeat mappings come up about once per report company-wide (not four a day for one desk), and the 'standing rules' are not fixed (Louis Dreyfus Natural Gas Holdings is sent to Louis Dreyfus Natural Gas Corp on 3/12 but to Louis Dreyfus Corporation on 3/15; ENA/ECC rebooks go both ways), while auto-booking to ECC already exists for some Canadian counterparties.",
-    "research": "Find whether other desk heads (Gossett, Keiser, Love, etc.) also forward the report to admins, and how many lines per report belong to the West book; if not, a resubmission should be limited to adding the West book admin to Credit's distribution list, valued at a few minutes a day.",
-    "time": "2026-11-02T19:48:20-05:00"
+    "name": "Nightly schedule checkout calls with counterparties, Portland Real Time desk",
+    "change": "Match prescheduled paths against e-tags automatically each night so traders phone only counterparties with a mismatch or cut.",
+    "reason": "The only evidence is one memo launching the Enpower Path Confirmation tool two weeks before Enron's bankruptcy and the desk's move to UBS. The 2-minute call time is made up. The BPA precedent is a different party doing the calls, not matching. And a later message shows the tag data the matching would depend on leaves Enron's schedules out, which is the kind of error the calls catch.",
+    "research": "Look for messages after December 2001 (UBS Warburg Energy period) showing the nightly checkout still running with many counterparties, how long it takes, and whether tag data is complete enough to confirm schedules without a call.",
+    "time": "2026-11-03T00:02:56-05:00"
   },
   {
-    "name": "Hourly phone check-out of service-customer generators to BPA",
-    "change": "Replace the hourly calls to Frontier and GCPUD and to BPA with an automatic meter-data feed to BPA and exception alerts to the RT desk.",
-    "reason": "The mail already says these generators are to be metered automatically, by BPA, from mid-August 2001, and that the hourly calls stop then; so the proposal adds nothing, it treats a short episode as 730 hours a month for good, and its 3-minute figure is a split of a ceiling, not an estimate.",
-    "research": "Look for mail after August 2001 showing the hourly calls to BPA still being made for Frontier or another generator after automatic metering was due, and for what the call actually took each hour; without that the idea is not new and not ongoing.",
-    "time": "2026-11-02T19:48:52-05:00"
-  },
-  {
-    "name": "Monthly Arthur Andersen gas testing document requests",
-    "change": "Save each book's daily P&L top page and curve shift report automatically to a dated, read-only folder that the auditors can open themselves.",
-    "reason": "The same work and the same change are already saved as item 4 in decisions.md, \"Monthly P&L top pages for Arthur Andersen's gas testing\" ($255.00 a month), which cites the same messages (giron-d/sent/516, 515, 583, 420, 317, 201 and inbox/190).",
+    "name": "Collecting pay-period time reports by email on the Transwestern commercial team",
+    "change": "Have staff record their own absences in eHRonline/SAP with standard hours as the default, so the assistant only reviews exceptions instead of collecting replies by email.",
+    "reason": "The same work is already saved as \"Twice-monthly time report email round at Transwestern\", which uses 5 of the same 6 occurrences.",
     "research": null,
-    "time": "2026-11-02T19:48:57-05:00"
+    "time": "2026-11-03T00:03:02-05:00"
   },
   {
-    "name": "Weekly California Capacity Report for Transwestern",
-    "change": "Have the Friday California capacity email built automatically from flow data and the Gas Daily prices, so the marketer only reviews it.",
-    "reason": "This work is already saved as 'Weekly Transwestern California Capacity Report' (item 6 in decisions.md, $88.40 a month) and cites the same 16 messages. The draft also had two errors: the 11 Jan 2002 slip sent that week's new figures under the old week's title, not last week's figures, and the unbroken run is 15 weeks, not 16.",
+    "name": "Correcting mail sent to the wrong Bill Williams",
+    "change": "Have the directory admins give both Bill Williams address-book entries distinguishing display names (office and group) so senders stop picking the wrong one.",
+    "reason": "The same work and the same change are already saved in decisions.md (item 8, 'Correcting mail sent to the wrong Bill Williams', citing 110, 184, 255, 259, 437, 448, 450, 471, 492, 493, 507, 521), so saving this again would count it twice.",
     "research": null,
-    "time": "2026-11-02T19:49:08-05:00"
+    "time": "2026-11-03T00:03:05-05:00"
   },
   {
-    "name": "Pulling gas P&L top pages and curve-shift reports for Arthur Andersen's monthly testing",
-    "change": "Save every book's daily P&L top page and curve-shift report from the nightly P&L run to a dated, read-only folder that the auditors can open, so AA picks its monthly samples itself.",
-    "reason": "The same work and the same change are already saved as item 4 in decisions.md, \"Monthly P&L top pages for Arthur Andersen's gas testing\" ($255.00 a month), which cites the same messages (giron-d/sent/583, 516, 515, 420, 317, 201).",
+    "name": "Daily TAGG 'Rebook to' corrections on the Credit Report",
+    "change": "Keep a Credit alias table in TAGG/Global Counterparty that substitutes or blocks recurring wrong counterparty names at deal entry.",
+    "reason": "The only evidence of how often rebooks happen is the same Giron Credit Report forwards already saved as 'Daily hand-forwarding of the Credit Report', the separate rebook requests in the mail are only a handful, and the proposal overstates its case: the names recur weeks apart, not daily; about 40% of rebook lines repeat, not half; and automatic substitution would misbook, because the right entity for the same name changes.",
+    "research": "Look in the book administrators' and Credit's own mailboxes (Carole Frank, Derek Bailey, Julie Brewer, Lesli Campbell, Russell Diamond) for rebook requests and 'Done' replies apart from Giron's Credit Report forwards, or for a message that says how many deals are rebooked each day or week; that would give the rebook work its own occurrences and rate, so a warning-only version of the change could be judged on its own.",
+    "time": "2026-11-03T00:03:31-05:00"
+  },
+  {
+    "name": "Gathering P&L top pages and curve-shift reports for Arthur Andersen's monthly gas testing",
+    "change": "A month-end job saves every gas book's top pages and curve-shift reports into a dated read-only folder AA can open, with a list of each book's owner.",
+    "reason": "Another critic saved the same work with essentially the same change while this one was being checked ('Monthly gas P&L top pages and curve-shift reports for Arthur Andersen', decisions.md Saved item 4, $184.45 a month), and it cites the same Giron messages 201, 299, 327, 420, 516 and 583.",
     "research": null,
-    "time": "2026-11-02T19:49:11-05:00"
+    "time": "2026-11-03T00:03:41-05:00"
   },
   {
-    "name": "Monthly re-pricing of West-desk purchase deals after settlements sees the invoice",
-    "change": "Price formula deals (Agave) automatically in Sitara and batch-load the invoice-priced deals (EnerVest #27239, #27253) once a month, so settlements no longer emails the desk lead per deal",
-    "reason": "For the two invoice-priced deals the price is only known once settlements gets the counterparty's invoice, so a monthly batch still needs settlements to pass each price on and removes almost nothing; the formula part rests on one West Agave miss (the cited Dec 2000 Agave deal is a Central deal), and '3 deals every month' is about three times what the mail shows.",
-    "research": "Check whether the EnerVest #27239 and #27253 contracts price off an index or formula the desk could load before the invoice arrives, and count how many West Agave months were actually wrong in Sitara; if both hold up, a smaller proposal at about one request a month could be argued.",
-    "time": "2026-11-02T19:49:43-05:00"
+    "name": "Nightly Enpower Path Confirmation checkout with counterparties",
+    "change": "Make the Path Confirmation save run in the background and pre-fill each counterparty's contact, so the Real Time trader does not wait about a minute after each of about 27 nightly confirmations.",
+    "reason": "The only evidence is one launch memo (86.eml, 19 Nov 2001), sent two weeks before Enron's bankruptcy and the desk's move to UBS Warburg on new systems, so nothing shows the 27 nightly Enpower confirmations, or the one-minute save, lasting long enough to save 13.5 hours a month; the full minute counted as lost is also not shown, and another critic already rejected this same nightly checkout work on the same evidence.",
+    "research": "Find messages from December 2001 onward (Enron estate or UBS Warburg Energy) showing the Real Time desk still confirming paths in Enpower Path Confirmation with many counterparties each night, and any complaint or note about the save time, to show the work and the wait continued.",
+    "time": "2026-11-03T00:04:06-05:00"
   },
   {
-    "name": "Asking the Texas desk to extend or create a deal when gas flows at a meter with no deal",
-    "change": "A nightly list of meters with flow but no active deal, plus a pre-month-end warning about expiring deals at flowing meters, replaces the one-meter-at-a-time emails to the desk lead.",
-    "reason": "The same work and the same change are already saved as item 7 in decisions.md, 'Extending Sitara deals for meter flow outside the deal term' (a daily exception list matching meter flow against deal terms), which cites many of the same messages (899, 1021, 1406, 2039, 2049, 2077, 2078, 2095, 2113); the proposal's 12 requests a month was also overstated, as the mail supports about 2 to 3 a month.",
+    "name": "Monthly GLO/EGM gas-for-crude swap tickets",
+    "change": "Book the HPL-to-GLO sale as a standing zero-price ticket and price the HPL-to-ENA demand tickets by formula (firm volume x the month's index), so only the crude value is keyed monthly.",
+    "reason": "The same change to the same work is already saved in decisions.md (item 7). This version also gets today's process wrong: the mail shows the monthly steps were not done at all from March 2001 on and had to be caught up months later, not keyed by hand each month before flash.",
     "research": null,
-    "time": "2026-11-02T19:49:43-05:00"
+    "time": "2026-11-03T00:04:25-05:00"
   },
   {
-    "name": "Daily hand-forwarding of market reports to Portland traders",
-    "change": "Have the daily Energy Market Report and the Gas Daily / Power Daily PDFs delivered straight to Portland distribution lists, so assistants no longer forward them.",
-    "reason": "The same work and change are already saved as item 8 in decisions.md, 'Hand-forwarding daily market reports to the Portland floor' ($39.95 a month), which cites the same williams-w3 messages; the draft's own figure of 21 times a month at 13 minutes is also not supported, since the archive shows 7 Energy Market Report forwards and only 2 Gas Daily sends in about 9 days.",
+    "name": "Redirecting mail sent to the wrong Bill Williams",
+    "change": "Have IT add department and location to both Bill Williams directory names so senders can tell them apart when addressing.",
+    "reason": "The same work and the same change are already saved as 'Correcting mail sent to the wrong Bill Williams' (item 8 in decisions.md), which uses 9 of this proposal's 16 occurrences, so saving it again would count the saving twice.",
     "research": null,
-    "time": "2026-11-02T19:50:26-05:00"
+    "time": "2026-11-03T00:04:27-05:00"
   },
   {
-    "name": "Monthly Sitara price updates on invoice-priced deals",
-    "change": "Let settlements enter the invoiced price or demand charge on flagged invoice-priced Sitara deals themselves, with the desk notified, instead of emailing the desk to key it every month.",
-    "reason": "The same work and the same change are already saved as item 11 in decisions.md, 'Monthly Sitara price updates to match counterparty invoices' ($8.50 a month), which cites the same messages (giron-d/sent/12, 141, 301, 313, 378, 469, 508, 738, 762, 81).",
+    "name": "Monthly auditor requests for gas P&L top pages and curve shift reports",
+    "change": "At month-end, copy every book's daily P&L top pages and curve shift reports into one read-only audit folder that the auditors pull from themselves.",
+    "reason": "This is already saved as item 4 in decisions.md ('Monthly gas P&L top pages and curve-shift reports for Arthur Andersen'), which cites the same eight messages and makes the same change, so saving it again would count the savings twice.",
     "research": null,
-    "time": "2026-11-02T19:50:46-05:00"
+    "time": "2026-11-03T00:04:32-05:00"
   },
   {
-    "name": "Re-routing mail sent to the wrong Bill Williams",
-    "change": "Give the two Bill Williams directory entries distinct names showing group and city (and, as proposed, distinct SMTP aliases) so senders pick the right one.",
-    "reason": "The same work and the same fix are already saved as \"Forwarding mail sent to the wrong Bill Williams\", and most of the cited messages are already there; the proposal also wrongly says both men share one SMTP address, but inbox/141.eml shows Bill III has his own address, bill.williams.III@enron.com.",
+    "name": "Supplying P&L top pages and curve shift reports for Arthur Andersen's monthly gas testing",
+    "change": "Each month-end, file the official P&L top pages and curve shift reports for every gas book in a read-only folder that AA can open, so AA stops asking the desks for them.",
+    "reason": "The same work and essentially the same change are already saved as item 4 in decisions.md, 'Monthly gas P&L top pages and curve-shift reports for Arthur Andersen', which cites all of this proposal's messages (201, 299, 326, 327, 420, 515, 516, 583), so saving it again would count the saving twice.",
     "research": null,
-    "time": "2026-11-02T19:51:15-05:00"
+    "time": "2026-11-03T00:04:45-05:00"
   },
   {
-    "name": "Daily market report forwarding to Portland traders",
-    "change": "Deliver the Energy Market Report and Gas Daily / Power Daily PDFs to maintained distribution lists automatically instead of assistants forwarding them by hand.",
-    "reason": "The same work and the same change are already saved as item 9 in decisions.md, 'Hand-forwarding daily market reports to the Portland floor', which cites the same williams-w3 messages.",
+    "name": "Monthly repricing of EnerVest deal S#27239",
+    "change": "Let Settlements set the invoiced price on deal S#27239 when it processes the EnerVest invoice, instead of emailing Risk to do it each month.",
+    "reason": "The same work is already saved as item 14 in decisions.md, 'Monthly repricing of invoice-priced Sitara deals (27239 EnerVest, 27253)', which cites all six of these messages and proposes the same change.",
     "research": null,
-    "time": "2026-11-02T19:51:21-05:00"
+    "time": "2026-11-03T00:04:49-05:00"
   },
   {
-    "name": "Monthly wholesale volume variance explanations for Investor Relations",
-    "change": "Pre-attribute each region's +/-10% volume variances by driver (EOL vs non-EOL, top counterparties) in the Statistical Database so controllers confirm drafts instead of writing them.",
-    "reason": "The same work, explaining the monthly Statistical Database variances (farmer-d/logistics/1210.eml and 1416.eml), is already saved in decisions.md as item 6 with a nearly identical pre-fill-and-confirm change, so saving this would count the same savings twice.",
+    "name": "Monthly GLO/EGM gas/crude swap deal tickets",
+    "change": "Book the GLO sale at zero price permanently and make the HPL-ENA and ENA-EGM demand tickets evergreen with formula amounts, so the only monthly input is the crude value.",
+    "reason": "decisions.md already has the same work and the same change saved (item 9, $55.25 a month), and the mail shows the swap ran only from January to May 2001, so it was a short episode, not ongoing monthly work.",
     "research": null,
-    "time": "2026-11-02T19:51:26-05:00"
+    "time": "2026-11-03T00:05:06-05:00"
   },
   {
-    "name": "Twice-monthly time report email round",
-    "change": "Let employees record their own absences directly in the timekeeping system, so the reminder-and-reply email round and the assistant's re-keying go away.",
-    "reason": "The same work and the same change are already saved as item 11 in decisions.md, \"Pay-period time reports for the Transwestern commercial group\", which cites the same Lokay time-report messages.",
+    "name": "Monthly GLO/EGM gas-for-crude intercompany tickets",
+    "change": "Set up the GLO/EGM intercompany legs as standing deals whose demand charges are calculated each month, with a check before flash, instead of zeroing prices and keying tickets by hand.",
+    "reason": "The same work and the same change are already saved as item 10 in decisions.md, 'Monthly GLO/EGM gas-for-crude swap tickets' ($55.25 a month), which cites the same messages (175.eml, 83.eml, 28.eml), so saving it again would count the saving twice.",
     "research": null,
-    "time": "2026-11-02T19:51:27-05:00"
+    "time": "2026-11-03T00:05:32-05:00"
   },
   {
-    "name": "Monthly gas forward-curve validation questions to desks",
-    "change": "Automatically mark curves whose month-over-month shift matches the move in traded market quotes as 'explained by market', and only ask the desks about the rest",
-    "reason": "The mail shows the validator already sees the market move in the data and explicitly rejects 'the market traded higher' as an answer, asking instead for the specific reasons behind it, so a market-move check would not remove the questions.",
-    "research": "Only a source showing Risk would accept a quote-based match as enough to close a curve question (for example a validation policy or a memo accepting such answers) could change this; the current thread says the opposite.",
-    "time": "2026-11-02T19:52:05-05:00"
+    "name": "Researching HPLC-ENA intercompany accrual variances",
+    "change": "Have Sitara create the mirror side of every HPLC-ENA intercompany deal automatically, and add a daily intercompany nomination tie-out",
+    "reason": "The mail shows an intercompany deal is already one shared Sitara deal (868: 'Intercompany Sitara deals are the same'); the missing sides are unmatched nominations and accruals, not missing deal tickets, so auto-creating mirror tickets would not remove them, and the claim that monthly recurrence is shown rests on one month's list.",
+    "research": "Find mail showing how the ENA side of an intercompany Sitara deal gets nominated and why it goes missing (the 'system limitation' Lenart asks about in 868), plus intercompany variance lists for other months, to support a proposal built only on a daily nomination tie-out.",
+    "time": "2026-11-03T00:05:39-05:00"
   },
   {
-    "name": "Monthly requests to re-price invoice-priced deals in Sitara",
-    "change": "Keep a standing list of deals re-priced every month (EnerVest S#27239, #27253, Agave #312068) and have the book admin update them at month start without being asked, with formula pricing where the calculation is known.",
-    "reason": "The same work is already saved as item 14 in decisions.md, 'Monthly Sitara price updates to match counterparty invoices', which cites the same messages (giron-d/sent/12, 81, 301, 313, 378, 469, 508), and a nearly identical batch-and-formula version was already rejected (item 54) because invoice-driven prices still need settlements to pass each one on.",
+    "name": "Daily forwarding of the Energy Market Report to West traders",
+    "change": "Have the report go straight to a West-traders distribution list, so nobody forwards it by hand.",
+    "reason": "The same work and change is already saved as decision 17 (\"Daily forward of the Energy Market Report to West Power traders\"), which cites all seven of these messages, so saving it again would count the same saving twice.",
     "research": null,
-    "time": "2026-11-02T19:52:06-05:00"
+    "time": "2026-11-03T00:05:40-05:00"
   },
   {
-    "name": "Forwarding mail sent to the wrong Bill Williams",
-    "change": "Add each person's group to the two \"Bill Williams\" address book names so senders can see which one they are picking.",
-    "reason": "The same work and the same fix are already saved as item 13 in decisions.md, 'Forwarding mail sent to the wrong Bill Williams' ($15.30 a month), which cites most of the same williams-w3 sent_items messages.",
+    "name": "Monthly roll-forward of Texas desk transport usage tickets in Sitara",
+    "change": "Have Sitara roll transport usage tickets into each new month by itself, with rates taken from the rate table used for invoicing, so accounting only reviews a list of gaps.",
+    "reason": "The same work and the same change are already saved as item 11 in decisions.md (Monthly set-up of HPL transport usage tickets), citing the same messages.",
     "research": null,
-    "time": "2026-11-02T19:52:09-05:00"
+    "time": "2026-11-03T00:05:47-05:00"
   },
   {
-    "name": "Routing items for the daily imbalance check to its owner",
-    "change": "Name one owner and backup for the daily imbalance check and send inputs to a shared mailbox that reaches them, so items are no longer hand-carried to the right person.",
-    "reason": "The mail shows two misrouted items in two days (15 and 16 Nov 2001), each already fixed by a one-line 'send it to X going forward' note; nothing shows misrouting happening every business day, so this is a short ownership mix-up that ends, not daily recurring work.",
-    "research": "Look for more messages over several weeks or months where imbalance-check items are forwarded, walked over, or redirected between Giron, Poorman, Williams and Lokay after 16 Nov 2001; without them, no rate of misrouting can be supported.",
-    "time": "2026-11-02T19:52:12-05:00"
-  },
-  {
-    "name": "Daily hand-forwarding of market reports to Portland traders",
-    "change": "Deliver the daily Energy Market Report and the Gas Daily/Power Daily PDFs straight to Portland distribution lists, ending the assistants' daily hand-forwarding.",
-    "reason": "The same work and change are already saved as item 10 in decisions.md, 'Hand-forwarding daily market reports to the Portland floor' ($39.95 a month), citing the same williams-w3 messages; the draft's 8 minutes every business day for Gas Daily/Power Daily is also unsupported, since Bill Williams's dense 1/28-2/6 inbox holds all 7 Energy Market Report forwards but only one Gas Daily/Power Daily send (1/31) and one 'not loaded yet' note (2/4).",
+    "name": "Monthly roll of Texas transport usage tickets",
+    "change": "Let Sitara transport usage tickets run for the whole contract term, take their rates from the rate matrix automatically, and carry last month's volumes forward.",
+    "reason": "The same work and the same change are already saved as 'Monthly set-up of HPL transport usage tickets', which cites the same messages (1144, 1145, 1257, 1796, 2109, 2111, 867).",
     "research": null,
-    "time": "2026-11-02T19:52:12-05:00"
+    "time": "2026-11-03T00:05:50-05:00"
+  },
+  {
+    "name": "Monthly repricing of EnerVest Sitara deal S#27239",
+    "change": "Let the monthly EnerVest price be set without an email to the risk desk: either model the deal's real pricing in Sitara, or let settlements enter it with the desk reviewing afterwards.",
+    "reason": "This work is already saved in decisions.md as item 17, 'Monthly repricing of invoice-priced Sitara deals (27239 EnerVest, 27253)', which cites the same six messages and proposes the same change.",
+    "research": null,
+    "time": "2026-11-03T00:06:05-05:00"
+  },
+  {
+    "name": "Monthly EWS admin-assistant roster check",
+    "change": "Build the monthly admin-assistant list from HR/directory data and ask assistants to reply only when their record changed or is blank.",
+    "reason": "The same work and change are already saved in decisions.md as item 8, 'Monthly EWS admin-assistant roster check' ($134.30 a month), which cites the same single message, williams-w3/sent_items/313.eml, so saving it again would count the saving twice.",
+    "research": null,
+    "time": "2026-11-03T00:06:29-05:00"
+  },
+  {
+    "name": "Daily hand-forwarding of the Energy Market Report to West power traders",
+    "change": "Send the vendor's daily report straight to a distribution list of the 12 traders, or forward it with an automatic mail rule, so nobody forwards it by hand.",
+    "reason": "The same work and the same change are already saved as item 19 in decisions.md, 'Daily forward of the Energy Market Report to West Power traders' ($8.50 a month), which cites all seven of these messages, so saving it again would count the saving twice.",
+    "research": null,
+    "time": "2026-11-03T00:06:36-05:00"
+  },
+  {
+    "name": "Monthly P&L support for Arthur Andersen gas testing",
+    "change": "Save each gas book's month-end P&L top page, five largest-day top pages and curve-shift reports to a dated folder AA can read, so nobody pulls them on request.",
+    "reason": "The same work and change are already saved as item 5 in decisions.md, 'Monthly gas P&L top pages and curve-shift reports for Arthur Andersen', which cites the same eight messages, so saving this would count the saving twice.",
+    "research": null,
+    "time": "2026-11-03T00:06:36-05:00"
+  },
+  {
+    "name": "Monthly HPL Assignment, Termination & Expiration Report",
+    "change": "Have the contract system produce the report on a fixed date before each bid week and email it to a list people join or leave themselves, so Cheryl only checks it.",
+    "reason": "The same work is already saved in decisions.md as item 13, with the same change and the same messages (farmer-d/logistics/211.eml, 2114.eml), so saving it again would count it twice.",
+    "research": null,
+    "time": "2026-11-03T00:06:41-05:00"
+  },
+  {
+    "name": "ENA/Burlington capacity-release 50/50 marketing-fee split on TW billing",
+    "change": "Configure TW billing to compute ENA's release credit and TW's marketing fee for contract 24924 automatically each month",
+    "reason": "The mail shows a single one-off deal on one contract, seen for two months (a release effective 1/11/02 - 1/31/02 and then February), with no sign it continues; building custom billing logic for it would cost more than the roughly $71 a month it saves, and the part that actually stalls (whether TW pays ENA its half while ENA owes TW money) is a judgment call that billing logic cannot settle.",
+    "research": "Look for mail showing that this release, or other releases with fee-sharing terms, ran for many more months or across several shippers, and for anything saying how CBS handles such terms; if neither exists, the verdict stands.",
+    "time": "2026-11-03T00:06:44-05:00"
+  },
+  {
+    "name": "Monthly Investor Relations volumetric explanations",
+    "change": "Have the Statistical Database flag the +/-10% variances, show EOL and counterparty drivers, pre-fill last month's explanation, and collect the controllers' explanations in the database instead of by email.",
+    "reason": "The change depends on things the mail does not show: that the Statistical Database holds EOL and counterparty detail, and that it does not already show the variances. The minutes are also inflated: 11 controllers' work is costed from one controller's two-line reply, and 11 readings are counted for a verifier who was copied only because one controller chose to copy him.",
+    "research": "Look for mail showing what the Statistical Database contains (variance columns, EOL or counterparty breakdowns), replies from controllers other than Baumbach, and other months' requests, and use them to show how long the explanations take and whether they repeat; then cost only the steps the change really removes.",
+    "time": "2026-11-03T00:06:45-05:00"
   },
   {
     "name": "Monthly Investor Relations volume-variance explanations",
-    "change": "Pre-draft each region's volume-variance explanation from a system breakdown (EnronOnline vs. other deals, top counterparty changes) so desk contacts only confirm or edit it.",
-    "reason": "The only replies in the mail are one-line answers from a single contact (Baumbach), which suggests minutes of work, not the assumed 20 minutes of research for each of 11 contacts, so the 15 minutes saved per contact is not supported.",
-    "research": "Find replies from the other contacts (Bruce, Gossett, Keiser, Kelly, Etter, Scott, Louie, Confer, Leschber, Anderson) or follow-ups from Misti Day showing long explanations, missed deadlines or back-and-forth over drivers. That would show real research time beyond a one-line answer.",
-    "time": "2026-11-02T19:52:17-05:00"
+    "change": "Pre-fill each region's previous explanation next to every +/-10% variance in the Statistical Database, so controllers tick 'same driver' or type a new one there instead of replying by email.",
+    "reason": "The same work was already rejected in decisions.md for the same gaps, and this version repeats them: 11 controllers' time is costed from one controller's (Baumbach's) one- and three-line replies, 'answers repeat' rests on one region in two months, and the change drops the stated rule that 'the volumes be verified by commercial personnel' for repeated drivers.",
+    "research": "Find replies from controllers other than Baumbach and requests for other months, showing how long the explanations take and whether drivers really repeat across regions; then cost only the steps the change removes (email reply and BA&R consolidation) and keep the commercial verification of volumes every month.",
+    "time": "2026-11-03T00:06:56-05:00"
   },
   {
-    "name": "Purchase requisition work handled by one logistics analyst",
-    "change": "Move routine requisitions to an SAP/catalog workflow with electronic approval and requester goods-receipt, and name a backup for Mary Poorman",
-    "reason": "The only evidence is a single offhand line from Mary Poorman that never says what her requisition steps are; the one requisition shown (237.eml) already goes through an online ECT Hardware Request form with an SAP cost center and electronic manager approval, so the proposed fix may already exist; and the 25% saving is an assumption with nothing behind it.",
-    "research": "Find mail that shows Mary Poorman's actual requisition steps (what she re-keys, which approvals or receipts she chases, how many requisitions a week) and whether they go outside the existing ECT request/SAP system; without that, neither the change nor the minutes can be stated.",
-    "time": "2026-11-02T19:52:21-05:00"
-  },
-  {
-    "name": "Monthly Wholesale volume variance explanations",
-    "change": "Have the Statistical Database show each region's volume change split by EnronOnline vs. other deals and top counterparties, so desk contacts confirm rather than research.",
-    "reason": "The same work, from the same two messages (farmer-d/logistics/1210.eml and 1416.eml), is already saved as item 7 in decisions.md, 'Monthly wholesale-volume variance explanations for Investor Relations' ($184.45 a month), with an essentially equivalent pre-fill-and-confirm change.",
+    "name": "Monthly gas curve-validation questions",
+    "change": "Send each month's curve-validation questions straight to the owning trader from a maintained curve-owner list, and validate derived curves such as NGI-PGE/TOPOCK through their parent curve.",
+    "reason": "The same work and essentially the same change are already saved as item 15 in decisions.md ('Monthly gas curve validation questions', $28.05 a month), citing the same messages 132, 170, 47 and 49. This version also gets the facts wrong: only the January round went through Gossett and three leads. February and March went straight to the leads and then to Giron alone. TOPOCK was flagged only once. And the March re-ask came back unchanged even after Giron asked the trader directly.",
     "research": null,
-    "time": "2026-11-02T19:52:22-05:00"
+    "time": "2026-11-03T00:07:05-05:00"
   },
   {
-    "name": "Houston Pipe Line Assignment, Termination, Expiration Report",
-    "change": "Generate the report automatically from Global Contracts on a schedule and let recipients subscribe themselves, instead of Cheryl Dudley compiling it and keeping the distribution list by hand.",
-    "reason": "The mail shows a monthly report (titled 03/01 and 04/01), not two a month: the 8 March issue was a one-time catch-up for a missed March report, and 2133.eml is the same 23 March message as 211.eml. Nothing in the mail shows that the report is put together by hand rather than printed from Global, and no add or remove requests for the list appear, so the time saved per report has no support.",
-    "research": "Look for mail showing how the report is produced (a manual compilation or a Global printout), more issues of it to set the real frequency, and any add or remove requests for the list.",
-    "time": "2026-11-02T19:52:32-05:00"
+    "name": "Nightly counterparty checkouts in Enpower Path Confirmation, Portland Real Time desk",
+    "change": "Pre-fill counterparty contact details and make the Path Confirmation save run in the background, one batch per counterparty.",
+    "reason": "The only evidence is one memo launching the tool (86.eml, 19 Nov 2001), sent two weeks before Enron's bankruptcy while counterparties were already stopping trades with Enron; nothing shows 25 counterparties being confirmed every night for long, the one minute of contact typing and the retyping of the same contacts are made up, and this same work and change were already rejected in decisions.md.",
+    "research": "Find messages from December 2001 onward (Enron estate or UBS Warburg Energy) showing the Real Time desk still confirming many counterparties' paths in Enpower Path Confirmation each night, with any note on save time or contact entry.",
+    "time": "2026-11-03T00:07:09-05:00"
   },
   {
-    "name": "Monthly OPM hours survey entry in the Access tool",
-    "change": "Pre-fill each cost center's hours by activity and commercial-team percentage splits with last month's values so managers only edit what changed.",
-    "reason": "The mail never shows managers re-entering unchanged hours or team splits in the Access tool: it says commercial teams and FTEs roll over each month, shows prior-month hours in a report, and says nothing about how hours are entered or how long it takes, so the 8 minutes x 37 managers and the 2 split follow-ups a month (the mailbox shows one in Oct 2000 and one in Aug 2001, both caused by a missing prompt rather than re-entry) are guesses.",
-    "research": "Find mail from the OPM team (Suzanne Nicholie, Shari Mao, Roxanne Saldana) or a manager after February 2001 that says whether the Access entry screen starts blank or with last month's hours, whether team percentages must be re-entered each month, and how long a manager spends on the survey; also count split follow-ups like 84.eml and 1447.eml across other mailboxes.",
-    "time": "2026-11-02T19:52:43-05:00"
+    "name": "Settling Real Time CAISO congestion-relief revenue",
+    "change": "Take congestion revenue straight from CAPS finals into the daily flash, with an automatic exception list against the inc sheet, instead of trader emails, hand calculations and month-end true-up chases",
+    "reason": "Most of the claimed saving rests on misreadings: the largest item (the desk's daily exposure tally, 150 of 370 minutes) is a net-position check the manager asked for and the change would not replace; Jim's hand calculation in 90.eml was a stopgap while the system was down ('When the system comes up'), and he says Volume Management 'haven't missed it for a long time'; the mail shows about 2 events a month, not 4; and once these are corrected, the added daily review of the exception list cancels most of what remains.",
+    "research": "Look for evidence that congestion revenue is routinely left out of the flash month after month (true-ups like 266.eml beyond August 2001), and for how long Volume Management actually spends on each event when the system is up, to see whether a narrower check of the flash against CAPS saves real time.",
+    "time": "2026-11-03T00:07:44-05:00"
   },
   {
-    "name": "Liquidation flash support from the desks",
-    "change": "Have the month-end liquidations run write each region's deal-level liquidation support into ERMS/1Intra/FRED Liquidations/<year>/<month> so Jim Little no longer requests it from the desks.",
-    "reason": "The mail shows one catch-up episode, not a monthly task for four regions: the only two requests (27 Feb and 29 Mar 2001) chase November, December and January 2000-01 support, the March message is a follow-up on the same December backlog, no request appears for any later month-end even though Giron's sent mail runs to June 2001, and 345.eml says ERMS cannot produce support for the transport liquidations, which are part of what was asked for.",
-    "research": "Look for liquidation-support requests or saves to the FRED Liquidations folder for month-ends after January 2001, from Phillip Love's, Patrick Ryder's or Jim Little's mailboxes, showing the request repeats every month for each region, and check whether the non-transport support (like Anne Bike's index-position file in 345.eml) is already produced routinely.",
-    "time": "2026-11-02T19:52:46-05:00"
-  },
-  {
-    "name": "Monthly Sitara price and demand-charge updates to match invoices",
-    "change": "Let settlements analysts enter the invoiced price or demand charge themselves on deals flagged as invoice-priced, with every change logged for the desk to review.",
-    "reason": "The same work and the same change are already saved in decisions.md as 'Monthly Sitara price updates to match counterparty invoices' ($8.50 a month), which cites the same messages (giron-d/sent/12, 141, 301, 313, 378, 469, 508, 738, 762, 81).",
-    "research": null,
-    "time": "2026-11-02T19:52:47-05:00"
-  },
-  {
-    "name": "Collecting biweekly time reports by email (Transwestern commercial group)",
-    "change": "Have each person record their own time off in the timekeeping system when it happens, so the assistant only reviews a list of exceptions instead of collecting email replies.",
-    "reason": "The same work and the same change are already saved in decisions.md as \"Pay-period time reports for the Transwestern commercial group\", which cites the same Lokay time-report messages.",
-    "research": null,
-    "time": "2026-11-02T19:53:15-05:00"
-  },
-  {
-    "name": "Monthly accounting arrangement for meter 98-7266 (TGLO storage fuel at Bammel)",
-    "change": "Replace the hand-built monthly accounting arrangement for meter 7266 with a standing evergreen deal pair on contracts 012-41500-05-002 and 012-88494-05-001.",
-    "reason": "The mail shows only two moments 20 months apart, does not show the monthly hand-build still happening in 2001 (Farmer was asked for a deal in Feb 2000), and by May 2001 the contracts were 'canceled or expired', so the October 2001 entry looks like cleanup after the storage flow ended, not ongoing monthly work.",
-    "research": "Look for mail after February 2000 showing whether Farmer set up the requested deal for 7266, and for any 7266 or TGLO Bammel storage volumes in months after May 2001; if neither exists, the work has ended and the idea fails.",
-    "time": "2026-11-02T19:53:34-05:00"
-  },
-  {
-    "name": "Waiting on Path Confirmation saves during nightly checkouts",
-    "change": "Make Path Confirmation save confirmations in the background (or in one commit per counterparty) so the shift trader does not wait about a minute per save.",
-    "reason": "The same work, the nightly Path Confirmation checkouts with the same background-save fix and the same messages (williams-w3/sent_items/86.eml and 62.eml), is already saved as item 2 in decisions.md.",
-    "research": null,
-    "time": "2026-11-02T19:53:37-05:00"
-  },
-  {
-    "name": "Wellhead spot/interim ticket requests to logistics",
-    "change": "Producer Services enters wellhead spot and interim tickets in Sitara directly instead of emailing the terms to Texas logistics to type in.",
-    "reason": "The mail shows about 9 requests in 7 months (about 1.3 a month, not 3) and only one bid-week list, not one a month. One cited 'resend' is really a new deal. It is also not shown that Producer Services can or may enter spot tickets: when asked to enter one directly, they passed it to logistics instead.",
-    "research": "Look for mail showing Producer Services entering spot or interim tickets in Sitara themselves, or a rule that keeps deal entry away from the people who negotiate the deal. Also look for more bid-week spot lists or ticket requests in other mailboxes that would raise the real count.",
-    "time": "2026-11-02T19:53:43-05:00"
-  },
-  {
-    "name": "Nightly real-time schedule checkout calls",
-    "change": "Auto-match Enpower prescheduled paths against OATI e-tags so traders call only counterparties whose paths do not match",
-    "reason": "The mail shows the tag record Enron sees is incomplete and that the nightly calls are what catch the problems, so matching against tags cannot safely replace the calls, and the claim that two thirds of calls would go away has no support.",
-    "research": "Mail showing that, over a normal stretch of weeks, Enron's tag data matched what counterparties actually scheduled, and how many paths and calls a typical night's checkout involved, could support a narrower version that only skips the manual save step for paths that match.",
-    "time": "2026-11-02T19:53:50-05:00"
-  },
-  {
-    "name": "Re-extending the TECO / El Paso Seven Oaks buy/sell tickets at meter 6884",
-    "change": "Paper the Seven Oaks tailgate adjustment and book one evergreen purchase and one evergreen sale ticket at meter 6884, instead of extending or re-creating the tickets by email whenever settlements finds them expired.",
-    "reason": "The work is a case of item 10 already saved in decisions.md ('Extending Sitara deals for meter flow outside the deal term'), which already cites 2095.eml from this thread, so saving it would count the same savings twice. The evidence also has errors: 983.eml's quotes are from April 1999 setup mail, not a March 2000 lapse; 2093/2095 and 2099 are one episode on 23 Feb 2001, not two; the proposal leaves out that George Weissman, who would have to paper it, said he was 'reluctant to open this can of worms' (1626.eml); and the counterparty-merge fix has nothing in the mail behind it.",
-    "research": "Show what the saved meter-flow exception list would not catch here, for example that 6884's buy/sell pair needs a new ticket rather than an extension. Count the real episodes: Jun 2000 (1626), 23 Feb 2001 (2093/2095/2099, replaced by El Paso deal 637225 in 2103), Apr 2001 (194/195/2149/2150), and Jul 2001 (95.eml, where 637225 had lapsed again). Find out whether the desk could book long-term tickets without the paper Weissman declined to draw up.",
-    "time": "2026-11-02T19:54:16-05:00"
-  },
-  {
-    "name": "Night-shift emailing of the daily EES and EPE model files",
-    "change": "Email the nightly EES model and daily EPE model automatically from their save folders to maintained distribution lists instead of traders sending them by hand.",
-    "reason": "The 2-sends-a-day rate is not supported: EES model mail appears only in June 2001 and EPE model mail only from December 2001, so the two never run together; the EES recipient fix (the EES Power Settlements list) already existed and was already in use; and what is left, one attachment to one address a night, saves about a minute or two.",
-    "research": "Find EES model sends after June 2001 that run alongside the EPE model, or EPE model mail showing real time or trouble per send (late, wrong or missing models, recipient changes, El Paso chasing a day), and check that the EPE work went on after the estate took over in February 2002.",
-    "time": "2026-11-02T19:54:26-05:00"
-  },
-  {
-    "name": "Long/short position hand-off emails to the Portland Real Time shift",
-    "change": "Replace the hand-typed 'we are long/short' emails with an Enpower report of each book's open positions for Real Time to fill.",
-    "reason": "The proposed report already exists: Real Time's position manager already shows each book's long/short by point and hour (183.eml: 'You will see us short this amount in the RT position manager'), so what the emails add is instruction (where to fill, what to do with it, price, which deal links), which Enpower deal data does not hold; and in 120.eml Enpower itself was wrong, so an Enpower-fed report would have carried the same error.",
-    "research": "Find mail showing Real Time traders re-keying or cross-checking hand-off emails against Enpower and how long that takes, and see whether the planned FSP consolidated position manager (167.eml) already covers it; a resubmission would have to target the instruction part (for example a fill-note field on the deal in Enpower) and count hand-offs from the preschedulers' mailboxes, not Bill's forwards.",
-    "time": "2026-11-02T19:54:44-05:00"
+    "name": "Transwestern short-term contract-quantity changes",
+    "change": "Shippers submit one-day or few-day MDQ increases and month-to-month continuations on a web form; the marketer approves with one click and the contract system generates the amendment.",
+    "reason": "The rate is not supported: all six distinct requests fall in 10-31 Dec 2001, and Lokay's sent mail from January to late March 2002 (about 100 messages) has none, so 6 a month is a one-month burst projected forward. The 15-minute amendment step is also assumed, and the marketer mostly forwards a one-word 'Approved.' rather than retyping terms.",
+    "research": "Find short-term MDQ or continuation requests outside December 2001 in other TW marketers' or Contract Administration's mail (Dennis Lee, Michael Bodnar, Lindberg, Lohman, Y'Barbo, McConnell), and anything showing how long Contract Admin spends on a one-day amendment.",
+    "time": "2026-11-03T00:07:46-05:00"
   },
   {
     "name": "Second, unposted TW Current Shipper rate matrix",
-    "change": "Ask the recipients once whether anyone uses the second matrix and, if no one does, stop updating and sending it.",
-    "reason": "The archive shows this work only once (the November 2001 rate change), so the assumed rate of a change every other month has no support, and the 20 minutes of re-keying is a guess for a file whose effort the mail never describes.",
-    "research": "Find other TW rate matrix postings or Current Shipper rate changes (for example other MATRIX<yyyymm> files, Global Settlement rate or TCR surcharge updates, or other mail from Rita Bianchi) that show how often these rates change.",
-    "time": "2026-11-02T19:55:23-05:00"
+    "change": "Ask the TW team once whether anyone uses Rita Bianchi's second Current Shipper rate matrix and stop keeping it up if nobody does.",
+    "reason": "The work shows up only once in the archive (29 Oct 2001), and nothing says how often the Current Shipper rates change, so the quarterly or monthly rate behind the saving is a guess.",
+    "research": "Look for other TW rate-matrix postings or Current Shipper rate changes, such as earlier MATRIX*.doc files, Global Settlement surcharge updates, or Rita Bianchi's or Elizabeth Brown's mail, that show how often the rates change; and for any reply saying whether anyone uses the spreadsheet.",
+    "time": "2026-11-03T00:08:07-05:00"
   },
   {
-    "name": "Monthly analyst (A&A) RC charges and RC-owner checks",
-    "change": "Generate the $6,400-per-analyst journal entry from the Org Database automatically and email only RC owners whose analyst count changed, instead of asking all 63 to check monthly.",
-    "reason": "The errors the mail reports are analysts who left while the Org Database still listed them, so their count never changes and a change-only notice would miss exactly those errors; the savings also rest on unsupported figures (all 63 recipients checking monthly, a 45-minute manual entry) drawn from two setup messages in early 2000.",
-    "research": "Look for later months' A&A charge or reclass mail showing how many RCs actually hold analysts, how often reclasses are needed, and how long Financial Operations spends on the entry; a revised idea would need a check that catches stale database records, such as matching against HR terminations or transfers.",
-    "time": "2026-11-02T19:55:33-05:00"
+    "name": "Transwestern shippers' short-term contract change requests",
+    "change": "Shippers send MDQ increases and month-to-month continuations through a structured request; the account director approves with one click and the system produces the amendment for contract admin to check.",
+    "reason": "The rate of 8-9 a month comes from a three-week burst (10 Dec 2001 - 3 Jan 2002): Lokay's sent mail runs from 29 Oct 2001 to 25 Mar 2002 and holds only about 10 such requests in all, about 2 a month, so at the proposal's own 15 minutes the saving is roughly 30 minutes a month, too little to pay for a shipper web form; the 15-minute amendment step is also assumed, and the same work was already rejected for this reason (decisions.md Rejected item 83).",
+    "research": "Find short-term MDQ, extension or continuation requests in other TW marketers' or Contract Administration's mail (Dennis Lee, Michael Bodnar, TK Lohman, Paul Y'Barbo, Lindberg, McConnell) outside December 2001, and anything showing how long Contract Admin spends on a one- or two-day amendment.",
+    "time": "2026-11-03T00:08:18-05:00"
   },
   {
-    "name": "Monthly counterparty name change/merger notices to ~170 people",
-    "change": "Send each counterparty name change or merger only to people with active deals or contracts with that counterparty, and post the full list on the intranet.",
-    "reason": "The 150 minutes saved per notice rests on two guesses the mail does not show: that most of the ~170 recipients are not affected, and that each spends a minute checking. The notices hold no list, and the mail suggests a name change affects scheduling and volume systems widely (1016.eml). The 584.eml evidence also points the other way: that notice went to a narrow list and still had to be forwarded by hand to three schedulers who were not on it.",
-    "research": "Find mail showing which recipient groups actually act on these notices and which ignore them (replies, objections, or 'take me off this list' requests), how many counterparties a typical monthly list holds, and whether Sitara/Global Contracts can map a counterparty to the people who need to know, including schedulers whose EDI and Unify paths it touches.",
-    "time": "2026-11-02T19:56:03-05:00"
+    "name": "Weekly purchase-requisition processing by Mary Poorman",
+    "change": "Move requisitions to SAP purchasing self-service with automatic approval routing and a named backup, so the coordinator handles only exceptions.",
+    "reason": "The only evidence is one offhand remark in a message of doubtful origin (482.eml) that says nothing about the steps, volume or tools of the requisition work, so neither the SAP self-service fix nor the 10-hours-a-week saving can be shown from the mail.",
+    "research": "Find mail that shows the requisition work happening: requisitions sent to or by Poorman, approval chases, purchasing or SAP requisition system mail, counts per week, and where the time goes. Confirm the message's origin against normal mail as well.",
+    "time": "2026-11-03T00:08:24-05:00"
   },
   {
-    "name": "HPL contract assignment, termination and expiration report",
-    "change": "Produce the report from a saved Global Contracts query on a fixed schedule and send it to a self-managed distribution list instead of Cheryl Dudley compiling and emailing it by hand.",
-    "reason": "The mail never shows the report being compiled by hand rather than printed from Global Contracts, so the 25 to 30 minutes saved per report has no support. Only two distinct issues appear (2133.eml repeats 211.eml), and the same idea was already rejected in decisions.md for this reason.",
-    "research": "Find mail showing how the report is produced (hand compilation or a Global printout) and how long it takes, more issues to set the real frequency, and add or remove requests for the distribution list.",
-    "time": "2026-11-02T19:56:17-05:00"
+    "name": "Next-day long/short position notices to the Real Time shift",
+    "change": "Replace typed 'Short/Long/Length for <day>' emails with an automatic next-day open-position view from Enpower that the shift checks at shift start",
+    "reason": "The mail shows Real Time can already read these positions in Enpower (120.eml, 'according to Enpower, STNW is long on peak @ PGE System'), and the emails exist to carry what Enpower does not hold: deals booked only in CAPS (512.eml, 112.eml 'built in Caps but not in enpower', with Bill telling them to hold the Enpower deal until the next day), which deal number to link, and where to deliver or sell (120.eml, 172.eml), so the proposed view would not remove the notices.",
+    "research": "Look for evidence that the notices mostly repeat data already correct in Enpower and carry no delivery or CAPS-only information; if so, a narrower change, such as a required template or a check against Enpower before sending (Kate's suggestion in 120.eml), might be proposed instead.",
+    "time": "2026-11-03T00:09:17-05:00"
   },
   {
-    "name": "Monthly industrial buyback and deficiency lists",
-    "change": "Record buyback, swing and deficiency terms on Sitara deal tickets and run one monthly Sitara report in place of the hand-kept lists",
-    "reason": "The mail shows two lists, not three: the scheduler's buyback list and the industrial 'Buyback & Deficiency Deals' worksheet are the same document. 601.eml suggests buyback status is already noted on deal tickets. 1253.eml ties the late buyback and swing setup to pathing work, not to comparing lists. So the 130 minutes a month and the day-1 setup claim are both overstated.",
-    "research": "Find what Julie Meyers' 'UPDATED SPREADSHEET' actually contains and whether it was already the source for the scheduler's worksheet, whether Sitara tickets already hold buyback terms, and how many months the worksheet was really produced; then re-estimate only the scheduler's monthly rebuild, likely 30-45 minutes.",
-    "time": "2026-11-02T19:56:36-05:00"
+    "name": "Transwestern shippers' short-term capacity changes",
+    "change": "Shippers submit one- or two-day MDQ increases, extensions and month-to-month continuations as a standard electronic request; the marketer click-approves and the system generates the amendment and updates the admin contract.",
+    "reason": "The rate of about 8 a month comes from a three-week burst (10-31 Dec 2001) plus two long-term Red Rock receipt amendments (164.eml, 57.eml) that are not short-term changes; Lokay's sent mail runs 29 Oct 2001 to 25 Mar 2002 and shows no short-term request after 3 Jan 2002, so the real rate is about 1-2 a month, and the same work has already been rejected twice for this reason (decisions.md Rejected items 83 and 85).",
+    "research": "Find short-term MDQ, one-day extension or monthly continuation requests outside December 2001 in other TW marketers' or Contract Administration's mail (Dennis Lee, Michael Bodnar, TK Lohman, Paul Y'Barbo, Lindberg, McConnell), and anything showing how long Contract Administration spends on a one- or two-day amendment.",
+    "time": "2026-11-03T00:09:20-05:00"
   },
   {
-    "name": "Monthly industrial buyback and deficiency lists",
-    "change": "Add buyback/swing/deficiency fields to Sitara industrial deals and publish one monthly Sitara report in place of three hand-kept lists.",
-    "reason": "There are two lists, not three: 852.eml shows Kenneth Seaman left and Robert Lloyd took over his monthly industrial report, built from Julie Meyers' worksheet. So the 45 minutes counted for Seaman's list is the same work the proposal keeps as Lloyd's, and a critic has already rejected this idea for the same reason.",
-    "research": "Find what Julie Meyers' 'UPDATED SPREADSHEET' contains, whether Sitara tickets already hold buyback terms, and how many months Lloyd's report was actually produced. Then estimate only the one list that would really be removed.",
-    "time": "2026-11-02T19:57:04-05:00"
+    "name": "Wellhead spot and interim tickets re-keyed in Sitara by logistics",
+    "change": "Producer Services enter spot and interim baseload wellhead tickets in Sitara themselves instead of emailing logistics to re-key them",
+    "reason": "The mail does not show that Producer Services can or do enter deals in Sitara (they ask others to enter even the committed-reserves tickets), the one correction cited was the requester's own typo that the change would not prevent, and the 12-a-month volume is about four times what the archive shows.",
+    "research": "Find mail showing Producer Services staff entering deals in Sitara themselves, and whether deal entry is kept with logistics or deal-entry staff as a control; then count the actual spot and interim tickets requested per month across the whole year.",
+    "time": "2026-11-03T00:09:59-05:00"
   },
   {
-    "name": "Houston Pipe Line Assignment, Termination & Expiration Report",
-    "change": "Generate the report automatically from Global Contracts on the 15th and before bid week, sent to a self-service distribution group, instead of Cheryl Dudley compiling and emailing it by hand.",
-    "reason": "The mail shows a monthly report (titled 03/01 and 04/01), not two a month: the 8 March issue was a one-time catch-up for the missed March report, and 2133.eml is the same message as 211.eml. Nothing shows the report is compiled by hand rather than printed from Global Contracts, and no list add or remove requests appear, so the 35 minutes saved per report has no support. The same idea has already been rejected twice in decisions.md for these reasons.",
-    "research": "Find mail showing how the report is produced (hand compilation or a Global Contracts printout) and how long it takes, more issues of the report to set the real frequency, and actual add or remove requests for the distribution list.",
-    "time": "2026-11-02T19:57:05-05:00"
+    "name": "Producer Services wellhead purchase ticket requests to logistics",
+    "change": "Producer Services keys spot and one-month wellhead purchase tickets into Sitara itself instead of emailing logistics to re-key them",
+    "reason": "The proposal rests on Producer Services already entering committed-reserves tickets in Sitara, but the mail shows the opposite: they write those tickets up and ask for the Sitara number after someone else enters them (789.eml: \"Please supply the sitara number once entered\"; 694.eml: \"We will generate a ticket to be entered into sitara ASAP\"), so the change means giving deal-entry rights to a new group, which the mail gives no basis for, and the time saved is small and guessed.",
+    "research": "Look for mail showing Producer Services (Taylor, Smith, Reinhardt, Graves) entering deals in Sitara themselves, or saying why deal entry is held by logistics or deal capture (a control rule or system access), and for any statement of how long Tom Acton spends entering these tickets.",
+    "time": "2026-11-03T00:10:30-05:00"
   },
   {
-    "name": "Monthly Michcon Citygate ENA/Enron Canada out-of-balance",
-    "change": "Re-book ENA deals 290657 and 290652 once to match Enron Canada's booking so the monthly ~$434 OA difference stops.",
-    "reason": "This is a one-off fix to a single wrongly booked deal that the person doing the work had already asked for, not a change to how the work is done, and its savings depend on a deal term the mail never gives.",
-    "research": "Only a pattern would change this: several deals in the mail where ENA and Enron Canada book the same intercompany trade differently and settlements has to chase the desk each month, which would support a process change such as a booking check between the two entities.",
-    "time": "2026-11-02T19:57:12-05:00"
-  },
-  {
-    "name": "Monthly HPL Assignment, Termination, Expiration Report",
-    "change": "Generate the report automatically from Global Contracts on a schedule and send it to a self-service subscription list instead of Contract Administration compiling and sending it by hand",
-    "reason": "The mail never shows the report being compiled by hand. The only clue (1360.eml) is that Contract Administration already pulls such lists straight from Global Contracts, so the 45 minutes per issue and the 55 minutes a month saved are unsupported, and what is left (running a pull, attaching it, sending it to a saved list) takes only a few minutes.",
-    "research": "Find mail showing how the report is actually built (for example, retyping or checking contract entries by hand, or a revision caused by compiling errors, such as the February 2001 revision mentioned in 2114.eml) or naming the time it takes; without that, the savings stay at a few minutes a month.",
-    "time": "2026-11-02T19:57:26-05:00"
-  },
-  {
-    "name": "Daily email approval of the Enovate DPR",
-    "change": "Automate the open-position tie-out and switch the three approvers to exception-only sign-off, with the final DPR released at a cutoff.",
-    "reason": "The evidence is misread in places. 686.eml is not an approval, 221.eml shows an approver chasing the analyst rather than the analyst chasing approvals, and no reply from Tomaski or Radous is in the archive. The 10-minute daily saving is also too high: Giron's replies are mostly a one-word 'OK', and the approvers would still have to review the report.",
-    "research": "Look in the Tomaski, Radous, Falcone, Abel or Luong mailboxes (if any exist) for their own replies, for the analyst chasing missing approvals, and for how much work Giron's position tie-out takes. Then re-estimate the saving using only the reply and tie-out steps, which is likely 2 to 4 minutes a day.",
-    "time": "2026-11-02T19:57:48-05:00"
-  },
-  {
-    "name": "Manual POPS overrides when MIPS feeds zeros for incomplete meters",
-    "change": "Have the nightly MIPS-to-POPS feed mark incomplete meter volumes as incomplete instead of zero, so POPS keeps the Gas Control estimate.",
-    "reason": "The fix was already being built when the problem surfaced (935.eml: the programmers were working on it that day), and the mail shows only one incident clearly caused by the zero feed, so the 2-per-month rate and the ongoing saving are not supported.",
-    "research": "Look for mail after March 2000 showing zeroed meters that MIPS still sent after the vendor fix (meters named, override requests to Volume Management), or a list of the affected meters (Tom Acton asked George Grant for one in 935.eml), to show the work continued and how often.",
-    "time": "2026-11-02T19:58:15-05:00"
-  },
-  {
-    "name": "Monthly industrial buyback/deficiency lists",
-    "change": "Replace Kenneth Seaman's buyback list, Julie Meyers' spreadsheet and the hand-rebuilt Industrial report with one monthly report from Sitara deal tickets.",
-    "reason": "The proposal counts the same list twice: Seaman's buyback list and the Industrial report are one stream of work, which Lloyd took over in February 2000. It counts 45 minutes a month for a report that 1253.eml says nobody had seen 'in a few months'. And it assumes a Sitara report could replace Meyers' spreadsheet, whose contents the mail never shows. Two earlier critics rejected this idea for these same reasons (decisions.md items 90 and 91), and this version answers none of them.",
-    "research": "Find what Meyers' 'UPDATED SPREADSHEET' attachments contain, and whether any of it is not already in Sitara buyback tickets (e.g. #148381). Find which months Lloyd actually produced the Industrial report after March 2000. Then estimate only the hand work a ticket report would really remove, likely 30-60 minutes a month.",
-    "time": "2026-11-02T19:58:18-05:00"
-  },
-  {
-    "name": "Month-end HPLC/ENA intercompany accrual variance list and chasing",
-    "change": "A nightly tie-out report that compares the HPLC and ENA sides of every intercompany Sitara deal and emails schedulers any deal with a missing or mismatched side before the accrual runs.",
-    "reason": "The mail shows the variance list only once, as a first-time request for a fix, and the other two cited messages are a one-off cleanup of an old 1999 deal and a one-time SAP cleanup with a deadline; the claim that the list is built by hand conflicts with mail saying an intercompany report already exists, and the work the proposal admits stays (researching each deal) is most of the cost.",
-    "research": "Look for Gregg Lenart variance lists or Thu Nguyen chase emails for other accrual months, and for how the intercompany or interdesk report is produced, to show the list is rebuilt by hand every month and how many deals are chased each time.",
-    "time": "2026-11-02T19:58:48-05:00"
-  },
-  {
-    "name": "Double scheduling and allocation of PG&E Texas (PGEV) transport under ENA plus an ENA/HPL desk-to-desk deal",
-    "change": "Assign ENA's PGEV transport contracts to HPL so the gas is nominated, held and allocated under one contract with no desk-to-desk deal.",
-    "reason": "The person who asked for this, Daren Farmer, decided against it a year later. In April 2001 (155.eml) he wrote that on PGEV 'we have been transporting the gas under ENA' and 'We want to keep these transport contracts with ENA', because HPL was being split off for AEP. The other cited mail is about different problems, and the daily and monthly minutes are guesses.",
-    "research": "Only new evidence would change this: mail after April 2001 showing that management decided to move the PGEV transport to HPL after all, or that the ENA leg and the desk-to-desk leg still had to be nominated and allocated by hand once HPL went to AEP.",
-    "time": "2026-11-02T19:59:06-05:00"
-  },
-  {
-    "name": "Monthly poll of risk leads for new book codes before NYMEX invoicing",
-    "change": "A scheduled TAGG report, run before NYMEX invoicing, lists every book code that is new or held its first third-party financial deal that month, so settlements no longer has to poll the risk leads.",
-    "reason": "The same work, from the same message (giron-d/sent/556.eml), is already saved as decision 13, 'Month-end poll of Risk for new book codes before NYMEX invoicing', which proposes the same automatic report.",
+    "name": "Weekly check of ERMS curves against RisktRAC",
+    "change": "A nightly automatic comparison of the ERMS and RisktRAC curve and book lists replaces the weekly manual review.",
+    "reason": "The same work is already saved as 'Setting up new forward curves in RisktRAC and TAGG', which cites the same message (giron-d/sent/410.eml) and already replaces the weekly manual check with a nightly gap report.",
     "research": null,
-    "time": "2026-11-02T19:59:19-05:00"
+    "time": "2026-11-03T00:10:46-05:00"
   },
   {
-    "name": "Nightly check that every gas book and post ID is official",
-    "change": "The risk system checks after the nightly calc which calculated books and post IDs are not official, including flat ones, and alerts each book's owner by name, replacing the hand-run macros and the manual tracking.",
-    "reason": "The same nightly officialization check is already saved as item 3 in decisions.md (\"Nightly check that every post ID is officialized\", $921.40 a month), citing the same messages 533, 582 and 595.",
+    "name": "Transwestern marketers' weekly bullets round",
+    "change": "Replace Kim Watson's Friday email request for bullets with a shared bullets page each account director fills in, with no 'none' replies.",
+    "reason": "The mail shows only two bullets rounds in all (Fri 8 Mar and Fri 22 Mar 2002), Lokay sent other mail on Fridays 1 Mar and 15 Mar with no bullets, so the weekly rate of 4.3 a month is not supported, and the main time saved (Watson assembling the replies into a summary) does not appear in the mail at all.",
+    "research": "Look in Kimberly Watson's or the other account directors' (Lindberg, Lohman, McConnell, Y'barbo) mailboxes for further 'Bullets' requests and replies, and for the summary Watson builds from them, to show how often the round really happens and what she does with the replies.",
+    "time": "2026-11-03T00:11:10-05:00"
+  },
+  {
+    "name": "Emailing dated curve files to JPMorgan",
+    "change": "Send the dated curve file to JPMorgan automatically from the official curve close, to a fixed address list, instead of Darron Giron emailing it by hand",
+    "reason": "The mail shows only two such sends, six weeks apart, among the 163 messages Giron sent in Dec 2000 and Jan 2001, so the claimed every-business-day frequency is unsupported; several other claims about how the work is done are not in the mail either.",
+    "research": "Look for more Giron-to-JPMorgan curve emails, or any message saying JPMorgan gets curves on a schedule (daily, weekly, under a contract), and for anything showing the work takes minutes or causes errors beyond the one 'Sorry wrong address' resend.",
+    "time": "2026-11-03T00:11:47-05:00"
+  },
+  {
+    "name": "Manager approval of small expense reports in Concur",
+    "change": "Auto-approve expense reports under $100 in Concur, with the manager reviewing a monthly digest afterwards.",
+    "reason": "The five approvals in 12 days were a one-time rush to clear expenses before the group left Enron's expense system for UBSW Energy, so the work ends and the monthly rate of 12 is not real; the whole archive shows only seven such reports.",
+    "research": "Look for this approval work, and how often it happens, under UBSW Energy's new expense process after the transaction closes; Enron's Concur/XMS approvals for this group stop there.",
+    "time": "2026-11-03T00:11:55-05:00"
+  },
+  {
+    "name": "HL&P month-to-date flow report and shortfall check",
+    "change": "Have the system produce the HL&P daily nominated-versus-flowed report, with the 5% tolerance and buyback volumes worked out, instead of a hand-built spreadsheet emailed each week.",
+    "reason": "The same work is already saved as item 16, 'HL&P month-to-date flow report', which cites all eleven of these update emails plus the 12/99 shortfall thread (683.eml) and the June 2000 resend (1217.eml).",
     "research": null,
-    "time": "2026-11-02T19:59:55-05:00"
+    "time": "2026-11-03T00:12:08-05:00"
   },
   {
-    "name": "Deal documents for Arthur Andersen's monthly originations testing",
-    "change": "File each originated deal's TAGG ticket, executed confirmation and forwards detail in a read-only, deal-number folder that the auditors open themselves.",
-    "reason": "The mail shows only two single-deal requests to Giron (Jan and Mar 2001) across about eight months of AA monthly-testing mail, not one a month. The 3-week open request was caused by Giron missing it while on vacation (118.eml), not by the process. So the saving is about 35 minutes every three or four months, far too small for a filing system that covers every originated deal.",
-    "research": "Find originations deal-document requests from AA (Mark Austin, Sharon Smith) to other desk leads or in other months, for example in Keiser's, Baumbach's or Love's mailboxes, to show the requests really come monthly or across several desks, and find any mail showing how long putting a deal packet together takes.",
-    "time": "2026-11-02T20:00:25-05:00"
+    "name": "Setting up a new trading book across TAGG, Sitara, RisktRAC/ERMS, CPR and EOL",
+    "change": "One routed new-book request form with status tracking and a single completion notice, instead of separate emails to each system's administrator",
+    "reason": "The routed process already exists: Shona Wilson's memo (giron-d/sent/410.eml, Nov 2000) says one RisktRAC book request form goes to Risk Analysis and Reporting, which forwards it to the ERMS administrator and Global Counterparty and sends a final email to the books list, and says this process had 'formally existed for a number of months'; Giron's own requests from Oct 2000 on (557, 564, 491, 160) are single form submissions to Trevino/McIntyre, so the scattered emails cited come from mid-2000, when people were not following the process, not from how the work runs now.",
+    "research": "Only a new angle could revive it: mail from after Nov 2000 showing that book requests made through the single form still bounce, stall or need follow-up emails to CPR, EOL or Sitara administrators. The steps the form does not cover (the CPR region and EOL trader mapping) would then be a narrower proposal, with its own count of how often it happens.",
+    "time": "2026-11-03T00:12:09-05:00"
   },
   {
-    "name": "Real-time congestion revenue notices to Volume Management",
-    "change": "A nightly comparison of CAISO congestion awards in CAPS finals against the inc sheet and the ISO flash, emailing only the differences, replaces the hand-totalled notices.",
-    "reason": "The same work and change is already saved as item 19, 'Real Time desk's hand-figured congestion revenue emails to Volume Management', and it cites all of this proposal's messages.",
+    "name": "Settling HPL day/spot deal price and volume disputes",
+    "change": "Sitara sends each counterparty a next-morning recap of the prior day's HPL day deals so price and volume mismatches are fixed at once, not at invoicing.",
+    "reason": "The disputes are a post-sale cleanup: HPL passed to AEP from June 2001 (136.eml, 106.eml 'a deal from when we were at Enron'), every disputed deal is for Dec 2000 to May 2001 production, the earlier mail shows only about three such threads in all of 2000, and several cited threads are not day-deal disputes, so there is no ongoing work at 5 a month for a recap to prevent.",
+    "research": "Find disputes over day deals in Enron's own books after June 2001, outside HPL (for example ENA Texas or other desks' settlements mail), at a steady rate, plus evidence of whether those deals were already confirmed by Enron's Confirmations group; without that the verdict stands.",
+    "time": "2026-11-03T00:12:11-05:00"
+  },
+  {
+    "name": "Upkeep of TW's second, unposted Current Shipper rate matrix",
+    "change": "Ask the recipients once whether anyone uses the unposted matrix, and retire it if nobody does.",
+    "reason": "The archive shows the second matrix being sent only once (29 Oct 2001), and no message says how often Current Shipper rates change, so there is no basis for how often the saving would happen.",
+    "research": "Look for other Current Shipper or Global Settlement rate changes, other TW rate matrix postings, or anything that gives a schedule for those changes (for example, in Rita Bianchi's, Elizabeth Brown's or Jeanette Doll's mail). Two or more dated sends, or a stated schedule, would give a rate.",
+    "time": "2026-11-03T00:12:34-05:00"
+  },
+  {
+    "name": "Building the daily El Paso Electric (EPE) preschedule/schedule sheet",
+    "change": "Generate the daily EPE schedule sheet from e-tags and Enpower deals, check it automatically against EPE's dispatch, and phone only the counterparties on the exception list.",
+    "reason": "The change depends on tag data the mail shows Enron does not get (52.eml: the missing tag did not list EPMIWE, and only EPE's dispatchers had it), the error rate of 8 days a month is about four times what the mail shows, the checkout-call part repeats work already rejected (decisions.md item 60), and 133.eml is a turbine-outage note, not a daily EPE file.",
+    "research": "Find mail showing Enron could read every tag in EPE's control area (for example as EPE's agent on the tagging system) and that the tags exist when the day-ahead sheet is built; count the schedule errors in the EPE sheet over several months; and find anything saying how long preschedule spends building the sheet each day.",
+    "time": "2026-11-03T00:12:36-05:00"
+  },
+  {
+    "name": "Month-end basis and index roll-off calculated twice",
+    "change": "Have the risk system produce the 100% basis view and the rolled-off V@R view from one calculation, using a month-end roll-off percentage set centrally.",
+    "reason": "The same work is already saved as item 3, 'Month-end basis and index roll-off in the gas risk books', which cites the same two messages (giron-d/sent/631.eml and 442.eml) and proposes the same change.",
     "research": null,
-    "time": "2026-11-02T20:01:49-05:00"
+    "time": "2026-11-03T00:12:39-05:00"
   },
   {
-    "name": "HL&P month-to-date flow report and month-end short-day list",
-    "change": "Generate the HL&P month-to-date flow report and month-end short-day list automatically from POPS/SCADA instead of a hand-kept spreadsheet emailed to the trader",
-    "reason": "The mail shows the hand-kept report only from 12/21/99 to 3/1/00 and the short-day list only once (12/99), with nothing more in nine further months of the same mailbox, so the claimed ongoing rate of 4-5 reports plus a monthly short-day check is not supported.",
-    "research": "Find Vaughn's HL&P month-to-date reports or month-end short-day lists after March 2000 (in this or other mailboxes, e.g. Wallis's or Luong's); if they continue, resubmit with those occurrences and drop 740/860 as proof of the short-day step.",
-    "time": "2026-11-02T20:02:41-05:00"
+    "name": "Monthly vacation round and out-of-office coverage notices in Energy Operations / HPL logistics",
+    "change": "One shared absence calendar replacing the monthly vacation request round, plus a standing desk-coverage matrix so out-of-office notices go only to backups",
+    "reason": "The vacation-round half is already saved (decision 24, same calendar, same files 954/1143/1282), and the coverage-notice half rests on miscounted notices and a change that would stop telling the people who need to know who to call.",
+    "research": "A coverage-only proposal would need many more distinct scheduler out-of-office notices across the year, and something in the mail showing that callers went to the wrong person or that notices took real effort to write or re-send. Without that, the savings stay a few minutes a month.",
+    "time": "2026-11-03T00:12:43-05:00"
   },
   {
-    "name": "Weekly TW commercial bullets round",
-    "change": "Replace Kim Watson's Friday 'send me your bullets' email round with a shared running status file that marketers add to and she reads on Friday.",
-    "reason": "The mail shows the bullets round only twice (8 and 22 March 2002), not weekly: Lokay's sent items cover weekly Friday reports from December 2001 to March 2002 with no bullets on the other Fridays, including 1 and 15 March. The 19 minutes per week is also inflated for a one-line 'none' reply and a single forward.",
-    "research": "Find Watson's bullets requests, or marketers' bullet replies, in other mailboxes (Watson, Lindberg, Lohman, McConnell, Y'barbo) across several months to show a real weekly or biweekly cadence. Then re-estimate the savings with only the overhead a shared file removes, about a minute per marketer per round.",
-    "time": "2026-11-02T20:02:46-05:00"
+    "name": "Monthly HPL Assignment, Termination & Expiration report",
+    "change": "Generate the report as a scheduled query from the Global Contracts database before each bid week and send it to a self-service subscription list.",
+    "reason": "The same work is already saved in decisions.md as item 18, 'Monthly HPL Assignment, Termination & Expiration Report', with the same change and the same messages (farmer-d/logistics/211.eml, 2114.eml), so saving it again would count the saving twice.",
+    "research": null,
+    "time": "2026-11-03T00:13:35-05:00"
   },
   {
-    "name": "ENA-to-Burlington capacity release upside sharing",
-    "change": "Have Transwestern billing (CBS) compute ENA's release credit and TW's 50% marketing fee automatically each month instead of a hand calculation and manual invoice adjustment.",
-    "reason": "The mail shows one special deal on one contract (24924) handled twice, for January and February 2002, with no sign it continued; the time spent was mostly on whether to pay ENA at all while ENA owed TW money, which billing automation would not remove; and a CBS change for one contract would cost more than the roughly 45 minutes a month it could save.",
-    "research": "Look for mail showing the ENA-to-Burlington release, or other releases with the same 50/50 upside-sharing terms, being calculated and adjusted by hand in March 2002 or later, or on other contracts, with the time Billing spends on each manual adjustment.",
-    "time": "2026-11-02T20:03:51-05:00"
+    "name": "Monthly TECO Seven Oaks (meter 6884) under/over-take adjustment",
+    "change": "Paper the adjustment with TECO and set up standing evergreen purchase and sale deals at meter 6884 so volume management stops asking the desk for deals each month",
+    "reason": "The account of today's work is out of date: the mail shows standing buy/sell deals (purchase 137870, sale 235670) were set up at meter 6884 after June 2000, and the 2001 stalls come from those deals expiring at 12/00 and from TECO being replaced by El Paso as the counterparty, which an evergreen TECO deal would not fix; the monthly frequency and 42 minutes rest on one request and one remark.",
+    "research": "Restate the work as extending or re-booking the meter 6884 buy/sell deals when they expire or the counterparty changes (corpus/farmer-d/logistics/2093.eml, 2095.eml, 2099.eml, 2149.eml, 2150.eml, 95.eml), count how often that actually happens, and propose a change aimed at that, such as booking the deals for the full term of the lease or plant agreement and rolling them over when the counterparty changes.",
+    "time": "2026-11-03T00:13:51-05:00"
+  },
+  {
+    "name": "Seven Oaks / meter 6884 monthly tailgate adjustment deals",
+    "change": "Paper the Seven Oaks adjustment with El Paso (formerly TECO) and book one standing buy/sell deal pair at meter 6884.",
+    "reason": "The same work is already saved as decisions.md item 22 ('Seven Oaks meter 6884 monthly plant adjustment deals', standing evergreen purchase and sale with El Paso), citing the same files 1626, 194, 2067, 2099 and 95.",
+    "research": null,
+    "time": "2026-11-03T00:14:17-05:00"
+  },
+  {
+    "name": "Monthly RC allocation % update to commercial teams",
+    "change": "Pre-fill each RC's monthly allocation % from the OPM hours survey's commercial-team split, so directors reply only if they disagree.",
+    "reason": "The allocation file is already sent pre-filled with last month's or preliminary percentages and asks only for changes (862, 1083), and nothing in the mail shows the OPM survey produces per-RC commercial-team percentages that could replace it (1447 shows OPM itself still missing the split), so most of the 520 minutes are not there to save and rest on a guessed 70 managers.",
+    "research": "Find mail showing that OPM's Access tool actually holds hours by commercial team for each RC, on the same team list and month as the Consolidations file, and replies to the allocation file showing how many directors and managers actually change percentages each month and how long it takes them.",
+    "time": "2026-11-03T00:14:47-05:00"
+  },
+  {
+    "name": "Annual budget staffing and salary worksheet",
+    "change": "Pre-fill each manager's budget staffing and salary worksheet from an HR/payroll extract by RC",
+    "reason": "The mail contradicts the estimate: Diane asks managers for only 'a little bit of information', the salary step is a short list of positions with a one-word high/low guess, and she says averages are as accurate as current salaries, so a payroll pre-fill would remove only a few minutes per manager once a year, not 30.",
+    "research": "Look for mail from later budget cycles (2001 for 2002) or from managers showing that the salary and roster step actually took them substantial time, needed several exchanges with Diane, or produced budget errors.",
+    "time": "2026-11-03T00:14:55-05:00"
+  },
+  {
+    "name": "Monthly Investor Relations volumetric variance explanations",
+    "change": "Have the monthly Statistical Database refresh list the top counterparty and EOL/non-EOL drivers for each region with a >10% variance, so controllers confirm drivers instead of researching them.",
+    "reason": "decisions.md has already rejected this work twice for the same gaps, and this version repeats them: nothing in the mail shows that the Statistical Database holds counterparty or EOL detail, or that controllers research drivers by hand (Baumbach's one- and three-line replies name the drivers from memory, the August one the next morning), and the 20-to-8-minute saving for 11 controllers is costed from one controller's replies.",
+    "research": "Find mail showing what the Statistical Database contains (counterparty or EOL breakdowns), replies from controllers other than Baumbach, and requests for other months, showing that working out the drivers takes real lookup time; then cost only that lookup step for the controllers who actually reply.",
+    "time": "2026-11-03T00:15:57-05:00"
+  },
+  {
+    "name": "Double booking of PG&E Texas transport on ENA and an ENA-HPL desk-to-desk deal",
+    "change": "Have Legal transfer the ENA PG&E Texas transport contracts to HPL and drop the ENA-HPL desk-to-desk deal, so the transport is scheduled and allocated once.",
+    "reason": "The organization later decided against the change: in April 2001, as HPL was being sold to AEP, Daren Farmer wrote that the PGEV transport contracts should stay with ENA (farmer-d/logistics/155.eml), and the only evidence for the work is one April 2000 memo that gives no frequency.",
+    "research": null,
+    "time": "2026-11-03T00:16:11-05:00"
   }
 ]

@@ -1,22 +1,22 @@
 {
   "leads": [
     {
-      "work": "Monthly full-month position reconciliation done by hand over email. Daren Farmer sends the whole HPL nomination/position list (about 3,600 rows of scheduled vs actual volumes by meter) to the team. Each recipient then has to find their own meters in it and confirm back to him by close of business Thursday.",
-      "why": "The 'full month position' looks like a recurring month-end cycle. Every recipient scans a huge shared list for their own meters, and Daren then has to chase and collect the confirmations one by one. A per-person filtered report, or self-service access to the scheduling system, plus confirmation tracking could replace this. Many rows show large variances (±40,000), so the variance review itself may also be a big recurring job.",
+      "work": "Manual monthly reconciliation of the full-month position (scheduled vs. actual volumes by nomination and meter). Daren Farmer sends the whole HPL position to the team, and each person has to pick out their own meters by hand and confirm back to him by a deadline (close of business Thursday).",
+      "why": "The message is titled 'Full month position', which suggests a recurring month-end job. It has about 3,600 nomination rows with SCHEDULED/ACTUAL/VARIANCE/STATUS/METER columns. Recipients are asked to 'pull your own meters out of this and confirm back to me', which is manual filtering and confirming that could be automated: split the report by meter owner and flag variances. Many rows show large variances and PENDING status, which may each need follow-up.",
       "files": [
         "farmer-d/logistics/3221."
       ]
     },
     {
-      "work": "Working around failed email attachments: the position report attachment kept bouncing off the mail gateway, so it was pasted into the email body as text.",
-      "why": "The sender says the attachment 'keeps bouncing off the gateway'. That suggests repeated failed sends, and pasting a fixed-width table that recipients then have to re-key or parse. If large reports are regularly shared this way, a shared drive or report link would remove the problem. Search the archive for other bounced or oversized attachments.",
+      "work": "Workaround when report attachments fail: large position spreadsheets get pasted into the email body because the attachment 'keeps bouncing off the gateway'.",
+      "why": "The phrase 'keeps bouncing' suggests the failure has happened more than once. It costs repeated send attempts, and pasting the data makes it harder to filter or reuse. A shared report location or report system would remove the email handoff altogether.",
       "files": [
         "farmer-d/logistics/3221."
       ]
     },
     {
-      "work": "Data quality problems in the scheduling/position extract that will force manual cleanup or follow-up during reconciliation.",
-      "why": "The 'full month' position has flow dates spread across all of 2001, in a day/month format with padded spaces. Counterparty IDs repeat in cycles (TXU-0000 to TXU-0399, then again), and many rows show scheduled at nearly 0 against large actuals, or the reverse. Status is only PENDING or SCHEDULED. All of this would cause questions and rework when people confirm their meters. Check for follow-up threads about wrong position data.",
+      "work": "Data quality checks on the scheduling/position report. FLOW_DATE values in a 'full month' report cover all of 2001 in day/month format, and counterparty IDs repeat (TXU-0000 to TXU-0399 cycle over and over).",
+      "why": "A month-end position that spans dates across the whole year suggests the extract is wrong or unfiltered. Each recipient would then have to clean or check the data by hand before confirming. Investigators should look for other messages about bad position or nomination reports from the same group (Farmer, Giron, Williams, Lokay).",
       "files": [
         "farmer-d/logistics/3221."
       ]

@@ -51,7 +51,7 @@ def _run(corpus_dir: Path, out_dir: Path, steps: dict, parallel: int, explore_mi
          analysts: int, echo) -> str:
     # A worker that fails is tried once more; a second failure stops the run.
     failed_before = set()
-    record = {"pid": os.getpid(), "started": now(), "ended": None, "status": "running",
+    record = {"pid": os.getpid(), "started": now(), "ended": None, "status": "running", "explore_minutes": explore_minutes,
               "step": None, "working_on": [], "remaining": 0, "since": None, "failed": []}
 
     def note(**fields) -> None:

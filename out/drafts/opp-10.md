@@ -1,47 +1,56 @@
-# Request: nightly report of ERMS curves missing from RisktRAC (to replace our weekly hand check)
+# Starting next month-end: one P&L package per month for Arthur Andersen instead of per-book requests
 
-*Email, drafted for opportunity 10: Weekly check that new ERMS curves exist in RisktRAC, $215 a month.*
+*Email, drafted for opportunity 10: Monthly gas P&L top pages and curve-shift reports for Arthur Andersen, $184 a month.*
 
-**For:** From the head of Risk Analysis and Reporting to the IT team that supports ERMS, RisktRAC and TAGG, with a copy to the risk leads of the commodity desks
-
----
-
-Subject: Request: nightly report of ERMS curves missing from RisktRAC
-
-To: IT support for ERMS / RisktRAC / TAGG
-Cc: Risk leads, commodity desks
-
-The ask: Please set up a nightly job that compares the curves in ERMS with the curves in RisktRAC and the TAGG mapping. It should email any ERMS curve that has no match to Risk Analysis and Reporting and to the risk lead of the desk that owns the curve.
-
-Why: If a curve isn't set up in RisktRAC, its positions are left out of VaR, so VaR is wrong until someone notices. Right now we only notice through a weekly check done by hand, so a gap can last up to a week. A nightly report would show it the next morning.
-
-Please reply with:
-1. Whether this can be done, and who in IT will own it
-2. A rough date for a first test run
-3. Anything you need from us, such as how to tell which desk owns a curve
-
-Desk risk leads: you don't need to do anything yet. Once the report is running, you'll get an email only when one of your desk's curves is missing from RisktRAC or TAGG. When that happens, please send the curve set-up request form for it.
+**For:** Gas desk controllers (cc: Arthur Andersen gas audit team; whoever runs the gas desk's month-end report jobs)
 
 ---
 
-Background, for whoever needs it
+To: Gas desk controllers
+Cc: Arthur Andersen gas audit team; whoever runs our month-end report jobs
+Subject: Starting next month-end: one P&L package per month for Arthur Andersen instead of per-book requests
 
-How it works today
-- When a trader needs a new price curve, the desk's risk management team builds it in ERMS.
-- They fill in a curve set-up request form so Risk Analysis and Reporting can set the curve up again in RisktRAC, the system that calculates VaR.
-- Separately, they email IT to add the curve to TAGG.
-- In the past few months, not everyone has followed this procedure, and forms haven't always been sent. That's why Risk Analysis and Reporting started checking by hand every week that every new ERMS curve is also in RisktRAC. The first check found many ERMS curves that weren't in RisktRAC, and each one has to be worked out with the desk.
+What I'm asking for:
+After each month-end close, a scheduled job will copy the P&L top pages and curve-shift reports we already produce for every gas book into one package for AA. We would stop forwarding AA's requests to the book administrators and stop gathering reports by hand. To set it up I need three things before the next close:
 
-What the nightly job should do
-- Compare all ERMS curves with the curves in RisktRAC, and with the TAGG mapping.
-- List every ERMS curve that has no match in RisktRAC, TAGG or both, and say which system is missing it.
-- Send the list each morning to Risk Analysis and Reporting and to the risk lead of the desk that owns each curve.
-- If nothing is missing, the email can be skipped or can simply say "no exceptions", whichever is easier.
+1. Each controller: fill in the book-owner list below for your books (the book and the administrator who owns it). Keep it current when ownership changes.
+2. Whoever runs our month-end report jobs: confirm the job can find and copy, for every gas book, (a) the official P&L top page for the last business day of the month and (b) the top pages and curve-shift reports for the five days with the largest P&L, counted by size, gain or loss.
+3. AA: tell us whether you can open a read-only folder on our side. If not, we will email the package to your Andersen addresses. You lost Lotus Notes access at the end of February.
 
-What changes for us
-- Risk Analysis and Reporting stops doing the weekly comparison by hand. We'll work from the short exception list instead.
-- Missing curves will show up the next morning rather than up to a week later, so VaR isn't left wrong in the meantime.
-- The weekly check takes about 35 minutes each time, which is roughly 2.5 hours a month. This doesn't count the time spent on forms or TAGG requests.
+Why: every month the same request goes from AA to us, from us to as many as seven administrators each, and then back. Items go missing and AA has to send second requests. If a controller is away, the request waits, because AA can't tell who owns which book. One standard package plus an owner list ends that cycle.
 
-A possible later step (not part of this request)
-When a new curve is created in ERMS, it could automatically create the RisktRAC set-up request, filled in from the ERMS curve definition, so nobody has to fill in the form by hand. We'd like to talk about this once the nightly report is running.
+---
+
+BOOK-OWNER LIST (to sit next to the package)
+
+| Book / region | Controller | Book administrator | Date last confirmed |
+|---|---|---|---|
+| West Firm | | | |
+| FT Northwest / North West Firm | | | |
+| Mgmt. West | | | |
+| Central Firm | | | |
+| Central Intra-Month (IM-Central) | | | |
+| Texas Intra-Month (IM-Texas) | | | |
+| IM-East | | | |
+| (add any other gas book) | | | |
+
+---
+
+Background, for anyone who wants it
+
+How it works today:
+- AA emails the controllers a list of books for the month. For each book they ask for the P&L top page for the last day of the month. Where curve shift drives the P&L, they also ask for "the P&L top pages for five of the largest days including the Curve Shift Reports."
+- Each controller forwards the request to his book administrators, collects what they find and passes it to AA. Sometimes AA comes to pick up paper copies instead.
+- Things slip. In October we got a second request for August that went from controller to controller to administrator before anyone pulled the reports. In December the West Firm, FT Northwest and Mgmt. West top pages and curve-shift reports were still missing from the third-quarter file, and they had to be pulled and copied by hand.
+- In January one request covered IM-East, IM-Central and IM-Texas across two months and four controllers. AA was held up while I was away because, as they put it, "Is there someone else that can direct us to?" A week later they had to ask us to "direct me to the individual responsible for each of the desks listed below."
+
+What changes:
+- After close, the job puts (a) and (b) above for every gas book into one read-only package, or emails it to AA if they can't open the folder.
+- AA chooses the books it wants to test straight from the package. They contact the administrator named on the owner list only to discuss what drove the P&L, which works the same as today.
+- Controllers stop forwarding requests. Administrators stop pulling and copying reports. Second requests and "who is responsible" questions should stop.
+
+What it saves: about 130 minutes of our time each month, roughly 2.2 hours or $184 a month. It also cuts the delays and the missing items, which this figure doesn't count.
+
+What doesn't change: the reports themselves. The job only copies top pages and curve-shift reports we already produce. It doesn't create anything new.
+
+If you see a gas book missing from the list above, or a reason the five-largest-days rule won't work for a book, reply to me before the next close.

@@ -1,19 +1,13 @@
 {
   "leads": [
     {
-      "work": "Logistics schedulers (Mary Poorman, Aimee Lannou, Jackie Young, Susan Hadix, Thu Nguyen) email the Texas desk (Daren Farmer) one by one to extend or create deals when gas flowed at a meter with no deal or nomination, so they can clear allocation exceptions or the 'UA4 list'",
-      "why": "A steady stream of nearly identical one-off requests (meter, days, last deal number, please extend), often about volumes of only a few Dth. Some go back to 1999. Each needs contract checks (Julie Meyers) and several rounds of replies. Flow on the first days after a shut-in, or valves not closed by 9am, keeps causing the same exception. This could be detected and given a default deal rule or strangers-gas rule automatically.",
+      "work": "Flow at meters with no deal: schedulers (Mary Poorman, Aimee Lannou, Jackie Young, Susan Hadix, Thu Nguyen) email Daren Farmer one at a time to ask him to extend an expired deal or create a new one, or else to send the gas to the Strangers contract, so they can clear allocation exceptions",
+      "why": "Many separate requests in a few weeks, each for one meter and a few days of small volumes. The usual cause is valves not shut by 9am or meters shut in late. It often takes several rounds of email and a contract check with Julie Meyers. A rule that rolls the last deal forward automatically, or a regular exception report, could replace this.",
       "files": [
         "farmer-d/logistics/1478.",
         "farmer-d/logistics/1479.",
         "farmer-d/logistics/1482.",
         "farmer-d/logistics/1480.",
-        "farmer-d/logistics/1483.",
-        "farmer-d/logistics/1487.",
-        "farmer-d/logistics/1486.",
-        "farmer-d/logistics/1489.",
-        "farmer-d/logistics/1492.",
-        "farmer-d/logistics/1493.",
         "farmer-d/logistics/1502.",
         "farmer-d/logistics/1508.",
         "farmer-d/logistics/1512.",
@@ -23,30 +17,13 @@
         "farmer-d/logistics/1544.",
         "farmer-d/logistics/1559.",
         "farmer-d/logistics/1560.",
-        "farmer-d/logistics/1960.",
-        "farmer-d/logistics/1982.",
-        "farmer-d/logistics/1983.",
-        "farmer-d/logistics/1987.",
-        "farmer-d/logistics/1999."
+        "farmer-d/logistics/1483.",
+        "farmer-d/logistics/1487."
       ]
     },
     {
-      "work": "Enerfin/TETCO meter 98-0439 volumes reallocated over and over between HPL, the East desk and Volume Management (retro deal extensions, OBA effective-date changes, Unify paths)",
-      "why": "Victor Lamadrid: 'We go round and round at this point changing volumes two, three or more times', and 'how often Enerfin's numbers change'. Long threads with many people over volumes of 9–141 Dth. HPL and TETCO allocation numbers don't match. The OBA date was changed retroactively without telling anyone.",
-      "files": [
-        "farmer-d/logistics/1967.",
-        "farmer-d/logistics/1971.",
-        "farmer-d/logistics/1972.",
-        "farmer-d/logistics/1977.",
-        "farmer-d/logistics/1981.",
-        "farmer-d/logistics/2003.",
-        "farmer-d/logistics/1489.",
-        "farmer-d/logistics/1493."
-      ]
-    },
-    {
-      "work": "Approving write-offs of strangers gas to Unaccounted for Gas with a paper form (Clem Cernosek emails a form; the desk must print, sign and return the original)",
-      "why": "Many near-identical emails, one per meter, often for tiny or very old volumes (26 Mmbtu from 1999). Each needs a manual print-sign-return approval. This is a clear candidate for a batch or electronic approval workflow.",
+      "work": "Approvals to write off old Strangers Gas volumes to Unaccounted for Gas: Clem Cernosek sends one form per meter, which Daren has to print, sign and return as a paper original",
+      "why": "Many near-identical template emails about volumes from 1999-2000, some under 30 MMBtu. Each needs a hand-signed paper copy. A batch approval or a threshold rule could replace this.",
       "files": [
         "farmer-d/logistics/1499.",
         "farmer-d/logistics/1961.",
@@ -61,8 +38,29 @@
       ]
     },
     {
-      "work": "Moving Canadian (ECC) deals booked in US books to the FT-US/CAND-ERMS book; Stacey Vallejo sends deal IDs one at a time and invoicing waits until they're moved",
-      "why": "This keeps happening (Nov 1, Nov 27 and Dec 6–8 requests). Invoicing for ECC and ENA is held up each month. Darron forwards each request on to book admins by hand. A booking validation rule could stop it at the source.",
+      "work": "Enerfin/TETCO meter 98-0439 reconciliation: deals between HPL, ENA and Dynegy extended by small amounts, retroactive nominations, and volumes changed again and again because the two sides' allocations differ",
+      "why": "Long threads involving many people over tiny volumes (9-141 dec). Victor says 'We go round and round at this point changing volumes two, three or more times' and that Enerfin's numbers change often. The OBA start date was changed without anyone being told.",
+      "files": [
+        "farmer-d/logistics/1486.",
+        "farmer-d/logistics/1489.",
+        "farmer-d/logistics/1492.",
+        "farmer-d/logistics/1493.",
+        "farmer-d/logistics/1960.",
+        "farmer-d/logistics/1967.",
+        "farmer-d/logistics/1971.",
+        "farmer-d/logistics/1972.",
+        "farmer-d/logistics/1977.",
+        "farmer-d/logistics/1981.",
+        "farmer-d/logistics/2003.",
+        "farmer-d/logistics/1982.",
+        "farmer-d/logistics/1983.",
+        "farmer-d/logistics/1987.",
+        "farmer-d/logistics/1999."
+      ]
+    },
+    {
+      "work": "Moving ECC (Enron Canada) deals out of US books into the FT-US/CAND-ERMS book: Stacey Vallejo sends requests deal by deal, and Darron forwards each one on to his book administrators",
+      "why": "Repeated requests from November to December. Invoicing for ECC and ENA is held up until the deals are fixed. Darron forwarded the same request twice. A validation rule at deal booking could prevent the errors in the first place.",
       "files": [
         "giron-d/sent/539.",
         "giron-d/sent/535.",
@@ -75,8 +73,8 @@
       ]
     },
     {
-      "work": "Arthur Andersen monthly gas testing: pulling P&L top sheets and curve shift reports for the top five days, book by book",
-      "why": "Requests come in month after month (August, September, October, Q3 close-out) and are passed down to book admins to pull together and photocopy. This could be a standard report that is generated automatically.",
+      "work": "Requests for P&L top sheets and curve shift reports for the auditors' (AA) monthly and quarterly gas testing: gathered by hand for each book and passed on by Darron",
+      "why": "Monthly requests from Sharon Smith and Carrie Richardson list books and top-5-day curve shift reports. Some items had to be chased up later because they were missing. This is a standard document package that could be produced automatically.",
       "files": [
         "giron-d/sent/516.",
         "giron-d/sent/515.",
@@ -85,8 +83,20 @@
       ]
     },
     {
-      "work": "Changing the EnerVest Sitara deal price (S#27239) every month when the invoice arrives",
-      "why": "Every month Tricia Truong asks for a new rate on the same deal (Sept, Oct, Nov 00, plus 1999 changes). Delays drew follow-up chasers. The price could be set by a formula or pulled in from the invoice.",
+      "work": "Nightly book officialization, V@R position checks, post-id macro and verification sheet; flat books must still be officialized for credit",
+      "why": "Every book administrator checks their own positions each night and controllers get a verification sheet. Darron had to remind staff to run the macro every night. A book was officialized 4 times. Credit picks up the previous day's position if a book is not officialized.",
+      "files": [
+        "giron-d/sent/533.",
+        "giron-d/sent/401.",
+        "giron-d/sent/500.",
+        "giron-d/sent/502.",
+        "giron-d/sent/492.",
+        "giron-d/sent/382."
+      ]
+    },
+    {
+      "work": "Price changes in Sitara for EnerVest S#27239, requested by email every month",
+      "why": "Tricia Truong asks for the rate to be changed every production month. The first request took weeks and several follow-ups. This could be set up as an index or formula price, or as a standing feed.",
       "files": [
         "giron-d/sent/508.",
         "giron-d/sent/469.",
@@ -94,8 +104,18 @@
       ]
     },
     {
-      "work": "Emailing Schedule C reserve movements (amounts added or released) to Chris Abel, Daniel Falcone and Kenneth Thibodeaux",
-      "why": "Short notices that keep recurring ('We released $75M tonight', 'taking $100M to Schedule C'). Messages are forwarded by hand to extra people. This could be a system-generated notification.",
+      "work": "Fixing duplicate Sitara deals and deal bridge failures between EOL, TAGG and Sitara",
+      "why": "The bridge failed, deals were double-booked, and they had to be killed by hand across regions. The link field was not filled in. TDS positions were reloaded after an outage. Recurring system problems take staff time.",
+      "files": [
+        "giron-d/sent/445.",
+        "giron-d/sent/383.",
+        "giron-d/sent/380.",
+        "giron-d/sent/546."
+      ]
+    },
+    {
+      "work": "Schedule C reserve notices emailed by hand to Chris Abel/Thibodeaux each time money is moved in or out",
+      "why": "Short one-line notices sent over and over ('We released $75M tonight'). This could be logged in a system or reported automatically.",
       "files": [
         "giron-d/sent/399.",
         "giron-d/sent/392.",
@@ -107,78 +127,45 @@
       ]
     },
     {
-      "work": "Nightly book officialization and V@R checks: each book admin checks positions, runs the 'official post id' macro, and controllers get an end-of-night sheet; lists of officialized books are kept by hand",
-      "why": "New manual control steps were added after V@R errors. Darron reminds the team it must be done 'every night'. He compiles book lists by hand for Connie Sutton, Susan Trevino and Russell Diamond. Credit also needs flat books officialized. There are complaints that INTRA-NORTHEAST-PHY was officialized four times.",
-      "files": [
-        "giron-d/sent/533.",
-        "giron-d/sent/502.",
-        "giron-d/sent/500.",
-        "giron-d/sent/492.",
-        "giron-d/sent/470.",
-        "giron-d/sent/466.",
-        "giron-d/sent/401.",
-        "giron-d/sent/382."
-      ]
-    },
-    {
-      "work": "Daily Enovate DPR sign-off: confirming P&L and the net open position by email",
-      "why": "A recurring daily draft-and-confirm exchange ('Open position is 39.0 contracts').",
+      "work": "Daily Enovate DPR check: Darron confirms the open position and P&L to Falcone and Abel by email",
+      "why": "Draft DPRs are checked each day and confirmed by hand, which looks like a daily pattern.",
       "files": [
         "giron-d/sent/478.",
         "giron-d/sent/476."
       ]
     },
     {
-      "work": "Cleaning up after system failures: Sitara bridge failures creating duplicate deals, TDS positions reloaded after downtime, manual monitoring of the bridge",
-      "why": "Book admins had to find and kill duplicate deals by hand, the same duplicates were still there the next day, and TDS position problems came up in the morning. Staff come in early to watch bridge releases.",
-      "files": [
-        "giron-d/sent/445.",
-        "giron-d/sent/546.",
-        "giron-d/sent/380.",
-        "giron-d/sent/383.",
-        "farmer-d/logistics/1476."
-      ]
-    },
-    {
-      "work": "Setting up curves and books and changing portfolio hierarchies across ERMS, TAGG and RisktRAC with forms and emails",
-      "why": "Shona Wilson says the procedures are not being followed, with many curves found in ERMS that are missing from RisktRAC. Each new curve needs separate emails to have it added to TAGG. Book setup confirmations were re-forwarded to auditors. Naming conventions are handled by hand.",
+      "work": "Setting up curves and books in ERMS, RisktRAC and TAGG, and getting access, through manual forms and email requests",
+      "why": "Shona's memo says procedures are not being followed and many ERMS curves are missing from RisktRAC, so a weekly check had to be added. There are also emails asking for access, printing rights and curves to be added to TAGG, and lists of book codes typed out by hand for others.",
       "files": [
         "giron-d/sent/410.",
         "giron-d/sent/411.",
-        "giron-d/sent/395.",
-        "giron-d/sent/526.",
-        "giron-d/sent/524.",
-        "giron-d/sent/381."
-      ]
-    },
-    {
-      "work": "System access and HR record maintenance requests (book run/print access, net send list, PEP supervisor and direct-report setup)",
-      "why": "Several back-and-forth emails to get access to the FT-Northwest book and to fix PEP reporting lines. Corporate analysts' records can't be changed by ENA HR, so a further handoff is needed.",
-      "files": [
         "giron-d/sent/532.",
         "giron-d/sent/520.",
-        "giron-d/sent/541.",
-        "giron-d/sent/789.",
-        "giron-d/sent/523.",
-        "giron-d/sent/511."
+        "giron-d/sent/395.",
+        "giron-d/sent/470.",
+        "giron-d/sent/466.",
+        "giron-d/sent/414.",
+        "giron-d/sent/526.",
+        "giron-d/sent/524."
       ]
     },
     {
-      "work": "Settling counterparty pricing and billing disputes on old production months (HESCO underpayment, Samson invoices with no deal in Unify, TXU short-pays, Wyman Gordon billed with no deal, TGLO wash deals)",
-      "why": "Settlements staff chase the trading desk for prices or Sitara numbers months later, often because traders have left. One dispute was $32K. Threads run for weeks.",
+      "work": "Old pricing and volume disputes with counterparties and invoice research (HESCO, TXU Lone Star, Wyman Gordon, Samson, TGLO): prices missing from deal tickets, done months later",
+      "why": "Repeated back and forth to find prices and volumes for 1999-2000 production, plus underpayment claims (HESCO said $32K). Often caused by traders leaving or deals not being booked.",
       "files": [
         "farmer-d/logistics/1488.",
         "farmer-d/logistics/1507.",
         "farmer-d/logistics/1519.",
-        "farmer-d/logistics/1542.",
         "farmer-d/logistics/1554.",
         "farmer-d/logistics/1998.",
+        "farmer-d/logistics/1542.",
         "farmer-d/logistics/1528."
       ]
     },
     {
-      "work": "Contract assignments and wrong-counterparty fixes (retro assignments moved by Volume Management, Cannon to Kinder Morgan, HPLC vs ENA entity errors)",
-      "why": "A process memo shows that retro assignments leave months of volumes to be moved by hand. Credit exposure stays wrong until the change is nominated. Schedulers can't change the counterparty themselves.",
+      "work": "Contract assignments and wrong counterparties on deals (Cannon to Kinder Morgan, HPLC vs ENA), with retro assignments moved by hand by volume management",
+      "why": "The retro assignment process means volume management moves months of volume by hand. Credit exposure stays open until the change is made. Schedulers cannot change counterparties themselves.",
       "files": [
         "farmer-d/logistics/1526.",
         "farmer-d/logistics/1969.",
@@ -186,52 +173,53 @@
       ]
     },
     {
-      "work": "Monthly third-party allocation and processing elections (CLECO/State Tract 121 meter netting, Big Thicket shrink, King Ranch elections, Indian Springs PVR backdated deals, checking King Ranch volumes)",
-      "why": "Monthly allocations done by hand that combine several meters. Someone asked who will do the monthly allocation. The same volumes are checked against each other's numbers.",
+      "work": "Monthly plant and meter allocation calculations done by hand (CLECO meter 3527 minus 9662, Big Thicket shrink, King Ranch elections, Teco Indian Springs PVR)",
+      "why": "Netting and allocation between meters each month, done by people outside Enron and checked against worksheets. The CLECO email asks who will do the monthly allocation. Volumes are checked against worksheets by eye.",
       "files": [
         "farmer-d/logistics/1890.",
         "farmer-d/logistics/1928.",
         "farmer-d/logistics/1534.",
         "farmer-d/logistics/1540.",
-        "farmer-d/logistics/1523.",
         "farmer-d/logistics/1503.",
         "farmer-d/logistics/1514.",
         "farmer-d/logistics/1516.",
         "farmer-d/logistics/1518.",
-        "farmer-d/logistics/1521."
+        "farmer-d/logistics/1523."
       ]
     },
     {
-      "work": "Month-end and recurring admin data calls (cost center allocation percentages, HR job survey and matching, PRC meetings, flash completion check, mapping traders to TAGG books, originator lists)",
-      "why": "Recurring data requests sent by mass email with short deadlines. The flash status is checked by polling each controller. The trader matrix was wanted 'by lunch'.",
+      "work": "Reorganizing HR and PEP supervisor records, plus cost-centre allocation percentages sent in each month",
+      "why": "Several emails were needed to correct who reports to whom in PEP. Allocation percentages are collected every month from many managers. A job survey and matching exercise is repeated each year.",
       "files": [
+        "giron-d/sent/789.",
+        "giron-d/sent/523.",
+        "giron-d/sent/511.",
         "farmer-d/logistics/1494.",
-        "farmer-d/logistics/1496.",
-        "farmer-d/logistics/1527.",
-        "giron-d/sent/430.",
-        "giron-d/sent/414.",
-        "giron-d/sent/412.",
-        "giron-d/sent/391.",
-        "giron-d/sent/536.",
-        "giron-d/sent/442."
+        "farmer-d/logistics/1496."
       ]
     },
     {
-      "work": "Internal risk training classes (P&L/MiniBench, EOM bench, NGP&L) organized through repeated scheduling emails",
-      "why": "A recurring series that keeps slipping. Topics and dates are worked out by email each week. Process knowledge such as the steps for rolling the P&L lives only in people's heads, so it could be documented.",
+      "work": "Basis position roll-off on the Benchmark not done for some traders, and month-end flash coordination",
+      "why": "Manual steps get missed ('I didn't remind Kevin'). The flash status is chased by email before the CPR file is built.",
       "files": [
-        "giron-d/sent/499.",
-        "giron-d/sent/477.",
-        "giron-d/sent/421.",
-        "giron-d/sent/397.",
-        "giron-d/sent/503.",
-        "giron-d/sent/510.",
-        "giron-d/sent/484."
+        "giron-d/sent/442.",
+        "giron-d/sent/430.",
+        "giron-d/sent/477."
       ]
     },
     {
-      "work": "Holiday and weather staffing: finding volunteers by reply-all, and reserving hotel rooms for bad weather",
-      "why": "Six reply-all messages just to staff one day. The weather-planning arrangements are made ad hoc.",
+      "work": "Bad estimates in POPS and imbalance issues needing checks by hand",
+      "why": "Weekend numbers were copied from the day before, so staff are told to double check all numbers. This points to a data feed problem.",
+      "files": [
+        "farmer-d/logistics/1476.",
+        "farmer-d/logistics/1536.",
+        "farmer-d/logistics/1521.",
+        "farmer-d/logistics/1976."
+      ]
+    },
+    {
+      "work": "Holiday staffing, PRC meetings and similar scheduling coordinated by reply-all email",
+      "why": "Many reply-all answers to one staffing request. These are minor, but they happen every year.",
       "files": [
         "farmer-d/logistics/1990.",
         "farmer-d/logistics/1991.",
@@ -240,46 +228,19 @@
         "farmer-d/logistics/1995.",
         "farmer-d/logistics/1996.",
         "farmer-d/logistics/1997.",
-        "farmer-d/logistics/1552."
+        "farmer-d/logistics/1527."
       ]
     },
     {
-      "work": "Recurring nominations and confirmations by email or Word doc (Calpine monthly nomination, Southern Union weekend sales recap, Aquila header confirmation, Cleco transport nominations)",
-      "why": "Nominations and confirmations exchanged as Word attachments or free-text email, which could be structured or electronic.",
-      "files": [
-        "farmer-d/logistics/1539.",
-        "farmer-d/logistics/1511.",
-        "farmer-d/logistics/1557.",
-        "farmer-d/logistics/1558.",
-        "farmer-d/logistics/1504.",
-        "farmer-d/logistics/1968."
-      ]
-    },
-    {
-      "work": "Personal spreadsheets hard-wired to system names and directories (the SCADA server rename means everyone edits their NetDDE sheets; spreadsheet loads moving off the ng directory)",
-      "why": "Each user has to fix their own sheets by hand, and the new loading process had problems. This shows fragile end-user tools.",
-      "files": [
-        "farmer-d/logistics/1513.",
-        "giron-d/sent/382."
-      ]
-    },
-    {
-      "work": "Heavy forwarding of non-work chain email and jokes from work accounts (often re-forwarded to home addresses as well)",
-      "why": "A large share of this batch is jokes and chain mail that Darron and his colleagues forward, sometimes twice, often with large attachments (.exe, .mpg). This costs time and mailbox and network load.",
+      "work": "Large volumes of personal joke email forwarded on company mail",
+      "why": "Dozens of forwards with attachments (exe, mpg, jpg) sent from work accounts. This costs time and carries security risk.",
       "files": [
         "giron-d/sent/548.",
-        "giron-d/sent/547.",
         "giron-d/sent/543.",
-        "giron-d/sent/471.",
-        "giron-d/sent/540.",
-        "giron-d/sent/530.",
-        "giron-d/sent/531.",
-        "giron-d/sent/501.",
-        "giron-d/sent/494.",
+        "giron-d/sent/440.",
         "giron-d/sent/437.",
         "giron-d/sent/425.",
-        "giron-d/sent/440.",
-        "giron-d/sent/431."
+        "giron-d/sent/487."
       ]
     }
   ]

@@ -44,7 +44,7 @@ from .score import PER_MONTH, mailbox_months, score, score_process
 from .state import _try_lock, _unlock, explore_done, log, now, read_json, read_messages, write_json
 from .validate import find_quote, message_text, normalize, parsed
 
-EXPLORE_MINUTES = 20
+EXPLORE_MINUTES = 22
 ANALYSTS = 8
 MIN_SESSION_S = 60
 TASK = "Find the opportunities in the mail in `corpus`, and send each to the critic."
@@ -490,9 +490,11 @@ def explore(corpus_dir: Path, out_dir: Path, max_minutes: float = EXPLORE_MINUTE
     ending = (f"{analysts} analyst{'s' * (analysts != 1)} in {sessions} session{'s' * (sessions != 1)}: "
               + ", ".join(f"{n} {e}" for e, n in endings.items()))
 
+    # What the analysts opened is kept in coverage.json; the readers have read every message.
+    coverage(out_dir)
     totals = (read_json(out_dir / "opportunities.json") or {}).get("totals") or {}
     line = (f"{ending}; {totals.get('ranked', 0)} opportunities saved, "
-            f"${totals.get('dollars_per_month', 0):,.0f} a month; {coverage_line(coverage(out_dir))}")
+            f"${totals.get('dollars_per_month', 0):,.0f} a month")
     log(out_dir, f"explore: {line}")
     write_json(explore_done(out_dir), {"ended": now(), "status": line})
     return line

@@ -200,6 +200,7 @@ details.once > p { color: var(--ink-2); font-size: 14px; margin: 6px 0 10px; max
 .steps li.now .m { color: var(--accent); }
 .meter { height: 6px; background: var(--grid); border-radius: 3px; overflow: hidden; width: 160px; margin-top: 8px; }
 .meter div { height: 100%; background: var(--accent); }
+.empty p.left { color: var(--ink); }
 .empty { padding: 40px 0; }
 .empty h1 { font-size: 26px; margin: 0 0 6px; letter-spacing: -0.02em; }
 .empty p { color: var(--ink-2); margin: 0 0 16px; }
@@ -253,6 +254,7 @@ function since(iso) {
 }
 
 let R = null;               // the report: what the run has produced
+let shownResults = false;   // whether the page shows the results or the progress
 let P = null;               // the run's progress
 const open = new Set();     // opportunities whose evidence is shown
 let showAll = false;
@@ -278,10 +280,35 @@ function runState() {
   return {kind: "stopped", current, text: "Stopped: running it again continues"};
 }
 
+// A counted step shows only its bar: its count is of batches or drafts, not of messages or opportunities.
 function stepText(step) {
-  const [n, total] = step.count || [0, 0];
-  return STEPS[step.step] + (total ? ` (${n} of ${total})` : "");
+  const clock = step.step === "explore" ? exploreClock() : null;
+  return STEPS[step.step] + (!clock ? ""
+    : clock.total ? ` (${Math.floor(clock.elapsed)} of ${num(clock.total)} min)` : ` (${Math.floor(clock.elapsed)} min so far)`);
 }
+
+// Exploring runs for a set time: the minutes since it began, and the minutes it has.
+function exploreClock() {
+  if (!P.active || !P.run || P.run.step !== "explore" || !P.run.since) return null;
+  return {elapsed: Math.max(0, (Date.now() - new Date(P.run.since)) / 60000), total: P.run.explore_minutes};
+}
+
+// The time a run has left: exploring has a set time, and the steps around it take a minute or two.
+function timeLeft(s) {
+  const total = P.run && P.run.explore_minutes, clock = exploreClock();
+  if (s.kind !== "running" || !s.current || !total) return null;
+  if (s.current.step === "prepare" || s.current.step === "readers") {
+    return `Reading takes a minute or two. The analysts then explore the mail for ${num(total)} minutes, and drafting takes about a minute.`;
+  }
+  if (s.current.step === "explore" && clock) {
+    const left = Math.max(0, Math.ceil(clock.total - clock.elapsed));
+    return `About ${plural(left + 1, "minute")} left: ${plural(left, "minute")} more of exploring, then about a minute to draft and finish.`;
+  }
+  return "About a minute left: drafting and writing the report.";
+}
+
+// The results are shown once the run has finished; until then, how far it has got.
+const resultsReady = () => R && R.scored && runState().kind === "done";
 
 function renderStatus() {
   const s = runState();
@@ -295,16 +322,20 @@ function renderStatus() {
 function viewProgress() {
   const s = runState();
   return h("section", {class: "empty"},
-    h("h1", null, s.kind === "none" ? "No run yet" : s.kind === "running" ? "The run is in progress" : "The run has not ranked anything yet"),
+    h("h1", null, s.kind === "none" ? "No run yet" : s.kind === "running" ? "The run is in progress"
+      : s.kind === "done" ? "The run finished without ranking anything" : "The run stopped"),
     h("p", null, s.kind === "none" ? "Start one with /run-pipeline. This page follows it as it goes."
-      : s.kind === "running" ? "The ranked opportunities appear here as soon as they are ready." : s.text + "."),
-    P.run && P.run.step === "explore" ? null : h("ol", {class: "steps"}, P.steps.map(step => {
-      const now = step === s.current && s.kind !== "none";
+      : s.kind === "running" ? "The ranked opportunities appear here when it finishes." : s.text + "."),
+    timeLeft(s) ? h("p", {class: "left"}, timeLeft(s)) : null,
+    h("ol", {class: "steps"}, P.steps.map(step => {
+      const now = step === s.current && s.kind !== "none" && s.kind !== "done";
       const [n, total] = step.count || [0, 0];
+      const clock = step.step === "explore" && now ? exploreClock() : null;
+      const share = total ? n / total : clock && clock.total ? Math.min(1, clock.elapsed / clock.total) : null;
       return h("li", {class: step.done ? "done" : now ? "now" : ""},
         h("span", {class: "m"}, step.done ? "✓" : now ? "●" : "○"),
         h("div", null, stepText(step),
-          now && total ? h("div", {class: "meter"}, h("div", {style: `width:${n / total * 100}%`})) : null));
+          now && share != null ? h("div", {class: "meter"}, h("div", {style: `width:${share * 100}%`})) : null));
     })));
 }
 
@@ -634,7 +665,8 @@ function highlighted(text, spans) {
 // ---- keeping up with the run ----
 function render() {
   const y = window.scrollY;
-  document.getElementById("app").replaceChildren(...[].concat(R.scored ? viewResults() : viewProgress()).filter(x => x != null));
+  shownResults = resultsReady();
+  document.getElementById("app").replaceChildren(...[].concat(shownResults ? viewResults() : viewProgress()).filter(x => x != null));
   window.scrollTo(0, y);
   renderStatus();
 }
@@ -652,7 +684,8 @@ async function poll() {
       version = P.version;
       await loadReport();
       render();
-    } else if (!R.scored) {
+    } else if (!resultsReady() || !shownResults) {
+      // The progress view moves with the clock; the results replace it once the run is done.
       render();
     } else {
       renderStatus();

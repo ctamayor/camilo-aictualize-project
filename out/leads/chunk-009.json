@@ -1,55 +1,52 @@
 {
   "leads": [
     {
-      "work": "Daily emails telling the real-time desk about short and long positions and lending (EPE lending at Palo Verde, SP-15, Mid-C), with deal numbers and prices, so shift traders can fill or sell the positions in Enpower",
-      "why": "Bill Williams and Kate Symes send near-daily hand-typed notices about each day's length or shortness and lending, often adding 'check with X on price'. The same information already sits in the trading books and could be generated as a report.",
+      "work": "Real-time desk sends daily short/long position notices to the shift group by hand: MW, price, book, delivery point, and which desk to check prices with",
+      "why": "The same kind of email goes out almost every day, from Bill and from Kate, with per-book volumes and prices typed in by hand. The content could come straight from position or schedule data.",
       "files": [
         "williams-w3/sent_items/345.",
-        "williams-w3/sent_items/340.",
         "williams-w3/sent_items/310.",
         "williams-w3/sent_items/295.",
-        "williams-w3/sent_items/267.",
         "williams-w3/sent_items/240.",
         "williams-w3/sent_items/254.",
+        "williams-w3/sent_items/267.",
         "williams-w3/sent_items/296.",
-        "williams-w3/sent_items/354.",
-        "williams-w3/sent_items/341."
+        "williams-w3/sent_items/340."
       ]
     },
     {
-      "work": "El Paso Electric (EPE) reconciliation: tying the El Paso model to the CARP report, logging totals in the reconciliation model, settling disputes, requesting and listening to call tapes, and sending repeated reminders about unit dispatch rules",
-      "why": "One month's checkout took five days (the next took five minutes). Disputes with EPE and other Southwest counterparties are 'growing', Kate requests 'several sets of tapes' to settle them, and there are repeated all-caps reminders about not selling below $15 without ramping down Four Corners. The work is manual, error-prone and recurs every month.",
+      "work": "El Paso Electric (EPE) lending/parking deals and the daily El Paso model vs CARP report tie-out, with monthly settlement checkout and dispute handling",
+      "why": "Last month's checkout took 5 days, and disputes with EPE are growing. There are repeated reminders about the CARP tie-out, unit dispatch order and the reconciliation model. A trader error (selling below $15 without ramping down Four Corners) happened more than once. Deal-entry steps are given out fresh each day.",
       "files": [
+        "williams-w3/sent_items/340.",
         "williams-w3/sent_items/315.",
         "williams-w3/sent_items/304.",
         "williams-w3/sent_items/289.",
-        "williams-w3/sent_items/280.",
-        "williams-w3/sent_items/278.",
-        "williams-w3/sent_items/277.",
-        "williams-w3/sent_items/298.",
         "williams-w3/sent_items/283.",
+        "williams-w3/sent_items/298.",
         "williams-w3/sent_items/314.",
+        "williams-w3/sent_items/354.",
         "williams-w3/sent_items/252."
       ]
     },
     {
-      "work": "Manual 10-step procedure for handling Colstrip cuts in Enpower, deal scheduling, Lotus Notes cuts database, discussion forum and email",
-      "why": "A written step-by-step procedure that is repeated every time Colstrip goes down. Bill calls the Lotus Notes cuts database entry 'the most time consuming portion of this procedure', and 'Cuts (yet again)' is on a meeting agenda.",
+      "work": "Manual Colstrip cut procedure: index buy, BPA transmission deal, zeroing and linking deals in Enpower, then entering cuts in the Lotus Notes Cuts database, a forum note and emails",
+      "why": "A 10-step manual procedure that was revised after only one day. The Lotus Notes cuts entry is described as 'the most time consuming portion.' It runs again every time Colstrip goes down.",
       "files": [
         "williams-w3/sent_items/338.",
-        "williams-w3/sent_items/336.",
-        "williams-w3/sent_items/342."
+        "williams-w3/sent_items/336."
       ]
     },
     {
-      "work": "Daily emails reporting CAISO congestion relief revenue to Volume Management and Risk, checking it against the California flash, tracking exposure in a spreadsheet, and the month-end ISO true-up",
-      "why": "Bill emails the MW, price and revenue to Jim Reyes and others nearly every day. Murray O'Neil asks for daily contact to keep a net payable position. Revenue goes missing from the flash, and the month-end true-up leaves variances to chase by hand.",
+      "work": "Congestion relief revenue and ISO charges: daily emails to Volume Mgmt/Risk with MW × price, checking against the CAISO flash, a daily exposure tally, adding dummy Enpower deals to flatten the variance report, and month-end true-up",
+      "why": "Revenue is announced by email nearly every day, and items missing from the flash are chased by hand. Deals are entered 'only for the sake of the report.' The August true-up variances were reconciled by hand over several emails.",
       "files": [
         "williams-w3/sent_items/322.",
         "williams-w3/sent_items/321.",
         "williams-w3/sent_items/311.",
         "williams-w3/sent_items/318.",
         "williams-w3/sent_items/317.",
+        "williams-w3/sent_items/308.",
         "williams-w3/sent_items/302.",
         "williams-w3/sent_items/300.",
         "williams-w3/sent_items/270.",
@@ -57,66 +54,43 @@
       ]
     },
     {
-      "work": "Enpower vs CAPS variance reports and interdesk book transfers: entering extra deals only to make a report come out flat, fixing SAR variances, and building book-to-book transfer deals",
-      "why": "Bill says he adds deals that are 'only necessary for the sake of the report' and would prefer not to. Interdesk sales have to be routed by hand, and traders send in transfer deal numbers.",
-      "files": [
-        "williams-w3/sent_items/308.",
-        "williams-w3/sent_items/312.",
-        "williams-w3/sent_items/293.",
-        "williams-w3/sent_items/334."
-      ]
-    },
-    {
-      "work": "Hourly deal entry and inc sheet upkeep after EnronOnline (EOL) hourly launch: entering and routing deals every hour, a night-shift weighted-average interdesk strip, and repeated process memos",
-      "why": "Volume rose sharply (530+ trades in 8 days). Systems and staff were not ready, EOL trades were missed, and Bill keeps re-issuing deal-entry standards and reminders. This is a strong candidate for automated deal capture and booking.",
+      "work": "EOL hourly trade volume entered by hand into Enpower/CAPS: the night shift computes weighted-average interdesk strips, inc sheets are kept up every hour, and book-to-book transfers are booked by hand",
+      "why": "530+ EOL trades in 8 days strained the systems and the staff. Standards were reissued several times. EOL trades were not captured properly, causing delays for other groups. The night shift averages prices by hand to build single interdesk deals.",
       "files": [
         "williams-w3/sent_items/275.",
         "williams-w3/sent_items/268.",
+        "williams-w3/sent_items/254.",
         "williams-w3/sent_items/239.",
         "williams-w3/sent_items/238.",
-        "williams-w3/sent_items/254.",
         "williams-w3/sent_items/520.",
         "williams-w3/sent_items/519.",
+        "williams-w3/sent_items/312.",
+        "williams-w3/sent_items/293.",
+        "williams-w3/sent_items/334.",
         "williams-w3/sent_items/244."
       ]
     },
     {
-      "work": "Matching Bloomberg broker deals to Enpower and assigning broker fees",
-      "why": "Evelyn Metoyer's spreadsheet lists unmatched Bloomberg deals for August 1–22, past the agreed two-day grace period. The $15 flat fee per trade is entered by hand per deal and gets misapplied.",
+      "work": "Bloomberg broker trades matched by hand against Enpower, and broker fees assigned by hand",
+      "why": "Settlements sent a spreadsheet of unmatched August Bloomberg deals (Aug 1–22) that missed the two-day grace period. Fee-entry errors inflate brokerage costs, and Kate suggests simply multiplying $15 by the trade count.",
       "files": [
         "williams-w3/sent_items/273.",
         "williams-w3/sent_items/304."
       ]
     },
     {
-      "work": "Setting up the new EOL hourly products: loadshape language reviewed by legal, pop-up announcement text, and a website filter request",
-      "why": "The product setup goes through several hand-offs, and emails meant for Bill are sent to the wrong Bill Williams.",
+      "work": "Resolving counterparty settlement disputes by requesting and listening to trading tapes (EPE/SRP, MPC Montana imbalance)",
+      "why": "The MPC March imbalance had gone back and forth for 5 months. Several sets of tapes were requested, and the tapes often lack time, point or price. Tape access goes through one person.",
       "files": [
-        "williams-w3/sent_items/346.",
-        "williams-w3/sent_items/344.",
-        "williams-w3/sent_items/294.",
-        "williams-w3/sent_items/292.",
-        "williams-w3/sent_items/290."
+        "williams-w3/sent_items/280.",
+        "williams-w3/sent_items/278.",
+        "williams-w3/sent_items/277.",
+        "williams-w3/sent_items/276."
       ]
     },
     {
-      "work": "Mail misrouted between people with the same name (Bill Williams / Bill Williams III) and wrong distribution lists, each needing a reply or forward",
-      "why": "About ten instances in this batch alone: badge access requests, baby shower notices, the admin assistant list, a DS-3 quote and EOL requests. Each one costs both sides time to bounce back.",
-      "files": [
-        "williams-w3/sent_items/313.",
-        "williams-w3/sent_items/259.",
-        "williams-w3/sent_items/255.",
-        "williams-w3/sent_items/243.",
-        "williams-w3/sent_items/241.",
-        "williams-w3/sent_items/326.",
-        "williams-w3/sent_items/346.",
-        "williams-w3/sent_items/290.",
-        "williams-w3/sent_items/273."
-      ]
-    },
-    {
-      "work": "Controlling cell phone costs: overage reminders, per-employee caps and billing back, and plan changes",
-      "why": "The group goes over its minutes month after month, with about $20,000 spent year to date by June. Bill reminds the group, and Jill Chatterton reviews bills by hand and sets up each person's plan.",
+      "work": "Cell phone usage monitoring and overage billing for the RT group",
+      "why": "Repeated overages, about $20k spent by June. Bills are checked by hand per person, users are moved between plans, and a new chargeback policy has to be enforced every month.",
       "files": [
         "williams-w3/sent_items/343.",
         "williams-w3/sent_items/249.",
@@ -126,42 +100,87 @@
       ]
     },
     {
-      "work": "Requests for trader IDs and Enpower desk access (Global Counterparty), plus other access requests and approvals",
-      "why": "Kate writes 'once again in need of a new trader ID'. Interns and new traders are missed and need follow-up, an 'Originator ID' is a further hurdle, and requests for directory access restrictions, schedule crawler removal and data-approver approvals all recur.",
+      "work": "Misrouted mail to the wrong 'Bill Williams' (Portland III vs Sweden/Houston namesakes), with replies asking to be removed from lists",
+      "why": "At least 10 messages had to be forwarded on or answered with 'wrong person', covering EOL loadshapes, Bloomberg deals, badge access, admin lists and showers. This points to a directory or address-book problem.",
       "files": [
-        "williams-w3/sent_items/350.",
-        "williams-w3/sent_items/323.",
-        "williams-w3/sent_items/281.",
-        "farmer-d/logistics/87."
+        "williams-w3/sent_items/346.",
+        "williams-w3/sent_items/344.",
+        "williams-w3/sent_items/290.",
+        "williams-w3/sent_items/273.",
+        "williams-w3/sent_items/313.",
+        "williams-w3/sent_items/259.",
+        "williams-w3/sent_items/255.",
+        "williams-w3/sent_items/243.",
+        "williams-w3/sent_items/241.",
+        "williams-w3/sent_items/326."
       ]
     },
     {
-      "work": "Telephone and turret equipment requests: handsets, turret extensions, cabling and a Meridian phone",
-      "why": "Handsets keep going missing or getting damaged, and turret moves need repeated follow-up with IT.",
+      "work": "Turret, handset and phone provisioning requests, and IT access changes for the RT desk (directory restriction, schedule crawler)",
+      "why": "Handsets keep going missing or breaking, and requests for turrets and phones repeat through IT. Access lists are maintained by hand by email.",
       "files": [
         "williams-w3/sent_items/355.",
         "williams-w3/sent_items/351.",
         "williams-w3/sent_items/352.",
         "williams-w3/sent_items/284.",
         "williams-w3/sent_items/265.",
-        "williams-w3/sent_items/258."
+        "williams-w3/sent_items/258.",
+        "williams-w3/sent_items/323.",
+        "williams-w3/sent_items/281."
       ]
     },
     {
-      "work": "Manual reporting for service customers: Grays Harbor generator output reported to BPA, EES ancillary (spin) dispatch tracked in the service sheet and emailed to EES settlements, generation waiver notices, and Enron Canada coverage submitted by fax",
-      "why": "BPA says it will automate the Grays Harbor reporting, and Enron Canada submissions are faxed because there is no digital certificate. The rest is tracking sheets and emails kept by hand.",
+      "work": "Requesting Enpower trader IDs and desk access for new traders and interns through Global Counterparty",
+      "why": "Kate writes 'once again in need of a new trader ID.' Access was incomplete (an Originator ID was missing and a trader had been left off), so follow-ups were needed.",
+      "files": [
+        "williams-w3/sent_items/350."
+      ]
+    },
+    {
+      "work": "Service-customer reporting done by hand: Grays Harbor generator output to BPA, the EES ancillary spin dispatch log and next-morning sheet to EES Settlements, and fax submissions to the Alberta Power Pool for Enron Canada",
+      "why": "Recurring daily reporting through spreadsheets, phone calls and faxes. BPA says its own automatic recording system is coming. The RT desk has no working digital certificate, so Alberta submissions have to be faxed.",
       "files": [
         "williams-w3/sent_items/335.",
         "williams-w3/sent_items/330.",
         "williams-w3/sent_items/325.",
-        "williams-w3/sent_items/262.",
+        "williams-w3/sent_items/319.",
         "williams-w3/sent_items/233.",
-        "williams-w3/sent_items/260."
+        "williams-w3/sent_items/262."
       ]
     },
     {
-      "work": "Correcting Sitara deal prices and volumes for gas settlements (Guadalupe Power swing and baseload deals)",
-      "why": "There are repeated back-and-forth fixes, including a typed 50,000 that should have been 30,000, wrong prices and missing volume. One rate is computed by hand because Sitara can't handle the pricing formula.",
+      "work": "CAISO adjustment-bid tiering entered by hand, plus ADS dispatch decline research",
+      "why": "A rule-based bid tier (values must increase monotonically, at most 10 bids) is typed in by hand, and errors are costly. Revenue was lost by not adjust-bidding. The ISO raised an 82% decline count that needed investigation.",
+      "files": [
+        "williams-w3/sent_items/250.",
+        "williams-w3/sent_items/235.",
+        "williams-w3/sent_items/261.",
+        "williams-w3/sent_items/234."
+      ]
+    },
+    {
+      "work": "Gas settlements researching payment and deal discrepancies with AEP/HPL after the sale (missing deals, wrong counterparties, overpayments, unbooked invoices)",
+      "why": "Many cases from one analyst: Killam had no May deal, Conoco Big Cowboy was overpaid about $1.5M per month, Coral invoices had no deals behind them, and the TGLO July deal could not be found. Each one needs digging through Path Manager, Sitara audit logs and AEP contacts.",
+      "files": [
+        "farmer-d/logistics/85.",
+        "farmer-d/logistics/70.",
+        "farmer-d/logistics/69.",
+        "farmer-d/logistics/67.",
+        "farmer-d/logistics/72.",
+        "farmer-d/logistics/81."
+      ]
+    },
+    {
+      "work": "TGLO gas-for-crude intercompany deals (HPLC/ENA/EGM) booked month by month by hand",
+      "why": "A complicated procedure (zeroing prices, demand-fee tickets) was completed only for Jan–Feb, so March–May are outstanding, and someone reversed a correction. It recurs monthly.",
+      "files": [
+        "farmer-d/logistics/83.",
+        "farmer-d/logistics/72."
+      ]
+    },
+    {
+      "work": "Correcting Sitara volumes and pricing for Guadalupe Power swing/baseload deals from settlement spreadsheets",
+      "why": "Settlements send spreadsheets each month, and logistics re-enters volumes and prices, with typos (50,000 entered instead of 30,000). Sitara reportedly cannot handle average-GD+0.02 pricing, so the price is calculated by hand.",
       "files": [
         "farmer-d/logistics/79.",
         "farmer-d/logistics/78.",
@@ -171,124 +190,100 @@
       ]
     },
     {
-      "work": "Researching counterparty payment disputes and missing or incorrect deals after the HPL sale to AEP (Killam, Conoco Big Cowboy about $1.5M a month overpaid, Coral, TUFCO actualized at 0, TGLO July deal)",
-      "why": "Megan Parker and others repeatedly ask Daren Farmer to find deals that are missing or wrong. They need investigation across Enron and AEP, and the records are poor.",
+      "work": "Prior-period cleanup: bridgeback errors from late pathing on expired deals, and new deal tickets to clear old (1999) inter-pipeline pool balances",
+      "why": "Requests go back and forth, with follow-up emails resent after weeks. Deal tickets are created one at a time to clear balances from 1999. Actualization errors such as TUFCO volume at 0 are routed between groups.",
       "files": [
-        "farmer-d/logistics/85.",
-        "farmer-d/logistics/70.",
-        "farmer-d/logistics/69.",
-        "farmer-d/logistics/67.",
-        "farmer-d/logistics/77.",
-        "farmer-d/logistics/75.",
-        "farmer-d/logistics/72.",
-        "farmer-d/logistics/82."
-      ]
-    },
-    {
-      "work": "Manual intercompany booking for the Texas General Land Office gas-for-crude exchange (HPLC/ENA/EGM demand-fee deals each month)",
-      "why": "A multi-step monthly booking that was done for January and February but never finished for March onward, and a zeroed price was put back by someone else.",
-      "files": [
-        "farmer-d/logistics/83.",
-        "farmer-d/logistics/72."
-      ]
-    },
-    {
-      "work": "Clearing prior-period pool balances (1999) and bridgeback errors, which need new transport deal tickets",
-      "why": "Volume Management chases deal tickets with emails and follow-ups going back two years, and late pathing causes bridgeback errors.",
-      "files": [
-        "farmer-d/logistics/62.",
-        "farmer-d/logistics/60.",
         "farmer-d/logistics/63.",
         "farmer-d/logistics/59.",
-        "farmer-d/logistics/58."
+        "farmer-d/logistics/58.",
+        "farmer-d/logistics/62.",
+        "farmer-d/logistics/60.",
+        "farmer-d/logistics/77.",
+        "farmer-d/logistics/75."
       ]
     },
     {
-      "work": "Month-end disputes and book reallocations: the MPC March imbalance (5 months back and forth with tape requests) and the LP deal profit-share annuities explained again at month-end",
-      "why": "Long-running disputes and old deals have to be re-explained at every close.",
+      "work": "Approval workflows: meter and pipe code setup, application access requests, expense reports, and the OPM hours survey split",
+      "why": "These are routine approvals routed by email or AR system to one manager. The hours survey had to be followed up by hand because the system did not prompt for the percentage split.",
       "files": [
-        "williams-w3/sent_items/276.",
+        "farmer-d/logistics/82.",
+        "farmer-d/logistics/87.",
+        "farmer-d/logistics/57.",
+        "farmer-d/logistics/84."
+      ]
+    },
+    {
+      "work": "Monthly admin-assistant roster verification by email (titles, extensions, supervisors)",
+      "why": "Explicitly monthly. A spreadsheet goes to about 35 people for confirmation, and some recipients are wrong.",
+      "files": [
+        "williams-w3/sent_items/313."
+      ]
+    },
+    {
+      "work": "Month-end close freeze and scheduler cutoffs, plus coordinating system maintenance windows",
+      "why": "Changes to the close schedule caused confusion among schedulers. Reports are picked up by hand. The maintenance window was negotiated across about 20 people.",
+      "files": [
+        "farmer-d/logistics/68.",
+        "farmer-d/logistics/76."
+      ]
+    },
+    {
+      "work": "Unwinding and re-explaining old profit-share annuities (the LP deal) between books at month end",
+      "why": "Annuity routing across ST-NW, Whourly, LT-NW and L-Pac had to be rebuilt months later from Bill's spreadsheet, and the request was urgent at month end.",
+      "files": [
         "williams-w3/sent_items/272.",
         "williams-w3/sent_items/271.",
         "williams-w3/sent_items/269."
       ]
     },
     {
-      "work": "Administrative surveys and data checks: the OPM hours survey percentage split, the monthly admin assistant info check, and the month-end close schedule",
-      "why": "These recur monthly and are tracked by hand. The hours survey didn't prompt for the split, and the close schedule caused confusion.",
+      "work": "Recurring management admin: budget planning spreadsheets, PEP reviews, interview scheduling, shift schedule changes, and night discussion-note quality",
+      "why": "Budget worksheets are revised by hand. Review forms and ranking follow-ups are handled one by one. Shift swaps are tracked by email and on paper.",
       "files": [
-        "farmer-d/logistics/84.",
-        "williams-w3/sent_items/313.",
-        "farmer-d/logistics/68.",
-        "farmer-d/logistics/76."
-      ]
-    },
-    {
-      "work": "Expense report and approval notifications (Concur cellular expense approvals)",
-      "why": "Managers approve routine monthly cellular expense reports.",
-      "files": [
-        "farmer-d/logistics/57."
-      ]
-    },
-    {
-      "work": "Performance reviews, budgeting and staffing admin: PEP reviews and ranking communication, the 2002 G&A budget worksheet, interviews, job postings and training sign-ups",
-      "why": "Recurring HR and finance cycles handled through emailed spreadsheets and back-and-forth.",
-      "files": [
+        "williams-w3/sent_items/253.",
+        "williams-w3/sent_items/242.",
         "williams-w3/sent_items/331.",
         "williams-w3/sent_items/301.",
         "giron-d/inbox/213.",
-        "williams-w3/sent_items/253.",
-        "williams-w3/sent_items/242.",
         "williams-w3/sent_items/349.",
         "williams-w3/sent_items/337.",
-        "williams-w3/sent_items/257.",
-        "williams-w3/sent_items/256.",
-        "williams-w3/sent_items/316."
-      ]
-    },
-    {
-      "work": "CAISO adjustment bids for congestion (tiered bids entered by hand with error risk)",
-      "why": "Revenue was lost by not adjusting bids. A wrong tier entry forces flows at a loss, the CAISO system reads at most 10 bids, and traders are reminded repeatedly.",
-      "files": [
-        "williams-w3/sent_items/261.",
-        "williams-w3/sent_items/250.",
-        "williams-w3/sent_items/235."
-      ]
-    },
-    {
-      "work": "Shift schedule changes and night discussion notes",
-      "why": "Shift swaps are communicated by email and hand-written on the schedule. Night notes are reviewed for completeness.",
-      "files": [
         "williams-w3/sent_items/237.",
-        "williams-w3/sent_items/252.",
-        "williams-w3/sent_items/282."
+        "williams-w3/sent_items/282.",
+        "williams-w3/sent_items/252."
       ]
     },
     {
-      "work": "System changes users must act on: ERMS RUNM migration, tie-line dialing change requiring auto-dial reprogramming, and Unify maintenance downtime coordination",
-      "why": "Each change is pushed to all users, who then have to act on it themselves.",
+      "work": "Setting up EOL hourly products: loadshape legal review, pop-up text, and customer filter requests",
+      "why": "Several rounds of back-and-forth, made worse by misrouting. Customers asked for an hourly-product filter.",
       "files": [
-        "giron-d/inbox/190.",
-        "giron-d/inbox/210.",
-        "giron-d/inbox/201.",
-        "giron-d/inbox/206.",
-        "farmer-d/logistics/76."
+        "williams-w3/sent_items/344.",
+        "williams-w3/sent_items/292.",
+        "williams-w3/sent_items/294.",
+        "williams-w3/sent_items/290."
       ]
     },
     {
-      "work": "Weather info database/intranet for traders, maintained by hand",
-      "why": "Kate proposes a spreadsheet and web page that she would maintain herself. There is a possible overlap with a Fundamentals intranet being built separately.",
+      "work": "Weather info spreadsheet and intranet page maintained by hand for traders",
+      "why": "Kate is building a spreadsheet and web page that she would update herself. A similar intranet effort is under way separately with Fundamentals, so work may be duplicated.",
       "files": [
         "williams-w3/sent_items/339."
       ]
     },
     {
-      "work": "Gas nomination confirmations and origination materials (Pace Global nomination updates, market lists, team profiles)",
-      "why": "Nomination changes arrive as emailed spreadsheets 'until further notice'. Origination market lists are re-sorted and redistributed by hand.",
+      "work": "Daily nomination confirmations from Pace Global by spreadsheet",
+      "why": "An emailed nomination spreadsheet has to be confirmed by hand, with ongoing updates.",
       "files": [
-        "giron-d/inbox/211.",
-        "giron-d/inbox/219.",
-        "giron-d/inbox/188."
+        "giron-d/inbox/211."
+      ]
+    },
+    {
+      "work": "Phone and tie-line dial-string changes that require users to reprogram auto-dial buttons by hand; ERMS RUNM application migration",
+      "why": "A firm-wide change makes every user reprogram buttons, fax machines and conference phones. The ERMS migration requires users to test and reboot themselves.",
+      "files": [
+        "giron-d/inbox/201.",
+        "giron-d/inbox/206.",
+        "giron-d/inbox/190.",
+        "giron-d/inbox/210."
       ]
     }
   ]

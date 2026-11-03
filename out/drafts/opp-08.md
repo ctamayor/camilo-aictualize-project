@@ -1,49 +1,52 @@
-# Proposal: take monthly RC allocation %s from the OPM survey and stop the separate spreadsheet round
+# Request: automate the nightly El Paso model vs. CARP reconciliation entry
 
-*Email, drafted for opportunity 8: Monthly cost-center allocation % update, $255 a month.*
+*Email, drafted for opportunity 8: Nightly El Paso (EPE) model vs. CARP reconciliation entry, $216 a month.*
 
-**For:** From the Consolidations lead in Financial Operations, to the OPM survey team lead, cc the Financial Operations manager who approves the allocation basis
+**For:** Real Time Trading Support (from the Portland Real Time desk manager; cc the Real Time night shift traders)
 
 ---
 
-Subject: Taking RC allocation %s from the OPM survey: can we agree a cut-off and run one month side by side?
+To: Real Time Trading Support
+Cc: Real Time night shift traders
+Subject: Request: nightly job to log the EPE reconciliation automatically
 
-Hi [OPM survey team lead],
+Could you set up a job or macro that runs each night after CARP finishes? It would:
+1. Compare the day's El Paso model totals with the CARP report.
+2. Write the totals, the result ("no variance" or "variance") and a timestamp into that month's EPE reconciliation file.
+3. Email the shift only when there's a variance, listing the hours and deals that differ.
 
-Here's what I'm asking for. Every month, Consolidations stops sending its own allocation % spreadsheet. Instead, we work out each cost center's (RC's) split across the commercial teams from your monthly activity/hours survey. Your survey already asks managers which commercial teams their RC supports and what percentage goes to each, so right now Energy Operations managers answer the same question twice.
+Why: Every night the shift fills in the reconciliation sheet by hand, even when there's nothing to report. Houston reads an empty sheet as a sign that nobody ran CARP. In the first 8 days of July there were no variances at all, but the entry still had to be made each night, and on at least one busy night it was missed. A timestamp written by the job would show Houston that CARP was run, and the traders would only have to explain real variances.
 
-To start, I need three things from you:
-1. Last month's survey results for each RC: hours by activity, the commercial teams supported, and the percentage given to each team. We'll work out the allocation %s from these and compare them with the spreadsheet we collected for the same month.
-2. A single monthly cut-off that suits both your survey and our close, which we'll use from now on.
-3. The data-quality concerns you've raised about the survey figures, so we can decide together whether they're good enough to base Finance's charges on.
-
-[Financial Operations manager]: once we've done the side-by-side month, I'll need your sign-off to use the OPM figures as the basis for the allocation charges.
-
-What changes for RC owners: each month they would get their percentages for information only. They reply only if something is wrong, for example a new RC or a team that has been split out. The OPM survey itself carries on exactly as it is now.
+Could you reply with whether this can be done and a rough date? Until the job is running and checked, the shift keeps making the entry by hand as it does now.
 
 Thanks,
-[Consolidations lead]
+Real Time Desk Manager, Portland
 
 ---
+Background and details (for whoever builds it)
 
-Background, for anyone who needs it
+How it works today
+- Since July 2001, at the end of each trading day the Real Time shift has to tie out the El Paso model with the CARP report. They log the El Paso totals in the reconciliation spreadsheet on the shared drive and explain any variances.
+- The file is kept per month, for example: m://electric/epe/epe01/aug01/epe reconciliation model (with folders like July01, aug01).
+- The sheet has to have an entry every night, even when nothing differs. That entry is only there to show that CARP was run.
+- The reconciliation itself works well. The July checkout with Settlements took about five minutes, against the five days spent the month before. This request doesn't change the month-end process. It only takes over the nightly manual entry.
 
-How the allocation round works today
-- Consolidations emails last month's allocation % spreadsheet to about 16 Energy Operations directors and asks for updates within a few days ("Please review the attached January Allocation %'s and update accordingly for February").
-- Directors send it on to their managers. One director asked six managers: "provide an accurate allocation of your RC for 1/00. What has your group spent their time on in 1/00???" The director then merges the answers and sends them back: "Attached is the allocation for 1/00 for Texas Operations."
-- Assistants sometimes forward it again to more leads ("Please read below and comply as directed below." went to seven more people in November 2000).
+What the job should do
+- Run after CARP has finished for the trading day.
+- Read the day's El Paso model totals and the CARP report, then compare them.
+- Write the El Paso totals, the result and a run timestamp into the current month's reconciliation file.
+- At month change, create the next month's folder and file following the existing naming pattern.
+- If there's a variance, email the shift the hours and deals that differ, leaving a space in the sheet for the trader's explanation.
+- If there's no variance, nobody needs to open the sheet.
 
-Why it duplicates the OPM survey
-- The survey "drives your costs from your activities to the commercial teams," which is the same purpose as the allocation %s.
-- It already asks managers to confirm "that the percentage allocated to each commercial team has not changed from last month," and it keeps each cost center's commercial teams and FTEs from one month to the next.
-- On 29 Feb 2000 both requests went out on the same day, and both were due Friday 3 March.
+Questions for Real Time Trading Support
+- When does CARP reliably finish each night, so the job can run after it?
+- Where are the El Paso model totals and the CARP report read from, and are they in a format a macro can read directly?
+- What should happen if the job fails or CARP hasn't run? A suggestion: email the shift so the entry is made by hand and the sheet is never left blank.
 
-What stops
-- The separate spreadsheet request, the directors passing it down and combining the answers, and the assistants forwarding it. Managers answer one monthly question about where their group's time went instead of two.
+Suggested rollout
+- For the first couple of weeks, run the job alongside the manual entry and check that the two match.
+- After that, the shift stops making the manual entry on no-variance nights and only explains the variances the job flags.
 
-What has to be settled first
-- Deadlines: the two requests are due on different dates today. For example, the October 2000 allocations were due on the 2nd. We need one cut-off.
-- Data quality: Finance has to accept the OPM figures as the basis for its charges. That's why I'm proposing one month side by side before we stop the spreadsheet.
-
-Expected saving
-- About 3 hours a month (roughly $255 a month) of directors', managers' and assistants' time on the spreadsheet round. None of the time spent on the OPM survey is counted as saved, since the survey carries on.
+Expected benefit
+- About 5 minutes a night, every day: roughly 2.5 hours a month, or about $216 a month. It also removes the risk of a blank sheet caused by a forgotten entry, and the follow-up reminders that come with it.

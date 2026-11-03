@@ -1,49 +1,57 @@
-# Proposal: put month-end P&L top pages and curve shift reports in a read-only audit folder so Arthur Andersen can pull them themselves
+# Request: fill origination schedule entries from TAGG by deal number
 
-*Email, drafted for opportunity 7: Monthly P&L top pages for Arthur Andersen's gas testing, $255 a month.*
+*Email, drafted for opportunity 7: Daily origination schedule entries on the gas desks, $246 a month.*
 
-**For:** From one gas Risk desk head to the other gas Risk desk heads, the gas book admins and ERMS reports support, cc the Arthur Andersen gas testing lead
-
----
-
-To: Gas Risk desk heads; gas book admins; ERMS reports support
-Cc: Arthur Andersen gas testing lead
-Subject: Starting at the next month-end close: audit folder for P&L top pages and curve shift reports
-
-Starting at the next month-end close, I'd like every gas book's P&L top pages and curve shift reports saved to a read-only folder that Arthur Andersen can pull from directly. Today their monthly gas testing request goes through each of us and then several book admins, and the reports go back to them on paper. This takes about 3 hours a month, holds up their testing whenever one of us is away, and leads to "2nd request" emails.
-
-What I need from each of you, by reply:
-1. ERMS reports support: Can ERMS run a job at month-end close that saves the reports listed below as PDFs into one subfolder per month? If a scheduled job isn't possible, can you give us a macro that one book admin runs once? ERMS can already display most reports in Adobe Acrobat.
-2. Book admins: Reply with the gas books you are responsible for. I'll use your replies to build a one-page index of each book and the admin who owns it.
-3. Desk heads: Confirm that your books are on the list and tell me if any are missing.
-4. Arthur Andersen (cc): Would this folder meet your monthly testing needs? Also tell us whether you still have Enron network access. If you don't, we'll send you a copy of the folder each month.
-
-What goes in the folder each month, for every gas book:
-- The P&L top page for the last day of the month
-- The daily P&L top pages for the month
-- The Gas Daily curve shift reports for the month
-- A one-page index listing each book and its book admin
+**For:** From the gas desks' origination schedule coordinator to the person who supports TAGG reporting and the desk spreadsheets, with the lead book administrators on each gas desk copied
 
 ---
-Background, for anyone who wants it
 
-How it works today: Each month the auditors email us a list of books. For each book they want the P&L top page for the last day of the month. If most of a book's P&L comes from curve shift, they also want the top pages and curve shift reports for the five largest days, so a single book can mean six top pages plus curve shift reports, and one request covered seven books. Each desk head forwards the request to between two and seven book admins. The admins pull the reports from ERMS and print or copy them. The desk head collects the copies and then calls the auditors, who come to pick them up.
+To: TAGG reporting / desk spreadsheet support
+Cc: Lead book administrators, gas desks
+Subject: Request: fill origination schedule entries from TAGG by deal number
 
-Where it stalls:
-- If the desk head handling a request is travelling, the auditors' testing waits. Only that desk head routes the request.
-- The auditors couldn't close their third-quarter file until the missing West Firm, FT Northwest and Mgmt. West reports came in, and they had to send follow-up requests to get them.
-- The auditors have had to ask us who is responsible for each desk. The index will answer that.
+Can you build two things for the gas desks' origination schedule?
 
-What changes:
-- The auditors pick their books and the five largest days from the folder themselves.
-- Desk heads and book admins stop forwarding, pulling, printing and copying reports for this request, and nobody has to chase missing books.
-- The folder is read-only, so the auditors see exactly what was saved at close.
+1. A lookup keyed on deal number. When a book administrator types a deal number, it fills in Book, Date originated, Customer, B/S, Term, Price and Pub code from TAGG. It can be a spreadsheet macro or a TAGG extract, whichever is easier for you.
+2. A daily extract of the Middle Market (NYMEX) group's TAGG deals. It adds any deal that isn't on the schedule yet, with $0 origination.
 
-What stays the same: Calls with the auditors to discuss what drove the P&L continue as now. Requests for deal tickets and confirmations also stay as they are.
+Why: Since January every entry needs 11 fields. Seven of them describe the deal and are already in TAGG, but admins type them in again by hand. Admins also have to type in every Middle Market deal just to record $0. We estimate the change saves about 8 minutes a working day, which is roughly 2.9 hours or $245 a month across the desks. It also cuts down on retyping errors in a schedule that feeds a daily report and is checked against each book's P&L every day.
 
-Expected saving: About 3 hours a month (roughly $255 a month) of desk head and book admin time, based on the monthly requests from October 2000 through February 2001. It should also end the delays and repeat requests described above.
+Could you tell me by the end of the week whether this can be done, and which way (macro or extract) you'd go?
 
-Proposed next step: Once ERMS support confirms how the reports can be saved, we'll run the folder at the next month-end close alongside the usual request. If the auditors confirm it has everything they need, we'll stop handling the email requests from the following month on.
+Lead book administrators: please reply with roughly how many entries your desk makes on a typical day. The estimate above assumes about five a day across all desks, and we have no actual count.
 
-Thanks,
-[Gas Risk desk head]
+---------------------------------------------
+Background and details (for whoever builds it)
+
+How the schedule is filled in today
+- Book administrators on each gas desk record every originated deal by hand in the origination schedule (the "origination file").
+- From 9 January 2001, the Middle Market (NYMEX) group has received a daily report built from the schedule. That raised the fields per entry from seven to eleven:
+  - Original fields: Book, Deal #, Date originated, Customer, Origination Group, Origination Value, Originator
+  - Added fields, in this order: B/S, Term, Price, Pub code
+- From 10 January 2001, every deal that group does must be on the schedule, including deals with no origination granted. Those get $0.
+- Origination requests come in by deal number (for example, "The deal is HS Energy and the Deal number is V58190"). The admin then looks up the deal details and types them in.
+- The schedule is kept up daily, and each book's P&L is checked against it every day. Past breaks include one desk recognizing origination that wasn't on the schedule, and another not recognizing part of an amount it had been granted.
+
+What the admin would do after the change
+1. Type the deal number. Book, Date originated, Customer, B/S, Term, Price and Pub code fill in from TAGG.
+2. Type Origination Value, Origination Group and Originator.
+3. Check the filled fields against the deal.
+4. For Middle Market deals added by the daily extract, change the $0 to the granted amount on any row where origination is granted.
+
+Where each field comes from
+- From TAGG via the lookup: Book, Date originated, Customer, B/S, Term, Price, Pub code
+- Typed by the admin: Deal #, Origination Value, Origination Group, Originator
+- Added by the daily extract (Middle Market group only): any group deal not already on the schedule, with Origination Value set to $0
+
+Requirements
+- Keep the current column order, so the daily report built from the schedule doesn't change.
+- Don't add an extract row for a deal that's already on the schedule.
+- Let admins overwrite filled values if TAGG and the deal confirmation disagree.
+
+Open questions
+- How many entries are made per day on each desk? (Lead book administrators, see above.)
+- Does the Middle Market (NYMEX) group's daily report need to change in any way once the $0 rows come from the extract instead of being typed in?
+
+How the savings were estimated
+8 minutes saved per working day × 21.67 working days a month = 2.89 hours, or $245.65 a month. This uses the stated rate of one round of entries per working day and an assumed volume of about five entries a day. The desk counts requested above will confirm or correct it.

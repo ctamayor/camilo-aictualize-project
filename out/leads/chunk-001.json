@@ -1,8 +1,8 @@
 {
   "leads": [
     {
-      "work": "Calpine sends a daily (and monthly) gas nomination as a Word attachment to the HPL scheduler. Several Enron staff are copied, and someone has to re-key the volumes and confirm them back.",
-      "why": "The same 'Calpine Daily Gas Nomination' email with 'CALPINE DAILY GAS NOMINATION 1.doc' arrives near-daily from Dec 1999 to Apr 2001. The recipient changes as staff rotate (Lloyd, Hadix, Lannou, Kemp). Messages often say 'as we spoke of by phone', so the phone call and the email duplicate each other. A sent reply confirms 'Same volumes as yesterday, no changes to the path'.",
+      "work": "Calpine emails a Word-document daily gas nomination to the HPL scheduler (cc Daren Farmer and others), often after a phone call covering the same thing. An HPL scheduler then confirms it by email.",
+      "why": "The same attachment arrives almost every day from Dec 1999 to Apr 2001, and the person receiving it changes as staff turn over (Lloyd, Hadix, Lannou, Kemp). Messages say 'as we spoke of by phone', so the nomination is given twice, by phone and email. A monthly Calpine nomination and a revised resend also appear. Giron's reply ('Same volumes as yesterday, no changes') shows a manual confirm loop that could be an electronic nomination or an exception-only process.",
       "files": [
         "farmer-d/logistics/579.",
         "farmer-d/logistics/880.",
@@ -28,87 +28,76 @@
       ]
     },
     {
-      "work": "TXU emails daily HPL nomination spreadsheets (hplMMDD.xls) and daily 'Enron Actuals' that must be keyed into the scheduling systems.",
-      "why": "There is one email per gas day, each with an xls attachment sent to Farmer and others. Actuals arrive as free-text lines such as 'TECO TAP 60.000/ENRON'.",
+      "work": "Customers send nomination and actuals spreadsheets by email (TXU's hplMMDD.xls and 'Enron Actuals'; Reliant/Copano egmnom and HPL-month xls; Devon avails). Ami Chokshi forwards them by hand to five or six schedulers.",
+      "why": "These come daily or several times a day as xls attachments, and each one is retyped or forwarded. A shared inbox, an EDI feed or automatic loading would remove the forwarding.",
       "files": [
         "farmer-d/logistics/615.",
+        "farmer-d/logistics/627.",
         "farmer-d/logistics/628.",
+        "farmer-d/logistics/651.",
         "farmer-d/logistics/685.",
         "farmer-d/logistics/688.",
         "farmer-d/logistics/716.",
-        "farmer-d/logistics/627.",
-        "farmer-d/logistics/651.",
-        "farmer-d/logistics/714."
-      ]
-    },
-    {
-      "work": "Ami Chokshi receives nomination spreadsheets from Reliant, Copano and Devon and forwards them by hand to a fixed list of five schedulers.",
-      "why": "Messages like 'JAN NOMS', '5th Noms', '9TH NOMS', 'COPANO CHANGES' and 'Revised March 2000 Avails' are each forwarded to the same recipients. One even notes 'and I remembered to send these to you', which shows the process depends on people remembering.",
-      "files": [
         "farmer-d/logistics/620.",
         "farmer-d/logistics/653.",
         "farmer-d/logistics/728.",
         "farmer-d/logistics/764.",
         "farmer-d/logistics/767.",
         "farmer-d/logistics/816.",
-        "farmer-d/logistics/820."
+        "farmer-d/logistics/820.",
+        "farmer-d/logistics/714."
       ]
     },
     {
-      "work": "Expired or missing Sitara deals cause bridgeback errors and allocation exceptions. Logistics or volume management then emails Daren Farmer to extend or roll the deal, often for a tiny overflow volume.",
-      "why": "This is very frequent. Requests include 'extend deal for 0.423 dec spill into March 1', '14 dec flowed on 15th', 'deal expired 12/31/99' and 'deal ends 6/17, two more days'. There are repeated chases and deadlines tied to close, and the errors cascade into accounting arrangements and payments.",
+      "work": "Expired Sitara deals cause bridgeback errors, allocation exceptions and feedback errors. Each one starts an email chain asking Daren to extend the deal or create a new one, often to cover tiny spillover volumes (0.3 to 24 dec). Volume Management then sets up a manual accounting arrangement, or parks the gas on stranger's gas.",
+      "why": "This is the most common thread in the batch. Each case passes through 3 to 5 people (allocator → logistics → Daren → back), with deadlines tied to close. Aimee states that an accounting arrangement 'is always created every month' for meter 7266 and for the Cilco withdrawal, and Volume Management wants a deal so it doesn't have to make one every month. Possible fixes: evergreen or auto-roll rules, a tolerance for small overflow volumes, and an automatic expiry report before month end.",
       "files": [
         "farmer-d/logistics/590.",
         "farmer-d/logistics/591.",
         "farmer-d/logistics/649.",
         "farmer-d/logistics/749.",
+        "farmer-d/logistics/750.",
+        "farmer-d/logistics/751.",
         "farmer-d/logistics/755.",
         "farmer-d/logistics/806.",
         "farmer-d/logistics/814.",
         "farmer-d/logistics/872.",
         "farmer-d/logistics/879.",
         "farmer-d/logistics/881.",
-        "farmer-d/logistics/898.",
         "farmer-d/logistics/896.",
         "farmer-d/logistics/897.",
         "farmer-d/logistics/899.",
-        "farmer-d/logistics/1224.",
-        "farmer-d/logistics/1225.",
-        "farmer-d/logistics/1227.",
+        "farmer-d/logistics/898.",
+        "farmer-d/logistics/801.",
+        "farmer-d/logistics/804.",
+        "farmer-d/logistics/838.",
+        "farmer-d/logistics/875.",
+        "farmer-d/logistics/873.",
         "farmer-d/logistics/693.",
         "farmer-d/logistics/695.",
         "farmer-d/logistics/694.",
-        "farmer-d/logistics/606.",
-        "farmer-d/logistics/801.",
-        "farmer-d/logistics/838.",
-        "farmer-d/logistics/873.",
-        "farmer-d/logistics/875.",
-        "farmer-d/logistics/804.",
-        "farmer-d/logistics/728.",
-        "farmer-d/logistics/629.",
+        "farmer-d/logistics/1224.",
+        "farmer-d/logistics/1225.",
+        "farmer-d/logistics/1227.",
+        "farmer-d/logistics/782.",
+        "farmer-d/logistics/784.",
+        "farmer-d/logistics/792.",
+        "farmer-d/logistics/580.",
         "farmer-d/logistics/581.",
         "farmer-d/logistics/770.",
         "farmer-d/logistics/859.",
-        "farmer-d/logistics/886."
+        "farmer-d/logistics/886.",
+        "farmer-d/logistics/629.",
+        "farmer-d/logistics/606.",
+        "farmer-d/logistics/728.",
+        "farmer-d/logistics/826.",
+        "farmer-d/logistics/861.",
+        "farmer-d/logistics/904."
       ]
     },
     {
-      "work": "Accounting arrangements are created by hand every month for recurring flows that have no deal, for example Cilco storage withdrawals, the Texas General Land storage meter 7266 and Copano line gain.",
-      "why": "Volume management asks for permanent deals so they 'won't have to set up an accounting arrangement every month'. The Copano line gain thread shows a customer unpaid for 3 months. Cilco pathing had to be worked out ad hoc and the steps documented by email.",
-      "files": [
-        "farmer-d/logistics/750.",
-        "farmer-d/logistics/751.",
-        "farmer-d/logistics/811.",
-        "farmer-d/logistics/823.",
-        "farmer-d/logistics/804.",
-        "farmer-d/logistics/580.",
-        "farmer-d/logistics/662.",
-        "farmer-d/logistics/742."
-      ]
-    },
-    {
-      "work": "UA4 (unaccounted gas) cleanup means researching old 1997–1998 meter volumes across OSS, CPR, MIPS and POPS to find a valid contract or deal.",
-      "why": "There are multiple threads on different meters, each needing manual research across several legacy systems with deadlines ('Our deadline is Tuesday Jan 18'). Daren is repeatedly asked what happened in prior months. Separately, UA4 balances are reported in daily P&L emails.",
+      "work": "UA4 (unaccounted-for gas) cleanup for 1997–1999 production months. Staff dig through OSS, CPR and MIPS to find missing deals or contracts for old meter volumes on the 089 contract.",
+      "why": "Many requests, each needing manual research across several legacy systems. Answers depend on staff who have left, and some issues sat open for months (the PanEnergy meter 4045 thread ran from May 1999 to Jan 2000). Desk-to-desk and park-and-ride bookings have no documented procedure.",
       "files": [
         "farmer-d/logistics/595.",
         "farmer-d/logistics/617.",
@@ -117,16 +106,36 @@
         "farmer-d/logistics/622.",
         "farmer-d/logistics/670.",
         "farmer-d/logistics/669.",
-        "farmer-d/logistics/739.",
         "farmer-d/logistics/817.",
+        "farmer-d/logistics/739.",
         "farmer-d/logistics/203.",
-        "giron-d/sent/375.",
-        "giron-d/sent/373."
+        "farmer-d/logistics/583.",
+        "farmer-d/logistics/679.",
+        "farmer-d/logistics/687."
       ]
     },
     {
-      "work": "Producer Services emails well start-ups and price terms. Logistics then re-keys them into Sitara as spot or firm tickets and replies with the ticket number.",
-      "why": "The same pattern repeats: 'please create a spot ticket… Counterparty/Meter/Volume/Price', followed by 'the new sitara no. is …'. Errors get corrected by follow-up email ('Oooops! … LESS $0.10'). There are also monthly production estimate files.",
+      "work": "Kim Vaughn builds an HL&P flow spreadsheet (month-to-date and monthly) and emails it to Janet Wallis. Shortfall days are then handled by hand, with buyback or penalty decisions made under the contract's tolerance.",
+      "why": "The spreadsheet goes out weekly or more often ('most recent numbers'). The shortage and penalty calculation follows a fixed rule (5% tolerance, makeup days), so it could be computed automatically.",
+      "files": [
+        "farmer-d/logistics/603.",
+        "farmer-d/logistics/660.",
+        "farmer-d/logistics/697.",
+        "farmer-d/logistics/630.",
+        "farmer-d/logistics/678.",
+        "farmer-d/logistics/644.",
+        "farmer-d/logistics/652.",
+        "farmer-d/logistics/740.",
+        "farmer-d/logistics/760.",
+        "farmer-d/logistics/821.",
+        "farmer-d/logistics/860.",
+        "farmer-d/logistics/682.",
+        "farmer-d/logistics/683."
+      ]
+    },
+    {
+      "work": "Producer Services (Vance Taylor, Susan Smith, Donald Reinhardt, Melissa Graves) emails new well turn-ons and spot or baseload ticket details. Logistics (Tom Acton) keys them into Sitara and replies with the ticket number. Wellhead volume-change requests and monthly production estimates follow the same route.",
+      "why": "The same templated email (counterparty, meter, volume, price) is retyped into Sitara each time. A correction email (GMT price) shows the errors this invites. Tom asks for 'a lotus note with all the info' so he can file it. A form or direct entry would remove the handoff.",
       "files": [
         "farmer-d/logistics/638.",
         "farmer-d/logistics/647.",
@@ -140,58 +149,43 @@
         "farmer-d/logistics/789.",
         "farmer-d/logistics/798.",
         "farmer-d/logistics/857.",
-        "farmer-d/logistics/578."
+        "farmer-d/logistics/866.",
+        "farmer-d/logistics/895.",
+        "farmer-d/logistics/802.",
+        "farmer-d/logistics/805.",
+        "farmer-d/logistics/578.",
+        "farmer-d/logistics/746.",
+        "farmer-d/logistics/743."
       ]
     },
     {
-      "work": "KCS sends Josey Ranch monthly estimates and intra-month revisions to one scheduler, who forwards them to others. Someone then edits the volumes in Sitara.",
-      "why": "There is a monthly estimate plus '1st rev' and '2nd rev' messages, each forwarded by hand. Other producers and wells send similar volume-change requests that have to be keyed.",
+      "work": "KCS sends Josey Ranch monthly nomination estimates and intramonth revisions by email. Susan Trevino forwards them, and someone updates the volumes by hand.",
+      "why": "These recur every month, with revisions in between, and pass through forward-and-rekey steps.",
       "files": [
         "farmer-d/logistics/586.",
         "farmer-d/logistics/587.",
         "farmer-d/logistics/724.",
         "farmer-d/logistics/800.",
         "farmer-d/logistics/803.",
-        "farmer-d/logistics/850.",
-        "farmer-d/logistics/866.",
-        "farmer-d/logistics/895.",
-        "farmer-d/logistics/805.",
-        "farmer-d/logistics/802.",
-        "farmer-d/logistics/743.",
-        "farmer-d/logistics/746."
+        "farmer-d/logistics/850."
       ]
     },
     {
-      "work": "HL&P month-to-date flow spreadsheets are emailed repeatedly to the trader (Janet Wallis), followed by a monthly shortfall/buyback review.",
-      "why": "A 'HL&P flow / most recent numbers' email goes out roughly weekly, plus month-end versions. Short days are resolved manually against the contract tolerance.",
-      "files": [
-        "farmer-d/logistics/603.",
-        "farmer-d/logistics/630.",
-        "farmer-d/logistics/644.",
-        "farmer-d/logistics/652.",
-        "farmer-d/logistics/660.",
-        "farmer-d/logistics/678.",
-        "farmer-d/logistics/697.",
-        "farmer-d/logistics/740.",
-        "farmer-d/logistics/760.",
-        "farmer-d/logistics/821.",
-        "farmer-d/logistics/860.",
-        "farmer-d/logistics/682.",
-        "farmer-d/logistics/683."
-      ]
-    },
-    {
-      "work": "Every month, buybacks, swings and deficiency deals for industrial customers are set up and tracked. This includes the buyback spreadsheet and the industrial report distributed to Gas Control, and handling force majeure versus buyback decisions.",
-      "why": "Julie Meyers sends an 'UPDATED SPREADSHEET' monthly and Ken Seaman a monthly buyback list. Daren chases a 3rd-workday deadline and the industrial spreadsheet that 'nobody has seen in a few months'. There are repeated Valero force majeure and buyback threads and status chases.",
+      "work": "Monthly setup of industrial customers: buybacks, swings, ranking, deficiency deals, the Julie Meyers buyback spreadsheet, the industrial report, and force-majeure calls. This includes Valero's per-meter base, swing and buyback tickets with retroactive repathing and accounting arrangements.",
+      "why": "Every month there is a buyback list, a spreadsheet update, a report for Gas Control, and setup deadlines (3rd workday) that get missed. Rules for buyback versus force majeure are settled by email each time a plant goes down. Robert Lloyd's pathing procedure memo shows how complex the manual pathing is. The handover from Ken Seaman went badly and the report lapsed for months.",
       "files": [
         "farmer-d/logistics/645.",
-        "farmer-d/logistics/759.",
         "farmer-d/logistics/650.",
         "farmer-d/logistics/1078.",
         "farmer-d/logistics/827.",
+        "farmer-d/logistics/759.",
         "farmer-d/logistics/852.",
         "farmer-d/logistics/1253.",
-        "farmer-d/logistics/601.",
+        "farmer-d/logistics/779.",
+        "farmer-d/logistics/642.",
+        "farmer-d/logistics/662.",
+        "farmer-d/logistics/664.",
+        "farmer-d/logistics/659.",
         "farmer-d/logistics/602.",
         "farmer-d/logistics/626.",
         "farmer-d/logistics/702.",
@@ -200,19 +194,103 @@
         "farmer-d/logistics/902.",
         "farmer-d/logistics/903.",
         "farmer-d/logistics/905.",
-        "farmer-d/logistics/659.",
-        "farmer-d/logistics/662.",
-        "farmer-d/logistics/664.",
         "farmer-d/logistics/593.",
-        "farmer-d/logistics/594.",
-        "farmer-d/logistics/642.",
-        "farmer-d/logistics/779.",
-        "farmer-d/logistics/757."
+        "farmer-d/logistics/601.",
+        "farmer-d/logistics/734.",
+        "farmer-d/logistics/736.",
+        "farmer-d/logistics/757.",
+        "farmer-d/logistics/758.",
+        "farmer-d/logistics/654.",
+        "farmer-d/logistics/709.",
+        "farmer-d/logistics/731.",
+        "farmer-d/logistics/733."
       ]
     },
     {
-      "work": "Enron Methanol and EGPFC monthly plant nominations are emailed, then a trader re-keys them into Sitara and notifies risk to adjust risk assignments.",
-      "why": "A 'NATURAL GAS NOMINATION' email arrives every month. Follow-ups correct mistakes in Sitara ('500 of the 10,000 will be at Gas Daily… i'll fix it'). Every ticket change is followed by an email to risk asking them to update risk assignments.",
+      "work": "Monthly cost-allocation and survey work for managers: RC allocation percentage spreadsheets (with protected cells that block corrections), activity 'Hours' surveys for each position, activity driver quantity surveys, checks of analyst charges, PC purchase reviews, and salary survey questionnaires.",
+      "why": "These recur every month with short deadlines. Brenda gave up on the spreadsheet because she couldn't insert a column. Shari Mao's survey email itself offers to take a standard report instead of the survey. The 'A and A Reclass' charges are a manual journal entry each month that managers must then check.",
+      "files": [
+        "farmer-d/logistics/690.",
+        "farmer-d/logistics/698.",
+        "farmer-d/logistics/700.",
+        "farmer-d/logistics/710.",
+        "farmer-d/logistics/862.",
+        "farmer-d/logistics/863.",
+        "farmer-d/logistics/836.",
+        "farmer-d/logistics/825.",
+        "farmer-d/logistics/854.",
+        "farmer-d/logistics/856.",
+        "farmer-d/logistics/887.",
+        "farmer-d/logistics/699.",
+        "farmer-d/logistics/829."
+      ]
+    },
+    {
+      "work": "Transport and service rates are missing or wrong in Sitara and Unify (expense reconciliation, PMAs, transport usage tickets that don't match Lauri's rate matrix), and pipeline invoices are reconciled against deal tickets by hand.",
+      "why": "Rates are fixed by hand during close each month. Two rate sources, the matrix and the tickets, get out of step and make the P&L estimate wrong.",
+      "files": [
+        "farmer-d/logistics/643.",
+        "farmer-d/logistics/867.",
+        "farmer-d/logistics/874.",
+        "farmer-d/logistics/837.",
+        "farmer-d/logistics/839.",
+        "farmer-d/logistics/785."
+      ]
+    },
+    {
+      "work": "Intercompany (HPLC vs ENA) accrual and volume variances: one side of a deal is missing or volumes don't match, and settlements chases schedulers to fix it.",
+      "why": "Gregg Lenart lists $3.7M of mismatches in one month and states the goal of reducing analysis time. Thu Nguyen's chases show this recurs as month-end clearing.",
+      "files": [
+        "farmer-d/logistics/868.",
+        "farmer-d/logistics/877.",
+        "farmer-d/logistics/876.",
+        "farmer-d/logistics/878.",
+        "farmer-d/logistics/815.",
+        "farmer-d/logistics/888."
+      ]
+    },
+    {
+      "work": "MOPS (Unify) and POPS nominations get out of sync, along with deal-ticket and nomination mismatches. Duplicate data entry in pathing includes Source and Destination rankings, deals ranked wrong, and repathing or renominating.",
+      "why": "The Shoreline case shows the systems disagreed for days without anyone noticing. Mark Schrab proposes defaulting destination rankings to cut time and errors. Dave Nommensen proposes purging the oversized Contract_Event_Status log.",
+      "files": [
+        "farmer-d/logistics/792.",
+        "farmer-d/logistics/672.",
+        "farmer-d/logistics/598.",
+        "farmer-d/logistics/642.",
+        "farmer-d/logistics/771.",
+        "farmer-d/logistics/741.",
+        "farmer-d/logistics/748."
+      ]
+    },
+    {
+      "work": "Volume discrepancy checks with pipelines and customers (PG&E at meter 8743, Oasis, Beaumont Methanol/Brandywine, Mid-Tex, Koch), done by comparing numbers day by day.",
+      "why": "Each one needs a manual day-by-day comparison and phone calls, with confusion over whom to contact.",
+      "files": [
+        "farmer-d/logistics/680.",
+        "farmer-d/logistics/601.",
+        "farmer-d/logistics/709.",
+        "farmer-d/logistics/762.",
+        "farmer-d/logistics/876.",
+        "farmer-d/logistics/791.",
+        "farmer-d/logistics/582."
+      ]
+    },
+    {
+      "work": "King Ranch, Three Rivers and HPLR Liquids scheduling: point noms, interconnect tickets, and identifying wellhead purchases.",
+      "why": "Errors persist (Pat: 'too many discrepancies... very costly to the desk'). The contracts were restructured, about 7,000/day stayed unidentified, and the work was redone repeatedly.",
+      "files": [
+        "farmer-d/logistics/585.",
+        "farmer-d/logistics/1008.",
+        "farmer-d/logistics/1033.",
+        "farmer-d/logistics/613.",
+        "farmer-d/logistics/818.",
+        "farmer-d/logistics/869.",
+        "farmer-d/logistics/840."
+      ]
+    },
+    {
+      "work": "Monthly nominations for the Enron Methanol and EGP MTBE plants, Sitara edits by the marketer, and requests to traders or risk to adjust risk assignment by hand.",
+      "why": "These come every month by email and need follow-up Sitara and risk changes (for example, wrong Gas Daily volumes).",
       "files": [
         "farmer-d/logistics/607.",
         "farmer-d/logistics/719.",
@@ -222,98 +300,54 @@
         "farmer-d/logistics/723.",
         "farmer-d/logistics/718.",
         "farmer-d/logistics/717.",
-        "farmer-d/logistics/762.",
-        "farmer-d/logistics/731."
+        "farmer-d/logistics/594."
       ]
     },
     {
-      "work": "Monthly cost allocation percentages by RC are submitted on locked spreadsheets. There are also monthly activity 'hours' surveys and driver surveys, plus manual journal entries for analyst charges.",
-      "why": "Allocations are requested monthly. The spreadsheet's protected cells prevented the needed edits, and the manager gave up and sent percentages by email. The surveys must be filled in by hand every month, and the survey sender herself suggests replacing them with existing reports. Analyst charges are a manual journal entry each month that RC owners must check.",
+      "work": "Recurring broadcast notices: the Unify close schedule, shut-in meter lists, counterparty DUNS and name-change lists, Sitara outage releases, and leap-day end-date fixes.",
+      "why": "The same templated mass emails go out monthly. Shut-in lists are forwarded again because recipients were left off. Leap-day deals needed a manual sweep.",
       "files": [
-        "farmer-d/logistics/690.",
-        "farmer-d/logistics/698.",
-        "farmer-d/logistics/700.",
-        "farmer-d/logistics/710.",
-        "farmer-d/logistics/862.",
-        "farmer-d/logistics/854.",
-        "farmer-d/logistics/856.",
-        "farmer-d/logistics/836.",
-        "farmer-d/logistics/863.",
-        "farmer-d/logistics/825.",
-        "farmer-d/logistics/699.",
-        "farmer-d/logistics/887."
+        "farmer-d/logistics/589.",
+        "farmer-d/logistics/976.",
+        "farmer-d/logistics/632.",
+        "farmer-d/logistics/633.",
+        "farmer-d/logistics/671.",
+        "farmer-d/logistics/761.",
+        "farmer-d/logistics/810.",
+        "farmer-d/logistics/796.",
+        "farmer-d/logistics/584.",
+        "farmer-d/logistics/855.",
+        "farmer-d/logistics/900.",
+        "farmer-d/logistics/674.",
+        "farmer-d/logistics/822.",
+        "farmer-d/logistics/781."
       ]
     },
     {
-      "work": "Intercompany (HPLC/ENA) accrual and deal mismatches are reconciled by hand. Volumes and rates differ between the two sides or between systems.",
-      "why": "There is a monthly list of variances worth about $3.7M of missing purchase-side accruals, with the stated goal of 'Minimizing analysis time'. Repeated requests ask schedulers to find the missing side of a deal before month-end.",
+      "work": "Out-of-office emails listing desk coverage, plus holiday on-call and contact lists.",
+      "why": "Frequent mass emails list who covers each pipeline or duty. A shared coverage matrix could replace them.",
       "files": [
-        "farmer-d/logistics/868.",
-        "farmer-d/logistics/877.",
-        "farmer-d/logistics/876.",
-        "farmer-d/logistics/878.",
-        "farmer-d/logistics/815."
+        "farmer-d/logistics/611.",
+        "farmer-d/logistics/1269.",
+        "farmer-d/logistics/1301.",
+        "farmer-d/logistics/1382.",
+        "farmer-d/logistics/1501.",
+        "farmer-d/logistics/1547.",
+        "farmer-d/logistics/142.",
+        "farmer-d/logistics/708.",
+        "farmer-d/logistics/776.",
+        "farmer-d/logistics/600.",
+        "farmer-d/logistics/609.",
+        "farmer-d/logistics/592.",
+        "williams-w3/sent_items/393.",
+        "williams-w3/sent_items/208.",
+        "williams-w3/sent_items/197.",
+        "williams-w3/sent_items/123."
       ]
     },
     {
-      "work": "Transport rates are missing or wrong on Sitara transport usage tickets and expense contracts. They are corrected by hand against Lauri's rate matrix, and PMAs have to be cleared.",
-      "why": "A Missing Service Rates report lists multiple pipelines. Transport usage tickets differ from the rate matrix (0.055 vs 0.05). Oasis PMAs from 1999 still need clearing, and Midcon invoices are researched by hand against deal tickets.",
-      "files": [
-        "farmer-d/logistics/643.",
-        "farmer-d/logistics/867.",
-        "farmer-d/logistics/874.",
-        "farmer-d/logistics/837.",
-        "farmer-d/logistics/839.",
-        "farmer-d/logistics/778."
-      ]
-    },
-    {
-      "work": "Mismatches between MOPS/Unify, POPS and Sitara nominations go undetected until settlement. Zero-volume operational tickets cause P&L surprises.",
-      "why": "In the Shoreline case, a 1-day deal was confirmed for 6 days and 'many checks and balances' failed. Zero-volume HPLC Operational tickets were auto-populated and caused a $270K prudency release. MIPS actuals had to be loaded into POPS by hand.",
-      "files": [
-        "farmer-d/logistics/782.",
-        "farmer-d/logistics/784.",
-        "farmer-d/logistics/792.",
-        "farmer-d/logistics/888.",
-        "farmer-d/logistics/781.",
-        "farmer-d/logistics/582.",
-        "farmer-d/logistics/741.",
-        "farmer-d/logistics/748.",
-        "farmer-d/logistics/754.",
-        "farmer-d/logistics/756."
-      ]
-    },
-    {
-      "work": "Producer payment disputes over volume splits and missing deals hold up settlements while staff chase each other by email.",
-      "why": "The Torch/El Sordo split was chased for two weeks ('I need to pay it by Thursday'). Further cases: an Amoco deal the counterparty doesn't show, Phillips deals reported as booked wrong, and the Cox Exploration flow.",
-      "files": [
-        "farmer-d/logistics/826.",
-        "farmer-d/logistics/861.",
-        "farmer-d/logistics/904.",
-        "farmer-d/logistics/604.",
-        "farmer-d/logistics/663.",
-        "farmer-d/logistics/680.",
-        "farmer-d/logistics/791.",
-        "farmer-d/logistics/684.",
-        "farmer-d/logistics/687.",
-        "farmer-d/logistics/679."
-      ]
-    },
-    {
-      "work": "King Ranch / Three Rivers scheduling has repeated discrepancies and contract restructuring that require re-pathing and manual interconnect ticket fixes.",
-      "why": "Management calls the discrepancies 'very costly to the desk'. Multiple threads on point noms, interconnect tickets and unidentified wellhead purchases of about 7000/day.",
-      "files": [
-        "farmer-d/logistics/585.",
-        "farmer-d/logistics/1008.",
-        "farmer-d/logistics/1033.",
-        "farmer-d/logistics/613.",
-        "farmer-d/logistics/818.",
-        "farmer-d/logistics/869."
-      ]
-    },
-    {
-      "work": "Desk responsibilities are unclear and gas is left unpathed. A follow-up list of unresolved items is circulated by hand.",
-      "why": "A list of unpathed pipelines and unassigned shippers was resent as a follow-up still unresolved. The manager replied 'I am not a babysitter'. There is also a long hand-over of industrial accounts between staff.",
+      "work": "Unclear desk assignments and handoffs leave gas unpathed (Hank Eisenhour's duties split), with staffing and scheduling-hours discussions.",
+      "why": "Several pipelines were left unassigned for weeks, and follow-up memos repeat the same open issues. A work-schedule committee discusses weekend coverage and cross-training.",
       "files": [
         "farmer-d/logistics/640.",
         "farmer-d/logistics/673.",
@@ -323,102 +357,53 @@
         "farmer-d/logistics/665.",
         "farmer-d/logistics/666.",
         "farmer-d/logistics/667.",
+        "farmer-d/logistics/729.",
         "farmer-d/logistics/737.",
-        "farmer-d/logistics/758."
-      ]
-    },
-    {
-      "work": "Out-of-office and backup coverage emails list desk duties by hand, along with holiday on-call pipeline contact lists.",
-      "why": "Many near-identical 'Out of the Office' emails spell out who covers which pipeline or task each time, along with holiday on-call and Y2K phone lists.",
-      "files": [
-        "farmer-d/logistics/611.",
-        "farmer-d/logistics/1269.",
-        "farmer-d/logistics/1301.",
-        "farmer-d/logistics/1382.",
-        "farmer-d/logistics/1501.",
-        "farmer-d/logistics/1547.",
-        "farmer-d/logistics/142.",
-        "williams-w3/sent_items/393.",
-        "williams-w3/sent_items/208.",
-        "williams-w3/sent_items/197.",
-        "williams-w3/sent_items/123.",
-        "farmer-d/logistics/708.",
-        "farmer-d/logistics/776.",
-        "farmer-d/logistics/600.",
-        "farmer-d/logistics/609.",
-        "farmer-d/logistics/592."
-      ]
-    },
-    {
-      "work": "Meter shut-in and outage notices are sent as hand-typed meter lists and forwarded on because recipients were missed. Each outage needs coordination with producers.",
-      "why": "Recurring shut-in emails list many meters, and some are forwarded because 'he forgot you on this list'. Outages also trigger negotiations with Koch and others.",
-      "files": [
-        "farmer-d/logistics/632.",
-        "farmer-d/logistics/633.",
-        "farmer-d/logistics/671.",
-        "farmer-d/logistics/761.",
-        "farmer-d/logistics/810.",
-        "farmer-d/logistics/796.",
-        "farmer-d/logistics/790.",
-        "farmer-d/logistics/631.",
-        "farmer-d/logistics/634.",
-        "farmer-d/logistics/636.",
-        "farmer-d/logistics/884.",
-        "farmer-d/logistics/889.",
-        "farmer-d/logistics/890."
-      ]
-    },
-    {
-      "work": "Counterparty name changes, mergers and DUNS number changes are broadcast monthly to large lists, and records are overlaid by hand.",
-      "why": "There is a monthly 'CP Name Change/Merger List' to about 170 recipients and a DUNS change notice.",
-      "files": [
-        "farmer-d/logistics/584.",
-        "farmer-d/logistics/855.",
-        "farmer-d/logistics/900."
-      ]
-    },
-    {
-      "work": "The Unify month-end close schedule is broadcast each month, with a deadline to clear bridge-back errors.",
-      "why": "The same 'Unify Close Schedule' email goes to more than 40 people each month, and staff race to clear errors before the cutoff.",
-      "files": [
-        "farmer-d/logistics/589.",
-        "farmer-d/logistics/976.",
-        "farmer-d/logistics/629."
-      ]
-    },
-    {
-      "work": "Small Unify and Sitara system improvements are proposed to cut manual data entry: defaulting destination rankings from source rankings, purging the event log table, and a deal end-date fix for the leap day.",
-      "why": "Default rankings would 'save time pathing and prevent data entry errors'. The Contract_Event_Status table is over 1GB. Deals ending 2/28 had to be manually extended to 2/29. Meters were set up by mistake and later removed from SCADA/MIPS by hand.",
-      "files": [
-        "farmer-d/logistics/672.",
-        "farmer-d/logistics/598.",
-        "farmer-d/logistics/822.",
-        "farmer-d/logistics/768.",
-        "farmer-d/logistics/851.",
-        "farmer-d/logistics/766.",
-        "farmer-d/logistics/775.",
-        "farmer-d/logistics/771."
-      ]
-    },
-    {
-      "work": "EOL deals are being killed or modified after customers click, so changes need manual Legal and Product Control handling.",
-      "why": "The Product Control memo reports an increase in killed or modified EOL deals and introduces a termination-agreement process.",
-      "files": [
-        "farmer-d/logistics/847."
-      ]
-    },
-    {
-      "work": "Work schedules, weekend coverage and cross-training are being reorganized because of long hours. There is also a stream of manager meeting scheduling and calendar collection.",
-      "why": "The alternative work schedule meetings cite late hours and weekend calls. Assistants manually gather calendars and plan offsites and lunches.",
-      "files": [
         "farmer-d/logistics/788.",
         "farmer-d/logistics/849.",
-        "farmer-d/logistics/829.",
-        "farmer-d/logistics/835.",
-        "farmer-d/logistics/842.",
-        "farmer-d/logistics/808.",
-        "farmer-d/logistics/795.",
         "farmer-d/logistics/824."
+      ]
+    },
+    {
+      "work": "Cilco storage: a monthly withdrawal worksheet goes to the customer, plus complex manual pathing for storage injections and withdrawals.",
+      "why": "This is monthly and procedural. The pathing had to be worked out by Howard, who is outside Logistics, which raised concerns about who owns the role.",
+      "files": [
+        "farmer-d/logistics/742.",
+        "farmer-d/logistics/751.",
+        "farmer-d/logistics/811.",
+        "farmer-d/logistics/823.",
+        "farmer-d/logistics/735."
+      ]
+    },
+    {
+      "work": "Meter and pooling-point master-data setup: new pooling points, removing SCADA/MIPS and estimate-file entries for accounting meters, and Legal approval of new delivery-location text.",
+      "why": "These are repeated manual requests caused by wrong assumptions made when the meters were set up.",
+      "files": [
+        "farmer-d/logistics/768.",
+        "farmer-d/logistics/851.",
+        "farmer-d/logistics/853.",
+        "farmer-d/logistics/624.",
+        "farmer-d/logistics/610.",
+        "farmer-d/logistics/616.",
+        "farmer-d/logistics/766.",
+        "farmer-d/logistics/775.",
+        "farmer-d/logistics/769."
+      ]
+    },
+    {
+      "work": "Force-majeure letters and penalty billing for undertakes (Calpine, Valero), handled by finding the letters and faxing them.",
+      "why": "Settlement has to chase paper letters to support or reverse penalties.",
+      "files": [
+        "farmer-d/logistics/681.",
+        "farmer-d/logistics/602.",
+        "farmer-d/logistics/626."
+      ]
+    },
+    {
+      "work": "EOL deals are killed or modified after execution, and Product Control must be notified.",
+      "why": "The number of killed deals was rising, which costs audit trail and creates legal exposure. The proposed fix needs a manual termination agreement.",
+      "files": [
+        "farmer-d/logistics/847."
       ]
     }
   ]

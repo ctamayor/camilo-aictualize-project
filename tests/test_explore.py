@@ -231,7 +231,7 @@ class ExploreTest(unittest.TestCase):
         self.assertEqual((report["analysts"], report["critics"]), ({"read": 1, "glimpsed": 1}, {"read": 1, "glimpsed": 0}))
         self.assertEqual((report["read_by_each_analyst"], report["read_by_several_analysts"]), ([1, 1], 1))
         self.assertEqual(report["read_ids"], ["box/inbox/0.", "box/inbox/1."])
-        self.assertIn("read 2 of 3 messages (analysts 1, critics 1; 1 by more than one analyst)", line)
+        self.assertNotIn("messages", line)
 
     def test_the_agents_come_from_their_files(self):
         defs = explore.agent_definitions()

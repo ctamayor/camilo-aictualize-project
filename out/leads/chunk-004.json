@@ -1,45 +1,63 @@
 {
   "leads": [
     {
-      "work": "Reconciling Chicago/People's Gas Hub (park & loan, exchange) deals by hand between Tagg and the counterparty's spreadsheets",
-      "why": "Darron Giron spent weeks of repeated emails and still could not tie Steve Richman's sheet to Tagg. He ended up proposing to 'start over and book the deals you tell me to', with a P&L deadline. A related $5,000 Peoples invoice had no Sitara deal and was chased three times.",
+      "work": "Logistics schedulers ask the desk one email at a time for a deal (or a deal extension) whenever gas flows at a meter with no nomination or deal. This covers flow with no deal ticket, deals that expired or failed to roll even though they were flagged evergreen, and evergreen flags left on after a contract ended. The requests get repeated follow-ups.",
+      "why": "There is a near-identical request every few days: meter 1459, 6879, 1603, 0074, 6387/5192 and 5892, deal 109475, and others. Deals marked evergreen did not roll, so Julie Meyers had to fix them by hand. Aimee Lannou chased meter 6387 at least three times (10/26, 11/1, 11/9). A report that matched meter flow against active deals could catch these automatically.",
       "files": [
-        "giron-d/sent/665.",
-        "giron-d/sent/654.",
-        "giron-d/sent/651.",
-        "giron-d/sent/640.",
-        "giron-d/sent/656.",
+        "farmer-d/logistics/1386.",
+        "farmer-d/logistics/1403.",
+        "farmer-d/logistics/1404.",
+        "farmer-d/logistics/1406.",
+        "farmer-d/logistics/1428.",
+        "farmer-d/logistics/1448.",
+        "farmer-d/logistics/1474.",
+        "farmer-d/logistics/1485.",
+        "farmer-d/logistics/1506.",
+        "farmer-d/logistics/1456.",
+        "farmer-d/logistics/1457.",
+        "farmer-d/logistics/1458.",
+        "farmer-d/logistics/1454.",
+        "farmer-d/logistics/1413.",
+        "farmer-d/logistics/1429."
+      ]
+    },
+    {
+      "work": "Settlements and accounting staff look into price and volume mismatches between Sitara and counterparty invoices: the wrong index price pulled, demand charges, deals entered twice, deals booked on the wrong meter, manual checks, and suspended payments.",
+      "why": "Examples include Duke at WAHA (the system pulled $3.95 instead of $2.95, chased several times), the Agave crude price calculation, Metropolitan demand charge entered twice, the Eastman demand charge entered by hand every month, North Shore tier pricing, NWPL price missing in Unify, the Duke deal on the wrong meter two months running, and Ocean Energy suspense. Mary Poorman notes that manual checks are being cut for deals entered wrongly.",
+      "files": [
+        "farmer-d/logistics/1381.",
+        "giron-d/sent/673.",
+        "giron-d/sent/636.",
+        "giron-d/sent/635.",
+        "giron-d/sent/605.",
+        "giron-d/sent/655.",
+        "giron-d/sent/561.",
+        "farmer-d/logistics/1398.",
+        "farmer-d/logistics/1450.",
+        "farmer-d/logistics/1438.",
+        "farmer-d/logistics/1440.",
+        "farmer-d/logistics/1472.",
+        "farmer-d/logistics/1420.",
         "giron-d/sent/630."
       ]
     },
     {
-      "work": "Requesting new books, counterparties, regions and mappings across Tagg, Sitara, CPR and Netco by email and forms to several different people",
-      "why": "Each new book needs separate requests to Gary Stadler, Susan Trevino, Regina Perkins, Burton McIntyre and Scott Mills, plus follow-ups and forwards. It recurs for Enovate, the West desk and Chicago. Moving deals between books (and new curves and trade zones) also goes by individual request to Jeremy Wong.",
+      "work": "Risk staff link deal numbers between systems by hand: Tagg, Sitara, SCI and EnronOnline. People keep asking for cross-references, and the links are often missing.",
+      "why": "Giron repeatedly reminds Radous to link Tagg, Sitara, SCI and EOL numbers. Doug Nelson asks for the Sitara numbers behind Tagg deals. Others ask for tickets or Sitara numbers so they can pay invoices. The origination amount did not come through from the ticket. Linking these numbers automatically would remove this work.",
       "files": [
-        "giron-d/sent/653.",
-        "giron-d/sent/650.",
-        "giron-d/sent/648.",
-        "giron-d/sent/644.",
-        "giron-d/sent/641.",
-        "giron-d/sent/557.",
-        "giron-d/sent/527.",
-        "giron-d/sent/525.",
-        "giron-d/sent/491.",
-        "giron-d/sent/160.",
-        "giron-d/sent/564.",
-        "giron-d/sent/623.",
-        "giron-d/sent/619.",
-        "giron-d/sent/575.",
-        "giron-d/sent/573.",
-        "giron-d/sent/569.",
-        "giron-d/sent/553.",
-        "giron-d/inbox/70.",
-        "giron-d/sent/634."
+        "giron-d/sent/591.",
+        "giron-d/sent/549.",
+        "giron-d/sent/592.",
+        "giron-d/sent/571.",
+        "giron-d/sent/676.",
+        "giron-d/sent/677.",
+        "giron-d/sent/675.",
+        "giron-d/sent/630."
       ]
     },
     {
-      "work": "Finding deals between ECC (Enron Canada) and third parties in Houston books every month and moving them by hand to the FT-US/CAND-ERMS book before Canadian invoicing",
-      "why": "Stacey Vallejo sends monthly lists of deal IDs to flip, often with same-day deadlines, and asks each controller to check all books. EnronOnline deals land in the wrong book automatically. Darron built a calc to find them and others asked to copy it.",
+      "work": "Deals with ECC (Canada) counterparties land in the wrong Houston books, including EOL auto-booked deals. Each month before NYMEX invoicing, they have to be found and moved to the FT-US/CAND-ERMS book by hand.",
+      "why": "Stacey Vallejo sends reminders every month (October, December and later) listing deal IDs to move. The emails pass through Gossett and Giron to the book admins. A booking rule or validation could prevent the mistake in the first place.",
       "files": [
         "giron-d/sent/551.",
         "giron-d/sent/550.",
@@ -48,87 +66,66 @@
       ]
     },
     {
-      "work": "Settlements calling risk staff each month to learn about new or changed book codes before running NYMEX invoices",
-      "why": "Rebecca Ford says four book codes were missed in one period. She set up a manual phone procedure to check with Risk each month, which a book-code registry or notification could replace.",
+      "work": "Settlements has no reliable way to learn about new book codes or newly active books before running the monthly NYMEX invoices, so someone phones Risk each month to ask.",
+      "why": "Rebecca Ford found 4 books on her own and set up a monthly calling procedure. Beatrice Reyna asks again each month and chases who has replaced whom.",
       "files": [
         "giron-d/sent/556."
       ]
     },
     {
-      "work": "Meters with flow but no deal or nomination: logistics asks the trader each month to create, extend or roll Sitara deals, including evergreen-flag errors and expired deals that cause feedback errors",
-      "why": "Many near-identical requests from Aimee Lannou, Mary Poorman and Mark McCoy, with follow-ups ('What is the status of meter 6387?'). Evergreen flags roll or fail to roll deals wrongly, and feedback-error lists are reviewed by hand.",
+      "work": "Creating new books, regions, curves and counterparties means emailing several administrators: Tagg, Sitara, CPR, the book request form, curve mapping and trade zones.",
+      "why": "For Enovate alone, Giron emailed Gary Stadler, Susan Trevino, Regina Perkins, Scott Mills and Jeremy Wong. He sends repeated 'Book Request' forms and asks for curve additions and trade zone mappings, often marked urgent. Book moves also go through Jeremy Wong. One intake workflow could handle all of this.",
       "files": [
-        "farmer-d/logistics/1386.",
-        "farmer-d/logistics/1403.",
-        "farmer-d/logistics/1404.",
-        "farmer-d/logistics/1406.",
-        "farmer-d/logistics/1413.",
-        "farmer-d/logistics/1428.",
-        "farmer-d/logistics/1448.",
-        "farmer-d/logistics/1454.",
-        "farmer-d/logistics/1456.",
-        "farmer-d/logistics/1457.",
-        "farmer-d/logistics/1458.",
-        "farmer-d/logistics/1474.",
-        "farmer-d/logistics/1485.",
-        "farmer-d/logistics/1506.",
-        "farmer-d/logistics/1398.",
-        "farmer-d/logistics/1450.",
-        "farmer-d/logistics/1429."
+        "giron-d/sent/650.",
+        "giron-d/sent/648.",
+        "giron-d/sent/644.",
+        "giron-d/sent/653.",
+        "giron-d/sent/641.",
+        "giron-d/sent/557.",
+        "giron-d/sent/491.",
+        "giron-d/sent/160.",
+        "giron-d/sent/527.",
+        "giron-d/sent/525.",
+        "giron-d/sent/623.",
+        "giron-d/sent/564.",
+        "giron-d/sent/573.",
+        "giron-d/sent/569.",
+        "giron-d/sent/553.",
+        "giron-d/sent/619.",
+        "giron-d/sent/575.",
+        "giron-d/inbox/70."
       ]
     },
     {
-      "work": "Investigating price, invoice and demand-charge differences between Sitara/Unify and counterparty invoices",
-      "why": "Examples include Duke's WAHA index price being pulled wrong, Agave's price calc spreadsheet being stale in Sitara, a missing NWPL price in the Unify tables, a North Shore tier price change, a deal entered twice, and monthly demand charges (Eastman) keyed in on request. Each takes several emails across settlements, risk and traders.",
-      "files": [
-        "farmer-d/logistics/1381.",
-        "giron-d/sent/636.",
-        "giron-d/sent/635.",
-        "giron-d/sent/561.",
-        "giron-d/sent/655.",
-        "giron-d/sent/673.",
-        "giron-d/sent/605.",
-        "farmer-d/logistics/1420.",
-        "farmer-d/logistics/1438.",
-        "farmer-d/logistics/1440."
-      ]
-    },
-    {
-      "work": "Manual checks cut to counterparties when deals are not entered correctly, plus prior-period clean-up",
-      "why": "Mary Poorman found that parties are paid manually without logistics knowing, and proposes tracking manual checks by counterparty, meter and deal. Payment suspense and write-offs need formal letters and several approval steps.",
-      "files": [
-        "farmer-d/logistics/1472.",
-        "farmer-d/logistics/1468.",
-        "farmer-d/logistics/1440."
-      ]
-    },
-    {
-      "work": "Cross-referencing deal IDs by hand between Tagg, Sitara, SCI and EOL",
-      "why": "Darron repeatedly reminds staff to type the Tagg, Sitara and EOL numbers into each system. Other groups ask him for the Sitara numbers of Tagg deals or tickets because the links are missing.",
-      "files": [
-        "giron-d/sent/591.",
-        "giron-d/sent/549.",
-        "giron-d/sent/592.",
-        "giron-d/sent/571.",
-        "giron-d/sent/676."
-      ]
-    },
-    {
-      "work": "Making sure every book or post ID is 'officialized' each night, and checking it with ad-hoc Excel macros",
-      "why": "A list of non-officialized books goes to Sally Beck and Rick Buy every week. Controllers built and kept modifying macros to check, and the existing control misses post IDs with no net position. The month-end basis/index roll-off also needs two calcs and official/unofficial toggling.",
+      "work": "Book admins must mark every book official each night. Missed books end up on a daily exception list reviewed by Sally Beck and Rick Buy. Teams built their own macros to check which books were done.",
+      "why": "Moscoso reported books not marked official. The control missed books with no net position. Dutch Quigley and Greg Couch passed around and changed a PostID macro. This nightly manual step is a candidate for automation.",
       "files": [
         "giron-d/sent/595.",
         "giron-d/sent/590.",
         "giron-d/sent/586.",
         "giron-d/sent/582.",
         "giron-d/sent/580.",
-        "giron-d/sent/570.",
+        "giron-d/sent/570."
+      ]
+    },
+    {
+      "work": "At month-end roll-off, basis positions have to be calculated twice, once for the TDS download and once for VaR, by marking the book official, unmarking it and recalculating.",
+      "why": "Gossett says 'Again this month' you will have to calculate twice, which shows it is a recurring manual workaround.",
+      "files": [
         "giron-d/sent/631."
       ]
     },
     {
-      "work": "New policies that add manual steps for book admins: a before/after minibook for every deal change, John Lavorato's approval for top-level adjustments, and a fixed leg order for Gas Daily four-leg deals so confirms work",
-      "why": "These are stated as policies because communication between groups failed. Each one is manual work that systems could enforce or produce automatically.",
+      "work": "Book admins must compact the WeaponX Access database by hand every week because it grows very large (520MB down to 30MB after compacting).",
+      "why": "This weekly manual maintenance could be scheduled to run automatically.",
+      "files": [
+        "giron-d/sent/596.",
+        "giron-d/sent/585."
+      ]
+    },
+    {
+      "work": "Policy requires a before-and-after minibook for every deal change, and every top-level adjustment needs Lavorato's approval. Both add manual overhead.",
+      "why": "These are new manual controls. Mini-book access had to be requested and runs on the controller's machine. Gas Daily four-leg deals must also be entered in a fixed leg order so confirms don't fail, which a validation could enforce.",
       "files": [
         "giron-d/sent/568.",
         "giron-d/sent/567.",
@@ -137,16 +134,33 @@
       ]
     },
     {
-      "work": "WeaponX Access database bloat: book admins must compact it by hand every week",
-      "why": "The databases grow from about 12 to 30 MB up to 400 to 520 MB because data is imported and deleted daily. Greg Couch asks every book admin to compact manually, which a scheduled job could do.",
+      "work": "Rebuilding the Chicago/Enovate hub deals: Tagg bookings do not match the counterparty spreadsheet, so they have to be reconciled by hand.",
+      "why": "Over several weeks Giron could not tie the deals out and chased Richman, Radous and Mixon. In the end he chose to start over.",
       "files": [
-        "giron-d/sent/596.",
-        "giron-d/sent/585."
+        "giron-d/sent/665.",
+        "giron-d/sent/654.",
+        "giron-d/sent/651.",
+        "giron-d/sent/640.",
+        "giron-d/sent/656.",
+        "giron-d/sent/629.",
+        "giron-d/sent/626.",
+        "giron-d/sent/625."
       ]
     },
     {
-      "work": "Monthly OPM (Operations Pricing Model) hours survey of activity hours by cost center",
-      "why": "There are company-wide rollouts, reminders and Access installs. Managers like Daren Farmer could not get Access and sent spreadsheets instead, followed by clarification emails. It is described as a recurring monthly survey.",
+      "work": "Building the yearly budget by hand: Diane Cook collects staffing, salary, training and other items from each manager through spreadsheets and repeated reminders.",
+      "why": "There were several resends and 'BUDGET HELP' emails. Managers don't know their staff's salaries, so Cook estimates from averages, and she keeps a list of items people forget each year. HR and payroll data could fill much of this in.",
+      "files": [
+        "farmer-d/logistics/1392.",
+        "farmer-d/logistics/1399.",
+        "farmer-d/logistics/1401.",
+        "farmer-d/logistics/1409.",
+        "giron-d/sent/791."
+      ]
+    },
+    {
+      "work": "The monthly Operations Pricing Model (OPM) hours survey: managers allocate staff hours to activity codes, with reminders and follow-ups.",
+      "why": "It recurs every month, needed an Access rollout, and comes with deadline reminders. Daren could not use Access and sent a spreadsheet, and Suzanne then followed up with clarifying questions. The OPM team also mentions automating 'driver information'.",
       "files": [
         "farmer-d/logistics/1415.",
         "farmer-d/logistics/1436.",
@@ -158,59 +172,55 @@
       ]
     },
     {
-      "work": "Annual budget build: staffing worksheets, salary estimates, training and questionnaires collected by Diane Cook",
-      "why": "There are several reminders and resends. Managers don't know their staff's salaries, so Diane collects estimates from each of them by hand, and returns come in late.",
-      "files": [
-        "farmer-d/logistics/1392.",
-        "farmer-d/logistics/1399.",
-        "farmer-d/logistics/1401.",
-        "farmer-d/logistics/1409.",
-        "giron-d/sent/791."
-      ]
-    },
-    {
-      "work": "Monthly and quarterly explanations of wholesale volume variances for Investor Relations",
-      "why": "This is an explicit recurring monthly request ('It's that time again') to explain every change of 10% or more across many desk contacts.",
+      "work": "Each month, controllers write explanations for volume changes over 10% between periods, for Investor Relations.",
+      "why": "'It's that time again for the monthly and quarterly volumetric explanations'. This has been made monthly and is gathered by email.",
       "files": [
         "farmer-d/logistics/1416."
       ]
     },
     {
-      "work": "Requests for P&L support and top sheets, and the hand-off to a new controller",
-      "why": "Requests go out to controllers, then on to book admins, with second requests. When roles change, requesters are pointed to new people by email each time.",
+      "work": "Meter outages and maintenance notices, plus meter replacement steps, are sent by email to large distribution lists. A meter replacement takes a five-step hand-off across teams, with phone calls after each step.",
+      "why": "PG&E maintenance notices, the DEFS shut-in, and the new meter 0439. Clem's step-by-step process notes that facility changes 'can not be done automatically' in POPS.",
       "files": [
-        "giron-d/sent/583.",
-        "giron-d/sent/574.",
-        "giron-d/sent/550."
-      ]
-    },
-    {
-      "work": "Pipeline and meter maintenance notices emailed to schedulers, plus follow-up 'back up' messages",
-      "why": "Schedulers relay notices from PG&E, Duke and Gas Control to a list of 20 people one by one, then forward them again when the work ends.",
-      "files": [
-        "farmer-d/logistics/1786.",
         "farmer-d/logistics/1793.",
+        "farmer-d/logistics/1786.",
         "farmer-d/logistics/1816.",
-        "farmer-d/logistics/1405.",
         "farmer-d/logistics/1418.",
         "farmer-d/logistics/1419.",
         "farmer-d/logistics/1396.",
-        "farmer-d/logistics/1430."
-      ]
-    },
-    {
-      "work": "Replacing a meter (and its related facility changes) through a five-step sequence of manual system changes and phone calls across groups",
-      "why": "Clem Cernosek's plan has people calling each other between steps and changing POPS by hand because the changes 'can not be done automatically'. Usage tickets can only be set for about 3 months, so one arrangement needed 7 tickets.",
-      "files": [
+        "farmer-d/logistics/1430.",
         "farmer-d/logistics/1439.",
         "farmer-d/logistics/1442.",
         "farmer-d/logistics/1444.",
-        "farmer-d/logistics/1796."
+        "farmer-d/logistics/1405."
       ]
     },
     {
-      "work": "Monthly first-of-month gas volume and nomination emails (Methanol/MTBE plants, Swift, Forest Oil) forwarded to traders and schedulers",
-      "why": "The same message is sent every month and forwarded on. Revisions are sent separately, and deal end dates are not reflected in Sitara.",
+      "work": "Usage tickets can only cover about 3 months each, so a back-dated fix needed 7 separate tickets. Write-offs need a formal letter and deal tickets entered by hand in MOPS.",
+      "why": "A system limit is forcing duplicated manual entry.",
+      "files": [
+        "farmer-d/logistics/1796.",
+        "farmer-d/logistics/1468."
+      ]
+    },
+    {
+      "work": "Following up on imbalances and payback with pipelines across many contracts that could be netted, and fixing imbalance reports that are poor quality.",
+      "why": "Gottlob lists dozens of open imbalance and contract-netting questions. He says the imbalance report's columns don't add up and it is missing data. He also asks for a priority curtailment list for the RRC to be pulled from the contract system.",
+      "files": [
+        "farmer-d/logistics/1433.",
+        "farmer-d/logistics/1470."
+      ]
+    },
+    {
+      "work": "Monetized deal tracking: a deal number changed when a book was renamed, which broke the monetization waterfall, and staff had to investigate by hand.",
+      "why": "There was a $971K shortfall and coordinators were not trained on monetizations.",
+      "files": [
+        "giron-d/sent/643."
+      ]
+    },
+    {
+      "work": "Monthly first-of-month nominations and volume notices from plants and producers (Methanol/MTBE, Swift, Forest Oil) arrive as emails and are keyed in by hand.",
+      "why": "These are recurring monthly emails with revisions.",
       "files": [
         "farmer-d/logistics/1423.",
         "farmer-d/logistics/1424.",
@@ -220,75 +230,34 @@
       ]
     },
     {
-      "work": "Pipeline imbalance reconciliation and too many transport contracts",
-      "why": "Ed Gottlob lists dozens of open imbalances, asks for contract netting, and calls the imbalance report 'pretty sad' (columns don't add up). He also asks for a curtailment-priority customer list for the Railroad Commission to be pulled from the contract system.",
+      "work": "Requests to approve access and security: SRRS approvals for TDS, Exceed and Sitara access, and gathering contact lists by email.",
+      "why": "TDS security approval is being handed to the desk controllers, alongside repeated access requests and contact-list collection.",
       "files": [
-        "farmer-d/logistics/1433.",
-        "farmer-d/logistics/1470."
-      ]
-    },
-    {
-      "work": "Reconciling origination, monetized-deal waterfall payments and deals with counterparties or affiliates (New Power, Wisconsin Electric, Mary Lynne Ruffer's volumes)",
-      "why": "There are repeated chases ('Dave is wanting his money', 'Any word?'). A deal number changed with a book rename and broke the monetization tracking downstream.",
-      "files": [
-        "giron-d/sent/677.",
-        "giron-d/sent/675.",
-        "giron-d/sent/643.",
-        "giron-d/sent/625.",
-        "giron-d/sent/629.",
-        "giron-d/sent/626.",
-        "farmer-d/logistics/1461."
-      ]
-    },
-    {
-      "work": "Access and security approvals (SRRS, TDS book access, Sitara desk access)",
-      "why": "Managers approve access requests by email links. TDS security approvals are being handed from one person to the desks, and access is requested by hand whenever a role changes.",
-      "files": [
-        "farmer-d/logistics/1407.",
         "giron-d/sent/578.",
+        "farmer-d/logistics/1407.",
         "giron-d/sent/618.",
-        "giron-d/sent/568."
-      ]
-    },
-    {
-      "work": "Updating contact and phone lists by hand, and sending org/role announcements",
-      "why": "An assistant gathers each person's numbers by email. Risk contacts and counterparty phone changes are re-sent by email, and admin realignments are announced to large lists.",
-      "files": [
         "giron-d/sent/646.",
-        "giron-d/sent/660.",
-        "farmer-d/logistics/1380.",
-        "farmer-d/logistics/1459.",
-        "farmer-d/logistics/1465.",
-        "farmer-d/logistics/1432.",
-        "farmer-d/logistics/1443."
+        "giron-d/sent/660."
       ]
     },
     {
-      "work": "Performance review (PRC) cycle administration and reminders",
-      "why": "HR sends schedule and reminder emails to over 50 managers, and managers send in reviewer lists by email.",
-      "files": [
-        "farmer-d/logistics/3219.",
-        "giron-d/sent/790."
-      ]
-    },
-    {
-      "work": "Large volume of personal chain email and video forwarding through company mail",
-      "why": "Dozens of forwards from one user, including MPEG/AVI attachments, political chain letters and offensive jokes, sent to internal and external lists. This costs storage and time and carries compliance risk.",
+      "work": "Mass forwarding of personal and joke emails with large video attachments (MPG/AVI/EXE) through corporate mail.",
+      "why": "Giron's sent folder is mostly forwards of multi-megabyte files, which costs time and mailbox storage.",
       "files": [
         "giron-d/sent/670.",
         "giron-d/sent/668.",
-        "giron-d/sent/667.",
         "giron-d/sent/663.",
-        "giron-d/sent/662.",
-        "giron-d/sent/659.",
         "giron-d/sent/658.",
-        "giron-d/sent/647.",
-        "giron-d/sent/642.",
         "giron-d/sent/628.",
-        "giron-d/sent/599.",
-        "giron-d/sent/612.",
-        "giron-d/sent/559.",
-        "giron-d/sent/576."
+        "giron-d/sent/599."
+      ]
+    },
+    {
+      "work": "Internal audit asks for P&L support (top sheets and curve shift reports), and the requests are passed on to book admins by hand.",
+      "why": "This was the second request for the August P&L. It could become a standard report package.",
+      "files": [
+        "giron-d/sent/583.",
+        "giron-d/sent/574."
       ]
     }
   ]

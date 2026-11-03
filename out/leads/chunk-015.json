@@ -1,8 +1,16 @@
 {
   "leads": [
     {
-      "work": "Weekly 'California Capacity Report' that Michelle Lokay writes by hand. Each Friday (or Thursday) she pulls TW and El Paso average deliveries to California, capacity utilization by delivery point, and the Gas Daily prices with their changes, then emails the same fixed-format summary to the same 7 recipients.",
-      "why": "Six or more weeks in a row of identical-template emails with only the numbers changed. The figures come from systems and published indices, so the report is a strong candidate for automatic generation.",
+      "work": "Each day an assistant forwards the vendor Energy Market Report (Economic Insight) by hand to a fixed list of traders",
+      "why": "Jill Chatterton sends 'FW: Energy Market Report' daily to the same ~12 traders. The list never changes, so the vendor could send to a distribution list or an automatic rule could do the forwarding.",
+      "files": [
+        "williams-w3/inbox/35.",
+        "williams-w3/inbox/23."
+      ]
+    },
+    {
+      "work": "Every week Michelle Lokay writes the California Capacity Report by hand: TW and El Paso deliveries, % utilization and Gas Daily prices, all in a fixed template",
+      "why": "The same layout goes to the same recipients every Friday (02/08, 02/14, 02/22, 03/01, 03/08, 03/15, 03/22). The numbers come from systems and price feeds, so the report could be generated automatically.",
       "files": [
         "lokay-m/sent_items/86.",
         "lokay-m/sent_items/97.",
@@ -14,16 +22,8 @@
       ]
     },
     {
-      "work": "Daily Energy Market Report (Economic Insight) that Jill Chatterton forwards by hand to the Portland trading group.",
-      "why": "An admin re-sends the full report to a fixed list of about 12 traders every day. A direct subscription or list routing would remove the step.",
-      "files": [
-        "williams-w3/inbox/35.",
-        "williams-w3/inbox/23."
-      ]
-    },
-    {
-      "work": "Manual reconciliation of OBA and interconnect imbalances with Mojave and CIG (El Paso). Volumes are compared month by month back to 1996–98, daily volume statements are faxed back and forth, Location Quantity Summary printouts are requested, and discrepancies are summarized one by one. The work ends in cash-out and payback settlement.",
-      "why": "Labor-intensive back-and-forth over weeks: faxes, re-sent spreadsheets, a separate request to a colleague for printouts. Discrepancies going back years point to no routine automated tie-out between pipelines, and the related imbalance and line-pack summaries recur.",
+      "work": "Reconciling pipeline imbalances and OBAs with El Paso (Mojave and CIG) by hand, month by month, with faxed daily volume statements and printed Location Quantity Summary lists",
+      "why": "Discrepancies going back to 1996 were worked month by month: faxes asked for and sent, reports printed by Richard Hanagriff, summaries re-sent, and the thread duplicated several times. Many differences were 1-2 units of rounding. An automated nomination/volume match between pipelines would avoid this.",
       "files": [
         "lokay-m/sent_items/89.",
         "lokay-m/sent_items/90.",
@@ -37,23 +37,8 @@
       ]
     },
     {
-      "work": "Meter volume recaps in 'the usual format', tied out against scheduled quantities, with exceptions worked through with the operator.",
-      "why": "'Usual format' points to a regular manual recap. Comparing scheduled and measured volumes is rule-based and can be automated.",
-      "files": [
-        "williams-w3/inbox/142."
-      ]
-    },
-    {
-      "work": "Monthly Mojave/El Paso Topock index price lookups done by hand for billing or settlement, including re-sending after a price was revised.",
-      "why": "A colleague asks by email for four months of index prices, then a revised February price and the March price follow in further emails. A direct feed of index data to billing would remove the hand-off.",
-      "files": [
-        "lokay-m/sent_items/125.",
-        "lokay-m/sent_items/127."
-      ]
-    },
-    {
-      "work": "Biweekly time-report reminders from the admin (Audrey Robertson), with each person replying by email with their sick and vacation days.",
-      "why": "The same 'Time Reports Due' blast recurs every pay period, followed by manual absence replies and corrections ('you were here yesterday'). A self-service timekeeping system could replace the loop.",
+      "work": "Time reports: an admin sends a reminder every pay period and each person replies by email with their absences",
+      "why": "Audrey Robertson sends 'Time Reports Due' over and over. Staff reply with vacation and sick days by email, and she corrects them by hand. Self-service timekeeping with automatic reminders would remove this.",
       "files": [
         "lokay-m/sent_items/92.",
         "lokay-m/sent_items/99.",
@@ -62,44 +47,31 @@
       ]
     },
     {
-      "work": "Weekly 'bullets' status collection by Kimberly Watson from each marketer, who must reply even when they have nothing to report.",
-      "why": "A recurring manual roll-up of status updates by email, with each reply forwarded on again.",
+      "work": "Weekly 'bullets' status collection from the marketers, including asking people with nothing to report to reply 'none'",
+      "why": "Kim Watson asks for bullets every Friday morning and requires a reply even when there is nothing. The answers are then forwarded on by hand. A shared template or tracker could replace this.",
       "files": [
         "lokay-m/sent_items/132.",
         "lokay-m/sent_items/160."
       ]
     },
     {
-      "work": "TW contract administration by email: a contract status list (processing, tendered, executed), amendment requests, name changes, MAXDTQ changes, and the routing of executed agreements.",
-      "why": "The status report looks like a recurring manual snapshot. Each change goes through several emails between the customer, the marketer and Contract Administration, such as a customer having to 'email officially' for a name change.",
+      "work": "Looking up monthly index prices (Mojave/Topock) by hand and emailing them on request, plus corrections when prices are revised",
+      "why": "Richard Hanagriff asks for monthly index prices. Michelle sends them in several pieces, and a revised February price had to be resent. A shared price feed would avoid this.",
       "files": [
-        "lokay-m/inbox/37.",
-        "lokay-m/sent_items/105.",
-        "lokay-m/sent_items/149.",
-        "lokay-m/sent_items/150.",
-        "lokay-m/sent_items/154.",
-        "lokay-m/inbox/28."
+        "lokay-m/sent_items/125.",
+        "lokay-m/sent_items/127."
       ]
     },
     {
-      "work": "Billing TCR surcharges on expired contracts by manually overriding the CBS billing system or drafting amendments.",
-      "why": "A system gap: the surcharge runs for 10 years after a contract expires, but CBS cannot bill expired contracts, so each case needs manual workarounds and coordination.",
+      "work": "Concur expense approvals sent to the manager by email notification, even for small amounts",
+      "why": "An approval notice for a $30 report that an assistant entered. This happens for every report, so routine approvals could be threshold-based or delegated.",
       "files": [
-        "lokay-m/sent_items/126."
+        "williams-w3/inbox/28."
       ]
     },
     {
-      "work": "TW Unsubscribed Capacity web posting: formatting problems, and postings going up late so that shippers call before they are live.",
-      "why": "A 'long-standing issue' with headers and printing, reworked several times. A note says the posting 'went up late again', which suggests a recurring manual posting process that should be automated or scheduled.",
-      "files": [
-        "lokay-m/sent_items/83.",
-        "lokay-m/sent_items/87.",
-        "lokay-m/inbox/74."
-      ]
-    },
-    {
-      "work": "UBS migration compliance: each employee copies their own H/O/M drive data and email (exporting from Outlook loses attachments), signs the data migration certification, and has forms collected in batches by admins.",
-      "why": "Every one of hundreds of employees did this by hand under deadline, with repeat clarifications ('may not have been clear'), forms gathered by Cara Semperger, and broken export instructions. It is costly, and the same pattern applies to any future transfer of staff to a new entity.",
+      "work": "Moving staff to UBS: each person copies their own H/O/M drive data and exports their own email, signs a compliance certification on paper, and an admin collects the forms in a batch",
+      "why": "Many emails repeat or correct the instructions ('may not have been clear', attachments not saved on export). Each employee copies files by hand, and paper certifications go to Linda Guinn or are batched by Cara. This shows heavy manual effort and confusion.",
       "files": [
         "giron-d/inbox/14.",
         "williams-w3/inbox/140.",
@@ -107,137 +79,130 @@
         "williams-w3/inbox/16.",
         "williams-w3/inbox/11.",
         "williams-w3/inbox/15.",
-        "giron-d/inbox/12."
+        "giron-d/inbox/12.",
+        "williams-w3/inbox/24."
       ]
     },
     {
-      "work": "Per-user access provisioning: production IDs and passwords emailed one by one (in plain text), TDS book access granted through a hand-distributed application, Sitara URL changes passed along by email, and new folder permissions.",
-      "why": "Several separate emails for each user and system. Credentials in plain-text email is also a risk. Provisioning could be centralized.",
+      "work": "Account access set up by hand during the transition: production IDs and passwords emailed one by one (in plain text), EST account extensions requested by email with a business case, TDS access granted with a spreadsheet tool",
+      "why": "Separate access emails go to each user, EST account exceptions are argued out in long reply-all threads, and Russ sends an access application for staff to run themselves. There is room for automated provisioning, and passwords in email are a security risk.",
       "files": [
         "giron-d/inbox/6.",
         "williams-w3/inbox/14.",
-        "giron-d/inbox/10.",
-        "giron-d/inbox/9.",
-        "giron-d/inbox/12.",
-        "giron-d/inbox/11."
-      ]
-    },
-    {
-      "work": "Requests to keep EST (estate) accounts open past the cutoff, plus hand-over of procedures still run by UBS staff to the estate team.",
-      "why": "A long reply chain to work out who needs exceptions. Each user has to email the reason and duration, and someone asks for a list of procedures still running. No inventory of who runs which process appears to exist.",
-      "files": [
         "williams-w3/inbox/21.",
         "williams-w3/inbox/20.",
         "williams-w3/inbox/19.",
         "williams-w3/inbox/18.",
         "williams-w3/inbox/17.",
-        "giron-d/inbox/4."
+        "giron-d/inbox/10.",
+        "giron-d/inbox/9."
       ]
     },
     {
-      "work": "Daily real-time and scheduling work: EPE (El Paso Electric) schedules and models saved to set paths and sent to Kathy, and daily CAPS settlement (DA/HA finals).",
-      "why": "Daily file-based steps that broke during the migration. Moving files to fixed paths and emailing models are candidates for automation.",
-      "files": [
-        "williams-w3/inbox/8.",
-        "williams-w3/inbox/24."
-      ]
-    },
-    {
-      "work": "Individual pre-employment compliance chasers (drug tests) and orientation, benefits-form and access-card logistics.",
-      "why": "HR sends the same email to each person one at a time and tracks completion by hand, with repeated reminders and RSVP-by-reply. A tracking checklist or workflow would fit better.",
+      "work": "HR chases outstanding onboarding items (drug tests, benefits forms, orientation RSVPs) with individual emails",
+      "why": "Amy Fitzpatrick sends the same drug-test reminder to one person at a time and also sends orientation and form reminders. Onboarding tracking with automatic reminders would do this.",
       "files": [
         "williams-w3/inbox/30.",
         "williams-w3/inbox/29.",
         "williams-w3/inbox/27.",
-        "giron-d/inbox/2.",
-        "giron-d/inbox/1."
+        "giron-d/inbox/2."
       ]
     },
     {
-      "work": "Testing for trading platform launch: a simulation, test deals pushed through Tagg/Sitara that must be checked by hand for booking and valuation, and product setup in Stack Manager.",
-      "why": "Manual verification of deals across systems, coordinated by email. Repeatable test scripts could reduce the effort.",
+      "work": "Interview scheduling is collected by reply email (candidates email the times they are NOT available) and confirmed one by one",
+      "why": "Belden asks 16 applicants to email when they are unavailable, then confirmations go out one at a time.",
       "files": [
-        "williams-w3/inbox/26.",
-        "giron-d/inbox/5."
-      ]
-    },
-    {
-      "work": "Expense report approval notices from Concur for small amounts (for example $30), entered by an admin for the employee.",
-      "why": "Every small claim goes through an admin, then an approval. Worth checking volume across the archive and whether low-value claims could be auto-approved.",
-      "files": [
-        "williams-w3/inbox/28."
-      ]
-    },
-    {
-      "work": "Meeting and training scheduling done by email back-and-forth: project meetings, CAS training slots, strategy meetings, cancellations, and interview scheduling for the trading assistant role.",
-      "why": "Several messages per meeting just to settle a time. Shared calendars or booking tools would cut this.",
-      "files": [
-        "lokay-m/sent_items/118.",
-        "lokay-m/sent_items/119.",
-        "lokay-m/sent_items/120.",
-        "lokay-m/sent_items/136.",
-        "lokay-m/sent_items/153.",
-        "lokay-m/inbox/31.",
-        "lokay-m/inbox/33.",
-        "lokay-m/inbox/34.",
         "williams-w3/inbox/31.",
         "williams-w3/sent_items/1.",
         "williams-w3/inbox/13."
       ]
     },
     {
-      "work": "CAISO market notices (HA republish, transmission derates, procedure updates, settlement files, OMAR simulation, MD02 documents, TSWG calls) that must be passed on to operating departments.",
-      "why": "A high volume of automated notices that the recipient is asked to forward by hand, and some are re-sent with corrected attachments. Routing or filtering rules could handle them.",
+      "work": "Meeting scheduling done through reply-all back-and-forth",
+      "why": "Several emails were needed to pick Monday or Tuesday for the Bakersfield meeting, plus similar exchanges for the Red Lake and CAS training sessions.",
       "files": [
-        "williams-w3/inbox/34.",
-        "williams-w3/inbox/1.",
-        "williams-w3/inbox/5.",
-        "williams-w3/inbox/3.",
-        "williams-w3/inbox/12.",
-        "williams-w3/inbox/10.",
-        "williams-w3/inbox/32.",
-        "williams-w3/inbox/22."
+        "lokay-m/sent_items/118.",
+        "lokay-m/sent_items/119.",
+        "lokay-m/sent_items/120.",
+        "lokay-m/sent_items/153.",
+        "lokay-m/inbox/31."
       ]
     },
     {
-      "work": "Facility cost estimates (Level A/B) for interconnect and lateral projects, built in spreadsheets and passed between Facility Planning and marketing, with requests for summary economics.",
-      "why": "Estimates are built by hand for each project, and executives have to chase for the economics. Standard templates or models may help.",
+      "work": "Handing off risk and curve procedures between UBS and the Estate, with manual steps and workarounds in the curve manager",
+      "why": "Stephanie Hopkins asks for a list of procedures UBS people still run. The TDS curve manager has a button users must not press. Curve files are moved by hand. This suggests the process steps are not documented or automated.",
       "files": [
-        "lokay-m/inbox/23.",
-        "lokay-m/inbox/24.",
-        "lokay-m/inbox/25.",
-        "lokay-m/inbox/26.",
-        "lokay-m/sent_items/93."
+        "giron-d/inbox/4.",
+        "giron-d/inbox/11.",
+        "giron-d/inbox/12.",
+        "williams-w3/inbox/8."
       ]
     },
     {
-      "work": "Admin information requests and surveys: club membership reimbursement details, distribution-list adds, office move labels, the on-call schedule, and toner notices.",
-      "why": "Small recurring admin requests handled through manual email collection. Self-service forms could absorb them.",
+      "work": "Checking test deals by hand in Tagg and Sitara for valuation booking",
+      "why": "Dawn Kenne asks people to review test deals by eye and reply by email. The check could be scripted.",
       "files": [
-        "lokay-m/sent_items/107.",
-        "lokay-m/sent_items/104.",
-        "lokay-m/sent_items/134.",
-        "lokay-m/sent_items/161.",
-        "lokay-m/sent_items/81."
+        "giron-d/inbox/5."
       ]
     },
     {
-      "work": "Retiring unused applications (TW Deal Profitability and TW Deal Analysis), which are still being supported with no users.",
-      "why": "IT is paying to support apps nobody uses and has to ask users by voicemail and email. A usage inventory could find more of these.",
+      "work": "Daily real-time El Paso (EPE) model and schedule files saved to shared drives and sent by hand; CAPS settled daily (DA/HA finals)",
+      "why": "The EPE model is sent to Kathy by email each day and has file-path dependencies. The Estate settles CAPS every day. This looks like a recurring manual file workflow.",
+      "files": [
+        "williams-w3/inbox/24.",
+        "williams-w3/inbox/8."
+      ]
+    },
+    {
+      "work": "Monthly meter volume recap prepared 'in the usual format' and tied by hand to scheduled quantities",
+      "why": "Clem Cernosek sends a meter recap in the usual format and works through exceptions with the operator. This recurring reconciliation is a candidate for automation.",
+      "files": [
+        "williams-w3/inbox/142."
+      ]
+    },
+    {
+      "work": "Capacity postings going up late, so shippers call before they are live",
+      "why": "Tammy says the posting went up late 'again', a repeated failure that costs time on phone calls. The TW Unsubscribed Capacity web page also needed several rounds of format and print fixes.",
+      "files": [
+        "lokay-m/inbox/74.",
+        "lokay-m/sent_items/83.",
+        "lokay-m/sent_items/87."
+      ]
+    },
+    {
+      "work": "Contract status tracking and amendments sent by email (CAF needed, tendered or executed status, name changes, MAXDTQ changes) through Contract Administration",
+      "why": "Craig Buehler sends a status list as of a set time. Customer requests are forwarded by hand to Dennis Lee, and contract admin needs a separate official email. Billing on expired contracts needs a CBS override. Lots of manual routing.",
+      "files": [
+        "lokay-m/inbox/37.",
+        "lokay-m/sent_items/149.",
+        "lokay-m/sent_items/150.",
+        "lokay-m/sent_items/154.",
+        "lokay-m/sent_items/105.",
+        "lokay-m/sent_items/126."
+      ]
+    },
+    {
+      "work": "Supporting applications that nobody uses (TW Deal Profitability and TW Deal Analysis)",
+      "why": "IT asked whether anyone still uses them. Marketing says no, so support can stop and save cost.",
       "files": [
         "lokay-m/sent_items/95."
       ]
     },
     {
-      "work": "Heavy personal use of work email (jokes, eBay links, job searches, personal forwards).",
-      "why": "Many non-business forwards from one mailbox. Low priority, but it shows time spent and storage used.",
+      "work": "Surveys of employees by email (club memberships) that require a reply from everyone, even those with none",
+      "why": "Jan Moore collects membership details one by one, with 'none' replies required. A form would be simpler.",
       "files": [
-        "lokay-m/sent_items/108.",
-        "lokay-m/sent_items/112.",
-        "lokay-m/sent_items/137.",
-        "lokay-m/sent_items/143.",
-        "lokay-m/sent_items/144.",
-        "giron-d/inbox/3."
+        "lokay-m/sent_items/107."
+      ]
+    },
+    {
+      "work": "CAISO hour-ahead market notices and re-publications (GMM/TMM, TTC derates) that must be read and acted on",
+      "why": "There is a steady stream of automated CAISO notices. Schedulers have to watch them and resubmit schedules by hand, which might be automated.",
+      "files": [
+        "williams-w3/inbox/34.",
+        "williams-w3/inbox/1.",
+        "williams-w3/inbox/3.",
+        "williams-w3/inbox/5."
       ]
     }
   ]

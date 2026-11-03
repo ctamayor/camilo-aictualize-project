@@ -88,6 +88,7 @@ class IngestTest(unittest.TestCase):
             (box / "2.eml").write_text(raw(msg_id="<2@x>", date=None, body="Other"), encoding="latin-1")
             (box / "3.eml").write_text(raw(msg_id="<1@x>"), encoding="latin-1")
             (Path(tmp) / "manifest.csv").write_text("ignored", encoding="utf-8")
+            (box / ".DS_Store").write_bytes(b"\x00\x00\x00\x01Bud1")
             messages, report = ingest(Path(tmp))
         self.assertEqual([m["id"] for m in messages], ["x/inbox/1.", "x/inbox/2."])
         self.assertEqual(report["files_read"], 3)

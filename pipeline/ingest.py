@@ -129,7 +129,9 @@ def parse_message(msg_id: str, raw: str) -> dict:
 
 def iter_corpus(corpus_dir: Path):
     """Yield (original_path, raw_text) for every message file, in sorted order."""
-    files = [p for p in corpus_dir.rglob("*") if p.is_file() and p.name not in SKIP_FILES]
+    # Hidden files, such as the .DS_Store macOS leaves in a folder, are not mail.
+    files = [p for p in corpus_dir.rglob("*")
+             if p.is_file() and p.name not in SKIP_FILES and not p.name.startswith(".")]
     for p in sorted(files, key=lambda p: p.relative_to(corpus_dir).as_posix()):
         yield original_path(p.relative_to(corpus_dir).as_posix()), p.read_bytes().decode("latin-1")
 

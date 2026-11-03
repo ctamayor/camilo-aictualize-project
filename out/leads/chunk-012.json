@@ -1,0 +1,25 @@
+{
+  "leads": [
+    {
+      "work": "Monthly full-month position reconciliation done by hand over email. Daren Farmer sends the whole HPL nomination/position list (about 3,600 rows of scheduled vs actual volumes by meter) to the team. Each recipient then has to find their own meters in it and confirm back to him by close of business Thursday.",
+      "why": "The 'full month position' looks like a recurring month-end cycle. Every recipient scans a huge shared list for their own meters, and Daren then has to chase and collect the confirmations one by one. A per-person filtered report, or self-service access to the scheduling system, plus confirmation tracking could replace this. Many rows show large variances (±40,000), so the variance review itself may also be a big recurring job.",
+      "files": [
+        "farmer-d/logistics/3221."
+      ]
+    },
+    {
+      "work": "Working around failed email attachments: the position report attachment kept bouncing off the mail gateway, so it was pasted into the email body as text.",
+      "why": "The sender says the attachment 'keeps bouncing off the gateway'. That suggests repeated failed sends, and pasting a fixed-width table that recipients then have to re-key or parse. If large reports are regularly shared this way, a shared drive or report link would remove the problem. Search the archive for other bounced or oversized attachments.",
+      "files": [
+        "farmer-d/logistics/3221."
+      ]
+    },
+    {
+      "work": "Data quality problems in the scheduling/position extract that will force manual cleanup or follow-up during reconciliation.",
+      "why": "The 'full month' position has flow dates spread across all of 2001, in a day/month format with padded spaces. Counterparty IDs repeat in cycles (TXU-0000 to TXU-0399, then again), and many rows show scheduled at nearly 0 against large actuals, or the reverse. Status is only PENDING or SCHEDULED. All of this would cause questions and rework when people confirm their meters. Check for follow-up threads about wrong position data.",
+      "files": [
+        "farmer-d/logistics/3221."
+      ]
+    }
+  ]
+}

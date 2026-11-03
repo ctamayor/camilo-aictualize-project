@@ -46,6 +46,11 @@ class ParseMessageTest(unittest.TestCase):
     def test_plain_body_is_kept_as_written(self):
         self.assertEqual(parse_message("a/1.", raw(body="Total =20 units\n"))["body"], "Total =20 units\n")
 
+    def test_the_messages_a_reply_answers_are_read_from_its_headers(self):
+        text = raw().replace("Subject:", "In-Reply-To: <2@x>\nReferences: <1@x>\n <2@x>\nSubject:")
+        self.assertEqual(parse_message("a/1.", text)["replies_to"], ["<2@x>", "<1@x>", "<2@x>"])
+        self.assertEqual(parse_message("a/1.", raw())["replies_to"], [])
+
 
 class DedupeTest(unittest.TestCase):
     def msg(self, path, **kw):

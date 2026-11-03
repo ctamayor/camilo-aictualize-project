@@ -21,33 +21,36 @@ def completed(stdout: str, returncode: int = 0, stderr: str = "") -> subprocess.
 class RunOneTest(unittest.TestCase):
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()
-        self.out = Path(self.tmp.name) / "scout" / "chunk-001.json"
-        self.task = agents.Task("chunk-001", "scout", "the batch text", self.out, schemas.SCOUT)
+        self.out = Path(self.tmp.name) / "leads" / "chunk-001.json"
+        self.task = agents.Task("chunk-001", "reader", "the batch text", self.out, schemas.READER)
 
     def tearDown(self):
         self.tmp.cleanup()
 
     def test_runs_the_agent_headless_without_tools_and_writes_the_reply(self):
-        reply = {"patterns": [], "untrusted": []}
+        reply = {"leads": []}
         with mock.patch.object(agents, "call", return_value=completed(envelope(structured_output=reply))) as run:
             result = agents.run_one(self.task)
         argv = run.call_args.args[0]
-        self.assertEqual(argv[1:7], ["-p", "--agent", "scout", "--tools", "", "--output-format"])
-        self.assertEqual(json.loads(argv[argv.index("--json-schema") + 1]), schemas.SCOUT)
+        self.assertEqual(argv[1:7], ["-p", "--agent", "reader", "--tools", "", "--output-format"])
+        self.assertEqual(json.loads(argv[argv.index("--json-schema") + 1]), schemas.READER)
+        # The agent runs at the effort its file gives it, without this folder's memory.
+        self.assertEqual(argv[argv.index("--effort") + 1], agents.definition("reader")["effort"])
+        self.assertEqual(run.call_args.kwargs["env"], agents.ENV)
         self.assertEqual(run.call_args.args[1], "the batch text")
         self.assertTrue(result["ok"])
         self.assertEqual(json.loads(self.out.read_text(encoding="utf-8")), reply)
         self.assertEqual(result["usage"]["output_tokens"], 2)
 
     def test_the_log_line_names_the_model_the_agent_ran_on(self):
-        reply = completed(envelope(structured_output={"patterns": [], "untrusted": []}, num_turns=2,
+        reply = completed(envelope(structured_output={"leads": []}, num_turns=2,
                                    modelUsage={"claude-opus-5-5": {"outputTokens": 2}}))
         with mock.patch.object(agents, "call", return_value=reply):
             result = agents.run_one(self.task)
         self.assertTrue(agents.describe(result).endswith(", 10 in / 2 out, 2 turns, claude-opus-5-5)"))
 
     def test_falls_back_to_json_in_the_result_text(self):
-        reply = {"patterns": [], "untrusted": []}
+        reply = {"leads": []}
         with mock.patch.object(agents, "call", return_value=completed(envelope(result=json.dumps(reply)))):
             result = agents.run_one(self.task)
         self.assertTrue(result["ok"])
@@ -86,12 +89,19 @@ class RunOneTest(unittest.TestCase):
         proc = agents.call(argv, "reply")
         self.assertEqual((proc.returncode, proc.stdout.strip()), (0, "REPLY"))
 
+    def test_a_killed_process_keeps_what_it_wrote_and_runs_where_and_how_it_is_told(self):
+        argv = [sys.executable, "-c", "import os, time; print(os.getcwd(), os.environ['X'], flush=True); time.sleep(60)"]
+        with tempfile.TemporaryDirectory() as tmp, self.assertRaises(subprocess.TimeoutExpired) as stopped:
+            agents.call(argv, "", timeout=2, cwd=Path(tmp), env={"X": "set"})
+        self.assertEqual(stopped.exception.output.split()[-1], "set")
+        self.assertEqual(Path(stopped.exception.output.rsplit(" ", 1)[0]).resolve(), Path(tmp).resolve())
+
 
 class RunWaveTest(unittest.TestCase):
     def test_runs_every_task_and_keeps_order(self):
         with tempfile.TemporaryDirectory() as tmp:
-            tasks = [agents.Task(f"chunk-{i}", "scout", "x", Path(tmp) / f"{i}.json", schemas.SCOUT) for i in range(5)]
-            reply = completed(envelope(structured_output={"patterns": [], "untrusted": []}))
+            tasks = [agents.Task(f"chunk-{i}", "reader", "x", Path(tmp) / f"{i}.json", schemas.READER) for i in range(5)]
+            reply = completed(envelope(structured_output={"leads": []}))
             with mock.patch.object(agents, "call", return_value=reply):
                 results = agents.run_wave(tasks, parallel=2)
             self.assertEqual([r["name"] for r in results], [t.name for t in tasks])

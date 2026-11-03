@@ -11,7 +11,8 @@ All of the arithmetic is here, none of it in a model. For each process:
   mailbox's twenty did not stop for the other sixteen without a reason the
   count cannot see. Its n times mark n - 1 gaps, so a burst of three times in
   one month counts as two a month, not three, and the count still falls short
-  rather than over. Stated: the rate the estimator read from a quote, used only
+  rather than over. Stated: the rate the estimator read from a quote, as a count
+  per working day, day, week, month or year, turned into a month here; used only
   if the words it gives for the rate are in one of the process's own quotes.
   The larger of the two is used, because most of the mail is not in the archive.
 - A process that happened once in the archive is ranked only on a rate one of
@@ -20,7 +21,7 @@ All of the arithmetic is here, none of it in a model. For each process:
   Without a stated rate it is listed but not ranked.
 - The minutes the change saves each time, from the estimator. An estimate whose
   basis names none of the process's quotes is not used, so the process is listed
-  but not ranked; nor is one that saves no time, or less than a dollar a month.
+  but not ranked; nor is one that saves no time.
 - Hours a month = minutes x rate / 60, and dollars a month = hours x $85.
 
 Opportunities are ranked by dollars a month. The top ``DRAFT_TOP`` get a
@@ -32,12 +33,15 @@ import re
 from collections import defaultdict
 from pathlib import Path
 
-from .estimate import numbered_quotes
+from .group import numbered_quotes
 from .state import log, read_json, read_messages, write_json
 from .validate import find_quote
 
 HOURLY_RATE = 85
 DRAFT_TOP = 10
+# A stated rate is given as a count per unit, in the quote's own terms; a month
+# is a twelfth of a year of 52 five-day weeks.
+PER_MONTH = {"working day": 52 * 5 / 12, "day": 365 / 12, "week": 52 / 12, "month": 1, "year": 1 / 12}
 
 
 def mailbox_months(messages: dict) -> dict:
@@ -77,7 +81,9 @@ def stated_rate(estimate: dict, process: dict, quotes: dict, problems: list) -> 
     own span, so they can be marked in it."""
     given = estimate["stated_rate"]
     words = given.get("words", "")
-    stated = {"per_month": given["per_month"], "quote": quote_id(given["quote"], process), "words": ""}
+    count, per = given.get("count", 0), given.get("per", "month")
+    stated = {"per_month": round(count * PER_MONTH.get(per, 0), 2), "count": count, "per": per,
+              "quote": quote_id(given["quote"], process), "words": ""}
     if stated["per_month"] <= 0:
         return stated, None
     if stated["quote"] not in quotes:
@@ -114,7 +120,8 @@ def score_process(process: dict, estimate: dict | None, messages: dict, boxes: d
 
     opportunity |= {"change": estimate["change"], "explanation": estimate["explanation"],
                     "ongoing": estimate["ongoing"], "not_served": estimate["not_served"],
-                    "reasoning": estimate["reasoning"], "minutes": estimate["minutes"],
+                    # A saved proposal has no reasoning: its quotes' notes carry the minutes.
+                    "reasoning": estimate.get("reasoning"), "minutes": estimate["minutes"],
                     "basis": [quotes[qid] | {"id": qid} for qid in basis]}
     if not basis:
         return opportunity | {"unused": "the estimate names none of the process's quotes"}
@@ -129,13 +136,10 @@ def score_process(process: dict, estimate: dict | None, messages: dict, boxes: d
     else:
         rate = {"per_month": counted["per_month"], "source": "counted"}
     rate |= {"counted": counted,
-             "stated": {"per_month": stated["per_month"], "words": stated["words"],
-                        "quote": stated_quote | {"id": stated["quote"]}} if stated_quote else None}
+             "stated": stated | {"quote": stated_quote | {"id": stated["quote"]}} if stated_quote else None}
     hours = round(estimate["minutes"] * rate["per_month"] / 60, 2)
-    dollars = round(hours * HOURLY_RATE, 2)
-    if round(dollars) == 0:
-        return opportunity | {"unused": "it saves less than a dollar a month"}
-    return opportunity | {"rate": rate, "hours_per_month": hours, "dollars_per_month": dollars}
+    return opportunity | {"rate": rate, "hours_per_month": hours,
+                          "dollars_per_month": round(hours * HOURLY_RATE, 2)}
 
 
 def score(corpus_dir: Path, out_dir: Path) -> str:

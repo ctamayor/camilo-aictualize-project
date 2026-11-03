@@ -11,7 +11,7 @@ from unittest import mock
 
 from pipeline import serve
 from pipeline.__main__ import prepare
-from pipeline.state import read_messages
+from pipeline.state import explore_done, leads_output, read_json, read_messages
 from pipeline.validate import normalize
 from tests.test_state import put, write_message
 
@@ -103,9 +103,13 @@ class ServerTest(unittest.TestCase):
         self.assertEqual(self.get("/api/draft", id="opp-01"), "# Draft")
 
     def test_progress_says_how_far_the_run_has_got_and_changes_version_with_the_results(self):
+        self.assertEqual([s["step"] for s in self.get("/api/progress")["steps"] if s["done"]], ["prepare"])
+        for c in read_json(self.out / "chunks.json")["chunks"]:
+            put(leads_output(self.out, c), {"leads": []})
+        put(explore_done(self.out), {})
         live = self.get("/api/progress")
         self.assertFalse(live["active"])
-        self.assertEqual([s["step"] for s in live["steps"] if s["done"]], ["prepare", "group", "score", "drafters"])
+        self.assertEqual([s["step"] for s in live["steps"] if s["done"]], ["prepare", "readers", "explore", "drafters"])
         before = live["version"]
         put(self.out / "drafts" / "opp-02.md", "# Another")
         self.assertNotEqual(self.get("/api/progress")["version"], before)

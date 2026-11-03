@@ -1,9 +1,9 @@
 """Drive a run to completion: deterministic steps in-process, agents as workers.
 
-``run`` loops over ``next_action`` until the run is DONE, a worker FAILS twice, or the
-time budget for this invocation is spent (CONTINUE: call it again and it picks
-up where it left off). The budget exists because the launching session's shell
-call has a hard time limit; a wave of workers is never started that might cross it.
+``run`` loops over ``next_action`` until the run is DONE or a worker FAILS twice:
+the readers, one per batch of the mail; the analysts and critics, for a set time;
+then the drafters, one per top opportunity. A run stopped partway continues
+where it left off when started again.
 
 Only one run at a time works on an output folder (``run_lock``). While it runs
 it keeps ``run.json`` up to date with the step and the workers in flight, which
@@ -11,49 +11,23 @@ the dashboard shows.
 """
 
 import os
-import time
 from pathlib import Path
 
-from . import agents, schemas
-from .estimate import estimate_prompt
-from .state import RunInProgress, log, next_action, now, read_json, run_lock, scout_output, write_json
+from . import agents
+from .draft import drafter_tasks
+from .explore import ANALYSTS, EXPLORE_MINUTES, explore
+from .leads import reader_task
+from .state import RunInProgress, log, next_action, now, run_lock, write_json
 
-MAX_PARALLEL = 8
-
-
-def scout_task(out_dir: Path, chunk: dict) -> agents.Task:
-    text = (out_dir / chunk["file"]).read_text(encoding="utf-8")
-    prompt = (f"Batch {chunk['id']}: {len(chunk['message_ids'])} messages. "
-              f"Record the patterns these messages show.\n\n{text}")
-    return agents.Task(chunk["id"], "scout", prompt, scout_output(out_dir, chunk), schemas.SCOUT)
-
-
-def merge_task(action: dict) -> agents.Task:
-    patterns = read_json(action["input"])["patterns"]
-    blocks = "\n".join(f"{p['id']} | {p['name']} | {p['summary']}\n"
-                       + "".join(f'- {o["month"]} {o["from"]}: "{o["quote"]}"\n' for o in p["occurrences"])
-                       for p in patterns)
-    prompt = (f"{len(patterns)} patterns, each as a line id | name | summary followed by each of its "
-              f"occurrences: the month, the sender and the quote showing it. Group them into processes.\n\n{blocks}")
-    return agents.Task("merge", "merger", prompt, action["output"], schemas.MERGE)
-
-
-def estimate_task(out_dir: Path, piece: dict, processes: list[dict], patterns: dict) -> agents.Task:
-    prompt = estimate_prompt(processes, patterns, piece["processes"])
-    return agents.Task(piece["id"], "estimator", prompt, piece["output"], schemas.ESTIMATE)
+# Every batch's reader at once: the corpus is about 15 batches.
+MAX_PARALLEL = 16
 
 
 def tasks_for(out_dir: Path, action: dict) -> list[agents.Task]:
-    """The worker tasks an agent action stands for; empty if not built yet."""
-    if action["action"] == "SCOUTS":
-        return [scout_task(out_dir, c) for c in action["chunks"]]
-    if action["action"] == "MERGE":
-        return [merge_task(action)]
-    if action["action"] == "ESTIMATE":
-        processes = read_json(out_dir / "processes.json")["processes"]
-        patterns = {p["id"]: p for p in read_json(out_dir / "validated.json")["patterns"]}
-        return [estimate_task(out_dir, piece, processes, patterns) for piece in action["slices"]]
-    return []
+    """The worker tasks an agent action stands for."""
+    if action["action"] == "READERS":
+        return [reader_task(out_dir, c) for c in action["chunks"]]
+    return drafter_tasks(out_dir, action["opportunities"])
 
 
 def run_tasks(out_dir: Path, tasks: list[agents.Task], parallel: int) -> list[dict]:
@@ -64,25 +38,21 @@ def run_tasks(out_dir: Path, tasks: list[agents.Task], parallel: int) -> list[di
 
 
 def run(corpus_dir: Path, out_dir: Path, steps: dict, parallel: int = MAX_PARALLEL,
-        max_minutes: float = 9, echo=print) -> str:
-    """Return the final status line: DONE, CONTINUE or FAILED <reason>."""
+        explore_minutes: float = EXPLORE_MINUTES, analysts: int = ANALYSTS, echo=print) -> str:
+    """Return the final status line: DONE or FAILED <reason>."""
     try:
         with run_lock(out_dir):
-            return _run(corpus_dir, out_dir, steps, parallel, max_minutes, echo)
+            return _run(corpus_dir, out_dir, steps, parallel, explore_minutes, analysts, echo)
     except RunInProgress:
         return "FAILED another run is in progress on this output folder"
 
 
-def _run(corpus_dir: Path, out_dir: Path, steps: dict, parallel: int, max_minutes: float, echo) -> str:
-    started = time.monotonic()
-    longest_wave = 0.0
-    # A worker that fails is tried once more, in this invocation or, if the time
-    # runs out first, in the next; a second failure stops the run. A run started
-    # after one that stopped tries everything afresh.
-    previous = read_json(out_dir / "run.json") or {}
-    failed_before = set(previous.get("failed", [])) if previous.get("status", "").startswith("CONTINUE") else set()
+def _run(corpus_dir: Path, out_dir: Path, steps: dict, parallel: int, explore_minutes: float,
+         analysts: int, echo) -> str:
+    # A worker that fails is tried once more; a second failure stops the run.
+    failed_before = set()
     record = {"pid": os.getpid(), "started": now(), "ended": None, "status": "running",
-              "step": None, "working_on": [], "remaining": 0, "since": None, "failed": sorted(failed_before)}
+              "step": None, "working_on": [], "remaining": 0, "since": None, "failed": []}
 
     def note(**fields) -> None:
         record.update(fields)
@@ -101,29 +71,23 @@ def _run(corpus_dir: Path, out_dir: Path, steps: dict, parallel: int, max_minute
 
         if kind == "RUN":
             step = action["step"]
-            if step not in steps:
-                return status(f"FAILED step '{step}' is not built yet")
             note(step=step, working_on=[], remaining=0, since=now())
             echo(f"{step}: {steps[step](corpus_dir, out_dir)}")
 
         elif kind == "DONE":
             return status("DONE")
 
+        elif kind == "EXPLORE":
+            note(step="explore", working_on=[f"analyst-{i}" for i in range(1, analysts + 1)], remaining=0, since=now())
+            echo(f"explore: {analysts} analysts for {explore_minutes:g} minutes")
+            echo(f"explore: {explore(corpus_dir, out_dir, explore_minutes, analysts)}")
+
         else:
             tasks = tasks_for(out_dir, action)
-            if not tasks:
-                return status(f"FAILED step '{kind.lower()}' is not built yet")
-            # Always make progress: the first wave runs; later waves only if a
-            # wave as long as the longest so far would still fit the budget.
-            elapsed = time.monotonic() - started
-            if longest_wave and elapsed + longest_wave > max_minutes * 60:
-                return status(f"CONTINUE {len(tasks)} {tasks[0].agent} tasks still to run")
             wave = tasks[:parallel]
             note(step=kind.lower(), working_on=[t.name for t in wave], remaining=len(tasks), since=now())
             echo(f"{kind.lower()}: running {len(wave)} of {len(tasks)}")
-            wave_started = time.monotonic()
             results = run_tasks(out_dir, wave, parallel)
-            longest_wave = max(longest_wave, time.monotonic() - wave_started, 1e-6)
             for r in results:
                 echo("  " + agents.describe(r))
             failed = [r["name"] for r in results if not r["ok"]]

@@ -1,43 +1,35 @@
-"""Turn the merge reply into processes, each with its evidence and counts.
+"""Turn a saved proposal's citations into a process, with its evidence and counts.
 
-The merge agent only says which patterns are the same process. Everything
-counted here comes from the validated citations and the messages: the messages
-that are occurrences (each once), the times the work happened, when they were
-sent, and who sent and received them.
+Everything counted here comes from the checked citations and the messages: the
+messages that are occurrences (each once), the times the work happened, when they
+were sent, and who sent and received them.
 
-A message and the replies and forwards that quote it are one time the work
+A message and the replies and forwards that answer it are one time the work
 happened, not several: a request answered in three replies was done once. A
-later occurrence with the same subject (less RE:/FW:) is the same time as the
-latest earlier one it matches:
+later occurrence is the same time as the latest earlier one it answers. Where
+its mail client recorded what it answers (In-Reply-To, References), that
+decides. Otherwise, among earlier occurrences with the same subject (less
+RE:/FW:), it answers:
 
-- any earlier one, if it is a reply or forward (RE:/FW:). A reply belongs to
-  the thread its subject names, whether or not it quotes it: Notes replies often
-  quote nothing, and forwards are often edited.
 - one whose own text it quotes. A message's own text is what comes before the
   first header of a message it quotes ("Original Message", "Forwarded by", a
   From:/Sent: or To: block, or ">" lines).
+- one that quotes the same text, as two replies to one message do.
+- the latest, if it is a reply or forward (RE:/FW:) that quotes nothing, since
+  then its subject is all that says what it answers.
 - one it is a copy of: the same own text, sent within the window in which
   ingest treats same-content messages as copies.
 
 Recurring mail with one subject, such as a daily nomination, is no reply, quotes
-nothing and is sent a day apart, so each day stays a time. A pattern the merge did not list
-stays a process of its own, an id it invented is ignored, and a pattern it
-listed twice stays in the first process it was listed in. Each of those problems
-is logged.
-
-The stats are the second measure of the reading: of the patterns that rested on
-one message in their batch, how many turned out to recur, that is, ended up in a
-process with more than one message.
+nothing and is sent a day apart, so each day stays a time.
 """
 
 import re
 from collections import Counter
 from datetime import datetime
-from pathlib import Path
 from statistics import median
 
 from .ingest import DUPLICATE_WINDOW_HOURS, normalize_subject
-from .state import log, merge_paths, read_json, read_messages, write_json
 from .validate import normalize
 
 
@@ -74,17 +66,21 @@ def count_times(messages: list[dict]) -> list[int]:
     subjects = {i: normalize_subject(messages[i].get("subject", "")) for i in order}
 
     def same_time(i: int, j: int) -> bool:
-        (own_i, quoted_i), (own_j, _) = parts[i], parts[j]
-        if REPLY.match(messages[i].get("subject", "")):
+        if messages[i].get("replies_to"):
+            return messages[j].get("message_id") in messages[i]["replies_to"]
+        if not subjects[i] or subjects[j] != subjects[i]:
+            return False
+        (own_i, quoted_i), (own_j, quoted_j) = parts[i], parts[j]
+        if own_j and own_j in quoted_i or quoted_i and quoted_i == quoted_j:
             return True
-        if own_j and own_j in quoted_i:
+        if not quoted_i and REPLY.match(messages[i].get("subject", "")):
             return True
         return bool(own_j) and own_i == own_j and \
             _hours_apart(messages[i]["date"], messages[j]["date"]) <= DUPLICATE_WINDOW_HOURS
 
     time_of = {}
     for k, i in enumerate(order):
-        earlier = [j for j in order[:k] if subjects[i] and subjects[j] == subjects[i] and same_time(i, j)]
+        earlier = [j for j in order[:k] if same_time(i, j)]
         time_of[i] = time_of[earlier[-1]] if earlier else len(set(time_of.values())) + 1
     return [time_of[i] for i in range(len(messages))]
 
@@ -136,51 +132,15 @@ def build_process(name: str, summary: str, ids: list[str], patterns: dict, heade
     }
 
 
-def group(corpus_dir: Path, out_dir: Path) -> str:
-    patterns = {p["id"]: p for p in read_json(out_dir / "validated.json")["patterns"]}
-    reply = read_json(merge_paths(out_dir)[1])
-    headers = read_messages(out_dir)
+KINDS = ("occurrences", "observations", "stalls")
 
-    groups, placed, problems = [], set(), Counter()
-    for proc in reply["processes"]:
-        ids = []
-        for pid in proc["patterns"]:
-            if pid not in patterns:
-                problems["unknown pattern id"] += 1
-            elif pid in placed:
-                problems["pattern listed twice"] += 1
-            else:
-                placed.add(pid)
-                ids.append(pid)
-        if ids:
-            groups.append((proc["name"], proc["summary"], ids))
-    groups += [(p["name"], p["summary"], [pid]) for pid, p in patterns.items() if pid not in placed]
 
-    processes = [build_process(*g, patterns, headers) for g in groups]
-    processes.sort(key=lambda p: (-p["times"], -p["occurrences"], p["patterns"][0]))
-    processes = [{"id": f"proc-{i:03d}"} | p for i, p in enumerate(processes, 1)]
-
-    home = {pid: p for p in processes for pid in p["patterns"]}
-    single = [pid for pid, p in patterns.items() if len(p["occurrences"]) == 1]
-    stats = {
-        "patterns": len(patterns),
-        "processes": len(processes),
-        "merged": sum(len(p["patterns"]) > 1 for p in processes),
-        "one_message_patterns": len(single),
-        "one_message_patterns_recurring": sum(home[pid]["occurrences"] > 1 for pid in single),
-        "one_message_processes": sum(p["occurrences"] == 1 for p in processes),
-        "one_time_processes": sum(p["times"] == 1 for p in processes),
-        "messages": sum(p["occurrences"] for p in processes),
-        "times": sum(p["times"] for p in processes),
-        "merge_problems": dict(problems),
-    }
-    write_json(out_dir / "processes.json", {"stats": stats, "processes": processes})
-
-    summary = (f"{stats['processes']} processes from {stats['patterns']} patterns ({stats['merged']} merged); "
-               f"{stats['one_message_patterns_recurring']} of {stats['one_message_patterns']} one-message "
-               f"patterns recur; {stats['times']} times in {stats['messages']} messages; "
-               f"{stats['one_time_processes']} processes happen once")
-    log(out_dir, f"group: {summary}")
-    for problem, n in sorted(problems.items()):
-        log(out_dir, f"group: merge reply had {n} x {problem}")
-    return summary
+def numbered_quotes(process: dict) -> dict:
+    """Each quote of a process by id, in pattern order: occurrences, observations, then stalls."""
+    quotes = {}
+    for pid in process["patterns"]:
+        for kind in KINDS:
+            for citation in process["evidence"].get(kind, []):
+                if citation["pattern"] == pid:
+                    quotes[f"q{len(quotes) + 1}"] = citation
+    return quotes

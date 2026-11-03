@@ -1,0 +1,286 @@
+{
+  "leads": [
+    {
+      "work": "Transwestern shipper capacity changes (daily or short-term MDQ increases, extensions, receipt-point reassignments) come in by email. Michelle Lokay forwards each one as 'Approved' to Dennis Lee or Michael Bodnar, who then write contract amendments by hand. The Red Rock administrative contract also has to be updated separately.",
+      "why": "Burlington's Julie Reames sent a request almost every day for contract 27748 (12/10, 12/11, 12/13). Western Gas asked for a one-day extension, TMV Gas for a two-day increase, and Reliant to continue its existing terms. PPL sent several revisions to its Red Rock receipts. Every request is a free-text email, Lokay approves it by forwarding, and someone writes the amendment manually. Some approvals are forwarded twice.",
+      "files": [
+        "lokay-m/sent_items/2.",
+        "lokay-m/sent_items/3.",
+        "lokay-m/sent_items/4.",
+        "lokay-m/sent_items/14.",
+        "lokay-m/sent_items/15.",
+        "lokay-m/sent_items/73.",
+        "lokay-m/sent_items/61.",
+        "lokay-m/sent_items/60.",
+        "lokay-m/sent_items/59.",
+        "lokay-m/sent_items/164.",
+        "lokay-m/sent_items/57.",
+        "lokay-m/inbox/69.",
+        "lokay-m/inbox/53."
+      ]
+    },
+    {
+      "work": "Michelle Lokay writes a weekly California Capacity Report by hand: TW and El Paso deliveries and utilization percentages, Gas Daily prices and Enron basis, emailed to the commercial team.",
+      "why": "The same template is retyped every week from pipeline and price data. The 1/11 report was sent with the wrong week label and needed a correction email.",
+      "files": [
+        "lokay-m/sent_items/18.",
+        "lokay-m/sent_items/67.",
+        "lokay-m/sent_items/63.",
+        "lokay-m/sent_items/55.",
+        "lokay-m/sent_items/47.",
+        "lokay-m/sent_items/46."
+      ]
+    },
+    {
+      "work": "Credit-approval requests and a running contract-status list (processing, tendered, terminating) are emailed to a large distribution list for every TW contract.",
+      "why": "These are formatted emails sent for each contract (Oneok, Richardson) plus a status snapshot by date and time. They look like a manual workflow that a system could track.",
+      "files": [
+        "lokay-m/inbox/71.",
+        "lokay-m/inbox/72.",
+        "lokay-m/sent_items/19."
+      ]
+    },
+    {
+      "work": "Real-time power cuts are handled by hand: paper cut sheets, zeroing deals in Enpower, calculating annuities by hand, notes in the path confirmation, paper kept in an accordion folder, and reconciliation with counterparties.",
+      "why": "Bill Williams sent several rounds of changing procedures and said they were 'having a nightmare taking care of weekend cuts'. He tried to log a cut in the cuts database but got errors and wasn't confident it was recorded. Enron was also trying to reconcile cuts with each counterparty from paper sheets.",
+      "files": [
+        "williams-w3/sent_items/66.",
+        "williams-w3/sent_items/62.",
+        "williams-w3/sent_items/61.",
+        "williams-w3/sent_items/69.",
+        "williams-w3/inbox/123.",
+        "williams-w3/inbox/133.",
+        "williams-w3/sent_items/79.",
+        "williams-w3/sent_items/78."
+      ]
+    },
+    {
+      "work": "El Paso Electric (EPE) service work: hourly deal sheets kept in a paper binder are the main source for settlements, a daily EPE model is emailed to the customer, and procedures are updated by email.",
+      "why": "A missing deal sheet had to be rebuilt by the traders on shift. The model goes to kpeterso@epelectric.com every day. Procedures arrive as forwarded notes that were later found to be wrong.",
+      "files": [
+        "williams-w3/inbox/122.",
+        "williams-w3/sent_items/39.",
+        "williams-w3/sent_items/35.",
+        "williams-w3/inbox/107.",
+        "williams-w3/sent_items/36.",
+        "williams-w3/inbox/132.",
+        "williams-w3/sent_items/65."
+      ]
+    },
+    {
+      "work": "An average-price spreadsheet pulled from Enpower (SchedulePull.xls) went through many rounds of query fixes about which deals to exclude.",
+      "why": "Over three weeks, emails between four people kept fixing the same problems: averaging per deal instead of per MW, and missing exclusions for transmission, California Imbalance, the EPMI Cal Pool and annuities. The archive version was too slow. Kate wrote: 'Hopefully someone will get to use this someday'.",
+      "files": [
+        "williams-w3/sent_items/75.",
+        "williams-w3/sent_items/68.",
+        "williams-w3/inbox/137.",
+        "williams-w3/inbox/136."
+      ]
+    },
+    {
+      "work": "California ISO day-ahead (DA) and hour-ahead (HA) final reports are created in CAPS. When the system throws SQL errors, staff import missing hours by hand, and import IDs and load zones are also fixed by hand.",
+      "why": "Bill's instructions describe a multi-step manual workaround. There are repeated emails about schedule fixes and load-zone corrections.",
+      "files": [
+        "williams-w3/sent_items/37.",
+        "williams-w3/inbox/127.",
+        "williams-w3/inbox/126.",
+        "williams-w3/inbox/125."
+      ]
+    },
+    {
+      "work": "System access requests are sent to the wrong approver and stall: Enpower PMI rights, Global Trader IDs, RiskTrac access, and Netco book access matrices.",
+      "why": "Nine Enpower access requests went to Will Smith, who isn't the approver, and Bill couldn't approve them either. Trader IDs are requested by free-text email. Book access was sorted out through spreadsheets passed between several people.",
+      "files": [
+        "williams-w3/sent_items/70.",
+        "williams-w3/sent_items/80.",
+        "giron-d/inbox/164.",
+        "giron-d/inbox/161.",
+        "giron-d/inbox/160.",
+        "giron-d/inbox/159.",
+        "giron-d/inbox/153.",
+        "giron-d/inbox/147."
+      ]
+    },
+    {
+      "work": "Netco setup in risk management: curve lists, Sitara curve mappings, EOL product-to-trader assignments, a trader-to-book matrix, P&L region files, and repointing macros and spreadsheets to the new database.",
+      "why": "Kam Keiser sent repeated requests for each desk to update shared Excel files by hand. IT had to edit each macro's database connection. The EOL product mapping was done twice.",
+      "files": [
+        "giron-d/inbox/156.",
+        "giron-d/inbox/155.",
+        "giron-d/inbox/154.",
+        "giron-d/inbox/150.",
+        "giron-d/inbox/146.",
+        "giron-d/inbox/144.",
+        "giron-d/inbox/132.",
+        "giron-d/inbox/131.",
+        "giron-d/inbox/63.",
+        "giron-d/inbox/62.",
+        "giron-d/inbox/60.",
+        "giron-d/inbox/140.",
+        "giron-d/inbox/309."
+      ]
+    },
+    {
+      "work": "Gas deal maintenance gets chased across teams: counterparty name corrections on deal tickets, entering and pathing deals so payments or the month-end close can go through, and new track IDs.",
+      "why": "The Black Marlin counterparty change went from 11/15 to 11/27 and passed through five people before reaching the right group. The Centana storage sale to AEP took about a month to get entered and pathed before close. Inactive contracts had to be reactivated first.",
+      "files": [
+        "farmer-d/logistics/16.",
+        "farmer-d/logistics/15.",
+        "farmer-d/logistics/14.",
+        "farmer-d/logistics/12.",
+        "farmer-d/logistics/11.",
+        "farmer-d/logistics/10.",
+        "farmer-d/logistics/9.",
+        "farmer-d/logistics/13."
+      ]
+    },
+    {
+      "work": "Bulk deal cleanup in Sitara and TAGG: about 2,000 desk-to-desk (ENA-to-ENA) deals killed or zeroed, and auto-terminated deals moved to bankruptcy books from lists sent in parts.",
+      "why": "Lists of deals were emailed in parts 3 and 4. Logistics was told to check flows manually after 11/30. Volume Management objected that they could not zero 2,000 deals by hand.",
+      "files": [
+        "farmer-d/logistics/7.",
+        "farmer-d/logistics/6.",
+        "farmer-d/logistics/5.",
+        "farmer-d/logistics/4.",
+        "farmer-d/logistics/1.",
+        "farmer-d/logistics/3.",
+        "farmer-d/logistics/2."
+      ]
+    },
+    {
+      "work": "Trading desk recaps and reference IDs are sent by email: a daily activity recap with deal tickets, and prompt-post IDs sent to risk.",
+      "why": "Patrick Tucker's long narrative recap lists every deal ticket. Scott Palmer emails post IDs for each region, which suggests a recurring manual handoff.",
+      "files": [
+        "giron-d/inbox/395.",
+        "giron-d/inbox/403.",
+        "giron-d/inbox/405."
+      ]
+    },
+    {
+      "work": "Recorded phone tapes are pulled to settle disputes with counterparties (LADWP, SRP and EPE checkouts).",
+      "why": "There are several disputes over what was agreed by phone that need tape pulls. A missing note on the model or in Lotus Notes caused one schedule problem.",
+      "files": [
+        "williams-w3/inbox/131.",
+        "williams-w3/inbox/130.",
+        "williams-w3/sent_items/73.",
+        "williams-w3/sent_items/72."
+      ]
+    },
+    {
+      "work": "Shift scheduling and swaps for the real-time desk are tracked through emails and a schedule notebook.",
+      "why": "A new schedule was posted in the notebook, and staff are told to find their own replacement and email or phone the change because 'off-schedule sheet' changes weren't being tracked.",
+      "files": [
+        "williams-w3/inbox/124.",
+        "williams-w3/inbox/134."
+      ]
+    },
+    {
+      "work": "Shared system logins and passwords are changed by email, including emails to the vendor with plaintext passwords.",
+      "why": "Bill emailed OATI to change four shared logins. An ISO password was broadcast to the whole shift list.",
+      "files": [
+        "williams-w3/sent_items/52.",
+        "williams-w3/inbox/135."
+      ]
+    },
+    {
+      "work": "Time reports are collected by email each pay period, with back-and-forth replies about vacation days.",
+      "why": "The administrative assistant sends 'Time Reports Are Due' requests and each person replies individually.",
+      "files": [
+        "lokay-m/sent_items/11.",
+        "lokay-m/sent_items/12.",
+        "lokay-m/sent_items/13.",
+        "lokay-m/sent_items/56."
+      ]
+    },
+    {
+      "work": "Imbalance cash-outs from operational balancing agreements (OBAs) are tracked by email (the Williams Field Services OBA) and imbalance reports are forwarded.",
+      "why": "A $268K cash-in was confirmed through several emails among commercial, accounting and treasury. Imbalance spreadsheets are forwarded by hand.",
+      "files": [
+        "lokay-m/sent_items/5.",
+        "lokay-m/sent_items/6.",
+        "lokay-m/sent_items/9.",
+        "lokay-m/sent_items/69.",
+        "lokay-m/sent_items/68.",
+        "lokay-m/sent_items/10.",
+        "lokay-m/inbox/70."
+      ]
+    },
+    {
+      "work": "Setting up new EOL points and products for Transwestern capacity, using pasted legal product-description boilerplate.",
+      "why": "The full GTC product text is pasted with XXX/yyy placeholders for each receipt and delivery combination. This could be templated.",
+      "files": [
+        "lokay-m/inbox/52."
+      ]
+    },
+    {
+      "work": "Write-offs and reconciliations in the 12/01 general ledger, plus intercompany liquidation accounting for EMW.",
+      "why": "Potential write-off spreadsheets are passed around for people to research. The EMW liquidation needed several approvals and manual termination documents and confirmations.",
+      "files": [
+        "giron-d/inbox/138.",
+        "giron-d/inbox/137.",
+        "giron-d/inbox/127.",
+        "giron-d/inbox/124.",
+        "giron-d/inbox/123."
+      ]
+    },
+    {
+      "work": "Forward deal confirmations are missing, and the counterparty threatens to void the deal or close it out.",
+      "why": "Great River Energy never received a confirmation and then asked for a close-out settlement. This points to a gap in confirmations.",
+      "files": [
+        "giron-d/inbox/276.",
+        "giron-d/inbox/280."
+      ]
+    },
+    {
+      "work": "Enpower and FSP system changes need users to coordinate by email for outages and testing.",
+      "why": "There are emails approving the database outage, requesting test deals after the Netco/Estate split, and asking users to test the FSP release.",
+      "files": [
+        "williams-w3/sent_items/29.",
+        "williams-w3/inbox/110.",
+        "williams-w3/sent_items/24.",
+        "williams-w3/sent_items/48."
+      ]
+    },
+    {
+      "work": "Expense reports and pre-petition expenses are reviewed by hand. HR checks employees' home contact details by email.",
+      "why": "Every individual with pre-petition expenses over $5,000 is reviewed manually. Employees are reminded to clear iPayIt and XMS inboxes. HR emails each employee their address to confirm.",
+      "files": [
+        "giron-d/inbox/172.",
+        "giron-d/inbox/283.",
+        "lokay-m/inbox/50.",
+        "giron-d/inbox/286.",
+        "giron-d/inbox/165."
+      ]
+    },
+    {
+      "work": "Announcements are redistributed by hand: assistants are asked to forward org changes and class notices to their groups.",
+      "why": "'Assistants - Please forward on to your groups' appears again and again, which means distribution lists aren't being used.",
+      "files": [
+        "giron-d/inbox/273.",
+        "giron-d/inbox/307.",
+        "williams-w3/sent_items/63."
+      ]
+    },
+    {
+      "work": "Meetings and conference calls are scheduled and confirmed by email (PG&E plan of reorganization call, Window Rock meeting, available-capacity meeting).",
+      "why": "The PG&E call took several weeks of forwards plus a 'are we still on / what are the dial-in instructions' follow-up.",
+      "files": [
+        "lokay-m/inbox/49.",
+        "lokay-m/sent_items/71.",
+        "lokay-m/sent_items/52.",
+        "lokay-m/inbox/47.",
+        "lokay-m/inbox/51.",
+        "lokay-m/inbox/21."
+      ]
+    },
+    {
+      "work": "Year-end goals and accomplishments write-ups.",
+      "why": "Staff draft these documents, which then go back and forth about what format is wanted.",
+      "files": [
+        "williams-w3/sent_items/82.",
+        "williams-w3/sent_items/81.",
+        "lokay-m/sent_items/74."
+      ]
+    }
+  ]
+}

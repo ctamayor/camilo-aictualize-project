@@ -27,9 +27,11 @@ def twice(pid: str) -> dict:
     return process(pid, [cite("a", 0, "x"), cite("a", 1, "y")])
 
 
-def estimate(pid: str, minutes: float, basis=("q1",), stated=0, stated_quote="", words="", ongoing=False) -> dict:
+def estimate(pid: str, minutes: float, basis=("q1",), stated=0, stated_quote="", words="", ongoing=False,
+             per="month") -> dict:
     return {"process": pid, "change": f"change {pid}", "explanation": f"explanation {pid}", "not_served": [],
-            "ongoing": ongoing, "basis": list(basis), "stated_rate": {"per_month": stated, "quote": stated_quote, "words": words},
+            "ongoing": ongoing, "basis": list(basis),
+            "stated_rate": {"count": stated, "per": per, "quote": stated_quote, "words": words},
             "reasoning": "because", "minutes": minutes}
 
 
@@ -180,12 +182,13 @@ class ScoreTest(unittest.TestCase):
         self.assertEqual((opps["proc-001"]["draft"], opps["proc-002"]["rank"]), (True, None))
         self.assertEqual((doc["totals"]["drafted"], doc["totals"]["ranked"]), (1, 1))
 
-    def test_an_opportunity_that_saves_under_a_dollar_a_month_is_not_ranked(self):
-        # Twice in four months at one minute is 0.01 hours, 85 cents; a tenth of a minute rounds to nothing.
-        once_a_while = process("proc-001", [cite("a", 0, "x"), cite("b", 1, "y")])
-        _, opps = self.run_score([twice("proc-002"), once_a_while], [estimate("proc-002", 1), estimate("proc-001", 0.1)])
-        self.assertEqual(opps["proc-002"]["dollars_per_month"], 0.85)
-        self.assertEqual(opps["proc-001"]["unused"], "it saves less than a dollar a month")
+    def test_a_stated_rate_is_turned_into_a_month_from_the_unit_the_quote_uses(self):
+        p = process("proc-001", [cite("a", 0, "we check them every working day"), cite("a", 1, "y")])
+        _, opps = self.run_score([p], [estimate("proc-001", 6, stated=1, per="working day", stated_quote="q1",
+                                                words="every working day")])
+        stated = opps["proc-001"]["rate"]["stated"]
+        self.assertEqual((stated["count"], stated["per"], stated["per_month"]), (1, "working day", 21.67))
+        self.assertEqual(opps["proc-001"]["hours_per_month"], 2.17)
 
 
 if __name__ == "__main__":

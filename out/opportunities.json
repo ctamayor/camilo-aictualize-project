@@ -1,0 +1,2140 @@
+{
+  "totals": {
+    "hourly_rate": 85,
+    "ranked": 27,
+    "unused": 0,
+    "happened_once": 0,
+    "ranked_on_one_time": 4,
+    "hours_per_month": 77.86,
+    "dollars_per_month": 6618.1,
+    "drafted": 10,
+    "drafted_dollars_per_month": 5727.3,
+    "stated_rates_used": 11,
+    "estimates_ignored": 0
+  },
+  "mailboxes": {
+    "farmer-d": {
+      "messages": 1161,
+      "months": [
+        "1999-12",
+        "2000-01",
+        "2000-02",
+        "2000-03",
+        "2000-04",
+        "2000-05",
+        "2000-06",
+        "2000-07",
+        "2000-08",
+        "2000-09",
+        "2000-10",
+        "2000-11",
+        "2000-12",
+        "2001-01",
+        "2001-02",
+        "2001-03",
+        "2001-04",
+        "2001-05",
+        "2001-06",
+        "2001-07",
+        "2001-08",
+        "2001-09",
+        "2001-10",
+        "2001-11",
+        "2001-12"
+      ]
+    },
+    "giron-d": {
+      "messages": 1168,
+      "months": [
+        "2000-06",
+        "2000-07",
+        "2000-08",
+        "2000-09",
+        "2000-10",
+        "2000-11",
+        "2000-12",
+        "2001-01",
+        "2001-02",
+        "2001-03",
+        "2001-04",
+        "2001-05",
+        "2001-06",
+        "2001-07",
+        "2001-08",
+        "2001-09",
+        "2001-10",
+        "2001-11",
+        "2001-12",
+        "2002-01",
+        "2002-02"
+      ]
+    },
+    "lokay-m": {
+      "messages": 214,
+      "months": [
+        "2001-09",
+        "2001-10",
+        "2001-11",
+        "2001-12",
+        "2002-01",
+        "2002-02",
+        "2002-03"
+      ]
+    },
+    "williams-w3": {
+      "messages": 653,
+      "months": [
+        "2001-05",
+        "2001-06",
+        "2001-07",
+        "2001-08",
+        "2001-09",
+        "2001-10",
+        "2001-11",
+        "2001-12",
+        "2002-01",
+        "2002-02"
+      ]
+    }
+  },
+  "opportunities": [
+    {
+      "id": "opp-01",
+      "process": "proc-001",
+      "name": "Back-dated MTM valuations for counterparty audit requests",
+      "summary": "Counterparties' auditors need third-party valuations of their derivatives, and the Confirmations group (Larry Joe Hunter, Ellen Wallumrod) must supply them. Confirmations has no system that values deals, so each request is emailed to every Risk desk head (5 or 6 of them). Each desk head forwards it to an analyst, who pulls a mini-book for that counterparty as of a past date, exports it to Excel, blacks out sensitive columns (Delta/Vol) and replies. Confirmations then combines the desk replies. Hunter says requests come several times a week.",
+      "rank": 1,
+      "problems": [],
+      "change": "Give Confirmations a read-only report that values a counterparty's deals across all desks as of a past date, so Risk analysts no longer do it by hand.",
+      "explanation": "Finish the tool Hunter describes: a read-only valuation report (the planned on-line EnTelligence, or a standard report from the risk system) that keeps back-dated curves and returns MTM value and open position by counterparty short name across all desks, with Delta/Vol left out. Confirmations enters the short name and as-of date, runs the report and sends it to the auditor. Desk heads and risk analysts are no longer involved.",
+      "ongoing": true,
+      "not_served": [],
+      "reasoning": null,
+      "minutes": 92,
+      "basis": [
+        {
+          "message": "giron-d/sent/241.",
+          "quote": "We do not have access to any system that values these deals, but are looking to get the on-line \"EnTelligence\" built so that it carries back-dated curves that will allow us to complete these requests without taking up a Risk person's time and without having to black out information (Delta/Vol) that is included in a mini-book.",
+          "note": "Confirmations itself says the work takes Risk staff time, includes blacking out Delta/Vol, and would go away with a back-dated valuation tool.",
+          "pattern": "saved-01",
+          "id": "q5"
+        },
+        {
+          "message": "giron-d/sent/241.",
+          "quote": "Until we can get EnTelligence built to our specifications, we'll need to continue to go to the different desks to provide Mark-to-Market valuations for a Counterparty's portfolio.",
+          "note": "Every request goes to all desks; the request in 214.eml went to 6 desk heads, those in 240.eml and 137.eml to 5.",
+          "pattern": "saved-01",
+          "id": "q6"
+        },
+        {
+          "message": "giron-d/sent/137.",
+          "quote": "Please provide the total MTM value for that date within your region.",
+          "note": "Each desk produces its own regional figure, so the work is repeated once per desk for each request.",
+          "pattern": "saved-01",
+          "id": "q7"
+        }
+      ],
+      "rate": {
+        "per_month": 13.0,
+        "source": "stated",
+        "counted": {
+          "times": 4,
+          "messages": 4,
+          "months": 2,
+          "mailboxes": [
+            "giron-d"
+          ],
+          "span": [
+            "2001-02",
+            "2001-03"
+          ],
+          "per_month": 1.5
+        },
+        "stated": {
+          "per_month": 13.0,
+          "count": 3,
+          "per": "week",
+          "quote": {
+            "message": "giron-d/sent/241.",
+            "quote": "we recieve several per week",
+            "note": "says how often the work is done",
+            "pattern": "saved-01",
+            "id": "q8"
+          },
+          "words": "we recieve several per week"
+        }
+      },
+      "hours_per_month": 19.93,
+      "dollars_per_month": 1694.05,
+      "running_total": 1694.05,
+      "draft": true
+    },
+    {
+      "id": "opp-02",
+      "process": "proc-016",
+      "name": "Nightly Path Confirmation checkouts with counterparties",
+      "summary": "Each night the Portland Real Time shift phones at least 27 named marketers and utilities between HE 19 and HE 21 to check out prescheduled power paths, and records each confirmation in the Enpower Path Confirmation tool. Each confirmation opens a screen where the trader types the counterparty's contact details, and because the save writes straight to Enpower it takes about a minute. Cut paths are also recorded as path confirms, which adds more saves.",
+      "rank": 2,
+      "problems": [],
+      "change": "Have the Enpower team pre-fill the counterparty contact on the confirmation screen and save in the background, so traders stop waiting about a minute per confirmation.",
+      "explanation": "The Enpower team in Houston, which already works with Portland on these tools, would change the Path Confirmation contact screen in two ways: fill it with the counterparty's usual scheduling contact, which the trader changes only if someone else answered, and queue the save to Enpower in the background so the screen hands control back at once. Real Time traders would then confirm a counterparty's paths by highlighting them, clicking the telephone icon, accepting the contact, and moving straight to the next call. The phone calls themselves stay the same.",
+      "ongoing": true,
+      "not_served": [],
+      "reasoning": null,
+      "minutes": 25,
+      "basis": [
+        {
+          "message": "williams-w3/sent_items/86.",
+          "quote": "Confirm a path by highlighting and clicking the telephone icon. A screen will come up requesting contact information from the appropriate counterparty. Because this information saves directly to Enpower, save time runs about a minute.",
+          "note": "Each confirmation means typing the contact details and then waiting about a minute for the save. The background save removes the wait, and pre-filling removes most of the typing.",
+          "pattern": "saved-16",
+          "id": "q3"
+        },
+        {
+          "message": "williams-w3/sent_items/86.",
+          "quote": "This would include but not be limited to: AEP, AES-New Energy, Aquila, Avista, Calpine, Constellation, Coral, Duke, Dynegy, El Paso Merchant, Exelon, Meico, Mirant, Morgan, NCPA, Reliant, PPLMontana, PowerX, Sempra, SMUD, TransAlta, Williams, and southwest utilities such as Pinnacle West, SRP, PNM, PSCO and Pacificorp.",
+          "note": "27 counterparties are named, and the list is a minimum. Since a counterparty's paths can be highlighted together, that means at least about 27 saves a night.",
+          "pattern": "saved-16",
+          "id": "q4"
+        },
+        {
+          "message": "williams-w3/sent_items/86.",
+          "quote": "Sort by counterparty while making confirmation calls. When all schedules with that counterparty are confirmed, highlight each schedule",
+          "note": "Confirmations are done one counterparty at a time, which supports counting about one save per counterparty.",
+          "pattern": "saved-16",
+          "id": "q5"
+        },
+        {
+          "message": "williams-w3/sent_items/86.",
+          "quote": "These checkouts should be started in HE 19 and finished by HE 21.",
+          "note": "All the checkouts must fit into a two-hour window, so about 27 minutes of save waits takes a large share of it.",
+          "pattern": "saved-16",
+          "id": "q6"
+        }
+      ],
+      "rate": {
+        "per_month": 30.42,
+        "source": "stated",
+        "counted": {
+          "times": 2,
+          "messages": 2,
+          "months": 2,
+          "mailboxes": [
+            "williams-w3"
+          ],
+          "span": [
+            "2001-11",
+            "2001-12"
+          ],
+          "per_month": 0.5
+        },
+        "stated": {
+          "per_month": 30.42,
+          "count": 1,
+          "per": "day",
+          "quote": {
+            "message": "williams-w3/sent_items/86.",
+            "quote": "You must check out with all major marketers and utilities each night.",
+            "note": "says how often the work is done",
+            "pattern": "saved-16",
+            "id": "q7"
+          },
+          "words": "You must check out with all major marketers and utilities each night."
+        }
+      },
+      "hours_per_month": 12.68,
+      "dollars_per_month": 1077.8,
+      "running_total": 2771.85,
+      "draft": true
+    },
+    {
+      "id": "opp-03",
+      "process": "proc-014",
+      "name": "Nightly check that every post ID is officialized",
+      "summary": "Each night the gas book administrators must officialize every post ID (book) so the V@R and credit systems pick it up. Since October 2000, after a missed West-NW-GDL book put the desk on Risk's daily list of non-officialized books (sent to Sally Beck and reviewed weekly by Rick Buy), one person per desk group runs an Excel macro by hand: they enter the date and the Portfolio and Book codes, and the macro lists the books that are officialized. The groups led by Gossett, Baumbach, Kelly, Giron and Keiser each got this file, and staff pass round changed versions of it. Regional controllers also get an end-of-night sheet confirming all books are officialized, and Risk keeps its own daily list of misses. No system holds the full list of books each admin must officialize, so Darron Giron writes it out by hand when another group asks (Rahmaan in July, Connie Sutton and Susan Trevino in November 2000). The check used before the macro compared positions only, so it missed post IDs with no net position. Credit needs those flat books officialized too.",
+      "rank": 3,
+      "problems": [],
+      "change": "Keep one list of the post IDs each book admin must officialize, and have the risk system email any that are not officialized by cut-off, replacing the hand-run nightly macros.",
+      "explanation": "Risk and IT set up one list (registry) of the post IDs each book admin must officialize each night. The lists Darron already writes out by hand are the starting point. At a set time before cut-off each night, the risk system compares that list with the books marked official and emails each owner any of their post IDs still not officialized, flat books included. The same report becomes the controllers' end-of-night sheet and Risk's daily tracking list. Desks stop running the Excel macro by hand and stop maintaining their own copies of it. Book admins only act when they get an exception email. When another group asks which books are officialized, the answer comes from the registry.",
+      "ongoing": true,
+      "not_served": [],
+      "reasoning": null,
+      "minutes": 30,
+      "basis": [
+        {
+          "message": "giron-d/sent/582.",
+          "quote": "To run this file all that has to be done is enter the date and have the Portfolio and Book CD entered in also.",
+          "note": "The macro is run by hand each night, with the codes typed in. Dutch Quigley sent it to five desk-group leads (Gossett, Baumbach, Kelly, Giron, Keiser), so roughly five runs a night.",
+          "pattern": "saved-14",
+          "id": "q6"
+        },
+        {
+          "message": "giron-d/sent/533.",
+          "quote": "All regional controllers will receive a sheet at the end of the night, verifying that all books are officialized.",
+          "note": "A separate nightly verification sheet goes to every regional controller. The automatic report would replace it.",
+          "pattern": "saved-14",
+          "id": "q7"
+        },
+        {
+          "message": "giron-d/sent/595.",
+          "quote": "If a postid has a net position and is not officialized, it will be caught using this procedure. It will not, however, if the postid does not have a position.",
+          "note": "The earlier position-based check missed flat post IDs. A registry-based check catches them whatever their position.",
+          "pattern": "saved-14",
+          "id": "q8"
+        },
+        {
+          "message": "giron-d/sent/580.",
+          "quote": "This one requires a comment in all post-id's to pull in only those.",
+          "note": "Staff keep changing and passing round their own versions of the macro file. A central check removes this upkeep.",
+          "pattern": "saved-14",
+          "id": "q9"
+        },
+        {
+          "message": "giron-d/sent/401.",
+          "quote": "Credit picks up all officalized books. If a book is not officialized, it picks up the previous day's position.",
+          "note": "A missed book, flat ones included, gives credit wrong data. This is why the nightly check matters.",
+          "pattern": "saved-14",
+          "id": "q10"
+        },
+        {
+          "message": "giron-d/sent/590.",
+          "quote": "We are currently looking into a query which will allow us to see all of our officialized books each night.",
+          "note": "The desk itself wanted a system view of the officialized books.",
+          "pattern": "saved-14",
+          "id": "q11"
+        }
+      ],
+      "rate": {
+        "per_month": 21.67,
+        "source": "stated",
+        "counted": {
+          "times": 5,
+          "messages": 5,
+          "months": 2,
+          "mailboxes": [
+            "giron-d"
+          ],
+          "span": [
+            "2000-10",
+            "2000-11"
+          ],
+          "per_month": 2.0
+        },
+        "stated": {
+          "per_month": 21.67,
+          "count": 1,
+          "per": "working day",
+          "quote": {
+            "message": "giron-d/sent/582.",
+            "quote": "Use it to make sure all your postid's that need to be, are officialized each night.",
+            "note": "says how often the work is done",
+            "pattern": "saved-14",
+            "id": "q12"
+          },
+          "words": "Use it to make sure all your postid's that need to be, are officialized each night."
+        }
+      },
+      "hours_per_month": 10.84,
+      "dollars_per_month": 921.4,
+      "running_total": 3693.25,
+      "draft": true
+    },
+    {
+      "id": "opp-04",
+      "process": "proc-027",
+      "name": "Nightly El Paso Electric model-vs-CARP tie-out",
+      "summary": "On the Portland Real Time desk, the shift trader who markets El Paso Electric (EPE) must, when the trading day is done, tie out the El Paso model spreadsheet against the CARP report by eye, then log the El Paso totals in a separate monthly EPE reconciliation workbook and explain every variance. The sheet must be filled in even when nothing differs, because Houston takes an empty sheet to mean the CARP was not run. Traders sometimes skip it. Differences that are not caught surface at the monthly checkout with El Paso and Settlements; the June 2001 checkout took five days to sort out.",
+      "rank": 4,
+      "problems": [],
+      "change": "A spreadsheet macro compares the CARP report with the El Paso model each night, writes the day's totals and a variance flag into the monthly reconciliation workbook, and leaves the trader to explain only flagged items.",
+      "explanation": "Real Time Trading Support (Kate Symes) adds a comparison tab or macro to the El Paso model that reads the day's CARP report, compares it with the model, highlights any differences, and writes the day's El Paso totals and a 'no variance / variance' entry into the monthly EPE reconciliation workbook. The monthly workbook is made from a template with its path already set. Each night the shift trader runs it, checks any flagged items and types an explanation only for those. On nights with no differences the entry is written automatically, so Houston still sees that the CARP was run, and differences are caught the same night instead of at month-end.",
+      "ongoing": true,
+      "not_served": [],
+      "reasoning": null,
+      "minutes": 9,
+      "basis": [
+        {
+          "message": "williams-w3/sent_items/418.",
+          "quote": "I just skimmed through the first 8 days of this month, and we show no variances between the Real Time El Paso model and our CARP report.",
+          "note": "Many nights have no differences at all, yet each still needs an entry typed by hand; an automatic comparison would write those entries itself.",
+          "pattern": "saved-27",
+          "id": "q4"
+        },
+        {
+          "message": "williams-w3/sent_items/417.",
+          "quote": "Houston will assume that no one ran the CARP if the sheet has no entries.",
+          "note": "The entry is required as proof the check was done, even when it records nothing.",
+          "pattern": "saved-27",
+          "id": "q5"
+        },
+        {
+          "message": "williams-w3/sent_items/340.",
+          "quote": "You will know you've done this correctly when the CARP report EXACTLY matches the El Paso model.",
+          "note": "The test is an exact match between two reports, which a spreadsheet can check mechanically.",
+          "pattern": "saved-27",
+          "id": "q6"
+        },
+        {
+          "message": "williams-w3/sent_items/315.",
+          "quote": "Our checkout with Kathy and the Settlements group took approximately five minutes, as opposed to the five days we spent sorting it out last month.",
+          "note": "Differences that slip through the nightly check are costly at month-end; this saving is not counted in the minutes.",
+          "pattern": "saved-27",
+          "id": "q7"
+        },
+        {
+          "message": "williams-w3/inbox/8.",
+          "quote": "M:/Electric/EPE/EPE 2002/Models/February02/...",
+          "note": "The El Paso models were still kept monthly in February 2002, after the estate took over.",
+          "pattern": "saved-27",
+          "id": "q8"
+        }
+      ],
+      "rate": {
+        "per_month": 30.42,
+        "source": "stated",
+        "counted": {
+          "times": 3,
+          "messages": 3,
+          "months": 2,
+          "mailboxes": [
+            "williams-w3"
+          ],
+          "span": [
+            "2001-07",
+            "2001-08"
+          ],
+          "per_month": 1.0
+        },
+        "stated": {
+          "per_month": 30.42,
+          "count": 1,
+          "per": "day",
+          "quote": {
+            "message": "williams-w3/sent_items/304.",
+            "quote": "El Paso model must tie out with CARP when trading day is done.",
+            "note": "says how often the work is done",
+            "pattern": "saved-27",
+            "id": "q9"
+          },
+          "words": "El Paso model must tie out with CARP when trading day is done."
+        }
+      },
+      "hours_per_month": 4.56,
+      "dollars_per_month": 387.6,
+      "running_total": 4080.85,
+      "draft": true
+    },
+    {
+      "id": "opp-05",
+      "process": "proc-002",
+      "name": "Weekly manual compaction of WeaponX Access databases",
+      "summary": "WeaponX is an Access database that imports and deletes a lot of data every day, and Access does not free the space, so the files grow (one went from 520 MB to 30 MB when compacted). Greg Couch asked every book admin who uses WeaponX, across six managers' groups, to compact their file by hand at least once a week: open it holding the shift key, run Tools/Database Utilities/Compact Database, wait for it to finish, then use it as normal. One admin already does this every day.",
+      "rank": 5,
+      "problems": [],
+      "change": "Compact every WeaponX file automatically each night so book admins no longer do it by hand.",
+      "explanation": "The WeaponX owner or IT sets up one scheduled overnight job per WeaponX file (Access can compact a file from the command line with the /compact switch), or adds a compact step at the end of the daily WeaponX import. Book admins then stop compacting by hand, and every file stays small even when an admin forgets. Setup is a one-time job and is not counted in the savings.",
+      "ongoing": true,
+      "not_served": [],
+      "reasoning": null,
+      "minutes": 10,
+      "basis": [
+        {
+          "message": "giron-d/sent/596.",
+          "quote": "Open the database while holding down on the shift key. This will open the database, but prevent the main form from opening automatically. Next, the admin should go to Access menu selections and choose Tools/Database Utilities/Compact Database.",
+          "note": "The manual steps each admin repeats: open the file a special way, run compact from the menus, wait for it to finish, and reopen.",
+          "pattern": "saved-02",
+          "id": "q3"
+        },
+        {
+          "message": "giron-d/sent/596.",
+          "quote": "WeaponX imports and deletes a lot of data on a daily basis.",
+          "note": "The files grow every day, so compaction is a standing chore, not a one-off.",
+          "pattern": "saved-02",
+          "id": "q4"
+        },
+        {
+          "message": "giron-d/sent/596.",
+          "quote": "The Texas WeaponX file that I compacted reduced from 520 MB to 30 MB and one for the west went from 400 MB to 12 MB.",
+          "note": "Files of hundreds of MB take a while to compact, which is time the admin spends waiting.",
+          "pattern": "saved-02",
+          "id": "q5"
+        },
+        {
+          "message": "giron-d/sent/596.",
+          "quote": "Crystal (East desk I believe) already compacts the database on a daily basis.",
+          "note": "At least one admin does it daily, so the weekly figure understates the work.",
+          "pattern": "saved-02",
+          "id": "q6"
+        }
+      ],
+      "rate": {
+        "per_month": 26.0,
+        "source": "stated",
+        "counted": {
+          "times": 2,
+          "messages": 2,
+          "months": 1,
+          "mailboxes": [
+            "giron-d"
+          ],
+          "span": [
+            "2000-10",
+            "2000-10"
+          ],
+          "per_month": 1.0
+        },
+        "stated": {
+          "per_month": 26.0,
+          "count": 6,
+          "per": "week",
+          "quote": {
+            "message": "giron-d/sent/596.",
+            "quote": "I would like each of your book admins using WeaponX to begin using the following procedures at least once/week",
+            "note": "says how often the work is done",
+            "pattern": "saved-02",
+            "id": "q7"
+          },
+          "words": "I would like each of your book admins using WeaponX to begin using the following procedures at least once/week"
+        }
+      },
+      "hours_per_month": 4.33,
+      "dollars_per_month": 368.05,
+      "running_total": 4448.9,
+      "draft": true
+    },
+    {
+      "id": "opp-06",
+      "process": "proc-004",
+      "name": "Monthly hunt for Enron Canada (ECC) deals in Houston books before NYMEX invoicing",
+      "summary": "Around each NYMEX close, Stacey Vallejo (Calgary settlements) emails 5 to 8 Houston risk controllers. She asks each of them to search all their books for deals that settle between ECC and an outside counterparty and move ('flip') them to the FT-US/CAND-ERMS book, usually by end of day. Darron Giron forwards each request to 5 to 7 book administrators, who check their own books. EnronOnline deals land in Houston books automatically, so the mistake comes back every month. EnronOnline already books TransCanada Energy and Dynegy Canada deals to ECC automatically, but other parties (Duke, Aquila Canada Corp.) are not covered. Some are entered as ENA deals and slip past the search entirely. Invoicing for both ECC and ENA waits until the deals are fixed. One controller built a private calc to find the deals, and others ask to copy it.",
+      "rank": 6,
+      "problems": [],
+      "change": "Book Canadian-settled deals straight into FT-US/CAND-ERMS, and send each book owner a nightly list of any that land elsewhere, instead of a monthly manual search of every Houston book.",
+      "explanation": "(1) Extend the existing EnronOnline rule that already books TransCanada Energy and Dynegy Canada deals to settle with ECC. It would cover every deal where ECC is the settling Enron entity, or where the counterparty is on a maintained list of Canadian-settled parties (for example Duke Energy Marketing LP and Aquila Canada Corp.). These deals would go straight into FT-US/CAND-ERMS. (2) Turn the controllers' private calc into a standard nightly report. It would list any such deal sitting in another book, grouped by book owner, and go to that owner and to Calgary settlements. Afterwards, owners move the few deals the report lists as they appear. The monthly all-books request, the forwarding chain and the end-of-day scramble at NYMEX close all go away.",
+      "ongoing": true,
+      "not_served": [],
+      "reasoning": null,
+      "minutes": 180,
+      "basis": [
+        {
+          "message": "giron-d/sent/550.",
+          "quote": "These are all EnronOnline deals so they",
+          "note": "The deals land in the wrong book automatically at booking, so the error repeats every month. A booking rule fixes the cause.",
+          "pattern": "saved-04",
+          "id": "q9"
+        },
+        {
+          "message": "giron-d/sent/292.",
+          "quote": "program set up for Duke deals similar to ones we have with TransCanada Energy",
+          "note": "A booking rule of this kind already exists for some counterparties. The change extends it rather than building something new.",
+          "pattern": "saved-04",
+          "id": "q10"
+        },
+        {
+          "message": "giron-d/sent/195.",
+          "quote": "Please take care of this if you have any to be flipped.",
+          "note": "Giron forwards the request to 7 book administrators, so each request reaches about 8 controllers plus their staff, each searching their own books.",
+          "pattern": "saved-04",
+          "id": "q11"
+        },
+        {
+          "message": "giron-d/sent/360.",
+          "quote": "Goss said you may have a calc set up to identify these deals.",
+          "note": "The search is manual enough that controllers pass around a private calc. The nightly report makes that calc standard.",
+          "pattern": "saved-04",
+          "id": "q12"
+        },
+        {
+          "message": "giron-d/sent/108.",
+          "quote": "TAGG as ECC deals.",
+          "note": "Deals with Canadian affiliates entered as ENA deals are missed by the current search. A maintained counterparty list would catch them.",
+          "pattern": "saved-04",
+          "id": "q13"
+        }
+      ],
+      "rate": {
+        "per_month": 1.17,
+        "source": "counted",
+        "counted": {
+          "times": 8,
+          "messages": 8,
+          "months": 6,
+          "mailboxes": [
+            "giron-d"
+          ],
+          "span": [
+            "2000-10",
+            "2001-03"
+          ],
+          "per_month": 1.17
+        },
+        "stated": null
+      },
+      "hours_per_month": 3.51,
+      "dollars_per_month": 298.35,
+      "running_total": 4747.25,
+      "draft": true
+    },
+    {
+      "id": "opp-07",
+      "process": "proc-007",
+      "name": "Monthly P&L top pages for Arthur Andersen's gas testing",
+      "summary": "Each month the auditors from Arthur Andersen (Mark Austin, Sharon Smith, Carrie Richardson) email the gas Risk desk heads (Kelly, Keiser, Giron, Baumbach) a list of books. For each book they want the P&L top page for the last day of the month. If most of the P&L comes from curve shift, they also want the top pages and curve shift reports for the five largest days. Each desk head forwards the email to two to seven book admins. The admins pull the reports from ERMS and print or copy them, and the desk head passes them on to the auditors. The auditors chase missing books ('2nd request', quarter-file close-out) and ask who is responsible for each desk.",
+      "rank": 7,
+      "problems": [],
+      "change": "Save every book's month-end and daily P&L top pages and curve shift reports to a read-only audit folder at month-end, so the auditors stop sending requests to the desks.",
+      "explanation": "At month-end close, a scheduled ERMS job (or a macro a book admin runs once) saves each gas book's month-end top page, its daily top pages and its Gas Daily curve shift reports as PDF files. They go into a read-only folder, one subfolder per month, with a one-page index that lists each book and the book admin responsible for it. ERMS can already show most reports as Adobe Acrobat files. The auditors get read access, or a copy of the folder if they no longer have Enron network access. They choose their books and the five largest days from the folder themselves. Desk heads and book admins no longer forward, pull, print or copy reports, and nobody has to chase missing books. Calls to discuss the P&L drivers stay as they are, and so do requests for deal tickets and confirmations.",
+      "ongoing": true,
+      "not_served": [],
+      "reasoning": null,
+      "minutes": 180,
+      "basis": [
+        {
+          "message": "giron-d/sent/516.",
+          "quote": "Additionally, if the majority of the P&L pertains to curve shift, please provide the P&L top pages for five of the largest days including the Curve Shift Reports.",
+          "note": "For each book, the admin may have to pull six top pages plus curve shift reports, not just one page. One request listed seven books.",
+          "pattern": "saved-07",
+          "id": "q7"
+        },
+        {
+          "message": "giron-d/sent/516.",
+          "quote": "Please get this info to me and I will pass it on to AA.",
+          "note": "Giron sends the request on to four staff, then collects their reports and passes them to the auditors.",
+          "pattern": "saved-07",
+          "id": "q8"
+        },
+        {
+          "message": "giron-d/sent/201.",
+          "quote": "To: William Kelly/HOU/ECT@ECT, Kam Keiser/HOU/ECT@ECT, Darron C Giron/HOU/ECT@ECT, David Baumbach/HOU/ECT@ECT, Jody Crook/Corp/Enron@ENRON, Phillip M Love/HOU/ECT@ECT, Jason Wolfe/NA/Enron@ENRON, Chris Walker/HOU/ECT@ECT, Carole Frank/NA/Enron@ENRON, Jennifer Bagwell/NA/Enron@ENRON, O'Neal D Winfree/HOU/ECT@ECT",
+          "note": "Each monthly request involves four desk heads and several book admins. Giron alone then forwards it to seven people.",
+          "pattern": "saved-07",
+          "id": "q9"
+        },
+        {
+          "message": "giron-d/sent/420.",
+          "quote": "Pull this together and then call Sharon so they can come get the copies.",
+          "note": "The reports are handed over as paper copies, which the auditors have to come and collect.",
+          "pattern": "saved-07",
+          "id": "q10"
+        },
+        {
+          "message": "giron-d/sent/299.",
+          "quote": "please direct me to the individual responsible for each of the desks listed below.",
+          "note": "The auditors do not know who handles each book. The index of book admins would answer this.",
+          "pattern": "saved-07",
+          "id": "q11"
+        },
+        {
+          "message": "giron-d/inbox/190.",
+          "quote": "Most reports can be viewed on the screen using Adobe Acrobat.",
+          "note": "ERMS can already produce the reports as files, so saving them to a folder needs little new work.",
+          "pattern": "saved-07",
+          "id": "q12"
+        }
+      ],
+      "rate": {
+        "per_month": 1.0,
+        "source": "counted",
+        "counted": {
+          "times": 6,
+          "messages": 6,
+          "months": 5,
+          "mailboxes": [
+            "giron-d"
+          ],
+          "span": [
+            "2000-10",
+            "2001-02"
+          ],
+          "per_month": 1.0
+        },
+        "stated": {
+          "per_month": 1,
+          "count": 1,
+          "per": "month",
+          "quote": {
+            "message": "giron-d/sent/317.",
+            "quote": "As part of our monthly testing",
+            "note": "says how often the work is done",
+            "pattern": "saved-07",
+            "id": "q13"
+          },
+          "words": "As part of our monthly testing"
+        }
+      },
+      "hours_per_month": 3.0,
+      "dollars_per_month": 255.0,
+      "running_total": 5002.25,
+      "draft": true
+    },
+    {
+      "id": "opp-08",
+      "process": "proc-021",
+      "name": "Monthly cost-center allocation % update",
+      "summary": "Each month the Consolidations group in Financial Operations (Brian Heinrich, then Jennifer Blay, then Holly Heath) emails a spreadsheet of last month's allocation percentages to about 16 Energy Operations directors and asks them to update it within a few days. The percentages say how each cost center's (RC's) cost is split across the commercial teams. Directors such as Brenda Herod pass it down to their managers, who work out what their group spent its time on. The director then sends the combined file back, and assistants such as Irena Hogan forward it again. In the same weeks the OPM team (Shari Mao, later Suzanne Nicholie) sends many of the same managers its monthly activity/hours survey. That survey also drives each cost center's costs to the commercial teams and asks them to confirm or change the percentage given to each team. On 29 Feb 2000 both requests went out on the same day, each due Friday 3 March. So managers report the same split twice.",
+      "rank": 8,
+      "problems": [],
+      "change": "Take each cost center's commercial-team percentages from the monthly OPM survey instead of running a separate allocation % spreadsheet round.",
+      "explanation": "Financial Operations would work out each RC's allocation percentages from the OPM survey results it already has: the hours by activity and the commercial teams supported and their percentages. It would send the percentages to the RC owners for information. RC owners would reply only if something is wrong, such as a new RC or a team that was split out. The separate spreadsheet request, the director's pass-down and roll-up, and the assistant's forwarding would stop. Managers would answer one monthly question about where their group's time went instead of two. The OPM survey goes on as before, and none of its time is counted as saved. The two calls currently have different deadlines (the October 2000 allocations were due on the 2nd), and the OPM team has raised concerns about its data quality. Finance would need to agree a single cut-off and accept the OPM figures as the basis for its charges.",
+      "ongoing": true,
+      "not_served": [],
+      "reasoning": null,
+      "minutes": 180,
+      "basis": [
+        {
+          "message": "farmer-d/logistics/700.",
+          "quote": "provide an accurate allocation of your RC for 1/00. What has your group spent their time on in 1/00???",
+          "note": "The director passes the request down to six managers, who each work out where their group's time went. This is the same question the OPM survey asks.",
+          "pattern": "saved-21",
+          "id": "q5"
+        },
+        {
+          "message": "farmer-d/logistics/710.",
+          "quote": "Attached is the allocation for 1/00 for Texas Operations.",
+          "note": "The director then combines the managers' answers and sends them back to Financial Operations.",
+          "pattern": "saved-21",
+          "id": "q6"
+        },
+        {
+          "message": "farmer-d/logistics/1494.",
+          "quote": "Please read below and comply as directed below.",
+          "note": "An assistant forwards the request again to seven more leads. The request reaches managers through several hands.",
+          "pattern": "saved-21",
+          "id": "q7"
+        },
+        {
+          "message": "farmer-d/logistics/856.",
+          "quote": "If the activity is using an allocation (for example \"Allocate 0469\" or \"80-20 Split\"), that the percentage allocated to each commercial team has not changed from last month.",
+          "note": "The OPM survey sent the same day as the February allocation request (862.eml) already asks managers to confirm or change the percentage given to each commercial team.",
+          "pattern": "saved-21",
+          "id": "q8"
+        },
+        {
+          "message": "farmer-d/logistics/1154.",
+          "quote": "The attached survey drives your costs from your activities to the commercial teams.",
+          "note": "The OPM survey has the same purpose as the allocation percentages, which is spreading each cost center's cost across the commercial teams.",
+          "pattern": "saved-21",
+          "id": "q9"
+        },
+        {
+          "message": "farmer-d/logistics/2080.",
+          "quote": "we need you to enter the commercial teams your cost center supports and the FTE's in your cost center.",
+          "note": "By 2001 the hours survey stores each cost center's commercial teams and headcount and carries them over from month to month. Percentages could be worked out from it.",
+          "pattern": "saved-21",
+          "id": "q10"
+        },
+        {
+          "message": "farmer-d/logistics/84.",
+          "quote": "The system might not have prompted you to split out by percentages the commercial teams you supported perfoming that activity",
+          "note": "The hours survey is designed to ask for the percentage split across commercial teams.",
+          "pattern": "saved-21",
+          "id": "q11"
+        }
+      ],
+      "rate": {
+        "per_month": 1,
+        "source": "stated",
+        "counted": {
+          "times": 4,
+          "messages": 4,
+          "months": 11,
+          "mailboxes": [
+            "farmer-d"
+          ],
+          "span": [
+            "2000-01",
+            "2000-11"
+          ],
+          "per_month": 0.27
+        },
+        "stated": {
+          "per_month": 1,
+          "count": 1,
+          "per": "month",
+          "quote": {
+            "message": "farmer-d/logistics/700.",
+            "quote": "they will require explanations each month as all variances from Plan do.",
+            "note": "says how often the work is done",
+            "pattern": "saved-21",
+            "id": "q12"
+          },
+          "words": "they will require explanations each month as all variances from Plan do."
+        }
+      },
+      "hours_per_month": 3.0,
+      "dollars_per_month": 255.0,
+      "running_total": 5257.25,
+      "draft": true
+    },
+    {
+      "id": "opp-09",
+      "process": "proc-024",
+      "name": "Month-end basis and index roll-off double calc",
+      "summary": "Each month at the basis and index roll-off, every gas book administrator has to calculate and officialize their book twice under two post IDs: a 100% basis calc for the TDS download and reports, then a 50% roll-off calc for the V@R benchmark. The order is fixed: calc 100%, officialize, load to TDS, unofficialize, calc 50%, officialize. This repeats on the roll-off nights until indexes are set, and the procedure is complex enough that desk leads planned classroom training on it.",
+      "rank": 9,
+      "problems": [],
+      "change": "Have the risk system run both roll-off calcs per book in one scheduled batch, so book administrators calc once instead of toggling official status by hand.",
+      "explanation": "The risk system team adds a roll-off batch job. For each book it produces the 100% prompt-basis calc under a TDS post ID and loads it to TDS, and the 50%/50% roll-off calc under the official V@R post ID. The risk lead (today Jeff Gossett) sets the roll-off and roll-in percentages once per month as parameters. On roll-off nights each book administrator reviews the two results and runs reports off the 100% calc. They no longer recalculate, officialize, unofficialize and re-officialize by hand, and the risk of feeding V@R from the wrong post ID goes away.",
+      "ongoing": true,
+      "not_served": [],
+      "reasoning": null,
+      "minutes": 180,
+      "basis": [
+        {
+          "message": "giron-d/sent/631.",
+          "quote": "Just to be clear, calc your 100% basis calc first. Officialize. Load your positions into TDS. Unofficialize. Calc your 50% basis calc. Officialize.",
+          "note": "The manual sequence each book administrator runs: a second full calc plus the officialize, unofficialize and re-officialize steps that the batch would remove.",
+          "pattern": "saved-24",
+          "id": "q2"
+        },
+        {
+          "message": "giron-d/sent/631.",
+          "quote": "For the V@R calculations we will need to roll 50% of basis off tonight, and 50% tommorrow.",
+          "note": "The roll-off covers at least two nights, so the double calc is done on each of them.",
+          "pattern": "saved-24",
+          "id": "q3"
+        },
+        {
+          "message": "giron-d/sent/631.",
+          "quote": "We will need two calcs until indexes are set.",
+          "note": "The double calc continues every night until indexes are set, so two nights a month is a low estimate.",
+          "pattern": "saved-24",
+          "id": "q4"
+        },
+        {
+          "message": "giron-d/sent/631.",
+          "quote": "To: Jennifer Bagwell/NA/Enron@ENRON, Anne Bike/Corp/Enron@Enron, Chris Walker/HOU/ECT@ECT, Jason Wolfe/NA/Enron@ENRON, Dawn C Kenne/HOU/ECT@ECT, Darron C Giron/HOU/ECT@ECT",
+          "note": "The instruction goes to the people who run the books. Five of them are counted, plus Kevin Radous, to whom Giron forwarded it. Not counted: Giron, and the book administrators under the five other desk leads on the first distribution.",
+          "pattern": "saved-24",
+          "id": "q5"
+        },
+        {
+          "message": "giron-d/sent/477.",
+          "quote": "Topics should include: NX3 roll-off, the curveshift associate with basis NX3 roll-off and where it will show up on the p&l, what days we will roll in index - the percentages",
+          "note": "The roll-off and its percentages are a manual procedure that staff must be trained on, which supports setting the percentages centrally.",
+          "pattern": "saved-24",
+          "id": "q6"
+        }
+      ],
+      "rate": {
+        "per_month": 1,
+        "source": "stated",
+        "counted": {
+          "times": 1,
+          "messages": 1,
+          "months": 1,
+          "mailboxes": [
+            "giron-d"
+          ],
+          "span": [
+            "2000-09",
+            "2000-09"
+          ],
+          "per_month": 0.0
+        },
+        "stated": {
+          "per_month": 1,
+          "count": 1,
+          "per": "month",
+          "quote": {
+            "message": "giron-d/sent/631.",
+            "quote": "Again this month",
+            "note": "says how often the work is done",
+            "pattern": "saved-24",
+            "id": "q7"
+          },
+          "words": "Again this month"
+        }
+      },
+      "hours_per_month": 3.0,
+      "dollars_per_month": 255.0,
+      "running_total": 5512.25,
+      "draft": true
+    },
+    {
+      "id": "opp-10",
+      "process": "proc-022",
+      "name": "Weekly check that new ERMS curves exist in RisktRAC",
+      "summary": "When a trader needs a new price curve, the commodity group's risk management builds it in ERMS. They then fill in a curve set-up form so that Risk Analysis and Reporting can set it up again in RisktRAC, the system that calculates VaR. Separately, they email IT to add the curve to TAGG. Desks have not always sent the form, so Risk Analysis and Reporting now checks by hand every week that all curves newly set up in ERMS are also in RisktRAC. The first check found numerous curves missing, and each has to be resolved with the desk. Until a curve is in RisktRAC, its positions are left out of VaR, so VaR is wrong.",
+      "rank": 10,
+      "problems": [],
+      "change": "A nightly report lists ERMS curves missing from RisktRAC, replacing the weekly hand check.",
+      "explanation": "IT schedules a nightly job that compares the curves in ERMS with those in RisktRAC (and the TAGG mapping) and emails any ERMS curve without a match to Risk Analysis and Reporting and to the risk lead of the desk that owns it. A further step would be for a new ERMS curve to create the RisktRAC set-up request automatically, filled in from the ERMS curve definition, in place of the hand-completed form. Afterwards Risk Analysis and Reporting no longer does the weekly comparison; it reads a short exception list. Missing curves show up the next morning instead of up to a week later, so VaR is not left inaccurate in between. Only the weekly check is counted in the savings, not the form or the TAGG requests.",
+      "ongoing": true,
+      "not_served": [],
+      "reasoning": null,
+      "minutes": 35,
+      "basis": [
+        {
+          "message": "giron-d/sent/410.",
+          "quote": "We did this for the first time today and noted numerous curves in ERMS that are not in RisktRAC - which we are working with you to resolve.",
+          "note": "The weekly check turns up many missing curves, and each one is then followed up with the desk.",
+          "pattern": "saved-22",
+          "id": "q2"
+        },
+        {
+          "message": "giron-d/sent/410.",
+          "quote": "If the curve is not set up in RisktRAC the positions are not captured in the VAR or engine, thereby making VAR inaccurate.",
+          "note": "Why the gap matters: a curve missing from RisktRAC leaves its positions out of VaR until someone finds it.",
+          "pattern": "saved-22",
+          "id": "q3"
+        },
+        {
+          "message": "giron-d/sent/410.",
+          "quote": "In the past few months, the procedures for setting up new curves and books have not been followed by everyone.",
+          "note": "The hand-completed form is not reliably sent, which is why the weekly check was started.",
+          "pattern": "saved-22",
+          "id": "q4"
+        },
+        {
+          "message": "giron-d/sent/410.",
+          "quote": "Risk management completes a curve set up request form to set up curve in RisktRAC",
+          "note": "The same curve is set up a second time in RisktRAC from a form that is filled in by hand.",
+          "pattern": "saved-22",
+          "id": "q5"
+        },
+        {
+          "message": "giron-d/sent/411.",
+          "quote": "I set up these new curves this morning and need them added to Tagg",
+          "note": "New curves are also requested separately from IT for TAGG, a third system that a nightly comparison could cover.",
+          "pattern": "saved-22",
+          "id": "q6"
+        }
+      ],
+      "rate": {
+        "per_month": 4.33,
+        "source": "stated",
+        "counted": {
+          "times": 1,
+          "messages": 1,
+          "months": 1,
+          "mailboxes": [
+            "giron-d"
+          ],
+          "span": [
+            "2000-12",
+            "2000-12"
+          ],
+          "per_month": 0.0
+        },
+        "stated": {
+          "per_month": 4.33,
+          "count": 1,
+          "per": "week",
+          "quote": {
+            "message": "giron-d/sent/410.",
+            "quote": "on a weekly basis new curves set up in ERMS are reviewed",
+            "note": "says how often the work is done",
+            "pattern": "saved-22",
+            "id": "q7"
+          },
+          "words": "on a weekly basis new curves set up in ERMS are reviewed"
+        }
+      },
+      "hours_per_month": 2.53,
+      "dollars_per_month": 215.05,
+      "running_total": 5727.3,
+      "draft": true
+    },
+    {
+      "id": "opp-11",
+      "process": "proc-003",
+      "name": "Monthly roll of Sitara transport usage tickets",
+      "summary": "Before each new month Heidi Withers (rates group) goes through the HPL and third-party transport usage tickets in Sitara one by one, adds the new month where needed and refreshes each rate by hand to match the rate matrix. When she adds a month she leaves the volume at zero, so the schedulers on Daren Farmer's desk must fill in volumes and are told to check every pipe. The correct rates already sit in Unify for invoicing, so the Sitara tickets are a second, hand-kept copy, and mismatches with the matrix have been found.",
+      "rank": 11,
+      "problems": [],
+      "change": "A month-end job extends each active usage ticket, fills its rate from the matrix/Unify rates and carries last month's volume, leaving people only an exception list.",
+      "explanation": "A scheduled job run before month start extends each active transport usage ticket by one month (or copies it to a new ticket where a ticket's term is full). It sets the rate from the same rate table in Unify that invoicing uses, and sets the volume to the prior month's figure instead of zero. It then lists only the tickets it could not price: new baseload deals and third-party paths whose rates are not yet known. Heidi or the desk fills in those, as they already must today. Schedulers change volumes only where flows actually change. The ticket-rate check that Heidi now does by Basis Adjustment report becomes an automatic comparison of ticket rate against matrix rate.",
+      "ongoing": true,
+      "not_served": [],
+      "reasoning": null,
+      "minutes": 280,
+      "basis": [
+        {
+          "message": "farmer-d/logistics/1144.",
+          "quote": "Rates have been updated to reflect current matrix rates and all baseload rates that I know of at this time.",
+          "note": "Rates are refreshed by hand against the matrix on every ticket; the job would fill these automatically.",
+          "pattern": "saved-03",
+          "id": "q3"
+        },
+        {
+          "message": "farmer-d/logistics/1144.",
+          "quote": "Rule of thumb was that if I had to add a month, I refreshed the rate but left volume at zero.",
+          "note": "Added months start at zero volume, which creates re-entry work for the schedulers.",
+          "pattern": "saved-03",
+          "id": "q4"
+        },
+        {
+          "message": "farmer-d/logistics/1144.",
+          "quote": "I would advise that your schedulers check volumes on all pipes to ensure they're reflected in Position Manager correctly.",
+          "note": "The desk's schedulers are drawn into checking every pipe after the roll.",
+          "pattern": "saved-03",
+          "id": "q5"
+        },
+        {
+          "message": "farmer-d/logistics/1145.",
+          "quote": "The tickets are finished.",
+          "note": "Sent the next morning: the roll ran from the afternoon of 24 May into the morning of 25 May, roughly a working day of Heidi's time.",
+          "pattern": "saved-03",
+          "id": "q6"
+        },
+        {
+          "message": "farmer-d/logistics/867.",
+          "quote": "The rates are in the system correctly in Unify (so that we can invoice correctly), but Daren's group uses a Sitara deal (the transport usage tickets) to estimate desk transport in the P&L during the month.",
+          "note": "The correct rates already exist in a system, so the Sitara rates are a duplicate copy that could be filled from it.",
+          "pattern": "saved-03",
+          "id": "q7"
+        },
+        {
+          "message": "farmer-d/logistics/867.",
+          "quote": "Lauri's matrix shows 0.05 from Thompsonville to HSC, but the transport usage ticket (updated by Daren's group) has 0.055.",
+          "note": "Hand-kept ticket rates drift from the matrix.",
+          "pattern": "saved-03",
+          "id": "q8"
+        },
+        {
+          "message": "farmer-d/logistics/1257.",
+          "quote": "I do not yet know what baseload rates you have agreed upon, so you will need to adjust them in the appropriate tickets.",
+          "note": "Baseload and third-party rates are not in the matrix; these stay manual and are the exception list.",
+          "pattern": "saved-03",
+          "id": "q9"
+        }
+      ],
+      "rate": {
+        "per_month": 0.5,
+        "source": "counted",
+        "counted": {
+          "times": 2,
+          "messages": 2,
+          "months": 2,
+          "mailboxes": [
+            "farmer-d"
+          ],
+          "span": [
+            "2000-05",
+            "2000-06"
+          ],
+          "per_month": 0.5
+        },
+        "stated": null
+      },
+      "hours_per_month": 2.33,
+      "dollars_per_month": 198.05,
+      "running_total": 5925.35,
+      "draft": false
+    },
+    {
+      "id": "opp-12",
+      "process": "proc-012",
+      "name": "Monthly wholesale-volume variance explanations for Investor Relations",
+      "summary": "Each month Business Analysis & Reporting (Misti Day) emails about 11 commercial contacts to open the \"Statistical Database\", review their region's wholesale volumes for the month, and email back a verification plus a written explanation for every change of 10% or more year/year, quarter/quarter and month/month, by a deadline a few days later. Each person finds their flagged lines, works out the cause and types a free-text reply. BA&R then gathers the separate email replies for Investor Relations. The causes often carry over from month to month: in June and September the Texas reply gave the same reasons (more EOL trading and Entex taking more gas).",
+      "rank": 12,
+      "problems": [],
+      "change": "Have the Statistical Database pre-fill each region's variance explanations from the volume data and last month's answers, so each contact only confirms them or edits the ones that changed, inside the database.",
+      "explanation": "BA&R adds a form to the Statistical Database it already sends people to. For each region the form lists only the lines that moved 10% or more on each of the three comparisons. Next to each line it shows last month's explanation where the same line was flagged last month, and, where the database holds the data, a split of the change into EOL and non-EOL volume. Each contact opens their region, checks the volumes, and either confirms each explanation or writes a new one. That keeps the rule that commercial staff verify the volumes. BA&R reads the confirmed answers from the database instead of collecting and merging about 11 emails.",
+      "ongoing": true,
+      "not_served": [],
+      "reasoning": null,
+      "minutes": 130,
+      "basis": [
+        {
+          "message": "farmer-d/logistics/1416.",
+          "quote": "Please forward your verification and explanations via e-mail to me by 10:00am Friday, September 22.",
+          "note": "Each contact checks the volumes and writes a separate email that BA&R has to collect. The August request went to 11 named people.",
+          "pattern": "saved-12",
+          "id": "q3"
+        },
+        {
+          "message": "farmer-d/logistics/1210.",
+          "quote": "The Yr. to Yr. and Qtr to Qtr increases can be explained by an increase in EOL transactions and Entex taking more gas.",
+          "note": "June reply for Texas.",
+          "pattern": "saved-12",
+          "id": "q4"
+        },
+        {
+          "message": "farmer-d/logistics/1416.",
+          "quote": "Yr to Yr and Qtr to Qtr changes due to EOL and increased Entex takes.",
+          "note": "September reply for Texas gives the same causes as June, so last month's text would have needed only a confirmation.",
+          "pattern": "saved-12",
+          "id": "q5"
+        },
+        {
+          "message": "farmer-d/logistics/1416.",
+          "quote": "It is essential that the volumes be verified by commercial personnel.",
+          "note": "Contacts must still check the volumes themselves, so the change saves only the hunting for flagged lines, the rewriting and the merging, not the review.",
+          "pattern": "saved-12",
+          "id": "q6"
+        }
+      ],
+      "rate": {
+        "per_month": 1,
+        "source": "stated",
+        "counted": {
+          "times": 2,
+          "messages": 2,
+          "months": 4,
+          "mailboxes": [
+            "farmer-d"
+          ],
+          "span": [
+            "2000-06",
+            "2000-09"
+          ],
+          "per_month": 0.25
+        },
+        "stated": {
+          "per_month": 1,
+          "count": 1,
+          "per": "month",
+          "quote": {
+            "message": "farmer-d/logistics/1416.",
+            "quote": "provide monthly volumetric analysis for Wholesale Operations",
+            "note": "says how often the work is done",
+            "pattern": "saved-12",
+            "id": "q7"
+          },
+          "words": "provide monthly volumetric analysis for Wholesale Operations"
+        }
+      },
+      "hours_per_month": 2.17,
+      "dollars_per_month": 184.45,
+      "running_total": 6109.8,
+      "draft": false
+    },
+    {
+      "id": "opp-13",
+      "process": "proc-023",
+      "name": "Monthly check of the EWS admin assistant list",
+      "summary": "Jessica Ramirez in the EWS Office of the Chairman keeps a spreadsheet (EEOC.xls) of the group's administrative assistants: title, location, extension, fax and supervisor. She says she will check it every month by emailing it to about 34 people. Each person has to open the file, find their own line, and reply with any corrections, and she then merges the replies by hand. Some people on the mailing are not in the pool. Bill Williams III asked to be taken off.",
+      "rank": 13,
+      "problems": [],
+      "change": "Build the monthly assistant list from the HR or address-book record, and email only the people whose entries changed or look incomplete.",
+      "explanation": "Each month Ramirez pulls title, location, phone, fax and supervisor for the assistant job codes from the HR system or the Outlook address list. Those records normally carry these fields; the mail does not confirm this, so it needs checking first. She compares the pull with last month's list and emails only the few people whose entries changed or have gaps. Corrections are made in the HR or address record, so the next pull comes out right. The roughly 34 people stop getting a monthly spreadsheet to check, and people outside the pool get nothing.",
+      "ongoing": true,
+      "not_served": [],
+      "reasoning": null,
+      "minutes": 70,
+      "basis": [
+        {
+          "message": "williams-w3/sent_items/313.",
+          "quote": "Please let me know if the information pertaining to you is correct on the list. If it is not, please forward me the correct info.",
+          "note": "Every recipient (about 34 people on the To line) has to open the spreadsheet, check their own entry and reply. Ramirez then merges the replies.",
+          "pattern": "saved-23",
+          "id": "q2"
+        },
+        {
+          "message": "williams-w3/sent_items/313.",
+          "quote": "Please remove me from this list. I am not involved with the management of anyone in this pool.",
+          "note": "The list goes out to people who are not in the pool, so their time and hers is spent on mail that pulling the list from job codes would avoid.",
+          "pattern": "saved-23",
+          "id": "q3"
+        }
+      ],
+      "rate": {
+        "per_month": 1,
+        "source": "stated",
+        "counted": {
+          "times": 1,
+          "messages": 1,
+          "months": 1,
+          "mailboxes": [
+            "williams-w3"
+          ],
+          "span": [
+            "2001-08",
+            "2001-08"
+          ],
+          "per_month": 0.0
+        },
+        "stated": {
+          "per_month": 1,
+          "count": 1,
+          "per": "month",
+          "quote": {
+            "message": "williams-w3/sent_items/313.",
+            "quote": "On a monthly basis I will be verifying",
+            "note": "says how often the work is done",
+            "pattern": "saved-23",
+            "id": "q4"
+          },
+          "words": "On a monthly basis I will be verifying"
+        }
+      },
+      "hours_per_month": 1.17,
+      "dollars_per_month": 99.45,
+      "running_total": 6209.25,
+      "draft": false
+    },
+    {
+      "id": "opp-14",
+      "process": "proc-008",
+      "name": "Weekly Transwestern California Capacity Report",
+      "summary": "Every Friday Michelle Lokay (Transwestern marketing) writes a fixed-format email to the same seven commercial staff (Harris, Watson, Lindberg, Lohman, Donoho, McConnell, Y'Barbo, cc Audrey Robertson). She looks up Transwestern's average deliveries to California, San Juan lateral throughput and East deliveries, El Paso's deliveries and capacity use at PG&ETop, SoCalEhr and SoCalTop, and Friday's Gas Daily prices with their changes (in some weeks also EnronOnline basis), works out the percentages and types them into the same wording. Only the numbers and the week label change. In January she reused the previous week's email and sent it with the old week label, then had to send a correction.",
+      "rank": 14,
+      "problems": [],
+      "change": "Have the weekly California Capacity Report filled in and emailed automatically, with Lokay only checking it.",
+      "explanation": "Build a simple scheduled report (a spreadsheet or query) that pulls the Transwestern and El Paso delivery and capacity figures and the Friday Gas Daily prices, calculates the percentages and price changes, fills in the standard wording with the correct week label, and drafts the email to the fixed list each Friday. Lokay reviews the figures, adds any comment, and sends it, instead of gathering and typing the numbers herself. The automatic week label also prevents mislabelled reports like the one on 11 Jan 2002.",
+      "ongoing": true,
+      "not_served": [],
+      "reasoning": null,
+      "minutes": 25,
+      "basis": [
+        {
+          "message": "lokay-m/inbox/10.",
+          "quote": "El Paso's average deliveries to California were 1782 MMBtu/d (66%):",
+          "note": "Each report needs figures from two pipelines, three delivery points with capacity and percentage, plus prices and basis, all looked up and calculated by hand.",
+          "pattern": "saved-08",
+          "id": "q17"
+        },
+        {
+          "message": "lokay-m/inbox/10.",
+          "quote": "Enron Online bases:",
+          "note": "Some weeks also add EnronOnline basis for two seasons and four spreads, more figures to look up.",
+          "pattern": "saved-08",
+          "id": "q18"
+        },
+        {
+          "message": "lokay-m/sent_items/86.",
+          "quote": "Transwestern's average deliveries to California were 1011 MMBtu/d (93%), with San Juan lateral throughput at 872 MMBtu/d.",
+          "note": "Same wording as in October; only the numbers change, so the text can be generated from a template.",
+          "pattern": "saved-08",
+          "id": "q19"
+        },
+        {
+          "message": "lokay-m/sent_items/46.",
+          "quote": "Subject: FW: California Capacity Report for Week of 12/31-01/04",
+          "note": "She reused the previous week's email to send new figures and left the old week label, so a correction had to go to all recipients; an automatic label removes this.",
+          "pattern": "saved-08",
+          "id": "q20"
+        }
+      ],
+      "rate": {
+        "per_month": 2.5,
+        "source": "counted",
+        "counted": {
+          "times": 16,
+          "messages": 16,
+          "months": 6,
+          "mailboxes": [
+            "lokay-m"
+          ],
+          "span": [
+            "2001-10",
+            "2002-03"
+          ],
+          "per_month": 2.5
+        },
+        "stated": null
+      },
+      "hours_per_month": 1.04,
+      "dollars_per_month": 88.4,
+      "running_total": 6297.65,
+      "draft": false
+    },
+    {
+      "id": "opp-15",
+      "process": "proc-005",
+      "name": "Extending Sitara deals for meter flow outside the deal term",
+      "summary": "Allocation-exception and bridgeback reports show meters where gas flowed but no valid Sitara deal covers the day: the deal expired, the evergreen flag was missing or did not roll, or flow came a day before the start or after the end. A Volume Management analyst (Fred Boas, Aimee Lannou, Jackie Young) looks up the last deal and emails the desk lead, Daren Farmer, one meter at a time, asking him to extend the deal or create a new one. While they wait, the gas sits on Strangers Gas or the meter stays on the exception screen. After the trader extends the deal, settlements (for example Sherlyn Schumack) creates an accounting arrangement so the volume can be reallocated. The same meters come back month after month, and some threads involve four or five people over several days.",
+      "rank": 15,
+      "problems": [],
+      "change": "A daily exception list matches meter flow against deal terms and sends the trader a prefilled extension to approve, so analysts no longer email about each meter.",
+      "explanation": "Build a daily report that compares measured meter flow with Sitara deal dates. For each day with flow but no deal, it lists the meter, the days, the volume, the last deal, its counterparty and its contract. It goes to the responsible trader with the extension already drafted, for one-click approval or rejection. Items needing judgment, such as wellhead deals or inactive counterparties, are marked for review rather than extended automatically. At deal entry, Sitara also checks the evergreen flag against the contract term so deals roll when they should. Because the deal is fixed before allocation, the Strangers Gas step and most after-the-fact accounting arrangements are no longer needed. Volume Management works from the same list instead of writing emails.",
+      "ongoing": true,
+      "not_served": [],
+      "reasoning": null,
+      "minutes": 25,
+      "basis": [
+        {
+          "message": "farmer-d/logistics/749.",
+          "quote": "To fix this I will set up an accounting arrangement but what I need from you is a valid deal number and the transportation contract that you want me to put the deal on.",
+          "note": "Each exception takes three steps: Volume Management investigates, the trader supplies the deal, and an accounting arrangement is built. A deal fixed before allocation removes the last two steps and the emails between them.",
+          "pattern": "saved-05",
+          "id": "q25"
+        },
+        {
+          "message": "farmer-d/logistics/750.",
+          "quote": "An accounting arrangement is always created every month.",
+          "note": "The same meter needs a manual arrangement every month, so this is repeated work, not a one-off fix.",
+          "pattern": "saved-05",
+          "id": "q26"
+        },
+        {
+          "message": "farmer-d/logistics/1981.",
+          "quote": "Deal 422516 (Purchase from Dynegy) needs to be extended for these 2 days so I can do an accounting arrangement.",
+          "note": "Fixing 53 MMBtu over two days took emails among settlements, Volume Management, the East desk and the trader from 12/15 to 12/19. Saving 25 minutes per incident across everyone involved is conservative.",
+          "pattern": "saved-05",
+          "id": "q27"
+        },
+        {
+          "message": "farmer-d/logistics/1021.",
+          "quote": "I hate to be a pest but here's the deal on the above two meters:",
+          "note": "Requests need chasers, which adds time for both the analyst and the trader.",
+          "pattern": "saved-05",
+          "id": "q28"
+        },
+        {
+          "message": "farmer-d/logistics/2095.",
+          "quote": "Deal with inactive or suspended counterparty may not be extended.",
+          "note": "Some cases cannot simply be extended, so the list routes them to the trader instead of extending them automatically.",
+          "pattern": "saved-05",
+          "id": "q29"
+        }
+      ],
+      "rate": {
+        "per_month": 1.64,
+        "source": "counted",
+        "counted": {
+          "times": 24,
+          "messages": 24,
+          "months": 14,
+          "mailboxes": [
+            "farmer-d"
+          ],
+          "span": [
+            "2000-02",
+            "2001-03"
+          ],
+          "per_month": 1.64
+        },
+        "stated": null
+      },
+      "hours_per_month": 0.68,
+      "dollars_per_month": 57.8,
+      "running_total": 6355.45,
+      "draft": false
+    },
+    {
+      "id": "opp-16",
+      "process": "proc-009",
+      "name": "Hand-forwarding daily market reports to the Portland floor",
+      "summary": "Every business day, assistant Jill Chatterton forwards the Economic Insight Energy Market Report email to 12 Portland traders, typing each name. Bill Williams's inbox holds seven of these forwards for consecutive business days, 28 January to 5 February 2002. Another assistant, Theresa Villeggiante, downloads that day's Gas Daily and Power Daily PDFs and emails them to a hand-kept list of 25 to 32 people. When Gas Daily is not posted yet she sends a 'not loaded' note and keeps checking back. Changes to her list go by email: when Bill Williams asked her to add the real-time group, she was new and had to ask him for the names.",
+      "rank": 16,
+      "problems": [],
+      "change": "Send the daily Energy Market Report and the Gas Daily / Power Daily PDFs to one maintained Portland mailing list automatically, so assistants stop forwarding them by hand.",
+      "explanation": "IT creates one mailing list, for example 'Portland Market Reports', and the floor's assistant keeps it current as people join or leave. The Energy Market Report already arrives by email from Economic Insight (emr@econ.com). Either Economic Insight adds the list as a recipient, or a mail rule passes the report on to the list when it arrives. A scheduled job, or the publisher's own email delivery, picks up the Gas Daily and Power Daily PDFs once they are posted and sends them to the same list. After the change, traders get the reports as soon as they come out. Neither assistant forwards anything or checks back for late files. Adding a person takes one change to the list.",
+      "ongoing": true,
+      "not_served": [],
+      "reasoning": null,
+      "minutes": 7,
+      "basis": [
+        {
+          "message": "williams-w3/inbox/86.",
+          "quote": "From: jill.chatterton@enron.com",
+          "note": "An assistant forwards each Energy Market Report by hand to the same 12 traders. The forwarded report says Economic Insight sends it by email, so a list or a mail rule could deliver it instead.",
+          "pattern": "saved-09",
+          "id": "q10"
+        },
+        {
+          "message": "williams-w3/inbox/86.",
+          "quote": "Internet e-mail emr@econ.com",
+          "note": "The report comes from Economic Insight's email address, so it can be delivered to a list automatically.",
+          "pattern": "saved-09",
+          "id": "q11"
+        },
+        {
+          "message": "williams-w3/sent_items/7.",
+          "quote": "Could you add DL-Portland Shift to this distribution. I would like the guys in Real-Time to be able to see this information when they come in.",
+          "note": "The Gas Daily and Power Daily PDFs go out by hand to a list kept by the assistant, and adding people means a request to her.",
+          "pattern": "saved-09",
+          "id": "q12"
+        },
+        {
+          "message": "williams-w3/sent_items/5.",
+          "quote": "is it possible for you to give me a list of names as I am not sure who does what just yet.",
+          "note": "The assistant keeps the list by hand and depends on the manager to name each member, which takes extra messages back and forth.",
+          "pattern": "saved-09",
+          "id": "q13"
+        },
+        {
+          "message": "williams-w3/inbox/50.",
+          "quote": "They do not have Gas daily loaded yet, I will check back periodically",
+          "note": "When the file is late, the assistant sends an extra note to 32 people and keeps checking back for it. An automatic job would send the file once it is posted.",
+          "pattern": "saved-09",
+          "id": "q14"
+        }
+      ],
+      "rate": {
+        "per_month": 4.0,
+        "source": "counted",
+        "counted": {
+          "times": 9,
+          "messages": 9,
+          "months": 2,
+          "mailboxes": [
+            "williams-w3"
+          ],
+          "span": [
+            "2002-01",
+            "2002-02"
+          ],
+          "per_month": 4.0
+        },
+        "stated": null
+      },
+      "hours_per_month": 0.47,
+      "dollars_per_month": 39.95,
+      "running_total": 6395.4,
+      "draft": false
+    },
+    {
+      "id": "opp-17",
+      "process": "proc-018",
+      "name": "HPL meter shut-in notices and producer letters",
+      "summary": "When HPL shuts in producer meters (pipeline work, leaks, wet gas), Gas Control manager Gary Hanks types the meter list into an email and sends it to a hand-picked set of people; some are missed and have to be forwarded on. Contract Administration (Cheryl Dudley, Connie Sutton) then looks up each meter in the Global Contracts database to find the active contracts and producers, and writes a notification letter to each producer by hand. Where the field cannot reach a producer, the deal maker has to be found and asked to call. When the work is rescheduled, the notice is re-forwarded and the letters are chased again.",
+      "rank": 17,
+      "problems": [],
+      "change": "Gas Control enters each shut-in once in a form that looks up the contracts behind each meter, drafts the producer letters and emails a kept distribution list.",
+      "explanation": "Build a simple shut-in notice form for Gas Control: meters, reason, start time and expected return. On submit it (1) looks up the active contracts, counterparties and deal makers behind each meter in Global Contracts/Sitara, (2) fills in a standard producer notification letter for each affected counterparty, for Contract Administration to review and sign, and (3) emails the notice to a kept distribution list plus the deal makers and schedulers on the affected deals. When dates change, Gas Control edits the notice and the same recipients and letters are updated. Contract Administration only reviews and signs; nobody rebuilds lists or looks meters up one by one.",
+      "ongoing": true,
+      "not_served": [],
+      "reasoning": null,
+      "minutes": 50,
+      "basis": [
+        {
+          "message": "farmer-d/logistics/1214.",
+          "quote": "We don't have any active contracts behind this meter. There was a dedicated reserves purchase contract with Phoenix Gas Pipeline Company that terminated 7/31/99.",
+          "note": "Contract Administration looks up each shut-in meter by hand in Global Contracts; the form would do this lookup automatically.",
+          "pattern": "saved-18",
+          "id": "q11"
+        },
+        {
+          "message": "farmer-d/logistics/633.",
+          "quote": "The concerned contracts are: Cody Texas, LP, 012-64365-101, 96018049 and Samson Lone Star, 012-77555-105, 96016761.",
+          "note": "Someone works out the contracts and counterparties behind a meter by hand and emails them on.",
+          "pattern": "saved-18",
+          "id": "q12"
+        },
+        {
+          "message": "farmer-d/logistics/633.",
+          "quote": "Gary suggested that the deal maker contact these producers verbally, and then Connie Sutton will follow up with written notice.",
+          "note": "Written notices are prepared by Contract Administration for each producer; the deal maker has to be identified by hand.",
+          "pattern": "saved-18",
+          "id": "q13"
+        },
+        {
+          "message": "farmer-d/logistics/632.",
+          "quote": "Think he forgot you on this list!!",
+          "note": "The distribution list is put together by hand each time and people are missed, so notices get re-forwarded.",
+          "pattern": "saved-18",
+          "id": "q14"
+        },
+        {
+          "message": "farmer-d/logistics/1375.",
+          "quote": "Please make sure letters are sent out this week for the Baytown 12\" pigging project.",
+          "note": "Producer letters are a separate manual step that Gas Control has to chase.",
+          "pattern": "saved-18",
+          "id": "q15"
+        },
+        {
+          "message": "farmer-d/logistics/1331.",
+          "quote": "The Baytown 12\" pigging project scheduled for August 15 has been cancelled. The work has been rescheduled and is expected to begin September 12.",
+          "note": "A reschedule means re-sending the notice and redoing the letters with the new dates.",
+          "pattern": "saved-18",
+          "id": "q16"
+        }
+      ],
+      "rate": {
+        "per_month": 0.53,
+        "source": "counted",
+        "counted": {
+          "times": 10,
+          "messages": 10,
+          "months": 17,
+          "mailboxes": [
+            "farmer-d"
+          ],
+          "span": [
+            "1999-12",
+            "2001-04"
+          ],
+          "per_month": 0.53
+        },
+        "stated": null
+      },
+      "hours_per_month": 0.44,
+      "dollars_per_month": 37.4,
+      "running_total": 6432.8,
+      "draft": false
+    },
+    {
+      "id": "opp-18",
+      "process": "proc-017",
+      "name": "Month-end poll of Risk for new book codes before NYMEX invoicing",
+      "summary": "Each month before NYMEX invoices are run, Settlements (Beatrice Reyna in Rebecca Ford's group) emails or calls Reporting and the head of each Risk desk to ask whether any book codes are new or have just started holding financial third-party deals. Desk heads pass the question on to whoever knows, and the contact list goes stale when people leave. The poll was set up because Settlements found four such books on its own in August 2000 that nobody had told them about.",
+      "rank": 18,
+      "problems": [],
+      "change": "Replace the monthly phone and email poll with an automatic month-end report of new books and books that newly hold financial third-party deals.",
+      "explanation": "Risk/IT schedules a month-end query against the deal system (TAGG/ERMS) that lists (a) book codes created during the month and (b) books whose first financial third-party deal falls in the month, and emails it to Settlements a few days before NYMEX invoicing. Settlements reads one report instead of polling Reporting and four desk heads. The report does not depend on a list of contacts, so staff turnover no longer breaks it, and books that newly hold financial deals are listed even when nobody remembers to say so. New books already produce a set-up email to a 'books list', but that does not cover existing books that start holding financial deals, which is what Settlements missed.",
+      "ongoing": true,
+      "not_served": [],
+      "reasoning": null,
+      "minutes": 25,
+      "basis": [
+        {
+          "message": "giron-d/sent/556.",
+          "quote": "From now on, I am going to have Beatrice Reyna from my group call someone from Reporting (Frank) and key people in Risk before we run our NYMEX invoices at the end of the month.",
+          "note": "The poll involves a Settlements caller plus Reporting and several Risk contacts every month.",
+          "pattern": "saved-17",
+          "id": "q2"
+        },
+        {
+          "message": "giron-d/sent/556.",
+          "quote": "Kyle Etter, East Kam Keiser, Central Jeff Gossett, West David Baumbach, Texas",
+          "note": "Four desk heads are polled, each of whom has to check and answer.",
+          "pattern": "saved-17",
+          "id": "q3"
+        },
+        {
+          "message": "giron-d/sent/556.",
+          "quote": "You can start asking me about the West desk. We don't have any new books for this month.",
+          "note": "The question was forwarded by the desk head to two people before someone answered; the contact list had gone stale.",
+          "pattern": "saved-17",
+          "id": "q4"
+        },
+        {
+          "message": "giron-d/sent/556.",
+          "quote": "I don't know, however, if we are calling the right people because we were not told about the 4 books that we discovered on our own.",
+          "note": "Polling people misses books; a report from the deal system would not depend on who is asked.",
+          "pattern": "saved-17",
+          "id": "q5"
+        }
+      ],
+      "rate": {
+        "per_month": 1,
+        "source": "stated",
+        "counted": {
+          "times": 1,
+          "messages": 1,
+          "months": 1,
+          "mailboxes": [
+            "giron-d"
+          ],
+          "span": [
+            "2000-10",
+            "2000-10"
+          ],
+          "per_month": 0.0
+        },
+        "stated": {
+          "per_month": 1,
+          "count": 1,
+          "per": "month",
+          "quote": {
+            "message": "giron-d/sent/556.",
+            "quote": "before we run our NYMEX invoices at the end of the month",
+            "note": "says how often the work is done",
+            "pattern": "saved-17",
+            "id": "q6"
+          },
+          "words": "before we run our NYMEX invoices at the end of the month"
+        }
+      },
+      "hours_per_month": 0.42,
+      "dollars_per_month": 35.7,
+      "running_total": 6468.5,
+      "draft": false
+    },
+    {
+      "id": "opp-19",
+      "process": "proc-015",
+      "name": "Monthly support for gas liquidation values",
+      "summary": "After each month's liquidation flash, Jim Little emails the gas desk leads (Phillip Love, Darron Giron) asking for the deals behind each region's liquidation value, sometimes broken down by position type (price, basis, Gas Daily swaps, capacity hedges). Darron forwards the request to his analyst, Patrick Ryder, who pulls the deal detail and either saves it to the ERMS/1Intra/FRED Liquidations folder or emails it to Jim. Requests come months after the fact (November values asked for in late February, December values in late March), and Jim has to ask again for months that were never saved.",
+      "rank": 19,
+      "problems": [],
+      "change": "Have the risk system save each region's liquidating deals and values to the FRED Liquidations folder at month-end, so Jim no longer has to request the support from the desks.",
+      "explanation": "At month-end close, a scheduled report lists, for each gas region and book, the deals that liquidated and their values, grouped by the position types Jim already uses (price, basis, index, Gas Daily, capacity hedges and so on). It saves the report to ERMS/1Intra/FRED Liquidations/year/month. Jim checks the totals against the flash from the folder and asks the desk only about values that do not tie. Transport liquidations cannot be supported out of ERMS today, so they would still be explained by hand, as the desks already do. Desk leads and analysts no longer pull and send the detail each month, and Jim no longer chases missing months.",
+      "ongoing": true,
+      "not_served": [],
+      "reasoning": null,
+      "minutes": 40,
+      "basis": [
+        {
+          "message": "giron-d/sent/187.",
+          "quote": "Get this to Jim.",
+          "note": "The desk lead passes the request to an analyst, who does the pull. That is two people besides Jim for each request.",
+          "pattern": "saved-15",
+          "id": "q3"
+        },
+        {
+          "message": "giron-d/sent/187.",
+          "quote": "I WILL ALSO NEED SUPPORT FOR THE DECEMBER AND JANUARY VALUES FOR ALL OF YOUR REGIONS IF YOU HAVEN'T ALREADY SAVE THEM OUT TO THE ABOVE DIRECTORY.",
+          "note": "Support is owed for every month and region, and months that were not saved have to be chased. A report saved automatically at close removes the chasing.",
+          "pattern": "saved-15",
+          "id": "q4"
+        },
+        {
+          "message": "giron-d/sent/187.",
+          "quote": "You may save the support to ERMS/1Intra/FRED Liquidations/\"year\"/\"month\"",
+          "note": "There is already a fixed place for the support, so a scheduled report can write there.",
+          "pattern": "saved-15",
+          "id": "q5"
+        },
+        {
+          "message": "giron-d/sent/105.",
+          "quote": "Please get this info to Jim. Thanks.",
+          "note": "The same forward-to-analyst chain a month later, this time for Denver's December values.",
+          "pattern": "saved-15",
+          "id": "q6"
+        },
+        {
+          "message": "giron-d/sent/345.",
+          "quote": "We are still unable to provide support out of ERMS for the liquidations relating to transport.",
+          "note": "Transport liquidations cannot come from ERMS, so they would still need a manual explanation. The savings count only the deal pull for the other position types.",
+          "pattern": "saved-15",
+          "id": "q7"
+        }
+      ],
+      "rate": {
+        "per_month": 0.5,
+        "source": "counted",
+        "counted": {
+          "times": 2,
+          "messages": 2,
+          "months": 2,
+          "mailboxes": [
+            "giron-d"
+          ],
+          "span": [
+            "2001-02",
+            "2001-03"
+          ],
+          "per_month": 0.5
+        },
+        "stated": null
+      },
+      "hours_per_month": 0.33,
+      "dollars_per_month": 28.05,
+      "running_total": 6496.55,
+      "draft": false
+    },
+    {
+      "id": "opp-20",
+      "process": "proc-006",
+      "name": "Forwarding the daily Credit Report to a book admin",
+      "summary": "Each business day Credit (Veronica Espinoza or Russell Diamond) emails a Credit Report, a list of TAGG deals to rebook to another legal entity or held pending a credit officer, to about 30 people. Book admin Carole Frank is not on that list. West desk lead Darron Giron gets it and forwards each day's report to her by hand, with no added comment. His sent mail holds 71 such forwards, covering the reports from 24 January to 9 May 2001, and some went out days late in batches.",
+      "rank": 20,
+      "problems": [],
+      "change": "Credit adds Carole Frank (and any other book admin who needs it) to the Credit Report mailing list, so the desk lead no longer forwards it each day.",
+      "explanation": "Credit adds the book admin's address to the distribution list it already uses for the daily Credit Report. Carole Frank then gets the report at the same time as everyone else, and Darron Giron stops forwarding it. Nothing is built. The only cost is a one-time change to the mailing list.",
+      "ongoing": true,
+      "not_served": [],
+      "reasoning": null,
+      "minutes": 1,
+      "basis": [
+        {
+          "message": "giron-d/sent/10.",
+          "quote": "From: Veronica Espinoza/ENRON@enronXgate on 05/09/2001 09:48 AM",
+          "note": "The 9 May report goes to a long Credit distribution list that includes Darron Giron but not Carole Frank, so she still depends on his forward months after the forwards began.",
+          "pattern": "saved-06",
+          "id": "q72"
+        },
+        {
+          "message": "giron-d/sent/1.",
+          "quote": "Frank Ermis Carole Frank",
+          "note": "Darron's own list of book admins shows Carole Frank is the book admin for trader Frank Ermis, so she is the person who needs the report.",
+          "pattern": "saved-06",
+          "id": "q73"
+        },
+        {
+          "message": "giron-d/sent/259.",
+          "quote": "Forwarded by Darron C Giron/HOU/ECT on 02/02/2001",
+          "note": "The 1/24/01 report reached her nine days late, forwarded in the same batch as other January reports. Each forward is a separate manual step for the desk lead.",
+          "pattern": "saved-06",
+          "id": "q74"
+        }
+      ],
+      "rate": {
+        "per_month": 17.5,
+        "source": "counted",
+        "counted": {
+          "times": 71,
+          "messages": 71,
+          "months": 4,
+          "mailboxes": [
+            "giron-d"
+          ],
+          "span": [
+            "2001-02",
+            "2001-05"
+          ],
+          "per_month": 17.5
+        },
+        "stated": null
+      },
+      "hours_per_month": 0.29,
+      "dollars_per_month": 24.65,
+      "running_total": 6521.2,
+      "draft": false
+    },
+    {
+      "id": "opp-21",
+      "process": "proc-020",
+      "name": "Real Time desk's hand-figured congestion revenue emails to Volume Management",
+      "summary": "When the Portland Real Time desk is paid by the California grid operator (CAISO) for relieving transmission congestion, Bill Williams, the Real Time lead, works out the megawatts, hours, price and dollars from the inc sheet (the desk's schedule sheet) and emails them to Volume Management so the revenue gets into the daily California flash and settlement. In July and August 2001 several of these went to a 10-person list; others went to Jim Reyes and Darren Cavanaugh alone. When the revenue is missing from the flash, or when CAISO awarded wheels that never made it onto the inc sheet, he writes again to chase it.",
+      "rank": 21,
+      "problems": [],
+      "change": "Replace the trader's hand-figured congestion emails with a daily automatic check of CAISO-awarded congestion wheels in CAPS finals against the California flash.",
+      "explanation": "Volume Management already settles congestion from CAPS finals and the inc sheet, and by November says it no longer misses it. A daily comparison would list every congestion wheel CAISO awarded in the CAPS finals, with its MW and price, next to what is in the flash, and show any mismatch on an exception list for Volume Management. This also catches the cases where awarded wheels were missing from the inc sheet or the flash. Bill stops working out MW times price and writing heads-up emails, and recipients stop reading them; Volume Management checks the exception list instead. The desk's own exposure file stays as it is.",
+      "ongoing": true,
+      "not_served": [],
+      "reasoning": null,
+      "minutes": 8,
+      "basis": [
+        {
+          "message": "williams-w3/sent_items/416.",
+          "quote": "Total volume was 96 mws at $248, revenue should be $23808.",
+          "note": "Bill lists the hours and volumes and multiplies them out by hand, then sends the result to ten people.",
+          "pattern": "saved-20",
+          "id": "q12"
+        },
+        {
+          "message": "williams-w3/sent_items/302.",
+          "quote": "We are missing the congestion revenue from HE 7 on Saturday morning (10 mws at $99.00) in the flash we received yesterday.",
+          "note": "When revenue does not reach the flash, the trader has to notice and chase it; an automatic CAPS-to-flash comparison would flag this.",
+          "pattern": "saved-20",
+          "id": "q13"
+        },
+        {
+          "message": "williams-w3/sent_items/194.",
+          "quote": "We had two wheels that were not in the inc sheet but were awarded by the CAISO and are in finals in CAPS.",
+          "note": "The awarded wheels are already in CAPS finals, so the check can be built from data the company already has.",
+          "pattern": "saved-20",
+          "id": "q14"
+        },
+        {
+          "message": "williams-w3/sent_items/90.",
+          "quote": "We haven't missed it for a long time, but thanks for the heads up.",
+          "note": "Volume Management says the heads-up email is no longer needed for routine settlement.",
+          "pattern": "saved-20",
+          "id": "q15"
+        },
+        {
+          "message": "williams-w3/sent_items/90.",
+          "quote": "I got a hard copy of your inc sheet, and the above is what I calced for yesterday.",
+          "note": "On the settlement side too, the revenue is worked out by hand hour by hour.",
+          "pattern": "saved-20",
+          "id": "q16"
+        }
+      ],
+      "rate": {
+        "per_month": 2.0,
+        "source": "counted",
+        "counted": {
+          "times": 11,
+          "messages": 11,
+          "months": 5,
+          "mailboxes": [
+            "williams-w3"
+          ],
+          "span": [
+            "2001-07",
+            "2001-11"
+          ],
+          "per_month": 2.0
+        },
+        "stated": null
+      },
+      "hours_per_month": 0.27,
+      "dollars_per_month": 22.95,
+      "running_total": 6544.15,
+      "draft": false
+    },
+    {
+      "id": "opp-22",
+      "process": "proc-013",
+      "name": "Pay-period time reports for the Transwestern commercial group",
+      "summary": "Each pay period Audrey Robertson, the Transwestern admin, emails the seven-person commercial group (Donoho, Lindberg, Lohman, Lokay, McConnell, Watson, Y'barbo) that time reports are due. Each person emails back a line saying what vacation, sick or holiday time they took, or that they were in all period. She reads each reply and records it, sometimes after a short back-and-forth to settle or correct an entry.",
+      "rank": 22,
+      "problems": [],
+      "change": "Employees enter only their absences themselves in the existing self-service HR system, which also sends the deadline reminder; the admin reviews one exceptions list instead of collecting emails.",
+      "explanation": "Everyone is set to a full scheduled period by default. Employees enter vacation, sick and half-days themselves when they happen, in the company's self-service HR system (eHRonline already exists and shares logins with SAP HR) or a simple shared form. The system sends the deadline reminder. Each period the admin opens one exceptions list, checks it and approves it. Nobody with no absences has to do anything. The reminder email, the seven reply emails and her keying in of each reply all go away. Employees entering their own absence replaces their reply email, so their time is not counted as saved.",
+      "ongoing": true,
+      "not_served": [],
+      "reasoning": null,
+      "minutes": 12,
+      "basis": [
+        {
+          "message": "lokay-m/sent_items/11.",
+          "quote": "To: Donoho, Lindy; Lindberg, Lorraine; Lohman, TK; Lokay, Michelle; Mark McConnell (E-mail); Watson, Kimberly; Y'barbo, Paul",
+          "note": "The reminder goes to seven people, so the admin has seven replies to read and record each period.",
+          "pattern": "saved-13",
+          "id": "q7"
+        },
+        {
+          "message": "lokay-m/sent_items/11.",
+          "quote": "I took 1/2 day vacation Friday, December 7.",
+          "note": "A typical reply: one line naming one absence. Reading and recording each takes about a minute or two.",
+          "pattern": "saved-13",
+          "id": "q8"
+        },
+        {
+          "message": "lokay-m/sent_items/115.",
+          "quote": "I have been here except last Tuesday..traveling for work!",
+          "note": "Some replies say only that the person was in, which the default full schedule makes unnecessary.",
+          "pattern": "saved-13",
+          "id": "q9"
+        },
+        {
+          "message": "lokay-m/sent_items/13.",
+          "quote": "Let's just see what tomorrow brings (smile).",
+          "note": "End of a four-message exchange over whether a half day of vacation would be taken, all for one entry.",
+          "pattern": "saved-13",
+          "id": "q10"
+        },
+        {
+          "message": "lokay-m/sent_items/99.",
+          "quote": "Michelle, you were here yesterday, okay....",
+          "note": "Another follow-up message to settle one reported entry.",
+          "pattern": "saved-13",
+          "id": "q11"
+        },
+        {
+          "message": "williams-w3/inbox/61.",
+          "quote": "The user id and password in SAP (Apollo Production and HR Production), eHRonline, iBuyit and iPayit are all synchronized.",
+          "note": "A self-service HR system (eHRonline) already exists, so employees could enter their own absences without anything new being built.",
+          "pattern": "saved-13",
+          "id": "q12"
+        }
+      ],
+      "rate": {
+        "per_month": 1.25,
+        "source": "counted",
+        "counted": {
+          "times": 6,
+          "messages": 6,
+          "months": 4,
+          "mailboxes": [
+            "lokay-m"
+          ],
+          "span": [
+            "2001-12",
+            "2002-03"
+          ],
+          "per_month": 1.25
+        },
+        "stated": null
+      },
+      "hours_per_month": 0.25,
+      "dollars_per_month": 21.25,
+      "running_total": 6565.4,
+      "draft": false
+    },
+    {
+      "id": "opp-23",
+      "process": "proc-010",
+      "name": "Forwarding mail sent to the wrong Bill Williams",
+      "summary": "Two employees share a name: Bill Williams in Houston (Technical Assets, Longview project) and his son Bill Williams III in Portland (manager of the short term west hourly trading desk). Their address-book entries differ only by \"III\", so senders often pick the wrong one. The wrong Bill reads the message, works out it is not for him, forwards it to the other Bill and often writes to the sender asking them to fix their address book. Bill III also sends reminders to his own group, because mail sent to the wrong entry never reaches him.",
+      "rank": 23,
+      "problems": [],
+      "change": "Add department and city to both Bill Williams entries in the company address book so senders can tell them apart.",
+      "explanation": "The mail administrator changes the display names of the two entries to show group and city, for example \"Williams, Bill (Technical Assets - Houston)\" and \"Williams III, Bill (West Hourly Trading - Portland)\", and refreshes the global address list. Anyone typing \"Bill Williams\" then sees which one they are choosing. Wrong picks, the forwarding and the correction notes mostly stop, and Bill III gets the trading mail meant for him. This is a one-time change; its cost is not counted.",
+      "ongoing": true,
+      "not_served": [],
+      "reasoning": null,
+      "minutes": 4,
+      "basis": [
+        {
+          "message": "williams-w3/sent_items/450.",
+          "quote": "Try to make sure you get these to me rather than to my Dad. I think he is starting to get annoyed.",
+          "note": "The misroutes happen often enough that the father is tired of forwarding them.",
+          "pattern": "saved-10",
+          "id": "q18"
+        },
+        {
+          "message": "williams-w3/sent_items/471.",
+          "quote": "Bill Williams III needs to appear in the outlook box, otherwise I do not receive the email. I should be copied on the EES sheets, and any cut notes to volume managament, the services desk, or other traders.",
+          "note": "The cause is choosing the wrong address-book entry; trading mail can fail to reach Bill III at all.",
+          "pattern": "saved-10",
+          "id": "q19"
+        },
+        {
+          "message": "williams-w3/sent_items/448.",
+          "quote": "Please make the appropriate change in your contact lists and address book.",
+          "note": "Each misroute also costs the sender time to fix their list.",
+          "pattern": "saved-10",
+          "id": "q20"
+        },
+        {
+          "message": "williams-w3/sent_items/492.",
+          "quote": "My address is Bill Williams III,",
+          "note": "Bill III has to write to senders to correct how they address him.",
+          "pattern": "saved-10",
+          "id": "q21"
+        }
+      ],
+      "rate": {
+        "per_month": 2.67,
+        "source": "counted",
+        "counted": {
+          "times": 17,
+          "messages": 17,
+          "months": 6,
+          "mailboxes": [
+            "williams-w3"
+          ],
+          "span": [
+            "2001-06",
+            "2001-11"
+          ],
+          "per_month": 2.67
+        },
+        "stated": null
+      },
+      "hours_per_month": 0.18,
+      "dollars_per_month": 15.3,
+      "running_total": 6580.7,
+      "draft": false
+    },
+    {
+      "id": "opp-24",
+      "process": "proc-025",
+      "name": "Monthly vacation collection for Texas operations managers",
+      "summary": "Before each month, Yvette Connevey, assistant to Brenda Herod, emails the same 10 to 14 Texas operations managers asking each to send her their vacation for the coming month. Each manager reads the request and replies with dates, and she gathers the replies into one schedule for Brenda.",
+      "rank": 24,
+      "problems": [],
+      "change": "Managers put approved time off on one shared team calendar, so the assistant no longer has to send a monthly request and gather the replies.",
+      "explanation": "Set up one shared team calendar in the existing mail system, or one shared spreadsheet on the network drive. Each manager enters planned vacation once, when it is approved. At the start of each month Yvette and Brenda read the calendar. There is no request email, no replies to collect and no schedule to put together by hand.",
+      "ongoing": true,
+      "not_served": [],
+      "reasoning": null,
+      "minutes": 30,
+      "basis": [
+        {
+          "message": "farmer-d/logistics/1143.",
+          "quote": "Please submit your June Vacation to me ASAP.",
+          "note": "This request went to 14 managers. Each one reads it and replies with dates, and the assistant gathers all 14 replies into one schedule.",
+          "pattern": "saved-25",
+          "id": "q3"
+        },
+        {
+          "message": "farmer-d/logistics/954.",
+          "quote": "Please submit your scheduled April Vacation to me by the end of Monday",
+          "note": "The same request went to 10 of the same managers two months earlier. The group is asked again before each month.",
+          "pattern": "saved-25",
+          "id": "q4"
+        }
+      ],
+      "rate": {
+        "per_month": 0.33,
+        "source": "counted",
+        "counted": {
+          "times": 2,
+          "messages": 2,
+          "months": 3,
+          "mailboxes": [
+            "farmer-d"
+          ],
+          "span": [
+            "2000-03",
+            "2000-05"
+          ],
+          "per_month": 0.33
+        },
+        "stated": null
+      },
+      "hours_per_month": 0.17,
+      "dollars_per_month": 14.45,
+      "running_total": 6595.15,
+      "draft": false
+    },
+    {
+      "id": "opp-25",
+      "process": "proc-026",
+      "name": "Transwestern marketers' Friday bullets round",
+      "summary": "On Friday mornings Kimberly Watson emails the five Transwestern marketers asking for their bullets that morning; each must reply, even just to say there is nothing to report, and she pulls the replies together. Marketers also forward their bullets on to others by hand.",
+      "rank": 25,
+      "problems": [],
+      "change": "Marketers add their bullets to one shared document during the week, instead of answering a Friday request email.",
+      "explanation": "Keep one standing shared document (shared drive or Notes database) with a section per marketer. Marketers add items when something happens; Watson reads the document on Friday morning. There is no request email, no reply saying there is nothing, and people such as Darrell Schoolcraft read the document instead of getting forwards. Marketers' time writing real bullets is unchanged.",
+      "ongoing": true,
+      "not_served": [],
+      "reasoning": null,
+      "minutes": 8,
+      "basis": [
+        {
+          "message": "lokay-m/sent_items/132.",
+          "quote": "No bullets....ongoing with TXU, Burlington, Mojave.",
+          "note": "A reply that exists only because the request demands one even when there is nothing to report; the shared document removes it.",
+          "pattern": "saved-26",
+          "id": "q3"
+        },
+        {
+          "message": "lokay-m/sent_items/132.",
+          "quote": "To: Lindberg, Lorraine; Lohman, TK; Lokay, Michelle; McConnell, Mark; Y'barbo, Paul",
+          "note": "Five marketers must each answer every round, and Watson must collect five replies.",
+          "pattern": "saved-26",
+          "id": "q4"
+        },
+        {
+          "message": "lokay-m/sent_items/160.",
+          "quote": "To: darrell.schoolcraft@enron.com",
+          "note": "The marketer forwards her bullets to a second reader by hand; with a shared document he reads them there.",
+          "pattern": "saved-26",
+          "id": "q5"
+        }
+      ],
+      "rate": {
+        "per_month": 1.0,
+        "source": "counted",
+        "counted": {
+          "times": 2,
+          "messages": 2,
+          "months": 1,
+          "mailboxes": [
+            "lokay-m"
+          ],
+          "span": [
+            "2002-03",
+            "2002-03"
+          ],
+          "per_month": 1.0
+        },
+        "stated": null
+      },
+      "hours_per_month": 0.13,
+      "dollars_per_month": 11.05,
+      "running_total": 6606.2,
+      "draft": false
+    },
+    {
+      "id": "opp-26",
+      "process": "proc-011",
+      "name": "Monthly Sitara price updates to match counterparty invoices",
+      "summary": "On a few deals the monthly price is simply whatever the counterparty invoice or the pipeline statement says (EnerVest Sitara #27239, deal #27253, Peoples/North Shore transport deals #131389/#131405). Each month the settlements analyst gets the invoice, emails Darron Giron asking him to change the price in Sitara, waits for his reply (sometimes sending a reminder), and only then redrafts the invoice. From March 2001 Darron passed these requests on to Kristen Clause, which adds another hand-off.",
+      "rank": 26,
+      "problems": [],
+      "change": "Let settlements enter the invoiced price themselves on a short list of flagged pass-through deals, with the desk reviewing a monthly list afterwards.",
+      "explanation": "Mark the few deals whose monthly price is set by the counterparty invoice or pipeline statement as 'invoice-actualized' in Sitara and give the settlements analysts who own them rights to update the price on those deals only, with the invoice or statement attached. Settlements enters the figure and redrafts right away. Once a month the desk lead gets a list of the changes made and checks them. The emailed request, the wait, the reminders and the 'let me know when done' replies go away. The keying itself moves to settlements and is not counted as saved.",
+      "ongoing": true,
+      "not_served": [],
+      "reasoning": null,
+      "minutes": 9,
+      "basis": [
+        {
+          "message": "giron-d/sent/738.",
+          "quote": "Please notify me when complete so I can redraft Unify.",
+          "note": "Settlements cannot redraft until the desk confirms the change, so each request needs a round trip of emails.",
+          "pattern": "saved-11",
+          "id": "q10"
+        },
+        {
+          "message": "giron-d/sent/313.",
+          "quote": "This is just a friendly reminder.....",
+          "note": "Requests sometimes need a chaser; this one was sent nine days after the request.",
+          "pattern": "saved-11",
+          "id": "q11"
+        },
+        {
+          "message": "giron-d/sent/141.",
+          "quote": "Please send these to Kristen Clause in the future.",
+          "note": "The desk lead passes the work on to a delegate, adding another hand-off without adding any check that the invoice does not already give.",
+          "pattern": "saved-11",
+          "id": "q12"
+        },
+        {
+          "message": "giron-d/sent/301.",
+          "quote": "As usual, could you please change rate on S# 27239 for 12/00 production",
+          "note": "The request is routine: the new price is just the invoiced figure.",
+          "pattern": "saved-11",
+          "id": "q13"
+        }
+      ],
+      "rate": {
+        "per_month": 0.67,
+        "source": "counted",
+        "counted": {
+          "times": 9,
+          "messages": 9,
+          "months": 12,
+          "mailboxes": [
+            "giron-d"
+          ],
+          "span": [
+            "2000-06",
+            "2001-05"
+          ],
+          "per_month": 0.67
+        },
+        "stated": null
+      },
+      "hours_per_month": 0.1,
+      "dollars_per_month": 8.5,
+      "running_total": 6614.7,
+      "draft": false
+    },
+    {
+      "id": "opp-27",
+      "process": "proc-019",
+      "name": "Giron's daily email sign-off on the Enovate DPR",
+      "summary": "Each business day an Enovate analyst (Daniel Falcone, later Chris Abel, then Anita Luong) emails the Enovate DPR (daily profit-and-loss and position report) 'For your approval' to Richard Tomaski, Kevin Radous and Darron Giron. Giron replies by email, either with a bare 'OK' or by stating the net open position he shows, so the analyst can check it against the report. Approvals can fall behind: in February Tomaski asked whether the 13 Feb report had gone out, and Giron then approved the 13th and 14th together.",
+      "rank": 27,
+      "problems": [],
+      "change": "Show Giron's own open-position figure on the DPR automatically and treat his silence by a set cutoff as sign-off, so he replies only when something is wrong.",
+      "explanation": "The DPR preparation pulls the Enovate net open position from the books Giron keeps and shows any difference on the report. Giron still reviews the report, but replies only if the positions do not match or he disagrees with the P&L. If he has not objected by an agreed cutoff, that counts as his approval. Giron no longer looks up and types his position or sends a daily 'OK', and the analyst no longer has to watch for and record his reply. Tomaski's and Radous's approvals are not counted, because none of their replies are in the archive.",
+      "ongoing": true,
+      "not_served": [],
+      "reasoning": null,
+      "minutes": 3,
+      "basis": [
+        {
+          "message": "giron-d/sent/688.",
+          "quote": "For your approval.",
+          "note": "The analyst sends each day's DPR to Tomaski, Radous and Giron and waits for their approval by email.",
+          "pattern": "saved-19",
+          "id": "q9"
+        },
+        {
+          "message": "giron-d/sent/478.",
+          "quote": "I show a net open position of (15.9) contracts.",
+          "note": "On some days Giron looks up the open position in his own figures and types it back so the analyst can check it. Showing that figure on the report automatically removes this step.",
+          "pattern": "saved-19",
+          "id": "q10"
+        },
+        {
+          "message": "giron-d/sent/476.",
+          "quote": "P&L is OK. Open position is 39.0 contracts.",
+          "note": "The next day he again restates the position along with his approval.",
+          "pattern": "saved-19",
+          "id": "q11"
+        },
+        {
+          "message": "giron-d/sent/161.",
+          "quote": "For your approval",
+          "note": "The same daily request continues under a third analyst in March 2001, and Giron answers 'OK'. On most days the reply carries no information and could be replaced by silence.",
+          "pattern": "saved-19",
+          "id": "q12"
+        },
+        {
+          "message": "giron-d/sent/221.",
+          "quote": "Did you ever send out the DPR for Feb 13th?",
+          "note": "The approval cycle needs following up: Tomaski asks about a missing day, and Giron then approves two days at once.",
+          "pattern": "saved-19",
+          "id": "q13"
+        }
+      ],
+      "rate": {
+        "per_month": 0.88,
+        "source": "counted",
+        "counted": {
+          "times": 8,
+          "messages": 8,
+          "months": 8,
+          "mailboxes": [
+            "giron-d"
+          ],
+          "span": [
+            "2000-08",
+            "2001-03"
+          ],
+          "per_month": 0.88
+        },
+        "stated": null
+      },
+      "hours_per_month": 0.04,
+      "dollars_per_month": 3.4,
+      "running_total": 6618.1,
+      "draft": false
+    }
+  ]
+}

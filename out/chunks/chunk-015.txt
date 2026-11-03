@@ -1,0 +1,4293 @@
+===== MESSAGE williams-w3/inbox/35. =====
+Date: 2002-02-05T20:57:10 UTC
+From: jill.chatterton@enron.com
+To: tom.alonso@enron.com, robert.badeer@enron.com, tim.belden@enron.com, sean.crandall@enron.com, m..driscoll@enron.com, mark.fischer@enron.com, chris.mallory@enron.com, matt.motley@enron.com, jeff.richter@enron.com, diana.scholtes@enron.com (+2 more)
+Subject: FW: Energy Market Report - 02/04/02
+
+
+Subject: Energy Market Report - 02/04/02
+
+
+Energy Market Report
+Monday, February 4, 2002
+
+*See attached pdf file.
+__________________________________________________________
+Western Pre-Scheduled Firm Electricity Prices($/MWh)
+February 4, 2002 for February 5, 2002
+
+Peak(Heavy)
+                   Low       Change     High      Change
+NW/N. Rockies     19.00      -0.75     20.25      -0.50
+Mid-Columbia      19.00      -0.75     20.25      -0.50
+COB               21.75      -1.25     22.75      -0.75
+N. California     24.00       0.00     24.75      -2.25
+Midway/Sylmar       NA         NA        NA         NA
+S. California     24.00       0.00     26.00      -1.25
+Mead              23.50      -1.50     25.25      -0.75
+Palo Verde        23.00      -0.75     24.25      -1.25
+Inland SW         23.00      -0.75     26.00      -1.25
+4-Corners         23.25      -0.25     24.00      -2.00
+Central Rockies   19.00      -2.75     23.00      -1.25
+________________________________________________________
+Off-Peak(Light)
+                   Low       Change     High     Change
+NW/N. Rockies     17.25      -1.50     20.00      0.25
+Mid-Columbia      17.25      -1.50     20.00      0.25
+COB               18.00      -2.00     19.50     -1.75
+N. California     19.75      -1.75     21.00     -2.75
+Midway/Sylmar       NA         NA        NA         NA
+S. California     18.50      -1.75     21.25     -2.75
+Mead              18.00      -3.00     20.00     -3.00
+Palo Verde        15.00      -2.00     17.50     -2.50
+Inland SW         15.00      -2.00     20.00     -3.00
+4-Corners         16.00      -2.00     18.50     -2.50
+Central Rockies   14.50      -1.25     17.25     -1.00
+________________________________________________________
+Ken's Not Coming
+
+Peak power prices for Tuesday delivery were slightly lower across the
+Western U.S. on Monday, unquestionably the result of less weather-related
+demand.  "Temperatures are forecast to be normal to slightly above-normal
+through the week in most regions, so we're feeling pretty bearish right
+ now," commented one marketer.  A late-session rally for off peak power was
+reported at the Mid-Columbia, but most players believed that one or two
+parties must have been caught a little bit short given the mild weather and
+abundant supplies.  Heating demand in the WSCC was only expected to average
+94 percent of normal through February 11, and the latest six-to-ten-day
+forecast was calling for mostly normal temperatures from February 10 through
+14.  In other industry news, former Enron CEO Ken Lay told Congress on
+Sunday that he would refuse to testify before two committees preparing to
+hear his testimony.  As a result, the Senate Commerce Committee cancelled
+Monday's hearing at which Mr. Lay was to have been the sole witness.  The
+Senate Commerce Committee said it would meet Tuesday morning to subpoena Mr.
+Lay.  Senator Byron Dorgan, the North Dakota Democrat who heads the
+committee's consumer affairs subcommittee, said, "We decided that we really
+had no choice but to issue a subpoena to require his attendance."  Mr.
+Dorgan said he had been assured by some Republicans on the Commerce
+Committee that they would vote in favor of a subpoena.
+
+Tuesday's heavy load energy costs in the Northwest fell slightly from levels
+seen for Monday as regional temperatures had begun to moderate.  A late-day
+rally occurred in the light load arena when some shorts reportedly entered
+the market.  "There wasn't a whole lot of activity for the off peak when the
+session began, but later on it just shot up," said one Oregon-based utility
+trader.  Heating demand in the region was forecast to pick up over the
+coming weekend, rising to an average of 121 percent of normal next Sunday
+and Monday.  Flow forecasts for Chief Joseph were revised upward on Monday,
+coming in at 110 kcfs through Thursday, 105 kcfs Friday, 75 kcfs Saturday,
+60 kcfs Sunday, and 115 kcfs next Monday.  There were a few goings on in the
+generation landscape Monday.  Bridger #1 (520 MW) was back in service, but
+Bridger #3 and #4 (520 MW each) were brought down so engineers could perform
+some "boiler unplugging."  The Wyoming-based units were both expected to
+return to service sometime on Thursday.
+
+Amid stagnant gas values and slightly below-normal temperatures, power
+prices settled lower in the Golden State on Monday.  "I think prices will
+trend down this week, with the warmer weather," commented one California
+player.  Heavy load goods at NP15 changed hands between 24 and 24.75$/MWh,
+with unconfirmed trades heard as high as 26$/MWh.  Light load pieces were
+bought and sold from 19.75 to 21$/MWh.  NP15 Balance-of-February was heard
+near 23.25$/MWh.  Of hydroelectric interest, the California DWR listed
+snow-water equivalents in the northern section of the state at 111% of
+normal.  Spot gas values at the Socal border remained flat to Friday levels,
+between 2.13 and 2.18/$mmBtu.  In unit news, gas-fired Alamitos #4 (480 MW)
+returned to the grid on Monday, and Pittsburg #7 (682 MW) went down for
+planned maintenance on Saturday.  On the weather front, Tuesday forecasts
+called for highs to reach 70 degrees in L.A. and 58 to 61 degrees at
+mid-state load centers.  Overnight lows were anticipated in the mid-30s to
+mid-40s.  The five-day outlook predicted little change through Friday.  The
+most current six-to-ten predicted normal temperatures from February 10 to
+14.
+
+With Phoenix forecast to see daytime highs in the 70s and overnight lows in
+the 50s through the week, day-ahead electricity prices headed lower in the
+Southwest on Monday.  Peak power at Palo Verde ranged from 23 to 24.25$/MWh
+an average decline of 1$/MWh from levels reported for Monday.  Mead
+commanded a premium to PV, with several players stating that the
+higher-priced electricity was bound for the California market.  In unit
+news, Coronado #1 (395 MW) was operating at 260 megawatts on Monday, but was
+still having trouble ramping all the way to full power.  Meanwhile, Coronado
+#2 (385 MW) was scheduled to come down early Tuesday for some planned
+maintenance slated to last until February 10.  The latest six-to-ten from
+the NWS was calling for above-normal temperatures in eastern New Mexico and
+normal temperatures everywhere else from February 10 through 14.
+
+
+
+
+Patrick O'Neill and Jessie Norris
+_________________________________________________________
+
+Western Generating Unit Outages
+
+Current                            Begins          Ends          Reason
+CAISO units <250/6810 total          NA             NA
+planned/unplanned*
+Alamitos #3/320/gas               26-Jan-02         ?            planned
+Alamitos #5/480/gas               01-Feb-02         ?            planned
+Alamitos #6/480/gas               20-Jan-02         ?            planned
+Bridger #3/520/gas                04-Feb-02     07-Feb-02        repairs*
+Bridger #4/520/gas                04-Feb-02     07-Feb-02        repairs*
+Colstrip #3/700/coal              11-Jan-02     10-Feb-02        repairs
+Corondado #1/395/coal             25-Jan-02     02-Feb-02  @260 MW, tube
+leak*
+Coronado #2/385/coal              05-Feb-02     10-Feb-02
+maintenance*
+Encina #4/303/gas                 12-Jan-02         ?            unplanned
+Etiwanda #4/320/gas               21-Jan-02         ?            planned
+Four Corners #5                   09-Jan-02     14-Mar-02        maintenance
+Grand Coulee #19/600/hydro        10-Dec-01       March          repairs
+Haynes #6/341/gas                 07-Jan-02         ?            planned
+Helms PGP #2/407/hydro            01-Oct-01         ?            planned
+Huntington #2/455/coal            03-Feb-02     05-Feb-02        tube leak*
+Hyatt/Thermalito/933/hydro        02-Oct-01         ?      @665 MW,
+unplanned
+Moss Landing #7/739/gas           29-Dec-01         ?            planned
+Navajo #2/750/coal                02-Feb-02     25-Feb-02        maintenance
+Ormond Beach #1/725/gas           28-Dec-01         ?            planned
+Ormond Beach #2/750/gas           05-Oct-01         ?      @350 MW,
+unplanned
+Pittsburg #6/317/gas              22-Nov-01         ?            planned
+Pittsburg #7/682/gas              02-Feb-02         ?            planned*
+Scattergood #3/445/gas            22-Jan-02         ?            maintenance
+
+Future
+Palo Verde #2/1270/nuclear        16-Mar-02     20-Apr-02        maintenance
+
+For unit owners refer to pdf version.
+*Indicates a change from previous EMR.
+______________________________________________________________________
+
+Eastern Markets Pre-Scheduled Firm Power Prices ($/MWh)
+
+February 4, 2002 for February 5, 2002
+
+Peak (Heavy) in $/MWh
+                 Low     Change   High      Change
+Into Cinergy    20.00     2.00    24.00      3.50
+Western PJM     24.90     0.65    25.30      0.40
+Into Entergy    20.25     1.25    22.00      1.50
+Into TVA        21.00     2.50    24.00      3.50
+ERCOT           18.50    -0.50    19.35     -0.40
+___________________________________________________________
+As the expected colder temperatures materialized across the Eastern
+Interconnect, peak power prices appreciated on Monday.  With the exception
+of Texas, which tanked on low gas values, heavy load goods changed hands
+firmly in the 20s everywhere.  Maintenance outages also contributed to the
+bullish tenor of the day.  NYMEX Henry Hub natural gas futures slipped on
+Monday, with March falling 2.1 cents to close at 2.117$/mmBtu.  April also
+edged down a comparatively mild 1.4 cents to end at 2.184$/mmBtu.
+
+Amid much stronger load forecasts and colder temperatures expected for
+Tuesday, heavy load energy costs rose in the Mid-Atlantic on Monday.
+Western PJM pieces were bought and sold in a narrow range from 24.9 to
+25.3$/MWh.  LMPs bounced up and down three times in the late morning and
+early afternoon on Monday, and averaged 22.38$/MWh through 15:00 EST.  On
+the generation front, sources gave Keystone #2 (850 MW) a revised expected
+off-line date of February 8.  The unit was reportedly slated to undergo 20
+days of maintenance.  High temperatures were expected in the upper-30s on
+Tuesday, and predicted in the low-40s by the end of the workweek.  The most
+current six-to-ten called for above-normal temperatures from February 10 to
+14.
+
+Traders in the Midwest characterized the dailies as a "wild ride" on Monday,
+with heavy load electricity prices strengthening considerably on the
+aggregate.  "Cinergy opened near 20, climbed to 22.5, came off, and leapt up
+all the way to 24$/MWh at the end," said one Cinergy commentator on the day
+after the Super Bowl.  While the dailies changed hands from 20 to 24$/MWh on
+Monday, market players said the bulk of deals were seen around 21.5$/MWh.
+Balance-of-February trades were heard between 20.25 and 20.5$/MWh.  In unit
+news, Quad Cities #2 (789 MW) was off the grid for refueling and pump
+repairs on Monday, with a tentative ETR of March 11.  Sister unit #1 (821
+MW) was in start-up.  Fellow nuke LaSalle (1,144 MW) was also in start-up at
+25% late Monday, and expected at full by mid-week.   Temperatures were
+slightly colder than anticipated by Friday forecasts, with highs across ECAR
+in the mid-30s and lows in the low-20s.  The outlook called for slight
+warming, into the low-40s by Thursday, and the latest six-to-ten called for
+above-normal temperatures from February 10 to 14.
+
+The Southeast saw some strength on Monday as daily power prices responded to
+the colder forecasts.  Into TVA day-ahead peak power prices were heard from
+21 to 24$/MWh, with the low end reached late and the bulk of deals done in
+the 22 to 22.25$/MWh range, according to traders.  Balance contracts into
+TVA were heard trading between 20 and 20.15$/MWh.  Texas electricity prices
+weakened on gas, with transactions heard between 18.5 and 19.35$/MWh.  ERCOT
+balance-of-the-month saw action mostly from 18 to 18.6$/MWh.  Tuesday
+forecasts called for temperatures well below normal across both regions,
+with highs expected in the mid-40s.  SERC lows were forecast to drop into
+the low-20s.  The most up-to-date six-to-ten predicted above-normal
+temperatures from February 10 to 14.
+___________________________________________________________
+
+
+California ISO Congestion Index in $/MWh
+
+                         Path                 Peak   Off-peak
+for 03-Feb-02         NW1 to NP15             0.00     0.00
+                      NW3 to SP15             0.00     0.00
+                      AZ3 to SP15             0.00     0.00
+                      LC1 to SP15             0.00     0.00
+                      SP15 to NP15            0.00     0.00
+
+for 04-Feb-02         NW1 to NP15             0.00     0.00
+                      NW3 to SP15             0.00     0.00
+                      AZ3 to SP15             0.00     0.00
+                      LC1 to SP15             0.00     0.00
+                      SP15 to NP15            0.00     0.00
+
+for 05-Feb-02         NW1 to NP15             0.00     0.00
+                      NW3 to SP15             0.00     0.00
+                      AZ3 to SP15             0.00     0.00
+                      LC1 to SP15             0.00     0.00
+                      SP15 to NP15            0.00     0.00
+
+
+
+OTC Forward Peak Electricity Contracts in $/MWh
+
+                    Mid-C              PV              SP-15
+                Bid      Ask      Bid      Ask      Bid      Ask
+BOM           18.00     19.00     21.50     22.50     23.00     24.00
+March         15.25     16.75     20.75     21.75     21.50     22.50
+April           NA        NA      21.75     22.75       NA        NA
+May           14.75     16.25     23.50     24.50       NA        NA
+Q2 '02        15.00     16.50     23.50     24.50     23.00     24.00
+Q3 '02        28.00     29.50     37.25     38.25     36.75     37.75
+Q4 '02        27.50     29.00     26.75     27.75     28.50     29.50
+Q1 '03        27.25     28.75     27.75     28.75     29.75     30.75
+Cal '03       28.75     30.25     32.50     33.50     34.50     35.50
+
+Represents the most recent bid/ask spread obtainable
+by the Energy Market Report.
+
+
+
+Alberta Power Pool Index (C$/MWh)
+
+                    Peak(14)   Peak(16)   Off-Peak    Flat     Change
+for  01-Feb-02       31.64      30.21      12.40      24.74      3.76
+for  02-Feb-02       20.09      19.11      10.48      16.38     -8.36
+for  03-Feb-02       17.26      16.08       9.65      14.04     -2.34
+
+
+
+BPA's Offer for 02/06/02.
+
+Hours        Amount          NW delivered        COB/NOB delivered
+7-22         200MW           Market Price*          Market Price*
+1-6,23,24    200MW           Market Price*          Market Price*
+
+*Market price will be determined at time of request.
+
+
+
+NYMEX Henry Hub Gas Futures in $/mmBtu
+
+                 Close        Change
+        Mar      2.117        -0.021
+        Apr      2.184        -0.014
+
+
+
+Natural Gas Spot Prices in $/mmBtu
+
+                  Low          High
+Sumas             1.95         2.00
+So. Cal Border    2.13         2.18
+San Juan          2.01         2.06
+__________________________________________________________
+
+Economic Insight, Inc. - 3004 SW First, Portland, Oregon 97201,
+Telephone (503) 222-2425, Internet e-mail emr@econ.com -
+Copyright, Economic Insight, Inc. 2002.
+
+===== MESSAGE williams-w3/inbox/34. =====
+Date: 2002-02-05T20:59:12 UTC
+From: marketopshourahead@caiso.com
+To: mktstathourahead@caiso.com
+Subject: HA market HE's 0700-1100 GMM's and TMM's re-published
+
+HA market HE's 0700-1100 GMM's and TMM's have been re-published.  You may
+now view the GMM's and TMM's for the HA market,  2/5/02, HE's 0700-1100.
+Sent by Market Operations, inquiries please call the Hour Ahead Desk.
+
+===== MESSAGE lokay-m/sent_items/81. =====
+Date: 2002-02-05T21:20:38 UTC
+From: michelle.lokay@enron.com
+To: audrey.robertson@enron.com
+Subject: RE: Toner - Replaced
+
+Thanks!
+
+ -----Original Message-----
+From: 	Robertson, Audrey  
+Sent:	Tuesday, February 05, 2002 3:20 PM
+To:	Lokay, Michelle
+Cc:	Armstrong, Julie
+Subject:	Toner - Replaced
+
+
+Please note, the toner has been replaced in the printer in front of Julie's Desk.
+
+adr
+
+Audrey D. Robertson
+Transwestern Pipeline Company 
+email address:  audrey.robertson@enron.com
+(713) 853-5849
+(713) 646-2551 Fax
+
+===== MESSAGE williams-w3/inbox/32. =====
+Date: 2002-02-05T22:29:09 UTC
+From: crcommunications@caiso.com
+To: 20participants@caiso.com
+Subject: CAISO Notice - MD02 Documents Posted
+
+MARKET NOTICE
+February 5, 2000
+MD02 Documents Posted
+ISO Market Participants:
+The ISO has posted on its web site four documents related to the discussion
+of the Market Design 2002 (MD02) project at Thursday's ISO Governing Board
+meeting:
+*	The Draft Comprehensive Design Proposal;
+*	Market Design 2002 Project Comparison Tables;
+*	A memorandum on the Market Design 2002 Project; and
+*	A memorandum summarizing Stakeholder comments on the MD02 Proposal. 
+You can access these documents at
+http://www.caiso.com/docs/2002/02/01/200202011618138281.html
+<http://www.caiso.com/docs/2002/02/01/200202011618138281.html> . 
+If you have questions or would like additional information, please contact
+Byron Woertz at bwoertz@caiso.com or (916) 608-7066.
+Client Relations Communications.0715
+CRCommunications@caiso.com <mailto:CRCommunications@caiso.com>
+
+===== MESSAGE giron-d/inbox/14. =====
+Date: 2002-02-06T00:40:23 UTC
+From: infrastructure.ubsw@enron.com
+To: canada.dl-ubsw@enron.com, houston.dl-ubsw@enron.com, portland.dl-ubsw@enron.com
+Subject: Quick Tips for the UBSWE migration
+
+
+As of start of business, Wednesday, February 6th, you will have been migrated to the UBSW Energy environment.
+Here are a couple of quick tips and reminders to get you going:
+
+? You will log in with your Enron NT ID, this will not change
+
+?	You will be asked to change your password, follow the standard Enron rules
+
+?	Your desktop will look the same
+
+?	Email will not be affected until Day 1, on which you will have your new UBSWE email address
+
+?	All compliant data and email should be copied to the UBSWE environment no later than Midnight (CST), Thursday, February 7, 2002 (see Data Migration Protocol email for compliancy direction)
+
+?	No data or emails are to be deleted from the system
+
+
+If you have any questions or concerns, please contact the Resolution Center at x 3-1411
+
+===== MESSAGE williams-w3/inbox/28. =====
+Date: 2002-02-06T01:42:58 UTC
+From: enron_update@concureworkplace.com
+To: bwillia5@enron.com
+Subject: <<Concur Expense Document>> - Mier, Michael 2/5/02
+
+The following expense report is ready for approval:
+
+Employee Name: Michael G. Mier
+Status last changed by: Jill C. Chatterton
+Expense Report Name: Mier, Michael  2/5/02
+Report Total: $30.00
+Amount Due Employee: $30.00
+
+
+To approve this expense report, click on the following link for Concur Expense.
+http://expensexms.enron.com
+
+===== MESSAGE williams-w3/inbox/31. =====
+Date: 2002-02-06T02:17:44 UTC
+From: tim.belden@enron.com
+To: 
+Cc: sean.crandall@enron.com, jeff.richter@enron.com, chris.mallory@enron.com, diana.scholtes@enron.com, tim.belden@enron.com, mike.swerzbin@enron.com, amy.fitzpatrick@enron.com
+Subject: Trading Assistant Interviews
+
+Thanks for your interest in the Assistant Trader positions.  We have had sixteen people express interest in this role.  Based on the criteria listed below, you have been selected to be interviewed for this role.
+
+Been in a trading or scheduling position for at least one year.
+Consistently received high performance ratings through the PRC process.
+Has consistently pursued a trading role as a career objective.
+
+We are hoping to hold interviews during the next two days and make our decision by the end of the week.  The interviews will be conducted by members of the trading team.  Please send me an e-mail to let me know when you WON'T be available during the next few days.  You will be going through three separate half hour interviews with Crandall/Scholtes, Richter/Mallory, and Belden/Swerzbin.  Thanks.
+
+Regards,
+Tim
+
+===== MESSAGE williams-w3/sent_items/1. =====
+Date: 2002-02-06T02:24:01 UTC
+From: bill.williams@enron.com
+To: tim.belden@enron.com
+Subject: RE: Trading Assistant Interviews
+
+Tim,
+
+I will be available all week.
+Thank you for the opportunity,
+
+Bill
+
+ -----Original Message-----
+From: 	Belden, Tim  
+Sent:	Tuesday, February 05, 2002 2:18 PM
+Cc:	Crandall, Sean; Richter, Jeff; Mallory, Chris; Scholtes, Diana; Belden, Tim; Swerzbin, Mike; Fitzpatrick, Amy
+Subject:	Trading Assistant Interviews
+
+Thanks for your interest in the Assistant Trader positions.  We have had sixteen people express interest in this role.  Based on the criteria listed below, you have been selected to be interviewed for this role.
+
+Been in a trading or scheduling position for at least one year.
+Consistently received high performance ratings through the PRC process.
+Has consistently pursued a trading role as a career objective.
+
+We are hoping to hold interviews during the next two days and make our decision by the end of the week.  The interviews will be conducted by members of the trading team.  Please send me an e-mail to let me know when you WON'T be available during the next few days.  You will be going through three separate half hour interviews with Crandall/Scholtes, Richter/Mallory, and Belden/Swerzbin.  Thanks.
+
+Regards,
+Tim
+
+===== MESSAGE williams-w3/inbox/30. =====
+Date: 2002-02-06T03:13:50 UTC
+From: amy.fitzpatrick@enron.com
+To: craig.dean@enron.com
+Cc: bill.williams@enron.com
+Subject: Drug Test for UBS
+
+Craig -
+
+Our records indicate that you have not taken your pre-employment drug test for UBS.  Can you please do so ASAP, or if you have already completed, can you please let me know the date that you went so that we can update our records.
+
+Thanks!
+Amy
+
+===== MESSAGE williams-w3/inbox/29. =====
+Date: 2002-02-06T03:14:48 UTC
+From: amy.fitzpatrick@enron.com
+To: geir.solberg@enron.com
+Cc: bill.williams@enron.com
+Subject: Drug Test for UBS
+
+Geir -
+
+Our records indicate that you have not taken your pre-employment drug test for UBS.  Can you please do so ASAP, or if you have already completed, can you please let me know the date that you went so that we can update our records.
+
+Thanks!
+Amy
+
+===== MESSAGE williams-w3/inbox/27. =====
+Date: 2002-02-06T04:00:51 UTC
+From: amy.fitzpatrick@enron.com
+To: john.anderson@enron.com, sean.crandall@enron.com, craig.dean@enron.com, h..foster@enron.com, legal <.hall@enron.com>, tim.heizenrader@enron.com, albert.meyers@enron.com, michael.mier@enron.com, holden.salisbury@enron.com, diana.scholtes@enron.com (+5 more)
+Cc: tim.belden@enron.com, f..calger@enron.com, julie.kearney@enron.com, grace.rodriguez@enron.com
+Subject: UBSW Orientation - Friday, 2/8/02
+
+Gabrielle Hagele, UBS Warburg, will be in Portland on Friday, February 8, 2002 to present information on UBS benefits for those who missed the previous information sessions. 
+ 
+Date: 		Friday, February 8th, 2002
+Location:	Mt Hood
+Time:		10:00 am to 12:00 pm 
+
+Please try to attend this additional session as valuable information will be presented, and you will have the opportunity to get answers to your questions.  
+
+Attached are the forms that you will need to complete and hand in, if you have not done so already.  
+
+Please let me know if you will not be able to attend this session.
+
+Kind regards -
+Amy
+
+===== MESSAGE williams-w3/inbox/140. =====
+Date: 2002-02-06T04:13:32 UTC
+From: announcements.ubsw@enron.com
+To: canada.dl-ubsw@enron.com, portland.dl-ubsw@enron.com
+Subject: Data Migration Protocol
+
+To:		All Enron Employees Transferring to UBS Warburg Energy (or its affiliates)
+
+Under the terms of the various agreements among certain Enron entities and UBS AG, certain Enron data and documents may be provided to UBS.  To ensure compliance with those agreements, Enron's document retention policy, as well as directives of various investigative agencies, the attached protocol regarding the process for migration of any information or data to UBS has been developed.
+
+Please review the protocol carefully.  Then, complete the attached Certification and return it, with attachments, to Linda Guinn at EB 3829a no later than February 11, 2002.
+
+Questions about this matter may be directed to Michelle Cash at (713) 853-6401 or Francisco Pinto-Leite at (713) 345-7942 .
+
+Protocol Document and Data Copy Instructions
+
+ 
+
+Certification Document
+
+ 
+
+Thank you for your assistance in making the transition to UBS a success.
+
+===== MESSAGE williams-w3/inbox/26. =====
+Date: 2002-02-06T04:41:12 UTC
+From: bob.shults@enron.com
+To: traders.dl-netco@enron.com, traders.dl-netco@enron.com
+Cc: david.forster@enron.com, rahil.jafry@enron.com, corp <.carter@enron.com>, michael.guadarrama@enron.com, jennifer.denny@enron.com, louise.kitchen@enron.com
+Subject: Online Trading Simulation Feb 7th
+
+Preparations are continuing for our simulation on Thursday, Feb. 7 from 9-11 am.
+
+During the simulation, you will be able to use your normal, "live" Stack Manager User ID and password, which will be emailed to you separately.
+
+The attached word document below provides a basic review on Accessing the Stack Manager.  You should manage the same products as you normally would, even if those products are not expected to be going live on our initial launch day. If you have products that need to be created, please contact Kevin Meredith (3-9555) or Chris Walker (3-7533) with UBSWenergy.com immediately.
+
+Trading Goals - for all traders participating in the simulation.
+Log into the stack manager on Wednesday afternoon and ensure that your products are ready to be activated on Thursday morning. We will send you a reminder on Wednesday to advise you of the time when the application will be available.
+Start and end with a flat position
+Make markets in your respective products
+Maintain tight spreads in the products you manage
+
+NON-UBS PERSONNEL WILL NOT BE ABLE TO SEE OR TRANSACT ON PRODUCTS DURING THE SIMULATION.
+
+Internal Originators will be playing the roles of customers and will be hitting your stacks throughout the simulation.  You will also be able to trade book to book via the website with your website User ID and password which will also be emailed separately.
+
+Market "News" events may be emailed to you at certain points throughout the simulation (e.g. "storm in the gulf").
+
+Immediately after the simulation, the website will be inactivated, so that the operations group can test the mid/back-office systems, while the IT groups clean-up the transaction data from the simulation. 
+
+The system will be made available again for live, internal trading (book to book) between traders on Friday, February 8, 2002. FRIDAY'S TRADES ARE FOR REAL.
+
+If you can't log into any application on the day or are having trouble with your systems, please contact the UBSWenergy.com Help Desk immediately at 713.584.4444
+
+Regards,
+UBSWenergy.com
+
+===== MESSAGE williams-w3/inbox/25. =====
+Date: 2002-02-06T06:00:58 UTC
+From: bwilliamsjr4@attbi.com
+To: bill.williams@enron.com
+Subject: FW: Shower tile
+
+
+Forwarded FYI. I followed his instruction for applying and it turned out
+very professional.
+
+-----Original Message-----
+From: Ken Sherman [mailto:ken@thisoldgrout.com] 
+Sent: Monday, February 04, 2002 7:53 PM
+To: bwilliamsjr4@attbi.com
+Subject: Re: Shower tile
+
+Hi Bill,
+First let me explain that the sealer that was applied to your grout
+simply
+provides stain resistance.  That's it.  It does nothing to the strength
+of
+the grout and does not in any way prevent cracks in the grout.  The
+cracks
+are probably caused by settling.  If the cracks are in the wall seams
+(where
+the walls meet each other) this joint should be caulked with an
+appropriate
+caulking.  If your shower grout is a non-sanded type, a non sanded
+silicone
+should be used.  If your grout is a sanded type, a sanded siliconized
+acrylic caulking that matches your grout color should be used.
+Resealing
+the shower grout can be done according to the directions of the sealer
+manufacturer.  Some silicone based sealer will last 3 to 6 months in a
+shower environment.  Expensive solvent based sealers may last up to 10
+years.
+If the cracks are between the tiles in the walls and not just in the
+wall
+seams then the grout should be repaired.  Don't caulk these joints or
+any
+joints on or near the floor.  If these areas stay damp, mildew will
+usually
+be a problem without good ventilation.  It would be difficult for me to
+describe how to do the repair without actually seeing it (digital
+camera?)
+so I'll suggest you take a class at The Home Depot on how to grout tile.
+Hope that helps Bill.
+
+Regards,
+Ken Sherman
+President
+This Old Grout, Inc.
+http://www.thisoldgrout.com
+480-736-1132 office
+602-330-6602 mobile
+
+-----Original Message-----
+From: Williams, Bill [mailto:Bill.Williams@enron.com]
+Sent: Monday, February 04, 2002 4:35 PM
+To: info@thisoldgrout.com
+Subject: Shower Tile
+
+
+I have had my shower tiled recently.  The grout was sealed (in place for
+about 4 months now. I have noted a few minor hair line cracks in the
+corners
+of my shower in between a few of the tiles.  My question is how do I 1.)
+repair the cracks, 2.) when should I reseal (how often).
+
+Thanks for your help.  Please respond to bwilliamsjr4@attbi.com
+
+I appreciate your web site.
+
+Sincerely
+
+Bill Williams
+Portland OR
+
+===== MESSAGE lokay-m/sent_items/82. =====
+Date: 2002-02-06T13:34:27 UTC
+From: michelle.lokay@enron.com
+To: jimboman@bigfoot.com
+Subject: FW: interesting
+
+ 
+-----Original Message-----
+From: a friend [mailto:route@monster.com]
+Sent: Tuesday, February 05, 2002 9:14 PM
+To: Lokay, Michelle
+Subject: interesting
+Importance: High
+
+
+Look what I found at jobsearch.monster.com. I thought this might help you with your job searching. 
+
+<http://jobsearch.monster.com/getjob.asp?JobID=13942393&AVSDM=2002%2D02%2D05+14%3A08%3A00%2E000&CCD=my%2Emonster%2Ecom&JSD=jobsearch%2Emonster%2Ecom&HD=company%2Emonster%2Ecom&Logo=1>
+
+Comments:
+I thought you might be interested in this.
+----------------------------------------------------------------------
+
+===== MESSAGE giron-d/inbox/12. =====
+Date: 2002-02-06T14:52:51 UTC
+From: kam.keiser@enron.com
+To: m..love@enron.com, d..winfree@enron.com, scott.palmer@enron.com, c..giron@enron.com
+Cc: errol.mclaughlin@enron.com
+Subject: curve files
+
+There is a new directory for the curve files.  I am trying to request access to this for the traders so they can't see the rest of our files.
+
+This should be done soon.
+
+Can you move your files to this drive today?
+
+===== MESSAGE giron-d/inbox/11. =====
+Date: 2002-02-06T15:14:02 UTC
+From: russ.severson@enron.com
+To: kam.keiser@enron.com, m..love@enron.com, c..giron@enron.com, scott.palmer@enron.com, d..winfree@enron.com
+Subject: Important - GDI 'Y' Curve Manager Issue
+
+
+
+Make sure on the TDS Curve Manager not to hit the    button on the publish sheet.  This button normally
+brings in the latest version of code, however the latest version does not include information for the 'Y' curve.
+This will be fixed after the code freeze that is now in place is released.
+
+Any questions or problems, give me a call.
+
+Russ
+
+
+<Embedded Picture (Metafile)>
+
+===== MESSAGE giron-d/inbox/10. =====
+Date: 2002-02-06T15:40:55 UTC
+From: russ.severson@enron.com
+To: kam.keiser@enron.com, m..love@enron.com, c..giron@enron.com, d..winfree@enron.com, scott.palmer@enron.com
+Subject: New Access to TDS
+
+I am attaching the application that you can use to grant access to the books in your regions.
+I currently granted access to each of you for access to everything.
+This application should be saved to your own drive.  It is also currently under O:/dropbox/TDS
+
+
+ 
+
+Any questions or problems, give me a call.
+
+Russ
+
+===== MESSAGE giron-d/inbox/9. =====
+Date: 2002-02-06T15:55:43 UTC
+From: russ.severson@enron.com
+To: kam.keiser@enron.com, m..love@enron.com, d..winfree@enron.com, c..giron@enron.com, scott.palmer@enron.com
+Subject: Sitara Reports New URL
+
+
+
+ -----Original Message-----
+From: 	Lattupally, Krishna  
+Sent:	Wednesday, February 06, 2002 9:47 AM
+To:	Elledge, Susan; Theriot, Kim S.; Anderson, Bridgette; Campos, Sylvia A.
+Cc:	Krishnaswamy, Jayant; Severson, Russ
+Subject:	RE: Sitara access and Sitara Reports
+
+all,
+Please use new URL for NETCO Sitara Reporting Production system.
+ http://sitrpt.netco.enron.com
+
+Russ -- Can you please let all the NETCO users know the new URL.
+
+Thanks
+Krishna
+
+
+
+
+
+ -----Original Message-----
+From: 	Krishnaswamy, Jayant  
+Sent:	Wednesday, February 06, 2002 8:55 AM
+To:	Lattupally, Krishna
+Subject:	FW: Sitara access and Sitara Reports
+
+What does this mean?
+
+ -----Original Message-----
+From: 	Elledge, Susan  
+Sent:	Wednesday, February 06, 2002 8:55 AM
+To:	Krishnaswamy, Jayant; Theriot, Kim S.
+Cc:	Anderson, Bridgette; Campos, Sylvia A.
+Subject:	RE: Sitara access and Sitara Reports
+
+Jay,
+
+I just checked my Sitara Reports access, and I was able to login and run a report, however there are still only Enron business units there, so nothing came up on the report.  I don't think the systems are synchronized yet.
+
+Let me know if there's some other way to log in to access the UBSW testing contract/deals.
+
+Thanks,
+Susan
+5-9989
+
+===== MESSAGE giron-d/inbox/8. =====
+Date: 2002-02-06T17:03:54 UTC
+From: d..winfree@enron.com
+To: c..giron@enron.com, melissa.videtto@enron.com, bruce.mills@enron.com, brad.jones@enron.com, matthew.olney@enron.com, kori.loibl@enron.com, joey.taylor@enron.com, scott.palmer@enron.com
+Subject: FW:
+
+this is code for RunM... Save, and I'll come by... O 
+
+ -----Original Message-----
+From: 	Winfree, O'Neal D.  
+Sent:	Wednesday, February  6, 2002 10:40 AM
+To:	Cheung, Cecilia
+Cc:	Winfree, O'Neal D.; Keiser, Kam
+Subject:	
+
+/usr/openwin/bin/xterm -ls -sb -display @d -n $host -T $host -r -sl 3000
+
+===== MESSAGE giron-d/inbox/7. =====
+Date: 2002-02-06T17:18:26 UTC
+From: julie.clyatt@enron.com
+To: darren.adamik@enron.com, p..adams@enron.com, habib.ahsan@enron.com, d.alexander@enron.com, diana.allen@enron.com, k..allen@enron.com, jason.althaus@enron.com, susan.amador@enron.com, amanullah.aman@enron.com, sherry.anastas@enron.com (+159 more)
+Subject: YOU HAVE 48 HOURS - Message from Louise Kitchen
+
+
+
+It appears that the following email may not have been clear.  You have to copy all documents yourself.
+
+This is my cheat sheet if it helps:  
+
+H Drives:
+1.  Each person will have to move any data over personally from the old H drive (which is now Z:) drive to their new H drive.  
+2. The Z: drive (old H:) will be removed from UBS employees on Thursday night.
+
+O Drives:
+1. For the old O or M drives go to O:\ESTATE\ O (or M ? pending location of data) and copy to the new common O.  The Estate O and M will be removed from UBS employees on Thursday night.
+
+Do not delete anything and only copy information which is complies with the policy.  Please make sure that those people who are not in the office are contacted and comply.  
+
+
+Louise
+
+  
+
+To:		All Enron Employees Transferring to UBS Warburg Energy (or its affiliates)
+
+Under the terms of the various agreements among certain Enron entities and UBS AG, certain Enron data and documents may be provided to UBS.  To ensure compliance with those agreements, Enron's document retention policy, as well as directives of various investigative agencies, the attached protocol regarding the process for migration of any information or data to UBS has been developed.
+
+Please review the protocol carefully.  Then, complete the attached Certification and return it, with attachments, to Linda Guinn at EB 3829a no later than February 11, 2002.
+
+Questions about this matter may be directed to Michelle Cash at (713) 853-6401 or Francisco Pinto-Leite at (713) 345-7942 .
+
+Protocol Document and Data Copy Instructions
+   
+
+Certification Document
+
+===== MESSAGE williams-w3/inbox/24. =====
+Date: 2002-02-06T18:36:49 UTC
+From: geir.solberg@enron.com
+To: bill.williams@enron.com
+Subject: Migration
+
+Bill,
+
+Everything went smooth last night and this morning with El Paso and the ramps.  Due to the migration I am unable to send the EPE model to Kathy (file for Feb. did not pull into the M: drive).   I was also unable to get into CAPS (Trading cluster is not reconfigured).  I saved the model through my shift and now that I have logged off I am unable to log back on under my name.  I updated Geir's login last night (upon his request) and have limited access through his login.  Holden is aware of these problems.
+
+Craig Dean
+
+===== MESSAGE williams-w3/inbox/22. =====
+Date: 2002-02-06T20:13:38 UTC
+From: jblatchford@caiso.com
+To: tswg@caiso.com
+Subject: CAISO Notification - TSWG Conference call
+
+
+Please call in @ 1330 Pacific Call In Number (877) 670-4111  Passcode
+246870#.
+
+Open Forum
+
+
+Jim Blatchford
+Client Relations
+Cal ISO
+916.608.7051
+
+===== MESSAGE williams-w3/inbox/23. =====
+Date: 2002-02-06T20:22:14 UTC
+From: jill.chatterton@enron.com
+To: tom.alonso@enron.com, robert.badeer@enron.com, tim.belden@enron.com, sean.crandall@enron.com, m..driscoll@enron.com, mark.fischer@enron.com, chris.mallory@enron.com, matt.motley@enron.com, jeff.richter@enron.com, diana.scholtes@enron.com (+2 more)
+Subject: FW: Energy Market Report - 02/05/02
+
+
+Subject: Energy Market Report - 02/05/02
+
+
+Energy Market Report
+Tuesday, February 5, 2002
+
+*See attached pdf file.
+__________________________________________________________
+Western Pre-Scheduled Firm Electricity Prices($/MWh)
+February 5, 2002 for February 6, 2002
+
+Peak(Heavy)
+                   Low       Change     High      Change
+NW/N. Rockies     19.75        0.75     20.75      0.50
+Mid-Columbia      19.75        0.75     20.75      0.50
+COB               22.00        0.25     23.50      0.75
+N. California     24.25        0.25     26.25      1.50
+Midway/Sylmar       NA          NA        NA        NA
+S. California     24.00        0.00     25.50     -0.50
+Mead              24.00        0.50     24.75     -0.50
+Palo Verde        22.50       -0.50     23.50     -0.75
+Inland SW         22.50       -0.50     26.75      0.75
+4-Corners         23.00       -0.25     23.25     -0.75
+Central Rockies   19.00        0.00     22.50     -0.50
+_______________________________________________________
+Off-Peak(Light)
+                   Low       Change     High     Change
+NW/N. Rockies     19.25      2.00       20.25      0.25
+Mid-Columbia      19.25      2.00       20.25      0.25
+COB               20.00      2.00       21.00      1.50
+N. California     20.25      0.50       21.50      0.50
+Midway/Sylmar       NA        NA          NA        NA
+S. California     20.00      1.50       22.95      1.70
+Mead              19.50      1.50       21.00      1.00
+Palo Verde        16.00      1.00       17.25     -0.25
+Inland SW         16.00      1.00       21.00      1.00
+4-Corners         17.00      1.00       19.00      0.50
+Central Rockies   14.00     -0.50       17.00     -0.25
+________________________________________________________
+Take the Money and Run
+
+Peak power prices for Wednesday delivery were mostly steady across the West
+on Tuesday, largely due to a stagnant spot gas market and near-normal
+temperatures.  "Prices were trading in very narrow ranges at most of the
+hubs today, and that made for a lackluster session," complained one
+marketer.  NYMEX Henry Hub contracts for the front months closed lower on
+Tuesday despite cold Northeast temperatures, likely due to more moderate
+forecasts for next week, and on some technical selling.  March slipped 4.3
+cents to close at 2.074$/mmBtu, while April shed 3.2 cents to end at
+2.152$/mmBtu.  Most 2003 and 2004 contracts finished up slightly.  The EIA
+recently said that it expects U.S. natural gas inventories to end the first
+quarter at a record 1.46 tcf.  The low point for U.S. gas stocks at the end
+of the winter heating season has averaged about 920 bcf over the past eight
+years.  Weekly draws of 144 bcf would be needed over the nine remaining
+weeks of withdrawl season to lower inventories to a more normal 1.0 tcf.
+Not a likely scenario since draws for the nine-week period have averaged 63
+bcf over the past five years.  In other industry news, lawyers for Ken Lay
+have refused to accept a subpoena from a congressional committee requiring
+his appearance at public hearings.  Mr. Lay's lawyers said they did not know
+their client's whereabouts and could not accept any subpoenas on his behalf.
+Peggy Peterson, a spokesperson for the House financial services committee
+said, "He [Lay's lawyer] tells us he does not know of Lay's whereabouts,
+which we find quite puzzling to say the least.  Even if Lay is forced to
+appear by a subpoena, many parties believe he would likely plead the Fifth
+and not testify.
+
+Heavy load energy costs in the Northwest were steady to slightly higher than
+levels reported a day ago.  Amid continuing cold overnight temperatures,
+light load goods traded slightly higher, and in a narrower range.  Flow
+forecasts for Chief Joseph were little changed, coming in at 110 kcfs
+Wednesday and Thursday, 105 kcfs Friday, 75 kcfs Saturday, 60 kcfs Sunday,
+115 kcfs Monday, and 110 kcfs next Tuesday.  No news was good news on the
+unit front Tuesday, with no new significant outages reported.  According to
+Weather Derivatives, heating demand in the region was forecast to average
+115 percent of normal through February 12, with the greatest demand expected
+during the latter part of that period.
+
+With little news, close-to-normal temperatures, and steady spot gas prices
+at the SoCal border, day-ahead electricity prices edged up slightly in the
+Golden State on Tuesday.  Heavy load transactions at NP15 went through from
+24.25 up to 26.25$/MWh, with the bulk of deals done in the 24.25 to
+24.75$/MWh range and the high end reached late.  Light load goods maintained
+their recent strength, trading from 20.25 to 21.5$/MWh.  NP15
+balance-of-February saw action around 22.75 to 23.25$/MWh.  "I think some
+traders had the March jitters, light and heavy firmed up some there today,"
+commented one California player.  SP15 off-peak saw the most strength on
+Tuesday, with deals going through as high as 22.95$/MWh for Wednesday
+delivery.  There was little change in the generation landscape on Tuesday.
+Pittsburg #7 (682 MW) returned to service from a maintenance outage that
+began February 2.  Alamitos #3 (320 MW) ramped up to 240 MW, on its way back
+from an outage that began January 26.  Forecasts for Wednesday called for
+highs at southern load centers to reach the mid-60s, down slightly from
+Tuesday's levels, with overnight lows in the upper-40s.  The state capital
+anticipated a high of 58 degrees and a low of 36 degrees.  The most current
+six-to-ten from the NWS predicted normal temperatures from February 11 to
+15.
+
+In the Southwest, peak power prices for Tuesday delivery were flat to
+slightly lower to a day ago as weather conditions in cities such as Phoenix
+were described as "beautiful, sunny, and in the 70s."  Heavy load energy at
+Palo Verde ranged from 22.5 to 23.5$/MWh, with unconfirmed trades heard as
+high as 24$/MW.  Mead commanded a premium to PV, but most of that energy was
+reportedly bound for the Golden State.  In unit news, Coronado #1 (395 MW)
+returned to full power Tuesday, following tube leak repairs that began back
+on January 25.  Meanwhile, Coronado #2 (385 MW) slipped into a planned
+maintenance outage slated to last until February 10.  Weather Derivatives
+forecast heating demand in the desert region to average a mere 85 percent of
+normal through February 10, and the latest six-to-ten from the NWS was
+calling for mostly normal temperatures from February 11 through 15.
+
+
+
+Patrick O'Neill and Jessie Norris
+_________________________________________________________
+
+Western Generating Unit Outages
+
+Current                            Begins          Ends          Reason
+CAISO units <250/6715 total          NA             NA
+planned/unplanned*
+Alamitos #5/480/gas               01-Feb-02         ?            planned
+Alamitos #6/480/gas               20-Jan-02         ?            planned
+Bridger #3/520/gas                04-Feb-02     07-Feb-02        repairs
+Bridger #4/520/gas                04-Feb-02     07-Feb-02        maintenance
+Colstrip #3/700/coal              11-Jan-02     10-Feb-02        repairs
+Coronado #2/385/coal              05-Feb-02     10-Feb-02        maintenance
+Encina #4/303/gas                 12-Jan-02         ?            unplanned
+Etiwanda #4/320/gas               21-Jan-02         ?            planned
+Four Corners #5                   09-Jan-02     14-Mar-02        maintenance
+Grand Coulee #19/600/hydro        10-Dec-01       March          repairs
+Haynes #6/341/gas                 07-Jan-02         ?            planned
+Helms PGP #2/407/hydro            01-Oct-01         ?            planned
+Hyatt/Thermalito/933/hydro        02-Oct-01         ?      @665 MW,
+unplanned
+Moss Landing #7/739/gas           29-Dec-01         ?            planned
+Navajo #2/750/coal                02-Feb-02     25-Feb-02        maintenance
+Ormond Beach #1/725/gas           28-Dec-01         ?            planned
+Ormond Beach #2/750/gas           05-Oct-01         ?      @350 MW,
+unplanned
+Pittsburg #6/317/gas              22-Nov-01         ?            planned
+Scattergood #3/445/gas            22-Jan-02         ?            maintenance
+
+Future
+Palo Verde #2/1270/nuclear        16-Mar-02     20-Apr-02        maintenance
+
+For unit owners refer to pdf version.
+*Indicates a change from previous EMR.
+______________________________________________________________________
+
+Eastern Markets Pre-Scheduled Firm Power Prices ($/MWh)
+
+February 5, 2002 for February 6, 2002
+
+Peak (Heavy) in $/MWh
+                 Low     Change   High      Change
+Into Cinergy    22.75     2.75    26.00      2.00
+Western PJM     24.75    -0.15    25.75      0.45
+Into Entergy    21.00     0.75    23.00      1.00
+Into TVA        23.00     2.00    25.00      1.00
+ERCOT           19.25     0.75    20.25      0.90
+___________________________________________________________
+Amid cold temperature forecasts, particularly in SERC, peak power prices
+rose across the Eastern Interconnect on Tuesday.  "It was good to see some
+strength in the dailies, however short-lived it may be," said one Cinergy
+player.  Firmer prices were seen in Balance-of-February and the March/April
+contracts as well, despite another lackluster day in gas.  NYMEX Henry Hub
+futures edged down again on Tuesday.  March fell 4.3 cents to close at
+2.074$/mmBtu, while April lost 3.2 cents to end at 2.152$/mmBtu.
+
+Amid much higher real-time prices, peak electricity prices edged up just
+slightly in the Mid-Atlantic on Tuesday.  Western PJM goods for Wednesday
+delivery were bought and sold between 24.75 and 25.75$/MWh.  Traders mostly
+expected prices to drop off with warmer forecasts for the end of the week.
+LMPs reached a lofty high of 115$/MWh early Tuesday morning, but averaged
+35.09$/MWh through 15:00 EST.  High temperatures were expected to warm into
+the mid-40s on Wednesday and continue there through Saturday.  The latest
+six-to-ten called for above-normal temperatures from February 11 to 15.
+
+With unit outages and winter weather, heavy load energy costs made robust
+gains in the Midwest on Tuesday, to the delight of sellers.  "People have
+really found their faith today.  Balance-of-Feb was up over a buck and
+March/April surged a bit as well," crowed one trader.  Into Cinergy edged up
+all day, trading between 22.75 and 26$/MWh, while Balance was heard from
+21.1 to 21.35$/MWh and March/April saw action up to 21.25$/MWh.  Power
+sellers were concerned with the higher transmission rates they were seeing
+from the newly operating MidwestISO on Tuesday.  "I'm seeing a base rate of
+4$/MWh, and if you add in ancillary costs of 50 cents and recovery of old
+costs at 2.5$/MWh, transmission is costing nearly 7$/MWh, compared to about
+4$/MWh before.  That's going to hamper movement in and out of Cinergy, and
+increase volatility in the market," predicted one in-the-know seller.  In
+unit news, sources said Beaver Valley #2 (833 MW) has been off-line since
+February 4.  Traders also said Cook #2 could be back as early as February
+16, while the Rockport unit (1,300 MW) was expected to remain down into
+mid-March.  High temperatures were predicted to warm slightly into the
+upper-30s for Wednesday, and the most current six-to-ten continued to
+forecast above-normal temperatures from February 11 to 15.
+
+Bullish weather conditions sent day-ahead electricity prices higher in the
+Southeast and Texas on Tuesday.  "I saw some buyers today that have been out
+of the market for a while," commented one SERC player.  Into TVA on-peak
+pieces traded from 23 to 25$/MWh, with off-peak pieces equally strong from
+16 to 19$/MWh.  Unlike northern hubs, Entergy dealers reported a weaker
+balance-of-the-month market on Tuesday.  Wednesday forecasts called for well
+below-normal temperatures across SERC and Texas, with highs mostly in the
+mid-30s to mid-40s.  The mercury was expected to climb into normal territory
+by Saturday and the up-to-date six-to-ten predicted above-normal
+temperatures from February 11 to 15.
+___________________________________________________________
+
+
+California ISO Congestion Index in $/MWh
+
+                         Path                 Peak   Off-peak
+for 06-Feb-02         NW1 to NP15             0.00     0.00
+                      NW3 to SP15             0.00     0.00
+                      AZ3 to SP15             0.00    14.00
+                      LC1 to SP15             0.00     0.00
+                      SP15 to NP15            0.00     0.00
+
+
+
+OTC Forward Peak Electricity Contracts in $/MWh
+
+                    Mid-C              PV              SP-15
+                Bid      Ask      Bid      Ask      Bid      Ask
+BOM            18.50    19.50    21.50    22.50    23.25    24.25
+March          15.50    17.00    21.00    22.00    22.25    23.25
+April          15.75    17.25    22.00    23.00    22.25    23.25
+May            15.00    16.50    23.50    24.50      NA       NA
+Q2 '02         15.50    17.00    24.00    25.00    23.50    24.50
+Q3 '02         28.50    30.00    37.50    38.50    36.50    37.50
+Q4 '02         27.50    29.00    27.25    28.25    28.50    29.50
+Q1 '03         27.25    28.75      NA       NA     30.50    31.50
+Cal '03        29.00    30.50    33.25    34.25    35.25    36.25
+
+Represents the most recent bid/ask spread obtainable
+by the Energy Market Report.
+
+
+
+Alberta Power Pool Index (C$/MWh)
+
+                    Peak(14)   Peak(16)   Off-Peak    Flat     Change
+for  04-Feb-02       25.04      23.25       9.98      19.25      5.21
+
+
+
+BPA's Offer for 02/07/02.
+
+Hours        Amount          NW delivered        COB/NOB delivered
+7-22         200MW           Market Price*          Market Price*
+1-6,23,24    200MW           Market Price*          Market Price*
+
+*Market price will be determined at time of request.
+
+
+
+NYMEX Henry Hub Gas Futures in $/mmBtu
+
+                 Close        Change
+        Mar      2.074        -0.043
+        Apr      2.152        -0.032
+
+
+
+Natural Gas Spot Prices in $/mmBtu
+
+                  Low          High
+Sumas             1.92         1.97
+So. Cal Border    2.14         2.19
+San Juan          2.03         2.08
+__________________________________________________________
+
+Economic Insight, Inc. - 3004 SW First, Portland, Oregon 97201,
+Telephone (503) 222-2425, Internet e-mail emr@econ.com -
+Copyright, Economic Insight, Inc. 2002.
+
+===== MESSAGE giron-d/inbox/6. =====
+Date: 2002-02-06T20:30:58 UTC
+From: claudia.clark@enron.com
+To: c..giron@enron.com
+Subject: Access to UBSWenergy Production Environment
+
+
+Your PRODUCTION User ID and Password has been set up on UBSWenergy.  Please follow the steps below to access the new environment:
+
+From Internet Explorer connect to the UBSWenergy Production Cluster through the following link:
+http://remoteservices.netco.enron.com/ica/ubswenergy.ica  (use your UBSWenergy/Enron NT Log In & Password)
+
+From the second Start menu,  select appropriate application:
+
+User ID:  dgiron
+Password:   dgiron (Please Change)
+
+
+Should you have any questions or issues, please contact me at x3-9281 or the Call Center at 713-584-4444
+
+
+Thank you,
+
+Claudia Clark
+713-853-9281
+
+===== MESSAGE williams-w3/inbox/14. =====
+Date: 2002-02-06T22:49:57 UTC
+From: stephanie.sever@enron.com
+To: bill.williams@enron.com
+Subject: Access to UBSWenergy Production Environment
+
+IMPORTANT - THE IDS BELOW WILL BE YOUR PERMANENT ACCESS TO PRODUCTION
+
+Your PRODUCTION User ID and Password has been set up on UBSWenergy.  Please follow the steps below to access the new environment:
+
+From Internet Explorer connect to the UBSWenergy Production Cluster through the following link:
+http://remoteservices.netco.enron.com/ica/ubswenergy.ica  (use your UBSWenergy/Enron NT Log In & Password)
+
+From the second Start menu,  select appropriate application:
+
+STACK MANAGER
+User ID: bwillia5
+Password: q#9M#npX	(Please Change)
+
+Below is a special internal use only link for the simulation purposes only to get to the trading area of the website.
+DO NOT PROVIDE THIS LINK TO ANYONE NOT PART OF THE SIMULATION. 
+(customers should be directed to go to the direct link www.ubsenergy.com).
+
+http://www.ubswenergy.com/site_index.html  (FOR SIMULATION ONLY)
+
+WEBSITE - Book (NETCO-ST-WBOM)
+User ID: MUS06698
+Password: WELCOME!
+
+WEBSITE - Book (NETCO-W-HOURLY)
+User ID: MUS20188
+Password: WELCOME!
+
+Should you have any questions or issues, please contact me at x33465 or the Call Center at 713-584-4444
+
+
+Thank you,
+
+Stephanie Sever
+713-853-3465
+
+===== MESSAGE giron-d/inbox/5. =====
+Date: 2002-02-06T20:37:18 UTC
+From: c..kenne@enron.com
+To: brian.gillis@enron.com, c..giron@enron.com
+Cc: kevin.meredith@enron.com
+Subject: Canada products
+
+Darron and Brian	
+
+I pushed a few test deals for Canadian products through and need you to review these deals in Tagg and Sitara to verify that they are booking correctly for valuation purposes.  Please let me know if you see any problems (indexes, books, pricing, etc.)  Don't worry about the deal highlighted in pink..I am working on getting this to bridge.
+
+Please reply by e-mail!!!
+
+Dawn
+
+===== MESSAGE williams-w3/inbox/21. =====
+Date: 2002-02-06T21:07:38 UTC
+From: david.steiner@enron.com
+To: p..o'neil@enron.com, bill.williams@enron.com, tim.belden@enron.com
+Subject: FW: Disabling EST Accounts
+
+This means that ANY ESTATE BUSINESS BEING DONE MY UBS PEOPLE, (Real Time, Sched, Cash etc..) will not be possible after Sunday.
+
+I need to know now who will need an exception to this. ASAP.
+
+Phil
+Diana S
+Sean
+Chris M
+Jeff R
+Cara S
+Donald 
+Diana C
+Bill W III
+
+
+Thanks.
+
+Dave
+
+ -----Original Message-----
+From: 	Dietrich, Dan  
+Sent:	Wednesday, February 06, 2002 8:38 AM
+To:	DL-IT Calgary; DL-Portland IT
+Cc:	Deleon, Roberto; Burgess, Simon; Cheng, John; Smith, Bruce
+Subject:	Disabling EST Accounts
+
+All,
+
+
+Legal has said that all EST accounts will be disabled this Sunday (sometime before Day 1). If any users require their EST account on Monday or beyond, they need to they would need to be cut off except for very critical cases. You likely have some of those cases. 
+
+Here's what is needed required by each user requesting this:
+
+1.	Send an email to Roberto DeLeon requesting an "EST_" account extension
+
+2.	Please copy your local IT Support on the email (i.e. DL-IT Calgary or DL-Portland IT)
+
+3.	In the email please state:
+	Business reason for needing access
+	Length of time needed.
+
+Roberto, please advise if any points have been missed.
+
+
+Thanks,
+
+Dan
+
+===== MESSAGE williams-w3/inbox/20. =====
+Date: 2002-02-06T21:22:31 UTC
+From: p..o'neil@enron.com
+To: david.steiner@enron.com, bill.williams@enron.com, tim.belden@enron.com
+Subject: Re: FW: Disabling EST Accounts
+
+Dave,
+
+We are currently working on options to have the roles each of the resources you have identified performed by the resources in the Estate.  However, I do not feel that the accounts for the resources should be disabled.  There are possible situations where we will need to call on them for coverage and assistance in this transition.  I have not heard from anyone yet as to the expected transition time frame.  We are trying to get all issues resolved as quickly as possible.
+
+Please respond is anyone has a different view.
+
+Thanks - MO
+--------------------------
+Sent from my BlackBerry Wireless Handheld (www.BlackBerry.net)
+
+===== MESSAGE williams-w3/inbox/19. =====
+Date: 2002-02-06T22:04:01 UTC
+From: tim.belden@enron.com
+To: p..o'neil@enron.com, david.steiner@enron.com, bill.williams@enron.com
+Subject: RE: FW: Disabling EST Accounts
+
+It is in the best interest of the Estate to keep these accounts active until the Estate has a solid alternative plan established!
+
+-----Original Message-----
+From: O'Neil, Murray P. 
+Sent: Wednesday, February 06, 2002 9:23 AM
+To: Steiner, David; Williams III, Bill; Belden, Tim
+Subject: Re: FW: Disabling EST Accounts
+
+
+Dave,
+
+We are currently working on options to have the roles each of the resources you have identified performed by the resources in the Estate.  However, I do not feel that the accounts for the resources should be disabled.  There are possible situations where we will need to call on them for coverage and assistance in this transition.  I have not heard from anyone yet as to the expected transition time frame.  We are trying to get all issues resolved as quickly as possible.
+
+Please respond is anyone has a different view.
+
+Thanks - MO
+--------------------------
+Sent from my BlackBerry Wireless Handheld (www.BlackBerry.net)
+
+===== MESSAGE williams-w3/inbox/18. =====
+Date: 2002-02-06T22:05:03 UTC
+From: david.steiner@enron.com
+To: tim.belden@enron.com, p..o'neil@enron.com, bill.williams@enron.com
+Cc: dan.dietrich@enron.com
+Subject: RE: FW: Disabling EST Accounts
+
+Dan,
+	What do we need to do to make sure these accounts stay active past Sunday?
+
+Dave
+
+-----Original Message-----
+From: Belden, Tim 
+Sent: Wednesday, February 06, 2002 10:04 AM
+To: O'Neil, Murray P.; Steiner, David; Williams III, Bill
+Subject: RE: FW: Disabling EST Accounts
+
+
+It is in the best interest of the Estate to keep these accounts active until the Estate has a solid alternative plan established!
+
+-----Original Message-----
+From: O'Neil, Murray P. 
+Sent: Wednesday, February 06, 2002 9:23 AM
+To: Steiner, David; Williams III, Bill; Belden, Tim
+Subject: Re: FW: Disabling EST Accounts
+
+
+Dave,
+
+We are currently working on options to have the roles each of the resources you have identified performed by the resources in the Estate.  However, I do not feel that the accounts for the resources should be disabled.  There are possible situations where we will need to call on them for coverage and assistance in this transition.  I have not heard from anyone yet as to the expected transition time frame.  We are trying to get all issues resolved as quickly as possible.
+
+Please respond is anyone has a different view.
+
+Thanks - MO
+--------------------------
+Sent from my BlackBerry Wireless Handheld (www.BlackBerry.net)
+
+===== MESSAGE williams-w3/inbox/17. =====
+Date: 2002-02-06T22:10:54 UTC
+From: david.steiner@enron.com
+To: david.steiner@enron.com, tim.belden@enron.com, p..o'neil@enron.com, bill.williams@enron.com
+Cc: dan.dietrich@enron.com
+Subject: RE: FW: Disabling EST Accounts
+
+
+
+Dan has layed out a process for this to happen that I will follow.  
+
+I will follow up when it is done.
+
+Dave
+
+-----Original Message-----
+From: Steiner, David 
+Sent: Wednesday, February 06, 2002 10:05 AM
+To: Belden, Tim; O'Neil, Murray P.; Williams III, Bill
+Cc: Dietrich, Dan
+Subject: RE: FW: Disabling EST Accounts
+
+
+Dan,
+	What do we need to do to make sure these accounts stay active past Sunday?
+
+Dave
+
+-----Original Message-----
+From: Belden, Tim 
+Sent: Wednesday, February 06, 2002 10:04 AM
+To: O'Neil, Murray P.; Steiner, David; Williams III, Bill
+Subject: RE: FW: Disabling EST Accounts
+
+
+It is in the best interest of the Estate to keep these accounts active until the Estate has a solid alternative plan established!
+
+-----Original Message-----
+From: O'Neil, Murray P. 
+Sent: Wednesday, February 06, 2002 9:23 AM
+To: Steiner, David; Williams III, Bill; Belden, Tim
+Subject: Re: FW: Disabling EST Accounts
+
+
+Dave,
+
+We are currently working on options to have the roles each of the resources you have identified performed by the resources in the Estate.  However, I do not feel that the accounts for the resources should be disabled.  There are possible situations where we will need to call on them for coverage and assistance in this transition.  I have not heard from anyone yet as to the expected transition time frame.  We are trying to get all issues resolved as quickly as possible.
+
+Please respond is anyone has a different view.
+
+Thanks - MO
+--------------------------
+Sent from my BlackBerry Wireless Handheld (www.BlackBerry.net)
+
+===== MESSAGE giron-d/inbox/3. =====
+Date: 2002-02-06T21:50:50 UTC
+From: carlos.giron@psiusa.com
+To: c..giron@enron.com, m..love@enron.com
+Subject: Fwd: wow...
+
+Enjoy!!
+X-Apparently-To: ronniegiron@yahoo.com via web10108; 26 Jan 2002 13:00:17 -0800 (PST)
+X-Track: 1: 40
+Received: from 63.175.134.130  (EHLO communicator.miamiair.com) (63.175.134.130)  by mta456.mail.yahoo.com with SMTP; 26 Jan 2002 13:00:00 -0800 (PST)
+From: Edward Parson <EParson@miamiair.com>
+To: "Jimmy Tovar (E-mail)" <jtovar@powerfm.hn>
+Cc: "Jimmy Parson (E-mail)" <jparson539@cs.com>, "Luis Aviles (E-mail)"	 <oporto00@hotmail.com>, =?iso-8859-1?Q?Ronnie_Gir=F3n_=28E-mail=29?=	 <ronniegiron@yahoo.com>
+Subject: wow...
+Date: Sat, 26 Jan 2002 15:57:33 -0500
+Content-Length: 485596
+Mime-Version: 1.0
+Content-Type: multipart/mixed; boundary="=_E6BBB676.26472D7F"
+
+
+
+>  -----Original Message-----
+> From: 	Alric Brown
+> Sent:	Saturday, January 26, 2002 3:56 PM
+> To:	Edward Parson
+> Subject:	FW:
+>
+>
+>
+>
+>  <<1-1.jpg>>  <<1-2.jpg>>  <<2-1.jpg>>  <<2-2.jpg>>  <<3-1.jpg>>
+> <<3-2.jpg>>  <<4-1.jpg>>  <<4-2.jpg>>  <<4-3.jpg>>  <<5.jpg>>  <<6-1.jpg>>
+>  <<6-2.jpg>>
+
+ - Part.001 
+ - 1-1.jpg 
+ - 1-2.jpg 
+ - 2-1.jpg 
+ - 2-2.jpg 
+ - 3-1.jpg 
+ - 3-2.jpg 
+ - 4-1.jpg 
+ - 4-2.jpg 
+ - 4-3.jpg 
+ - 5.jpg 
+ - 6-1.jpg 
+ - 6-2.jpg
+
+===== MESSAGE giron-d/inbox/4. =====
+Date: 2002-02-06T21:51:02 UTC
+From: stephanie.hopkins@enron.com
+To: kam.keiser@enron.com, m..love@enron.com, c..giron@enron.com
+Cc: greg.couch@enron.com
+Subject: 
+
+Could you please let me know if there are any procedures that any UBS people are still running that should be run by the estate team?  If there are, please send me a list of them so we can have someone take them over.  
+
+Thanks,
+
+Stephanie  
+
+Stephanie Hopkins
+Enron Net Works
+Risk Management
+(713) 853-5211
+
+===== MESSAGE giron-d/inbox/2. =====
+Date: 2002-02-06T22:08:33 UTC
+From: neil.davies@enron.com
+To: darren.adamik@enron.com, p..adams@enron.com, habib.ahsan@enron.com, d.alexander@enron.com, diana.allen@enron.com, k..allen@enron.com, jason.althaus@enron.com, susan.amador@enron.com, amanullah.aman@enron.com, sherry.anastas@enron.com (+159 more)
+Subject: REMINDER: UBSW Orientation - Thursday. For those that did not attend the Houstonian Sessions
+
+Date: Thursday, February 7th , 2002
+
+Location: ECS 06980
+
+Orientation will be split into two sessions and divided by alpha-order. Sessions will run 10am-12 pm and 2pm- 4 pm.
+
+We encourage all of you to attend your designated session as valuable information will be presented, and you will have the opportunity to get answers to your questions.
+
+You can speed things up tomorrow by filing in the attached forms - alternatively you can complete them there
+
+10am Session   Letters A- K
+
+2pm Session Letters L-Z
+
+
+
+    
+PLEASE RSVP (BY REPLYING TO THIS E-MAIL) - IF YOU HAVEN'T DONE SO ALREADY
+
+===== MESSAGE williams-w3/inbox/16. =====
+Date: 2002-02-06T22:29:45 UTC
+From: john.oh@enron.com
+To: center.dl-portland@enron.com
+Subject: >>>>READ! UBS EMAIL MIGRATION<<<<
+
+This message is only relevant for those going to UBS.
+
+When exporting your EMAIL messages listed in the instructions or via the Outlook Export utility, attachments WILL NOT BE SAVED!
+There will be a better solution to exporting your Email messages and all your attachments emailed later today.
+
+Thank you,
+John Oh
+
+===== MESSAGE williams-w3/inbox/15. =====
+Date: 2002-02-06T22:33:18 UTC
+From: cara.semperger@enron.com
+To: center.dl-portland@enron.com
+Subject: <<GIVE YOUR COMPLIANCE FORMS TO ME BY THE 8TH>>
+
+**For New UBS employees***
+
+I am going to send all of our File Migration compliance forms in one batch, so give them to me when you have signed the Document Migration Certificate. I will be sending this the evening of the 8th.
+
+If you don't know who I am or what this is about, ask Dave Steiner or any of the Admins.
+
+Thanks,
+
+Cara Freeland
+
+===== MESSAGE giron-d/inbox/1. =====
+Date: 2002-02-06T23:14:02 UTC
+From: david.oxley@enron.com
+To: darren.adamik@enron.com, p..adams@enron.com, habib.ahsan@enron.com, d.alexander@enron.com, diana.allen@enron.com, k..allen@enron.com, jason.althaus@enron.com, susan.amador@enron.com, amanullah.aman@enron.com, sherry.anastas@enron.com (+159 more)
+Subject: Access Card Information
+
+
+Dear Colleagues,
+
+We know you have many questions about your new benefits plan, payroll issues and other changes that will occur over the next few weeks. Human Resources and Communications are preparing a thorough Q&A, which we will send to you tomorrow and will regularly update as more information is available. 
+
+Meanwhile, please read the announcement below from Security about how you can obtain a new UBS Warburg access card that will allow you to enter our new office space after Friday.
+
+I am confident that you share my enthusiasm about our new opportunity.  We look forward to working along side each of you in the coming days.
+
+David Oxley
+Head, Human Resources
+____________________________________________________________________
+
+Access Cards
+
+There will be a two-day transition for the new UBS Warburg access cards. Beginning Monday, February 11, access to the 5th and 6th floors of Enron Center South will require these new cards. UBS Warburg access cards can be picked up from 7 a.m. to 7 p.m. at the reception area on the 5th floor of Enron Center South on Thursday, February 7th ; Friday, February 8th ; and Monday, February 11. Enron Security will produce new access cards with existing photographs, then simultaneously issue the new and collect the old cards. Employees without UBS Warburg cards will be allowed into the Enron Center South building on Monday but will have to collect their new cards as soon as possible to gain access to the 5th and 6th floors.
+
+Employees who fail to collect their new cards by 7 p.m. Monday will be required to contact Enron Security's general information number at 713-853-5360 to arrange to pick them up.
+
+There will be security staff available at the pick up point on ECS 5 to help with any problems you might have.
+
+It is suggested employees wear their access cards at all times while on the premise.
+
+Accessible Areas - The new cards will allow UBS-W employees to enter:
+5th & 6th floors and Plaza area of Enron Center South , 
+The Sky Ring 
+Body Shop, Enron Center North Plaza and therefore access the Credit Union and Cafeteria from either building.
+
+Restricted Areas - Employees must submit to Enron Security a Restricted Access Request form (available by calling 713 8535360 ) and signed by Bob McAuliffe (713-853-7468) to enter:
+Enron Center South, 8th and 9th floors
+Enron Center North, 22nd and 34th floor 
+Ardmore Data Center.
+
+Employees staying with the Enron estate while visa and other issues are completed - Employees in this group who are on assignment arrangements to UBS-W will be issued a regular access card - available in the same way as other new UBS-W employees.
+
+Estate employees who are working with UBS-W on transition issues  - If they will be based in UBS-W office space they should talk to their UBS-W counterpart for approval and then UBSW HR for the issue of a UBS-W contractor card (in addition to their regular Enron badge).
+
+===== MESSAGE williams-w3/inbox/13. =====
+Date: 2002-02-07T01:18:12 UTC
+From: debra.davidson@enron.com
+To: bill.williams@enron.com
+Subject: Confirmation of Interview on Friday with Tim Belden
+
+As we discussed, your interview with Tim Belden will be held at 10:30 a.m. in Mt. St. Helens.
+
+===== MESSAGE williams-w3/inbox/12. =====
+Date: 2002-02-07T01:21:52 UTC
+From: lfeusi@caiso.com
+To: 20participants@caiso.com, tswg@caiso.com
+Cc: brenda.lopez@enron.com, caroline.emmert@enron.com, charles.byrom@enron.com, chris.jylkka@enron.com, doe <.sutphin@enron.com>, emily.winkelman@enron.com, graham.bowen@enron.com, hanh.pham@enron.com, james.hansen@enron.com, julia.barett@enron.com (+18 more)
+Subject: Important Market Information regarding the OMAR-Online Market Simulation
+
+Greetings,
+
+Attached please find the OMAR-Online Market Simulation Plan and updated
+automation specifications.  A revision history is included at the beginning
+of each automation specification, including a description of the changes.
+
+The Market Simulation will be conducted from February 11 through 15, 2002.  
+
+The OMAR-Online application enhances features currently provided through the
+MDAS-Online application.
+
+You may contact me at (916) 351-2330 or at lfeusi@caiso.com should you have
+any questions.
+
+ <<OMAR Online Mkt Sim Mkt Part Instructions.doc>>  
+<<OMAROnlineSubmitAutomationSpecificationv1_1.pdf>>  
+<<OMAROnlineStatusAutomationSpecificationv1_2.pdf>>  
+<<OMAROnlineDownloadAutomationSpecificationv1_1.pdf>> 
+
+Thank you,
+
+Leslie Feusi
+Information Services, Field Data Acquisition
+
+===== MESSAGE williams-w3/inbox/10. =====
+Date: 2002-02-07T01:52:12 UTC
+From: lfeusi@caiso.com
+To: 20participants@caiso.com, tswg@caiso.com
+Cc: brenda.lopez@enron.com, caroline.emmert@enron.com, charles.byrom@enron.com, chris.jylkka@enron.com, doe <.sutphin@enron.com>, emily.winkelman@enron.com, graham.bowen@enron.com, hanh.pham@enron.com, james.hansen@enron.com, julia.barett@enron.com (+18 more)
+Subject: RE: Important Market Information regarding the OMAR-Online Market Simulation
+
+Greetings,
+
+There appears to be an issue with the pdf versions of the automation
+specifications.  I have attached the word formats.
+
+ <<OMAROnline_Status_Automation_Specification_v1_2.doc>>  
+<<OMAROnline_Download_Automation_Specification_v1_1.doc>>  
+<<OMAROnline_Submit_Automation_Specification_v1_1.doc>> 
+
+Sorry for any inconvenience.
+
+Leslie Feusi
+Information Services, Field Data Acquisition
+
+
+		-----Original Message-----
+		From:	Feusi, Leslie 
+		Sent:	Wednesday, February 06, 2002 01:22 PM
+		To:	ISO Market Participants; TSWG
+		Cc:	'aada@dynegy.com'; 'abizar.shahpurwala@aesmail.com';
+'adavis@reliant.com'; 'Ami.Black@Williams.com'; 'amwi@dynegy.com';
+'beugedj@sce.com'; Grillo, Barb; Lopez, Brenda; 'BowdenJ@EPEnergy.com';
+Wilson, Betty; Emmert, Caroline; Byrom, Charles; 'CEP6@PGE.COM'; Guss,
+Charles; Jylkka, Chris; 'clark_steinberger@reliantenergy.com'; Lawrence,
+Chris; 'cmonroe@nes1.com'; Epling, Craig; 'd.brett.hunsucker@enron.com';
+'darren.cavanau@enron.com'; 'David.Webb@elpaso.com';
+'debbie.suchoff@dynegy.com'; 'decastro@maderapower.com'; Desarno , Sam;
+'dgarcia@vernon.ca.us'; Thompson, Diryon; Sutphin, Don (DOE);
+'donald.sutphin@calpol.com'; Sheidun, Donna; 'Doug.Behnke@elpaso.com';
+'dprince@duke-energy.com'; 'ehkim@sdge.com'; 'ekiehne@reliantenergy.com';
+'ependergraft@aesc.com'; Erbrick, Bob; Winkelman, Emily; Bowen, Graham;
+'gdehart@anaheim.net'; Nolff, Gary; Pham, Hanh; 'hesfahani@mwdH20.com';
+'hharris@coral-power.com'; Leung, Herman; 'hmoore@anaheim.net';
+'hsuay@sce.com'; Burks, Hubert (Dwayne); 'jacky_wong@mwdH20.com'; Fong,
+Jain; Hansen, James; 'Janel.Myre@Williams.com'; 'jdanielsen@mwdH20.com';
+'Jeff.Davis@Williams.com'; 'jem@cchinckley.com'; Garrett, Janis;
+'jhebert@intergen.com'; Reyes, Jim; 'Jim.Tidrick@Williams.com'; Kuo, Jimmy;
+Barett, Julia; 'JoAnn.VanBuren@elpaso.com'; Sawicky, John;
+'jpetersen@anaheim.net'; Peterson, Jeff; 'jredmond@aesc.com';
+'julie.morris@pacificorp.com'; Ha, Kenny; 'khorgan@edisonmission.com';
+Blair, Kit; 'kkck@dynegy.com'; 'kliang@apx.com'; Genasci, Kathy; Nelson ,
+Kourtney; Wright, Kathleen; 'lames@anaheim.net'; Smith, Laura; Decotiau,
+Lisa; Lau, Larry; 'lriley@reliant.com'; Lynn, Liz; 'malmazan@nes1.com';
+'mapa@wapa.gov'; 'Maria.Acevedo@elpaso.com'; Plasaj, Mark;
+'mazevedo@spi-ind.com'; 'MDHolcom@duke-energy.com'; Lee, Mike;
+'mlwells@duke-energy.com'; 'morrow@foothill.net';
+'norman.harchar@williams.com'; 'orlaski@wapa.gov'; Pang, Thomas; Cornelius,
+Patricia; Davis, Pete; 'phamhk@sce.com'; 'PJJ1@PGE.COM'; Lee, Paul;
+'RALewis@duke-energy.com'; Hager, Rhonda; Holiday, Reggie; Morgan, Rhonda;
+Marchi, Rebecca; Pendharker, Rahul; 'roch@dynegy.com'; Stanton, Robert;
+Godwin, Ruthann; Hale, Rowena; Sanderson, Sean; Gilbert, Scott;
+'sharla.d.ruland@dynegy.com'; Gracia, Sharon; 'slschultz@mindspring.com';
+Sanderson, Steve; 'sshechter@sempratrading.com'; Stephens, Sue;
+'Steve.Henry@Williams.com'; Sturgis, Tamara; Cannon, Tim; 'tchen@apx.com';
+D'Aquila, Anthony; 'Terry.Meyer@Williams.com'; 'tgreen@edisonmission.com';
+Hanna, Tim; Nelson, Tiff; 'tom.Bechard@powerex.com'; Spangler, Tami;
+'tyra.gettleman@aesmail.com'; Nagarur, Vijaya; Thompson, Virginia; Lee,
+Vivian; 'wbohus@mwdH20.com'; 'wducoing@anaheim.net'
+		Subject:	Important Market Information regarding the
+OMAR-Online Market Simulation
+		Importance:	High
+
+		Greetings,
+
+		Attached please find the OMAR-Online Market Simulation Plan
+and updated automation specifications.  A revision history is included at
+the beginning of each automation specification, including a description of
+the changes.
+
+		The Market Simulation will be conducted from February 11
+through 15, 2002.  
+
+		The OMAR-Online application enhances features currently
+provided through the MDAS-Online application.
+
+		You may contact me at (916) 351-2330 or at lfeusi@caiso.com
+should you have any questions.
+
+		 << File: OMAR Online Mkt Sim Mkt Part Instructions.doc >>
+<< File: OMAROnlineSubmitAutomationSpecificationv1_1.pdf >>  << File:
+OMAROnlineStatusAutomationSpecificationv1_2.pdf >>  << File:
+OMAROnlineDownloadAutomationSpecificationv1_1.pdf >> 
+
+		Thank you,
+
+		Leslie Feusi
+		Information Services, Field Data Acquisition
+
+===== MESSAGE williams-w3/inbox/11. =====
+Date: 2002-02-07T01:42:06 UTC
+From: john.oh@enron.com
+To: center.dl-portland@enron.com
+Subject: >>>E-mail backup instructions FOR ALL UBSW<<<
+
+Please read the document at:
+
+http://172.17.172.62/inf/default.html
+
+===== MESSAGE williams-w3/inbox/8. =====
+Date: 2002-02-07T02:30:38 UTC
+From: bill.williams@enron.com
+To: john.anderson@enron.com, craig.dean@enron.com, albert.meyers@enron.com, michael.mier@enron.com, holden.salisbury@enron.com, ryan.slinger@enron.com, geir.solberg@enron.com, bill.williams@enron.com
+Subject: New Paths for New Stuff
+
+Group,
+
+There are two new paths for EPE information.
+
+The first is for EPE schedules:
+This path is P:/Trading/Real Time/El Paso Schedules/Admin/El Paso Schedules/2002/Feb02/EPE_FEB_02
+
+The second is for the EPE models:
+M:/Electric/EPE/EPE 2002/Models/February02/...
+
+The estate will be settling CAPS each day (creating DA and HA finals) beginning on Friday. 
+
+Please work closely with John and Dave to get all problems resolved as quickly as possible.
+
+Thanks,
+Bill
+
+===== MESSAGE williams-w3/inbox/7. =====
+Date: 2002-02-07T02:48:57 UTC
+From: legal <.hall@enron.com>
+To: susan.amador@enron.com, john.anderson@enron.com, victor.bulbes@enron.com, fran.chang@enron.com, jill.chatterton@enron.com, sean.crandall@enron.com, diane.cutsforth@enron.com, jeff.dasovich@enron.com, craig.dean@enron.com, heather.dunton@enron.com (+40 more)
+Subject: Can UBS Tame Enron's Wild Traders?
+
+Wednesday February 6, 1:41 pm Eastern Time 
+BusinessWeek Online
+DAILY BRIEFING -- Can UBS Tame Enron's Wild Traders?
+Daily Briefing: NEWS ANALYSIS 
+By Emily Thornton in New York, David Fairlamb in Zurich, and Stephanie Anderson Forest in Dallas 
+Back in November, Dynegy (NYSE:DYN <http://finance.yahoo.com/q?s=dyn&d=t> - news <http://biz.yahoo.com/n/d/dyn.html>) had what sounded like a great idea: Buy Enron's flagship trading business in natural gas and electricity, and immediately become the dominant force in those markets. Dynegy fled when Enron started to collapse under an avalanche of scandal. Now, Zurich [Switzerland]-based UBS Warburg (NYSE:UBS <http://finance.yahoo.com/q?s=ubs&d=t> - news <http://biz.yahoo.com/n/u/ubs.html>) is making the same bet, albeit for a lot less money. 
+The question now: Will the conservative bank be able to impose Swiss order on the rogue Texas company's traders? On one level, the deal doesn't seem completely farfetched. Enron's gas and electricity trading actually seems to have made money. Other bankers who checked it out estimate the trading operations racked up $3 billion in pretax profits over the past two years [see BW, 2/11/02, ``Enron: How Good an Energy Trader?'']. 
+Still, UBS had good reason to go for a deal that gave it 67% of future pretax profits for a pledge only to pay the salaries of 625 Enron employees. Obviously, the Enron name is mud, and getting people to trade with the company will be difficult enough. But managing Enron's swaggering traders -- its core asset -- could turn out to be even harder. 
+CULTURE CLASH. Enron may be on its last legs, but its masters-of-the-universe culture lives on, say insiders. ``Even after going down in flames, a lot of these people have undiminished confidence in their ability,'' says a former Enron trader who asked not to be named. Competitors doubt that people who earned as much as $1 million a year in the freewheeling, high-risk Enron culture will be grateful to become a small piece of UBS's massive fixed-income business. 
+Although many have signed contracts with UBS that prevent them from leaving Enron for an undisclosed period, ``they're all exploring their options,'' says one banker privately. Indeed, some traders are talking about trying to buy the trading unit back from UBS after it gets going again. UBS says it's not worried about rogue traders. ``We're confident in the people we have hired,'' says Michael Hutchins, global co-head of credit fixed income at UBS Warburg. 
+For the scheme to work, however, UBS must persuade Enron's traders to accept its risk-management practices. And that will be tough: One reason Enron's traders made so much is that they took big risks. Analysts estimate that Enron was willing to put as much as $66 million at risk on a trade, vs. $12.2 million at Dynegy or $16 million at Duke Energy. UBS Warburg is willing to put up to $131 million at risk in all of its deals with a single trading partner, but insiders says its energy traders won't be allowed to risk ``anything like that'' on a single trade. UBS'ers abide by tighter controls than at Enron. 
+``SMOOTHING ELEMENT.'' UBS officials insist that they have no rosy delusions about the investment. That's partly because they had been researching the energy-trading business for more than a year as a way of diversifying the bank's trading income. ``Earnings in the energy-trading business do not depend on developments in the capital markets, so they could work as a smoothing element,'' says UBS President Peter A. Wuffli. 
+That's in fact what motivated UBS to send a small team down to Houston when Enron put the business up for sale after the bankruptcy filing. Even after federal antitrust authorities give the final go-ahead, the Swiss bank says it plans to take things slowly. ``We don't know how quickly this is going to start up,'' says UBS CEO John Costas. ``We'd be happy in the first year if this business is half as big as it had been historically.'' 
+Still, anything associated with Enron is arguably fraught with risk at any price. ``It's not clear how successful UBS is going to be,'' says Jeff Dietert, an analyst at investment bank Simmons & Co. in Houston. ``And I think UBS knows that. That's why it wasn't willing to pay anything up front.'' 
+Some industry insiders doubt that Enron's traders will prove to be exceptional under the new rules. But UBS isn't about to change its own way of doing business. ``Entering into energy trading does not mean extending our appetite for risk,'' says Wuffli. Swiss family Enron? Don't bet the chalet on it. 
+Go to www.businessweek.com <http://rd.yahoo.com/finance/editorial/bizwk/*http://www.businessweek.com> to see all of our latest stories.
+
+===== MESSAGE williams-w3/inbox/5. =====
+Date: 2002-02-07T03:48:26 UTC
+From: crcommunications@caiso.com
+To: 20participants@caiso.com
+Subject: CAISO Notice - Operating Procedure Update - E-508 Electrical Emergency Plan
+
+Market Participants:
+
+Please assure that this Notification is forwarded to your respective
+Operating Departments ---
+
+Notification of Operating Procedure Update
+
+*	The following new or revised ISO Operating Procedures have been
+implemented and are posted for reference on the ISO Website.
+
+ISO Operating Procedure posted:  E-508 Electrical Emergency Plan 
+	(With attachments A & C, NOTE: Attachment B is NOT Posted for
+Security Reasons)
+Version: 3.0
+Effective Date: 2-6-02
+Procedure Purpose: Describes the process utilized by the Shift Manager to
+address an imbalance between available system resources and system Demand
+during periods when an Operating Reserve shortage is imminent or already
+exists, and includes all aspects of the notification process.   
+Changes / Reasons: See attached
+ <<E-508 Procedure Change Description V3.0.doc>> 
+
+*	Please find them at
+http://www1.caiso.com/thegrid/operations/opsdoc/index.html under the
+appropriate Operating Procedure section heading.
+
+Please e-mail any comments or questions to the 'Procedure Control Desk'
+mailbox [mailto:procctrldesk@caiso.com] and we will respond as soon as
+possible.
+
+Thank you!
+
+California ISO Procedure Control Desk
+
+
+
+
+Client Relations Communications.0921
+CRCommunications@caiso.com
+
+===== MESSAGE williams-w3/inbox/4. =====
+Date: 2002-02-07T04:38:02 UTC
+From: serena.bishop@enron.com
+To: bill.williams@enron.com
+Subject: thanks
+
+Bill - thanks for your help with the tagging question - and the tagging resource book - I really appreciate it!
+Serena
+
+===== MESSAGE lokay-m/sent_items/133. =====
+Date: 2002-03-08T16:23:04 UTC
+From: michelle.lokay@enron.com
+To: rjuenke@br-inc.com
+Subject: RE: THANKS
+
+You are definitely welcome.  Are you coming in for systems training next week (or it that Spring Break)?
+
+-----Original Message-----
+From: Juenke Ronnie [mailto:RJuenke@br-inc.com]
+Sent: Friday, March 08, 2002 9:55 AM
+To: Lokay, Michelle
+Subject: THANKS
+
+
+Just wanted to thank you and Teb for taking time out to join us for lunch on Wednesday.  If there is anything I can ever do for you, please
+do not hesitate to give me a call.  Though I can never fill Julie's shoes, I look forward to working with you both in the months to come.
+Have a great weekend.
+
+All the Best....Ronnie
+
+===== MESSAGE williams-w3/inbox/3. =====
+Date: 2002-02-07T05:03:56 UTC
+From: crcommunications@caiso.com
+To: 20participants@caiso.com
+Subject: FW: CAISO NOTICE - CERS January Settlement
+
+> ISO Market Participants:
+> 
+> The attached document contains the CERS January Settlement figures:
+> 
+>  <<Closing 013102 mkt sum final CERS Jan.xls>> 
+> 
+> 
+> Client Relations Communications.0921
+> CRCommunications@caiso.com
+>
+
+===== MESSAGE williams-w3/inbox/2. =====
+Date: 2002-02-07T06:39:10 UTC
+From: f..calger@enron.com
+To: susan.amador@enron.com, john.anderson@enron.com, tim.belden@enron.com, victor.bulbes@enron.com, f..calger@enron.com, fran.chang@enron.com, jill.chatterton@enron.com, sean.crandall@enron.com, diane.cutsforth@enron.com, debra.davidson@enron.com (+39 more)
+Subject: UBSW ENERGY KICK-OFF CELEBRATION
+
+Welcome to UBS Warburg Energy, LLC
+
+All UBS Warburg Energy, LLC employees are invited to join us for breakfast and happy hour on 
+Friday, February 8, 2002.
+
+Breakfast, 8:15 a.m., here on the 3rd floor.
+
+Happy Hour, 3:00 p.m., appetizers and drinks (2),
+Fernando's Hideaway, 824 SW First Avenue (upstairs)
+
+
+We hope you will join us!
+Chris and Tim
+
+===== MESSAGE williams-w3/inbox/1. =====
+Date: 2002-02-07T11:05:04 UTC
+From: marketopshourahead@caiso.com
+To: mktstathourahead@caiso.com
+Subject: Derate of PDCI for 2/6/02 HE23 &24 and 2-7-02 HE01-08
+
+PDCI
+Market Notification: After the Day-Ahead Market closed, PDCI (S-N) TTC has
+been changed from 1407 MW to 1380 MW and PDCI (N-S) TTC has been changed
+from 1816 MW to 1720 MW starting HE23 for operating day 2/6/02. This is due
+to a Celilo Valve Group #3 forced out of service. No ETR. The first
+applicable hour to submit adjusted schedules in the Hour-Ahead Market is HE4
+for operating day 2/7/02. Inquiries please call (916) 351-4409.  Please
+address real-time operational inquiries to the Real-Time scheduling desk at
+(916) 351-2493, or (916) 351-4409.
+
+The system conditions described in this communication are dynamic and
+subject to change.  While the ISO has attempted to reflect the most current,
+accurate information available in preparing this notice, system conditions
+may change suddenly with little or no notice.
+
+===== MESSAGE lokay-m/sent_items/83. =====
+Date: 2002-02-07T16:28:54 UTC
+From: michelle.lokay@enron.com
+To: perry.frazier@enron.com
+Subject: Error message TW Unsubscribed Capacity
+
+error '80004005' 
+Unspecified error 
+/infopostings/tw/asp/et_unsub_capacity_form.asp, line 2 
+
+
+ -----Original Message-----
+From: 	Frazier, Perry  
+Sent:	Thursday, February 07, 2002 9:46 AM
+To:	Lokay, Michelle
+Subject:	FW: TW Unsubscribed Capacity
+
+
+Call me, for a discussion.
+
+PT 3-0667
+
+ -----Original Message-----
+From: 	Huo, Jeff  
+Sent:	Wednesday, February 06, 2002 4:07 PM
+To:	Frazier, Perry
+Cc:	Stacy, Don
+Subject:	TW Unsubscribed Capacity
+
+Please go to http://twdev.ets.enron.com our testing site to view the modified TW Unsubscribed Capacity web page and see if this is what you guys want. I removed the borders because the table header and  records page are in the different frames, it is very hard to adjust them exactly straight into the same columns.
+
+Thanks!
+
+Jeff
+
+===== MESSAGE lokay-m/sent_items/84. =====
+Date: 2002-02-07T16:40:25 UTC
+From: michelle.lokay@enron.com
+To: bert.hernandez@enron.com
+Subject: Western Gas Sales Confirmation
+
+
+Copy of confirmation of gas sales.
+
+===== MESSAGE lokay-m/sent_items/85. =====
+Date: 2002-02-07T19:49:11 UTC
+From: michelle.lokay@enron.com
+To: darrell.schoolcraft@enron.com, ron.matthews@enron.com
+Subject: Burlington and Window Rock
+
+Burlington is scheduling a conference call with TW and EL Paso for next Thursday, 02/14/02, at 3:00.  We will discuss pressure scenarios, pressure ranges, and potential facility modifications...
+
+Please put this on your calendars...I, of course, would like to get together prior to the call!
+
+Michelle Lokay
+Account Director
+Transwestern Commercial Group
+713-345-7932
+
+===== MESSAGE lokay-m/sent_items/86. =====
+Date: 2002-02-08T15:26:16 UTC
+From: michelle.lokay@enron.com
+To: steven.harris@enron.com, kimberly.watson@enron.com, lorraine.lindberg@enron.com, tk.lohman@enron.com, lindy.donoho@enron.com, mark.mcconnell@enron.com, paul.y'barbo@enron.com
+Cc: audrey.robertson@enron.com, michelle.lokay@enron.com
+Subject: California Capacity Report for Week of 02/04-02/08
+
+
+Transwestern's average deliveries to California were 1011 MMBtu/d (93%), with San Juan lateral throughput at 872 MMBtu/d.  Total East deliveries averaged 337 MMBtu/d.  
+
+El Paso's average deliveries to California were 2065 MMBtu/d (71%):
+- PG&ETop, capacity of 1140 MMBtu/d, deliveries of 542 MMBtu/d (48%)
+- SoCalEhr, capacity 1250 MMBtu/d, deliveries of 1035 MMBtu/d (83%)
+- SoCalTop, capacity 540 MMBtu/d, deliveries of 488 MMBtu/d (90%)
+
+Friday's posted Gas Daily prices:
+	SoCal gas, large pkgs	  2.16 (-.02)
+	PG&E, large pkgs	  2.15 (-.03)
+	TW San Juan		  2.01   
+	TW Permian		  2.03 (-.04)
+
+===== MESSAGE lokay-m/sent_items/87. =====
+Date: 2002-02-08T19:41:09 UTC
+From: michelle.lokay@enron.com
+To: jeff.huo@enron.com, perry.frazier@enron.com
+Cc: patty.hermanek@enron.com, toby.kuehl@enron.com, lorraine.lindberg@enron.com
+Subject: RE: TW Unsubscribed Capacity
+
+This looks good from the Commercial side.  I am assuming that when a customer uses the "View Printable Page," that printout header cannot be frozen.  Otherwise, this is what we are looking for as far as viewing this spreadsheet on line.  When the formatting issues are resolved, I recommend we move this to production.  Thanks.
+
+ -----Original Message-----
+From: 	Huo, Jeff  
+Sent:	Friday, February 08, 2002 8:39 AM
+To:	Kuehl, Toby; Frazier, Perry; Lokay, Michelle
+Cc:	Hermanek, Patty
+Subject:	RE: TW Unsubscribed Capacity
+
+I added an extra "Printable Page" button on the page so that the entire page can be printed out.
+Michelle, please let me know if you still have problems to get to the TW Unsubscribed Capacity page. Sorry about the delay.
+
+Thanks.
+
+Jeff
+x39290
+
+ -----Original Message-----
+From: 	Kuehl, Toby  
+Sent:	Thursday, February 07, 2002 10:09 AM
+To:	Frazier, Perry; Huo, Jeff
+Subject:	RE: TW Unsubscribed Capacity
+Importance:	High
+
+I have an issue with this format.  When you print it the header nor disclaimer no longer shows up.  We have run into this issue before, and that is why we have not put it in frames.  We may need to look at another format to cover the on-line users and the customers that print this report.  This has been an on going issue on-line when you scroll down you lose the header.  The printing customers won't think to highly of this format.  My suggestion is lets try look at another format that will cover both sides (printing and viewing).  Jeff /  Perry, we may have to get together and discuss this issue.  
+
+Toby
+
+ -----Original Message-----
+From: 	Frazier, Perry  
+Sent:	Thursday, February 07, 2002 9:56 AM
+To:	Kuehl, Toby
+Subject:	FW: TW Unsubscribed Capacity
+
+
+Call me to discuss.
+
+Perry  3-0667
+
+ -----Original Message-----
+From: 	Huo, Jeff  
+Sent:	Wednesday, February 06, 2002 4:07 PM
+To:	Frazier, Perry
+Cc:	Stacy, Don
+Subject:	TW Unsubscribed Capacity
+
+Please go to http://twdev.ets.enron.com our testing site to view the modified TW Unsubscribed Capacity web page and see if this is what you guys want. I removed the borders because the table header and  records page are in the different frames, it is very hard to adjust them exactly straight into the same columns.
+
+Thanks!
+
+Jeff
+
+===== MESSAGE lokay-m/sent_items/88. =====
+Date: 2002-02-08T21:48:28 UTC
+From: michelle.lokay@enron.com
+To: bhitschel@tesoropetroleum.com
+Subject: Walt Disney World - Reservations & Tickets - Tickets and Passes
+
+  
+ 
+ http://disneyworld.disney.go.com/waltdisneyworld/reservations/tickets/ticketrootindex?id=RITicketRoot#
+
+===== MESSAGE lokay-m/sent_items/89. =====
+Date: 2002-02-11T20:03:37 UTC
+From: michelle.lokay@enron.com
+To: 'mayher@enron.com, susan.mayher@elpaso.com
+Subject: RE: Mojave Imbalance with Transwestern
+
+Great!  Based on your reconciling, I will run additional reports on our side for 09/00 and 11/00.  Please call me, 713-345-7932.
+
+-----Original Message-----
+From: Mayher, Susan [mailto:Susan.Mayher@ElPaso.com]
+Sent: Monday, February 11, 2002 1:05 PM
+To: Lokay, Michelle
+Subject: Mojave Imbalance with Transwestern
+
+
+Hi Michelle - here are the months that there are scheduling discrepencies
+from January 1998 forward and the scheduled volume that I have. I can fax
+you the daily volume for each of these months so we can narrow down the
+research.
+
+01/00  Mojave 842,128 TW 842,127   Difference = 1
+03/00  Mojave 912,977 TW 912,917   Difference = 60
+06/00  Mojave 606,535 TW 606,534   Difference = 1
+09/00  Mojave 1,674,721 TW 1,662,566  Difference = 12,155
+11/00  Mojave 857,540 TW 854,874   Difference = 2,666
+
+12/01  Mojave 616,730 TW 616,524   Difference = 206
+
+Let me know your fax number if you need the daily volumes.
+
+Sue Mayher
+Senior Capacity Analyst
+(719) 520-4649
+fax (719) 520-4810
+susan.mayher@elpaso.com
+
+
+
+******************************************************************
+This email and any files transmitted with it from the ElPaso 
+Corporation are confidential and intended solely for the 
+use of the individual or entity to whom they are addressed. 
+If you have received this email in error please notify the 
+sender.
+******************************************************************
+
+===== MESSAGE lokay-m/sent_items/90. =====
+Date: 2002-02-11T20:21:47 UTC
+From: michelle.lokay@enron.com
+To: michelle.lokay@enron.com
+Subject: RE: Mojave Imbalance with Transwestern
+
+I would like to receive your daily volume statements...my fax is 713-646-4095.  Thanks again.
+
+-----Original Message-----
+From: Lokay, Michelle 
+Sent: Monday, February 11, 2002 2:04 PM
+To: 'Mayher, Susan'
+Subject: RE: Mojave Imbalance with Transwestern
+
+
+Great!  Based on your reconciling, I will run additional reports on our side for 09/00 and 11/00.  Please call me, 713-345-7932.
+
+-----Original Message-----
+From: Mayher, Susan [mailto:Susan.Mayher@ElPaso.com]
+Sent: Monday, February 11, 2002 1:05 PM
+To: Lokay, Michelle
+Subject: Mojave Imbalance with Transwestern
+
+
+Hi Michelle - here are the months that there are scheduling discrepencies
+from January 1998 forward and the scheduled volume that I have. I can fax
+you the daily volume for each of these months so we can narrow down the
+research.
+
+01/00  Mojave 842,128 TW 842,127   Difference = 1
+03/00  Mojave 912,977 TW 912,917   Difference = 60
+06/00  Mojave 606,535 TW 606,534   Difference = 1
+09/00  Mojave 1,674,721 TW 1,662,566  Difference = 12,155
+11/00  Mojave 857,540 TW 854,874   Difference = 2,666
+
+12/01  Mojave 616,730 TW 616,524   Difference = 206
+
+Let me know your fax number if you need the daily volumes.
+
+Sue Mayher
+Senior Capacity Analyst
+(719) 520-4649
+fax (719) 520-4810
+susan.mayher@elpaso.com
+
+
+
+******************************************************************
+This email and any files transmitted with it from the ElPaso 
+Corporation are confidential and intended solely for the 
+use of the individual or entity to whom they are addressed. 
+If you have received this email in error please notify the 
+sender.
+******************************************************************
+
+===== MESSAGE lokay-m/sent_items/91. =====
+Date: 2002-02-11T20:23:18 UTC
+From: michelle.lokay@enron.com
+To: susan.mayher@elpaso.com
+Subject: FW: Mojave Imbalance with Transwestern
+
+
+I would also like to receive your daily volume statements for 09/00 and 11/00...my fax is 713-646-4095.  Thanks again.
+
+-----Original Message-----
+From: Lokay, Michelle 
+Sent: Monday, February 11, 2002 2:04 PM
+To: 'Mayher, Susan'
+Subject: RE: Mojave Imbalance with Transwestern
+
+
+Great!  Based on your reconciling, I will run additional reports on our side for 09/00 and 11/00.  Please call me, 713-345-7932.
+
+-----Original Message-----
+From: Mayher, Susan [mailto:Susan.Mayher@ElPaso.com]
+Sent: Monday, February 11, 2002 1:05 PM
+To: Lokay, Michelle
+Subject: Mojave Imbalance with Transwestern
+
+
+Hi Michelle - here are the months that there are scheduling discrepencies
+from January 1998 forward and the scheduled volume that I have. I can fax
+you the daily volume for each of these months so we can narrow down the
+research.
+
+01/00  Mojave 842,128 TW 842,127   Difference = 1
+03/00  Mojave 912,977 TW 912,917   Difference = 60
+06/00  Mojave 606,535 TW 606,534   Difference = 1
+09/00  Mojave 1,674,721 TW 1,662,566  Difference = 12,155
+11/00  Mojave 857,540 TW 854,874   Difference = 2,666
+
+12/01  Mojave 616,730 TW 616,524   Difference = 206
+
+Let me know your fax number if you need the daily volumes.
+
+Sue Mayher
+Senior Capacity Analyst
+(719) 520-4649
+fax (719) 520-4810
+susan.mayher@elpaso.com
+
+
+
+******************************************************************
+This email and any files transmitted with it from the ElPaso 
+Corporation are confidential and intended solely for the 
+use of the individual or entity to whom they are addressed. 
+If you have received this email in error please notify the 
+sender.
+******************************************************************
+
+===== MESSAGE lokay-m/sent_items/103. =====
+Date: 2002-02-19T21:54:10 UTC
+From: michelle.lokay@enron.com
+To: richard.hanagriff@enron.com
+Subject: FW: Mojave Imbalance with Transwestern
+
+Richard, you had printed Location Quantity Summary Lists for me.  Those are really helping me with the reconciliation.  Can I have one for each of the following months for Mojave #56696 to confirm Scheduled volumes?  Thanks.
+
+
+
+01/00  Mojave 842,128 TW 842,127   Difference = 1
+03/00  Mojave 912,977 TW 912,917   Difference = 60
+06/00  Mojave 606,535 TW 606,534   Difference = 1
+09/00  Mojave 1,674,721 TW 1,662,566  Difference = 12,155
+11/00  Mojave 857,540 TW 854,874   Difference = 2,666
+12/01  Mojave 616,730 TW 616,524   Difference = 206
+
+===== MESSAGE lokay-m/sent_items/123. =====
+Date: 2002-03-04T16:32:00 UTC
+From: michelle.lokay@enron.com
+To: richard.hanagriff@enron.com
+Subject: FW: Mojave Imbalance with Transwestern
+
+
+
+-----Original Message-----
+From: Lokay, Michelle 
+Sent: Monday, March 04, 2002 10:32 AM
+To: 'Mayher, Susan'
+Cc: Hernandez, Bert
+Subject: RE: Mojave Imbalance with Transwestern
+
+
+Here is a summary of the support I have faxed to you concerning the scheduled volume discrepancies:
+
+
+
+01/00  Mojave 842,128 TW 842,127   Difference = 1...waived, due to rounding
+03/00  Mojave 912,977 TW 912,917   Difference = 60...corrected to agree with Mojave's volume
+06/00  Mojave 606,535 TW 606,534   Difference = 1...waived, due to rounding
+09/00  Mojave 1,674,721 TW 1,662,566  Difference = 12,155...occurred 09/28
+11/00  Mojave 857,540 TW 854,874   Difference = 2,666...occurred 11/24
+12/01  Mojave 616,730 TW 616,524   Difference = 206...occurred 12/16
+
+===== MESSAGE lokay-m/inbox/23. =====
+Date: 2002-02-12T15:58:13 UTC
+From: ron.matthews@enron.com
+To: michelle.lokay@enron.com, james.centilli@enron.com
+Cc: ben.asante@enron.com, dennis.alters@enron.com
+Subject: Bakersfield Power Plants Project
+
+Attached is an Excel spreadsheet showing the costs to build a 20-mile 20" pipeline from PG&E to Bakersfield.  Thereis a sheet for the pipeline and one for the measurement.  The left side is Bakersfield and the remainder are benchmarks of recent projects in California.  The cost estimates are + 30%
+
+Ron M.
+
+===== MESSAGE lokay-m/inbox/24. =====
+Date: 2002-02-12T16:47:57 UTC
+From: ron.matthews@enron.com
+To: michelle.lokay@enron.com, darrell.schoolcraft@enron.com
+Subject: Window Rock Project
+
+Attached is the latest cost estimate and pressure ranges.
+
+Ron M.
+
+===== MESSAGE lokay-m/sent_items/92. =====
+Date: 2002-02-14T13:36:18 UTC
+From: michelle.lokay@enron.com
+To: audrey.robertson@enron.com
+Subject: RE: Time Reports Due Thursday
+
+I was out sick yesterday afternoon, 02/13, and will be taking vacation tomorrow, 02/15.  Thanks.
+
+ -----Original Message-----
+From: 	Robertson, Audrey  
+Sent:	Wednesday, February 13, 2002 2:34 PM
+To:	Donoho, Lindy; Lindberg, Lorraine; Lohman, TK; Lokay, Michelle; Mark McConnell (E-mail); Watson, Kimberly; Y'barbo, Paul
+Subject:	Time Reports Due Thursday
+
+
+Don't forget to submit your time reports by Thursday morning.
+
+Thanks in advance,
+
+adr
+
+Audrey D. Robertson
+Transwestern Pipeline Company 
+email address:  audrey.robertson@enron.com
+(713) 853-5849
+(713) 646-2551 Fax
+
+===== MESSAGE lokay-m/sent_items/99. =====
+Date: 2002-02-14T15:02:10 UTC
+From: michelle.lokay@enron.com
+To: audrey.robertson@enron.com
+Subject: RE: Time Reports Due Thursday
+
+Thank you!
+
+ -----Original Message-----
+From: 	Robertson, Audrey  
+Sent:	Thursday, February 14, 2002 9:02 AM
+To:	Lokay, Michelle
+Subject:	RE: Time Reports Due Thursday
+
+Michelle, you were here yesterday, okay....
+
+adr
+
+Audrey D. Robertson
+Transwestern Pipeline Company 
+email address:  audrey.robertson@enron.com
+(713) 853-5849
+(713) 646-2551 Fax
+
+ -----Original Message-----
+From: 	Lokay, Michelle  
+Sent:	Thursday, February 14, 2002 7:36 AM
+To:	Robertson, Audrey
+Subject:	RE: Time Reports Due Thursday
+
+I was out sick yesterday afternoon, 02/13, and will be taking vacation tomorrow, 02/15.  Thanks.
+
+ -----Original Message-----
+From: 	Robertson, Audrey  
+Sent:	Wednesday, February 13, 2002 2:34 PM
+To:	Donoho, Lindy; Lindberg, Lorraine; Lohman, TK; Lokay, Michelle; Mark McConnell (E-mail); Watson, Kimberly; Y'barbo, Paul
+Subject:	Time Reports Due Thursday
+
+
+Don't forget to submit your time reports by Thursday morning.
+
+Thanks in advance,
+
+adr
+
+Audrey D. Robertson
+Transwestern Pipeline Company 
+email address:  audrey.robertson@enron.com
+(713) 853-5849
+(713) 646-2551 Fax
+
+===== MESSAGE lokay-m/sent_items/93. =====
+Date: 2002-02-14T13:41:08 UTC
+From: michelle.lokay@enron.com
+To: a..howard@enron.com
+Subject: RE: Scope: PG&E lateral to Bakersfield, California
+
+Attached is the spreadsheet from Facility Planning showing our costs.  James Centilli is running additional economics.  Will forward those as soon as I receive them.  I can also meet with you to discuss all.  Thanks.
+
+
+-----Original Message-----
+From: Howard, Kevin A. 
+Sent: Wednesday, February 13, 2002 8:29 AM
+To: Lokay, Michelle
+Subject: FW: Scope: PG&E lateral to Bakersfield, California
+
+
+Michelle:
+Are there any summary economics for this yet?
+
+-----Original Message-----
+From: Watson, Kimberly 
+Sent: Tuesday, February 12, 2002 4:42 PM
+To: Howard, Kevin A.
+Subject: FW: Scope: PG&E lateral to Bakersfield, California
+
+
+Kevin,
+
+here is the info on the PG&E project.
+
+Thanks, Kim.
+
+-----Original Message-----
+From: Lokay, Michelle 
+Sent: Friday, February 08, 2002 9:13 AM
+To: Watson, Kimberly
+Subject: Scope: PG&E lateral to Bakersfield, California
+
+===== MESSAGE lokay-m/sent_items/94. =====
+Date: 2002-02-14T14:24:13 UTC
+From: michelle.lokay@enron.com
+To: 'hitschel@enron.com, bhitschel@tesoropetroleum.com, jimboman@bigfoot.com
+Subject: SprintEnron
+
+  
+ 
+ C:\Documents and Settings\mlokay\Local Settings\Temporary Internet Files\OLK118\SprintEnron.jpg
+
+===== MESSAGE lokay-m/sent_items/95. =====
+Date: 2002-02-14T14:27:16 UTC
+From: michelle.lokay@enron.com
+To: kimberly.carter@enron.com
+Subject: RE: TW Deal Profitability
+
+Sorry, I was out of the office yesterday.  We are currently not utilizing these systems.  Are you actually deleting them and can we resurrect if needed?
+
+ -----Original Message-----
+From: 	Carter, Kimberly  
+Sent:	Wednesday, February 13, 2002 10:52 AM
+To:	Lokay, Michelle
+Subject:	TW Deal Profitability
+
+Michelle,
+I left a message on your voice mail about the use of TW Deal Profitability and TW Deal Analysis.  Is anyone in Marketing still using these applications?  We are looking to stop the support of the applications if there are no users.
+
+Thank you,
+Kimberly Carter
+X57329
+
+===== MESSAGE lokay-m/sent_items/96. =====
+Date: 2002-02-14T14:39:35 UTC
+From: michelle.lokay@enron.com
+To: 'ott@enron.com, shana.ott@elpaso.com
+Subject: RE: SPRINT Ad ;-)
+
+Wow...is that what really happened?!?!  I am so glad it's all clarified.  Since we're suing everyone (the accountants, the lawyers, etc.), we might as well sue our long distance carrier.  Talk soon!
+
+-----Original Message-----
+From: Ott, Shana [mailto:Shana.Ott@ElPaso.com]
+Sent: Thursday, February 14, 2002 7:50 AM
+Subject: FW: SPRINT Ad ;-)
+
+
+
+
+******************************************************************
+This email and any files transmitted with it from the ElPaso 
+Corporation are confidential and intended solely for the 
+use of the individual or entity to whom they are addressed. 
+If you have received this email in error please notify the 
+sender.
+******************************************************************
+
+===== MESSAGE lokay-m/sent_items/97. =====
+Date: 2002-02-14T14:50:40 UTC
+From: michelle.lokay@enron.com
+To: steven.harris@enron.com, kimberly.watson@enron.com, lorraine.lindberg@enron.com, tk.lohman@enron.com, lindy.donoho@enron.com, mark.mcconnell@enron.com, paul.y'barbo@enron.com
+Cc: audrey.robertson@enron.com, michelle.lokay@enron.com
+Subject: California Capacity Report for Week of 02/11-02/15
+
+
+Transwestern's average deliveries to California were 972 MMBtu/d (89%), with San Juan lateral throughput at 851 MMBtu/d.  Total East deliveries averaged 403 MMBtu/d.  
+
+El Paso's average deliveries to California were 2075 MMBtu/d (71%):
+- PG&ETop, capacity of 1140 MMBtu/d, deliveries of 573 MMBtu/d (50%)
+- SoCalEhr, capacity 1250 MMBtu/d, deliveries of 1010 MMBtu/d (81%)
+- SoCalTop, capacity 540 MMBtu/d, deliveries of 492 MMBtu/d (91%)
+
+Thursday's posted Gas Daily prices:
+	SoCal gas, large pkgs	  2.345 (+.185)
+	PG&E, large pkgs	  2.335 (+.185)
+	TW San Juan		  2.20 (+.19)   
+	TW Permian		  2.215 (+.185)
+
+===== MESSAGE lokay-m/sent_items/98. =====
+Date: 2002-02-14T15:01:13 UTC
+From: michelle.lokay@enron.com
+To: 'ott@enron.com, shana.ott@elpaso.com
+Subject: Enron New Voice Mail System
+
+Try this...does it work on your computer system?
+
+
+ - WitCity The Enron Voice Mail System 2002.htm
+
+===== MESSAGE lokay-m/sent_items/100. =====
+Date: 2002-02-14T15:03:13 UTC
+From: michelle.lokay@enron.com
+To: jimboman@bigfoot.com, 'hitschel@enron.com, bhitschel@tesoropetroleum.com
+Subject: Enron's New Voice Mail System
+
+
+
+ - WitCity The Enron Voice Mail System 2002.htm
+
+===== MESSAGE lokay-m/sent_items/101. =====
+Date: 2002-02-14T16:39:31 UTC
+From: michelle.lokay@enron.com
+To: 'mayher@enron.com, susan.mayher@elpaso.com
+Subject: RE: TW Imbalances at Topock and Tumbleweed
+
+About CIG...yes, please send statements to support the volume difference for 07/01 and 03/00.  The reconciliation seems to be going very well.  We had originally sent Mike Clark the CIG data back to 06/93...do you have those?  Thanks.
+
+-----Original Message-----
+From: Mayher, Susan [mailto:Susan.Mayher@ElPaso.com]
+Sent: Wednesday, February 13, 2002 10:13 AM
+To: Lokay, Michelle
+Subject: TW Imbalances at Topock and Tumbleweed
+
+
+Mojave/Topock
+I have two months with different measured volumes than you have. Please fax
+the Daily Volume Statement for Meter ID: 0009214-01, Meter Name: TW/Mojave
+Topok I/C (DEL), DRN: 000068288 for October 2000 and July 1999.  My fax
+number is 719-520-4810.
+
+CIG/Tumbleweed
+I have looked back through October 1995. 
+Measured Volume Difference. 
+Jul-01  CIG = 65 dth TW = 0
+Mar-00  CIG = 25 dth TW = 0
+CIG is the custody transfer meter. Do you need meter statements to correct
+your records?
+
+Scheduled Volume Difference
+Jul-00  CIG = 839,636   TW = 839,638 Difference = (2)
+Apr-00  CIG = 163,162   TW= 163,134 Difference = 28 
+Oct-98  CIG = 84,505   TW = 85,107 Difference = 602
+Aug-98  CIG = 326,831   TW = 326,397 Difference = 434
+Jul-98  CIG = 212,226   TW = 202,228 Difference = 9,998
+May-97  CIG = 86,770   TW = 99,972 Difference = (13,202)
+Apr-96  CIG = 5,447   TW = 5,522 Difference = (75)
+Jan-96  CIG = 59,790   TW = 62,000 Difference = (2,210)
+
+Could you re-check your scheduled volumes?
+
+Thanks, 
+Sue Mayher
+719-520-4649
+Susan.Mayher@elpaso.com
+
+
+
+
+
+******************************************************************
+This email and any files transmitted with it from the ElPaso 
+Corporation are confidential and intended solely for the 
+use of the individual or entity to whom they are addressed. 
+If you have received this email in error please notify the 
+sender.
+******************************************************************
+
+===== MESSAGE lokay-m/sent_items/122. =====
+Date: 2002-03-04T16:31:49 UTC
+From: michelle.lokay@enron.com
+To: richard.hanagriff@enron.com
+Subject: FW: TW Imbalances at Topock and Tumbleweed
+
+
+
+-----Original Message-----
+From: Lokay, Michelle 
+Sent: Monday, March 04, 2002 10:28 AM
+To: 'Mayher, Susan'
+Cc: Minter, Tracy
+Subject: RE: TW Imbalances at Topock and Tumbleweed
+
+
+Here is a summary of the support I have faxed to you concerning the scheduled volume discrepancies:
+
+
+
+Scheduled Volume Difference
+Jul-00  CIG = 839,636   TW = 839,638 Difference = (2)...occurred 07/07
+Apr-00  CIG = 163,162   TW= 163,134 Difference = 28...occurred 04/28
+Oct-98  CIG = 84,505   TW = 85,107 Difference = 602...occurred 10/29, 10/30
+Aug-98  CIG = 326,831   TW = 326,397 Difference = 434...occurred 08/02, 08/22, 08/23
+Jul-98  CIG = 212,226   TW = 202,228 Difference = 9,998...occurred 07/18, 07/19, 07/20, 07/21, 07/31
+May-97  CIG = 86,770   TW = 99,972 Difference = (13,202)...05/07, 05/16
+Apr-96  CIG = 5,447   TW = 5,522 Difference = (75)...04/25, 04/26
+Jan-96  CIG = 59,790   TW = 62,000 Difference = (2,210)...occurred 01/1-15
+
+===== MESSAGE lokay-m/sent_items/102. =====
+Date: 2002-02-19T20:15:00 UTC
+From: michelle.lokay@enron.com
+To: jimboman@bigfoot.com
+Subject: Welcome to ResourceAllianceGroup of Houston
+
+  
+ 
+ http://www.ragroup.org/index.asp
+
+===== MESSAGE lokay-m/sent_items/104. =====
+Date: 2002-02-20T15:58:37 UTC
+From: michelle.lokay@enron.com
+To: tara.rosenbohm@enron.com
+Subject: Distribution list
+
+Please add me to the "DL-GA-all_domestic" distribution list.  Thanks.
+
+===== MESSAGE lokay-m/sent_items/105. =====
+Date: 2002-02-20T16:14:24 UTC
+From: michelle.lokay@enron.com
+To: dennis.lee@enron.com
+Subject: RE: PPL EnergyPlus, LLC
+
+Thanks.
+
+ -----Original Message-----
+From: 	Lee, Dennis  
+Sent:	Wednesday, February 20, 2002 8:15 AM
+To:	Lokay, Michelle
+Subject:	PPL EnergyPlus, LLC
+
+Amendment # 5 to CR 26741 for PPL EnergyPlus has been signed and returned.  
+I'll send you a copy of the fully executed agreement after it's routed.
+
+DL
+
+
+
+Dennis P. Lee
+ETS
+Gas Logistics
+(713) 853-1715
+dennis.lee@enron.com
+
+===== MESSAGE lokay-m/sent_items/106. =====
+Date: 2002-02-21T14:40:22 UTC
+From: michelle.lokay@enron.com
+To: jimboman@bigfoot.com
+Subject: AGENCY.COM - Careers
+
+  
+ 
+ http://www.agency.com/careers/index.html
+
+===== MESSAGE lokay-m/sent_items/107. =====
+Date: 2002-02-21T15:11:15 UTC
+From: michelle.lokay@enron.com
+To: jan.moore@enron.com
+Subject: RE: Club Memberships
+
+None for me.
+
+ -----Original Message-----
+From: 	Moore, Jan  
+Sent:	Thursday, February 21, 2002 9:09 AM
+To:	Harris, Steven; Watson, Kimberly; Donoho, Lindy; Lindberg, Lorraine; Lohman, TK; Lokay, Michelle; McConnell, Mark; Y'barbo, Paul; Robertson, Audrey
+Subject:	Club Memberships
+Importance:	High
+
+
+I would like to ask for your help in providing me with the following details for each membership you may have.
+
+
+1)	Corporate Membership or Individual Membership
+2)	Reimbursement of Initiation Fees
+3)	Timing of reimbursement of initiation fees
+4)	Type of membership reimbursement method (one of the three listed below)
+5)	Is there a business reason to continue payment of fees?
+
+	Reimbursement methods:
+1)   Flex Perks
+2)   Payroll Reimbursement
+      3)	Reimbursement via direct payment to employee or to the country club
+
+
+
+Should you not have any memberships, please respond to that effect.  I need this information by Tuesday, February 26.
+
+Thank you for your assistance.
+
+
+Jan
+
+===== MESSAGE lokay-m/sent_items/108. =====
+Date: 2002-02-21T15:59:13 UTC
+From: michelle.lokay@enron.com
+To: jimboman@bigfoot.com
+Subject: Enron government
+
+
+Feudalism
+You have two cows.
+Your lord takes some of the milk. 
+Fascism
+You have two cows.
+The government takes both, hires you to take care of them and sells you the milk.
+Communism
+You have two cows.
+You must take care of them, but the government takes all the milk. 
+Capitalism
+You have two cows.
+You sell one and buy a bull.
+Your herd multiplies, and the economy grows.
+You sell them and retire on the income. 
+Enron
+You have two cows.  You borrow 80% of the forward value of the two cows from your bank, then buy another cow with 5% down and the rest financed by the seller on a note callable if your market cap goes below $20B at a rate 2 times prime. You now sell three cows to your publicly listed company, using letters of credit opened by your brother-in-law at a 2nd bank, then execute a debt/equity swap with an associated general offer so that you get four cows back, with a tax exemption for five cows. The milk rights of six cows are transferred via an intermediary to a Cayman Island company secretly owned by the majority shareholder who sells the rights to seven cows back to your listed company. The annual report says the company owns eight cows, with an option on one more and this transaction process is upheld by your independent auditor and no Balance Sheet provided with the press release that announces that Enron as a major owner of cows will begin trading cows via the Internet site COW (cows on web). I am sure you now fully understand what happened.
+
+===== MESSAGE lokay-m/inbox/25. =====
+Date: 2002-02-21T17:30:23 UTC
+From: mansoor.abdmoulaie@enron.com
+To: michelle.lokay@enron.com
+Subject: TW/ Lonestar Ward County intercoonect-----Level-A cost
+
+
+
+
+Michelle
+
+In order to make this interconnect bi-directional the following work need to be performed: 
+( capacity 35- 60 mmcf/d at 800-850 # pressure)
+
+1):  Blowdown gas in 5.335 miles of 12" ( gas-loss) at 1000# pressure
+
+2):	Remove a flapper in the check-valve or turn around the existing check-valve
+
+
+The  cost for this is approximately $8,000 to $10,000.
+
+Still waiting for Earl Chanley from Roswell to send me some facility information regarding the Pecos interconnect.
+
+Mansoor
+
+===== MESSAGE lokay-m/sent_items/110. =====
+Date: 2002-02-22T14:49:19 UTC
+From: michelle.lokay@enron.com
+To: steven.harris@enron.com, kimberly.watson@enron.com, lorraine.lindberg@enron.com, tk.lohman@enron.com, lindy.donoho@enron.com, mark.mcconnell@enron.com, paul.y'barbo@enron.com
+Cc: audrey.robertson@enron.com, michelle.lokay@enron.com
+Subject: California Capacity Report for Week of 02/19-02/22
+
+
+Transwestern's average deliveries to California were 1015 MMBtu/d (93%), with San Juan lateral throughput at 873 MMBtu/d.  Total East deliveries averaged 394 MMBtu/d.  
+
+El Paso's average deliveries to California were 2063 MMBtu/d (70%):
+- PG&ETop, capacity of 1140 MMBtu/d, deliveries of 598 MMBtu/d (53%)
+- SoCalEhr, capacity 1250 MMBtu/d, deliveries of 1002 MMBtu/d (80%)
+- SoCalTop, capacity 540 MMBtu/d, deliveries of 463 MMBtu/d (86%)
+
+Friday's posted Gas Daily prices:
+	SoCal gas, large pkgs	  2.345 (flat)
+	PG&E, large pkgs	  2.30 (-.035)
+	TW San Juan		  2.19 (-.01)   
+	TW Permian		  2.215 (flat)
+
+===== MESSAGE lokay-m/sent_items/111. =====
+Date: 2002-02-22T20:43:47 UTC
+From: michelle.lokay@enron.com
+To: jlokay@4quest.com
+Subject: The San Antonio discount and luxury hotel reservations & visitors guide.
+
+  
+ 
+ http://sanantonio.citysearch.com/search?type=grid&flavor_id=9&neighborhoods=1567&histoindex_left=neighborhoods&sorted=rank-desc&context=hotels_visitors&histo_name=Riverwalk/Downtown&cslink=cs_filter1
+
+===== MESSAGE lokay-m/sent_items/112. =====
+Date: 2002-02-25T15:53:15 UTC
+From: michelle.lokay@enron.com
+To: jimboman@bigfoot.com
+Subject: FW: On the first day
+
+ 
+-----Original Message-----
+From: Hitschel, Bonnie V. [mailto:BHitschel@tesoropetroleum.com]
+Sent: Monday, February 25, 2002 9:47 AM
+To: 'bvh2219@aol.com'; Lokay, Michelle; Goodell, Scott
+Subject: FW: On the first day
+
+
+
+Subject: On the first day! 
+> 
+> On the first day God created the cow. 
+> 
+> God said, "You must go to the field with the farmer all day long and 
+> suffer 
+> under the sun, have calves and give milk to support the farmer I will 
+> give 
+> you a life span of sixty years." 
+> 
+> The cow said, "That's a kind of a tough life you want me to live for 
+> sixty 
+> years. Let me have twenty years and I'll give back the other forty." 
+> 
+> And God agreed. 
+> 
+> On the second day, God created the dog. 
+> 
+> God said, "Sit all day by the door of your house and bark at anyone who 
+> comes in or walks past. I will give you a life span of twenty years." 
+> 
+> The dog said, "That's too long to be barking. Give me ten years and I'll 
+> give back the other ten." 
+> 
+> So God agreed (sigh). 
+> 
+> On the third day God created the monkey. 
+> 
+> God said, "Entertain people, do monkey tricks, make them laugh. I'll give 
+> you a twenty year life span." 
+> 
+> Monkey said, "How boring, monkey tricks for twenty years?  I don't think 
+> so. 
+> Dog gave you back ten, so that's what I'll do too, okay?" 
+> 
+> And God agreed again. 
+> 
+> On the fourth day God created man. 
+> 
+> God said, "Eat, sleep, play, have sex, enjoy. Do nothing, just enjoy, 
+> enjoy. 
+> I'll give you twenty years." 
+> 
+> Man said, "What? Only twenty years? No way man. Tell you what, I'll take 
+> my 
+> twenty, and the forty cow gave back, and the ten dog gave back and the 
+> ten 
+> monkey gave back. That makes eighty, okay?" 
+> 
+> "Okay," said God. "You've got a deal." 
+> 
+> So that is why for the first twenty years we eat, sleep, play, have sex, 
+> enjoy, and do nothing; for the next forty years we slave in the sun to 
+> support our family; for the next ten years we do monkey tricks to 
+> entertain 
+> our grandchildren; and for the last ten years we sit in front of the 
+> house and bark at everybody. 
+>
+
+===== MESSAGE lokay-m/sent_items/113. =====
+Date: 2002-02-27T15:36:50 UTC
+From: michelle.lokay@enron.com
+To: danny.mccarty@enron.com
+Subject: Enron Auction Details
+
+  
+ 
+ http://www.dovebid.com/Auctions/AuctionDetail.asp?auctionID=1182
+
+===== MESSAGE lokay-m/sent_items/115. =====
+Date: 2002-02-28T14:35:44 UTC
+From: michelle.lokay@enron.com
+To: audrey.robertson@enron.com
+Subject: RE: Time Reports are Due!!
+
+I have been here except last Tuesday..traveling for work!
+
+ -----Original Message-----
+From: 	Robertson, Audrey  
+Sent:	Thursday, February 28, 2002 8:29 AM
+To:	Donoho, Lindy; Lindberg, Lorraine; Lohman, TK; Lokay, Michelle; Mark McConnell (E-mail); Watson, Kimberly; Y'barbo, Paul
+Subject:	Time Reports are Due!!
+
+
+Please submit today.....
+
+adr
+
+Audrey D. Robertson
+Transwestern Pipeline Company 
+email address:  audrey.robertson@enron.com
+(713) 853-5849
+(713) 646-2551 Fax
+
+===== MESSAGE lokay-m/sent_items/116. =====
+Date: 2002-02-28T16:05:39 UTC
+From: michelle.lokay@enron.com
+To: lokay@bigfoot.com
+Subject: FW: Pottery Barn
+
+
+
+ -----Original Message-----
+From: 	Lokay, Michelle  
+Sent:	Thursday, February 28, 2002 10:02 AM
+To:	'jreames@br-inc.com'
+Subject:	Pottery Barn
+
+I'm serious!...if Patrick wants to build Meghan's new furniture, here are the links:
+
+for the shelf,
+http://www.potterybarnkids.com/cat/pip.cfm?lst=n202012907%2Cdollhouses&itm=g15143&grp=15143
+
+for the armoire,
+http://www.potterybarnkids.com/cat/pip.cfm?age=-&gnd=a&lst=f5260-a-&grp=15136&itm=g15136&src=famf5260%7Cp1%2Fpipa%2D%7Cc58%7Cg15084%7Cig15084%7CldFRNARM%2DA%2D%7Cna%7CpFRNARM%2FshpcFRNARM%7Cp1
+
+for the bed, 
+http://www.potterybarnkids.com/cat/pip.cfm?age=-&gnd=A&pcat=FRNBTR&lst=dFRNBTR-A-&grp=15092&itm=g15092&src=shpcFRNBTR%7Cp2%2FshpcFRN%7Cp1%2Fpipa%2D%7Cc58%7Cg15143%7Cig15143%7Cln202012907%2Cdollhouses%7Cna%7Cs3901402
+
+Michelle Lokay
+Account Director
+Transwestern Commercial Group
+713-345-7932
+
+===== MESSAGE lokay-m/sent_items/117. =====
+Date: 2002-03-01T15:42:09 UTC
+From: michelle.lokay@enron.com
+To: steven.harris@enron.com, kimberly.watson@enron.com, lorraine.lindberg@enron.com, tk.lohman@enron.com, lindy.donoho@enron.com, mark.mcconnell@enron.com, paul.y'barbo@enron.com
+Cc: audrey.robertson@enron.com, michelle.lokay@enron.com
+Subject: California Capacity Report for Week of 02/25-03/01
+
+
+Transwestern's average deliveries to California were 815 MMBtu/d (75%), with San Juan lateral throughput at 879 MMBtu/d.  Total East deliveries averaged 596 MMBtu/d.  
+
+El Paso's average deliveries to California were 1790 MMBtu/d (61%):
+- PG&ETop, capacity of 1140 MMBtu/d, deliveries of 534 MMBtu/d (47%)
+- SoCalEhr, capacity 1250 MMBtu/d, deliveries of 804 MMBtu/d (64%)
+- SoCalTop, capacity 540 MMBtu/d, deliveries of 452 MMBtu/d (84%)
+
+Thursday's posted Gas Daily prices:
+	SoCal gas, large pkgs	  2.34 (-.005)
+	PG&E, large pkgs	  2.285 (-.015)
+	TW San Juan		  2.18 (-.01)   
+	TW Permian		  2.295 (+.08)
+
+===== MESSAGE lokay-m/sent_items/118. =====
+Date: 2002-03-01T19:54:24 UTC
+From: michelle.lokay@enron.com
+To: mansoor.abdmoulaie@enron.com, ron.matthews@enron.com
+Subject: RE: Baker Fied Project
+
+Either...you pick the day!
+
+ -----Original Message-----
+From: 	Abdmoulaie, Mansoor  
+Sent:	Friday, March 01, 2002 1:13 PM
+To:	Lokay, Michelle; Matthews, Ron
+Cc:	Watson, Kimberly; Alters, Dennis; Asante, Ben
+Subject:	Baker Fied Project
+
+Michelle& Ron
+
+Is Monday Mar-4, 9-10 am or Tuesday-Mar-4, 9-10 am ( my office) good for you to discuss the Baker Field project?
+Please let me know. 
+
+Thanks, Mansoor
+
+===== MESSAGE lokay-m/sent_items/119. =====
+Date: 2002-03-01T20:48:39 UTC
+From: michelle.lokay@enron.com
+To: ron.matthews@enron.com, mansoor.abdmoulaie@enron.com
+Cc: kimberly.watson@enron.com, dennis.alters@enron.com, ben.asante@enron.com
+Subject: RE: Baker Fied Project
+
+Of course...Tuesday it is!
+
+ -----Original Message-----
+From: 	Matthews, Ron  
+Sent:	Friday, March 01, 2002 2:47 PM
+To:	Abdmoulaie, Mansoor; Lokay, Michelle
+Subject:	RE: Baker Fied Project
+
+Okay!  I have to be the bad guy and say I can't meet Monday.  I have a meeting with Kevin Hyatt from 9 - 10 am.  Can't skip that one.  Mansoor agreed we can meet on Tuesday at the same time in his office.  Is this still okay with you Michelle?
+
+Ron M.
+
+ -----Original Message-----
+From: 	Abdmoulaie, Mansoor  
+Sent:	Friday, March 01, 2002 2:09 PM
+To:	Lokay, Michelle; Matthews, Ron
+Subject:	RE: Baker Fied Project
+
+Monday 9-10 am.
+Mansoor
+
+ -----Original Message-----
+From: 	Lokay, Michelle  
+Sent:	Friday, March 01, 2002 1:54 PM
+To:	Abdmoulaie, Mansoor; Matthews, Ron
+Subject:	RE: Baker Fied Project
+
+Either...you pick the day!
+
+ -----Original Message-----
+From: 	Abdmoulaie, Mansoor  
+Sent:	Friday, March 01, 2002 1:13 PM
+To:	Lokay, Michelle; Matthews, Ron
+Cc:	Watson, Kimberly; Alters, Dennis; Asante, Ben
+Subject:	Baker Fied Project
+
+Michelle& Ron
+
+Is Monday Mar-4, 9-10 am or Tuesday-Mar-4, 9-10 am ( my office) good for you to discuss the Baker Field project?
+Please let me know. 
+
+Thanks, Mansoor
+
+===== MESSAGE lokay-m/sent_items/120. =====
+Date: 2002-03-01T20:50:35 UTC
+From: michelle.lokay@enron.com
+To: kevin.hyatt@enron.com
+Subject: RE: Red Lake Storage project
+
+Count me in...Monday or Thursday morning?
+
+ -----Original Message-----
+From: 	Hyatt, Kevin  
+Sent:	Friday, March 01, 2002 2:45 PM
+To:	Donoho, Lindy; Lindberg, Lorraine; Lohman, TK; Lokay, Michelle; McConnell, Mark; Robertson, Audrey; Watson, Kimberly; Y'barbo, Paul
+Cc:	Gadd, Eric
+Subject:	Red Lake Storage project
+
+You guys have probably already noodled on this, but if you haven't, maybe it's worth organizing a meeting next week to discuss the above storage project and benefits / risks to TW.
+
+For instance:
+
+Risks:
+Red Lake connection to Kern cuts into TW forward haul market
+
+
+Rewards:
+expands TW's Park n' Ride capabilities (we offer more capability and back it with a storage position)
+better PnR rates over the short term than what the storage can offer
+more backhaul business on TW mainline (i.e. Citizens Utilities)
+Compression ops agrmt w/ Aquila
+
+
+Let me know if you'd like to get together for a brainstorm session.  Bids are due to Aquila by 3/15 and there are some financial caveats to discuss.
+
+===== MESSAGE lokay-m/sent_items/121. =====
+Date: 2002-03-01T21:34:11 UTC
+From: michelle.lokay@enron.com
+To: lokay@bigfoot.com
+Subject: FW: What's Wrong With This Picture?
+
+
+
+
+Can you spot what's wrong with this picture? Look closely. It may take you a minute.
+http://secure.falcon-networks.com/~culprit/whatswrong.html
+
+===== MESSAGE lokay-m/sent_items/124. =====
+Date: 2002-03-04T21:15:54 UTC
+From: michelle.lokay@enron.com
+To: alma.carrillo@enron.com
+Subject: FW: New TW Contract/Capacity Release System Demo
+
+Is there still room in the 03/21 class?  Thanks.
+
+ -----Original Message-----
+From: 	Trevino, Linda  
+Sent:	Friday, February 22, 2002 11:58 AM
+To:	Lohman, TK; Donoho, Lindy; Lindberg, Lorraine; Lokay, Michelle; Harris, Steven; Moore, Jan; Watson, Kimberly; McConnell, Mark; Y'barbo, Paul; Mulligan, Amy; McEvoy, Christine; Miller, Christopher L; Ward, Linda; Hernandez, Bert; Minter, Tracy; Buchanan, John; Blair, Lynn; Giambrone, Laura; Schoolcraft, Darrell; Hanagriff, Richard
+Cc:	Dietz, Rick; Carrillo, Alma; Licciardo, Jeanne
+Subject:	New TW Contract/Capacity Release System Demo
+
+The new TW Contract/Capacity Release system is due to be implemented the weekend of March 9, 2002.  We will be offering training/demo's of the new system for internal users on the below dates.  Please contact Alma Carrillo with the date and time you would like to attend.  
+
+Thanks
+
+Linda
+
+
+Monday March 18th:  Two Sessions - 1:30pm and 3:00pm
+
+Thursday March 21st:  One Session - 1:30pm
+
+If you have any questions or will be unable to attend one of the above demo sessions please let me know.
+
+===== MESSAGE lokay-m/sent_items/125. =====
+Date: 2002-03-04T21:18:22 UTC
+From: michelle.lokay@enron.com
+To: richard.hanagriff@enron.com
+Subject: FW: Mojave index
+
+The February 2002 El Paso Topock point price was $1.8600.
+
+
+ -----Original Message-----
+From: 	Lokay, Michelle  
+Sent:	Monday, March 04, 2002 7:53 AM
+To:	Hanagriff, Richard
+Subject:	RE: Mojave index
+
+Nov 2.92, Dec 2.56, Jan 2.67...I will get Feb.
+
+ -----Original Message-----
+From: 	Hanagriff, Richard  
+Sent:	Friday, March 01, 2002 7:06 PM
+To:	Lokay, Michelle
+Subject:	Mojave index
+
+Would you please e-mail me the Mojave indexes for Nov, Dec, Jan, and Feb
+
+thanks
+
+===== MESSAGE lokay-m/sent_items/127. =====
+Date: 2002-03-05T18:54:59 UTC
+From: michelle.lokay@enron.com
+To: richard.hanagriff@enron.com
+Subject: FW: Mojave index
+
+February 2002 price $2.07
+March 2002 price $2.30
+
+
+February was revised and March is now posted.
+
+ -----Original Message-----
+From: 	Lokay, Michelle  
+Sent:	Monday, March 04, 2002 3:18 PM
+To:	Hanagriff, Richard
+Subject:	FW: Mojave index
+
+The February 2002 El Paso Topock point price was $1.8600.
+
+
+ -----Original Message-----
+From: 	Lokay, Michelle  
+Sent:	Monday, March 04, 2002 7:53 AM
+To:	Hanagriff, Richard
+Subject:	RE: Mojave index
+
+Nov 2.92, Dec 2.56, Jan 2.67...I will get Feb.
+
+ -----Original Message-----
+From: 	Hanagriff, Richard  
+Sent:	Friday, March 01, 2002 7:06 PM
+To:	Lokay, Michelle
+Subject:	Mojave index
+
+Would you please e-mail me the Mojave indexes for Nov, Dec, Jan, and Feb
+
+thanks
+
+===== MESSAGE lokay-m/sent_items/126. =====
+Date: 2002-03-05T17:18:42 UTC
+From: michelle.lokay@enron.com
+To: mark.mcconnell@enron.com
+Subject: FW: Conoco Contract Nos. 20747 & 20748
+
+
+
+ -----Original Message-----
+From: 	Doll, Jeanette  
+Sent:	Tuesday, March 05, 2002 11:12 AM
+To:	Moore, Jan; Lokay, Michelle
+Subject:	FW: Conoco Contract Nos. 20747 & 20748
+
+We still need to bill Conoco the TCR II Surcharges on 20,000 MMBtu per day.  Maybe Michelle can get with Conoco and see how they want it billed.  If they want it billed on their new contract, maybe we can do an amendment.  If they want it billed on the old contracts, then you need to contact someone in the contract group to see how we bill it since the contracts are expired (i.e., overriding the CBS system or something).
+
+Jeanette
+
+ -----Original Message-----
+From: 	Moore, Jan  
+Sent:	Monday, March 04, 2002 10:38 AM
+To:	Doll, Jeanette; McConnell, Mark
+Cc:	Donoho, Lindy
+Subject:	Conoco Contract Nos. 20747 & 20748
+
+
+Jeanette:
+
+I just reviewed the handout for your presentation on the Global Settlement.  One of your slides stated that the 
+TCR surcharge is applicable for 10 years from the Global settlement, even if the CFS's contract expires.
+
+Conoco Contract Nos. 20747 & 20748 expired at the end of February.  I assume we should bill the TCR
+surcharge for these contracts beginning in March, 2002.  Please let me know if this is correct.
+
+Thanks!
+
+
+Jan Moore
+X53858
+
+===== MESSAGE lokay-m/inbox/26. =====
+Date: 2002-03-06T18:57:50 UTC
+From: mansoor.abdmoulaie@enron.com
+To: michelle.lokay@enron.com
+Cc: kimberly.watson@enron.com
+Subject: TW/ Lonestar Ward and Pecos Counties interconnect bi-directional--A-release
+
+
+The following is a level "A" cost estimate to make TW/ Lonestar existing interconnects bi-directional.
+
+
+TW/ Lonestar at Ward County ( 50 to 60 mmcf/d)
+
+
+According to Operations this is already bi-directional . The only things are required on this one is to take the flapper out of the check-valve 
+and blow down the gas in 5.33 miles of 12".
+
+Cost of gas loss& labor = $8,000
+
+
+
+
+TW/ Lonestar at Pecos County ( 100 mmcf/d)
+
+A): TW/ Lonestar interconnect
+
+
+	Scope: On this one we need a bi-directional valve skid using the existing meter run.
+	Cost of material& labor= $ 195,000
+
+
+B): Pecos Compressor Station
+
+    	 In order to make this interconnect bi-directional we also need to make the station ( two-compressor units) bi-directional.
+	
+Scope: Install outlet from Lonestar I/C to inlet filter with 12" piping& valves. Unit discharge would be modified to
+tie in to West Texas-20"
+	
+Cost for material& labor= $ 330,000.
+	
+If you need more accurate costs ( B -release) please let me know .
+
+	Total cost estimate for this project = $ 533,000.
+
+===== MESSAGE lokay-m/sent_items/128. =====
+Date: 2002-03-06T22:17:19 UTC
+From: michelle.lokay@enron.com
+To: bill.rapp@enron.com
+Subject: Burlington OBA paragraph change
+
+Notwithstanding anything herein that may be interpreted to the contrary, the aggregate Operational Imbalance for all Interconnect Points in any month will be within a 10% tolerance level (i.e., neither exceeds 110% of the quantities scheduled, or is less than 90% of the quantities scheduled).
+
+
+Bill,
+Here is how I currently have paragraph 6 (tolerance level) in the OBA.  Should we insert another sentence reemphasizing that "all imbalances" will be "cashed out"?
+
+
+Michelle Lokay
+Account Director
+Transwestern Commercial Group
+713-345-7932
+
+===== MESSAGE lokay-m/sent_items/129. =====
+Date: 2002-03-07T14:43:47 UTC
+From: michelle.lokay@enron.com
+To: mark.mcconnell@enron.com
+Subject: Brief of Amsterdam Weather Conference
+
+Weather Trading 
+Energy and weather are so inextricably tied to one another that it is sometimes hard to separate the two. The demand for power is directly related to temperature going up in summer and going down in winter. If, therefore, you have an unusually cool summer, the demand for power will be much lesser than anticipated, and the same in case of an unusually warm winter. Several electricity utilities enter into power purchase agreements based on anticipated demand, and would face serious financial losses in such cases. 
+Weather derivatives provide such companies an option to hedge against risk of weather fluctuations. It is no surprise, then, that one of the conferences more lively discussions centered on the presentation by Tom Fletcher, head of weather trading for Mirant <http://www.mirant.com/>. 
+In describing weather trading, Fletcher reported the market has grown exponentially since it was first formed in 1997. Fletcher highlighted how successful trading requires purchasing the right product. He went on to describe some of the sophisticated products being launched and how Mirant is integrating weather risk into their overall profile and what that means for the traders on the floor. 
+With presentations from other market leaders such as Centrica, I-Wex, Spectron, Aquila, LIFFE, Mirant, Bewag, Aon and Entergy-Koch, Weather Trading Europe <http://www.eyeforenergy.com/weather/> provided three days of the latest developments in European trading. 
+The conference touched on key issues surrounding the sector including liquidity in the weather market-where is it and how to access it; data issues-the state of play in European weather data and how you can best utilize the information you've got and a host of other topics designed to help attendees leverage their skills. 
+As weather trading takes its place in the online world, there is a pressing need to develop greater use of weather derivatives from corporations to avoid the market becoming a predominantly speculative industry. 
+
+
+Michelle Lokay
+Account Director
+Transwestern Commercial Group
+713-345-7932
+
+===== MESSAGE lokay-m/sent_items/130. =====
+Date: 2002-03-08T13:59:14 UTC
+From: michelle.lokay@enron.com
+To: lokay@bigfoot.com
+Subject: eBay item 1079301268 (Ends Mar-08-02 110435 PST ) - ENRON DENIM SHIRT BRAND NEW
+
+  
+ 
+ http://cgi.ebay.com/ws/eBayISAPI.dll?ViewItem&item=1079301268
+
+===== MESSAGE lokay-m/sent_items/131. =====
+Date: 2002-03-08T14:58:48 UTC
+From: michelle.lokay@enron.com
+To: steven.harris@enron.com, kimberly.watson@enron.com, lorraine.lindberg@enron.com, tk.lohman@enron.com, lindy.donoho@enron.com, mark.mcconnell@enron.com, paul.y'barbo@enron.com
+Cc: audrey.robertson@enron.com, michelle.lokay@enron.com
+Subject: California Capacity Report for Week of 03/04-03/08
+
+
+Transwestern's average deliveries to California were 874 MMBtu/d (80%), with San Juan lateral throughput at 862 MMBtu/d.  Total East deliveries averaged 451 MMBtu/d.  
+
+El Paso's average deliveries to California were 1985 MMBtu/d (68%):
+- PG&ETop, capacity of 1140 MMBtu/d, deliveries of 590 MMBtu/d (52%)
+- SoCalEhr, capacity 1250 MMBtu/d, deliveries of 930 MMBtu/d (74%)
+- SoCalTop, capacity 540 MMBtu/d, deliveries of 465 MMBtu/d (86%)
+
+Friday's posted Gas Daily prices:
+	SoCal gas, large pkgs	  2.725 (+.385)
+	PG&E, large pkgs	  2.68 (+.395)
+	San Juan (non-Bondad)	  2.565 (+.385)   
+	TW Permian		  2.54 (+.245)
+
+===== MESSAGE lokay-m/sent_items/132. =====
+Date: 2002-03-08T16:20:48 UTC
+From: michelle.lokay@enron.com
+To: kimberly.watson@enron.com
+Subject: RE: Bullets
+
+No bullets....ongoing with TXU, Burlington, Mojave.
+
+ -----Original Message-----
+From: 	Watson, Kimberly  
+Sent:	Friday, March 08, 2002 9:28 AM
+To:	Lindberg, Lorraine; Lohman, TK; Lokay, Michelle; McConnell, Mark; Y'barbo, Paul
+Subject:	Bullets
+
+Please send me your bullets ASAP this morning.  If you have no bullets to report, please reply to me that you have none.  
+
+Thanks, Kim.
+
+===== MESSAGE lokay-m/sent_items/134. =====
+Date: 2002-03-08T16:26:43 UTC
+From: michelle.lokay@enron.com
+To: ruthann.frausto@enron.com
+Subject: RE: Your move scheduled for next Thursday, 3/14
+
+Are we scheduled at certain time?  If I could be moved in the morning (I only have 2 boxes), that would be great.  I have customers coming in at 11:00 for the rest of the afternoon.  Thanks.
+
+ -----Original Message-----
+From: 	Frausto, Ruthann  
+Sent:	Friday, March 08, 2002 9:27 AM
+To:	Centilli, James; Robertson, Audrey; Donoho, Lindy; Harris, Steven; Moore, Jan; Lohman, TK; Lindberg, Lorraine; Lokay, Michelle; McConnell, Mark; Y'barbo, Paul; Watson, Kimberly; McFarland, Jean; Scott, Donna
+Subject:	Your move scheduled for next Thursday, 3/14
+
+Your move has been scheduled for next Thursday, 3/14. All moves now take place during the day.
+
+I'll deliver your pre-printed labels as soon as I get them from the Move Team, hopefully today. Please make sure to label everything that needs to be moved.
+
+Call me if you have any questions.
+
+Ruthann Frausto
+Enron Transportation Services Co.
+Facilities Services Coordinator
+Location:  ECN-4071a
+(713) 345-4212
+(713) 306-5032 cell
+ruthann.frausto@enron.com
+
+===== MESSAGE lokay-m/sent_items/135. =====
+Date: 2002-03-11T21:46:45 UTC
+From: michelle.lokay@enron.com
+To: lokay@bigfoot.com
+Subject: FW: Severance Summary Plan Description - Domestic Pipeline Assets
+
+
+
+ -----Original Message-----
+From: 	ETS Office of the Chairman  
+Sent:	Monday, March 11, 2002 2:09 PM
+To:	DL-GA-all_ets
+Subject:	Severance Summary Plan Description - Domestic Pipeline Assets
+
+We have been working hard over the past three months to restore normalcy to the non-debtor companies in the EGS family of asset-based businesses.   We are doing our best to operate on a business as usual basis, and continue the regular, consistent programs we previously provided.  That is why earlier this year we paid performance bonuses and merit increases to most non-debtor employees, in the ordinary course of business. 
+
+At the same time, I understand that events of the past few months have been disturbing and left many with a sense of uncertainty about their future.  We realize that you need some sort of "safety net" to allow you to be comfortable staying here as we work to reorganize.  With this in mind, I am pleased to inform you that we have put in place a severance plan for U.S. employees of certain non-debtor companies.  We have wanted this program for some time, but even as a non-debtor company we had to work extensively with consultants and creditors in securing its approval.
+
+The severance plan provides that, under most circumstances, terminated employees would be eligible for two weeks of base pay for every full or partial year of service.  In the case of a termination due to reorganization, the minimum compensation would be eight weeks of pay and the maximum would be fifty-two weeks.  The details and restrictions to this plan are explained in the plan summary for your company's plan, which can be found on the ETS HR link on the Enron Transportation Services intranet site under "ETS HR Manuals". It can also be accessed by clicking on the attached weblink:  http://hrweb.enron.com/businessUnits/ets/etsHRmanuals.asp . 
+
+I hope this plan will give you a bit more peace of mind and allow you to continue the excellent work you have been providing in our ongoing businesses.  Please contact your HR representative, if you have any questions about the severance plan or related matters.
+
+Stan
+
+===== MESSAGE lokay-m/sent_items/136. =====
+Date: 2002-03-11T21:59:30 UTC
+From: michelle.lokay@enron.com
+To: kimberly.watson@enron.com, lorraine.lindberg@enron.com, mark.mcconnell@enron.com, paul.y'barbo@enron.com, tk.lohman@enron.com, ron.matthews@enron.com, steve.january@enron.com, lynn.blair@enron.com, bill.rapp@enron.com, teb.lokey@enron.com (+1 more)
+Subject: Aquila Red Lake/TW strategy meeting
+
+When: Tuesday, March 12, 2002 10:00 AM-11:00 AM (GMT-06:00) Central Time (US & Canada).
+Where: EB1331
+
+*~*~*~*~*~*~*~*~*~*
+
+Let's get together to discuss the above storage project, benefits, risks, and basic strategy for TW.
+
+===== MESSAGE lokay-m/sent_items/137. =====
+Date: 2002-03-12T19:22:26 UTC
+From: michelle.lokay@enron.com
+To: lokay@bigfoot.com
+Subject: eBay item 704532436 (Ends Mar-12-02 111446 PST ) - WOW~NEW 100% AUTH LOUIS VUIT
+
+  
+ 
+ http://cgi.ebay.com/ws/eBayISAPI.dll?ViewItem&item=704532436
+
+===== MESSAGE lokay-m/sent_items/138. =====
+Date: 2002-03-12T19:27:48 UTC
+From: michelle.lokay@enron.com
+To: lokay@bigfoot.com
+Subject: eBay item 701625455 (Ends Mar-24-02 125035 PST ) - 100% AUTH. LOUIS VUITTON CLA
+
+  
+ 
+ http://cgi.ebay.com/ws/eBayISAPI.dll?ViewItem&item=701625455
+
+===== MESSAGE lokay-m/sent_items/139. =====
+Date: 2002-03-12T19:32:59 UTC
+From: michelle.lokay@enron.com
+To: lokay@bigfoot.com
+Subject: Bid on this one?
+
+  I think I want to bid on this...how about up to $150?!?  
+ 
+ http://cgi.ebay.com/ws/eBayISAPI.dll?ViewItem&item=705566445
+
+===== MESSAGE lokay-m/sent_items/140. =====
+Date: 2002-03-13T20:54:49 UTC
+From: michelle.lokay@enron.com
+To: lokay@bigfoot.com
+Subject: Lousi Vuitton bag
+
+  
+ 
+ http://cgi.ebay.com/ws/eBayISAPI.dll?ViewItem&item=706170040
+
+===== MESSAGE lokay-m/sent_items/141. =====
+Date: 2002-03-14T18:36:21 UTC
+From: michelle.lokay@enron.com
+To: lokay@bigfoot.com
+Subject: FW: invite
+
+
+
+-----Original Message-----
+From: Lisa Norwood [mailto:ljnorwood@calpine.com]
+Sent: Thursday, March 14, 2002 10:22 AM
+To: Lokay, Michelle
+Subject: invite
+
+
+See you Sunday at 2pm.
+ <<st patrick's day invitation.doc>> 
+
+Lisa J Norwood
+Director Fuel Management
+phone 713-830-8632
+fax 713-830-8711
+
+===== MESSAGE lokay-m/sent_items/142. =====
+Date: 2002-03-14T19:07:12 UTC
+From: michelle.lokay@enron.com
+To: audrey.robertson@enron.com
+Subject: RE: Time Reports Due Tomorrow
+
+I took 1/2 day of vacation last Friday, 03/08.  Thanks.
+
+ -----Original Message-----
+From: 	Robertson, Audrey  
+Sent:	Thursday, March 14, 2002 12:28 PM
+To:	Donoho, Lindy; Lindberg, Lorraine; Lohman, TK; Lokay, Michelle; Mark McConnell (E-mail); Watson, Kimberly; Y'barbo, Paul
+Subject:	Time Reports Due Tomorrow
+
+ Please submit....
+
+adr
+
+Audrey D. Robertson
+Transwestern Pipeline Company 
+email address:  audrey.robertson@enron.com
+(713) 853-5849
+(713) 646-2551 Fax
+
+===== MESSAGE lokay-m/sent_items/143. =====
+Date: 2002-03-15T14:22:59 UTC
+From: michelle.lokay@enron.com
+To: lokay@bgfoot.com
+Subject: Car jokes
+
+
+
+ -----Original Message-----
+From: 	Wadle, Susan  
+Sent:	Friday, March 15, 2002 7:09 AM
+To:	"Jhyatt" <Jhyatt (E-mail); Betty Allen (E-mail); Bettyladish (E-mail); Beverly Holleman (E-mail); Carolyn Dial (E-mail); Charles R. Wadle (E-mail); Gadd, Eric; Sandra Lelar Stone (E-mail); Sec Army" <Judy. Smith "Smith (E-mail); Tom Crump (E-mail); Heinitz, Mary J.; Sczykutowicz, Marion; Harris, Stephanie J ; Robertson, Audrey; Dowd, Steve; Lokay, Michelle; Lohman, TK; Moore, Jan; Watson, Kimberly; Donoho, Lindy; Millar, John; Ladish, Kim; Frausto, Ruthann
+Subject:	Okay, let's start this Friday with a Big Smile!!
+
+What's Worse Than A Pyromaniac In A Blazer?
+
+A barber in a Seville
+
+A seamstress in a Dart
+
+An insurance adjuster in an Acclaim
+
+A construction worker in a Bobcat
+
+A creature in a black Laguna
+
+A theater manager in a Marquis
+
+An astronomer in an Eclipse
+
+An exterminator in a Beetle
+
+A call-girl in an Escort
+
+A spiritualist in an Aurora
+
+A proctologist in a Probe
+
+A proctologist in a Ram
+
+An orator in a Civic
+
+A country singer in a Neon
+
+A reporter in a S'Coupe
+
+A Good Humor man in a S'Coupe
+
+An orchestra conductor in a Prelude
+
+A classical musician in a Sonata
+
+A customs inspector in a Passport
+
+A dog trainer in a Rover
+
+A jeweler in a Topaz
+
+A band leader in a Tempo
+
+A gentleman in a Gallant
+
+A Bullfighter in a Matador
+
+A mother-in-law in a Barracuda
+
+An electrician in a Charger
+
+A snake handler in a Viper
+
+A second-story man in a Prowler
+
+A car thief in a Jimmy
+
+A lepidopterist in a Monarch
+
+Barbie in a Malibu
+
+Sgt. Preston in a Yukon
+
+Queen Elizabeth in a Regal
+
+Prince Rainier in a Monaco
+
+Princess Stephanie in a Riviera
+
+Prince Charles in a Regency
+
+Joan Collins in a Dynasty
+
+(Hillary Clinton in a Park Avenue?)
+
+Jim Garner in a Maverick
+
+Kato in a green Hornet
+
+Nixon in a Checker
+
+Kissinger in a Diplomat
+
+Speedy Gonzales in a Fiesta
+
+Wile E. Coyote in a Road Runner
+
+Elmer Fudd in a Wabbit
+
+Miss Muffet in a Spyder
+
+Charles Lindberg in an Intrepid
+
+Christopher Columbus in a Voyager
+
+Blackbeard in a Corsair
+
+Russell Means in a Dakota
+
+Tonto in a Cherokee
+
+Dorothy in a Syclone
+
+Benjamin Franklin in a Lightning
+
+Carl Sagan in a Nova
+
+Bruce Lee in a Sidekick
+
+Oscar De la Hoya in a Challenger
+
+John Mellencamp in a Cougar
+
+Wonder Woman in a gold Lariat
+
+Edmund Halley in a Comet
+
+Public-TV yoga instructor Lillias in a Lotus
+
+Rosie O'Donnel and Charlton Heston in a Colt
+
+Yassir Arafat and Menahim Begin in an Accord
+
+Nostradamus and Jeanne Dixon in a Futura
+
+===== MESSAGE lokay-m/sent_items/144. =====
+Date: 2002-03-15T14:23:44 UTC
+From: michelle.lokay@enron.com
+To: bhitschel@tesoropetroleum.com
+Subject: Car jokes
+
+
+What's Worse Than A Pyromaniac In A Blazer?
+
+A barber in a Seville
+
+A seamstress in a Dart
+
+An insurance adjuster in an Acclaim
+
+A construction worker in a Bobcat
+
+A creature in a black Laguna
+
+A theater manager in a Marquis
+
+An astronomer in an Eclipse
+
+An exterminator in a Beetle
+
+A call-girl in an Escort
+
+A spiritualist in an Aurora
+
+A proctologist in a Probe
+
+A proctologist in a Ram
+
+An orator in a Civic
+
+A country singer in a Neon
+
+A reporter in a S'Coupe
+
+A Good Humor man in a S'Coupe
+
+An orchestra conductor in a Prelude
+
+A classical musician in a Sonata
+
+A customs inspector in a Passport
+
+A dog trainer in a Rover
+
+A jeweler in a Topaz
+
+A band leader in a Tempo
+
+A gentleman in a Gallant
+
+A Bullfighter in a Matador
+
+A mother-in-law in a Barracuda
+
+An electrician in a Charger
+
+A snake handler in a Viper
+
+A second-story man in a Prowler
+
+A car thief in a Jimmy
+
+A lepidopterist in a Monarch
+
+Barbie in a Malibu
+
+Sgt. Preston in a Yukon
+
+Queen Elizabeth in a Regal
+
+Prince Rainier in a Monaco
+
+Princess Stephanie in a Riviera
+
+Prince Charles in a Regency
+
+Joan Collins in a Dynasty
+
+(Hillary Clinton in a Park Avenue?)
+
+Jim Garner in a Maverick
+
+Kato in a green Hornet
+
+Nixon in a Checker
+
+Kissinger in a Diplomat
+
+Speedy Gonzales in a Fiesta
+
+Wile E. Coyote in a Road Runner
+
+Elmer Fudd in a Wabbit
+
+Miss Muffet in a Spyder
+
+Charles Lindberg in an Intrepid
+
+Christopher Columbus in a Voyager
+
+Blackbeard in a Corsair
+
+Russell Means in a Dakota
+
+Tonto in a Cherokee
+
+Dorothy in a Syclone
+
+Benjamin Franklin in a Lightning
+
+Carl Sagan in a Nova
+
+Bruce Lee in a Sidekick
+
+Oscar De la Hoya in a Challenger
+
+John Mellencamp in a Cougar
+
+Wonder Woman in a gold Lariat
+
+Edmund Halley in a Comet
+
+Public-TV yoga instructor Lillias in a Lotus
+
+Rosie O'Donnel and Charlton Heston in a Colt
+
+Yassir Arafat and Menahim Begin in an Accord
+
+Nostradamus and Jeanne Dixon in a Futura
+
+===== MESSAGE lokay-m/sent_items/146. =====
+Date: 2002-03-15T14:53:48 UTC
+From: michelle.lokay@enron.com
+To: steven.harris@enron.com, kimberly.watson@enron.com, lorraine.lindberg@enron.com, tk.lohman@enron.com, lindy.donoho@enron.com, mark.mcconnell@enron.com, paul.y'barbo@enron.com
+Cc: audrey.robertson@enron.com, michelle.lokay@enron.com
+Subject: California Capacity Report for Week of 03/11-03/15
+
+
+Transwestern's average deliveries to California were 989 MMBtu/d (91%), with San Juan lateral throughput at 877 MMBtu/d.  Total East deliveries averaged 405 MMBtu/d.  
+
+El Paso's average deliveries to California were 2136 MMBtu/d (73%):
+- PG&ETop, capacity of 1140 MMBtu/d, deliveries of 615 MMBtu/d (54%)
+- SoCalEhr, capacity 1250 MMBtu/d, deliveries of 1011 MMBtu/d (81%)
+- SoCalTop, capacity 540 MMBtu/d, deliveries of 510 MMBtu/d (94%)
+
+Friday's posted Gas Daily prices:
+	SoCal gas, large pkgs	  2.805 (+.08)
+	PG&E, large pkgs	  2.81 (+.13)
+	San Juan (non-Bondad)	  2.69 (+.125)   
+	TW Permian		  2.64 (+.10)
+
+===== MESSAGE lokay-m/sent_items/147. =====
+Date: 2002-03-15T19:31:23 UTC
+From: michelle.lokay@enron.com
+To: darrell.schoolcraft@enron.com
+Subject: FW: NWP System Notice - System Operations
+
+
+Subject: NWP System Notice - System Operations
+
+
+Post Date: March 15, 2002
+Category: CRITICAL NOTES
+Subcategory: MISCELLANEOUS
+Subject: System Operations
+
+Notice Text:
+All Shippers Letter #02-033
+Date:	3/15/02
+Time:	11:00 a.m. MST
+
+Subject: System Operations
+
+The purpose of this letter is to inform Northwest's shippers of how it
+intends to deal with the upcoming maintenance announced by Questar Pipeline
+at Clay Basin and by Transwestern Pipeline at its La Plata facilities.
+
+Questar Pipeline has announced it will shut in its Clay Basin facility from
+April 2, 2002 through April 15, 2002 and will then perform withdrawal tests
+on April 16 and 17, 2002.  During this time Northwest will have no access to
+Clay Basin.  Additionally, Transwestern Pipeline has announced that its La
+Plata Compressor facilities will be shut in from April 2 through April 5,
+2002, and will accept no deliveries from Northwest Pipeline.
+
+During the month of March north flow volumes through the Kemmerer compressor
+have exceeded capacity on a regular basis.  With Clay Basin shut in,
+Northwest's balancing flexibility will be significantly impaired.  Northwest
+will have no place to inject excess gas south of Kemmerer and as a result
+cannot physically accommodate overscheduled volumes.
+
+If north flow volumes continue to exceed Kemmerer capacity during the
+Questar and Transwestern maintenance, Northwest will take the following
+steps to maintain the reliability and integrity of its system: reduce line
+pack on the south end of its system prior to the maintenance; cut
+north-flowing alternate gas at compressor station cut points from La Plata
+to Meacham as necessary to mitigate high line pressures or overscheduling
+through Kemmerer; take all necessary steps to ensure that gas deliveries
+from receipt points south of the Meacham compressor closely approximate
+confirmed nominations;  entitle for undertakes or overtakes, as appropriate;
+and finally, if required, Northwest will issue operational flow orders.
+
+If net scheduled volumes north through Northwest's Kemmerer Compressor do
+not exceed physical capacity, Northwest will have much greater flexibility
+during the Clay Basin and Transwestern shut-ins.  Northwest's customers can
+help themselves and reduce the likelihood that Kemmerer will overschedule by
+securing adequate gas from Canadian suppliers or by using their Jackson
+Prairie storage during this work.
+
+Northwest will make every effort to reduce the impact on its customers of
+the Clay Basin and Transwestern shut-ins and will be monitoring the
+situation closely.  Northwest will take every opportunity to relax system
+restrictions in later cycles if north flow volumes moderate.  Northwest is
+confident that if its customers respond prudently, the impact of the
+Transwestern and Questar maintenance will be greatly reduced.
+
+If you have any questions, please contact your Marketing Services
+representative.
+
+===== MESSAGE lokay-m/sent_items/148. =====
+Date: 2002-03-15T19:37:22 UTC
+From: michelle.lokay@enron.com
+To: tdickers@westerngas.com
+Subject: RE: NWP System Notice - System Operations
+
+More information.  The Questar (Southern Trails) tie-in is for one day only, 04/02.  The Ignacio to Blanco line, from La Plata, will be down over 700 million (which is pretty much the whole lateral) from 04/02-04/05.  Talk soon, Michelle. 
+
+-----Original Message-----
+From: Terri Dickerson [mailto:TDICKERS@westerngas.com]
+Sent: Friday, March 15, 2002 1:20 PM
+To: Lokay, Michelle
+Subject: Fwd: NWP System Notice - System Operations
+
+
+Here's that e-mail from Northwest Pipeline which they sent to their customers.  Did you find out anything regarding the impact with the Southern Trails tie in.
+
+Terri Dickerson
+
+===== MESSAGE lokay-m/sent_items/149. =====
+Date: 2002-03-19T14:51:52 UTC
+From: michelle.lokay@enron.com
+To: dennis.lee@enron.com
+Subject: Burlington OBA name change
+
+ 
+Burlington has agreed to execute this outstanding OBA if the name on the contract is changed.  Can we update the name from BURLINGTON RESOURCES TRADING, INC.  to BURLINGTON RESOURCES Gathering, INC.
+
+===== MESSAGE lokay-m/sent_items/150. =====
+Date: 2002-03-19T14:56:54 UTC
+From: michelle.lokay@enron.com
+To: jreames@br-inc.com
+Subject: FW: Burlington OBA name change
+
+Julie,
+Contract Administration needs you to email them officially requesting a name change.  Thanks.
+
+ -----Original Message-----
+From: 	Lokay, Michelle  
+Sent:	Tuesday, March 19, 2002 8:52 AM
+To:	Lee, Dennis
+Subject:	Burlington OBA name change
+
+ 
+Burlington has agreed to execute this outstanding OBA if the name on the contract is changed.  Can we update the name from BURLINGTON RESOURCES TRADING, INC.  to BURLINGTON RESOURCES Gathering, INC.
+
+===== MESSAGE lokay-m/sent_items/152. =====
+Date: 2002-03-19T16:34:56 UTC
+From: michelle.lokay@enron.com
+To: 548@britishparts.com
+Subject: RE: Call when you receive this (no rush)
+
+HI
+
+-----Original Message-----
+From: Jim Lokay [mailto:548@britishparts.com]
+Sent: Tuesday, March 19, 2002 10:30 AM
+To: Lokay, Michelle
+Subject: Call when you receive this (no rush)
+
+
+
+
+Jim Lokay
+Sales Representative
+British Parts International
+800-231-6563  ext. 548
+mailto:548@britishparts.com
+
+===== MESSAGE lokay-m/inbox/27. =====
+Date: 2002-03-19T17:00:44 UTC
+From: kimberly.watson@enron.com
+To: steven.harris@enron.com, lindy.donoho@enron.com, lorraine.lindberg@enron.com, michelle.lokay@enron.com, paul.y'barbo@enron.com, tk.lohman@enron.com, mark.mcconnell@enron.com
+Subject: Surprise lunch for Rich Jolly
+
+I received a message that there will be a surprise lunch for Rich Jolly on Friday, March 29 from 11:30 to 1:00pm in ECN46C1.  Rich is retiring after 35 years of service.  Everyone is invited.
+
+Thanks, Kim.
+
+===== MESSAGE lokay-m/inbox/28. =====
+Date: 2002-03-19T19:07:43 UTC
+From: darrell.schoolcraft@enron.com
+To: david.roensch@enron.com, kimberly.watson@enron.com, michelle.lokay@enron.com, tk.lohman@enron.com, lorraine.lindberg@enron.com, mark.mcconnell@enron.com, paul.y'barbo@enron.com, jan.moore@enron.com, controllers.dl-ets@enron.com, john.buchanan@enron.com (+9 more)
+Subject: Postings
+
+Please see the attached.
+
+
+ds
+
+===== MESSAGE lokay-m/sent_items/153. =====
+Date: 2002-03-19T20:56:22 UTC
+From: michelle.lokay@enron.com
+To: ramona.betancourt@enron.com
+Subject: RE: TW CAS Hands -on Training
+
+30 minutes...is that all we need?  Let's schedule all the marketers:  me, Lorraine, TK, Paul, Mark, and Kim.  Thanks.
+
+ -----Original Message-----
+From: 	Betancourt, Ramona   
+Sent:	Tuesday, March 19, 2002 11:44 AM
+To:	Lokay, Michelle; Frazier, Perry
+Cc:	Holmes, Bradley
+Subject:	TW CAS Hands -on Training
+
+Michelle,
+
+A few months ago, TW Marketing and Fac. Planning had a meeting to discuss TW CAS system issues. At this meeting, you indicated that the TW Marketers would like to have some training on CAS. I have discussed with Perry Frazier & he would like to set up 30 minute one on one hands-on training sessions with each individual. 
+
+Can you coordinate with your team & identify a list of TW Marketer's who would like to have CAS training? I will work with Perry to schedule the training times.
+
+Thanks Ramona
+
+===== MESSAGE lokay-m/inbox/31. =====
+Date: 2002-03-21T17:24:38 UTC
+From: ramona.betancourt@enron.com
+To: michelle.lokay@enron.com, perry.frazier@enron.com
+Subject: FW: TW CAS Hands -on Training
+
+
+Perry,
+
+Michelle will meet with you on Friday morning 3/22/02 from 10:30 to 11:00 for CAS training. Michelle, Perry's new location is EB 3947. 
+
+Thanks Ramona
+ -----Original Message-----
+From: 	Frazier, Perry  
+Sent:	Wednesday, March 20, 2002 9:16 AM
+To:	Betancourt, Ramona 
+Subject:	RE: TW CAS Hands -on Training
+
+How about 3 back to back 30 minute sessions on Thursday 3/21/02 during the afternoon and then the same on Friday morning 3/22/02.  I will set up some test, "What if cases".  I would recommend they come to my work station ECN 3947.  Let me know if this is okay with the group.
+
+Thanks 
+PT
+
+ -----Original Message-----
+From: 	Betancourt, Ramona   
+Sent:	Tuesday, March 19, 2002 4:01 PM
+To:	Frazier, Perry
+Subject:	FW: TW CAS Hands -on Training
+
+
+Perry,
+
+FYI,
+
+Here is the list from Michelle. Let me know of some time that you can block out & I will schedule each.
+Thanks Ramona
+ -----Original Message-----
+From: 	Lokay, Michelle  
+Sent:	Tuesday, March 19, 2002 2:56 PM
+To:	Betancourt, Ramona 
+Subject:	RE: TW CAS Hands -on Training
+
+30 minutes...is that all we need?  Let's schedule all the marketers:  me, Lorraine, TK, Paul, Mark, and Kim.  Thanks.
+
+ -----Original Message-----
+From: 	Betancourt, Ramona   
+Sent:	Tuesday, March 19, 2002 11:44 AM
+To:	Lokay, Michelle; Frazier, Perry
+Cc:	Holmes, Bradley
+Subject:	TW CAS Hands -on Training
+
+Michelle,
+
+A few months ago, TW Marketing and Fac. Planning had a meeting to discuss TW CAS system issues. At this meeting, you indicated that the TW Marketers would like to have some training on CAS. I have discussed with Perry Frazier & he would like to set up 30 minute one on one hands-on training sessions with each individual. 
+
+Can you coordinate with your team & identify a list of TW Marketer's who would like to have CAS training? I will work with Perry to schedule the training times.
+
+Thanks Ramona
+
+===== MESSAGE lokay-m/sent_items/154. =====
+Date: 2002-03-20T18:05:06 UTC
+From: michelle.lokay@enron.com
+To: dennis.lee@enron.com
+Subject: FW: Contract #27600 (Bass/TW)
+
+
+
+-----Original Message-----
+From: Mark S Corley [mailto:mcorley@basspet.com]
+Sent: Wednesday, March 20, 2002 11:34 AM
+To: Lokay, Michelle
+Cc: RHenk@barbnet.com
+Subject: Contract #27600 (Bass/TW)
+
+
+Bass hereby requests that the MAXDTQ volume on the proposed amendment dated 
+3/13/02 on the subject contract be changed from 2,500 Dth to 2,200 Dth.
+
+Mark Corley
+Manager - Gas Marketing
+
+===== MESSAGE lokay-m/sent_items/155. =====
+Date: 2002-03-20T19:37:19 UTC
+From: michelle.lokay@enron.com
+To: paul.y'barbo@enron.com
+Subject: Clock-1
+
+  
+ 
+ C:\Documents and Settings\mlokay\Local Settings\Temporary Internet Files\OLK118\Clock-1.htm
+
+===== MESSAGE lokay-m/sent_items/157. =====
+Date: 2002-03-20T20:11:10 UTC
+From: michelle.lokay@enron.com
+To: 548@britishparts.com
+Subject: Clock
+
+  
+ 
+ Clock-1
+
+===== MESSAGE lokay-m/inbox/29. =====
+Date: 2002-03-20T20:38:51 UTC
+From: kimberly.watson@enron.com
+To: lorraine.lindberg@enron.com, michelle.lokay@enron.com, paul.y'barbo@enron.com, tk.lohman@enron.com, mark.mcconnell@enron.com
+Subject: FW: TW Order 637 Filing
+
+It may be a good idea for everyone to attend this meeting to get brought up to speed on the 637 filing.
+
+See you there.
+
+Kim.
+
+ -----Original Message-----
+From: 	Lokey, Teb  
+Sent:	Wednesday, March 20, 2002 2:03 PM
+To:	Harris, Steven; Kilmer III, Robert; Rapp, Bill; Donoho, Lindy; Hass, Glen; Watson, Kimberly; Schoolcraft, Darrell; Doll, Jeanette; Lichtenwalter, Blair
+Subject:	TW Order 637 Filing
+
+Please plan to attend a meeting regarding TW's Order 637 filing immediately following Steve's staff meeting on Monday, March 24.  We will remain in 39C1 following Steve's meeting to discuss the strategy for resolving TW's Order 637 issues.  FERC Chairman Pat Wood has pledged to get all 637 orders issued by this August so we need to consider what we need to do to eliminate those proposals we no longer want and, hopefully, trade them for deferring segmenting until the next rate case.  Please invite anyone else who could benifit from or contribute to this meeting.
+
+===== MESSAGE lokay-m/inbox/30. =====
+Date: 2002-03-21T03:22:24 UTC
+From: richard.hanagriff@enron.com
+To: bert.hernandez@enron.com, amy.mulligan@enron.com, darrell.schoolcraft@enron.com, kimberly.watson@enron.com, michelle.lokay@enron.com, mark.mcconnell@enron.com, lorraine.lindberg@enron.com, john.buchanan@enron.com, tracy.minter@enron.com, christine.mcevoy@enron.com (+3 more)
+Cc: rick.dietz@enron.com
+Subject: TW imbalance summary
+
+fyi
+
+there was a measurement adj during Feb at NNG Beaver (pressure base change) which caused fewer volumes to be measured resulting in approximately 60,000 mmbtus due NNG
+
+line pack has increased by approximately 253,000 mmbtus during March as a result of oba activity
+
+===== MESSAGE lokay-m/sent_items/158. =====
+Date: 2002-03-22T15:22:16 UTC
+From: michelle.lokay@enron.com
+To: audrey.robertson@enron.com
+Subject: FW: ORGANIZATION MEETING
+
+
+
+ -----Original Message-----
+From: 	Stark, Cindy   On Behalf Of Horton, Stanley
+Sent:	Friday, March 22, 2002 8:32 AM
+To:	Hyatt, Kevin; Lohman, TK; Y'barbo, Paul; Lokay, Michelle; McConnell, Mark; Donoho, Lindy; Dietz, Rick; Nacey, Sheila; Scott, Donna; Bryant, Mike; Blair, Lynn; January, Steve; Holmes, Bradley
+Subject:	ORGANIZATION MEETING
+Importance:	High
+
+Please rearrange your schedules to attend a meeting with Stan Horton today at 10:45am in 49C3.   Sorry for the short notice.
+
+Cindy Stark
+Executive Assistant to Stan Horton
+Tel:   713/853-6197
+Fax:  713/345-7047
+Cindy.Stark@enron.com
+
+===== MESSAGE lokay-m/inbox/32. =====
+Date: 2002-03-22T15:22:48 UTC
+From: michelle.lokay@enron.com
+To: steven.harris@enron.com, kimberly.watson@enron.com, lorraine.lindberg@enron.com, tk.lohman@enron.com, lindy.donoho@enron.com, mark.mcconnell@enron.com, paul.y'barbo@enron.com
+Cc: audrey.robertson@enron.com, michelle.lokay@enron.com
+Subject: California Capacity Report for Week of 03/18-03/22
+
+
+Transwestern's average deliveries to California were 884 MMBtu/d (81%), with San Juan lateral throughput at 773 MMBtu/d.  Total East deliveries averaged 391 MMBtu/d.  
+
+El Paso's average deliveries to California were 1896 MMBtu/d (65%):
+- PG&ETop, capacity of 1140 MMBtu/d, deliveries of 608 MMBtu/d (53%)
+- SoCalEhr, capacity 1250 MMBtu/d, deliveries of 863 MMBtu/d (69%)
+- SoCalTop, capacity 540 MMBtu/d, deliveries of 425 MMBtu/d (79%)
+
+Friday's posted Gas Daily prices:
+	SoCal gas, large pkgs	  3.18 (+.375)
+	PG&E, large pkgs	  3.18 (+.37)
+	San Juan (non-Bondad)	  3.015 (+.325)   
+	TW Permian		  3.04 (+.40)
+
+===== MESSAGE lokay-m/sent_items/160. =====
+Date: 2002-03-22T16:36:19 UTC
+From: michelle.lokay@enron.com
+To: darrell.schoolcraft@enron.com
+Subject: FW: Bullets 03/22/02
+
+
+
+ -----Original Message-----
+From: 	Lokay, Michelle  
+Sent:	Friday, March 22, 2002 10:23 AM
+To:	Watson, Kimberly
+Subject:	Bullets 03/22/02
+
+
+TW sold a total of 229,023 MMBtu/day of operational line pack at an average rate of $3.197/MMBtu.  The sales were to Astra Power.
+Finalized OBA reconciliations with Mojave Pipeline.  Agreement to pay back physically 10,000 MMBtu/day for the remainder of this month with cash out for balance at the March Bloomberg index.  The physical gas is being sold daily and have already generated an additional $72,700.
+New dollar-valued OBA, containing monthly cash out provision, with Burlington is executed.
+
+Michelle Lokay
+Account Director
+Transwestern Commercial Group
+713-345-7932
+
+===== MESSAGE lokay-m/inbox/33. =====
+Date: 2002-03-25T16:47:08 UTC
+From: audrey.robertson@enron.com
+To: kevin.hyatt@enron.com, lindy.donoho@enron.com, tk.lohman@enron.com, michelle.lokay@enron.com, mark.mcconnell@enron.com, audrey.robertson@enron.com, e-mail <.shelley@enron.com>, paul.y'barbo@enron.com
+Cc: ricki.winters@enron.com
+Subject: Strategy Meeting - TW Commercial Team
+
+
+Per discussions in Shelley's introductory meeting this morning, please mark your calendars to reflect a Strategy Meeting on Thursday of this week, March 28, 2:00 - 3:30 pm in ECN-39C1.
+
+Please let me know if there are any conflicts.
+
+Thanks in advance,
+
+adr
+
+Audrey D. Robertson
+Transwestern Pipeline Company 
+email address:  audrey.robertson@enron.com
+(713) 853-5849
+(713) 646-2551 Fax
+
+===== MESSAGE lokay-m/sent_items/161. =====
+Date: 2002-03-25T19:18:05 UTC
+From: michelle.lokay@enron.com
+To: shelley.corman@enron.com
+Subject: TW On Call Schedule
+
+ 
+Shelley, here is the current weekend on-call schedule for the TW marketers.
+
+===== MESSAGE lokay-m/sent_items/162. =====
+Date: 2002-03-25T20:18:41 UTC
+From: michelle.lokay@enron.com
+To: lokay@bigfoot.com
+Subject: FW: Marketing
+
+
+
+-----Original Message-----
+From: Terri Dickerson [mailto:TDICKERS@westerngas.com]
+Sent: Monday, March 25, 2002 1:57 PM
+To: Lokay, Michelle
+Subject: Marketing
+
+
+Michelle:  Let's see if this works.  I've attached the description.  Also, I spoke with Johnny Tramel this morning but he does not have any openings. Let me know if you get this.
+
+Terri D
+
+===== MESSAGE lokay-m/sent_items/163. =====
+Date: 2002-03-25T20:20:45 UTC
+From: michelle.lokay@enron.com
+To: tdickers@westerngas.com
+Subject: RE: Marketing
+
+Got it!  Will send you documentation this evening.  Thanks for speaking with Johnny.
+
+-----Original Message-----
+From: Terri Dickerson [mailto:TDICKERS@westerngas.com]
+Sent: Monday, March 25, 2002 1:57 PM
+To: Lokay, Michelle
+Subject: Marketing
+
+
+Michelle:  Let's see if this works.  I've attached the description.  Also, I spoke with Johnny Tramel this morning but he does not have any openings. Let me know if you get this.
+
+Terri D
+
+===== MESSAGE lokay-m/inbox/34. =====
+Date: 2002-03-25T21:10:07 UTC
+From: bill.rapp@enron.com
+To: teb.lokey@enron.com, jeanette.doll@enron.com, michelle.lokay@enron.com, kevin.hyatt@enron.com
+Cc: ruth.mann@enron.com
+Subject: TW Meeting re Burlington Contracts
+
+The meeting on the Burlington Resources contracts scheduled for tomorrow (Tuesday, March 26) at 9:00 a.m. in EB47C2 has been cancelled due to recent personnel changes at Transwestern. Another meeting will be scheduled later this week. Thanks.
+
+===== MESSAGE lokay-m/inbox/35. =====
+Date: 2002-03-25T21:11:43 UTC
+From: lorraine.lindberg@enron.com
+To: kimberly.watson@enron.com, audrey.robertson@enron.com, jan.moore@enron.com, michelle.lokay@enron.com, mark.mcconnell@enron.com, lindy.donoho@enron.com, paul.y'barbo@enron.com, tk.lohman@enron.com
+Subject: Dinner 4/5
+
+Hi Everyone - Please plan on coming over to Chez Lindberg for dinner on Friday, April 5 at 6:30 pm.  
+Spouses and/or significant others welcome.
+Directions:
+
+I - 10 West to Blalock/Echo Lane exit.
+
+Make a U - turn, (you'll be heading east on the feeder now)
+
+Turn right on Piney Point (between the Just Brakes Shop and the Tall Plant Shop)
+
+Turn right on South Chestwood.
+
+3rd house on the right. 
+
+11410 South Chestwood
+713-827-8760
+
+We are looking forward to seeing everyone!  Ciao.
+
+Lorraine
+
+===== MESSAGE lokay-m/inbox/36. =====
+Date: 2002-03-25T22:57:44 UTC
+From: bhitschel@tesoropetroleum.com
+To: michelle.lokay@enron.com
+Subject: ABCNEWS.com: Playboy Seeks Full Disclosure From Women of Enron
+
+You have received this ABCNEWS.com mail from:
+
+bonbon
+bhitschel@tesoropetroleum.com
+
+I thought you might find this story interesting.
+
+Playboy Seeks Full Disclosure From Women of Enron
+http://abcnews.go.com/wire/Entertainment/reuters20020325_426.html
+
+===== MESSAGE lokay-m/inbox/37. =====
+Date: 2002-03-25T23:13:29 UTC
+From: craig.buehler@enron.com
+To: craig.buehler@enron.com, esther.dasilva@enron.com, zuela.carter@enron.com, paul.cherry@enron.com, michelle.lokay@enron.com, tk.lohman@enron.com, jan.moore@enron.com, angela.white@enron.com, paul.y'barbo@enron.com, mark.mcconnell@enron.com (+5 more)
+Cc: rick.dietz@enron.com
+Subject: TW Contract Status as of March 25th @ 5:15 pm
+
+PROCESSING
+
+25071	BP Energy	Eff 4/2-4/5/02	90,000/d	Swap RP Volumes	Need CAF
+
+25374	Oneok		Extend to 4/30/02	12,500/d	Panhdle to Beav #1	Need CAF
+
+NEW	Tenaska	4/1/02-10/31/02	10,000/d	WT Pool to WC River	Processing	
+
+TENDERED
+
+GS	Energas	New Gas Sales Agreement					Tendered 3/11
+
+OBA	Lone Star	New OBA Agreement Ward RP, Ward DP & LS Pecos	 	EXECUTED
+
+27600	Bass Enter	Extend to 5/31/03	2,500/d	Crawford to Valero	Tendered 3/14
+
+27579	Duke Energy	Eff 3/15		20,000/d	Swap RP Vols		EXECUTED
+
+27848	Sempra		Eff 3/17-3/18		15,000/d	Swap DP Vols		EXECUTED
+
+26816	Sempra		Eff 3/17-3/18		21,500/d	Swap DP Vols		EXECUTED
+
+27849	UBS AG		New ITS-1 Agreement						Tendered 3/20
+
+100001	Tenaska	4/1/02-5/31/02	5,000/d	W Tex to WS Ward	EXECUTED 
+
+100002	UBS AG		New Pooling Agreement					Tendered 3/20
+
+===== MESSAGE lokay-m/inbox/74. =====
+Date: [no usable date: out_of_range; raw header: 'Wed, 12 Mar 2031 08:14:00 -0600 (CST)']
+From: tammy.jaquet@enron.com
+To: michelle.lokay@enron.com
+Subject: FW: capacity posting
+
+Michelle, forwarding this so it does not get lost. The posting went up late again
+and we had two shippers call about it before it was live.
+
+Tammy
+
+===== MESSAGE williams-w3/inbox/142. =====
+Date: [no usable date: unparseable; raw header: 'Tues, 32 Febuary 2001 25:61:00']
+From: clem.cernosek@enron.com
+To: bill.williams@enron.com
+Subject: Meter 984132 recap
+
+Bill, recap for the meter is attached in the usual format. Volumes tie to the
+scheduled quantity except for the 14th, which I am still working through with
+the operator.
+
+Clem
+
+===== END OF chunk-015: 141 messages, last was williams-w3/inbox/142. =====

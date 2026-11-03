@@ -2,17 +2,17 @@
 
 import argparse
 import json
+import os
 import sys
 from pathlib import Path
 
 from . import CORPUS_DIR, OUT_DIR, run as runner, serve as dashboard
 from .chunk import build_chunks
+from .draft import finalize
+from .explore import ANALYSTS, EXPLORE_MINUTES, coverage, check, coverage_line, reject, save
 from .ingest import ingest
 from .state import (CORPUS_WIDE_OUTPUTS, RUN_OUTPUTS, corpus_digest, format_action, log, next_action,
-                    read_json, remove_outputs, run_active, scout_output, write_json)
-from .group import group
-from .score import score
-from .validate import validate
+                    read_json, remove_outputs, run_active, write_json)
 
 
 def prepare(corpus_dir: Path, out_dir: Path) -> str:
@@ -21,11 +21,11 @@ def prepare(corpus_dir: Path, out_dir: Path) -> str:
     previous = previous["chunks"] if isinstance(previous, dict) else []
     chunks = build_chunks(messages, previous=previous)
 
-    # Unchanged chunks keep their scout output. Any change at all invalidates
-    # the corpus-wide results built from every scout output.
+    # Unchanged chunks keep their reader's leads. Any change at all invalidates
+    # the corpus-wide results.
     current = {(c["id"], c["sha256"]) for c in chunks}
     if current != {(c["id"], c["sha256"]) for c in previous}:
-        for stale in (out_dir / "scout").glob("chunk-*.json"):
+        for stale in (out_dir / "leads").glob("chunk-*.json"):
             if stale.stem not in {c["id"] for c in chunks}:
                 stale.unlink()
         remove_outputs(out_dir, CORPUS_WIDE_OUTPUTS)
@@ -60,7 +60,7 @@ def prepare(corpus_dir: Path, out_dir: Path) -> str:
     return summary
 
 
-STEPS = {"prepare": prepare, "validate": validate, "group": group, "score": score}
+STEPS = {"prepare": prepare, "finalize": finalize}
 
 
 def status(corpus_dir: Path, out_dir: Path) -> str:
@@ -94,22 +94,32 @@ def start_dashboard(out_dir: Path, corpus_dir: Path) -> str:
 
 def main() -> None:
     parser = argparse.ArgumentParser(prog="python -m pipeline")
-    parser.add_argument("step", choices=["run", "status", "reset", "dashboard", "serve", "next", "scouts", *STEPS])
-    parser.add_argument("ids", nargs="*", help="scouts: chunk ids to read (default: all without output)")
+    parser.add_argument("step", choices=["run", "status", "reset", "dashboard", "serve", "next", "check", "save", "reject", "coverage", *STEPS])
+    parser.add_argument("ids", nargs="*", help="check, save, reject: the proposal or rejection file")
     parser.add_argument("--corpus", type=Path, default=CORPUS_DIR)
-    parser.add_argument("--out", type=Path, default=OUT_DIR)
-    parser.add_argument("--parallel", type=int, default=runner.MAX_PARALLEL)
-    parser.add_argument("--max-minutes", type=float, default=9)
-    parser.add_argument("--force", action="store_true", help="scouts: re-read chunks that have output")
+    # The critic runs check, save and reject from the agents' folder, where the run sets PIPELINE_OUT.
+    parser.add_argument("--out", type=Path, default=Path(os.environ.get("PIPELINE_OUT") or OUT_DIR))
+    parser.add_argument("--parallel", type=int, default=runner.MAX_PARALLEL, help="run: the readers or drafters to run at once")
+    parser.add_argument("--minutes", type=float, default=EXPLORE_MINUTES, help="run: the minutes the analysts explore")
+    parser.add_argument("--analysts", type=int, default=ANALYSTS, help="run: the analysts to run at once")
     parser.add_argument("--port", type=int, default=dashboard.PORT, help="serve: the port to listen on")
     args = parser.parse_args()
 
     if args.step == "run":
         # The dashboard is up before any work starts, so the run can be watched.
         print(f"dashboard: {start_dashboard(args.out, args.corpus)}", flush=True)
-        line = runner.run(args.corpus, args.out, STEPS, args.parallel, args.max_minutes)
+        line = runner.run(args.corpus, args.out, STEPS, args.parallel, args.minutes, args.analysts,
+                          echo=lambda text: print(text, flush=True))
         print(line)
         sys.exit(1 if line.startswith("FAILED") else 0)
+    elif args.step in ("check", "save", "reject"):
+        file = args.ids[0] if args.ids else None
+        done, text = reject(args.out, file) if args.step == "reject" else             {"check": check, "save": save}[args.step](args.corpus, args.out, file)
+        print(text)
+        # Asking what a command needs is not a failure; a file it refuses is.
+        sys.exit(0 if done or not args.ids else 1)
+    elif args.step == "coverage":
+        print(coverage_line(coverage(args.out)))
     elif args.step == "status":
         print(status(args.corpus, args.out))
     elif args.step == "reset":
@@ -122,18 +132,6 @@ def main() -> None:
         print(format_action(next_action(args.corpus, args.out)))
     elif args.step in STEPS:
         print(STEPS[args.step](args.corpus, args.out))
-    elif args.step == "scouts":
-        chunks = (read_json(args.out / "chunks.json") or {}).get("chunks", [])
-        if args.ids:
-            chunks = [c for c in chunks if c["id"] in args.ids]
-        if args.force:
-            for c in chunks:
-                scout_output(args.out, c).unlink(missing_ok=True)
-        chunks = [c for c in chunks if not scout_output(args.out, c).exists()]
-        if not chunks:
-            sys.exit("nothing to read: run prepare first, or every chunk named already has output")
-        for r in runner.run_tasks(args.out, [runner.scout_task(args.out, c) for c in chunks], args.parallel):
-            print(runner.agents.describe(r))
 
 
 if __name__ == "__main__":

@@ -1,0 +1,250 @@
+{
+  "leads": [
+    {
+      "work": "Moving terminated counterparties' deals into the bankruptcy books, done over and over. Several people (Stacey Richardson, Cyndie Balfour-Flanagan, Patrick Mulvany, Diane Anderson) send piecemeal spreadsheet lists, often one or more a day, including 'stragglers'. Risk (Love and Giron) or IT (Cecilia Cheung) then moves the deals by hand or by script, retranslates them and cross-checks against the price book. Some deals also get moved back out again (Midland Cogen).",
+      "why": "Lists arrive almost every day from several sources in different formats, and the same counterparties come back on revised lists. One move covered more than 10,000 deals and took a long retranslation. Another note says '7,000 lines... at least a day for risk to move manually'. There are repeated back-and-forth questions about books, cutoff dates and commodity codes, and people keep asking 'is this the last list?'. Legal also sends daily termination letters and a Master Termination Log. This is a rules-driven workflow that could be automated: termination log in, book move out.",
+      "files": [
+        "giron-d/inbox/117.",
+        "giron-d/inbox/116.",
+        "giron-d/inbox/115.",
+        "giron-d/inbox/108.",
+        "giron-d/inbox/94.",
+        "giron-d/inbox/105.",
+        "giron-d/inbox/103.",
+        "giron-d/inbox/95.",
+        "giron-d/inbox/93.",
+        "giron-d/inbox/91.",
+        "giron-d/inbox/88.",
+        "giron-d/inbox/85.",
+        "giron-d/inbox/84.",
+        "giron-d/inbox/83.",
+        "giron-d/inbox/82.",
+        "giron-d/inbox/76.",
+        "giron-d/inbox/72.",
+        "giron-d/inbox/67.",
+        "giron-d/inbox/65.",
+        "giron-d/inbox/58.",
+        "giron-d/inbox/61.",
+        "giron-d/inbox/57.",
+        "giron-d/inbox/55.",
+        "giron-d/inbox/53.",
+        "giron-d/inbox/46.",
+        "giron-d/inbox/42.",
+        "giron-d/inbox/44.",
+        "giron-d/inbox/39.",
+        "giron-d/inbox/37."
+      ]
+    },
+    {
+      "work": "A weekly California Capacity Report that Michelle Lokay compiles by hand. It gives Transwestern and El Paso deliveries and utilisation percentages by delivery point, plus Gas Daily prices, and goes to the Transwestern commercial team.",
+      "why": "It goes out every week in the same template, and the numbers are pulled from pipeline data and Gas Daily. That makes it a good candidate for an automated report.",
+      "files": [
+        "lokay-m/sent_items/40.",
+        "lokay-m/sent_items/30.",
+        "lokay-m/sent_items/79."
+      ]
+    },
+    {
+      "work": "Manual billing adjustments and marketing-fee calculations for capacity releases with an upside-sharing arrangement (ENA to Burlington). On top of that, the Transwestern Capacity Release Report is re-sent to a large list every time a release is posted.",
+      "why": "Each month someone works out the release credit and the 50/50 marketing fee by hand and adjusts the invoice manually. Several people discuss it before billing. The February figures were built by copying the January format. The release report is also reissued whenever something changes.",
+      "files": [
+        "lokay-m/sent_items/45.",
+        "lokay-m/sent_items/44.",
+        "lokay-m/sent_items/20."
+      ]
+    },
+    {
+      "work": "Marketing Transwestern's available firm capacity postings. Lokay emails each customer separately with the same link and the line 'bids due today at 5:00', after asking colleagues to review the posting first.",
+      "why": "The same message went out several times in one day, each to a single recipient. A mail-merge or notification from the pipeline's electronic bulletin board (EBB) could do this.",
+      "files": [
+        "lokay-m/sent_items/39.",
+        "lokay-m/sent_items/38.",
+        "lokay-m/sent_items/37.",
+        "lokay-m/sent_items/36.",
+        "lokay-m/sent_items/35.",
+        "lokay-m/sent_items/34."
+      ]
+    },
+    {
+      "work": "Daily re-forwarding of the Energy Market Report and the Gas Daily and Power Daily PDFs by assistants (Jill Chatterton, Theresa Villeggiante). Recipient lists are kept up by hand.",
+      "why": "These go out every day by hand-forwarding. Bill Williams asked for the real-time group to be added and then had to type out the names one by one. One day's send was only to say Gas Daily wasn't loaded yet. A direct subscription or a distribution list would remove this work.",
+      "files": [
+        "williams-w3/inbox/86.",
+        "williams-w3/inbox/75.",
+        "williams-w3/inbox/62.",
+        "williams-w3/inbox/57.",
+        "williams-w3/inbox/49.",
+        "williams-w3/sent_items/7.",
+        "williams-w3/sent_items/6.",
+        "williams-w3/sent_items/5.",
+        "williams-w3/inbox/67.",
+        "williams-w3/inbox/50."
+      ]
+    },
+    {
+      "work": "El Paso Electric (EPE) schedules, model and prescheduling sheets kept by hand in Excel and emailed every day. Real-time traders also check out tags by hand with counterparties.",
+      "why": "Errors happened several days running: cancelled tags still in the sheet, wrong MW amounts, and missing tags because some counterparties don't list EPMIWE as the purchasing-selling entity (PSE). Someone has to phone LADWP and WESCO to confirm. Staff are talking about moving who owns the preschedules. Printed records are filed in a folder on a desk. The daily EPE model is emailed out. The mail notes this is the real-time desk's only income, so the errors matter.",
+      "files": [
+        "williams-w3/inbox/94.",
+        "williams-w3/inbox/79.",
+        "williams-w3/sent_items/10.",
+        "williams-w3/inbox/52.",
+        "williams-w3/inbox/76.",
+        "williams-w3/sent_items/8.",
+        "williams-w3/inbox/103.",
+        "williams-w3/sent_items/17."
+      ]
+    },
+    {
+      "work": "The fragile El Paso data scrape and the import of ISO finals. When Netscape or the scrape fails, the day-ahead (DA) and hour-ahead (HA) finals are not created. The scrape URL keeps changing, and profile errors come from unmapped drives.",
+      "why": "Night-shift reports describe repeated failures that left whole days without finals. New scrape addresses were announced several times in one week, and a help-tip page for the H: drive mapping issue had to be written. The process is brittle and would be worth automating properly.",
+      "files": [
+        "williams-w3/inbox/102.",
+        "williams-w3/inbox/93.",
+        "williams-w3/inbox/100.",
+        "williams-w3/inbox/98.",
+        "williams-w3/inbox/81.",
+        "williams-w3/inbox/80.",
+        "williams-w3/inbox/60.",
+        "williams-w3/inbox/78."
+      ]
+    },
+    {
+      "work": "Keeping P&L spreadsheets, hedgestrips, macros and curve files up to date by hand after books, sheets or environments are renamed (Netco/UBS migration). There is also work to standardise the regional P&L formats.",
+      "why": "There are several 'heads up' emails: edit the Copy Physical macro, re-link the Weapon-X tabs, refresh the booklists in hedgestrips, and change the environment, service and network settings in every curve file. Each region builds its own P&L summary. Kam Keiser asks for a single common format, and notes the West desk already uses a macro instead of links. Links break every time books change.",
+      "files": [
+        "giron-d/inbox/59.",
+        "giron-d/inbox/50.",
+        "giron-d/inbox/49.",
+        "giron-d/inbox/48.",
+        "giron-d/inbox/47.",
+        "giron-d/inbox/36.",
+        "giron-d/inbox/32.",
+        "giron-d/inbox/23."
+      ]
+    },
+    {
+      "work": "Daily positions and financial-deal extracts sent to Credit and Estate (Elena Chilkina, Ed McMichael), plus reconciling counterparty exposure between Risk and Credit Aggregation.",
+      "why": "A positions file is saved and emailed every night. The extracts are too big to email and get refined on request (exclude internal entities and NYMEX). A meeting was needed just to agree on matching Post IDs and counterparty lists between groups.",
+      "files": [
+        "giron-d/inbox/40.",
+        "giron-d/inbox/78.",
+        "giron-d/inbox/77.",
+        "giron-d/inbox/35."
+      ]
+    },
+    {
+      "work": "Setting up system access by collecting user lists over email: Netco Sitara access by region, eRequest approvals, Stack Manager configuration surveys, and lists of traders or P&L responsibility.",
+      "why": "Russ Severson had to chase people for lists. Dan Diamond sent a survey and then follow-ups asking people to reply '1' or '2' in the subject line. Managers send hand-typed name lists (hourly traders, central traders, P&L responsibility). This information could come from the HR or org directory.",
+      "files": [
+        "giron-d/inbox/114.",
+        "giron-d/inbox/112.",
+        "giron-d/inbox/111.",
+        "giron-d/inbox/38.",
+        "williams-w3/inbox/71.",
+        "williams-w3/inbox/70.",
+        "williams-w3/inbox/56.",
+        "williams-w3/sent_items/3.",
+        "williams-w3/sent_items/4.",
+        "giron-d/inbox/66.",
+        "giron-d/inbox/34.",
+        "giron-d/inbox/33."
+      ]
+    },
+    {
+      "work": "Concur expense-report approval notifications and chasing approvers for quick approval.",
+      "why": "There are frequent small reports ($57 to $91) from the same employees, each needing a manager's approval. Before closing, approvers were also asked to approve everything quickly.",
+      "files": [
+        "williams-w3/inbox/96.",
+        "williams-w3/inbox/66.",
+        "williams-w3/inbox/63.",
+        "williams-w3/inbox/55.",
+        "giron-d/inbox/15."
+      ]
+    },
+    {
+      "work": "Collecting UBS onboarding paperwork (benefits, direct deposit, W-4, drug tests, orientation RSVPs) by repeated mass emails and individual follow-ups.",
+      "why": "The same forms were requested several times with urgent deadlines. Messages went to the wrong 'Bill Williams', and individuals were told information was missing. Repeated orientation sessions were also held.",
+      "files": [
+        "williams-w3/inbox/97.",
+        "williams-w3/inbox/141.",
+        "williams-w3/inbox/64.",
+        "williams-w3/inbox/42.",
+        "williams-w3/inbox/47.",
+        "giron-d/inbox/102.",
+        "giron-d/inbox/92."
+      ]
+    },
+    {
+      "work": "Integration testing and IT migration status reporting: daily status reports due at 3pm in shared folders, long status emails to big lists, and migrations that keep getting postponed.",
+      "why": "There is recurring status-report overhead across dozens of people. Testing repeatedly stalled on data setup issues, and account migrations were rescheduled more than once.",
+      "files": [
+        "giron-d/inbox/68.",
+        "giron-d/inbox/29.",
+        "giron-d/inbox/22.",
+        "giron-d/inbox/17.",
+        "giron-d/inbox/45.",
+        "giron-d/inbox/41.",
+        "giron-d/inbox/80."
+      ]
+    },
+    {
+      "work": "Valuing the Peoples Gas / NSS deals and restating P&L: manual cash-flow valuation files, re-running values as of different dates, fixing deals that were killed or booked by mistake, and restating January.",
+      "why": "The work went through several rounds with Deirdre McCaffrey, Laura Luce and Richard Tomaski. Values came out 'way too high', had to be revalued as of a different date, and problems with annuities and liquidations forced a restatement. Manual valuation like this is error-prone.",
+      "files": [
+        "giron-d/inbox/104.",
+        "giron-d/inbox/100.",
+        "giron-d/inbox/96.",
+        "giron-d/inbox/19.",
+        "giron-d/inbox/31.",
+        "giron-d/inbox/28.",
+        "giron-d/inbox/27.",
+        "giron-d/inbox/25.",
+        "giron-d/inbox/21."
+      ]
+    },
+    {
+      "work": "Reconciling Mojave interconnect imbalances (scheduled versus measured volumes) with El Paso using spreadsheets.",
+      "why": "Lokay builds and emails spreadsheets of historical measured versus scheduled volumes on the Mojave operational balancing agreement (OBA). The reconciliation is recurring and manual.",
+      "files": [
+        "lokay-m/sent_items/29.",
+        "lokay-m/sent_items/76."
+      ]
+    },
+    {
+      "work": "Unclear routing of executed contracts, amendments and sales confirmations between Marketing and Contracts/Accounting, and slow tools for capacity analysis.",
+      "why": "Lokay writes 'I am not sure how this info gets to you' when sending an executed gas sales confirmation. Amendments are routed for signature with copies sent back by email. Planning reports the Capacity Analysis System (CAS) as slow and buggy, which delays Marketing.",
+      "files": [
+        "lokay-m/sent_items/80.",
+        "lokay-m/sent_items/31.",
+        "lokay-m/sent_items/21."
+      ]
+    },
+    {
+      "work": "Coordinating the real-time shift schedule by email: posted schedules, swapping shifts and reporting changes.",
+      "why": "Bill Williams asks for an email plus a note on the schedule for every change, and staff report each swap one by one. This is a recurring small overhead.",
+      "files": [
+        "williams-w3/sent_items/13.",
+        "williams-w3/inbox/95."
+      ]
+    },
+    {
+      "work": "Collecting time reports, and handing out perks such as rodeo tickets, by email reminders and requests.",
+      "why": "An assistant chases time reports with 'due today' emails. Ticket requests are collected by email with first, second and third choices, and handled by hand.",
+      "files": [
+        "lokay-m/sent_items/75.",
+        "lokay-m/sent_items/33.",
+        "lokay-m/sent_items/32."
+      ]
+    },
+    {
+      "work": "Investigating unexplained payments and settlement items (a check sent to MPC with no known reason), plus manual distribution of CAISO settlement and unaccounted-for (USF) reports.",
+      "why": "A $19,937 check was cut that the recipient couldn't explain, so a trader has to chase it down. The ISO sends reports by hand through account managers. Both point to settlement reconciliation that could be improved.",
+      "files": [
+        "williams-w3/sent_items/12.",
+        "williams-w3/inbox/48.",
+        "williams-w3/inbox/83."
+      ]
+    }
+  ]
+}

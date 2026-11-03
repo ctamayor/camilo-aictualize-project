@@ -1,0 +1,290 @@
+{
+  "leads": [
+    {
+      "work": "Monthly gas settlements chasing price differences: settlements staff (mostly Megan Parker, also Elizabeth Hernandez and Tess Ray) email the logistics lead (Daren Farmer) one deal at a time to check prices in Sitara against counterparty invoices. Counterparties include Mirant, Texaco, DEFS, Tristar, Duke, Houston Exploration, MGI, Global Octanes and Dow (Cowtrap/Blue Dolphin).",
+      "why": "A steady stream of single-deal questions, each needing someone to look up the trader or the trader's deal book. Requests sit unanswered (Hernandez re-sent after 3 weeks). Amounts are large (Houston Expl. $222k, MGI $10.6k), and some deals belong to traders who have left (Danny Conner). Lee Papayoti could not edit an old Enron deal after the move to AEP.",
+      "files": [
+        "farmer-d/logistics/139.",
+        "farmer-d/logistics/138.",
+        "farmer-d/logistics/133.",
+        "farmer-d/logistics/129.",
+        "farmer-d/logistics/119.",
+        "farmer-d/logistics/110.",
+        "farmer-d/logistics/99.",
+        "farmer-d/logistics/96.",
+        "farmer-d/logistics/90.",
+        "farmer-d/logistics/91.",
+        "farmer-d/logistics/106.",
+        "farmer-d/logistics/124.",
+        "farmer-d/logistics/123.",
+        "farmer-d/logistics/113."
+      ]
+    },
+    {
+      "work": "Flows with no deal in Sitara, or with expired contracts or deals: settlements cannot pay or invoice until someone creates, extends or releases the deal. This sets off long forwarding chains across logistics, contracts and the AEP/HPL side.",
+      "why": "The D&H Gas sale at meter 428 came up in May and again in June, passing through about 8 people and still not flowing to Unify. Other cases: meter 3425, El Paso Merchant (Megan waited about 2 weeks), Equistar swing, three AEP deals missing, TXU Fuel imbalance deals, Cowtrap allocation with a noon payment deadline, a deal that stayed unreleased, and Blue Dolphin June volumes.",
+      "files": [
+        "farmer-d/logistics/117.",
+        "farmer-d/logistics/116.",
+        "farmer-d/logistics/114.",
+        "farmer-d/logistics/112.",
+        "farmer-d/logistics/98.",
+        "farmer-d/logistics/137.",
+        "farmer-d/logistics/95.",
+        "farmer-d/logistics/94.",
+        "farmer-d/logistics/93.",
+        "farmer-d/logistics/105.",
+        "farmer-d/logistics/103.",
+        "farmer-d/logistics/134.",
+        "farmer-d/logistics/130.",
+        "farmer-d/logistics/128.",
+        "farmer-d/logistics/127.",
+        "farmer-d/logistics/100.",
+        "farmer-d/logistics/89.",
+        "farmer-d/logistics/86."
+      ]
+    },
+    {
+      "work": "Fixing wrong counterparty or legal entity (ENA vs HPL/AEP vs ENA Upstream) on deals after the HPL sale to AEP.",
+      "why": "Typos in counterparty names (ASTRA vs ADTRA) with payment deadlines, BP saying HPL rather than ENA should have invoiced, and confusion over which entity Blue Dolphin belongs to. The transition is creating repeated cleanup work.",
+      "files": [
+        "farmer-d/logistics/132.",
+        "farmer-d/logistics/111.",
+        "farmer-d/logistics/86.",
+        "farmer-d/logistics/136.",
+        "farmer-d/logistics/121."
+      ]
+    },
+    {
+      "work": "Pathing pipeline volumes in Unify after the fact (EPGT) for months up to 18 months old, plus cleanup of EPGT pools and error messages.",
+      "why": "Gloria asked again and again over 4 weeks about Feb 2000 pathing. In November, Shane Lakho is still clearing EPGT Quick Response errors (about 70% done), spent an hour going line by line with EPGT, and is setting up meetings.",
+      "files": [
+        "farmer-d/logistics/108.",
+        "farmer-d/logistics/107.",
+        "farmer-d/logistics/102.",
+        "farmer-d/logistics/97.",
+        "farmer-d/logistics/18.",
+        "farmer-d/logistics/17."
+      ]
+    },
+    {
+      "work": "Chasing pipelines and hubs for balance and allocation data: the Hub Park & Lend balances, and monthly nomination and volume confirmations that arrive by fax or email (CP&L fax, Imperial Sugar, Mobil, Guadalupe spreadsheets).",
+      "why": "Mike was phoning the Hub 'furiously' for balances that are late. Volumes reach the desk by fax or one-off email each month and are entered by hand.",
+      "files": [
+        "farmer-d/logistics/140.",
+        "farmer-d/logistics/125.",
+        "farmer-d/logistics/131.",
+        "farmer-d/logistics/120.",
+        "farmer-d/logistics/126.",
+        "farmer-d/logistics/121."
+      ]
+    },
+    {
+      "work": "Daily emails from the West hourly manager to the real-time group listing length/short positions, books, deal numbers and APX shaped schedules. These are sometimes sent several times with corrections, and some repeat what is already in CAPS.",
+      "why": "Sent almost every trading day, typed by hand. Three emails in an hour corrected one position ('One more time... No more messages'). Lending deals with EPE needed a draft, a re-post and later fixes.",
+      "files": [
+        "williams-w3/sent_items/512.",
+        "williams-w3/sent_items/506.",
+        "williams-w3/sent_items/502.",
+        "williams-w3/sent_items/496.",
+        "williams-w3/sent_items/466.",
+        "williams-w3/sent_items/414.",
+        "williams-w3/sent_items/405.",
+        "williams-w3/sent_items/404.",
+        "williams-w3/sent_items/403.",
+        "williams-w3/sent_items/392.",
+        "williams-w3/sent_items/365.",
+        "williams-w3/sent_items/380.",
+        "williams-w3/sent_items/375.",
+        "williams-w3/sent_items/374.",
+        "williams-w3/sent_items/370.",
+        "williams-w3/sent_items/367.",
+        "williams-w3/sent_items/433.",
+        "williams-w3/sent_items/463."
+      ]
+    },
+    {
+      "work": "Mail misaddressed between Bill Williams and Bill Williams III, forwarded back and forth by hand with requests to fix address books.",
+      "why": "Happens repeatedly with different senders: EES model, weather, FSP, PSR, Longview, intern reviews, EPC meeting. Bill's father wrote 'Jeez this gets old'.",
+      "files": [
+        "williams-w3/sent_items/507.",
+        "williams-w3/sent_items/493.",
+        "williams-w3/sent_items/492.",
+        "williams-w3/sent_items/450.",
+        "williams-w3/sent_items/448.",
+        "williams-w3/sent_items/437.",
+        "williams-w3/sent_items/429.",
+        "williams-w3/sent_items/468.",
+        "williams-w3/sent_items/521."
+      ]
+    },
+    {
+      "work": "Nightly EES model / real-time deal spreadsheets emailed by hand to EES settlements, with the recipient lists going stale.",
+      "why": "Recipients change (Ainsley Gaddis replacing Daniel Kang), and the people who need the sheet are not getting it.",
+      "files": [
+        "williams-w3/sent_items/489.",
+        "williams-w3/sent_items/460.",
+        "williams-w3/sent_items/458.",
+        "williams-w3/sent_items/456.",
+        "williams-w3/sent_items/507.",
+        "williams-w3/sent_items/492."
+      ]
+    },
+    {
+      "work": "Researching prior month adjustments (PMAs) and disputes over Enpower deal-entry errors, double entries and position manager variances.",
+      "why": "A $108k WBOM adjustment was still unresolved after weeks of emails. Other cases: a Tacoma/MPC deal booked one-sided, a $42,750 TransAlta charge, double-entered deals, a new-deal summary showing false revenue, and position manager variances. Bill called it a 'flawed tool'. There is also a bi-weekly Enpower dispute meeting.",
+      "files": [
+        "williams-w3/sent_items/442.",
+        "williams-w3/sent_items/435.",
+        "williams-w3/sent_items/424.",
+        "williams-w3/sent_items/419.",
+        "williams-w3/sent_items/441.",
+        "williams-w3/sent_items/426.",
+        "williams-w3/sent_items/453.",
+        "williams-w3/sent_items/366.",
+        "williams-w3/sent_items/501.",
+        "williams-w3/sent_items/373.",
+        "williams-w3/sent_items/372.",
+        "williams-w3/sent_items/291.",
+        "williams-w3/sent_items/490.",
+        "williams-w3/sent_items/491.",
+        "williams-w3/sent_items/421.",
+        "williams-w3/sent_items/420."
+      ]
+    },
+    {
+      "work": "Real-time traders write emails to volume management and settlements spelling out CAISO events (congestion revenue, supplemental declines, cuts, CISO mis-entries, replacement reserves) so the revenue gets booked.",
+      "why": "These are recurring calculations done by hand (e.g. 96 MW x $248, 218 MW x $247.98), plus manual CAPS corrections.",
+      "files": [
+        "williams-w3/sent_items/416.",
+        "williams-w3/sent_items/383.",
+        "williams-w3/sent_items/425.",
+        "williams-w3/sent_items/431.",
+        "williams-w3/sent_items/514.",
+        "williams-w3/sent_items/510.",
+        "williams-w3/sent_items/391.",
+        "williams-w3/sent_items/390."
+      ]
+    },
+    {
+      "work": "Every hour, traders phone the generators (Grays Harbor, Frontier) and then BPA to report actual output, then initial the services sheet.",
+      "why": "This has to be done every hour 'until these generators are automatically metered'. BPA threatened to report that Enron cannot provide the service.",
+      "files": [
+        "williams-w3/sent_items/357.",
+        "williams-w3/sent_items/356.",
+        "williams-w3/sent_items/506."
+      ]
+    },
+    {
+      "work": "Daily EPE reconciliation sheet and CARP run, plus nightly customer finals in CAPS/FSP due by 3 AM. Also a parallel run of FSP against CAPS.",
+      "why": "The EPE sheet must be filled in even when there are no variances, or Houston assumes the check was not done. The finals deadline is set by a downstream data pull. Running FSP and CAPS in parallel doubles the work.",
+      "files": [
+        "williams-w3/sent_items/418.",
+        "williams-w3/sent_items/417.",
+        "williams-w3/sent_items/413.",
+        "williams-w3/sent_items/450.",
+        "williams-w3/sent_items/473."
+      ]
+    },
+    {
+      "work": "Tracking the FERC/CAISO price cap and rule changes (cap set after the fact, outage reporting penalties, manual soft-cap adjustments for ancillary services) and passing them on to the desk.",
+      "why": "There are many notices, and the cap is unknown at the time of trading. Outages must be reported to two separate CAISO desks. CAISO itself says its manual ancillary-service adjustments are labor-intensive.",
+      "files": [
+        "williams-w3/sent_items/476.",
+        "williams-w3/sent_items/475.",
+        "williams-w3/sent_items/449.",
+        "williams-w3/sent_items/443.",
+        "williams-w3/sent_items/438.",
+        "williams-w3/sent_items/436.",
+        "williams-w3/sent_items/409.",
+        "williams-w3/sent_items/408.",
+        "williams-w3/sent_items/422.",
+        "williams-w3/sent_items/415.",
+        "williams-w3/sent_items/400.",
+        "williams-w3/sent_items/397."
+      ]
+    },
+    {
+      "work": "Avoidable transmission and admin charges: PACE take-or-pay transmission that was reserved but never flowed ($57k), wheels scheduled separately and charged each time, and expired CAISO ADS cards that may breach the participating generator agreement.",
+      "why": "Bill calls these 'egregious expenses'. The ADS cards were left unrenewed for weeks.",
+      "files": [
+        "williams-w3/sent_items/395.",
+        "williams-w3/sent_items/444.",
+        "williams-w3/sent_items/469.",
+        "williams-w3/sent_items/467."
+      ]
+    },
+    {
+      "work": "Annuities and swaps between internal books, entered by hand (ST-CALI, LT-NW, ST-NW losses). Annuity-based swaps have caused disputes lasting months.",
+      "why": "Bill says swap disputes have 'dragged on for months'. Inter-book compensation is agreed in conversation and then emailed.",
+      "files": [
+        "williams-w3/sent_items/432.",
+        "williams-w3/sent_items/481.",
+        "williams-w3/sent_items/388.",
+        "williams-w3/sent_items/387.",
+        "williams-w3/sent_items/434.",
+        "williams-w3/sent_items/406."
+      ]
+    },
+    {
+      "work": "Handing off dispatch for Enron Canada and coordinating Canada trades by hand: forwarded phone lines, faxing resubmissions to the Alberta Pool, and logging in on a specific person's PC.",
+      "why": "The setup is fragile and manual, and communication failures led to ECC trading without ENA knowing.",
+      "files": [
+        "williams-w3/sent_items/386.",
+        "williams-w3/sent_items/488."
+      ]
+    },
+    {
+      "work": "Admin and HR data collection: Outlook migration survey, book admin mapping, new books after the West gas reorganization, timekeeping system access (14-business-day security requests), PEP reviewer counts, and intern reviews.",
+      "why": "Questionnaires filled in by hand and slow access requests.",
+      "files": [
+        "giron-d/sent/3.",
+        "giron-d/sent/1.",
+        "giron-d/inbox/183.",
+        "williams-w3/sent_items/368.",
+        "williams-w3/sent_items/516.",
+        "williams-w3/sent_items/521.",
+        "giron-d/inbox/181."
+      ]
+    },
+    {
+      "work": "Arthur Andersen audit requests for third-party support (NERC tags or invoices) on deals that have no executed contracts, passed from person to person.",
+      "why": "The requests are forwarded around, and staff were unsure who should answer them.",
+      "files": [
+        "williams-w3/sent_items/462.",
+        "williams-w3/sent_items/461."
+      ]
+    },
+    {
+      "work": "Event, meeting and RSVP coordination by email (customer trip slots, analyst meetings, group meetings, baseball/soccer outings, golf payment, employment law training) and a business-continuity seating headcount.",
+      "why": "Many RSVP rounds and deadline chasing.",
+      "files": [
+        "farmer-d/logistics/104.",
+        "williams-w3/sent_items/485.",
+        "williams-w3/sent_items/482.",
+        "williams-w3/sent_items/484.",
+        "williams-w3/sent_items/430.",
+        "williams-w3/sent_items/407.",
+        "williams-w3/sent_items/508.",
+        "williams-w3/sent_items/494.",
+        "farmer-d/logistics/92."
+      ]
+    },
+    {
+      "work": "Mass distribution lists reaching people who do not need the message (contractor insurance notice, market notices forwarded to the whole group), plus non-business chain mail on corporate email.",
+      "why": "People ask to be removed. The same story was forwarded 3 times, and joke and flood-photo chains circulate.",
+      "files": [
+        "williams-w3/sent_items/517.",
+        "giron-d/inbox/173.",
+        "giron-d/sent/2.",
+        "giron-d/inbox/179.",
+        "giron-d/inbox/180.",
+        "giron-d/inbox/177.",
+        "giron-d/inbox/178.",
+        "williams-w3/sent_items/412.",
+        "williams-w3/sent_items/411.",
+        "williams-w3/sent_items/410."
+      ]
+    }
+  ]
+}

@@ -2100,3 +2100,505 @@ chunk-013 is partly a real miss but has no trigger free of a threshold.
   saving; changes under way; mail that is not work), `words` in stated_rate,
   codes in `change` explained as far as the quotes show. S3 and M1 dropped.
 - 93 tests pass.
+
+## 2026-11-02 — trial9 (after the round-3 fixes)
+
+Ran unattended in 6.5 minutes with no hung workers, ending as expected at
+drafting. 1,666 of 3,196 messages cited (trial8 1,657; chunk-013 71 to 101,
+though chunk-010 and chunk-011 fell); 128 processes, 1,437 times; 114 ranked,
+$6,758/month (trial8 $5,636), top 10 $4,871.
+
+- The rate check rejected one stated rate whose words were in no quote
+  (proc-003). Words that are in a quote but state no rate still pass: a report
+  title (#4, "California Capacity Report for Week of"), a dated title (#12,
+  Energy Market Report, 21/month against 3 counted), a deadline (#15, "by close
+  of business Thursday", ranked once-seen), "for this coming month".
+- #1 requisitions rose to $2,924 (480 min, 43% of the total). Its change,
+  "redistribute ... an additional processor", moves the time, which the new
+  net-saving sentence was meant to stop.
+- Non-business forwarding got 0 minutes and is unranked. Surveys came in at
+  60 minutes ($164), not the feared multiplication by recipients.
+- The nightly checkout memo (trial8 #2) went into "Real-time deal entry and
+  procedure broadcasts" (proc-008): patterns grouped by channel are back.
+
+## 2026-11-02 — Overfitting review
+
+Dropped the idea of rejecting Subject-line rate words (it would only catch the
+two trial9 cases). A read-only reviewer checked the prompts and the last two
+commits for rules written for one observed case. Findings:
+- Overfit in scout.md: the "way they are sent" exception, the date/title
+  sentence, the enumerated stall kinds (they mirror planted messages), the
+  chase/apology sentence, "never instead of them"; the occurrence definition
+  appears three times; "every scale" competes with "one change".
+- merger.md: the month/sender hint invites grouping by topic and people.
+- estimator.md: the non-work / work-today sentence pair undo each other; the
+  time unit is stated twice and disagrees (replies "that quote it"); the
+  audience sentence is said twice; "about 21 a month" assumes a five-day
+  week; "a process seen once is ranked only on a stated rate" rewards finding
+  rates generously; the bunched-in-one-month sentence was tuned to trial7.
+- Code: the RE:/FW: subject join has no general basis on modern mail (use
+  reply headers when present, else what the reply quotes); find_quote assumes
+  ASCII; the under-a-dollar rule is an arbitrary threshold.
+
+## 2026-11-02 — Overfitting fixes applied
+
+- group: reply headers (In-Reply-To, References, kept by ingest as
+  `replies_to`) decide which message a reply answers when present. Without
+  them, a message joins a same-subject one whose text it quotes, or that quotes
+  the same text, or a copy within the window. An RE:/FW: that quotes nothing
+  joins the latest same-subject one. Only one corpus message has the headers,
+  so the counts hardly change here; the rule is the general one.
+- validate/serve: quote matching is a case-insensitive regex over the text,
+  with no ASCII assumption.
+- score: `stated_rate` is a count per working day, day, week, month or year,
+  turned into a month in code (working day = 52*5/12). The model no longer
+  does that arithmetic. The under-a-dollar rule is gone.
+- scout.md: the list of "things in common other than the work" is gone. One
+  scale sentence. Occurrences are defined once. The date/title sentence is now
+  a general one: words that only place an instance in time state no rate. The
+  enumerated stall kinds are replaced by "the words show the waiting or going
+  wrong has happened". The chase/apology sentence is gone. The bullets are prose.
+- merger.md: months and senders can help, but what the quotes show being done
+  decides.
+- estimator.md: the audience is stated once; the time unit once; non-work mail
+  is 0 minutes, with no counter-sentence. The ongoing paragraph has no
+  examples, and the bunched-month sentence is gone. The once-seen sentence and
+  "about 21 a month" are gone (the unit is now in `per`).
+- 94 tests pass. Effect unknown until another run.
+
+## 2026-11-02 — A simpler architecture to compare: analyst + critic
+
+Question: does the scout/merge/estimate structure keep the model from reasoning
+about the work as a whole? To find out, a second architecture next to the pipeline:
+`py -m pipeline explore --out <dir>`.
+- One analyst agent (Opus) explores the corpus with Read/Grep/Glob, since 15 MB
+  (~4M tokens) cannot be read whole. It writes proposals in its own words
+  and sends each to a critic agent (Opus). Neither prompt has a format.
+- The critic checks the proposal against the mail. If it holds up, the critic
+  writes it as a file and runs `py -m pipeline save <file>`. Otherwise it tells
+  the analyst what is wrong. Only the critic can write (to `proposals/`) or run
+  anything (only `save`).
+- `save` is deterministic. Run without a file, it prints the format it needs
+  and what is saved. With a file, it checks every quote (find_quote on the
+  decoded message, with a hint when the words only match the raw
+  quoted-printable file), counts times with group's rules, and scores with
+  score_process. It then rewrites processes.json and opportunities.json, so the
+  dashboard is unchanged and fills in as proposals are saved. Any problem means
+  not saved, with the reasons printed. Saves are serialized by a lock.
+- Isolation: the agents run in `<out>/workspace`, which holds a copy of the
+  corpus and `proposals/`. They run with `--permission-mode dontAsk`, project
+  settings only, and auto memory off, so they cannot read the code, DEVLOG, earlier
+  runs or memory.
+- The run is killed after 30 minutes (`--max-minutes`), and whatever was saved
+  stands. `agents.call` now takes a timeout, cwd and env, and keeps what a killed
+  process wrote; the stream-json transcript goes to `explore.jsonl`.
+- Dashboard: an "exploring" status line, and "DONE …" counts as finished. A
+  null section rendered as the text "null" when nothing was seen once (fixed).
+- 106 tests pass. Not yet run with a model.
+
+## 2026-11-02 — explore1 (5 minutes) and fixes
+
+The first try, 5 minutes on Opus, saved nothing:
+- The wiring held. `Agent(critic)` was the analyst's only subagent, sign-in
+  worked, and the workspace isolation held.
+- The analyst explored for about 3.5 minutes and sent 5 proposals at once.
+- The critics' reviews were strong. They read the cited mail and searched
+  further, then rejected 3 for real reasons: a wrong premise (a system report
+  already flags the meters) and a misattributed quote; work that had stopped,
+  with the fix already under way; one replier, not seven. They approved 1
+  (the weekly California Capacity Report, $153/month, with 14 reports
+  checked). 1 was pending at the cutoff.
+- Nothing was saved. The critics tried to read mail with Bash loops, were
+  denied, and concluded they could run no command, so the approved one was not
+  saved. One `cd … && py -m pipeline save` did run, and printed the format.
+- Coverage: 51 of 3,196 messages opened (analyst 34, critic 34), and 377 more
+  seen only as lines in search results.
+
+Fixes:
+- critic.md now says to read the mail with its file tools; the only command it
+  can run is `save`.
+- `save` without a file exits 0.
+- `coverage` (also run at the end of explore) reads the transcript and
+  reports the messages each agent opened, and the messages seen only as lines
+  in search results. It writes coverage.json, per mailbox and with the ids.
+- 107 tests pass.
+
+## 2026-11-02 — explore2 (15 minutes allowed)
+
+- The analyst stopped on its own after 7.75 minutes. It sent 4 proposals in
+  parallel and 1 revision, then ended once every verdict was in. Reported
+  cost: $4.13.
+- 1 saved: the daily Credit Report forwarded by hand ($49/month; save computed
+  0.58 hours against the analyst's 0.7).
+- 3 rejected, all on evidence:
+  - OPM surveys: the report option already exists.
+  - ECC deal flips: the round count was inflated by single-deal notes and
+    copies, and a fix was already under way. Revised, and rejected again: the
+    rate is not shown continuing.
+  - Strangers Gas write-offs: most were a one-time cleanup in Dec 2000; about
+    one a month otherwise.
+- The planted message (farmer-d/logistics/3220.eml) was caught and passed to
+  every critic.
+- Coverage: 65 of 3,196 messages opened (analyst 33, critic 52), 537 more seen
+  only in search results. The critics open more than the analyst, because each
+  rereads the cited mail and checks how often the work happens.
+- Limits on coverage: one agent, which stops after one round of proposals.
+
+## 2026-11-02 — Medium effort for the Opus agents
+
+- The analyst and critic files now set `effort: medium`. explore passes it into
+  `agents.json` for the critic, and as `--effort` for the analyst, which runs
+  as the session itself.
+- The scout, merger and estimator run on Sonnet, so they are unchanged.
+- Not yet confirmed that Claude Code honours `effort` in an `--agents` file; the
+  next run should show it.
+- Direction agreed for coverage: no assigned parts of the archive, and several
+  analysts reading the same message is fine. A shared record of saved and
+  rejected work lets analysts avoid repeats, and the critic says why it
+  rejects and what further research would settle it. One critic serves every
+  analyst instead of a fresh one per proposal.
+
+## 2026-11-02 — Several analysts, a shared record of decisions
+
+- One critic per analyst, as before: each analyst session starts its own critics.
+  A single critic shared by all analysts was set aside, since it would need
+  continuing a subagent headless, which is unconfirmed, and it would queue every
+  check.
+- `explore` now starts several analyst sessions at once (`--analysts`, default 4)
+  over the whole archive. No parts are assigned, and analysts may read the same
+  message. Each writes its transcript to `explore/analyst-N.jsonl`.
+- New `reject` command: the critic records a rejection with its reason and what
+  further research could settle it, or null. `save` and `reject` both rewrite
+  `workspace/decisions.md`, which lists what is saved (with the files it cites)
+  and what is rejected and why. Both prompts point at it.
+- Prompts:
+  - The analyst keeps finding opportunities until stopped.
+  - A rejection for want of evidence is a reason to research further before
+    dropping the idea.
+  - The critic says whether the problem is the idea or the evidence, and what
+    to look for.
+- Coverage reads every transcript and also counts the messages more than one
+  analyst opened, so the overlap can be seen.
+- 109 tests pass.
+
+## 2026-11-02 — The critic checks the quotes and figures before saving
+
+- Before, the critic left word-for-word quote checks and the arithmetic to
+  `save`, which checked, computed and saved in one step. So the critic saw the
+  figure only after saving; in explore2, 0.58 hours was saved against the
+  analyst's 0.7, and no one examined the gap.
+- The critic prompt now asks it to check that every quote is word for word, and
+  to work out the minutes, how often, and the hours and dollars itself.
+- New `check` command: it does everything `save` does but saves nothing. It
+  prints the problems, or the figures with how they were worked out (counted
+  times over months, or gaps over the span for ongoing work, and any stated
+  rate). If its figures differ from the critic's, the critic finds out why
+  before deciding. `save` prints the same working.
+- The code stays the final word on quotes and arithmetic, as the assignment
+  requires; the critic's own check comes first.
+- 111 tests pass.
+
+## 2026-11-02 — Critic prompt made concise; the file forms in its prompt
+
+- The critic now judges what code cannot: that the claims are accurate and the
+  estimate of minutes and how often is realistic. It checks against the whole
+  archive, not only the cited mail. Word-for-word quotes and the arithmetic are
+  left to `check`, whose figures it compares with its own judgement.
+- Dropped the sentence on messages reappearing in other files: the code counts
+  copies once and a message with its replies as one time.
+- The forms of the proposal and rejection files are added to the critic's
+  prompt by `agent_definitions` from the definitions the code checks. The
+  prompt file stays prose, and the critic no longer needs a call to learn them.
+- Then removed the sentence telling the critic to check against the archive,
+  not only the cited mail; the paragraph now opens with when a proposal holds up.
+
+## 2026-11-02 — explore3 (4 analysts, 15 minutes allowed)
+
+- All 4 analysts ended on their own between 10.5 and 14.5 minutes, each saying
+  the obvious work was claimed or ruled out. Cost $39.38 (9.87 + 9.19 + 11.42 +
+  8.90), above the $15-30 guess.
+- 3 saved, $279 a month, but two are the same work: the weekly Transwestern
+  California Capacity Report was saved twice, 46 seconds apart ($114.75 and
+  $99.45), by two critics working at once. Two later copies were rejected as
+  duplicates. The third is the ECC deal flips ($64.60), saved on the third
+  revision after rejections that asked for more research.
+- 29 rejected. The commonest reason: the minutes were assumptions, since almost
+  no message says how long work takes. The Credit Report forward, saved in
+  explore2, was rejected 4 times here (the recipient rotates among three people).
+- Coverage: 334 messages opened (analysts 253, critics 191), 1,590 more seen in
+  search results; 100 of the analysts' reads were by more than one analyst
+  (each opened 85 to 111).
+- Problems found:
+  - decisions.md grew to 101 KB: rejection reasons ran 2-4.5k characters, and
+    every check/save/reject printed the whole record. Agents read about 70-140
+    KB of it and 100-250 KB of command output per analyst session.
+  - Two critics wrote the same proposal file name at once (a write conflict
+    and a file that would not parse).
+  - Critics tried other shell commands 6-14 times per session and were denied.
+  - Medium effort could not be confirmed from the transcript.
+
+## 2026-11-02 — The critic reads decisions.md as the last step before saving
+
+- The sentence on decisions.md was a statement, not a step. The critic is now
+  told to read it as the last step before saving, and to save only if the same
+  work is not already saved there. Two critics can still both read it before
+  either saves, so the code check proposed after explore3 is still needed.
+
+## 2026-11-02 — Brief decisions record; analysts told never to stop
+
+- The rejection form now asks for the reason and the research each in a
+  sentence, with the full explanation in the reply to the analyst.
+- check, save and reject no longer print the record; save says the rank it
+  took in decisions.md. The critic reads decisions.md before saving instead.
+- The analysts in explore3 did not stop after a save: each ended when it judged
+  the obvious work claimed or ruled out. The analyst prompt now says it will be
+  stopped automatically, so it never stops on its own, however many proposals
+  are saved and however much seems covered, and goes on to mail it has not read.
+- The ending of that sentence is now a nudge instead of an order: there is
+  usually more to find in mail not read yet.
+- The critic accepts a realistic estimate of the minutes: the mail rarely says
+  how long work takes, and most explore3 rejections were for that reason.
+
+## 2026-11-02 — Three fixes from explore3
+
+- The same work is not saved twice: check and save refuse a proposal when half
+  or more of its occurrences are occurrences of one saved opportunity, naming
+  it. save checks again under its lock, since two critics can both read
+  decisions.md before either saves (the explore3 duplicates shared 14 of 15).
+- Each analyst and its critics work in their own folder
+  (workspaces/analyst-N, each with a corpus copy and its own proposals), so
+  critics of different analysts cannot overwrite each other's files.
+  decisions.md is written to every folder.
+- An analyst that ends its session early is started again in a new session
+  (it reads decisions.md and carries on), until the time is up. Not if the
+  session failed, lasted under a minute, or less than a minute is left. The
+  transcript holds all its sessions, and the status line counts them.
+- 114 tests pass.
+
+## 2026-11-02 — explore4 (8 analysts, 15 minutes)
+
+- All 8 analysts worked the full 15 minutes in one session each: none ended
+  early, so no restart was needed.
+- 14 saved, $1,374 a month (explore3: 2 distinct, $279). Top: ECC deal
+  sweeps $435, nightly CAISO finals in CAPS $302 (stated nightly), daily EPE
+  reconciliation log $150, Arthur Andersen monthly requests $106, the weekly
+  California Capacity Report $99. 46 rejected; reasons now 550-750 characters
+  at most, and decisions.md 50 KB with 60 decisions.
+- No duplicate saved. The California Capacity Report, Arthur Andersen and
+  book-code poll were each saved once and their repeats rejected; the code
+  check refused repeats in the transcripts as well.
+- Coverage: 696 of 3,196 messages opened (analysts 654, critics 275), 2,322 more
+  seen in search results. Each analyst opened 142-230; 334 messages were opened
+  by more than one analyst.
+- The planted message 3220.eml was noticed and not used. 50 rate-limit events,
+  with no session failing.
+- Usage: the sessions were killed at the time, so none wrote its cost. From
+  tokens (302M cache reads, 5.4M cache writes, against 72M and 2.3M for
+  explore3 at $39), roughly $120-150 at API prices.
+
+## 2026-11-02 — Sonnet analysts, 20 of them
+
+- Analysts now run on Sonnet at high effort; critics stay on Opus at medium.
+  Opened messages grew about in step with analysts (334 with 4, 696 with 8),
+  so the next run tries 20 analysts for 15 minutes.
+
+## 2026-11-02 — explore5 (20 Sonnet analysts, Opus critics, 15 minutes)
+
+- Much worse than explore4: 2 saved, $107 a month (Capacity Report $82, Credit
+  Report forward $25), against 14 and $1,374 with 8 Opus analysts.
+- 77 rejected, 61 of them repeats of work already saved or rejected. Analysts
+  kept resubmitting decided ideas despite decisions.md (one idea rejected five
+  times), and they crowded onto the same few topics.
+- Coverage did not keep growing in step: 879 opened (analysts 812, critics
+  288), against 696 with 8 analysts; 490 opened by more than one analyst.
+- 31 sessions: 11 restarts after early endings; 5 analysts ended with too
+  little time left to restart. 151 rate-limit events, no session failed.
+- Tokens: Sonnet 392M cache reads and 7.8M writes, Opus critics 17M and 2.6M.
+  At Sonnet's lower prices, roughly the same usage as explore4.
+- Conclusion: Opus analysts find and argue far better; more analysts beyond 8
+  mostly add repeat work.
+
+## 2026-11-02 — What the runs cost of the weekly limit
+
+- The rate_limit_event lines are seven-day usage warnings, not throttling: no
+  session was slowed or failed. Their utilization shows each run's share of
+  the weekly allowance: explore3 51%->53%, explore4 54%->59%, explore5
+  59%->65%. It resets 2026-11-07 10:00; overage is disabled, so at 100% runs
+  stop until then.
+- Overlap grows with analysts: 8 Opus analysts opened 1,417 messages in all,
+  654 distinct (46%); 20 Sonnet analysts opened 2,659, 812 distinct (31%).
+  Opened plus seen in search results is already about 3,000 of 3,196 in both.
+
+## 2026-11-02 — Review of explore4 (8 Opus analysts) before expanding
+
+- The dashboard renders all 14 saved opportunities. All four mailboxes are
+  represented, and nothing was saved twice.
+- Most rates rest on a stated rate or on a solid count, for example the Credit
+  Report forward (70 in 4 months) and the Capacity Report (15 weekly reports).
+- A bug: a critic withdrew the saved "any new book codes?" poll after saving it.
+  The rejection was recorded, but the opportunity is still saved and ranked
+  ($25.50), because reject does not remove a saved opportunity.
+- 23 of the 46 rejections only repeat work already decided. Flow-with-no-deal
+  was rejected six times and the OPM driver survey five times.
+- Some counted rates are lower than the reasoning says, so they understate the
+  saving: the Energy Market Report (daily by its reasoning, 3 a month counted),
+  the transport tickets (monthly by its reasoning, 0.18 a month counted) and the
+  time reports (semimonthly by its reasoning, 1.25 a month counted).
+- The weakest item is the misdirected mail to the wrong Bill Williams. It is
+  not really recurring work, and its change, that senders pick the right
+  address, is vague.
+
+## 2026-11-02 — Dashboard made clearer for leadership
+
+- A subagent reviewed the dashboard against the explore4 results, aiming at
+  executives. Its main finding: a leader reads a lot before reaching the
+  numbers.
+- Changes, all in dashboard.html:
+  - Renamed the page to "Automation opportunities". The "Run finished" status
+    no longer shows; status appears only while a run is going or stopped.
+  - The headline is one figure ("$1,374 a month") with one sentence under it
+    and a one-line method note. The "top 10" figure is gone.
+  - The list has four columns: #, opportunity, "How it's figured" (such as
+    "215 min × 1.4 a month") and saved a month. "Hours" and "Running total"
+    are gone.
+  - Each change line shows at most two lines, and the whole row is clickable.
+    The "drafting is not built yet" row is gone.
+  - An opened item reads in this order: the exact formula, Today and The
+    change side by side, where it stalls, how often (in one plain line), and
+    then the minutes. Two quotes are shown and the rest are behind "N more
+    quotes".
+  - Quotes have a lighter style. The message list is by date, with no pattern
+    grouping and no intro sentence.
+- Not done yet: asking the agents for shorter, plainer text. The text the
+  dashboard shows is written by the critic, which fills the fields in FORMAT
+  in pipeline/explore.py.
+
+## 2026-11-02 — Plainer proposal fields; no reasoning field; fewer qualifiers
+
+- The critic follows the FORMAT field descriptions in explore.py. They now ask
+  for the text a manager needs:
+  - name: "in a few plain words that a manager outside the team could
+    understand";
+  - today: "as briefly as a manager needs to see what it costs";
+  - change: "one line: what would change, for a manager deciding whether to
+    read further".
+- Removed the reasoning field. Today, The change and the quotes with their
+  notes are enough to back the minutes. score.py copies reasoning only when an
+  estimate has it, which the older pipeline's estimates still do. The
+  dashboard shows the reasoning only for runs that have it; explore4 still
+  does.
+- Dashboard: removed the qualifiers.
+  - "The archive holds only part of the mail, so the real rate is likely
+    higher."
+  - "The archive itself shows it N times", under a stated rate.
+  - "a model's estimate", both next to the minutes and in the method note.
+- 114 tests pass.
+
+## 2026-11-02 — Analysts back to Opus at medium effort
+
+- analyst.md is back to model opus, effort medium. Sonnet at high effort did
+  worse in explore5.
+- The explore test checked for a fixed effort. It now checks that the analyst
+  runs at the effort its agent file gives it, so changing the setting no
+  longer breaks the test.
+- Decided not to fix the case of a proposal withdrawn after it was saved.
+
+## 2026-11-02 — Plain words asked for once, in the critic's prompt
+
+- The first change made only the name plain and left the "The change" panel
+  long, since that panel shows the explanation field.
+- critic.md now asks once for everything the managers see: "Make sure what
+  they see is true, and write it concisely and in plain words they could
+  understand."
+- The FORMAT fields now say only what each one holds:
+  - name: "the recurring work, in a few words";
+  - today: "how the work is done today, enough to see what causes the cost";
+  - change: "one line: what would change, for a manager deciding whether to
+    read further";
+  - explanation: "the change: …"; it no longer says "in full".
+
+## 2026-11-02 — explore6 (8 Opus analysts at medium effort, 15 minutes, new prompts)
+
+- 14 saved, $1,436 a month (explore4: 14, $1,374). All four mailboxes are
+  represented.
+- Three analysts ended their first session early and were restarted, for 11
+  sessions in all.
+- 53 rejected. 28 of them refer to work already decided in decisions.md
+  (explore4: 23 of 46).
+- Coverage: 682 opened (analysts 609, critics 307) and 2,221 more seen in
+  search results, about the same as explore4.
+- Weekly usage went from 66% to 71%.
+- New items include a nightly check that books are officialized ($768, the top
+  one), a review of prior-month adjustments, curve-validation questions,
+  evergreen deals on swing meters, and the EnerVest price change. The Energy
+  Market Report forward now uses its stated rate ("every business day", 21.67
+  a month).
+- How the new wording did, as median characters against explore4:
+  - change: 155 against 219, mostly within two lines;
+  - explanation: 570 against 783;
+  - today: 614 against 512, so it got longer, with more context and still
+    many people and system names.
+  - The text explains its terms more often, but it is not much easier to
+    read.
+- Without the reasoning field, the minutes have no breakdown anywhere. The top
+  item claims 25 minutes a night, and neither its quotes nor their notes say
+  where that comes from.
+
+## 2026-11-02 — How analysts choose what to open; running total restored
+
+- From the explore6 transcripts (analysts only):
+  - Tool calls: 1,472 Read, 627 Grep (499 of them showing matching lines), and
+    41 Glob.
+  - 1,382 of the 1,383 message reads were of a file that had already appeared
+    in a search result. 1,153 had appeared in a listing of Subject: lines.
+  - So analysts grep the Subject lines of a folder or of the whole corpus,
+    pick the subjects that look like repeated work, grep for the topic's
+    terms, and then open those messages.
+  - Many reads are re-reads: 1,383 reads came to 609 distinct messages.
+  - Share opened, by mailbox: lokay-m 31%, farmer-d 24%, williams-w3 25%,
+    giron-d 15%.
+- A Grep output too large to show inline is saved to a file, which the
+  analyst then reads. coverage() does not count those lines as seen, so it
+  undercounts what was seen in search results. 51 such outputs were read.
+- Restored the "Running total" column. README asks for the running dollar
+  total by name.
+
+## 2026-11-02 — Readers over every message, drafters, one `run`
+
+- README asks that every message be read, not a sample. Analysts open about
+  700 messages in 15 minutes, by searching for them. So a reader stage now
+  comes first:
+  - one reader per batch (15 batches);
+  - each reads all of its batch and records leads: the work, why it looks
+    recurring or costly, and the files that show it.
+- Code keeps only the files that are messages of the reader's own batch and
+  drops a lead left with none. The leads are written to `leads.md` in each
+  analyst's folder. The analyst prompt says to use it as a place to start,
+  not as evidence. Only what a critic saves is ranked, as before.
+- Drafters: one for each of the top 10, given only the analysis (today, the
+  change, the figures, the quotes with their notes, senders and dates, and
+  the stalls). They are not given message text.
+  - The prompt asks for whichever artifact would start the change.
+  - People are addressed by role.
+  - What the reader must act on comes first; the explanation follows.
+  - `finalize` writes `drafts/opp-NN.md` and `report.json`.
+- A test on three of explore6's top items gave usable emails. Each took
+  17–25 seconds and about 6k tokens in.
+- `run` now goes from start to finish: prepare, readers, explore (8 analysts,
+  20 minutes), drafters, finalize.
+  - The CONTINUE time budget is gone. `/run-pipeline` starts `run` in the
+    background and waits.
+  - A failed worker is still tried once more.
+  - Each stage is skipped once its output exists. `explore/done.json` marks
+    explore finished.
+  - A change to the corpus clears everything corpus-wide, including the
+    workspaces, but keeps the leads of unchanged batches.
+- All agents are Opus at medium effort. A worker's `--effort` now comes from
+  its agent file, and workers run without this folder's auto-memory.
+- Removed the old scout → validate → merge → group → estimate path:
+  - the scout, merger and estimator agents;
+  - estimate.py;
+  - the validate and group steps, and their tests.
+
+  validate.py keeps the quote matching and group.py keeps `build_process`,
+  which explore's save uses.

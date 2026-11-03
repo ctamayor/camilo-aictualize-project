@@ -1,0 +1,560 @@
+{
+  "estimates": [
+    {
+      "process": "proc-001",
+      "change": "Give Confirmations a read-only report that values a counterparty's deals across all desks as of a past date, so Risk analysts no longer do it by hand.",
+      "explanation": "Finish the tool Hunter describes: a read-only valuation report (the planned on-line EnTelligence, or a standard report from the risk system) that keeps back-dated curves and returns MTM value and open position by counterparty short name across all desks, with Delta/Vol left out. Confirmations enters the short name and as-of date, runs the report and sends it to the auditor. Desk heads and risk analysts are no longer involved.",
+      "not_served": [],
+      "ongoing": true,
+      "stated_rate": {
+        "count": 3,
+        "per": "week",
+        "quote": "q8",
+        "words": "we recieve several per week"
+      },
+      "basis": [
+        "q5",
+        "q6",
+        "q7"
+      ],
+      "minutes": 92
+    },
+    {
+      "process": "proc-002",
+      "change": "Compact every WeaponX file automatically each night so book admins no longer do it by hand.",
+      "explanation": "The WeaponX owner or IT sets up one scheduled overnight job per WeaponX file (Access can compact a file from the command line with the /compact switch), or adds a compact step at the end of the daily WeaponX import. Book admins then stop compacting by hand, and every file stays small even when an admin forgets. Setup is a one-time job and is not counted in the savings.",
+      "not_served": [],
+      "ongoing": true,
+      "stated_rate": {
+        "count": 6,
+        "per": "week",
+        "quote": "q7",
+        "words": "I would like each of your book admins using WeaponX to begin using the following procedures at least once/week"
+      },
+      "basis": [
+        "q3",
+        "q4",
+        "q5",
+        "q6"
+      ],
+      "minutes": 10
+    },
+    {
+      "process": "proc-003",
+      "change": "A month-end job extends each active usage ticket, fills its rate from the matrix/Unify rates and carries last month's volume, leaving people only an exception list.",
+      "explanation": "A scheduled job run before month start extends each active transport usage ticket by one month (or copies it to a new ticket where a ticket's term is full). It sets the rate from the same rate table in Unify that invoicing uses, and sets the volume to the prior month's figure instead of zero. It then lists only the tickets it could not price: new baseload deals and third-party paths whose rates are not yet known. Heidi or the desk fills in those, as they already must today. Schedulers change volumes only where flows actually change. The ticket-rate check that Heidi now does by Basis Adjustment report becomes an automatic comparison of ticket rate against matrix rate.",
+      "not_served": [],
+      "ongoing": true,
+      "stated_rate": {
+        "count": 0,
+        "per": "month",
+        "quote": "",
+        "words": ""
+      },
+      "basis": [
+        "q3",
+        "q4",
+        "q5",
+        "q6",
+        "q7",
+        "q8",
+        "q9"
+      ],
+      "minutes": 280
+    },
+    {
+      "process": "proc-004",
+      "change": "Book Canadian-settled deals straight into FT-US/CAND-ERMS, and send each book owner a nightly list of any that land elsewhere, instead of a monthly manual search of every Houston book.",
+      "explanation": "(1) Extend the existing EnronOnline rule that already books TransCanada Energy and Dynegy Canada deals to settle with ECC. It would cover every deal where ECC is the settling Enron entity, or where the counterparty is on a maintained list of Canadian-settled parties (for example Duke Energy Marketing LP and Aquila Canada Corp.). These deals would go straight into FT-US/CAND-ERMS. (2) Turn the controllers' private calc into a standard nightly report. It would list any such deal sitting in another book, grouped by book owner, and go to that owner and to Calgary settlements. Afterwards, owners move the few deals the report lists as they appear. The monthly all-books request, the forwarding chain and the end-of-day scramble at NYMEX close all go away.",
+      "not_served": [],
+      "ongoing": true,
+      "stated_rate": {
+        "count": 0,
+        "per": "month",
+        "quote": "",
+        "words": ""
+      },
+      "basis": [
+        "q9",
+        "q10",
+        "q11",
+        "q12",
+        "q13"
+      ],
+      "minutes": 180
+    },
+    {
+      "process": "proc-005",
+      "change": "A daily exception list matches meter flow against deal terms and sends the trader a prefilled extension to approve, so analysts no longer email about each meter.",
+      "explanation": "Build a daily report that compares measured meter flow with Sitara deal dates. For each day with flow but no deal, it lists the meter, the days, the volume, the last deal, its counterparty and its contract. It goes to the responsible trader with the extension already drafted, for one-click approval or rejection. Items needing judgment, such as wellhead deals or inactive counterparties, are marked for review rather than extended automatically. At deal entry, Sitara also checks the evergreen flag against the contract term so deals roll when they should. Because the deal is fixed before allocation, the Strangers Gas step and most after-the-fact accounting arrangements are no longer needed. Volume Management works from the same list instead of writing emails.",
+      "not_served": [],
+      "ongoing": true,
+      "stated_rate": {
+        "count": 0,
+        "per": "month",
+        "quote": "",
+        "words": ""
+      },
+      "basis": [
+        "q25",
+        "q26",
+        "q27",
+        "q28",
+        "q29"
+      ],
+      "minutes": 25
+    },
+    {
+      "process": "proc-006",
+      "change": "Credit adds Carole Frank (and any other book admin who needs it) to the Credit Report mailing list, so the desk lead no longer forwards it each day.",
+      "explanation": "Credit adds the book admin's address to the distribution list it already uses for the daily Credit Report. Carole Frank then gets the report at the same time as everyone else, and Darron Giron stops forwarding it. Nothing is built. The only cost is a one-time change to the mailing list.",
+      "not_served": [],
+      "ongoing": true,
+      "stated_rate": {
+        "count": 0,
+        "per": "month",
+        "quote": "",
+        "words": ""
+      },
+      "basis": [
+        "q72",
+        "q73",
+        "q74"
+      ],
+      "minutes": 1
+    },
+    {
+      "process": "proc-007",
+      "change": "Save every book's month-end and daily P&L top pages and curve shift reports to a read-only audit folder at month-end, so the auditors stop sending requests to the desks.",
+      "explanation": "At month-end close, a scheduled ERMS job (or a macro a book admin runs once) saves each gas book's month-end top page, its daily top pages and its Gas Daily curve shift reports as PDF files. They go into a read-only folder, one subfolder per month, with a one-page index that lists each book and the book admin responsible for it. ERMS can already show most reports as Adobe Acrobat files. The auditors get read access, or a copy of the folder if they no longer have Enron network access. They choose their books and the five largest days from the folder themselves. Desk heads and book admins no longer forward, pull, print or copy reports, and nobody has to chase missing books. Calls to discuss the P&L drivers stay as they are, and so do requests for deal tickets and confirmations.",
+      "not_served": [],
+      "ongoing": true,
+      "stated_rate": {
+        "count": 1,
+        "per": "month",
+        "quote": "q13",
+        "words": "As part of our monthly testing"
+      },
+      "basis": [
+        "q7",
+        "q8",
+        "q9",
+        "q10",
+        "q11",
+        "q12"
+      ],
+      "minutes": 180
+    },
+    {
+      "process": "proc-008",
+      "change": "Have the weekly California Capacity Report filled in and emailed automatically, with Lokay only checking it.",
+      "explanation": "Build a simple scheduled report (a spreadsheet or query) that pulls the Transwestern and El Paso delivery and capacity figures and the Friday Gas Daily prices, calculates the percentages and price changes, fills in the standard wording with the correct week label, and drafts the email to the fixed list each Friday. Lokay reviews the figures, adds any comment, and sends it, instead of gathering and typing the numbers herself. The automatic week label also prevents mislabelled reports like the one on 11 Jan 2002.",
+      "not_served": [],
+      "ongoing": true,
+      "stated_rate": {
+        "count": 0,
+        "per": "month",
+        "quote": "",
+        "words": ""
+      },
+      "basis": [
+        "q17",
+        "q18",
+        "q19",
+        "q20"
+      ],
+      "minutes": 25
+    },
+    {
+      "process": "proc-009",
+      "change": "Send the daily Energy Market Report and the Gas Daily / Power Daily PDFs to one maintained Portland mailing list automatically, so assistants stop forwarding them by hand.",
+      "explanation": "IT creates one mailing list, for example 'Portland Market Reports', and the floor's assistant keeps it current as people join or leave. The Energy Market Report already arrives by email from Economic Insight (emr@econ.com). Either Economic Insight adds the list as a recipient, or a mail rule passes the report on to the list when it arrives. A scheduled job, or the publisher's own email delivery, picks up the Gas Daily and Power Daily PDFs once they are posted and sends them to the same list. After the change, traders get the reports as soon as they come out. Neither assistant forwards anything or checks back for late files. Adding a person takes one change to the list.",
+      "not_served": [],
+      "ongoing": true,
+      "stated_rate": {
+        "count": 0,
+        "per": "month",
+        "quote": "",
+        "words": ""
+      },
+      "basis": [
+        "q10",
+        "q11",
+        "q12",
+        "q13",
+        "q14"
+      ],
+      "minutes": 7
+    },
+    {
+      "process": "proc-010",
+      "change": "Add department and city to both Bill Williams entries in the company address book so senders can tell them apart.",
+      "explanation": "The mail administrator changes the display names of the two entries to show group and city, for example \"Williams, Bill (Technical Assets - Houston)\" and \"Williams III, Bill (West Hourly Trading - Portland)\", and refreshes the global address list. Anyone typing \"Bill Williams\" then sees which one they are choosing. Wrong picks, the forwarding and the correction notes mostly stop, and Bill III gets the trading mail meant for him. This is a one-time change; its cost is not counted.",
+      "not_served": [],
+      "ongoing": true,
+      "stated_rate": {
+        "count": 0,
+        "per": "month",
+        "quote": "",
+        "words": ""
+      },
+      "basis": [
+        "q18",
+        "q19",
+        "q20",
+        "q21"
+      ],
+      "minutes": 4
+    },
+    {
+      "process": "proc-011",
+      "change": "Let settlements enter the invoiced price themselves on a short list of flagged pass-through deals, with the desk reviewing a monthly list afterwards.",
+      "explanation": "Mark the few deals whose monthly price is set by the counterparty invoice or pipeline statement as 'invoice-actualized' in Sitara and give the settlements analysts who own them rights to update the price on those deals only, with the invoice or statement attached. Settlements enters the figure and redrafts right away. Once a month the desk lead gets a list of the changes made and checks them. The emailed request, the wait, the reminders and the 'let me know when done' replies go away. The keying itself moves to settlements and is not counted as saved.",
+      "not_served": [],
+      "ongoing": true,
+      "stated_rate": {
+        "count": 0,
+        "per": "month",
+        "quote": "",
+        "words": ""
+      },
+      "basis": [
+        "q10",
+        "q11",
+        "q12",
+        "q13"
+      ],
+      "minutes": 9
+    },
+    {
+      "process": "proc-012",
+      "change": "Have the Statistical Database pre-fill each region's variance explanations from the volume data and last month's answers, so each contact only confirms them or edits the ones that changed, inside the database.",
+      "explanation": "BA&R adds a form to the Statistical Database it already sends people to. For each region the form lists only the lines that moved 10% or more on each of the three comparisons. Next to each line it shows last month's explanation where the same line was flagged last month, and, where the database holds the data, a split of the change into EOL and non-EOL volume. Each contact opens their region, checks the volumes, and either confirms each explanation or writes a new one. That keeps the rule that commercial staff verify the volumes. BA&R reads the confirmed answers from the database instead of collecting and merging about 11 emails.",
+      "not_served": [],
+      "ongoing": true,
+      "stated_rate": {
+        "count": 1,
+        "per": "month",
+        "quote": "q7",
+        "words": "provide monthly volumetric analysis for Wholesale Operations"
+      },
+      "basis": [
+        "q3",
+        "q4",
+        "q5",
+        "q6"
+      ],
+      "minutes": 130
+    },
+    {
+      "process": "proc-013",
+      "change": "Employees enter only their absences themselves in the existing self-service HR system, which also sends the deadline reminder; the admin reviews one exceptions list instead of collecting emails.",
+      "explanation": "Everyone is set to a full scheduled period by default. Employees enter vacation, sick and half-days themselves when they happen, in the company's self-service HR system (eHRonline already exists and shares logins with SAP HR) or a simple shared form. The system sends the deadline reminder. Each period the admin opens one exceptions list, checks it and approves it. Nobody with no absences has to do anything. The reminder email, the seven reply emails and her keying in of each reply all go away. Employees entering their own absence replaces their reply email, so their time is not counted as saved.",
+      "not_served": [],
+      "ongoing": true,
+      "stated_rate": {
+        "count": 0,
+        "per": "month",
+        "quote": "",
+        "words": ""
+      },
+      "basis": [
+        "q7",
+        "q8",
+        "q9",
+        "q10",
+        "q11",
+        "q12"
+      ],
+      "minutes": 12
+    },
+    {
+      "process": "proc-014",
+      "change": "Keep one list of the post IDs each book admin must officialize, and have the risk system email any that are not officialized by cut-off, replacing the hand-run nightly macros.",
+      "explanation": "Risk and IT set up one list (registry) of the post IDs each book admin must officialize each night. The lists Darron already writes out by hand are the starting point. At a set time before cut-off each night, the risk system compares that list with the books marked official and emails each owner any of their post IDs still not officialized, flat books included. The same report becomes the controllers' end-of-night sheet and Risk's daily tracking list. Desks stop running the Excel macro by hand and stop maintaining their own copies of it. Book admins only act when they get an exception email. When another group asks which books are officialized, the answer comes from the registry.",
+      "not_served": [],
+      "ongoing": true,
+      "stated_rate": {
+        "count": 1,
+        "per": "working day",
+        "quote": "q12",
+        "words": "Use it to make sure all your postid's that need to be, are officialized each night."
+      },
+      "basis": [
+        "q6",
+        "q7",
+        "q8",
+        "q9",
+        "q10",
+        "q11"
+      ],
+      "minutes": 30
+    },
+    {
+      "process": "proc-015",
+      "change": "Have the risk system save each region's liquidating deals and values to the FRED Liquidations folder at month-end, so Jim no longer has to request the support from the desks.",
+      "explanation": "At month-end close, a scheduled report lists, for each gas region and book, the deals that liquidated and their values, grouped by the position types Jim already uses (price, basis, index, Gas Daily, capacity hedges and so on). It saves the report to ERMS/1Intra/FRED Liquidations/year/month. Jim checks the totals against the flash from the folder and asks the desk only about values that do not tie. Transport liquidations cannot be supported out of ERMS today, so they would still be explained by hand, as the desks already do. Desk leads and analysts no longer pull and send the detail each month, and Jim no longer chases missing months.",
+      "not_served": [],
+      "ongoing": true,
+      "stated_rate": {
+        "count": 0,
+        "per": "month",
+        "quote": "",
+        "words": ""
+      },
+      "basis": [
+        "q3",
+        "q4",
+        "q5",
+        "q6",
+        "q7"
+      ],
+      "minutes": 40
+    },
+    {
+      "process": "proc-016",
+      "change": "Have the Enpower team pre-fill the counterparty contact on the confirmation screen and save in the background, so traders stop waiting about a minute per confirmation.",
+      "explanation": "The Enpower team in Houston, which already works with Portland on these tools, would change the Path Confirmation contact screen in two ways: fill it with the counterparty's usual scheduling contact, which the trader changes only if someone else answered, and queue the save to Enpower in the background so the screen hands control back at once. Real Time traders would then confirm a counterparty's paths by highlighting them, clicking the telephone icon, accepting the contact, and moving straight to the next call. The phone calls themselves stay the same.",
+      "not_served": [],
+      "ongoing": true,
+      "stated_rate": {
+        "count": 1,
+        "per": "day",
+        "quote": "q7",
+        "words": "You must check out with all major marketers and utilities each night."
+      },
+      "basis": [
+        "q3",
+        "q4",
+        "q5",
+        "q6"
+      ],
+      "minutes": 25
+    },
+    {
+      "process": "proc-017",
+      "change": "Replace the monthly phone and email poll with an automatic month-end report of new books and books that newly hold financial third-party deals.",
+      "explanation": "Risk/IT schedules a month-end query against the deal system (TAGG/ERMS) that lists (a) book codes created during the month and (b) books whose first financial third-party deal falls in the month, and emails it to Settlements a few days before NYMEX invoicing. Settlements reads one report instead of polling Reporting and four desk heads. The report does not depend on a list of contacts, so staff turnover no longer breaks it, and books that newly hold financial deals are listed even when nobody remembers to say so. New books already produce a set-up email to a 'books list', but that does not cover existing books that start holding financial deals, which is what Settlements missed.",
+      "not_served": [],
+      "ongoing": true,
+      "stated_rate": {
+        "count": 1,
+        "per": "month",
+        "quote": "q6",
+        "words": "before we run our NYMEX invoices at the end of the month"
+      },
+      "basis": [
+        "q2",
+        "q3",
+        "q4",
+        "q5"
+      ],
+      "minutes": 25
+    },
+    {
+      "process": "proc-018",
+      "change": "Gas Control enters each shut-in once in a form that looks up the contracts behind each meter, drafts the producer letters and emails a kept distribution list.",
+      "explanation": "Build a simple shut-in notice form for Gas Control: meters, reason, start time and expected return. On submit it (1) looks up the active contracts, counterparties and deal makers behind each meter in Global Contracts/Sitara, (2) fills in a standard producer notification letter for each affected counterparty, for Contract Administration to review and sign, and (3) emails the notice to a kept distribution list plus the deal makers and schedulers on the affected deals. When dates change, Gas Control edits the notice and the same recipients and letters are updated. Contract Administration only reviews and signs; nobody rebuilds lists or looks meters up one by one.",
+      "not_served": [],
+      "ongoing": true,
+      "stated_rate": {
+        "count": 0,
+        "per": "month",
+        "quote": "",
+        "words": ""
+      },
+      "basis": [
+        "q11",
+        "q12",
+        "q13",
+        "q14",
+        "q15",
+        "q16"
+      ],
+      "minutes": 50
+    },
+    {
+      "process": "proc-019",
+      "change": "Show Giron's own open-position figure on the DPR automatically and treat his silence by a set cutoff as sign-off, so he replies only when something is wrong.",
+      "explanation": "The DPR preparation pulls the Enovate net open position from the books Giron keeps and shows any difference on the report. Giron still reviews the report, but replies only if the positions do not match or he disagrees with the P&L. If he has not objected by an agreed cutoff, that counts as his approval. Giron no longer looks up and types his position or sends a daily 'OK', and the analyst no longer has to watch for and record his reply. Tomaski's and Radous's approvals are not counted, because none of their replies are in the archive.",
+      "not_served": [],
+      "ongoing": true,
+      "stated_rate": {
+        "count": 0,
+        "per": "month",
+        "quote": "",
+        "words": ""
+      },
+      "basis": [
+        "q9",
+        "q10",
+        "q11",
+        "q12",
+        "q13"
+      ],
+      "minutes": 3
+    },
+    {
+      "process": "proc-020",
+      "change": "Replace the trader's hand-figured congestion emails with a daily automatic check of CAISO-awarded congestion wheels in CAPS finals against the California flash.",
+      "explanation": "Volume Management already settles congestion from CAPS finals and the inc sheet, and by November says it no longer misses it. A daily comparison would list every congestion wheel CAISO awarded in the CAPS finals, with its MW and price, next to what is in the flash, and show any mismatch on an exception list for Volume Management. This also catches the cases where awarded wheels were missing from the inc sheet or the flash. Bill stops working out MW times price and writing heads-up emails, and recipients stop reading them; Volume Management checks the exception list instead. The desk's own exposure file stays as it is.",
+      "not_served": [],
+      "ongoing": true,
+      "stated_rate": {
+        "count": 0,
+        "per": "month",
+        "quote": "",
+        "words": ""
+      },
+      "basis": [
+        "q12",
+        "q13",
+        "q14",
+        "q15",
+        "q16"
+      ],
+      "minutes": 8
+    },
+    {
+      "process": "proc-021",
+      "change": "Take each cost center's commercial-team percentages from the monthly OPM survey instead of running a separate allocation % spreadsheet round.",
+      "explanation": "Financial Operations would work out each RC's allocation percentages from the OPM survey results it already has: the hours by activity and the commercial teams supported and their percentages. It would send the percentages to the RC owners for information. RC owners would reply only if something is wrong, such as a new RC or a team that was split out. The separate spreadsheet request, the director's pass-down and roll-up, and the assistant's forwarding would stop. Managers would answer one monthly question about where their group's time went instead of two. The OPM survey goes on as before, and none of its time is counted as saved. The two calls currently have different deadlines (the October 2000 allocations were due on the 2nd), and the OPM team has raised concerns about its data quality. Finance would need to agree a single cut-off and accept the OPM figures as the basis for its charges.",
+      "not_served": [],
+      "ongoing": true,
+      "stated_rate": {
+        "count": 1,
+        "per": "month",
+        "quote": "q12",
+        "words": "they will require explanations each month as all variances from Plan do."
+      },
+      "basis": [
+        "q5",
+        "q6",
+        "q7",
+        "q8",
+        "q9",
+        "q10",
+        "q11"
+      ],
+      "minutes": 180
+    },
+    {
+      "process": "proc-022",
+      "change": "A nightly report lists ERMS curves missing from RisktRAC, replacing the weekly hand check.",
+      "explanation": "IT schedules a nightly job that compares the curves in ERMS with those in RisktRAC (and the TAGG mapping) and emails any ERMS curve without a match to Risk Analysis and Reporting and to the risk lead of the desk that owns it. A further step would be for a new ERMS curve to create the RisktRAC set-up request automatically, filled in from the ERMS curve definition, in place of the hand-completed form. Afterwards Risk Analysis and Reporting no longer does the weekly comparison; it reads a short exception list. Missing curves show up the next morning instead of up to a week later, so VaR is not left inaccurate in between. Only the weekly check is counted in the savings, not the form or the TAGG requests.",
+      "not_served": [],
+      "ongoing": true,
+      "stated_rate": {
+        "count": 1,
+        "per": "week",
+        "quote": "q7",
+        "words": "on a weekly basis new curves set up in ERMS are reviewed"
+      },
+      "basis": [
+        "q2",
+        "q3",
+        "q4",
+        "q5",
+        "q6"
+      ],
+      "minutes": 35
+    },
+    {
+      "process": "proc-023",
+      "change": "Build the monthly assistant list from the HR or address-book record, and email only the people whose entries changed or look incomplete.",
+      "explanation": "Each month Ramirez pulls title, location, phone, fax and supervisor for the assistant job codes from the HR system or the Outlook address list. Those records normally carry these fields; the mail does not confirm this, so it needs checking first. She compares the pull with last month's list and emails only the few people whose entries changed or have gaps. Corrections are made in the HR or address record, so the next pull comes out right. The roughly 34 people stop getting a monthly spreadsheet to check, and people outside the pool get nothing.",
+      "not_served": [],
+      "ongoing": true,
+      "stated_rate": {
+        "count": 1,
+        "per": "month",
+        "quote": "q4",
+        "words": "On a monthly basis I will be verifying"
+      },
+      "basis": [
+        "q2",
+        "q3"
+      ],
+      "minutes": 70
+    },
+    {
+      "process": "proc-024",
+      "change": "Have the risk system run both roll-off calcs per book in one scheduled batch, so book administrators calc once instead of toggling official status by hand.",
+      "explanation": "The risk system team adds a roll-off batch job. For each book it produces the 100% prompt-basis calc under a TDS post ID and loads it to TDS, and the 50%/50% roll-off calc under the official V@R post ID. The risk lead (today Jeff Gossett) sets the roll-off and roll-in percentages once per month as parameters. On roll-off nights each book administrator reviews the two results and runs reports off the 100% calc. They no longer recalculate, officialize, unofficialize and re-officialize by hand, and the risk of feeding V@R from the wrong post ID goes away.",
+      "not_served": [],
+      "ongoing": true,
+      "stated_rate": {
+        "count": 1,
+        "per": "month",
+        "quote": "q7",
+        "words": "Again this month"
+      },
+      "basis": [
+        "q2",
+        "q3",
+        "q4",
+        "q5",
+        "q6"
+      ],
+      "minutes": 180
+    },
+    {
+      "process": "proc-025",
+      "change": "Managers put approved time off on one shared team calendar, so the assistant no longer has to send a monthly request and gather the replies.",
+      "explanation": "Set up one shared team calendar in the existing mail system, or one shared spreadsheet on the network drive. Each manager enters planned vacation once, when it is approved. At the start of each month Yvette and Brenda read the calendar. There is no request email, no replies to collect and no schedule to put together by hand.",
+      "not_served": [],
+      "ongoing": true,
+      "stated_rate": {
+        "count": 0,
+        "per": "month",
+        "quote": "",
+        "words": ""
+      },
+      "basis": [
+        "q3",
+        "q4"
+      ],
+      "minutes": 30
+    },
+    {
+      "process": "proc-026",
+      "change": "Marketers add their bullets to one shared document during the week, instead of answering a Friday request email.",
+      "explanation": "Keep one standing shared document (shared drive or Notes database) with a section per marketer. Marketers add items when something happens; Watson reads the document on Friday morning. There is no request email, no reply saying there is nothing, and people such as Darrell Schoolcraft read the document instead of getting forwards. Marketers' time writing real bullets is unchanged.",
+      "not_served": [],
+      "ongoing": true,
+      "stated_rate": {
+        "count": 0,
+        "per": "month",
+        "quote": "",
+        "words": ""
+      },
+      "basis": [
+        "q3",
+        "q4",
+        "q5"
+      ],
+      "minutes": 8
+    },
+    {
+      "process": "proc-027",
+      "change": "A spreadsheet macro compares the CARP report with the El Paso model each night, writes the day's totals and a variance flag into the monthly reconciliation workbook, and leaves the trader to explain only flagged items.",
+      "explanation": "Real Time Trading Support (Kate Symes) adds a comparison tab or macro to the El Paso model that reads the day's CARP report, compares it with the model, highlights any differences, and writes the day's El Paso totals and a 'no variance / variance' entry into the monthly EPE reconciliation workbook. The monthly workbook is made from a template with its path already set. Each night the shift trader runs it, checks any flagged items and types an explanation only for those. On nights with no differences the entry is written automatically, so Houston still sees that the CARP was run, and differences are caught the same night instead of at month-end.",
+      "not_served": [],
+      "ongoing": true,
+      "stated_rate": {
+        "count": 1,
+        "per": "day",
+        "quote": "q9",
+        "words": "El Paso model must tie out with CARP when trading day is done."
+      },
+      "basis": [
+        "q4",
+        "q5",
+        "q6",
+        "q7",
+        "q8"
+      ],
+      "minutes": 9
+    }
+  ]
+}

@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Recurring work review</title>
+<title>Automation opportunities</title>
 <style>
 :root {
   color-scheme: light;
@@ -68,17 +68,15 @@ header .wrap { display: flex; align-items: center; gap: 16px; min-height: 52px; 
 .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--muted); flex: none; }
 .dot.running { background: var(--accent); animation: pulse 1.6s ease-in-out infinite; }
 .dot.done { background: var(--good); }
-.dot.paused, .dot.stopped { background: var(--warning); }
+.dot.stopped { background: var(--warning); }
 @keyframes pulse { 50% { opacity: 0.3; } }
 @media (prefers-reduced-motion: reduce) { .dot.running { animation: none; } }
 
 .hero { padding: 36px 0 20px; }
 .eyebrow { color: var(--muted); font-size: 13px; margin: 0 0 10px; }
-.figures { display: flex; gap: 48px; flex-wrap: wrap; align-items: flex-end; }
 .figure b { display: block; font-size: 52px; line-height: 1; font-weight: 600; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; }
-.figure.minor b { font-size: 28px; letter-spacing: -0.02em; }
-.figure span { color: var(--ink-2); font-size: 14px; }
-.basis { color: var(--ink-2); font-size: 13.5px; max-width: 760px; margin: 18px 0 0; }
+.lead { font-size: 17px; margin: 8px 0 0; }
+.basis { color: var(--muted); font-size: 13px; max-width: 760px; margin: 14px 0 0; }
 
 .card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 8px 20px; margin: 0 0 32px; }
 .section-head { margin: 0 0 10px; }
@@ -95,32 +93,36 @@ td { padding: 14px 8px; border-bottom: 1px solid var(--grid); vertical-align: to
 th.r, td.r { text-align: right; }
 .rank { color: var(--muted); width: 24px; }
 .name { font-weight: 500; }
-.change { color: var(--ink-2); font-size: 13.5px; margin-top: 2px; max-width: 480px; }
+.change { color: var(--ink-2); font-size: 13.5px; margin-top: 2px; max-width: 560px; }
+/* In the list the change is two lines at most; the opened row shows it whole. */
+tr.row .change { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2; overflow: hidden; }
+tr.row.is-open .change { display: block; }
+tr.row { cursor: pointer; }
+tr.row:hover > td { background: var(--accent-wash); }
+.how { color: var(--muted); font-size: 13px; white-space: nowrap; }
+.running { color: var(--ink-2); font-variant-numeric: tabular-nums; }
 .open { font: inherit; font-weight: 600; color: var(--ink); background: none; border: 1px solid var(--border); border-radius: 8px; padding: 4px 10px; cursor: pointer; white-space: nowrap; min-width: 84px; text-align: right; }
 .open:hover, .open[aria-expanded="true"] { border-color: var(--accent); background: var(--accent-wash); }
 .open::after { content: " ▾"; color: var(--muted); font-weight: 400; }
 .open[aria-expanded="true"]::after { content: " ▴"; }
 @media (max-width: 700px) { .hide-narrow { display: none; } }
 @media (max-width: 640px) {
-  .figures { gap: 16px 32px; }
   .figure b { font-size: 40px; }
   td, th { padding-left: 4px; padding-right: 4px; }
   .open { min-width: 0; padding: 4px 8px; }
   th { white-space: normal; }
 }
 .name, .change, .quote .q { overflow-wrap: anywhere; }
-.figure a { text-decoration: none; }
-.figure a:hover b { color: var(--accent); }
 .line td { padding: 8px; color: var(--muted); font-size: 12.5px; background: var(--page); }
 .more { display: block; width: 100%; font: inherit; color: var(--ink-2); background: none; border: 0; padding: 14px 8px; cursor: pointer; text-align: left; }
 .more:hover { color: var(--ink); }
 
 tr.detail > td { background: var(--page); padding: 18px 20px 22px; }
-.plan { margin: 0 0 18px; max-width: 760px; }
+.plan { display: grid; grid-template-columns: 1fr 1fr; gap: 0 28px; margin: 0 0 6px; }
+@media (max-width: 700px) { .plan { grid-template-columns: 1fr; } }
 .plan h3 { font-size: 13px; font-weight: 600; margin: 0 0 4px; }
-.plan p { margin: 0 0 12px; font-size: 15px; }
-.plan .today { color: var(--ink-2); font-size: 14px; }
-.formula { font-size: 15px; margin: 0 0 16px; padding-top: 16px; border-top: 1px solid var(--grid); }
+.plan p { margin: 0 0 12px; font-size: 14px; color: var(--ink-2); }
+.formula { font-size: 16px; margin: 0 0 16px; }
 .formula b { font-variant-numeric: tabular-nums; }
 .factor { padding: 14px 0; border-top: 1px solid var(--grid); max-width: 760px; }
 .factor-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; margin-bottom: 4px; }
@@ -128,19 +130,18 @@ tr.detail > td { background: var(--page); padding: 18px 20px 22px; }
 .factor-head b { font-size: 15px; font-variant-numeric: tabular-nums; }
 .factor-head .src { color: var(--muted); font-size: 12.5px; }
 .factor > p { margin: 0 0 8px; color: var(--ink-2); font-size: 14px; }
-.quote { display: block; width: 100%; text-align: left; font: inherit; color: inherit; background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 8px; padding: 10px 12px; margin: 8px 0 0; cursor: pointer; }
-.quote:hover { border-color: var(--accent); }
+.quote { display: block; width: 100%; text-align: left; font: inherit; font-size: 14px; color: inherit; background: none; border: 0; border-left: 2px solid var(--accent); border-radius: 0; padding: 2px 0 2px 12px; margin: 10px 0 0; cursor: pointer; }
+.quote:hover { background: var(--accent-wash); }
 .quote .q { display: block; }
-.quote .note { display: block; color: var(--ink-2); font-size: 13.5px; margin-top: 4px; }
-.quote .meta { display: block; color: var(--muted); font-size: 12.5px; margin-top: 4px; }
+.quote .note { display: block; color: var(--ink-2); font-size: 13px; margin-top: 2px; }
+.quote .meta { display: block; color: var(--muted); font-size: 12px; margin-top: 2px; }
+details.more-quotes { margin-top: 10px; }
+details.more-quotes > summary { font-weight: 500; color: var(--ink-2); }
 details.messages { padding-top: 14px; border-top: 1px solid var(--grid); font-size: 13.5px; max-width: 760px; }
 summary { cursor: pointer; font-weight: 600; font-size: 13px; }
-details.messages > p { color: var(--ink-2); margin: 6px 0 0; }
+details.messages > .msgs { margin-top: 8px; }
 details.once > summary { font-size: 15px; }
 details.once > p { color: var(--ink-2); font-size: 14px; margin: 6px 0 10px; max-width: 760px; }
-.kind { margin-top: 12px; }
-.kind h4 { font-size: 13px; font-weight: 500; margin: 0 0 2px; }
-.kind h4 span { color: var(--muted); font-weight: 400; }
 .msgs { list-style: none; margin: 0; padding: 0; max-height: 300px; overflow-y: auto; }
 .msgs button { display: grid; grid-template-columns: 92px minmax(0, 1fr); gap: 2px 10px; width: 100%; text-align: left; font: inherit; font-size: 13px; color: inherit; background: none; border: 0; border-bottom: 1px solid var(--grid); padding: 7px 4px; cursor: pointer; }
 .msgs button:hover { background: var(--accent-wash); }
@@ -176,7 +177,7 @@ mark { background: var(--mark); color: inherit; border-radius: 2px; }
 </style>
 </head>
 <body>
-<header><div class="wrap"><div class="brand">Recurring work review</div><div class="status" id="status"></div></div></header>
+<header><div class="wrap"><div class="brand">Automation opportunities</div><div class="status" id="status"></div></div></header>
 <main id="app" class="wrap"><p class="empty muted">Loading…</p></main>
 <div id="overlay"></div>
 <script>
@@ -219,20 +220,16 @@ if (/^#opp-\d+$/.test(location.hash)) open.add(location.hash.slice(1));
 
 // ---- the run's progress ----
 const STEPS = {
-  prepare: "Reading and batching the mail", scouts: "Reading every batch for recurring work",
-  validate: "Checking every quote against its message", merge: "Grouping the same work together",
-  group: "Building each process", estimate: "Estimating the time each change saves",
-  score: "Ranking by dollars a month", drafters: "Drafting the top opportunities", finalize: "Writing the report",
+  prepare: "Reading and batching the mail", readers: "Reading every message for recurring work",
+  explore: "Exploring the mail and checking each proposal", drafters: "Drafting the top opportunities",
+  finalize: "Writing the report",
 };
 
 function runState() {
   const current = P.steps.find(s => !s.done), st = P.run ? P.run.status : "";
   if (P.active) return {kind: "running", current, text: "Running"};
-  if (!current) return {kind: "done", current, text: "Run finished"};
+  if (!current || st.startsWith("DONE")) return {kind: "done", current, text: "Run finished"};
   if (!P.run && !P.steps.some(s => s.done)) return {kind: "none", current, text: "No run yet"};
-  if (st.startsWith("CONTINUE")) return {kind: "paused", current, text: "Paused: running it again continues"};
-  const unbuilt = st.match(/^FAILED step '(\w+)' is not built yet/);
-  if (unbuilt) return {kind: "stopped", current, text: `Incomplete: ${(STEPS[unbuilt[1]] || unbuilt[1]).toLowerCase()} is not built yet`};
   if (st.startsWith("FAILED")) return {kind: "stopped", current, text: "Stopped: " + st.slice(7)};
   return {kind: "stopped", current, text: "Stopped: running it again continues"};
 }
@@ -244,8 +241,11 @@ function stepText(step) {
 
 function renderStatus() {
   const s = runState();
-  const what = s.kind === "running" && s.current ? stepText(s.current) + (P.run ? ` · ${since(P.run.started)}` : "") : s.text;
-  document.getElementById("status").replaceChildren(h("span", {class: "dot " + s.kind}), h("span", null, what));
+  const what = s.kind === "running" && s.current
+    ? stepText(s.current) + (P.run ? ` · ${since(P.run.started)}` : "") : s.text;
+  // A finished run needs no status: the results are the page.
+  document.getElementById("status").replaceChildren(...(s.kind === "done" ? []
+    : [h("span", {class: "dot " + s.kind}), h("span", null, what)]));
 }
 
 function viewProgress() {
@@ -254,7 +254,7 @@ function viewProgress() {
     h("h1", null, s.kind === "none" ? "No run yet" : s.kind === "running" ? "The run is in progress" : "The run has not ranked anything yet"),
     h("p", null, s.kind === "none" ? "Start one with /run-pipeline. This page follows it as it goes."
       : s.kind === "running" ? "The ranked opportunities appear here as soon as they are ready." : s.text + "."),
-    h("ol", {class: "steps"}, P.steps.map(step => {
+    P.run && P.run.step === "explore" ? null : h("ol", {class: "steps"}, P.steps.map(step => {
       const now = step === s.current && s.kind !== "none";
       const [n, total] = step.count || [0, 0];
       return h("li", {class: step.done ? "done" : now ? "now" : ""},
@@ -275,19 +275,18 @@ function viewResults() {
   const rows = [];
   for (const o of shown) {
     const id = "d-" + o.id, isOpen = open.has(o.id);
-    rows.push(h("tr", null,
+    // The whole row opens the opportunity; the button is there for the keyboard, and its click reaches the row.
+    rows.push(h("tr", {class: "row" + (isOpen ? " is-open" : ""), onclick: () => { isOpen ? open.delete(o.id) : open.add(o.id); render(); }},
       h("td", {class: "rank"}, o.rank),
       h("td", null, h("div", {class: "name"}, o.name), h("div", {class: "change"}, o.change)),
+      h("td", {class: "r how hide-narrow"}, `${num(o.minutes)} min × ${(+o.rate.per_month).toFixed(1)} a month`),
       h("td", {class: "r"}, h("button", {class: "open", "aria-expanded": String(isOpen), "aria-controls": id,
-        title: "The change in full, how this figure is made, and the messages it comes from",
-        onclick: () => { isOpen ? open.delete(o.id) : open.add(o.id); render(); }}, money(o.dollars_per_month))),
-      h("td", {class: "r hide-narrow"}, num(o.hours_per_month)),
-      h("td", {class: "r hide-narrow"}, money(o.running_total))));
+        title: "How this figure is made, and the messages it comes from"}, money(o.dollars_per_month))),
+      h("td", {class: "r running hide-narrow"}, money(o.running_total))));
     if (isOpen) rows.push(h("tr", {class: "detail", id}, h("td", {colspan: 5}, evidence(o))));
-    if (o.rank === t.drafted && ranked.length > t.drafted) {
+    if (o.rank === t.drafted && ranked.length > t.drafted && R.drafts.length) {
       rows.push(h("tr", {class: "line"}, h("td", {colspan: 5},
-        `The ${t.drafted} above, ${money(t.drafted_dollars_per_month)} a month, ` +
-        (R.drafts.length ? "are drafted." : "are the ones to be drafted; drafting is not built yet."))));
+        `The ${t.drafted} above, ${money(t.drafted_dollars_per_month)} a month, are drafted.`)));
     }
   }
 
@@ -295,21 +294,18 @@ function viewResults() {
     h("section", {class: "hero"},
       h("p", {class: "eyebrow"}, `Enron email archive · ${plural(Object.keys(R.mailboxes).length, "mailbox", "mailboxes")}` +
         (months.length ? ` · ${monthLabel(months[0])} – ${monthLabel(months[months.length - 1])}` : "")),
-      h("div", {class: "figures"},
-        h("div", {class: "figure"}, h("a", {href: "#ranked", title: "The opportunities this adds up"}, h("b", null, money(t.dollars_per_month))),
-          h("span", null, "a month of staff time that could be saved")),
-        h("div", {class: "figure minor"}, h("a", {href: "#ranked"}, h("b", null, hrs(t.hours_per_month))), h("span", null, "hours saved a month")),
-        h("div", {class: "figure minor"}, h("a", {href: "#ranked"}, h("b", null, money(t.drafted_dollars_per_month))),
-          h("span", null, `from the top ${t.drafted}`))),
-      h("p", {class: "basis"}, `Each figure is minutes saved each time × times a month × $${t.hourly_rate} an hour. `,
-        "The minutes are a model's estimate from quoted evidence; how often comes from a count of the archive or a message that states it. ",
-        "Every quote has been checked word for word against its message. Click a figure for the change in full and the evidence behind it.")),
+      h("div", {class: "figure"}, h("b", null, money(t.dollars_per_month) + " a month")),
+      h("p", {class: "lead"}, `of staff time could be saved: ${hrs(t.hours_per_month)} hours a month, ` +
+        `across ${plural(ranked.length, "opportunity", "opportunities")}.`),
+      h("p", {class: "basis"}, `Each saving is the minutes saved each time × how often it happens × $${t.hourly_rate} an hour. `,
+        "Every quote is checked word for word against its message.")),
     h("section", {class: "card", id: "ranked"}, h("table", null,
-      h("thead", null, h("tr", null, h("th", null, "#"), h("th", null, "Opportunity and the change"),
-        h("th", {class: "r"}, "Saved a month"), h("th", {class: "r hide-narrow"}, "Hours saved a month"), h("th", {class: "r hide-narrow"}, "Running total"))),
+      h("thead", null, h("tr", null, h("th", null, "#"), h("th", null, "Opportunity"),
+        h("th", {class: "r hide-narrow"}, "How it's figured"), h("th", {class: "r"}, "Saved a month"),
+        h("th", {class: "r hide-narrow"}, "Running total"))),
       h("tbody", null, rows)),
       rest.length ? h("button", {class: "more", onclick: () => { showAll = true; render(); }},
-        `Show the other ${rest.length}, together ${money(rest.reduce((a, o) => a + o.dollars_per_month, 0))} a month`) : null),
+        `${plural(rest.length, "smaller one")}, together ${money(rest.reduce((a, o) => a + o.dollars_per_month, 0))} a month ▾`) : null),
     onceView(),
   ];
 }
@@ -319,10 +315,9 @@ function onceView() {
   const once = R.opportunities.filter(o => o.rank == null && (o.unused || "").startsWith("it happened once"));
   if (!once.length) return null;
   return h("section", null, h("details", {class: "once"},
-    h("summary", null, `${plural(once.length, "thing")} seen once, not ranked`),
-    h("p", null, "Each of these appears once in the archive (one message, or one message and its replies), " +
-      "and nothing in it says the work recurs, so it is not counted in the figures above. " +
-      "What it shows may still matter, and is worth a question to the people involved."),
+    h("summary", null, `Seen once, not ranked (${once.length})`),
+    h("p", null, "Each appears once in the mail with no sign that it recurs, so it is not in the figures above; " +
+      "it may still be worth asking the people involved."),
     h("div", {class: "card"}, once.map(o => { const p = R.processes.find(x => x.id === o.process);
       return h("div", {class: "item"}, h("div", {class: "name"}, o.name),
         o.change ? h("div", {class: "change"}, o.change) : null,
@@ -331,67 +326,63 @@ function onceView() {
 
 function evidence(o) {
   const r = o.rate, c = r.counted, p = R.processes.find(x => x.id === o.process);
-  const where = c.span
-    ? `the ${plural(c.months, "month")} from ${monthLabel(c.span[0])} to ${monthLabel(c.span[1])}, while the work went on, of the mail held for ${c.mailboxes.join(", ")}`
-    : `the ${plural(c.months, "month")} of mail the archive holds for ${c.mailboxes.join(", ")}${o.ongoing === false ? ", since it is an episode that will not continue" : ""}`;
-  const times = plural(c.times, "time") + (c.messages > c.times ? ` (${c.messages} messages; a reply is counted with what it answers)` : "");
+  const boxes = c.mailboxes.join(", ");
+  const times = plural(c.times, "time") + (c.messages > c.times ? ` (in ${c.messages} messages)` : "");
   const often = r.source === "stated"
-    ? [h("p", null, `A message says how often the work is done, and the quote below is that evidence. `,
-         c.times === 1 ? `The archive itself shows it once; it holds only part of these people's mail.`
-           : `The archive itself shows it ${times} in ${where}; it holds only part of these people's mail, so a count from it falls short.`),
+    ? [h("p", null, "Stated in the mail" + (r.stated.per && r.stated.per !== "month"
+         ? `: ${num(r.stated.count)} a ${r.stated.per}, which is ${num(r.stated.per_month)} a month.` : ".")),
        quote(r.stated.quote, r.stated.words)]
     : [h("p", null, c.span
-         ? `Counted from the archive: ${times}, so ${plural(c.times - 1, "gap")} between them, in ${where}. ` +
-           `Work that goes on is counted by the gaps between its times: ${num(c.times - 1)} ÷ ${num(c.months)} = ${num(c.per_month)} a month. `
-         : `Counted from the archive: ${times} in ${where}: ${num(c.times)} ÷ ${num(c.months)} = ${num(c.per_month)} a month. `,
-         `The archive holds only part of these people's mail, so the real rate is likely higher. The messages are listed below.`)];
+         // Work that goes on is counted by the intervals between its times.
+         ? `Counted in ${boxes}'s mail: ${times} from ${monthLabel(c.span[0])} to ${monthLabel(c.span[1])}, ` +
+           `so ${plural(c.times - 1, "interval")} in ${plural(c.months, "month")}: ${num(c.times - 1)} ÷ ${num(c.months)} = ${num(c.per_month)} a month.`
+         : `Counted in ${boxes}'s mail: ${times} in the ${plural(c.months, "month")} it holds` +
+           `${o.ongoing === false ? " (an episode that will not continue)" : ""}: ${num(c.times)} ÷ ${num(c.months)} = ${num(c.per_month)} a month.`)];
   const key = c => c.message + "\u0000" + c.quote;
-  // A quote cited for the minutes that is the same words as the rate's is shown once, under how often.
+  // Each quote is shown once: the rate's under how often, then where it stalls, then the minutes'.
   const rateWords = r.source === "stated" ? key(r.stated.quote) : null;
-  const basis = o.basis.filter(b => key(b) !== rateWords);
-  const shownAbove = new Set([rateWords, ...basis.map(key)]);
-  const stalls = (p && p.evidence.stalls || []).filter(s => !shownAbove.has(key(s)));
+  const stalls = (p && p.evidence.stalls || []).filter(s => key(s) !== rateWords);
+  const shownAbove = new Set([rateWords, ...stalls.map(key)]);
+  const basis = o.basis.filter(b => !shownAbove.has(key(b)));
   return [
-    h("div", {class: "plan"},
-      p ? [h("h3", null, "How the work is done today"), h("p", {class: "today"}, p.summary)] : null,
-      h("h3", null, "The change"), h("p", null, o.explanation || o.change)),
     h("p", {class: "formula"}, h("b", null, `${num(o.minutes)} min`), " saved each time × ", h("b", null, num(r.per_month)),
       " times a month = ", h("b", null, `${num(o.hours_per_month)} hours`), ` × $${R.totals.hourly_rate} = `, h("b", null, money(o.dollars_per_month)), " a month"),
+    h("div", {class: "plan"},
+      p ? h("div", null, h("h3", null, "Today"), h("p", null, p.summary)) : null,
+      h("div", null, h("h3", null, "The change"), h("p", null, o.explanation || o.change))),
+    stalls.length ? h("section", {class: "factor"},
+      h("div", {class: "factor-head"}, h("h3", null, "Where it stalls")), quotes(stalls)) : null,
     h("section", {class: "factor"},
-      h("div", {class: "factor-head"}, h("h3", null, "How often it happens"), h("b", null, `${num(r.per_month)} times a month`),
-        h("span", {class: "src"}, r.source === "stated" ? "stated in the mail" : "counted from the archive")),
+      h("div", {class: "factor-head"}, h("h3", null, "How often"), h("b", null, `${num(r.per_month)} times a month`)),
       often),
     h("section", {class: "factor"},
-      h("div", {class: "factor-head"}, h("h3", null, "Time the change saves each time"), h("b", null, `${num(o.minutes)} minutes`),
-        h("span", {class: "src"}, "an estimate, not stated in the mail")),
-      h("p", null, o.reasoning),
-      basis.length < o.basis.length && !basis.length ? h("p", null, "It rests on the same quote as how often, above.") : null,
-      basis.map(quote)),
-    stalls.length ? h("section", {class: "factor"},
-      h("div", {class: "factor-head"}, h("h3", null, "Where it stalls")), stalls.map(quote)) : null,
+      h("div", {class: "factor-head"}, h("h3", null, "Time saved each time"), h("b", null, `${num(o.minutes)} minutes`)),
+      o.reasoning ? h("p", null, o.reasoning) : null,
+      quotes(basis)),
     p ? occurrences(p) : null,
     R.drafts.includes(o.id) ? h("div", {class: "draft-link"}, h("button", {class: "quote", onclick: () => openDraft(o)}, "Read the drafted artifact")) : null,
   ];
 }
 
-// The messages that show the work, grouped by what each was recorded as showing.
+// The messages that show the work, by date.
 function occurrences(p) {
-  const all = p.evidence.occurrences, kinds = new Map();
-  for (const cite of all) {
-    if (!kinds.has(cite.pattern)) kinds.set(cite.pattern, []);
-    kinds.get(cite.pattern).push(cite);
-  }
+  const all = p.evidence.occurrences;
   const byDate = (a, b) => ((R.messages[a.message] || {}).date || "9").localeCompare((R.messages[b.message] || {}).date || "9");
   return h("details", {class: "messages"},
     h("summary", null, all.length === 1 ? "The message that shows this work" : `The ${all.length} messages that show this work`),
-    h("p", null, "Each message is listed under what the reader of its batch recorded it as showing. The quote is the words that show it; open a message to read it whole."),
-    [...kinds].sort((a, b) => b[1].length - a[1].length).map(([pid, cites]) => h("div", {class: "kind"},
-      h("h4", null, R.patterns[pid] || pid, h("span", null, ` · ${plural(cites.length, "message")}`)),
-      h("ul", {class: "msgs"}, cites.sort(byDate).map(cite => { const m = R.messages[cite.message] || {};
-        return h("li", null, h("button", {onclick: () => openMessage(cite.message, [cite.quote])},
-          h("span", {class: "d"}, dateLabel(m.date)),
-          h("span", {class: "s"}, `${m.subject || "(no subject)"} · ${m.from || ""}`),
-          h("span", {class: "t"}, `“${cite.quote}”`))); })))));
+    h("ul", {class: "msgs"}, [...all].sort(byDate).map(cite => { const m = R.messages[cite.message] || {};
+      return h("li", null, h("button", {onclick: () => openMessage(cite.message, [cite.quote])},
+        h("span", {class: "d"}, dateLabel(m.date)),
+        h("span", {class: "s"}, `${m.subject || "(no subject)"} · ${m.from || ""}`),
+        h("span", {class: "t"}, `“${cite.quote}”`))); })));
+}
+
+// The first quotes are shown; the rest open on request.
+function quotes(cites) {
+  const SHOWN = 2;
+  if (cites.length <= SHOWN + 1) return cites.map(c => quote(c));
+  return [cites.slice(0, SHOWN).map(c => quote(c)),
+    h("details", {class: "more-quotes"}, h("summary", null, `${cites.length - SHOWN} more quotes`), cites.slice(SHOWN).map(c => quote(c)))];
 }
 
 function quote(cite, words) {
@@ -460,7 +451,7 @@ function highlighted(text, spans) {
 // ---- keeping up with the run ----
 function render() {
   const y = window.scrollY;
-  document.getElementById("app").replaceChildren(...[].concat(R.scored ? viewResults() : viewProgress()));
+  document.getElementById("app").replaceChildren(...[].concat(R.scored ? viewResults() : viewProgress()).filter(x => x != null));
   window.scrollTo(0, y);
   renderStatus();
 }

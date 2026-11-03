@@ -15,6 +15,7 @@ file in out/ open, so starting over can remove the folder's contents under it.
 
 import json
 import os
+import re
 import socket
 import subprocess
 import sys
@@ -60,9 +61,9 @@ def locate(quote: str, text: str) -> list[int] | None:
     if chars and chars[-1] == " ":
         chars.pop()
         where.pop()
-    q = normalize(quote).lower()
-    k = "".join(chars).lower().find(q) if q else -1
-    return [where[k], where[k + len(q) - 1] + 1] if k >= 0 else None
+    q = normalize(quote)
+    m = re.search(re.escape(q), "".join(chars), re.IGNORECASE) if q else None
+    return [where[m.start()], where[m.end() - 1] + 1] if m else None
 
 
 _cache = {}

@@ -19,7 +19,7 @@ the user's to keep or discard: ask whether to continue it or start over. Continu
 repeats nothing that is done; starting over throws away its results and pays for
 every model call again. If you cannot ask, continue it. To start over, run `reset`.
 
-Then run `run` with the longest timeout the shell tool allows. Its last line is
-the status. `CONTINUE`: run it again; it resumes where it stopped. `DONE` or
-`FAILED <reason>`: report the lines it printed, with the dashboard address, and
-stop.
+Then run `run` in the background, since it takes about half an hour, longer than
+a shell call may last, and wait until it ends without checking on it. Its last
+line is the status, `DONE` or `FAILED <reason>`: report the lines it printed,
+with the dashboard address, and stop.

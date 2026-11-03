@@ -1,0 +1,56 @@
+# Request: one registry of post IDs, plus a nightly exception email for any not officialized by cut-off
+
+*Email, drafted for opportunity 3: Nightly check that every post ID is officialized, $921 a month.*
+
+**For:** Risk management (owner of the daily non-officialized books list) and IT for the risk system; cc the gas desk-group leads, the regional controllers and Credit
+
+---
+
+To: Risk management (owner of the daily non-officialized books list); IT, risk system
+Cc: Gas desk-group leads; Regional controllers; Credit
+
+Subject: Request: one registry of post IDs, plus a nightly email listing any not officialized by cut-off
+
+WHAT WE'RE ASKING
+1. Risk and IT: please set up one registry of the post IDs each book admin must officialize every night. We'll send the lists the desk already keeps by hand as the starting data.
+2. IT: at a set time before cut-off each night, have the risk system compare the registry with the books marked official. It should email each book admin any of their post IDs that are still not officialized, including post IDs with no position.
+3. Risk and the regional controllers: please agree that this report replaces the controllers' end-of-night sheet and Risk's own daily list of missed books.
+
+WHY
+Today about five people a night run an Excel macro by hand, one per desk group. Each copy of the file is maintained separately. A book that is missed means V@R and Credit use the previous day's position. The check we used before the macro also missed books with no position. A central check would end the hand-run macros and catch every missed book, flat ones included. It would save about 10.8 staff hours a month (about $920).
+
+PLEASE REPLY BY [date] WITH:
+- Risk: who owns the registry and approves additions and removals of post IDs
+- IT: whether the risk system can send this email, and the time it would run (we suggest [time], before cut-off)
+- Regional controllers and Risk: whether this report can replace your current sheet and list
+
+Until the report is live, nothing changes. The last person to finish each night still runs the macro.
+
+---
+
+BACKGROUND (for anyone who needs the detail)
+
+How it works today
+- Every post ID has to be officialized each night so the V@R and credit systems pick it up. Credit uses all officialized books. For any book that isn't officialized, it uses the previous day's position.
+- In October 2000 a missed book put the desk on Risk's daily list of non-officialized books. That list goes to the head of risk operations and is reviewed each week by the chief risk officer.
+- Since then, one person in each desk group runs an Excel macro by hand. They enter the date and the Portfolio and Book codes, and the macro lists the books that are officialized. The file went to five desk-group leads. Staff have changed their copies and passed them round. For example, one version requires a comment in every post ID so that only those are pulled in.
+- The regional controllers also get a sheet at the end of the night confirming that all books are officialized. Risk keeps its own daily list of missed books.
+- No system holds the full list of books each admin must officialize. When another group asks, the desk writes the list out by hand. This happened in July and twice in November 2000.
+- The check used before the macro compared positions only. A post ID with no net position that wasn't officialized went unnoticed. Credit needs those flat books officialized too.
+
+What changes
+- One registry of post IDs per book admin, kept by Risk and IT. It starts from the lists the desk has already written out.
+- One automatic nightly comparison of the registry against the books marked official, run before cut-off. Any misses, flat books included, are emailed to their owner.
+- The same report serves as the controllers' end-of-night sheet and as Risk's daily tracking list.
+- Desks stop running the macro and stop keeping their own copies of it. Book admins only act when they receive an exception email.
+- When another group asks which books are officialized, the answer comes from the registry, not from a list written by hand.
+
+What it saves
+- The macro is run by hand each working day: about 30 minutes × 21.67 days a month = 10.84 hours, or about $921.40 a month.
+- The savings also include not having to update the file copies, the end-of-night sheet and the lists written on request. These are not counted in the figure above.
+
+Proposed steps
+1. The desk sends Risk and IT its current lists of the post IDs each book admin officializes every night.
+2. Risk names an owner for the registry and sets how post IDs are added and removed.
+3. IT builds the nightly comparison and email and runs it alongside the macro for [number] nights to confirm the two agree.
+4. Once the results match, desks stop running the macro, the controllers' sheet and Risk's list are replaced by the report, and requests for book lists are answered from the registry.

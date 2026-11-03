@@ -24,6 +24,16 @@ def original_path(rel: str) -> str:
     return rel[: -len(".eml")] + "." if rel.endswith(".eml") else rel
 
 
+def message_id(file: str, messages: dict, copies: dict) -> str | None:
+    """The id of the message a file names, as written relative to the corpus or the agents' folder."""
+    rel = file.replace("\\", "/").strip()
+    rel = rel.rsplit("corpus/", 1)[-1].removeprefix("./")
+    for mid in (original_path(rel), rel, rel + "."):
+        if mid in messages or mid in copies:
+            return mid
+    return None
+
+
 def read_raw(corpus_dir: Path, msg_id: str) -> str:
     """Return the raw text of a message given its original path."""
     path = corpus_dir / msg_id
@@ -104,6 +114,8 @@ def parse_message(msg_id: str, raw: str) -> dict:
         "id": msg_id,
         "mailbox": msg_id.split("/")[0],
         "message_id": (m["Message-ID"] or "").strip(),
+        # The messages this one answers, where its mail client recorded them.
+        "replies_to": re.findall(r"<[^<>\s]+>", f"{m['In-Reply-To'] or ''} {m['References'] or ''}"),
         "date": date,
         "date_raw": m["Date"],
         "date_issue": date_issue,

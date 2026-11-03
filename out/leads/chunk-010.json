@@ -1,0 +1,257 @@
+{
+  "leads": [
+    {
+      "work": "Resolving Real Time trading disputes with counterparties after the fact: rebuilding deal history from notebooks, Inc sheets and comments, requesting call tapes, and dealing with time-zone confusion",
+      "why": "Kate Symes reports about 30 disputes from EOL's first two days, with almost no record of the original deals. She asks traders to date notebooks and add notes to every zeroed-out or changed deal. Bill Williams makes traders state the time zone on every call because otherwise 'disputes will be numerous'. Separate threads show an SRP purchase dispute that needed a tape request, a long CAISO/SRP net-schedule narrative written by hand, and a job posting for a full-time Dispute Resolution Coordinator who runs weekly checkout and true-up meetings and reports.",
+      "files": [
+        "williams-w3/sent_items/226.",
+        "williams-w3/sent_items/146.",
+        "williams-w3/sent_items/131.",
+        "williams-w3/sent_items/182.",
+        "williams-w3/sent_items/204."
+      ]
+    },
+    {
+      "work": "Daily emails telling the Real Time desk about short or long positions from parking and lending deals (deal numbers, hours, MW, delivery point), which then have to be matched against Enpower",
+      "why": "The preschedule and cash desks and Bill send these emails almost every day. They often disagree with Enpower (wrong delivery point, wrong deal number), and PGE has complained about the delivery-point mix-ups. Kate suggests sitting down to go over each position before anything goes out. Kysa adjusts her sheets by hand from these emails.",
+      "files": [
+        "williams-w3/sent_items/198.",
+        "williams-w3/sent_items/183.",
+        "williams-w3/sent_items/172.",
+        "williams-w3/sent_items/175.",
+        "williams-w3/sent_items/171.",
+        "williams-w3/sent_items/168.",
+        "williams-w3/sent_items/164.",
+        "williams-w3/sent_items/148.",
+        "williams-w3/sent_items/112.",
+        "williams-w3/sent_items/120.",
+        "williams-w3/sent_items/126."
+      ]
+    },
+    {
+      "work": "Reconciling CAISO congestion revenue: wheels awarded but missing from the Inc sheet, and published congestion prices that don't match Enron's bids",
+      "why": "Bill repeatedly writes up the awarded MW and prices by hand for volume management. He says CAISO has had trouble reading Enron's bids for a week, and there is a back-and-forth with the CAISO about wrong prices. Volume management has to key in the bid price by hand because the published prices are wrong.",
+      "files": [
+        "williams-w3/sent_items/194.",
+        "williams-w3/sent_items/159.",
+        "williams-w3/sent_items/169.",
+        "williams-w3/sent_items/117."
+      ]
+    },
+    {
+      "work": "Month-end prior month adjustments (PMAs) and correcting annuities for El Paso true-ups",
+      "why": "Kate enters batches of annuities by hand to reconcile El Paso records with Enpower for months going back to 2000. Risk (Fran Chang) sends preliminary PMA files every month-end, Kate checks each charge, and Bill asks what individual charges are for. Month-end settlement is tight enough that Bill objects to Kate taking vacation at month-end.",
+      "files": [
+        "williams-w3/sent_items/145.",
+        "williams-w3/sent_items/135.",
+        "williams-w3/sent_items/134.",
+        "williams-w3/sent_items/133.",
+        "williams-w3/sent_items/152.",
+        "williams-w3/sent_items/150."
+      ]
+    },
+    {
+      "work": "Running reports and reconciling positions across separate position managers (CAPS, Enpower), plus testing new systems (FSP, Path Confirmation)",
+      "why": "Bill says a consolidated position manager would 'reduce our time spent running' reports and help preschedulers, risk and deal control, but it was held up by the FSP delays. Path Confirmation is being rolled out with 'passive approval' and testing that nobody has prioritised. FSP access needs a list of traders.",
+      "files": [
+        "williams-w3/sent_items/167.",
+        "williams-w3/sent_items/128.",
+        "williams-w3/sent_items/119."
+      ]
+    },
+    {
+      "work": "Email meant for Bill Williams (Technical Assets) keeps going to Bill Williams III (Real Time), who forwards each one by hand",
+      "why": "Over and over, Longview project, AMEC subcontractor and turbine package emails reach the wrong Bill Williams, who forwards them and asks senders to fix their address lists. Darin Presto's dispute email also used a wrong address. This points to a directory or address-book problem.",
+      "files": [
+        "williams-w3/sent_items/214.",
+        "williams-w3/sent_items/213.",
+        "williams-w3/sent_items/212.",
+        "williams-w3/sent_items/207.",
+        "williams-w3/sent_items/189.",
+        "williams-w3/sent_items/188.",
+        "williams-w3/sent_items/184.",
+        "williams-w3/sent_items/111.",
+        "williams-w3/sent_items/110.",
+        "williams-w3/sent_items/109.",
+        "williams-w3/sent_items/131."
+      ]
+    },
+    {
+      "work": "Sending Real Time shift staff reference data by email: counterparty trading status, scheduling coordinator IDs, transmission prices, logins and system outage windows",
+      "why": "Bill emails the shift group again and again about who can be traded with (WWP back on, Sempra cut off, IDACORP booking) and about new transmission rates (BPA, SnoPUD). The Allegheny SCID change notice was forwarded twice, weeks apart. Logins and outage windows (Enpower, generator tests, EOL hours) are also sent this way. None of it lives in one reference place.",
+      "files": [
+        "williams-w3/sent_items/179.",
+        "williams-w3/sent_items/124.",
+        "williams-w3/sent_items/209.",
+        "williams-w3/sent_items/205.",
+        "williams-w3/sent_items/76.",
+        "williams-w3/sent_items/203.",
+        "williams-w3/sent_items/206.",
+        "williams-w3/sent_items/160.",
+        "williams-w3/sent_items/161.",
+        "williams-w3/sent_items/211.",
+        "williams-w3/sent_items/166.",
+        "williams-w3/sent_items/137."
+      ]
+    },
+    {
+      "work": "Cleaning up legacy HPL (Houston Pipe Line) records after the AEP sale: missing deals, meters to set up, unpaid producer invoices, imbalance paybacks, missing meters on statements, state/county checks",
+      "why": "Farmer and Olsen are asked over and over to create deals for 2000–2001 production months, reactivate expired contracts so volumes can go through the system, trace the supply behind GLO sales, decide whether invoices belong to ENA or AEP, and work out imbalance paybacks. Each case is handled one at a time.",
+      "files": [
+        "farmer-d/logistics/53.",
+        "farmer-d/logistics/52.",
+        "farmer-d/logistics/41.",
+        "farmer-d/logistics/39.",
+        "farmer-d/logistics/33.",
+        "farmer-d/logistics/31.",
+        "farmer-d/logistics/29.",
+        "farmer-d/logistics/30.",
+        "farmer-d/logistics/43.",
+        "farmer-d/logistics/38.",
+        "farmer-d/logistics/46.",
+        "farmer-d/logistics/45."
+      ]
+    },
+    {
+      "work": "Texas GLO (General Land Office) settlement and origination-fee accounting tracked by hand in spreadsheets",
+      "why": "Megan Parker checks Frank's spreadsheet deal by deal against Sitara and tracks invoice status by hand. People ask whether the origination fee needs a PMA or a separate deal ticket, and whether gas cost is 'manually entered by Gas Accounting'.",
+      "files": [
+        "farmer-d/logistics/34.",
+        "farmer-d/logistics/28.",
+        "farmer-d/logistics/30."
+      ]
+    },
+    {
+      "work": "Path Manager (gas scheduling system) runs slow processing steps nobody uses (path-ID reuse lookup, the scheduling position window)",
+      "why": "IT and desk managers name processes that are 'inefficient and could possibly benefit from being rewritten or not even performed', such as a window nobody uses and old paths that still get reused. The project needs a business lead at 15–75% of their time plus a tester from each desk.",
+      "files": [
+        "farmer-d/logistics/48.",
+        "farmer-d/logistics/47.",
+        "farmer-d/logistics/44."
+      ]
+    },
+    {
+      "work": "Collecting each desk's input for the Gas Logistics PowerPoint deck, with repeated reminders",
+      "why": "Elizabeth Webb asks each desk manager to fill in slides and has to send reminders and chase Farmer individually.",
+      "files": [
+        "farmer-d/logistics/51.",
+        "farmer-d/logistics/23.",
+        "farmer-d/logistics/27."
+      ]
+    },
+    {
+      "work": "Recurring manual reports: weekly California capacity report, monthly TW rate matrix kept in two formats, monthly budget-vs-actual reports, month-end close schedule",
+      "why": "Lokay writes a weekly report of deliveries, prices and EOL basis by hand. Rita Bianchi keeps a second rate matrix up to date while admitting 'I don't know whether anyone needs/uses it'. Webb sends monthly budget-vs-actual comparisons, and the month-end close schedule gets revised and re-sent by hand.",
+      "files": [
+        "lokay-m/inbox/10.",
+        "lokay-m/inbox/20.",
+        "lokay-m/inbox/8.",
+        "lokay-m/inbox/7.",
+        "farmer-d/logistics/35.",
+        "farmer-d/logistics/55."
+      ]
+    },
+    {
+      "work": "Tracking customer contacts in scattered spreadsheets instead of a CRM; building a daily Texas gas flows/deals report",
+      "why": "Origination says much of their time went into finding companies, contacts and past business, and they use 'a number of spreadsheets'. A Siebel CRM ($120–150K) or ACT is being considered. Troy is given a daily Texas report to produce.",
+      "files": [
+        "farmer-d/logistics/56."
+      ]
+    },
+    {
+      "work": "Daily EES hourly data spreadsheet mailout and fee calculations for EES transactions",
+      "why": "Kysa and Kate send EES spreadsheets out by hand every day, and EES asks questions at month-end. The EES fee keeps changing ($5 flat, then tiers of $3/$4/$5 with exceptions announced by email), so it has to be applied by hand.",
+      "files": [
+        "williams-w3/sent_items/132.",
+        "williams-w3/sent_items/177.",
+        "williams-w3/sent_items/176.",
+        "williams-w3/sent_items/166.",
+        "williams-w3/sent_items/210."
+      ]
+    },
+    {
+      "work": "Collecting overdue pipeline invoices and disputing short payments",
+      "why": "A ONEOK invoice underpayment linked to a force majeure has been open for months. Calls go unreturned, and AR is chasing the commercial team.",
+      "files": [
+        "lokay-m/inbox/42."
+      ]
+    },
+    {
+      "work": "Signing up staff for training and handling class logistics",
+      "why": "Bill picks staff for Energy Math and Derivatives II classes. The registrar sends waitlist and enrollment notices, there are reminder emails, and Lexis/Dow Jones training is booked by phone with no-show charges.",
+      "files": [
+        "williams-w3/sent_items/222.",
+        "williams-w3/sent_items/158.",
+        "giron-d/inbox/248.",
+        "giron-d/inbox/252.",
+        "giron-d/inbox/271."
+      ]
+    },
+    {
+      "work": "Hiring and recruiting: approvals with several sign-offs, job postings, interview coordination, and replies to job enquiries",
+      "why": "A new policy requires written justification, several sign-offs and a face-to-face meeting before any hire. Bill handles postings, HR forwarding, interview feedback and enquiries one at a time.",
+      "files": [
+        "farmer-d/logistics/37.",
+        "williams-w3/sent_items/219.",
+        "williams-w3/sent_items/204.",
+        "williams-w3/sent_items/190.",
+        "williams-w3/sent_items/181.",
+        "williams-w3/sent_items/147.",
+        "williams-w3/sent_items/118.",
+        "williams-w3/sent_items/139."
+      ]
+    },
+    {
+      "work": "Rescheduling meetings and coordinating calendars by email",
+      "why": "An assistant moved one strategy meeting four times by email. Separate threads coordinate customer meeting dates and travel.",
+      "files": [
+        "lokay-m/inbox/17.",
+        "giron-d/inbox/264.",
+        "giron-d/inbox/265.",
+        "giron-d/inbox/421."
+      ]
+    },
+    {
+      "work": "Customers asking for market data and price quotes by hand",
+      "why": "GRE says it 'periodically' needs Enron to pull daily and monthly Henry Hub and Ventura prices. UtiliCorp hedge volumes and the KMGA prepay are priced by hand through several desks.",
+      "files": [
+        "giron-d/inbox/368.",
+        "giron-d/inbox/254.",
+        "giron-d/inbox/257.",
+        "giron-d/inbox/255."
+      ]
+    },
+    {
+      "work": "Business continuity and contingency surveys, BCP seat testing, and weekend systems availability notices",
+      "why": "Desk managers have to ask each scheduler to fill in a spreadsheet survey, and Pinion merges the replies into a master sheet by hand. Seats are to be tested weekly. A long system outage notice goes out every weekend.",
+      "files": [
+        "farmer-d/logistics/36.",
+        "farmer-d/logistics/24.",
+        "farmer-d/logistics/25."
+      ]
+    },
+    {
+      "work": "Regulatory filing burden: FERC requiring a tariff filing within one day of every change to a negotiated indexed rate",
+      "why": "Mary Kay Miller calls it an 'administrative nightmare': a filing every time the rate changes, possibly daily. She suggests posting the rate on a website instead.",
+      "files": [
+        "lokay-m/inbox/9."
+      ]
+    },
+    {
+      "work": "Corrections to counterparty and entity names in deal booking",
+      "why": "Deals booked under wrong or invalid counterparty names (TXU Gas Distribution, Enbridge Consumers Gas, IDACORP) have to be re-booked by hand, suggesting reference data isn't controlled.",
+      "files": [
+        "farmer-d/logistics/40.",
+        "williams-w3/sent_items/209."
+      ]
+    },
+    {
+      "work": "Switching email addresses to the standard format across systems and business cards",
+      "why": "Every employee has to update applications, business cards and outside contacts by the cutoff date.",
+      "files": [
+        "giron-d/inbox/246.",
+        "giron-d/inbox/249."
+      ]
+    }
+  ]
+}

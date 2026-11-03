@@ -34,6 +34,8 @@ drafted artifact. Every figure is stored rounded as it is shown, and the
 totals add up the stored figures, so the dashboard's numbers agree.
 """
 
+from __future__ import annotations
+
 import re
 from collections import defaultdict
 from pathlib import Path

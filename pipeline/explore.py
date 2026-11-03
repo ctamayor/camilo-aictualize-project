@@ -26,6 +26,8 @@ session before the time is up is started again in a new one. The run is stopped 
 marks it finished, so a run that continues later does not explore again.
 """
 
+from __future__ import annotations
+
 import json
 import re
 import shutil

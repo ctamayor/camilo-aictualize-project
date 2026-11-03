@@ -9,6 +9,8 @@ case. A quote that holds is stored as the message's own text, so what is shown i
 verbatim.
 """
 
+from __future__ import annotations
+
 import re
 from functools import lru_cache
 from pathlib import Path

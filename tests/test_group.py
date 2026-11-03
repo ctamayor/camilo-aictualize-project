@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import unittest
 
 from pipeline.group import build_process, numbered_quotes

@@ -13,6 +13,8 @@ dashboard outlives the run command (``ensure_running``). The server holds no
 file in out/ open, so starting over can remove the folder's contents under it.
 """
 
+from __future__ import annotations
+
 import json
 import os
 import re

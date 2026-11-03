@@ -7,6 +7,8 @@ reply against a JSON schema before this code sees it. No model chooses a file
 path or decides what runs next.
 """
 
+from __future__ import annotations
+
 import json
 import os
 import shutil

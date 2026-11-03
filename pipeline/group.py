@@ -24,6 +24,8 @@ Recurring mail with one subject, such as a daily nomination, is no reply, quotes
 nothing and is sent a day apart, so each day stays a time.
 """
 
+from __future__ import annotations
+
 import re
 from collections import Counter
 from datetime import datetime

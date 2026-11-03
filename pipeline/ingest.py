@@ -5,6 +5,8 @@ Each message is identified by its original maildir path (e.g.
 are stored as ``1.eml`` (see scripts/extract_corpus.py); both layouts are read.
 """
 
+from __future__ import annotations
+
 import email
 import hashlib
 import re

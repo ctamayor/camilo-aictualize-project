@@ -28,10 +28,9 @@ def draft_prompt(o: dict, process: dict, messages: dict) -> str:
             f"How the work is done today: {o['summary']}\n\n"
             f"The change: {o['change']}\n\n{o['explanation']}\n\n"
             f"The savings: {figures(o)}\n"
-            "What the mail shows about the time the work takes and what the change removes:\n"
+            "What the mail shows about the time the work takes, where it stalls, "
+            "and which of its steps the change would remove:\n"
             + "".join(_quote(c, messages) for c in o["basis"])
-            + ("\nWhere the work stalls:\n" + "".join(_quote(c, messages) for c in evidence["stalls"])
-               if evidence["stalls"] else "")
             + "\nThe messages in which the work happens:\n"
             + "".join(_quote(c, messages) for c in evidence["occurrences"])
             + f"\nWho sends them, with how many: {people(process['senders'])}\n"

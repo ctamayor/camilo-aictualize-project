@@ -87,7 +87,7 @@ def count_times(messages: list[dict]) -> list[int]:
 
 def build_process(name: str, summary: str, ids: list[str], patterns: dict, headers: dict) -> dict:
     occurrences, seen_messages = [], set()
-    noted = {"observations": [], "stalls": []}
+    noted = {"observations": []}
     seen_quotes = {kind: set() for kind in noted}
     for pid in ids:
         for o in patterns[pid]["occurrences"]:
@@ -132,11 +132,11 @@ def build_process(name: str, summary: str, ids: list[str], patterns: dict, heade
     }
 
 
-KINDS = ("occurrences", "observations", "stalls")
+KINDS = ("occurrences", "observations")
 
 
 def numbered_quotes(process: dict) -> dict:
-    """Each quote of a process by id, in pattern order: occurrences, observations, then stalls."""
+    """Each quote of a process by id, in pattern order: occurrences, then observations."""
     quotes = {}
     for pid in process["patterns"]:
         for kind in KINDS:

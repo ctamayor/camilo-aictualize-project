@@ -8,9 +8,9 @@ def cite(n: int, quote: str = "q", note: str | None = None) -> dict:
     return c if note is None else c | {"note": note}
 
 
-def pattern(occurrences: list, observations: list = (), stalls: list = ()) -> dict:
+def pattern(occurrences: list, observations: list = ()) -> dict:
     return {"id": "saved-01", "chunk": "saved", "name": "n", "summary": "s",
-            "occurrences": occurrences, "observations": list(observations), "stalls": list(stalls)}
+            "occurrences": occurrences, "observations": list(observations)}
 
 
 def headers(mail: list, threads: dict = {}) -> dict:
@@ -25,15 +25,14 @@ class ProcessTest(unittest.TestCase):
                         ("04-02T09", "raj", "team@enron.com", "Volumes", "b"),
                         (None, "kim", "", "Other", "c")])
         p = build_process("Daily report", "Kim collects numbers.", ["saved-01"], {"saved-01": pattern(
-            [cite(1), cite(2), cite(3), cite(1)], [cite(1, "late again", "Late."), cite(1, "late  again", "Late.")],
-            [cite(2, "waiting", "Held up.")])}, mail)
+            [cite(1), cite(2), cite(3), cite(1)], [cite(1, "late again", "Late."), cite(1, "late  again", "Late.")])}, mail)
         self.assertEqual((p["occurrences"], p["times"]), (3, 3))
         self.assertEqual((p["first"], p["last"]), ("2001-03-01T09:00:00", "2001-04-02T09:00:00"))
         self.assertEqual(p["senders"], {"kim@enron.com": 2, "raj@enron.com": 1})
         self.assertEqual(p["recipients"], {"team@enron.com": 2, "raj@enron.com": 1})
         # The same quote recorded twice is kept once; quotes are numbered occurrences first.
         self.assertEqual(len(p["evidence"]["observations"]), 1)
-        self.assertEqual([q["quote"] for q in numbered_quotes(p).values()], ["q", "q", "q", "late again", "waiting"])
+        self.assertEqual([q["quote"] for q in numbered_quotes(p).values()], ["q", "q", "q", "late again"])
 
 
 class TimesTest(unittest.TestCase):
@@ -58,13 +57,11 @@ class TimesTest(unittest.TestCase):
             ("03-11T09", "raj", "Status", "Done, see attached."),                          # answers 12 by header
         ]
         threads = {12: {"message_id": "<12@x>"}, 14: {"replies_to": ["<12@x>"]}}
-        stall = cite(2, "Done.", "Fixed only after a chase.")
         p = build_process("n", "s", ["saved-01"], {"saved-01": pattern(
-            [cite(n) for n in range(1, len(mail) + 1)], stalls=[stall])},
+            [cite(n) for n in range(1, len(mail) + 1)])},
             headers([(d, s, "", subject, body) for d, s, subject, body in mail], threads))
         self.assertEqual([o["time"] for o in p["evidence"]["occurrences"]], [1, 1, 2, 2, 3, 4, 5, 6, 6, 7, 7, 8, 9, 8])
         self.assertEqual((p["occurrences"], p["times"], p["months"]), (14, 9, {"2001-03": 9}))
-        self.assertEqual(p["evidence"]["stalls"][0]["note"], "Fixed only after a chase.")
 
 
 if __name__ == "__main__":

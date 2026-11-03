@@ -2662,3 +2662,30 @@ Fixes:
   (here, all ten are emails), and says just "Not drafted" otherwise.
 - A link to one of the rows below the first ten (`#opp-11`) now shows the
   rest of the list, so the link lands on the row.
+- The quote under "How often" no longer marks the words that state the rate.
+  Often those words were the whole quote, so the mark looked arbitrary. The
+  message drawer still marks every quote in its message.
+- "Time saved each time" is now "Time lost each time": the minutes the
+  manual way loses each time, which the change would win back.
+
+## 2026-11-02 — Stalls folded into "today" and the evidence
+
+- The separate `stalls` field is gone. Its quotes mostly repeated the
+  time-lost evidence, and nothing said what a stall was, so it collected
+  one-off slips. Where the work stalls (a requirement in the README) is now
+  part of how the work is done today, backed by the evidence quotes.
+  - The analyst is asked for how the work is done today "and where it
+    stalls".
+  - The critic's `today` field: "…what causes the cost, and where it stalls".
+  - The `evidence` note: "what they show about the time the work takes,
+    where it stalls, or which of its steps the change would remove". The old
+    wording, "what the change removes", left unclear that it meant steps.
+  - The drafter's prompt heads the quotes with the same words and no longer
+    has a stalls block.
+  - The dashboard drops "Where it stalls". Stalls saved by the real run stay
+    in its data but are not shown.
+- The `stated_rate` note is unchanged. #4's "when trading day is done" is
+  read as once a day, which is likely right for a nightly tie-out that the
+  mail mentions only now and then. Whether the rate is every day or only
+  working days is a judgment the system makes and cannot check; it belongs
+  in NOTES.

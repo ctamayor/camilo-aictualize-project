@@ -13,7 +13,7 @@ class DraftTest(unittest.TestCase):
 
     def setUp(self):
         SaveTest.setUp(self)
-        self.save(proposal(stalls=[{"file": "box/inbox/1.eml", "quote": "We send these every day", "note": "waits on volumes"}]))
+        self.save(proposal())
         self.opportunity = read_json(self.out / "opportunities.json")["opportunities"][0]
 
     def test_a_drafter_is_given_the_analysis_and_no_message_beyond_its_quotes(self):
@@ -23,7 +23,7 @@ class DraftTest(unittest.TestCase):
         for text in ("Opportunity 1: Daily schedule", "How the work is done today: Sent by hand each day",
                      "The change: Send it automatically", "A report is generated and mailed.",
                      "30 minutes x 2 times a month", "2000-03-06, a@enron.com: “I rebuild it from three sheets” (manual work)",
-                     "Where the work stalls:", "(waits on volumes)", "Who sends them, with how many: a@enron.com (2)"):
+                     "Who sends them, with how many: a@enron.com (2)"):
             self.assertIn(text, task.prompt)
         # Text of a cited message that no quote holds is not given.
         self.assertNotIn("Hi,", task.prompt)

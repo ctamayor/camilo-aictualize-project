@@ -369,7 +369,7 @@ function onceView() {
     h("div", {class: "card"}, once.map(o => { const p = R.processes.find(x => x.id === o.process);
       return h("div", {class: "item"}, h("div", {class: "name"}, o.name),
         o.change ? h("div", {class: "change"}, o.change) : null,
-        p ? [...p.evidence.occurrences.slice(0, 1), ...(p.evidence.stalls || [])].map(quote) : null); }))));
+        p ? p.evidence.occurrences.slice(0, 1).map(quote) : null); }))));
 }
 
 function evidence(o) {
@@ -379,7 +379,7 @@ function evidence(o) {
   const often = r.source === "stated"
     ? [h("p", null, "Stated in the mail" + (r.stated.per && r.stated.per !== "month"
          ? `: ${num(r.stated.count)} a ${r.stated.per}, which is ${num(r.stated.per_month)} a month.` : ".")),
-       quote(r.stated.quote, r.stated.words)]
+       quote(r.stated.quote)]
     : [h("p", null, c.span
          // Work that goes on is counted by the intervals between its times.
          ? `Counted in ${boxes}'s mail: ${times} from ${monthLabel(c.span[0])} to ${monthLabel(c.span[1])}, ` +
@@ -387,11 +387,9 @@ function evidence(o) {
          : `Counted in ${boxes}'s mail: ${times} in the ${plural(c.months, "month")} it holds` +
            `${o.ongoing === false ? " (an episode that will not continue)" : ""}: ${num(c.times)} ÷ ${num(c.months)} = ${num(c.per_month)} a month.`)];
   const key = c => c.message + "\u0000" + c.quote;
-  // Each quote is shown once: the rate's under how often, then where it stalls, then the minutes'.
+  // Each quote is shown once: the rate's under how often, the rest under the time lost.
   const rateWords = r.source === "stated" ? key(r.stated.quote) : null;
-  const stalls = (p && p.evidence.stalls || []).filter(s => key(s) !== rateWords);
-  const shownAbove = new Set([rateWords, ...stalls.map(key)]);
-  const basis = o.basis.filter(b => !shownAbove.has(key(b)));
+  const basis = o.basis.filter(b => key(b) !== rateWords);
   // What the work is and what changes, then the figure beside the draft that would start the change.
   const draft = R.drafts[o.id];
   // Where the draft would be, an opportunity that was not chosen for one says why.
@@ -402,25 +400,23 @@ function evidence(o) {
     h("div", {class: "plan"},
       p ? h("div", null, h("h3", null, "Today"), h("p", null, p.summary)) : null,
       h("div", null, h("h3", null, "The change"), h("p", null, o.explanation || o.change))),
-    h("div", {class: "split" + (draft || side ? "" : " solo")}, h("div", null, figured(o, r, often, stalls, basis, p)),
+    h("div", {class: "split" + (draft || side ? "" : " solo")}, h("div", null, figured(o, r, often, basis, p)),
       draft ? draftCard(o, draft) : side),
   ];
 }
 
-function figured(o, r, often, stalls, basis, p) {
+function figured(o, r, often, basis, p) {
   return [
     h("p", {class: "formula"}, h("b", null, `${num(o.minutes)} min`), " saved each time × ", h("b", null, num(r.per_month)),
       " times a month = ", h("b", null, `${num(o.hours_per_month)} hours`), ` × $${R.totals.hourly_rate} = `, h("b", null, money(o.dollars_per_month)), " a month"),
     o.so_far ? h("p", {class: "so-far"}, `It has cost ${money(o.so_far.dollars)} so far: ${money(o.dollars_per_month)} a month for ` +
       `${plural(o.so_far.months, "month")}, from ${monthLabel(o.so_far.from)}, when it first shows in the mail, ` +
       `to ${monthLabel(o.so_far.to)}, where the mail ends.`) : null,
-    stalls.length ? h("section", {class: "factor"},
-      h("div", {class: "factor-head"}, h("h3", null, "Where it stalls")), quotes(stalls)) : null,
     h("section", {class: "factor"},
       h("div", {class: "factor-head"}, h("h3", null, "How often"), h("b", null, `${num(r.per_month)} times a month`)),
       often),
     h("section", {class: "factor"},
-      h("div", {class: "factor-head"}, h("h3", null, "Time saved each time"), h("b", null, `${num(o.minutes)} minutes`)),
+      h("div", {class: "factor-head"}, h("h3", null, "Time lost each time"), h("b", null, `${num(o.minutes)} minutes`)),
       o.reasoning ? h("p", null, o.reasoning) : null,
       quotes(basis)),
     p ? occurrences(p) : null,
@@ -582,14 +578,10 @@ function quotes(cites) {
     h("details", {class: "more-quotes"}, h("summary", null, `${cites.length - SHOWN} more quotes`), cites.slice(SHOWN).map(c => quote(c)))];
 }
 
-function quote(cite, words) {
+function quote(cite) {
   const m = R.messages[cite.message] || {};
-  // Called from .map too, where the second argument is an index, not words.
-  const at = typeof words === "string" && words ? cite.quote.indexOf(words) : -1;
-  const text = at < 0 ? cite.quote
-    : [cite.quote.slice(0, at), h("mark", null, words), cite.quote.slice(at + words.length)];
   return h("button", {class: "quote", onclick: () => openMessage(cite.message, [cite.quote])},
-    h("span", {class: "q"}, "“", text, "”"),
+    h("span", {class: "q"}, "“", cite.quote, "”"),
     cite.note ? h("span", {class: "note"}, cite.note) : null,
     h("span", {class: "meta"}, `${m.from || ""} · ${dateLabel(m.date)} · ${m.subject || "(no subject)"}`));
 }

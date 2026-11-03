@@ -91,7 +91,7 @@ def report(out_dir: Path) -> dict:
     messages = _messages(out_dir)
     opportunities = scored.get("opportunities", [])
     # Headers of every message the page can cite, so its quotes say who wrote them and when.
-    cited = {c["message"] for p in processes for kind in ("occurrences", "observations", "stalls")
+    cited = {c["message"] for p in processes for kind in ("occurrences", "observations")
              for c in p["evidence"].get(kind, [])}
     # The name each pattern was recorded under, which says what its messages were cited as showing.
     names = {p["id"]: p["name"] for p in (read_json(out_dir / "validated.json") or {}).get("patterns", [])}

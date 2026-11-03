@@ -58,14 +58,14 @@ ALLOWED = ["Read", "Grep", "Glob", "Agent", "Edit(proposals/**)", "Write(proposa
 # What save needs, shown to the critic when it asks or gets it wrong.
 FORMAT = {
     "name": "the recurring work, in a few words",
-    "today": "how the work is done today, enough to see what causes the cost",
+    "today": "how the work is done today, enough to see what causes the cost, and where it stalls",
     "change": "one line: what would change, for a manager deciding whether to read further",
     "explanation": "the change: what would be built or changed, who would use it, "
                    "and how the work would go afterwards",
     "occurrences": [{"file": "a message file in which the work happens", "quote": "the words of it that show the work"}],
     "evidence": [{"file": "a message file", "quote": "its exact words",
-                  "note": "what they show about the time the work takes or what the change removes"}],
-    "stalls": [{"file": "a message file", "quote": "its exact words", "note": "what is held up, and why"}],
+                  "note": "what they show about the time the work takes, where it stalls, "
+                          "or which of its steps the change would remove"}],
     "ongoing": "true if the work continues as part of how the organization runs, false if it is an episode that ends",
     "stated_rate": "null, or {\"count\": a number, \"per\": one of " + ", ".join(PER_MONTH) +
                    ", \"file\": the message that says how often, \"quote\": its words that say it}",
@@ -79,8 +79,7 @@ REJECTION = {
     "research": "null if more evidence would not change the verdict, or in a sentence what further research could settle it",
 }
 TEXT_FIELDS = ("name", "today", "change", "explanation")
-CITATION_FIELDS = {"occurrences": ("file", "quote"), "evidence": ("file", "quote", "note"),
-                   "stalls": ("file", "quote", "note")}
+CITATION_FIELDS = {"occurrences": ("file", "quote"), "evidence": ("file", "quote", "note")}
 
 
 def shape_problems(data) -> list[str]:
@@ -157,7 +156,7 @@ def build(data: dict, n: int, checker: Checker, boxes: dict) -> tuple[dict, list
 
     pid = f"saved-{n:02d}"
     pattern = {"id": pid, "chunk": "saved", "name": data["name"], "summary": data["today"],
-               "occurrences": cited["occurrences"], "observations": cited["evidence"], "stalls": cited["stalls"]}
+               "occurrences": cited["occurrences"], "observations": cited["evidence"]}
     process = {"id": f"proc-{n:03d}"} | build_process(data["name"], data["today"], [pid], {pid: pattern},
                                                      checker.messages)
     # The evidence is numbered after the occurrences (estimate.numbered_quotes); the

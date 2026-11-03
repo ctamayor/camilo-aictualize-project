@@ -18,7 +18,7 @@ def proposal(**fields) -> dict:
             "occurrences": [{"file": "corpus/box/inbox/0.eml", "quote": "please find the schedule"},
                             {"file": "box/inbox/1.eml", "quote": "updated volumes"}],
             "evidence": [{"file": "box/inbox/0.", "quote": "I rebuild it from three sheets", "note": "manual work"}],
-            "stalls": [], "ongoing": False, "stated_rate": None, "minutes": 30} | fields
+            "ongoing": False, "stated_rate": None, "minutes": 30} | fields
 
 
 class SaveTest(unittest.TestCase):
